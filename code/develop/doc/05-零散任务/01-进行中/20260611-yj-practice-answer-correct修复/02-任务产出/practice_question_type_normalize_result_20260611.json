@@ -1,0 +1,119 @@
+{
+  "started_at": "2026-06-11T18:50:26",
+  "database": "114.111.30.111:13306/yunjikeji",
+  "tenant_id": 1,
+  "legacy_type": "2",
+  "normalized_type": "single_choice",
+  "backup_tables": {
+    "yj_practice_exercises": "yj_practice_exercises_qtype_bak_20260611185026",
+    "yj_practice_exercises_answer": "yj_practice_answer_qtype_bak_20260611185026",
+    "yj_practice_exercises_answer_child": "yj_practice_answer_child_qtype_bak_20260611185026"
+  },
+  "before": {
+    "type_distribution": {
+      "yj_practice_exercises": [
+        {
+          "question_type": "2",
+          "count": 1473
+        },
+        {
+          "question_type": "single_choice",
+          "count": 10
+        },
+        {
+          "question_type": "multiple_choice",
+          "count": 9
+        },
+        {
+          "question_type": "text",
+          "count": 2
+        }
+      ],
+      "yj_practice_exercises_answer": [
+        {
+          "question_type": "2",
+          "count": 4406
+        },
+        {
+          "question_type": "multiple_choice",
+          "count": 64
+        },
+        {
+          "question_type": "single_choice",
+          "count": 37
+        }
+      ],
+      "yj_practice_exercises_answer_child": []
+    },
+    "legacy_counts": {
+      "yj_practice_exercises": 1473,
+      "yj_practice_exercises_answer": 4406,
+      "yj_practice_exercises_answer_child": 0
+    }
+  },
+  "actions": [
+    {
+      "backup": "yj_practice_exercises_qtype_bak_20260611185026",
+      "source_table": "yj_practice_exercises",
+      "rows": 1473
+    },
+    {
+      "backup": "yj_practice_answer_qtype_bak_20260611185026",
+      "source_table": "yj_practice_exercises_answer",
+      "rows": 4406
+    },
+    {
+      "backup": "yj_practice_answer_child_qtype_bak_20260611185026",
+      "source_table": "yj_practice_exercises_answer_child",
+      "rows": 0
+    },
+    {
+      "normalize_table": "yj_practice_exercises",
+      "rows": 1473
+    },
+    {
+      "normalize_table": "yj_practice_exercises_answer",
+      "rows": 4406
+    },
+    {
+      "normalize_table": "yj_practice_exercises_answer_child",
+      "rows": 0
+    }
+  ],
+  "after": {
+    "type_distribution": {
+      "yj_practice_exercises": [
+        {
+          "question_type": "single_choice",
+          "count": 1483
+        },
+        {
+          "question_type": "multiple_choice",
+          "count": 9
+        },
+        {
+          "question_type": "text",
+          "count": 2
+        }
+      ],
+      "yj_practice_exercises_answer": [
+        {
+          "question_type": "single_choice",
+          "count": 4443
+        },
+        {
+          "question_type": "multiple_choice",
+          "count": 64
+        }
+      ],
+      "yj_practice_exercises_answer_child": []
+    },
+    "legacy_counts": {
+      "yj_practice_exercises": 0,
+      "yj_practice_exercises_answer": 0,
+      "yj_practice_exercises_answer_child": 0
+    }
+  },
+  "status": "committed",
+  "finished_at": "2026-06-11T18:50:27"
+}

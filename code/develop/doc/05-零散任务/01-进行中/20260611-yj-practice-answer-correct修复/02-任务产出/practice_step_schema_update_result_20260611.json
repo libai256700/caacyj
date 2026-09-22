@@ -1,0 +1,396 @@
+{
+  "started_at": "2026-06-11T17:24:43",
+  "database": "114.111.30.111:13306/yunjikeji",
+  "backup_table": "yj_practice_exercises_schema_bak_20260611172443",
+  "before": {
+    "practice_exercises_columns": [
+      {
+        "Field": "id",
+        "Type": "bigint(20)",
+        "Null": "NO",
+        "Key": "PRI",
+        "Default": null,
+        "Extra": "auto_increment"
+      },
+      {
+        "Field": "category_id",
+        "Type": "bigint(20)",
+        "Null": "NO",
+        "Key": "MUL",
+        "Default": null,
+        "Extra": ""
+      },
+      {
+        "Field": "question_stem",
+        "Type": "varchar(800)",
+        "Null": "NO",
+        "Key": "",
+        "Default": null,
+        "Extra": ""
+      },
+      {
+        "Field": "question_type",
+        "Type": "varchar(32)",
+        "Null": "NO",
+        "Key": "MUL",
+        "Default": null,
+        "Extra": ""
+      },
+      {
+        "Field": "question_status",
+        "Type": "bit(1)",
+        "Null": "NO",
+        "Key": "MUL",
+        "Default": "b'1'",
+        "Extra": ""
+      },
+      {
+        "Field": "score",
+        "Type": "int(11)",
+        "Null": "NO",
+        "Key": "",
+        "Default": "0",
+        "Extra": ""
+      },
+      {
+        "Field": "sort_no",
+        "Type": "int(11)",
+        "Null": "NO",
+        "Key": "",
+        "Default": "0",
+        "Extra": ""
+      },
+      {
+        "Field": "correct_memo",
+        "Type": "varchar(500)",
+        "Null": "YES",
+        "Key": "",
+        "Default": null,
+        "Extra": ""
+      },
+      {
+        "Field": "tenant_id",
+        "Type": "bigint(20)",
+        "Null": "NO",
+        "Key": "",
+        "Default": "0",
+        "Extra": ""
+      },
+      {
+        "Field": "creator",
+        "Type": "varchar(64)",
+        "Null": "YES",
+        "Key": "",
+        "Default": "",
+        "Extra": ""
+      },
+      {
+        "Field": "create_time",
+        "Type": "datetime",
+        "Null": "NO",
+        "Key": "",
+        "Default": "CURRENT_TIMESTAMP",
+        "Extra": ""
+      },
+      {
+        "Field": "updater",
+        "Type": "varchar(64)",
+        "Null": "YES",
+        "Key": "",
+        "Default": "",
+        "Extra": ""
+      },
+      {
+        "Field": "update_time",
+        "Type": "datetime",
+        "Null": "NO",
+        "Key": "",
+        "Default": "CURRENT_TIMESTAMP",
+        "Extra": "on update CURRENT_TIMESTAMP"
+      },
+      {
+        "Field": "deleted",
+        "Type": "bit(1)",
+        "Null": "NO",
+        "Key": "",
+        "Default": "b'0'",
+        "Extra": ""
+      }
+    ],
+    "practice_setp_exists": false,
+    "assessment_order_sample": [
+      {
+        "id": 2749,
+        "sort_no": 1,
+        "question_stem": "姓名"
+      },
+      {
+        "id": 2750,
+        "sort_no": 2,
+        "question_stem": "性别"
+      },
+      {
+        "id": 2751,
+        "sort_no": 3,
+        "question_stem": "您的年龄区间是"
+      },
+      {
+        "id": 2752,
+        "sort_no": 4,
+        "question_stem": "您的学历及相关专业是"
+      },
+      {
+        "id": 2753,
+        "sort_no": 5,
+        "question_stem": "您当前的职业状态是"
+      }
+    ]
+  },
+  "actions": [
+    {
+      "backup": "yj_practice_exercises_schema_bak_20260611172443",
+      "rows": 1497
+    },
+    {
+      "create_table": "yj_practice_setp"
+    },
+    {
+      "add_column": "yj_practice_exercises.step_id"
+    }
+  ],
+  "after": {
+    "practice_exercises_columns": [
+      {
+        "Field": "id",
+        "Type": "bigint(20)",
+        "Null": "NO",
+        "Key": "PRI",
+        "Default": null,
+        "Extra": "auto_increment"
+      },
+      {
+        "Field": "step_id",
+        "Type": "bigint(20)",
+        "Null": "YES",
+        "Key": "",
+        "Default": null,
+        "Extra": ""
+      },
+      {
+        "Field": "category_id",
+        "Type": "bigint(20)",
+        "Null": "NO",
+        "Key": "MUL",
+        "Default": null,
+        "Extra": ""
+      },
+      {
+        "Field": "question_stem",
+        "Type": "varchar(800)",
+        "Null": "NO",
+        "Key": "",
+        "Default": null,
+        "Extra": ""
+      },
+      {
+        "Field": "question_type",
+        "Type": "varchar(32)",
+        "Null": "NO",
+        "Key": "MUL",
+        "Default": null,
+        "Extra": ""
+      },
+      {
+        "Field": "question_status",
+        "Type": "bit(1)",
+        "Null": "NO",
+        "Key": "MUL",
+        "Default": "b'1'",
+        "Extra": ""
+      },
+      {
+        "Field": "score",
+        "Type": "int(11)",
+        "Null": "NO",
+        "Key": "",
+        "Default": "0",
+        "Extra": ""
+      },
+      {
+        "Field": "sort_no",
+        "Type": "int(11)",
+        "Null": "NO",
+        "Key": "",
+        "Default": "0",
+        "Extra": ""
+      },
+      {
+        "Field": "correct_memo",
+        "Type": "varchar(500)",
+        "Null": "YES",
+        "Key": "",
+        "Default": null,
+        "Extra": ""
+      },
+      {
+        "Field": "tenant_id",
+        "Type": "bigint(20)",
+        "Null": "NO",
+        "Key": "",
+        "Default": "0",
+        "Extra": ""
+      },
+      {
+        "Field": "creator",
+        "Type": "varchar(64)",
+        "Null": "YES",
+        "Key": "",
+        "Default": "",
+        "Extra": ""
+      },
+      {
+        "Field": "create_time",
+        "Type": "datetime",
+        "Null": "NO",
+        "Key": "",
+        "Default": "CURRENT_TIMESTAMP",
+        "Extra": ""
+      },
+      {
+        "Field": "updater",
+        "Type": "varchar(64)",
+        "Null": "YES",
+        "Key": "",
+        "Default": "",
+        "Extra": ""
+      },
+      {
+        "Field": "update_time",
+        "Type": "datetime",
+        "Null": "NO",
+        "Key": "",
+        "Default": "CURRENT_TIMESTAMP",
+        "Extra": "on update CURRENT_TIMESTAMP"
+      },
+      {
+        "Field": "deleted",
+        "Type": "bit(1)",
+        "Null": "NO",
+        "Key": "",
+        "Default": "b'0'",
+        "Extra": ""
+      }
+    ],
+    "practice_setp_columns": [
+      {
+        "Field": "id",
+        "Type": "bigint(20)",
+        "Null": "NO",
+        "Key": "PRI",
+        "Default": null,
+        "Extra": "auto_increment"
+      },
+      {
+        "Field": "tenant_id",
+        "Type": "bigint(20)",
+        "Null": "NO",
+        "Key": "MUL",
+        "Default": "0",
+        "Extra": ""
+      },
+      {
+        "Field": "setp_name",
+        "Type": "varchar(100)",
+        "Null": "NO",
+        "Key": "",
+        "Default": null,
+        "Extra": ""
+      },
+      {
+        "Field": "setp_status",
+        "Type": "bit(1)",
+        "Null": "NO",
+        "Key": "MUL",
+        "Default": "b'1'",
+        "Extra": ""
+      },
+      {
+        "Field": "sort_no",
+        "Type": "int(11)",
+        "Null": "NO",
+        "Key": "",
+        "Default": "0",
+        "Extra": ""
+      },
+      {
+        "Field": "creator",
+        "Type": "varchar(64)",
+        "Null": "YES",
+        "Key": "",
+        "Default": "",
+        "Extra": ""
+      },
+      {
+        "Field": "create_time",
+        "Type": "datetime",
+        "Null": "NO",
+        "Key": "",
+        "Default": "CURRENT_TIMESTAMP",
+        "Extra": ""
+      },
+      {
+        "Field": "updater",
+        "Type": "varchar(64)",
+        "Null": "YES",
+        "Key": "",
+        "Default": "",
+        "Extra": ""
+      },
+      {
+        "Field": "update_time",
+        "Type": "datetime",
+        "Null": "NO",
+        "Key": "",
+        "Default": "CURRENT_TIMESTAMP",
+        "Extra": "on update CURRENT_TIMESTAMP"
+      },
+      {
+        "Field": "deleted",
+        "Type": "bit(1)",
+        "Null": "NO",
+        "Key": "",
+        "Default": "b'0'",
+        "Extra": ""
+      }
+    ],
+    "assessment_order_sample": [
+      {
+        "id": 2749,
+        "sort_no": 1,
+        "question_stem": "姓名"
+      },
+      {
+        "id": 2750,
+        "sort_no": 2,
+        "question_stem": "性别"
+      },
+      {
+        "id": 2751,
+        "sort_no": 3,
+        "question_stem": "您的年龄区间是"
+      },
+      {
+        "id": 2752,
+        "sort_no": 4,
+        "question_stem": "您的学历及相关专业是"
+      },
+      {
+        "id": 2753,
+        "sort_no": 5,
+        "question_stem": "您当前的职业状态是"
+      }
+    ]
+  },
+  "status": "committed",
+  "finished_at": "2026-06-11T17:24:44"
+}

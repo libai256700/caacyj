@@ -1,0 +1,7 @@
+{
+  "schema_version": "kg-provider-runtime-config-v1",
+  "network_mode": "disabled",
+  "approval_binding": null,
+  "server_answer": null,
+  "embedding": null
+}

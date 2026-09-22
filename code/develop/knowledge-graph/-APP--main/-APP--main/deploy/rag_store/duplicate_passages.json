@@ -1,0 +1,250 @@
+{
+  "schema": "duplicate-passages-v1",
+  "created_at": "2026-07-30",
+  "note": "登记教材之间近似逐字复用的段落。每组保留一条 representative 进上下文，其余 duplicates 降级为「已核验辅助来源」——原文、页码、provenance 全部保留，只是不重复占用 top-k 和引用位。",
+  "why_not_claim_layer": "两次抽取 run 从同一段文字抽出的实体粒度不同（一侧是整句主题，一侧是真实实体），claim 层无法配对，因此必须在 chunk 层登记。证据见 concept_cluster_split_report.py --section claimlayer。",
+  "detection": {
+    "method": "6-gram shingle，方向性包含度 |dup ∩ rep| / |dup|",
+    "min_containment": 0.6,
+    "note": "包含度衡量「被降级那段有多少内容在代表里」。用对称的 min() 归一化会奖励较短的一侧，把只是开头复用、尾部有独有内容的长段落也判成重复——本语料上会误折叠 18 条，其中 3 条是考点唯一来源。包含度仍只是检出信号，每条 entry 都应人工过一遍再启用。"
+  },
+  "wiring": {
+    "status": "wired",
+    "reader": "rag_store/duplicate_passages.py",
+    "hook": "rag_store/context_builder.py 的 filter_superseded 之后调用 fold_duplicate_passages 把复用侧从 enriched 里拿掉（因此它不占 governance surface 也不占 prompt 席位），再由 duplicate_groups_for_context 生成 deduplicated_sources 组，复用现有 suppressed_count 契约，build_textbook_deduplication_answer 照常出「已核验辅助来源」话术。",
+    "safety_rule": "只有代表段落同样出现在本次检索结果里时才折叠。否则这段是该问题唯一的证据，抹掉等于凭空丢一个知识点。",
+    "enable_switch": "把本文件复制到 rag_store/duplicate_passages.json 即生效；删掉即完全停用（读不到文件时登记表为空，零影响）。",
+    "tests": "tests/test_duplicate_passages.py",
+    "before_enabling": [
+      "人工过一遍 entries，剔除误判",
+      "跑 eval_health_gate.py，确认代表段落被选中的问答没有掉分",
+      "扫题库影响面：若某题答案只在 duplicate 那侧的措辞里，改选它做 representative"
+    ]
+  },
+  "stats": {
+    "groups": 9,
+    "duplicate_chunks": 10,
+    "duplicates_per_book": {
+      "无人机理论书籍_2021_无人机防控技术_清华大学出版社_李立欣.txt": 10
+    }
+  },
+  "entries": [
+    {
+      "representative": {
+        "chunk_id": "textbook:无人机理论书籍_2021_无人机概论_清华大学出版社_周竞赛:chunk_0004:7bd0b71387",
+        "doc_name": "无人机理论书籍_2021_无人机概论_清华大学出版社_周竞赛.txt",
+        "pdf_page_start": 16,
+        "pdf_page_end": 20,
+        "chapter_title": "第一章 无人机概述",
+        "section_title": "第二节 无人机发展史",
+        "chars": 1197
+      },
+      "duplicates": [
+        {
+          "chunk_id": "legacy-chunk:0bd1570d5f57232de844a8a8",
+          "doc_name": "无人机理论书籍_2021_无人机防控技术_清华大学出版社_李立欣.txt",
+          "pdf_page_start": 11,
+          "pdf_page_end": 13,
+          "chapter_title": "第一章 无人机概论",
+          "section_title": "第一节 无人机发展",
+          "chars": 892,
+          "containment_in_representative": 0.714
+        }
+      ]
+    },
+    {
+      "representative": {
+        "chunk_id": "textbook:无人机理论书籍_2021_无人机概论_清华大学出版社_周竞赛:chunk_0006:62cb890fd1",
+        "doc_name": "无人机理论书籍_2021_无人机概论_清华大学出版社_周竞赛.txt",
+        "pdf_page_start": 22,
+        "pdf_page_end": 23,
+        "chapter_title": "第一章 无人机概述",
+        "section_title": "第二节 无人机发展史",
+        "chars": 1193
+      },
+      "duplicates": [
+        {
+          "chunk_id": "legacy-chunk:618c9406c4951bd0c8b66adf",
+          "doc_name": "无人机理论书籍_2021_无人机防控技术_清华大学出版社_李立欣.txt",
+          "pdf_page_start": 17,
+          "pdf_page_end": 18,
+          "chapter_title": "第一章 无人机概论",
+          "section_title": "第一节 无人机发展",
+          "chars": 925,
+          "containment_in_representative": 0.76
+        }
+      ]
+    },
+    {
+      "representative": {
+        "chunk_id": "textbook:无人机理论书籍_2021_无人机概论_清华大学出版社_周竞赛:chunk_0008:d0476c076e",
+        "doc_name": "无人机理论书籍_2021_无人机概论_清华大学出版社_周竞赛.txt",
+        "pdf_page_start": 24,
+        "pdf_page_end": 25,
+        "chapter_title": "第一章 无人机概述",
+        "section_title": "第二节 无人机发展史",
+        "chars": 1180
+      },
+      "duplicates": [
+        {
+          "chunk_id": "legacy-chunk:29022585602f61fc46e283b8",
+          "doc_name": "无人机理论书籍_2021_无人机防控技术_清华大学出版社_李立欣.txt",
+          "pdf_page_start": 20,
+          "pdf_page_end": 20,
+          "chapter_title": "第一章 无人机概论",
+          "section_title": "第一节 无人机发展",
+          "chars": 895,
+          "containment_in_representative": 0.657
+        }
+      ]
+    },
+    {
+      "representative": {
+        "chunk_id": "textbook:无人机理论书籍_2021_无人机概论_清华大学出版社_周竞赛:chunk_0009:3b915cc161",
+        "doc_name": "无人机理论书籍_2021_无人机概论_清华大学出版社_周竞赛.txt",
+        "pdf_page_start": 25,
+        "pdf_page_end": 26,
+        "chapter_title": "第一章 无人机概述",
+        "section_title": "第二节 无人机发展史",
+        "chars": 1009
+      },
+      "duplicates": [
+        {
+          "chunk_id": "legacy-chunk:6f6365768e69a33cc88a1ffd",
+          "doc_name": "无人机理论书籍_2021_无人机防控技术_清华大学出版社_李立欣.txt",
+          "pdf_page_start": 21,
+          "pdf_page_end": 22,
+          "chapter_title": "第一章 无人机概论",
+          "section_title": "第一节 无人机发展",
+          "chars": 916,
+          "containment_in_representative": 0.624
+        }
+      ]
+    },
+    {
+      "representative": {
+        "chunk_id": "textbook:无人机理论书籍_2021_无人机概论_清华大学出版社_周竞赛:chunk_0010:f8e3865e44",
+        "doc_name": "无人机理论书籍_2021_无人机概论_清华大学出版社_周竞赛.txt",
+        "pdf_page_start": 26,
+        "pdf_page_end": 27,
+        "chapter_title": "第一章 无人机概述",
+        "section_title": "第二节 无人机发展史",
+        "chars": 1165
+      },
+      "duplicates": [
+        {
+          "chunk_id": "legacy-chunk:f42d9fb06cf77b5c3b319c67",
+          "doc_name": "无人机理论书籍_2021_无人机防控技术_清华大学出版社_李立欣.txt",
+          "pdf_page_start": 22,
+          "pdf_page_end": 22,
+          "chapter_title": "第一章 无人机概论",
+          "section_title": "第一节 无人机发展",
+          "chars": 886,
+          "containment_in_representative": 0.906
+        }
+      ]
+    },
+    {
+      "representative": {
+        "chunk_id": "textbook:无人机理论书籍_2021_无人机概论_清华大学出版社_周竞赛:chunk_0011:07cb904d9a",
+        "doc_name": "无人机理论书籍_2021_无人机概论_清华大学出版社_周竞赛.txt",
+        "pdf_page_start": 27,
+        "pdf_page_end": 28,
+        "chapter_title": "第一章 无人机概述",
+        "section_title": "第二节 无人机发展史",
+        "chars": 1192
+      },
+      "duplicates": [
+        {
+          "chunk_id": "legacy-chunk:37a573bb6df20c2d5ec79d77",
+          "doc_name": "无人机理论书籍_2021_无人机防控技术_清华大学出版社_李立欣.txt",
+          "pdf_page_start": 22,
+          "pdf_page_end": 23,
+          "chapter_title": "第一章 无人机概论",
+          "section_title": "第一节 无人机发展",
+          "chars": 901,
+          "containment_in_representative": 0.673
+        },
+        {
+          "chunk_id": "legacy-chunk:024905ccf3c04b3a03d4ea17",
+          "doc_name": "无人机理论书籍_2021_无人机防控技术_清华大学出版社_李立欣.txt",
+          "pdf_page_start": 23,
+          "pdf_page_end": 23,
+          "chapter_title": "第一章 无人机概论",
+          "section_title": "第一节 无人机发展",
+          "chars": 838,
+          "containment_in_representative": 0.64
+        }
+      ]
+    },
+    {
+      "representative": {
+        "chunk_id": "textbook:无人机理论书籍_2021_无人机概论_清华大学出版社_周竞赛:chunk_0026:c7861d0b77",
+        "doc_name": "无人机理论书籍_2021_无人机概论_清华大学出版社_周竞赛.txt",
+        "pdf_page_start": 42,
+        "pdf_page_end": 44,
+        "chapter_title": "第二章 无人机系统组成",
+        "section_title": "第一节 无人机系统组成简介",
+        "chars": 852
+      },
+      "duplicates": [
+        {
+          "chunk_id": "legacy-chunk:f5052eb2eed99cef6c67e566",
+          "doc_name": "无人机理论书籍_2021_无人机防控技术_清华大学出版社_李立欣.txt",
+          "pdf_page_start": 29,
+          "pdf_page_end": 31,
+          "chapter_title": "第一章 无人机概论",
+          "section_title": "第三节 无人机系统组成",
+          "chars": 908,
+          "containment_in_representative": 0.628
+        }
+      ]
+    },
+    {
+      "representative": {
+        "chunk_id": "textbook:无人机理论书籍_2021_无人机概论_清华大学出版社_周竞赛:chunk_0037:31054ac5d9",
+        "doc_name": "无人机理论书籍_2021_无人机概论_清华大学出版社_周竞赛.txt",
+        "pdf_page_start": 52,
+        "pdf_page_end": 53,
+        "chapter_title": "第二章 无人机系统组成",
+        "section_title": "第四节 地面站系统及设备",
+        "chars": 1180
+      },
+      "duplicates": [
+        {
+          "chunk_id": "legacy-chunk:26939d7e824626d7d2492b6b",
+          "doc_name": "无人机理论书籍_2021_无人机防控技术_清华大学出版社_李立欣.txt",
+          "pdf_page_start": 39,
+          "pdf_page_end": 40,
+          "chapter_title": "第一章 无人机概论",
+          "section_title": "第三节 无人机系统组成",
+          "chars": 880,
+          "containment_in_representative": 0.816
+        }
+      ]
+    },
+    {
+      "representative": {
+        "chunk_id": "textbook:无人机理论书籍_2021_无人机概论_清华大学出版社_周竞赛:chunk_0114:c28e0d81f0",
+        "doc_name": "无人机理论书籍_2021_无人机概论_清华大学出版社_周竞赛.txt",
+        "pdf_page_start": 132,
+        "pdf_page_end": 133,
+        "chapter_title": "第七章 多旋翼无人机",
+        "section_title": "第四节 多旋翼无人机飞行性能与飞行原理",
+        "chars": 1198
+      },
+      "duplicates": [
+        {
+          "chunk_id": "legacy-chunk:cee58903939d531ea9c68a82",
+          "doc_name": "无人机理论书籍_2021_无人机防控技术_清华大学出版社_李立欣.txt",
+          "pdf_page_start": 62,
+          "pdf_page_end": 63,
+          "chapter_title": "第二章 无人机控制原理",
+          "section_title": "第四节 无人机飞行原理",
+          "chars": 828,
+          "containment_in_representative": 0.734
+        }
+      ]
+    }
+  ]
+}

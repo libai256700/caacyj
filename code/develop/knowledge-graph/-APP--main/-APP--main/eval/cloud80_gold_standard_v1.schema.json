@@ -1,0 +1,378 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://yunji.example/schemas/cloud80-gold-standard-v1.schema.json",
+  "title": "Cloud 80 governed gold standard",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "gold_id",
+    "created_at",
+    "question_fixture",
+    "review_policy",
+    "cases"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "cloud80-gold-standard-v1"
+    },
+    "gold_id": {
+      "const": "cloud80-20260803-v1"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "question_fixture": {
+      "$ref": "#/$defs/question_fixture"
+    },
+    "review_policy": {
+      "$ref": "#/$defs/review_policy"
+    },
+    "cases": {
+      "type": "array",
+      "minItems": 80,
+      "maxItems": 80,
+      "items": {
+        "$ref": "#/$defs/case"
+      }
+    }
+  },
+  "$defs": {
+    "question_fixture": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "sha256",
+        "question_count",
+        "question_ids_sha256"
+      ],
+      "properties": {
+        "path": {
+          "const": "eval/online_subset_20260803.json"
+        },
+        "sha256": {
+          "const": "7f9cc4c2470f6aa5dcfef6d928429e6b08fb73453d592e3a188d913128e85e2d"
+        },
+        "question_count": {
+          "const": 80
+        },
+        "question_ids_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    },
+    "review_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "required_reviewer_type",
+        "decision_schema_version",
+        "signature_identity",
+        "signature_namespace"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "pending",
+            "reviewed-pending-signature"
+          ]
+        },
+        "required_reviewer_type": {
+          "const": "human"
+        },
+        "decision_schema_version": {
+          "const": "cloud80-gold-approval-decision-v1"
+        },
+        "signature_identity": {
+          "const": "cloud80-gold-approver"
+        },
+        "signature_namespace": {
+          "const": "cloud80-gold-standard-approval-v1"
+        }
+      }
+    },
+    "case": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "question",
+        "review_status",
+        "reviewer_type",
+        "reviewed_by",
+        "reviewed_at",
+        "answer_contract",
+        "blockers"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "question": {
+          "type": "string",
+          "minLength": 1
+        },
+        "review_status": {
+          "enum": [
+            "pending",
+            "reviewed",
+            "rejected"
+          ]
+        },
+        "reviewer_type": {
+          "enum": [
+            null,
+            "human"
+          ]
+        },
+        "reviewed_by": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "reviewed_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "answer_contract": {
+          "$ref": "#/$defs/answer_contract"
+        },
+        "blockers": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "answer_contract": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": false,
+      "required": [
+        "scoring_policy_version",
+        "answer_mode",
+        "safe_refusal_policy",
+        "required_claim_groups",
+        "optional_segments",
+        "forbidden_claims",
+        "acceptable_synonyms",
+        "safe_refusal_templates",
+        "authority_sources",
+        "dynamic_oracle"
+      ],
+      "properties": {
+        "scoring_policy_version": {
+          "const": "cloud80-strict-segment-v1"
+        },
+        "answer_mode": {
+          "enum": [
+            "claim_spec",
+            "exact_segment_set",
+            "dynamic_oracle"
+          ]
+        },
+        "safe_refusal_policy": {
+          "enum": [
+            "forbidden",
+            "required"
+          ]
+        },
+        "required_claim_groups": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/required_claim_group"
+          }
+        },
+        "optional_segments": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "forbidden_claims": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/forbidden_claim"
+          }
+        },
+        "acceptable_synonyms": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/synonym"
+          }
+        },
+        "safe_refusal_templates": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "authority_sources": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/authority_source"
+          }
+        },
+        "dynamic_oracle": {
+          "$ref": "#/$defs/dynamic_oracle"
+        }
+      }
+    },
+    "required_claim_group": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "claim_id",
+        "description",
+        "expression_groups",
+        "accepted_segments"
+      ],
+      "properties": {
+        "claim_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "expression_groups": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "accepted_segments": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "forbidden_claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "claim_id",
+        "description",
+        "expressions"
+      ],
+      "properties": {
+        "claim_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "expressions": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "synonym": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "canonical",
+        "variants"
+      ],
+      "properties": {
+        "canonical": {
+          "type": "string",
+          "minLength": 1
+        },
+        "variants": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "authority_source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_name",
+        "authority_kind",
+        "sha256",
+        "effective_at"
+      ],
+      "properties": {
+        "source_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "authority_kind": {
+          "enum": [
+            "canonical_csv",
+            "regulation",
+            "question_bank",
+            "textbook"
+          ]
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "effective_at": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "dynamic_oracle": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "parameters"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_-]{0,63}$"
+        },
+        "parameters": {
+          "type": "object",
+          "additionalProperties": true
+        }
+      }
+    }
+  }
+}

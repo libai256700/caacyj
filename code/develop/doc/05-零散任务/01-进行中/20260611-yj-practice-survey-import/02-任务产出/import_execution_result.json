@@ -1,0 +1,65 @@
+{
+  "started_at": "2026-06-11T14:21:46",
+  "database": "114.111.30.111:13306/yunjikeji",
+  "category_name": "入行专属评估",
+  "tenant_id": 1,
+  "source_question_count": 21,
+  "before": {
+    "category": null
+  },
+  "category_id": 13,
+  "imported_question_ids": [
+    2749,
+    2750,
+    2751,
+    2752,
+    2753,
+    2754,
+    2755,
+    2756,
+    2757,
+    2758,
+    2759,
+    2760,
+    2761,
+    2762,
+    2763,
+    2764,
+    2765,
+    2766,
+    2767,
+    2768,
+    2769
+  ],
+  "after": {
+    "category": {
+      "id": 13,
+      "category_name": "入行专属评估",
+      "field_type": "low_air",
+      "sort_no": 1,
+      "tenant_id": 1
+    },
+    "question_count": {
+      "count": 21
+    },
+    "answer_count": {
+      "count": 101
+    },
+    "question_types": [
+      {
+        "question_type": "multiple_choice",
+        "count": 9
+      },
+      {
+        "question_type": "single_choice",
+        "count": 10
+      },
+      {
+        "question_type": "text",
+        "count": 2
+      }
+    ]
+  },
+  "status": "committed",
+  "finished_at": "2026-06-11T14:21:52"
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": "cloud-v2-builder-file-allowlist-v1",
+  "files": [
+    "deploy/cloud_v2/__init__.py",
+    "deploy/cloud_v2/source_scope.py",
+    "deploy/cloud_v2/stop-b-external-processing-request.schema.json",
+    "deploy/cloud_v2/stop_b_request.py",
+    "deploy/pipeline/production_embedding_bootstrap.py",
+    "deploy/pipeline/production_embedding_candidate.py",
+    "deploy/pipeline/production_embedding_config.schema.json",
+    "deploy/pipeline/production_embedding_runtime_lock.schema.json",
+    "deploy/pipeline/provider_bootstrap.py",
+    "deploy/pipeline/provider_runtime_config.schema.json",
+    "deploy/rag_store/embedding_adapter.py",
+    "deploy/rag_store/local_vector_store.py",
+    "deploy/rag_store/provider_http_transport.py",
+    "deploy/rag_store/provider_meters.py",
+    "deploy/rag_store/provider_wire.py",
+    "deploy/rag_store/runtime_query_embedding.py",
+    "deploy/rag_store/runtime_sqlite_reader.py",
+    "deploy/rag_store/scoped_graph_contract.py",
+    "deploy/rag_store/server_answer_model.py",
+    "deploy/rag_store/source_authority.py"
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:knowledge-qa:public-identity-gateway-config-v1",
+  "title": "Hash-bound public HS256 gateway identity configuration",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "verifier"],
+  "properties": {
+    "schema_version": {
+      "const": "kg-public-identity-gateway-config-v1"
+    },
+    "verifier": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "algorithm",
+        "issuer",
+        "audience",
+        "secret_ref",
+        "token_source",
+        "time_policy",
+        "claim_mapping",
+        "identity_contract"
+      ],
+      "properties": {
+        "kind": {
+          "const": "hs256-jwt-gateway-v1"
+        },
+        "algorithm": {
+          "const": "HS256"
+        },
+        "issuer": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512,
+          "pattern": "^[^\\r\\n\\u0000]+$"
+        },
+        "audience": {
+          "const": "public-app-agent"
+        },
+        "secret_ref": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["value", "encoding"],
+          "properties": {
+            "value": {
+              "type": "string",
+              "pattern": "^secretref:KG_[A-Z0-9_]{1,96}$"
+            },
+            "encoding": {
+              "const": "base64url"
+            }
+          }
+        },
+        "token_source": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["wsgi_environ_key", "scheme"],
+          "properties": {
+            "wsgi_environ_key": {
+              "const": "HTTP_AUTHORIZATION"
+            },
+            "scheme": {
+              "const": "Bearer"
+            }
+          }
+        },
+        "time_policy": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["leeway_seconds", "max_lifetime_seconds"],
+          "properties": {
+            "leeway_seconds": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 60
+            },
+            "max_lifetime_seconds": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 3600
+            }
+          }
+        },
+        "claim_mapping": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["subject", "roles", "authn_methods"],
+          "properties": {
+            "subject": {
+              "$ref": "#/$defs/claimName"
+            },
+            "roles": {
+              "$ref": "#/$defs/claimName"
+            },
+            "authn_methods": {
+              "$ref": "#/$defs/claimName"
+            }
+          }
+        },
+        "identity_contract": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "service_account",
+            "token_kind",
+            "network_zone",
+            "required_roles"
+          ],
+          "properties": {
+            "service_account": {
+              "const": "public-app-agent"
+            },
+            "token_kind": {
+              "const": "public-app-access"
+            },
+            "network_zone": {
+              "const": "public-app"
+            },
+            "required_roles": {
+              "type": "array",
+              "prefixItems": [
+                {
+                  "const": "app-user"
+                }
+              ],
+              "minItems": 1,
+              "maxItems": 1
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "claimName": {
+      "type": "string",
+      "pattern": "^[A-Za-z][A-Za-z0-9_.:-]{0,63}$"
+    }
+  }
+}

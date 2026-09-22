@@ -1,0 +1,713 @@
+{
+  "meta": {
+    "total": 80,
+    "source_total": 143,
+    "excluded_total": 63,
+    "source_file": "eval/qa_pool.json",
+    "source_sha256": "9d4e3677e5871b3b19e98f0b9ea2df2acb3964afb486283acd8a850fd26e33b9",
+    "source_created_at": "2026-07-08",
+    "source_question_files": [
+      "test100_questions.json",
+      "test50_questions.json",
+      "quality_questions.json",
+      "smoke_questions.json"
+    ],
+    "generated_at": "2026-08-03",
+    "filter": "every expected_docs entry must start with an allowed_doc_prefix",
+    "allowed_doc_prefixes": [
+      "实操题库_",
+      "政策法规_",
+      "无人机理论书籍_",
+      "理论题库_"
+    ]
+  },
+  "categories": {
+    "regulation": 21,
+    "flight": 25,
+    "system": 17,
+    "training": 2,
+    "company": 0,
+    "csa": 0,
+    "application": 5,
+    "weather": 10,
+    "hybrid": 0
+  },
+  "questions": [
+    {
+      "id": "reg_01",
+      "category": "regulation",
+      "question": "CCAR-92部对无人机飞行空域有哪些具体要求？",
+      "expected_docs": [
+        "政策法规_CCAR-92部.txt"
+      ]
+    },
+    {
+      "id": "reg_02",
+      "category": "regulation",
+      "question": "民用无人机驾驶员合格证和执照有什么区别？",
+      "expected_docs": [
+        "政策法规_CCAR-92部.txt",
+        "理论题库_无人机飞行手册、法律法规及其他.txt"
+      ]
+    },
+    {
+      "id": "reg_03",
+      "category": "regulation",
+      "question": "无人机中空飞行的高度范围是多少米？",
+      "expected_docs": [
+        "理论题库_空中交通管制.txt",
+        "理论题库_无人机飞行手册、法律法规及其他.txt"
+      ]
+    },
+    {
+      "id": "reg_04",
+      "category": "regulation",
+      "question": "无人机信号失联后的标准处置流程是什么？",
+      "expected_docs": [
+        "理论题库_无人机操作注意事项.txt",
+        "理论题库_无人机飞行手册、法律法规及其他.txt"
+      ]
+    },
+    {
+      "id": "reg_05",
+      "category": "regulation",
+      "question": "风切变对无人机有什么危害，如何应对？",
+      "expected_docs": [
+        "理论题库_气象.txt"
+      ]
+    },
+    {
+      "id": "reg_06",
+      "category": "regulation",
+      "question": "操控员训练机构对训练场地面积和设施有哪些要求？",
+      "expected_docs": [
+        "政策法规_《民用中小型无人驾驶航空器操控员训练机构规范》.txt"
+      ]
+    },
+    {
+      "id": "reg_07",
+      "category": "regulation",
+      "question": "民用无人驾驶航空器实名登记需要准备哪些材料？",
+      "expected_docs": [
+        "政策法规_CCAR-92部.txt"
+      ]
+    },
+    {
+      "id": "reg_09",
+      "category": "regulation",
+      "question": "低空空域管理和无人机运行之间有什么关系？",
+      "expected_docs": [
+        "理论题库_空中交通管制.txt",
+        "理论题库_无人机飞行手册、法律法规及其他.txt"
+      ]
+    },
+    {
+      "id": "reg_10",
+      "category": "regulation",
+      "question": "无人机夜间飞行需要满足什么特殊条件？",
+      "expected_docs": [
+        "理论题库_无人机操作注意事项.txt",
+        "政策法规_CCAR-92部.txt",
+        "理论题库_无人机飞行手册、法律法规及其他.txt"
+      ]
+    },
+    {
+      "id": "reg_11",
+      "category": "regulation",
+      "question": "CCAR-92部对无人机操控员执照有什么要求？",
+      "expected_docs": [
+        "政策法规_CCAR-92部.txt"
+      ]
+    },
+    {
+      "id": "reg_12",
+      "category": "regulation",
+      "question": "无人机驾驶员执照等级如何划分？",
+      "expected_docs": [
+        "政策法规_CCAR-92部.txt",
+        "理论题库_无人机飞行手册、法律法规及其他.txt"
+      ]
+    },
+    {
+      "id": "reg_13",
+      "category": "regulation",
+      "question": "无人驾驶航空器实名登记和登记管理有哪些要求？",
+      "expected_docs": [
+        "政策法规_CCAR-92部.txt"
+      ]
+    },
+    {
+      "id": "reg_15",
+      "category": "regulation",
+      "question": "无人机飞行需要遵守哪些基本法律法规？",
+      "expected_docs": [
+        "理论题库_无人机飞行手册、法律法规及其他.txt",
+        "政策法规_CCAR-92部.txt"
+      ]
+    },
+    {
+      "id": "flt_01",
+      "category": "flight",
+      "question": "无人机起飞前标准检查清单包含哪些项目？",
+      "expected_docs": [
+        "理论题库_无人机操作注意事项.txt"
+      ]
+    },
+    {
+      "id": "flt_02",
+      "category": "flight",
+      "question": "为什么逆风起飞比顺风起飞更安全？",
+      "expected_docs": [
+        "理论题库_飞行原理与飞行性能.txt",
+        "理论题库_概述.txt"
+      ]
+    },
+    {
+      "id": "flt_03",
+      "category": "flight",
+      "question": "无人机侧风起降的操作要领是什么？",
+      "expected_docs": [
+        "理论题库_气象.txt",
+        "理论题库_飞行原理与飞行性能.txt"
+      ]
+    },
+    {
+      "id": "flt_04",
+      "category": "flight",
+      "question": "云层高度和能见度会如何影响无人机飞行安全？",
+      "expected_docs": [
+        "理论题库_气象.txt"
+      ]
+    },
+    {
+      "id": "flt_05",
+      "category": "flight",
+      "question": "无人机应急返航时需要注意哪些风险？",
+      "expected_docs": [
+        "理论题库_无人机操作注意事项.txt",
+        "理论题库_无人机任务规划.txt"
+      ]
+    },
+    {
+      "id": "flt_06",
+      "category": "flight",
+      "question": "无人机任务规划主要包括哪些步骤和要素？",
+      "expected_docs": [
+        "理论题库_无人机任务规划.txt"
+      ]
+    },
+    {
+      "id": "flt_07",
+      "category": "flight",
+      "question": "无人机空中交通管制的基本原则和流程是什么？",
+      "expected_docs": [
+        "理论题库_空中交通管制.txt"
+      ]
+    },
+    {
+      "id": "flt_08",
+      "category": "flight",
+      "question": "超视距飞行运行需要满足哪些安全和规范要求？",
+      "expected_docs": [
+        "政策法规_CCAR-92部.txt",
+        "政策法规_《民用中小型无人驾驶航空器操控员训练机构规范》.txt",
+        "理论题库_无人机飞行手册、法律法规及其他.txt"
+      ]
+    },
+    {
+      "id": "flt_09",
+      "category": "flight",
+      "question": "GPS信号丢失时无人机应该采取什么操作措施？",
+      "expected_docs": [
+        "理论题库_无人机操作注意事项.txt",
+        "理论题库_系统组成及介绍.txt"
+      ]
+    },
+    {
+      "id": "flt_10",
+      "category": "flight",
+      "question": "多旋翼无人机悬停时如何进行姿态稳定控制？",
+      "expected_docs": [
+        "理论题库_飞行原理与飞行性能.txt",
+        "理论题库_旋翼无人机.txt"
+      ]
+    },
+    {
+      "id": "flt_11",
+      "category": "flight",
+      "question": "无人机雨天飞行有哪些风险和注意事项？",
+      "expected_docs": [
+        "理论题库_气象.txt",
+        "理论题库_无人机操作注意事项.txt"
+      ]
+    },
+    {
+      "id": "flt_12",
+      "category": "flight",
+      "question": "雷暴天气下无人机飞行有什么危险？",
+      "expected_docs": [
+        "理论题库_气象.txt"
+      ]
+    },
+    {
+      "id": "flt_13",
+      "category": "flight",
+      "question": "无人机禁飞区有哪些类型，如何避免误入？",
+      "expected_docs": [
+        "理论题库_无人机飞行手册、法律法规及其他.txt",
+        "理论题库_空中交通管制.txt"
+      ]
+    },
+    {
+      "id": "flt_14",
+      "category": "flight",
+      "question": "无人机发生安全事故后如何报告和处理？",
+      "expected_docs": [
+        "理论题库_无人机操作注意事项.txt",
+        "理论题库_无人机飞行手册、法律法规及其他.txt"
+      ]
+    },
+    {
+      "id": "flt_15",
+      "category": "flight",
+      "question": "无人机编队飞行需要注意什么安全事项？",
+      "expected_docs": [
+        "理论题库_无人机操作注意事项.txt",
+        "理论题库_飞行原理与飞行性能.txt"
+      ]
+    },
+    {
+      "id": "sys_01",
+      "category": "system",
+      "question": "BEC模块在无人机系统中的作用是什么？",
+      "expected_docs": [
+        "理论题库_系统组成及介绍.txt"
+      ]
+    },
+    {
+      "id": "sys_02",
+      "category": "system",
+      "question": "飞控系统的核心功能和组成部分有哪些？",
+      "expected_docs": [
+        "理论题库_系统组成及介绍.txt"
+      ]
+    },
+    {
+      "id": "sys_03",
+      "category": "system",
+      "question": "无人机动力系统匹配需要考虑哪些因素？",
+      "expected_docs": [
+        "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt"
+      ]
+    },
+    {
+      "id": "sys_04",
+      "category": "system",
+      "question": "无人机数据链路如何保障通讯稳定和安全？",
+      "expected_docs": [
+        "理论题库_系统组成及介绍.txt",
+        "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt"
+      ]
+    },
+    {
+      "id": "sys_05",
+      "category": "system",
+      "question": "旋翼无人机和固定翼无人机在结构上有什么主要区别？",
+      "expected_docs": [
+        "理论题库_旋翼无人机.txt",
+        "理论题库_飞行原理与飞行性能.txt"
+      ]
+    },
+    {
+      "id": "sys_06",
+      "category": "system",
+      "question": "无人机避障系统的基本原理是什么？",
+      "expected_docs": [
+        "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt"
+      ]
+    },
+    {
+      "id": "sys_07",
+      "category": "system",
+      "question": "无人机云台系统的主要作用是什么？",
+      "expected_docs": [
+        "理论题库_系统组成及介绍.txt",
+        "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt"
+      ]
+    },
+    {
+      "id": "sys_08",
+      "category": "system",
+      "question": "IMU惯性测量单元在无人机中起到什么作用？",
+      "expected_docs": [
+        "理论题库_系统组成及介绍.txt"
+      ]
+    },
+    {
+      "id": "sys_09",
+      "category": "system",
+      "question": "无人机GPS和北斗导航系统有什么区别？",
+      "expected_docs": [
+        "理论题库_系统组成及介绍.txt",
+        "理论题库_无人机任务规划.txt"
+      ]
+    },
+    {
+      "id": "sys_10",
+      "category": "system",
+      "question": "无人机电池存储和日常保养有什么要求？",
+      "expected_docs": [
+        "理论题库_系统组成及介绍.txt",
+        "理论题库_无人机操作注意事项.txt"
+      ]
+    },
+    {
+      "id": "trn_07",
+      "category": "training",
+      "question": "无人机教员考试题库有哪些重点知识？",
+      "expected_docs": [
+        "理论题库_无人机教员题库.txt"
+      ]
+    },
+    {
+      "id": "app_02",
+      "category": "application",
+      "question": "无人机在农业植保中有哪些具体应用场景？",
+      "expected_docs": [
+        "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt"
+      ]
+    },
+    {
+      "id": "app_05",
+      "category": "application",
+      "question": "无人机物流配送的技术发展和法规现状如何？",
+      "expected_docs": [
+        "政策法规_CCAR-92部.txt",
+        "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt"
+      ]
+    },
+    {
+      "id": "app_06",
+      "category": "application",
+      "question": "无人机在应急救援中有哪些应用？",
+      "expected_docs": [
+        "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt"
+      ]
+    },
+    {
+      "id": "app_07",
+      "category": "application",
+      "question": "无人机在电力巡检中的作业要求是什么？",
+      "expected_docs": [
+        "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt"
+      ]
+    },
+    {
+      "id": "app_10",
+      "category": "application",
+      "question": "无人机在环保监测中的应用场景有哪些？",
+      "expected_docs": [
+        "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt"
+      ]
+    },
+    {
+      "id": "wth_01",
+      "category": "weather",
+      "question": "无人机在雨中飞行有哪些风险？",
+      "expected_docs": [
+        "理论题库_气象.txt",
+        "理论题库_无人机操作注意事项.txt"
+      ]
+    },
+    {
+      "id": "wth_02",
+      "category": "weather",
+      "question": "大气温度变化对无人机飞行性能和电池续航有什么影响？",
+      "expected_docs": [
+        "理论题库_气象.txt"
+      ]
+    },
+    {
+      "id": "wth_03",
+      "category": "weather",
+      "question": "海拔高度对无人机升力和动力有什么影响？",
+      "expected_docs": [
+        "理论题库_气象.txt",
+        "理论题库_飞行原理与飞行性能.txt"
+      ]
+    },
+    {
+      "id": "wth_04",
+      "category": "weather",
+      "question": "雷暴天气下无人机飞行有什么危险和避让措施？",
+      "expected_docs": [
+        "理论题库_气象.txt"
+      ]
+    },
+    {
+      "id": "wth_05",
+      "category": "weather",
+      "question": "无人机飞行过程中如何应对突发阵风？",
+      "expected_docs": [
+        "理论题库_气象.txt",
+        "理论题库_无人机操作注意事项.txt"
+      ]
+    },
+    {
+      "id": "wth_06",
+      "category": "weather",
+      "question": "大雾天气无人机能见度不足时应该如何操作？",
+      "expected_docs": [
+        "理论题库_气象.txt",
+        "理论题库_无人机操作注意事项.txt"
+      ]
+    },
+    {
+      "id": "wth_07",
+      "category": "weather",
+      "question": "无人机在高温环境下飞行需要注意什么？",
+      "expected_docs": [
+        "理论题库_气象.txt",
+        "理论题库_无人机操作注意事项.txt"
+      ]
+    },
+    {
+      "id": "wth_08",
+      "category": "weather",
+      "question": "无人机在低温环境下飞行对电池有什么影响？",
+      "expected_docs": [
+        "理论题库_气象.txt",
+        "理论题库_系统组成及介绍.txt"
+      ]
+    },
+    {
+      "id": "wth_09",
+      "category": "weather",
+      "question": "无人机飞行受到哪些气象条件限制？",
+      "expected_docs": [
+        "理论题库_气象.txt"
+      ]
+    },
+    {
+      "id": "wth_10",
+      "category": "weather",
+      "question": "风速超过多少级无人机不适合户外飞行？",
+      "expected_docs": [
+        "理论题库_气象.txt",
+        "理论题库_无人机操作注意事项.txt"
+      ]
+    },
+    {
+      "id": "regulation_ccar92_airspace",
+      "category": "regulation",
+      "question": "CCAR-92飞行空域规定有哪些重点？",
+      "expected_docs": [
+        "政策法规_CCAR-92部.txt"
+      ]
+    },
+    {
+      "id": "regulation_training_org_site",
+      "category": "regulation",
+      "question": "民用中小型无人驾驶航空器操控员训练机构规范对训练场地有什么要求？",
+      "expected_docs": [
+        "政策法规_《民用中小型无人驾驶航空器操控员训练机构规范》.txt"
+      ]
+    },
+    {
+      "id": "regulation_medium_altitude",
+      "category": "regulation",
+      "question": "无人机中空飞行的高度范围是多少？",
+      "expected_docs": [
+        "理论题库_空中交通管制.txt",
+        "理论题库_无人机飞行手册、法律法规及其他.txt"
+      ]
+    },
+    {
+      "id": "regulation_lost_link",
+      "category": "regulation",
+      "question": "无人机信号失联后应该怎么处置？",
+      "expected_docs": [
+        "理论题库_无人机操作注意事项.txt",
+        "理论题库_无人机飞行手册、法律法规及其他.txt"
+      ]
+    },
+    {
+      "id": "regulation_wind_shear",
+      "category": "regulation",
+      "question": "风切变对无人机飞行有什么危害，怎么处理？",
+      "expected_docs": [
+        "理论题库_气象.txt"
+      ]
+    },
+    {
+      "id": "regulation_license_requirements",
+      "category": "regulation",
+      "question": "CCAR-92对无人机操控员执照有什么要求？",
+      "expected_docs": [
+        "政策法规_CCAR-92部.txt"
+      ]
+    },
+    {
+      "id": "regulation_training_institution",
+      "category": "regulation",
+      "question": "操控员训练机构需要满足哪些管理要求？",
+      "expected_docs": [
+        "政策法规_《民用中小型无人驾驶航空器操控员训练机构规范》.txt"
+      ]
+    },
+    {
+      "id": "regulation_low_altitude",
+      "category": "regulation",
+      "question": "低空空域管理和无人机运行有什么关系？",
+      "expected_docs": [
+        "理论题库_空中交通管制.txt"
+      ]
+    },
+    {
+      "id": "flight_preflight_check",
+      "category": "flight",
+      "question": "无人机起飞前需要做哪些检查？",
+      "expected_docs": [
+        "理论题库_无人机操作注意事项.txt"
+      ]
+    },
+    {
+      "id": "flight_tailwind_headwind",
+      "category": "flight",
+      "question": "为什么逆风起飞更安全？",
+      "expected_docs": [
+        "理论题库_飞行原理与飞行性能.txt"
+      ]
+    },
+    {
+      "id": "flight_crosswind",
+      "category": "flight",
+      "question": "无人机侧风起降要注意什么？",
+      "expected_docs": [
+        "理论题库_气象.txt",
+        "理论题库_飞行原理与飞行性能.txt"
+      ]
+    },
+    {
+      "id": "flight_visibility_cloud",
+      "category": "flight",
+      "question": "云高和能见度会如何影响无人机飞行？",
+      "expected_docs": [
+        "理论题库_气象.txt"
+      ]
+    },
+    {
+      "id": "flight_emergency_return",
+      "category": "flight",
+      "question": "无人机应急返航时要注意哪些风险？",
+      "expected_docs": [
+        "理论题库_无人机操作注意事项.txt"
+      ]
+    },
+    {
+      "id": "flight_task_planning",
+      "category": "flight",
+      "question": "无人机任务规划主要包括哪些内容？",
+      "expected_docs": [
+        "理论题库_无人机任务规划.txt"
+      ]
+    },
+    {
+      "id": "flight_air_traffic",
+      "category": "flight",
+      "question": "无人机空中交通管制相关知识有哪些？",
+      "expected_docs": [
+        "理论题库_空中交通管制.txt"
+      ]
+    },
+    {
+      "id": "flight_operation_safety",
+      "category": "flight",
+      "question": "无人机安全飞行规范有哪些要点？",
+      "expected_docs": [
+        "理论题库_无人机操作注意事项.txt"
+      ]
+    },
+    {
+      "id": "flight_beyond_visual",
+      "category": "flight",
+      "question": "超视距飞行运行需要关注哪些规范？",
+      "expected_docs": [
+        "政策法规_CCAR-92部.txt"
+      ]
+    },
+    {
+      "id": "flight_manual_law",
+      "category": "flight",
+      "question": "无人机飞行手册和法律法规部分有哪些重点？",
+      "expected_docs": [
+        "理论题库_无人机飞行手册、法律法规及其他.txt"
+      ]
+    },
+    {
+      "id": "system_bec_module",
+      "category": "system",
+      "question": "BEC模块在无人机中的作用是什么？",
+      "expected_docs": [
+        "理论题库_系统组成及介绍.txt",
+        "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt"
+      ]
+    },
+    {
+      "id": "system_flight_controller",
+      "category": "system",
+      "question": "飞控系统的基本作用是什么？",
+      "expected_docs": [
+        "理论题库_系统组成及介绍.txt"
+      ]
+    },
+    {
+      "id": "system_power_matching",
+      "category": "system",
+      "question": "无人机动力系统匹配要考虑哪些因素？",
+      "expected_docs": [
+        "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt"
+      ]
+    },
+    {
+      "id": "system_data_link",
+      "category": "system",
+      "question": "无人机数据链路有什么作用？",
+      "expected_docs": [
+        "理论题库_系统组成及介绍.txt"
+      ]
+    },
+    {
+      "id": "system_rotor_uav",
+      "category": "system",
+      "question": "旋翼无人机有哪些特点？",
+      "expected_docs": [
+        "理论题库_旋翼无人机.txt"
+      ]
+    },
+    {
+      "id": "system_fixed_wing",
+      "category": "system",
+      "question": "固定翼无人机飞行原理有哪些重点？",
+      "expected_docs": [
+        "理论题库_飞行原理与飞行性能.txt"
+      ]
+    },
+    {
+      "id": "system_components",
+      "category": "system",
+      "question": "无人机系统主要由哪些部分组成？",
+      "expected_docs": [
+        "理论题库_系统组成及介绍.txt"
+      ]
+    },
+    {
+      "id": "training_teacher_exam",
+      "category": "training",
+      "question": "无人机教员考试题库有哪些重点？",
+      "expected_docs": [
+        "理论题库_无人机教员题库.txt"
+      ]
+    }
+  ]
+}

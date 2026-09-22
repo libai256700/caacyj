@@ -1,0 +1,72 @@
+{
+  "schema_version": "cloud-v2-superseded-passages-r9-v1",
+  "authority": {
+    "release_id": "rag-authority:revision-a-r9:3a08cf106d6410c8",
+    "database_sha256": "3a08cf106d6410c8780bd4a0eb001c36c154c2459feb0427e5a2d1a20c68cf9a"
+  },
+  "passages": [
+    {
+      "id": "r9-textbook-ac61-pilot-grades",
+      "doc_name": "无人机理论书籍/2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.docx",
+      "chunks": [
+        {"chunk_id": "chunk:0fe23e3257ab853b325b28e546300a7b99660d0d", "text_sha256": "366bda571648d7ddde14ea743b624e5e745ab7858b0ee2d2402505dd56af0c4e"},
+        {"chunk_id": "chunk:1b2405d4dc7fa6aff0b187252a849f350c301cf0", "text_sha256": "a0682dad99708905015adfccd5f3d6d0c50d90c4f737693944f9014c4854e99c"},
+        {"chunk_id": "chunk:89a59c6174345be8893046033e7ba53d7e351e83", "text_sha256": "b32616728cceeb12c67dfdb8085af01b87d508e71a1780aefd1a19f96f3e8948"}
+      ],
+      "topic": "legacy pilot classification and licence grades",
+      "topic_markers": ["执照", "驾驶员", "操控员", "证照", "持证", "考证", "等级", "分类管理", "行业协会", "训练合格证", "私用", "商用", "3000米"],
+      "keep_when_exact_question_match": false,
+      "superseded_by": [
+        {"doc_name": "政策法规/CCAR-92部.docx", "chunk_id": "chunk:e3192adcc59104fc878183203fda846f0c698188", "text_sha256": "a6d85a73a0b2be3200bf154671904d40b47def5f5c6fd9ee14dc39f3212af4e9"}
+      ],
+      "reason_code": "explicitly_superseded_legacy_consultative_circular"
+    },
+    {
+      "id": "r9-question-bank-ac61-pilot-grades",
+      "doc_name": "理论题库/无人机飞行手册、法律法规及其他.docx and 理论题库/综合问答.docx",
+      "chunks": [
+        {"chunk_id": "chunk:ec89f9598178036a0d31b43d4db694864fdceafc", "text_sha256": "33f9d85daae5d216c8aae09e7e0b3b30eff87cad9b4bbd8f450df38c9cafe903"},
+        {"chunk_id": "chunk:80b8254158ca3158c90d7c378740cfe465786d4c", "text_sha256": "7faf2fdf1ed0ac5ca8f43b629ac3286c0a073ca2b4babe9ce7241a8f4b5fe9cf"},
+        {"chunk_id": "chunk:d7e48be0b2b0fb532bf922bd3ee418586089decb", "text_sha256": "6ce49a7fb382b4bad28171de6af5348a1e6c818f440795bc1e63b724cf2fdc44"},
+        {"chunk_id": "chunk:72a0642b8e58c63d4023efb5eb03247ec41baa20", "text_sha256": "8346f81b712900c809f0162a7898b2b4b438c400fe7c69e7fb3b3f6b74b47f6f"},
+        {"chunk_id": "chunk:c2fb68863191838e1a378bddc5f13533c867403f", "text_sha256": "857d14bd3d9f646bdf197e3c2ff9db281f6e53a1a764bcb3db4459873cfc03df"},
+        {"chunk_id": "chunk:ad567742695dc794e1d57a50c2f14b8815e41a64", "text_sha256": "d255cab9aac19b9701bde656bae51cd3a5271cb841130c11a0e1fab1a14c9796"}
+      ],
+      "topic": "legacy question-bank pilot classification and licence grades",
+      "topic_markers": ["执照", "驾驶员", "操控员", "证照", "等级", "分类管理", "行业协会", "合格证", "私照", "商照", "3000米"],
+      "keep_when_exact_question_match": true,
+      "superseded_by": [
+        {"doc_name": "政策法规/CCAR-92部.docx", "chunk_id": "chunk:e3192adcc59104fc878183203fda846f0c698188", "text_sha256": "a6d85a73a0b2be3200bf154671904d40b47def5f5c6fd9ee14dc39f3212af4e9"}
+      ],
+      "reason_code": "legacy_exam_item_not_current_operational_authority"
+    },
+    {
+      "id": "r9-ap45-registration-threshold",
+      "doc_name": "政策法规/民用无人驾驶航空器实名制登记管理规定.docx",
+      "chunks": [
+        {"chunk_id": "chunk:1f8fd56fa5ad48a604aa6c7c2a6cd1c121bf3be6", "text_sha256": "3912ca9ea8ecdcd418153088501978b1567c528dd000d33d6347b46a980d142d"}
+      ],
+      "topic": "superseded registration threshold",
+      "topic_markers": ["250克", "250 克", "实名登记", "登记要求", "重量门槛"],
+      "keep_when_exact_question_match": false,
+      "superseded_by": [
+        {"doc_name": "政策法规/CCAR-92部.docx", "chunk_id": "chunk:6e7c054cc7cb5fdc1acc49f52d6b958b2df6ae50", "text_sha256": "bc90860b2766bceb0c7507c571a7a1078ce120503a2adaacf4d5a845a1bf803a"}
+      ],
+      "reason_code": "later_department_rule_replaces_registration_scope"
+    },
+    {
+      "id": "r9-ap45-registration-number",
+      "doc_name": "政策法规/民用无人驾驶航空器实名制登记管理规定.docx",
+      "chunks": [
+        {"chunk_id": "chunk:26af53dff920d70c096f9a41a42b796b23343950", "text_sha256": "559491647ae6bb12673292a27ffc9dad035e838fc3fc20cfe5ada8ca6b3a52e7"}
+      ],
+      "topic": "superseded registration identifier format",
+      "topic_markers": ["登记号", "11位", "11 位", "8位", "8 位", "UAS"],
+      "keep_when_exact_question_match": false,
+      "superseded_by": [
+        {"doc_name": "政策法规/CCAR-92部.docx", "chunk_id": "chunk:6e7c054cc7cb5fdc1acc49f52d6b958b2df6ae50", "text_sha256": "bc90860b2766bceb0c7507c571a7a1078ce120503a2adaacf4d5a845a1bf803a"}
+      ],
+      "reason_code": "later_department_rule_replaces_identifier_format"
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "schema_version": "cloud-v2-regulation-timeline-r9-v1",
+  "authority": {
+    "release_id": "rag-authority:revision-a-r9:3a08cf106d6410c8",
+    "database_sha256": "3a08cf106d6410c8780bd4a0eb001c36c154c2459feb0427e5a2d1a20c68cf9a",
+    "regulation_document_count": 7
+  },
+  "documents": [
+    {
+      "doc_name": "政策法规/中华人民共和国民用航空法.docx",
+      "short_name": "中华人民共和国民用航空法",
+      "doc_type": "law",
+      "authority_rank": 700,
+      "number": "2025 revision",
+      "effective_date": "2026-07-01",
+      "status": "current",
+      "evidence": [
+        {
+          "chunk_id": "chunk:3689bd6318d874fd1555c9409601c9eab3ad8153",
+          "text_sha256": "c3093135b533a6ccb9c7fdbf408d6b05bcc96e638534da8bc6008f7ba96cdb66",
+          "proofs": ["number", "effective_date"],
+          "required_markers": ["2025年12月27日", "2026年7月1日起施行"]
+        }
+      ]
+    },
+    {
+      "doc_name": "政策法规/无人驾驶航空器飞行管理暂行条例.docx",
+      "short_name": "无人驾驶航空器飞行管理暂行条例",
+      "doc_type": "administrative_regulation",
+      "authority_rank": 600,
+      "number": "国务院、中央军委令第761号",
+      "effective_date": "2024-01-01",
+      "status": "current",
+      "evidence": [
+        {
+          "chunk_id": "chunk:717314c0ab9318b84882af763e939f34b843fe28",
+          "text_sha256": "4b1d25d2529a4186532168861ffec80d67656614b19a49aacc48a958513d3c08",
+          "proofs": ["number", "effective_date"],
+          "required_markers": ["第761号", "自2024年1月1日起施行"]
+        }
+      ]
+    },
+    {
+      "doc_name": "政策法规/CCAR-92部.docx",
+      "short_name": "民用无人驾驶航空器运行安全管理规则",
+      "doc_type": "department_rule",
+      "authority_rank": 500,
+      "number": "交通运输部令2024年第1号",
+      "effective_date": "2024-01-01",
+      "status": "current",
+      "evidence": [
+        {
+          "chunk_id": "chunk:e3192adcc59104fc878183203fda846f0c698188",
+          "text_sha256": "a6d85a73a0b2be3200bf154671904d40b47def5f5c6fd9ee14dc39f3212af4e9",
+          "proofs": ["number", "effective_date"],
+          "required_markers": ["2024年第1号", "自公布之日起施行", "2024年1月1日"]
+        }
+      ]
+    },
+    {
+      "doc_name": "政策法规/民用无人驾驶航空器操控员执照考试管理办法.docx",
+      "short_name": "民用无人驾驶航空器操控员执照考试管理办法",
+      "doc_type": "administrative_normative_document",
+      "authority_rank": 400,
+      "number": "MD-92-FS-02",
+      "effective_date": "2024-05-11",
+      "status": "current",
+      "evidence": [
+        {
+          "chunk_id": "chunk:183ca2701f22f187a1ebc70e9330eacb193ebdf9",
+          "text_sha256": "d134a947ccd5e0bcc8a55223ebdd700cd92a5dd2760eade1acdb2a943f326aa8",
+          "proofs": ["number"],
+          "required_markers": ["MD-92-FS-02", "2024 年 5 月 11 日"]
+        },
+        {
+          "chunk_id": "chunk:0e29e84705b62d6e58577bec2cc9ab83b4531c5c",
+          "text_sha256": "90b2b55aed72e940d1bc2d05be203bec7f79e1494a8afc108e8871ce22583df9",
+          "proofs": ["effective_date"],
+          "required_markers": ["本办法自发布之日起施行"]
+        }
+      ]
+    },
+    {
+      "doc_name": "政策法规/民用无人驾驶航空器实名制登记管理规定.docx",
+      "short_name": "民用无人驾驶航空器实名制登记管理规定",
+      "doc_type": "administrative_procedure",
+      "authority_rank": 400,
+      "number": "AP-45-AA-2017-03",
+      "effective_date": "2017-05-16",
+      "status": "partially_superseded",
+      "evidence": [
+        {
+          "chunk_id": "chunk:1f8fd56fa5ad48a604aa6c7c2a6cd1c121bf3be6",
+          "text_sha256": "3912ca9ea8ecdcd418153088501978b1567c528dd000d33d6347b46a980d142d",
+          "proofs": ["number"],
+          "required_markers": ["AP-45-AA-2017-03", "2017 年 5 月 16 日"]
+        },
+        {
+          "chunk_id": "chunk:286bdbc681a0bcd83a8331ea3579955c6730fe24",
+          "text_sha256": "ea41e945471cb9396c2ead10007d0721fc06456604b471238ae1b38a0a22d320",
+          "proofs": ["effective_date"],
+          "required_markers": ["自2017 年 5 月 16 日起生效"]
+        }
+      ]
+    },
+    {
+      "doc_name": "政策法规/大型民用航空器系统操控员训练要求.pdf",
+      "short_name": "大型民用无人驾驶航空器系统操控员训练要求",
+      "doc_type": "civil_aviation_industry_standard",
+      "authority_rank": 300,
+      "number": "MH/T 2019-2026",
+      "effective_date": "2026-05-01",
+      "status": "current",
+      "evidence": [
+        {
+          "chunk_id": "chunk:47c6d7cb4645aca4eb2eaa54ec800a6478dc7996",
+          "text_sha256": "ec15a1b7de45d4df92cf9d6b1803e09d8936336903d108e6675333268d2fab23",
+          "proofs": ["number", "effective_date"],
+          "required_markers": ["MH/T 2019—2026", "2026-05-01 实施"]
+        }
+      ]
+    },
+    {
+      "doc_name": "政策法规/《民用中小型无人驾驶航空器操控员训练机构规范》.docx",
+      "short_name": "民用中小型无人驾驶航空器操控员训练机构规范",
+      "doc_type": "group_standard",
+      "authority_rank": 200,
+      "number": "T/AOPA 0008-2025 and jointly issued standards",
+      "effective_date": "2025-12-30",
+      "status": "current",
+      "evidence": [
+        {
+          "chunk_id": "chunk:534cf535f9237ea679f0bb9e3889031796ba0dc8",
+          "text_sha256": "3f8628c4a9049771ac01c08f86322b57b7fc6599da7a87380cc541b046690e2c",
+          "proofs": ["number", "effective_date"],
+          "required_markers": ["T/AOPA 0008—2025", "2025-12-30 实施"]
+        }
+      ]
+    }
+  ]
+}

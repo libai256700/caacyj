@@ -1,0 +1,26 @@
+[Unit]
+Description=Knowledge QA cloud v2 public compatibility WSGI
+After=network-online.target docker.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+Group=root
+WorkingDirectory=/srv/knowledge-qa/source/-APP-
+EnvironmentFile=/etc/knowledge-qa/20260905-r2/service.env
+EnvironmentFile=/run/secrets/knowledge-qa/runtime.env
+ExecStart=/srv/knowledge-qa/venvs/20260905-r2-sqlite3504/bin/waitress-serve --listen=127.0.0.1:5001 --threads=4 pipeline.legacy_production_wsgi:app
+Restart=on-failure
+RestartSec=3
+TimeoutStartSec=180
+TimeoutStopSec=30
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+ReadWritePaths=/var/lib/knowledge-qa /run/secrets/knowledge-qa
+
+[Install]
+WantedBy=multi-user.target

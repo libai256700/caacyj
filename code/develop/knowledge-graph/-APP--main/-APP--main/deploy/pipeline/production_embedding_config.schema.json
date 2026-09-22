@@ -1,0 +1,184 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/kg-production-embedding-candidate-config-v2.json",
+  "title": "Production embedding candidate configuration",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "provider_config",
+    "base_suite",
+    "authority",
+    "graph",
+    "local_vector"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "kg-production-embedding-candidate-config-v2"
+    },
+    "provider_config": {
+      "$ref": "#/$defs/inputReference"
+    },
+    "base_suite": {
+      "$ref": "#/$defs/baseSuite"
+    },
+    "authority": {
+      "$ref": "#/$defs/inputReference"
+    },
+    "graph": {
+      "$ref": "#/$defs/inputReference"
+    },
+    "local_vector": {
+      "$ref": "#/$defs/localVector"
+    }
+  },
+  "$defs": {
+    "absolutePath": {
+      "type": "string",
+      "pattern": "^/"
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "safeComponent": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,127}$"
+    },
+    "inputReference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "properties": {
+        "path": {
+          "$ref": "#/$defs/absolutePath"
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      }
+    },
+    "baseSuite": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "manifest",
+        "pending_contract"
+      ],
+      "properties": {
+        "manifest": {
+          "$ref": "#/$defs/inputReference"
+        },
+        "pending_contract": {
+          "$ref": "#/$defs/inputReference"
+        }
+      }
+    },
+    "localVector": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "approved_data_parent",
+        "data_root",
+        "data_release_id",
+        "authority_manifest_sha256",
+        "chunking_identity_sha256",
+        "embedding_identity_sha256",
+        "dimension",
+        "metric",
+        "schema_version",
+        "chunk_index_name",
+        "entity_index_name",
+        "top_k_max",
+        "max_vectors_per_index",
+        "metadata_allowlist",
+        "engine",
+        "engine_version",
+        "dtype"
+      ],
+      "properties": {
+        "approved_data_parent": {
+          "$ref": "#/$defs/absolutePath"
+        },
+        "data_root": {
+          "$ref": "#/$defs/absolutePath"
+        },
+        "data_release_id": {
+          "type": "string",
+          "pattern": "^r9-[0-9a-f]{64}$"
+        },
+        "authority_manifest_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "chunking_identity_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "embedding_identity_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "dimension": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "metric": {
+          "enum": [
+            "cosine",
+            "dot",
+            "euclidean"
+          ]
+        },
+        "schema_version": {
+          "const": "kg-local-vector-schema-v1"
+        },
+        "chunk_index_name": {
+          "$ref": "#/$defs/safeComponent"
+        },
+        "entity_index_name": {
+          "$ref": "#/$defs/safeComponent"
+        },
+        "top_k_max": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "max_vectors_per_index": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "metadata_allowlist": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "chunk",
+            "entity"
+          ],
+          "properties": {
+            "chunk": {
+              "const": [
+                "authority_release_id",
+                "content_type"
+              ]
+            },
+            "entity": {
+              "const": [
+                "authority_release_id",
+                "entity_type"
+              ]
+            }
+          }
+        },
+        "engine": {
+          "const": "usearch"
+        },
+        "engine_version": {
+          "const": "2.26.2"
+        },
+        "dtype": {
+          "const": "f32"
+        }
+      }
+    }
+  }
+}

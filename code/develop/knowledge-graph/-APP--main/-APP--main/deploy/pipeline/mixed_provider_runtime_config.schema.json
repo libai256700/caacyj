@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:knowledge-qa:kg-mixed-provider-runtime-config-v1",
+  "title": "HTTPS answer provider with loopback Ollama embedding",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "network_mode", "approval_binding", "server_answer", "embedding"],
+  "properties": {
+    "schema_version": {"const": "kg-mixed-provider-runtime-config-v1"},
+    "network_mode": {"const": "https-answer-loopback-embedding"},
+    "approval_binding": {"$ref": "provider_runtime_config.schema.json#/$defs/approvalBinding"},
+    "server_answer": {"$ref": "provider_runtime_config.schema.json#/$defs/serverAnswer"},
+    "embedding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["provider", "base_url", "model", "model_digest", "dimension", "identity_sha256", "policy", "policy_sha256"],
+      "properties": {
+        "provider": {"const": "ollama-local"},
+        "base_url": {"const": "http://127.0.0.1:11434"},
+        "model": {"const": "bge-m3:latest"},
+        "model_digest": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "dimension": {"const": 1024},
+        "identity_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "policy": {"$ref": "provider_runtime_config.schema.json#/$defs/embeddingPolicy"},
+        "policy_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    }
+  }
+}

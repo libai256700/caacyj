@@ -1,0 +1,180 @@
+{
+  "started_at": "2026-06-11T15:33:46",
+  "database": "114.111.30.111:13306/yunjikeji",
+  "target_tables": [
+    "yj_practice_exercises",
+    "yj_practice_exercises_answer",
+    "yj_practice_exercises_answer_child"
+  ],
+  "reference_tables": [
+    "yj_assessment_question",
+    "yj_assessment_answer"
+  ],
+  "target_tenant_id": 1,
+  "run_id": "20260611153346",
+  "before": {
+    "yj_practice_exercises": {
+      "exists": true,
+      "summary": {
+        "total_rows": 1497,
+        "tenant_id_1_rows": "1497",
+        "tenant_id_not_1_or_null_rows": "0"
+      },
+      "distribution": [
+        {
+          "tenant_id": 1,
+          "deleted": "b'\\x00'",
+          "row_count": 1494
+        },
+        {
+          "tenant_id": 1,
+          "deleted": "b'\\x01'",
+          "row_count": 3
+        }
+      ]
+    },
+    "yj_practice_exercises_answer": {
+      "exists": true,
+      "summary": {
+        "total_rows": 4506,
+        "tenant_id_1_rows": "101",
+        "tenant_id_not_1_or_null_rows": "4405"
+      },
+      "distribution": [
+        {
+          "tenant_id": 0,
+          "deleted": "b'\\x00'",
+          "row_count": 4405
+        },
+        {
+          "tenant_id": 1,
+          "deleted": "b'\\x00'",
+          "row_count": 101
+        }
+      ]
+    },
+    "yj_practice_exercises_answer_child": {
+      "exists": true,
+      "summary": {
+        "total_rows": 0,
+        "tenant_id_1_rows": null,
+        "tenant_id_not_1_or_null_rows": null
+      },
+      "distribution": []
+    }
+  },
+  "reference_before": {
+    "yj_assessment_question": {
+      "exists": true,
+      "summary": {
+        "total_rows": 0,
+        "tenant_id_1_rows": null,
+        "tenant_id_not_1_or_null_rows": null
+      },
+      "distribution": []
+    },
+    "yj_assessment_answer": {
+      "exists": true,
+      "summary": {
+        "total_rows": 0,
+        "tenant_id_1_rows": null,
+        "tenant_id_not_1_or_null_rows": null
+      },
+      "distribution": []
+    }
+  },
+  "backup": {
+    "yj_practice_exercises": {
+      "table": "yj_practice_exercises_tenant_bak_20260611153346",
+      "rows": {
+        "backup_rows": 0
+      }
+    },
+    "yj_practice_exercises_answer": {
+      "table": "yj_practice_exercises_answer_tenant_bak_20260611153346",
+      "rows": {
+        "backup_rows": 4405
+      }
+    },
+    "yj_practice_exercises_answer_child": {
+      "table": "yj_practice_exercises_answer_child_tenant_bak_20260611153346",
+      "rows": {
+        "backup_rows": 0
+      }
+    }
+  },
+  "affected_rows": {
+    "yj_practice_exercises": 0,
+    "yj_practice_exercises_answer": 4405,
+    "yj_practice_exercises_answer_child": 0
+  },
+  "after": {
+    "yj_practice_exercises": {
+      "exists": true,
+      "summary": {
+        "total_rows": 1497,
+        "tenant_id_1_rows": "1497",
+        "tenant_id_not_1_or_null_rows": "0"
+      },
+      "distribution": [
+        {
+          "tenant_id": 1,
+          "deleted": "b'\\x00'",
+          "row_count": 1494
+        },
+        {
+          "tenant_id": 1,
+          "deleted": "b'\\x01'",
+          "row_count": 3
+        }
+      ]
+    },
+    "yj_practice_exercises_answer": {
+      "exists": true,
+      "summary": {
+        "total_rows": 4506,
+        "tenant_id_1_rows": "4506",
+        "tenant_id_not_1_or_null_rows": "0"
+      },
+      "distribution": [
+        {
+          "tenant_id": 1,
+          "deleted": "b'\\x00'",
+          "row_count": 4506
+        }
+      ]
+    },
+    "yj_practice_exercises_answer_child": {
+      "exists": true,
+      "summary": {
+        "total_rows": 0,
+        "tenant_id_1_rows": null,
+        "tenant_id_not_1_or_null_rows": null
+      },
+      "distribution": []
+    }
+  },
+  "reference_after": {
+    "yj_assessment_question": {
+      "exists": true,
+      "summary": {
+        "total_rows": 0,
+        "tenant_id_1_rows": null,
+        "tenant_id_not_1_or_null_rows": null
+      },
+      "distribution": []
+    },
+    "yj_assessment_answer": {
+      "exists": true,
+      "summary": {
+        "total_rows": 0,
+        "tenant_id_1_rows": null,
+        "tenant_id_not_1_or_null_rows": null
+      },
+      "distribution": []
+    }
+  },
+  "rollback_sql": "E:\\huiyitechworkspace\\feixingxueyuan\\code\\develop\\doc\\05-零散任务\\01-进行中\\20260610-yj-practice-exercises-tenant-id更新\\02-任务产出\\rollback_yj_practice_exercises_tenant_id.sql",
+  "status": "committed",
+  "finished_at": "2026-06-11T15:33:48"
+}

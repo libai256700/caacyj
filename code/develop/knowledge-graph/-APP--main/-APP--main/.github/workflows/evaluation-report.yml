@@ -1,0 +1,37 @@
+name: Evaluation report skill
+
+on:
+  push:
+    paths:
+      - ".github/workflows/evaluation-report.yml"
+      - "skills/evaluation-report/**"
+  pull_request:
+    paths:
+      - ".github/workflows/evaluation-report.yml"
+      - "skills/evaluation-report/**"
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version: [18, 20, 22]
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Run tests
+        working-directory: skills/evaluation-report
+        run: |
+          npm ci
+          npm test
+      - name: Check scripts and schema
+        working-directory: skills/evaluation-report
+        run: |
+          node --check scripts/evaluation-report-core.mjs
+          node --check scripts/evaluation-report-cli.mjs
+          node --check scripts/openai-compatible-llm.mjs
+          node -e "JSON.parse(require('node:fs').readFileSync('references/form-data-v3.schema.json', 'utf8'))"

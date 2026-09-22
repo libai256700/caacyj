@@ -1,0 +1,367 @@
+{
+  "started_at": "2026-06-11T17:53:12",
+  "database": "114.111.30.111:13306/yunjikeji",
+  "backup_table": "yj_practice_category_catalog_type_bak_20260611175312",
+  "before": {
+    "columns": [
+      {
+        "Field": "id",
+        "Type": "bigint(20)",
+        "Null": "NO",
+        "Key": "PRI",
+        "Default": null,
+        "Extra": "auto_increment"
+      },
+      {
+        "Field": "category_name",
+        "Type": "varchar(100)",
+        "Null": "NO",
+        "Key": "MUL",
+        "Default": null,
+        "Extra": ""
+      },
+      {
+        "Field": "category_status",
+        "Type": "bit(1)",
+        "Null": "NO",
+        "Key": "MUL",
+        "Default": "b'1'",
+        "Extra": ""
+      },
+      {
+        "Field": "field_type",
+        "Type": "varchar(10)",
+        "Null": "YES",
+        "Key": "",
+        "Default": null,
+        "Extra": ""
+      },
+      {
+        "Field": "sort_no",
+        "Type": "int(11)",
+        "Null": "NO",
+        "Key": "MUL",
+        "Default": "0",
+        "Extra": ""
+      },
+      {
+        "Field": "tenant_id",
+        "Type": "bigint(20)",
+        "Null": "NO",
+        "Key": "",
+        "Default": "0",
+        "Extra": ""
+      },
+      {
+        "Field": "creator",
+        "Type": "varchar(64)",
+        "Null": "YES",
+        "Key": "",
+        "Default": "",
+        "Extra": ""
+      },
+      {
+        "Field": "create_time",
+        "Type": "datetime",
+        "Null": "NO",
+        "Key": "",
+        "Default": "CURRENT_TIMESTAMP",
+        "Extra": ""
+      },
+      {
+        "Field": "updater",
+        "Type": "varchar(64)",
+        "Null": "YES",
+        "Key": "",
+        "Default": "",
+        "Extra": ""
+      },
+      {
+        "Field": "update_time",
+        "Type": "datetime",
+        "Null": "NO",
+        "Key": "",
+        "Default": "CURRENT_TIMESTAMP",
+        "Extra": "on update CURRENT_TIMESTAMP"
+      },
+      {
+        "Field": "deleted",
+        "Type": "bit(1)",
+        "Null": "NO",
+        "Key": "",
+        "Default": "b'0'",
+        "Extra": ""
+      }
+    ],
+    "category_sample": [
+      {
+        "id": 1,
+        "category_name": "概述",
+        "tenant_id": 1,
+        "deleted": "b'\\x00'"
+      },
+      {
+        "id": 2,
+        "category_name": "系统组成及介绍",
+        "tenant_id": 1,
+        "deleted": "b'\\x00'"
+      },
+      {
+        "id": 3,
+        "category_name": "空中交通管制",
+        "tenant_id": 1,
+        "deleted": "b'\\x00'"
+      },
+      {
+        "id": 4,
+        "category_name": "无人机飞行手册、法律法规及其他",
+        "tenant_id": 1,
+        "deleted": "b'\\x00'"
+      },
+      {
+        "id": 5,
+        "category_name": "无人机操作注意事项",
+        "tenant_id": 1,
+        "deleted": "b'\\x00'"
+      },
+      {
+        "id": 6,
+        "category_name": "气象",
+        "tenant_id": 1,
+        "deleted": "b'\\x00'"
+      },
+      {
+        "id": 7,
+        "category_name": "旋翼无人机",
+        "tenant_id": 1,
+        "deleted": "b'\\x00'"
+      },
+      {
+        "id": 8,
+        "category_name": "无人机任务规划",
+        "tenant_id": 1,
+        "deleted": "b'\\x00'"
+      },
+      {
+        "id": 9,
+        "category_name": "飞行原理与飞行性能",
+        "tenant_id": 1,
+        "deleted": "b'\\x00'"
+      },
+      {
+        "id": 10,
+        "category_name": "综合问答",
+        "tenant_id": 1,
+        "deleted": "b'\\x00'"
+      },
+      {
+        "id": 11,
+        "category_name": "无人机教员题库",
+        "tenant_id": 1,
+        "deleted": "b'\\x00'"
+      },
+      {
+        "id": 13,
+        "category_name": "入行专属评估",
+        "tenant_id": 1,
+        "deleted": "b'\\x00'"
+      }
+    ]
+  },
+  "actions": [
+    {
+      "backup": "yj_practice_category_catalog_type_bak_20260611175312",
+      "rows": 13
+    },
+    {
+      "add_column": "yj_practice_category.catalog_type"
+    },
+    {
+      "set_practice_categories": 0
+    },
+    {
+      "set_assessment_category_id_13": 1
+    }
+  ],
+  "after": {
+    "columns": [
+      {
+        "Field": "id",
+        "Type": "bigint(20)",
+        "Null": "NO",
+        "Key": "PRI",
+        "Default": null,
+        "Extra": "auto_increment"
+      },
+      {
+        "Field": "category_name",
+        "Type": "varchar(100)",
+        "Null": "NO",
+        "Key": "MUL",
+        "Default": null,
+        "Extra": ""
+      },
+      {
+        "Field": "category_status",
+        "Type": "bit(1)",
+        "Null": "NO",
+        "Key": "MUL",
+        "Default": "b'1'",
+        "Extra": ""
+      },
+      {
+        "Field": "field_type",
+        "Type": "varchar(10)",
+        "Null": "YES",
+        "Key": "",
+        "Default": null,
+        "Extra": ""
+      },
+      {
+        "Field": "catalog_type",
+        "Type": "int(11)",
+        "Null": "NO",
+        "Key": "",
+        "Default": "0",
+        "Extra": ""
+      },
+      {
+        "Field": "sort_no",
+        "Type": "int(11)",
+        "Null": "NO",
+        "Key": "MUL",
+        "Default": "0",
+        "Extra": ""
+      },
+      {
+        "Field": "tenant_id",
+        "Type": "bigint(20)",
+        "Null": "NO",
+        "Key": "",
+        "Default": "0",
+        "Extra": ""
+      },
+      {
+        "Field": "creator",
+        "Type": "varchar(64)",
+        "Null": "YES",
+        "Key": "",
+        "Default": "",
+        "Extra": ""
+      },
+      {
+        "Field": "create_time",
+        "Type": "datetime",
+        "Null": "NO",
+        "Key": "",
+        "Default": "CURRENT_TIMESTAMP",
+        "Extra": ""
+      },
+      {
+        "Field": "updater",
+        "Type": "varchar(64)",
+        "Null": "YES",
+        "Key": "",
+        "Default": "",
+        "Extra": ""
+      },
+      {
+        "Field": "update_time",
+        "Type": "datetime",
+        "Null": "NO",
+        "Key": "",
+        "Default": "CURRENT_TIMESTAMP",
+        "Extra": "on update CURRENT_TIMESTAMP"
+      },
+      {
+        "Field": "deleted",
+        "Type": "bit(1)",
+        "Null": "NO",
+        "Key": "",
+        "Default": "b'0'",
+        "Extra": ""
+      }
+    ],
+    "category_types": [
+      {
+        "id": 1,
+        "category_name": "概述",
+        "catalog_type": 0,
+        "exercise_count": 58
+      },
+      {
+        "id": 2,
+        "category_name": "系统组成及介绍",
+        "catalog_type": 0,
+        "exercise_count": 148
+      },
+      {
+        "id": 3,
+        "category_name": "空中交通管制",
+        "catalog_type": 0,
+        "exercise_count": 37
+      },
+      {
+        "id": 4,
+        "category_name": "无人机飞行手册、法律法规及其他",
+        "catalog_type": 0,
+        "exercise_count": 92
+      },
+      {
+        "id": 5,
+        "category_name": "无人机操作注意事项",
+        "catalog_type": 0,
+        "exercise_count": 79
+      },
+      {
+        "id": 6,
+        "category_name": "气象",
+        "catalog_type": 0,
+        "exercise_count": 255
+      },
+      {
+        "id": 7,
+        "category_name": "旋翼无人机",
+        "catalog_type": 0,
+        "exercise_count": 76
+      },
+      {
+        "id": 8,
+        "category_name": "无人机任务规划",
+        "catalog_type": 0,
+        "exercise_count": 74
+      },
+      {
+        "id": 9,
+        "category_name": "飞行原理与飞行性能",
+        "catalog_type": 0,
+        "exercise_count": 300
+      },
+      {
+        "id": 10,
+        "category_name": "综合问答",
+        "catalog_type": 0,
+        "exercise_count": 199
+      },
+      {
+        "id": 11,
+        "category_name": "无人机教员题库",
+        "catalog_type": 0,
+        "exercise_count": 155
+      },
+      {
+        "id": 13,
+        "category_name": "入行专属评估",
+        "catalog_type": 1,
+        "exercise_count": 21
+      }
+    ],
+    "assessment_question_count": [
+      {
+        "count": 21
+      }
+    ]
+  },
+  "status": "committed",
+  "finished_at": "2026-06-11T17:53:13"
+}

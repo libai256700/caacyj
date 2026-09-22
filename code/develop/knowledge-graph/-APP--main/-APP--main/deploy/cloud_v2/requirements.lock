@@ -1,0 +1,19 @@
+# cloud-v2-runtime-dependencies-v1
+# Python 3.14; exact candidate versions. No provider SDK is selected before Stop B.
+blinker==1.9.0
+click==8.4.1
+Flask==3.1.3
+flask-cors==6.0.2
+itsdangerous==2.2.0
+Jinja2==3.1.6
+jieba==0.42.1
+MarkupSafe==3.0.3
+neo4j==6.2.0
+numkong==7.8.1
+numpy==2.5.2
+pytz==2026.2
+tqdm==4.70.0
+usearch==2.26.2
+waitress==3.0.2
+Werkzeug==3.1.8
+Whoosh==2.7.4

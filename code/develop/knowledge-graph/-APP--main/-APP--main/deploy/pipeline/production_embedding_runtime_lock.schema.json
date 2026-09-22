@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://caacyj.invalid/schemas/production-embedding-runtime-lock-v2.json",
+  "title": "Production embedding exact runtime lock",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "identity", "identity_sha256"],
+  "properties": {
+    "schema_version": {
+      "const": "kg-production-embedding-runtime-lock-v2"
+    },
+    "identity": {
+      "type": "object"
+    },
+    "identity_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "schema_version": "cloud-v2-stop-b-synthetic-probes-v2",
+  "status": "sealed-offline-provider-neutral-fixture",
+  "unit_contract": {
+    "name": "unicode-code-point-count-v1",
+    "server_answer_input_units": "question-plus-evidence-text",
+    "embedding_input_units": "text"
+  },
+  "call_contract": {
+    "server_answer_calls_per_approved_channel": 1,
+    "embedding_calls_by_purpose": {
+      "build": 1,
+      "query": 1,
+      "entity": 1
+    },
+    "single_server_channel_total": 4
+  },
+  "payloads": {
+    "server_answer": {
+      "request_id": "synthetic:server-answer:001",
+      "question": "合成测试：示例飞行器升力是什么？",
+      "evidence": [
+        {
+          "evidence_id": "synthetic:evidence:001",
+          "text": "合成资料：升力是垂直于相对气流方向的空气动力分量。"
+        }
+      ],
+      "input_units": 41
+    },
+    "embedding": {
+      "build": [
+        {
+          "object_id": "synthetic:document:001",
+          "text": "synthetic document alpha",
+          "input_units": 24
+        }
+      ],
+      "query": [
+        {
+          "object_id": "synthetic:query:001",
+          "text": "synthetic query alpha",
+          "input_units": 21
+        }
+      ],
+      "entity": [
+        {
+          "object_id": "synthetic:entity:001",
+          "text": "synthetic entity alpha",
+          "input_units": 22
+        }
+      ]
+    }
+  },
+  "contains_real_source_or_user_data": false,
+  "provider_calls_authorized": false,
+  "provider_specific_wire_bytes_authorized": false
+}

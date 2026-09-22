@@ -1,0 +1,491 @@
+{
+  "started_at": "2026-06-11T18:37:40",
+  "database": "114.111.30.111:13306/yunjikeji",
+  "tenant_id": 1,
+  "assessment_category_id": 13,
+  "backup_tables": {
+    "yj_practice_setp": "yj_practice_assessment_step_bak_20260611183740",
+    "yj_practice_exercises": "yj_practice_assessment_exercise_bak_20260611183740"
+  },
+  "before": {
+    "assessment_category": [
+      {
+        "id": 13,
+        "category_name": "入行专属评估",
+        "catalog_type": 1,
+        "tenant_id": 1,
+        "deleted_hex": "0"
+      }
+    ],
+    "assessment_exercises": [
+      {
+        "id": 2749,
+        "sort_no": 1,
+        "step_id": null,
+        "category_id": 13,
+        "question_stem": "姓名"
+      },
+      {
+        "id": 2750,
+        "sort_no": 2,
+        "step_id": null,
+        "category_id": 13,
+        "question_stem": "性别"
+      },
+      {
+        "id": 2751,
+        "sort_no": 3,
+        "step_id": null,
+        "category_id": 13,
+        "question_stem": "您的年龄区间是"
+      },
+      {
+        "id": 2752,
+        "sort_no": 4,
+        "step_id": null,
+        "category_id": 13,
+        "question_stem": "您的学历及相关专业是"
+      },
+      {
+        "id": 2753,
+        "sort_no": 5,
+        "step_id": null,
+        "category_id": 13,
+        "question_stem": "您当前的职业状态是"
+      },
+      {
+        "id": 2754,
+        "sort_no": 6,
+        "step_id": null,
+        "category_id": 13,
+        "question_stem": "您是否了解 CAAC 执照"
+      },
+      {
+        "id": 2755,
+        "sort_no": 7,
+        "step_id": null,
+        "category_id": 13,
+        "question_stem": "您目前是否有无人机设备"
+      },
+      {
+        "id": 2756,
+        "sort_no": 8,
+        "step_id": null,
+        "category_id": 13,
+        "question_stem": "您最初了解到无人机/低空经济，是因为？"
+      },
+      {
+        "id": 2757,
+        "sort_no": 9,
+        "step_id": null,
+        "category_id": 13,
+        "question_stem": "您能说出几个低空经济的具体工作岗位？"
+      },
+      {
+        "id": 2758,
+        "sort_no": 10,
+        "step_id": null,
+        "category_id": 13,
+        "question_stem": "您学习无人机，最核心的诉求是？"
+      },
+      {
+        "id": 2759,
+        "sort_no": 11,
+        "step_id": null,
+        "category_id": 13,
+        "question_stem": "您的过往工作/学习经历中，最擅长的是？"
+      },
+      {
+        "id": 2760,
+        "sort_no": 12,
+        "step_id": null,
+        "category_id": 13,
+        "question_stem": "您拥有哪些可以和低空经济结合的资源？"
+      },
+      {
+        "id": 2761,
+        "sort_no": 13,
+        "step_id": null,
+        "category_id": 13,
+        "question_stem": "您觉得自己最大的性格特点是？"
+      },
+      {
+        "id": 2762,
+        "sort_no": 14,
+        "step_id": null,
+        "category_id": 13,
+        "question_stem": "您的兴趣爱好是？"
+      },
+      {
+        "id": 2763,
+        "sort_no": 15,
+        "step_id": null,
+        "category_id": 13,
+        "question_stem": "以下低空经济细分方向，您最感兴趣的是？"
+      },
+      {
+        "id": 2764,
+        "sort_no": 16,
+        "step_id": null,
+        "category_id": 13,
+        "question_stem": "您能接受的工作场景和模式是？"
+      },
+      {
+        "id": 2765,
+        "sort_no": 17,
+        "step_id": null,
+        "category_id": 13,
+        "question_stem": "您每周能投入的有效学习时间是？"
+      },
+      {
+        "id": 2766,
+        "sort_no": 18,
+        "step_id": null,
+        "category_id": 13,
+        "question_stem": "您能接受的学习和待岗周期是？"
+      },
+      {
+        "id": 2767,
+        "sort_no": 19,
+        "step_id": null,
+        "category_id": 13,
+        "question_stem": "您能接受的学习预算是？"
+      },
+      {
+        "id": 2768,
+        "sort_no": 20,
+        "step_id": null,
+        "category_id": 13,
+        "question_stem": "如果给您一份专属的评估报告，您最希望得到什么内容？"
+      },
+      {
+        "id": 2769,
+        "sort_no": 21,
+        "step_id": null,
+        "category_id": 13,
+        "question_stem": "您还有其他问题或想补充的内容吗？"
+      }
+    ],
+    "catalog_type_0_step_id_summary": [
+      {
+        "total_count": 1473,
+        "null_step_count": "1473",
+        "non_null_step_count": "0"
+      }
+    ],
+    "existing_steps": []
+  },
+  "actions": [
+    {
+      "backup": {
+        "step_backup_table": "yj_practice_assessment_step_bak_20260611183740",
+        "step_backup_rows": 0,
+        "exercise_backup_table": "yj_practice_assessment_exercise_bak_20260611183740",
+        "exercise_backup_rows": 21
+      }
+    },
+    {
+      "insert_step": "第一部分：您的基本信息",
+      "step_id": 1
+    },
+    {
+      "map_exercises": "第一部分：您的基本信息",
+      "step_id": 1,
+      "sort_range": [
+        1,
+        7
+      ],
+      "rows": 7
+    },
+    {
+      "insert_step": "第二部分：入行动机与自身优势",
+      "step_id": 2
+    },
+    {
+      "map_exercises": "第二部分：入行动机与自身优势",
+      "step_id": 2,
+      "sort_range": [
+        8,
+        13
+      ],
+      "rows": 6
+    },
+    {
+      "insert_step": "第三部分：行业方向与学习条件",
+      "step_id": 3
+    },
+    {
+      "map_exercises": "第三部分：行业方向与学习条件",
+      "step_id": 3,
+      "sort_range": [
+        14,
+        19
+      ],
+      "rows": 6
+    },
+    {
+      "insert_step": "第四部分：最终确认",
+      "step_id": 4
+    },
+    {
+      "map_exercises": "第四部分：最终确认",
+      "step_id": 4,
+      "sort_range": [
+        20,
+        21
+      ],
+      "rows": 2
+    }
+  ],
+  "after": {
+    "steps": [
+      {
+        "id": 1,
+        "tenant_id": 1,
+        "setp_name": "第一部分：您的基本信息",
+        "sort_no": 1,
+        "deleted_hex": "0"
+      },
+      {
+        "id": 2,
+        "tenant_id": 1,
+        "setp_name": "第二部分：入行动机与自身优势",
+        "sort_no": 2,
+        "deleted_hex": "0"
+      },
+      {
+        "id": 3,
+        "tenant_id": 1,
+        "setp_name": "第三部分：行业方向与学习条件",
+        "sort_no": 3,
+        "deleted_hex": "0"
+      },
+      {
+        "id": 4,
+        "tenant_id": 1,
+        "setp_name": "第四部分：最终确认",
+        "sort_no": 4,
+        "deleted_hex": "0"
+      }
+    ],
+    "assessment_mapping": [
+      {
+        "step_id": 1,
+        "setp_name": "第一部分：您的基本信息",
+        "step_sort_no": 1,
+        "exercise_count": 7,
+        "min_exercise_sort_no": 1,
+        "max_exercise_sort_no": 7,
+        "exercise_ids": "2749,2750,2751,2752,2753,2754,2755"
+      },
+      {
+        "step_id": 2,
+        "setp_name": "第二部分：入行动机与自身优势",
+        "step_sort_no": 2,
+        "exercise_count": 6,
+        "min_exercise_sort_no": 8,
+        "max_exercise_sort_no": 13,
+        "exercise_ids": "2756,2757,2758,2759,2760,2761"
+      },
+      {
+        "step_id": 3,
+        "setp_name": "第三部分：行业方向与学习条件",
+        "step_sort_no": 3,
+        "exercise_count": 6,
+        "min_exercise_sort_no": 14,
+        "max_exercise_sort_no": 19,
+        "exercise_ids": "2762,2763,2764,2765,2766,2767"
+      },
+      {
+        "step_id": 4,
+        "setp_name": "第四部分：最终确认",
+        "step_sort_no": 4,
+        "exercise_count": 2,
+        "min_exercise_sort_no": 20,
+        "max_exercise_sort_no": 21,
+        "exercise_ids": "2768,2769"
+      }
+    ],
+    "assessment_unmapped_count": 0,
+    "catalog_type_0_step_id_summary": [
+      {
+        "total_count": 1473,
+        "null_step_count": "1473",
+        "non_null_step_count": "0"
+      }
+    ],
+    "exercise_detail": [
+      {
+        "id": 2749,
+        "sort_no": 1,
+        "step_id": 1,
+        "setp_name": "第一部分：您的基本信息",
+        "catalog_type": 1,
+        "question_stem": "姓名"
+      },
+      {
+        "id": 2750,
+        "sort_no": 2,
+        "step_id": 1,
+        "setp_name": "第一部分：您的基本信息",
+        "catalog_type": 1,
+        "question_stem": "性别"
+      },
+      {
+        "id": 2751,
+        "sort_no": 3,
+        "step_id": 1,
+        "setp_name": "第一部分：您的基本信息",
+        "catalog_type": 1,
+        "question_stem": "您的年龄区间是"
+      },
+      {
+        "id": 2752,
+        "sort_no": 4,
+        "step_id": 1,
+        "setp_name": "第一部分：您的基本信息",
+        "catalog_type": 1,
+        "question_stem": "您的学历及相关专业是"
+      },
+      {
+        "id": 2753,
+        "sort_no": 5,
+        "step_id": 1,
+        "setp_name": "第一部分：您的基本信息",
+        "catalog_type": 1,
+        "question_stem": "您当前的职业状态是"
+      },
+      {
+        "id": 2754,
+        "sort_no": 6,
+        "step_id": 1,
+        "setp_name": "第一部分：您的基本信息",
+        "catalog_type": 1,
+        "question_stem": "您是否了解 CAAC 执照"
+      },
+      {
+        "id": 2755,
+        "sort_no": 7,
+        "step_id": 1,
+        "setp_name": "第一部分：您的基本信息",
+        "catalog_type": 1,
+        "question_stem": "您目前是否有无人机设备"
+      },
+      {
+        "id": 2756,
+        "sort_no": 8,
+        "step_id": 2,
+        "setp_name": "第二部分：入行动机与自身优势",
+        "catalog_type": 1,
+        "question_stem": "您最初了解到无人机/低空经济，是因为？"
+      },
+      {
+        "id": 2757,
+        "sort_no": 9,
+        "step_id": 2,
+        "setp_name": "第二部分：入行动机与自身优势",
+        "catalog_type": 1,
+        "question_stem": "您能说出几个低空经济的具体工作岗位？"
+      },
+      {
+        "id": 2758,
+        "sort_no": 10,
+        "step_id": 2,
+        "setp_name": "第二部分：入行动机与自身优势",
+        "catalog_type": 1,
+        "question_stem": "您学习无人机，最核心的诉求是？"
+      },
+      {
+        "id": 2759,
+        "sort_no": 11,
+        "step_id": 2,
+        "setp_name": "第二部分：入行动机与自身优势",
+        "catalog_type": 1,
+        "question_stem": "您的过往工作/学习经历中，最擅长的是？"
+      },
+      {
+        "id": 2760,
+        "sort_no": 12,
+        "step_id": 2,
+        "setp_name": "第二部分：入行动机与自身优势",
+        "catalog_type": 1,
+        "question_stem": "您拥有哪些可以和低空经济结合的资源？"
+      },
+      {
+        "id": 2761,
+        "sort_no": 13,
+        "step_id": 2,
+        "setp_name": "第二部分：入行动机与自身优势",
+        "catalog_type": 1,
+        "question_stem": "您觉得自己最大的性格特点是？"
+      },
+      {
+        "id": 2762,
+        "sort_no": 14,
+        "step_id": 3,
+        "setp_name": "第三部分：行业方向与学习条件",
+        "catalog_type": 1,
+        "question_stem": "您的兴趣爱好是？"
+      },
+      {
+        "id": 2763,
+        "sort_no": 15,
+        "step_id": 3,
+        "setp_name": "第三部分：行业方向与学习条件",
+        "catalog_type": 1,
+        "question_stem": "以下低空经济细分方向，您最感兴趣的是？"
+      },
+      {
+        "id": 2764,
+        "sort_no": 16,
+        "step_id": 3,
+        "setp_name": "第三部分：行业方向与学习条件",
+        "catalog_type": 1,
+        "question_stem": "您能接受的工作场景和模式是？"
+      },
+      {
+        "id": 2765,
+        "sort_no": 17,
+        "step_id": 3,
+        "setp_name": "第三部分：行业方向与学习条件",
+        "catalog_type": 1,
+        "question_stem": "您每周能投入的有效学习时间是？"
+      },
+      {
+        "id": 2766,
+        "sort_no": 18,
+        "step_id": 3,
+        "setp_name": "第三部分：行业方向与学习条件",
+        "catalog_type": 1,
+        "question_stem": "您能接受的学习和待岗周期是？"
+      },
+      {
+        "id": 2767,
+        "sort_no": 19,
+        "step_id": 3,
+        "setp_name": "第三部分：行业方向与学习条件",
+        "catalog_type": 1,
+        "question_stem": "您能接受的学习预算是？"
+      },
+      {
+        "id": 2768,
+        "sort_no": 20,
+        "step_id": 4,
+        "setp_name": "第四部分：最终确认",
+        "catalog_type": 1,
+        "question_stem": "如果给您一份专属的评估报告，您最希望得到什么内容？"
+      },
+      {
+        "id": 2769,
+        "sort_no": 21,
+        "step_id": 4,
+        "setp_name": "第四部分：最终确认",
+        "catalog_type": 1,
+        "question_stem": "您还有其他问题或想补充的内容吗？"
+      }
+    ]
+  },
+  "status": "committed",
+  "finished_at": "2026-06-11T18:37:41",
+  "rollback_sql_path": "E:\\huiyitechworkspace\\feixingxueyuan\\code\\develop\\doc\\05-零散任务\\01-进行中\\20260611-yj-practice-answer-correct修复\\02-任务产出\\rollback_yj_practice_assessment_step_mapping_20260611.sql"
+}

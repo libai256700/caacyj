@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/kg-scoped-neo4j-import-config-v1.json",
+  "title": "Scoped Neo4j candidate import configuration",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "graph_manifest_path",
+    "authority_database_path",
+    "receipt_output_path",
+    "driver",
+    "driver_version",
+    "uri_env",
+    "username_env",
+    "password_env",
+    "database_env",
+    "batch_size",
+    "query_timeout_seconds"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "kg-scoped-neo4j-import-config-v1"
+    },
+    "graph_manifest_path": {
+      "$ref": "#/$defs/absolutePath"
+    },
+    "authority_database_path": {
+      "$ref": "#/$defs/absolutePath"
+    },
+    "receipt_output_path": {
+      "$ref": "#/$defs/absolutePath"
+    },
+    "driver": {
+      "const": "neo4j"
+    },
+    "driver_version": {
+      "const": "6.2.0"
+    },
+    "uri_env": {
+      "$ref": "#/$defs/environmentName"
+    },
+    "username_env": {
+      "$ref": "#/$defs/environmentName"
+    },
+    "password_env": {
+      "$ref": "#/$defs/environmentName"
+    },
+    "database_env": {
+      "$ref": "#/$defs/environmentName"
+    },
+    "batch_size": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5000
+    },
+    "query_timeout_seconds": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    }
+  },
+  "$defs": {
+    "absolutePath": {
+      "type": "string",
+      "pattern": "^/"
+    },
+    "environmentName": {
+      "type": "string",
+      "pattern": "^[A-Z][A-Z0-9_]{0,127}$"
+    }
+  }
+}
