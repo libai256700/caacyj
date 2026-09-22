@@ -1,0 +1,174 @@
+{
+  "fixture": "Playwright route 提供确定性岗位列表与 /app-api/yj/student-audit/my 响应；只驱动真实 jobs.vue 和正式弹框组件。",
+  "startedAt": "2026-08-18T12:49:31.876Z",
+  "baseUrl": "http://127.0.0.1:5173/yunjikeji/",
+  "checks": [
+    {
+      "scenario": "unbound-null",
+      "auditRequests": 1,
+      "externalCalls": 0,
+      "dialogInstances": 1,
+      "close": true
+    },
+    {
+      "scenario": "unbound-non2",
+      "auditRequests": 1,
+      "externalCalls": 0,
+      "dialogInstances": 1,
+      "close": true
+    },
+    {
+      "scenario": "delayedDoubleClick",
+      "auditRequests": 1,
+      "dialogInstances": 1
+    },
+    {
+      "scenario": "bound-h5",
+      "auditRequests": 1,
+      "url": "https://jobs.example.com/positions/61?source=app"
+    },
+    {
+      "scenario": "bound-plus",
+      "auditRequests": 1,
+      "url": "https://jobs.example.com/positions/61"
+    },
+    {
+      "scenario": "bound-clipboard",
+      "auditRequests": 1,
+      "url": "https://jobs.example.com/positions/61?source=clipboard"
+    },
+    {
+      "scenario": "invalidUrl",
+      "auditRequests": 1,
+      "originalToastPreserved": true
+    },
+    {
+      "scenario": "audit500",
+      "externalCalls": 0,
+      "dialogInstances": 0,
+      "errorToast": true
+    },
+    {
+      "scenario": "dialog-service",
+      "navigateTo": "/pages/service/customer-service-chat?conversationId=default",
+      "dialogClosed": true
+    },
+    {
+      "scenario": "dialog-confirm",
+      "navigateTo": "/pages/enterprise/organization-bind?entry=direct",
+      "dialogClosed": true
+    },
+    {
+      "scenario": "responsiveDialog",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "layout": {
+        "documentScrollWidth": 360,
+        "bodyScrollWidth": 360,
+        "panel": {
+          "top": 265.40625,
+          "right": 300,
+          "bottom": 534.59375,
+          "left": 60
+        }
+      }
+    },
+    {
+      "scenario": "responsiveDialog",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "layout": {
+        "documentScrollWidth": 390,
+        "bodyScrollWidth": 390,
+        "panel": {
+          "top": 276.171875,
+          "right": 325,
+          "bottom": 567.8125,
+          "left": 65
+        }
+      }
+    },
+    {
+      "scenario": "responsiveDialog",
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "layout": {
+        "documentScrollWidth": 430,
+        "bodyScrollWidth": 430,
+        "panel": {
+          "top": 305.21875,
+          "right": 358.328125,
+          "bottom": 626.78125,
+          "left": 71.671875
+        }
+      }
+    },
+    {
+      "scenario": "sourceContract",
+      "directImports": true,
+      "dialogInstances": 1,
+      "events": [
+        "cancel",
+        "close",
+        "service",
+        "bind"
+      ],
+      "runtimes": [
+        "plus",
+        "h5",
+        "clipboard"
+      ]
+    }
+  ],
+  "failures": [],
+  "browserErrors": [
+    {
+      "scenario": "unbound-null",
+      "errors": []
+    },
+    {
+      "scenario": "unbound-non2",
+      "errors": []
+    },
+    {
+      "scenario": "delayedDoubleClick",
+      "errors": []
+    },
+    {
+      "scenario": "bound-h5",
+      "errors": []
+    },
+    {
+      "scenario": "bound-plus",
+      "errors": []
+    },
+    {
+      "scenario": "bound-clipboard",
+      "errors": []
+    },
+    {
+      "scenario": "audit500",
+      "errors": []
+    },
+    {
+      "scenario": "responsive-360x800",
+      "errors": []
+    },
+    {
+      "scenario": "responsive-390x844",
+      "errors": []
+    },
+    {
+      "scenario": "responsive-430x932",
+      "errors": []
+    }
+  ],
+  "finishedAt": "2026-08-18T12:49:53.959Z",
+  "status": "passed"
+}

@@ -1,0 +1,84 @@
+{
+  "defaultCalls": [
+    {
+      "method": "reLaunch",
+      "url": "/pages/center"
+    },
+    {
+      "method": "navigateTo",
+      "url": "/pages/practice"
+    },
+    {
+      "method": "navigateTo",
+      "url": "/pages/practice"
+    },
+    {
+      "method": "navigateTo",
+      "url": "/pages/jobs"
+    },
+    {
+      "method": "navigateTo",
+      "url": "/pages/service/customer-service-chat?conversationId=default"
+    },
+    {
+      "method": "reLaunch",
+      "url": "/pages/profile"
+    },
+    {
+      "method": "reLaunch",
+      "url": "/pages/center"
+    },
+    {
+      "method": "reLaunch",
+      "url": "/pages/profile"
+    }
+  ],
+  "enterpriseCalls": [
+    {
+      "method": "reLaunch",
+      "url": "/pages/service/customer-service"
+    }
+  ],
+  "expectedDefault": [
+    {
+      "method": "reLaunch",
+      "url": "/pages/center"
+    },
+    {
+      "method": "navigateTo",
+      "url": "/pages/practice"
+    },
+    {
+      "method": "navigateTo",
+      "url": "/pages/practice"
+    },
+    {
+      "method": "navigateTo",
+      "url": "/pages/jobs"
+    },
+    {
+      "method": "navigateTo",
+      "url": "/pages/service/customer-service-chat?conversationId=default"
+    },
+    {
+      "method": "reLaunch",
+      "url": "/pages/profile"
+    },
+    {
+      "method": "reLaunch",
+      "url": "/pages/center"
+    },
+    {
+      "method": "reLaunch",
+      "url": "/pages/profile"
+    }
+  ],
+  "expectedEnterprise": [
+    {
+      "method": "reLaunch",
+      "url": "/pages/service/customer-service"
+    }
+  ],
+  "defaultPassed": true,
+  "enterprisePassed": true
+}

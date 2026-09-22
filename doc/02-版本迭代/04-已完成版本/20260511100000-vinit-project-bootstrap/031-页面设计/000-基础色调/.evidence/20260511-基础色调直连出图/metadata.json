@@ -1,0 +1,36 @@
+{
+  "generated_at": "2026-05-11T10:32:39.765843+00:00",
+  "model": "gpt-image-2",
+  "base_url": "https://api.chshapi.cn/v1",
+  "request_path": "/v1/images/edits",
+  "request": {
+    "model": "gpt-image-2",
+    "prompt": "飞行学院移动端智能考试基础色调指导图，竖屏移动端，目标尺寸 780x1387。画面必须是一个干净的产品设计指导板，不是营销海报，不是手机产品渲染图，不要出现手机机身、摄像头、品牌logo、认证徽章、人物、复杂3D或大段正文。整体参考浅天空、水面反光、清爽低饱和的感觉，但不要复制参考图里的手机外观。\n\n主体内容是移动端智能考试的配色系统展示：航空蓝主色、深主色、浅蓝页面底、白色卡片、暖橙警示、紫光智能入口、灰绿已掌握、正确绿、错误红、警示橙、禁用灰。用少量真实感但克制的移动端组件去标注这些颜色的用途，包括顶部导航、底部Tab、题卡、选项按钮、进度条、状态标签、解析提示块、倒计时警示块。阅读区保持高对比，交互区保持低干扰，卡片圆角克制，信息密度适中。\n\n版式上做成一张竖版UI规范板：上方是品牌色与辅助色的色块网格，中部是几个小型手机界面片段示意色彩落位，下方是状态色与禁用态示意。整体清爽、统一、专业，适合飞行学院移动端智能考试产品的后续页面继承。不要使用夸张渐变，不要出现营销文案，不要出现真实航空资质标识，不要让画面像参考图本身。",
+    "size": "780x1387",
+    "quality": "high",
+    "output_format": "jpeg"
+  },
+  "request_snapshot_path": "D:\\ProjPort\\Work\\feixingxueyuan\\doc\\02-版本迭代\\03-进行中版本\\20260511100000-vinit-project-bootstrap\\031-页面设计\\000-基础色调\\.evidence\\20260511-基础色调直连出图\\request.json",
+  "request_mode": "edits",
+  "page_ratio": null,
+  "final_resolution": "780x1387",
+  "reference_images": {
+    "local_paths": [
+      "D:\\ProjPort\\Work\\feixingxueyuan\\doc\\02-版本迭代\\03-进行中版本\\20260511100000-vinit-project-bootstrap\\031-页面设计\\006-参考图来源\\智能考试参考图\\photo_2026-05-11_17-26-12.jpg"
+    ],
+    "remote_urls": [],
+    "file_ids": [],
+    "mask_path": null
+  },
+  "return_field_types": [],
+  "images": [],
+  "errors": [
+    "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)>"
+  ],
+  "attempts": [],
+  "selected_route": null,
+  "route_config_path": null,
+  "verified_routes_scope": null,
+  "verified_at": null,
+  "response_summary": {}
+}

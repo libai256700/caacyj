@@ -1,0 +1,16 @@
+{
+  "case_id": "TC-API-ASSESSMENT-AI-001",
+  "provider_contract": {
+    "base_url": "https://api.deepseek.com/anthropic",
+    "path": "/v1/messages",
+    "model": "deepseek-v4-pro",
+    "api_key": "<REDACTED>",
+    "prompt_contains_personal_data": false
+  },
+  "expected_response": {
+    "http_status": 200,
+    "model": "deepseek-v4-pro",
+    "minimum_text_blocks": 1,
+    "text_non_empty": true
+  }
+}

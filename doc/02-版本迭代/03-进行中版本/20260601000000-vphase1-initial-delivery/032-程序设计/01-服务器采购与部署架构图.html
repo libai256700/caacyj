@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>服务器采购与部署架构图</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
+  * { font-family: 'Noto Sans SC', sans-serif; }
+  .card-shadow { box-shadow: 0 4px 24px rgba(0,0,0,0.08); }
+</style>
+</head>
+<body class="bg-slate-50 min-h-screen py-10 px-4">
+
+<header class="max-w-6xl mx-auto mb-8 text-center">
+  <h1 class="text-3xl font-black text-slate-800 tracking-wide">服务器采购与部署架构图</h1>
+  <p class="text-slate-400 text-sm mt-1">第一版部署方案 · 最低起步配置</p>
+</header>
+
+<!-- ==================== 第一部分：部署架构图 ==================== -->
+<section class="max-w-6xl mx-auto mb-12">
+  <div class="flex items-center gap-3 mb-6">
+    <div class="w-1 h-6 bg-blue-500 rounded-full"></div>
+    <h2 class="text-xl font-bold text-slate-800">一、部署架构图</h2>
+    <span class="text-sm text-slate-400">（体现服务器定位与能力，具体配置见采购清单）</span>
+  </div>
+
+  <div class="bg-white rounded-2xl card-shadow border border-slate-200 p-8">
+    <div class="flex justify-center">
+      <svg viewBox="0 0 900 620" class="w-full max-w-4xl" xmlns="http://www.w3.org/2000/svg">
+
+        <defs>
+          <marker id="arrowBlue" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#3b82f6"/></marker>
+          <marker id="arrowGray" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#94a3b8"/></marker>
+          <marker id="arrowOrange" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#ea580c"/></marker>
+          <marker id="arrowPurple" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#7c3aed"/></marker>
+          <linearGradient id="gradGreen" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f0fdf4"/><stop offset="100%" stop-color="#dcfce7"/></linearGradient>
+          <linearGradient id="gradAmber" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fffbeb"/><stop offset="100%" stop-color="#fef3c7"/></linearGradient>
+          <linearGradient id="gradSlate" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f8fafc"/><stop offset="100%" stop-color="#f1f5f9"/></linearGradient>
+        </defs>
+
+        <!-- 用户 -->
+        <rect x="350" y="15" width="200" height="44" rx="22" fill="#1e293b"/>
+        <text x="450" y="35" text-anchor="middle" fill="white" font-size="13" font-weight="700">👤 用户 / 客户端</text>
+        <text x="450" y="49" text-anchor="middle" fill="#94a3b8" font-size="9">浏览器 · 移动端</text>
+
+        <!-- 用户 → 互联网 -->
+        <line x1="450" y1="59" x2="450" y2="78" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrowBlue)"/>
+
+        <!-- 互联网 -->
+        <rect x="370" y="78" width="160" height="28" rx="6" fill="#dbeafe" stroke="#93c5fd" stroke-width="1"/>
+        <text x="450" y="96" text-anchor="middle" fill="#1d4ed8" font-size="11" font-weight="700">🌐 互联网</text>
+
+        <!-- 互联网 → DNS分流 -->
+        <line x1="450" y1="106" x2="450" y2="128" stroke="#3b82f6" stroke-width="2"/>
+        <line x1="240" y1="128" x2="660" y2="128" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,2"/>
+        <line x1="240" y1="128" x2="240" y2="146" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,2" marker-end="url(#arrowGray)"/>
+        <line x1="660" y1="128" x2="660" y2="146" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,2" marker-end="url(#arrowGray)"/>
+
+        <text x="240" y="141" text-anchor="middle" fill="#94a3b8" font-size="9">test.example.com</text>
+        <text x="660" y="141" text-anchor="middle" fill="#94a3b8" font-size="9">www.example.com</text>
+        <text x="450" y="141" text-anchor="middle" fill="#94a3b8" font-size="9">DNS 域名分流</text>
+
+        <!-- ==================== 测试环境 ==================== -->
+        <rect x="25" y="155" width="410" height="210" rx="12" fill="url(#gradAmber)" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="6,3"/>
+        <rect x="25" y="155" width="410" height="32" rx="12" fill="#f59e0b"/>
+        <rect x="25" y="175" width="410" height="12" fill="#f59e0b"/>
+        <text x="230" y="176" text-anchor="middle" fill="white" font-size="13" font-weight="700">🧪 测试环境（Testing）</text>
+
+        <!-- 测试 负载均衡 + 静态资源 -->
+        <rect x="50" y="197" width="360" height="68" rx="10" fill="white" stroke="#7c3aed" stroke-width="2"/>
+        <rect x="50" y="197" width="360" height="24" rx="10" fill="#7c3aed"/>
+        <rect x="50" y="211" width="360" height="10" fill="#7c3aed"/>
+        <text x="230" y="213" text-anchor="middle" fill="white" font-size="11" font-weight="700">⚖️ 负载均衡 + 静态资源服务器</text>
+
+        <text x="230" y="237" text-anchor="middle" fill="#6d28d9" font-size="9">定位：入口代理 · 域名路由 · 静态资源托管</text>
+        <text x="230" y="253" text-anchor="middle" fill="#a78bfa" font-size="8">Nginx 反向代理 + 门户网站静态资源</text>
+
+        <!-- 测试 LB → 测试应用 -->
+        <line x1="230" y1="265" x2="230" y2="282" stroke="#7c3aed" stroke-width="1.5" marker-end="url(#arrowPurple)"/>
+
+        <!-- 测试应用服务器 -->
+        <rect x="50" y="285" width="360" height="56" rx="10" fill="white" stroke="#fcd34d" stroke-width="1.5"/>
+        <rect x="50" y="285" width="360" height="22" rx="10" fill="#fef3c7"/>
+        <rect x="50" y="297" width="360" height="10" fill="#fef3c7"/>
+        <text x="230" y="300" text-anchor="middle" fill="#92400e" font-size="11" font-weight="700">🖥️ 测试应用服务器</text>
+        <text x="230" y="321" text-anchor="middle" fill="#78716c" font-size="9">定位：内部开发验证环境</text>
+        <text x="230" y="334" text-anchor="middle" fill="#a8a29e" font-size="8">承载：开发自测 · 联调 · 预发布验证（不对外）</text>
+
+        <!-- 提示 -->
+        <text x="230" y="356" text-anchor="middle" fill="#d4d4d8" font-size="8">💡 资源独立：仅数据库与生产共享容器</text>
+
+        <!-- ==================== 生产环境 ==================== -->
+        <rect x="465" y="155" width="410" height="210" rx="12" fill="url(#gradGreen)" stroke="#22c55e" stroke-width="1.5" stroke-dasharray="6,3"/>
+        <rect x="465" y="155" width="410" height="32" rx="12" fill="#22c55e"/>
+        <rect x="465" y="175" width="410" height="12" fill="#22c55e"/>
+        <text x="670" y="176" text-anchor="middle" fill="white" font-size="13" font-weight="700">🚀 生产环境（Production）</text>
+
+        <!-- 生产 负载均衡 + 静态资源 -->
+        <rect x="490" y="197" width="360" height="68" rx="10" fill="white" stroke="#7c3aed" stroke-width="2"/>
+        <rect x="490" y="197" width="360" height="24" rx="10" fill="#7c3aed"/>
+        <rect x="490" y="211" width="360" height="10" fill="#7c3aed"/>
+        <text x="670" y="213" text-anchor="middle" fill="white" font-size="11" font-weight="700">⚖️ 负载均衡 + 静态资源服务器</text>
+
+        <text x="670" y="237" text-anchor="middle" fill="#6d28d9" font-size="9">定位：入口代理 · 域名路由 · 静态资源托管</text>
+        <text x="670" y="253" text-anchor="middle" fill="#a78bfa" font-size="8">Nginx 反向代理 + 门户网站静态资源</text>
+
+        <!-- 生产 LB → 生产应用 -->
+        <line x1="670" y1="265" x2="670" y2="282" stroke="#7c3aed" stroke-width="1.5" marker-end="url(#arrowPurple)"/>
+
+        <!-- 生产应用服务器 -->
+        <rect x="490" y="285" width="360" height="56" rx="10" fill="white" stroke="#4ade80" stroke-width="1.5"/>
+        <rect x="490" y="285" width="360" height="22" rx="10" fill="#dcfce7"/>
+        <rect x="490" y="297" width="360" height="10" fill="#dcfce7"/>
+        <text x="670" y="300" text-anchor="middle" fill="#166534" font-size="11" font-weight="700">🖥️ 生产应用服务器</text>
+
+        <text x="670" y="321" text-anchor="middle" fill="#78716c" font-size="9">定位：对外业务门户 · 应用服务</text>
+
+        <rect x="510" y="328" width="150" height="18" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+        <text x="585" y="341" text-anchor="middle" fill="#1d4ed8" font-size="8" font-weight="600">🛡️ 消毒备案申请系统</text>
+
+        <rect x="670" y="328" width="150" height="18" rx="3" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1"/>
+        <text x="745" y="341" text-anchor="middle" fill="#6d28d9" font-size="8" font-weight="600">🌐 对外展示门户网站</text>
+
+        <text x="670" y="356" text-anchor="middle" fill="#d4d4d8" font-size="8">💡 资源独立：仅数据库与测试共享容器</text>
+
+        <!-- 到数据库连线 -->
+        <line x1="230" y1="365" x2="230" y2="395" stroke="#ea580c" stroke-width="1.5" stroke-dasharray="4,2" marker-end="url(#arrowOrange)"/>
+        <line x1="670" y1="365" x2="670" y2="395" stroke="#ea580c" stroke-width="1.5" stroke-dasharray="4,2" marker-end="url(#arrowOrange)"/>
+
+        <!-- ==================== 共享数据库 ==================== -->
+        <rect x="200" y="400" width="500" height="100" rx="12" fill="url(#gradSlate)" stroke="#ea580c" stroke-width="2"/>
+        <rect x="200" y="400" width="500" height="28" rx="12" fill="#ea580c"/>
+        <rect x="200" y="416" width="500" height="12" fill="#ea580c"/>
+        <text x="450" y="419" text-anchor="middle" fill="white" font-size="12" font-weight="700">🗄️ 共享数据库容器（唯一共享资源）</text>
+
+        <text x="450" y="442" text-anchor="middle" fill="#78716c" font-size="9">定位：同机部署 · 多库隔离 · 统一维护</text>
+
+        <rect x="230" y="456" width="210" height="32" rx="6" fill="white" stroke="#fcd34d" stroke-width="1"/>
+        <text x="335" y="471" text-anchor="middle" fill="#b45309" font-size="10" font-weight="600">🧪 测试库（test_db）</text>
+        <text x="335" y="483" text-anchor="middle" fill="#d97706" font-size="8">开发联调 · 预发布验证</text>
+
+        <rect x="460" y="456" width="210" height="32" rx="6" fill="white" stroke="#4ade80" stroke-width="1"/>
+        <text x="565" y="471" text-anchor="middle" fill="#15803d" font-size="10" font-weight="600">🚀 生产库（prod_db）</text>
+        <text x="565" y="483" text-anchor="middle" fill="#16a34a" font-size="8">正式业务数据 · 线上服务</text>
+
+        <!-- 底部总览 -->
+        <text x="450" y="528" text-anchor="middle" fill="#cbd5e1" font-size="9">访问流程：用户 → 互联网 → DNS 域名分流 → 各环境负载均衡（Nginx）→ 应用服务器 → 共享数据库（不同库）</text>
+        <text x="450" y="546" text-anchor="middle" fill="#e2e8f0" font-size="9">除数据库共享同一容器外，测试与生产环境硬件资源完全隔离</text>
+
+        <text x="450" y="580" text-anchor="middle" fill="#e2e8f0" font-size="10">⚠️ 负载均衡与静态资源初期合一，后续视负载压力可各自拆分为独立服务器</text>
+
+      </svg>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==================== 第二部分：采购清单 ==================== -->
+<section class="max-w-6xl mx-auto">
+  <div class="flex items-center gap-3 mb-6">
+    <div class="w-1 h-6 bg-amber-500 rounded-full"></div>
+    <h2 class="text-xl font-bold text-slate-800">二、采购清单</h2>
+    <span class="text-sm text-slate-400">（基于上述部署架构）</span>
+  </div>
+
+  <!-- ====== 生产环境采购清单（待定） ====== -->
+  <div class="mb-8">
+    <div class="flex items-center gap-2 mb-4">
+      <span class="px-3 py-1 rounded-lg bg-green-100 text-green-800 text-xs font-bold">🚀 生产环境</span>
+      <span class="text-xs text-slate-400">— 对外提供服务</span>
+    </div>
+
+    <div class="bg-white rounded-2xl card-shadow border border-green-200 overflow-hidden">
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-green-700 text-white">
+              <th class="px-5 py-3 text-left font-semibold w-8">序号</th>
+              <th class="px-5 py-3 text-left font-semibold">服务器角色</th>
+              <th class="px-5 py-3 text-left font-semibold">实例规格</th>
+              <th class="px-5 py-3 text-left font-semibold">存储</th>
+              <th class="px-5 py-3 text-left font-semibold">带宽</th>
+              <th class="px-5 py-3 text-left font-semibold">数量</th>
+              <th class="px-5 py-3 text-left font-semibold">用途说明</th>
+              <th class="px-5 py-3 text-left font-semibold">采购指导</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-green-100">
+
+            <tr class="bg-green-50/20">
+              <td class="px-5 py-4"><span class="w-6 h-6 rounded-full bg-green-100 text-green-700 flex items-center justify-center text-xs font-bold">1</span></td>
+              <td class="px-5 py-4 font-medium text-slate-700">负载均衡 + 静态资源服务器</td>
+              <td class="px-5 py-4"><span class="inline-flex items-center px-2.5 py-1 rounded-lg bg-slate-100 text-slate-500 text-xs font-semibold">待定</span></td>
+              <td class="px-5 py-4"><span class="text-slate-400 text-xs">待定</span></td>
+              <td class="px-5 py-4"><span class="text-slate-400 text-xs">待定</span></td>
+              <td class="px-5 py-4"><span class="inline-flex items-center justify-center w-10 h-7 rounded bg-slate-100 text-slate-400 font-bold text-sm">1</span></td>
+              <td class="px-5 py-4"><div class="text-xs text-slate-500">Nginx 反向代理 · 域名路由 · 门户网站静态资源托管</div></td>
+              <td class="px-5 py-4"><span class="text-xs text-slate-400">—</span></td>
+            </tr>
+
+            <tr class="bg-green-50/20">
+              <td class="px-5 py-4"><span class="w-6 h-6 rounded-full bg-green-100 text-green-700 flex items-center justify-center text-xs font-bold">2</span></td>
+              <td class="px-5 py-4 font-medium text-slate-700">生产应用服务器</td>
+              <td class="px-5 py-4"><span class="inline-flex items-center px-2.5 py-1 rounded-lg bg-slate-100 text-slate-500 text-xs font-semibold">待定</span></td>
+              <td class="px-5 py-4"><span class="text-slate-400 text-xs">待定</span></td>
+              <td class="px-5 py-4"><span class="text-slate-400 text-xs">内网（走 LB）</span></td>
+              <td class="px-5 py-4"><span class="inline-flex items-center justify-center w-10 h-7 rounded bg-slate-100 text-slate-400 font-bold text-sm">1</span></td>
+              <td class="px-5 py-4">
+                <div class="text-xs space-y-1">
+                  <div class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span><span class="text-slate-600">消毒备案申请系统</span></div>
+                  <div class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span><span class="text-slate-600">对外展示门户网站</span></div>
+                </div>
+              </td>
+              <td class="px-5 py-4"><span class="text-xs text-slate-400">—</span></td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+      <div class="border-t border-green-200 bg-green-50/30 px-5 py-3 flex items-center justify-between">
+        <span class="text-xs text-green-600 font-medium">生产环境（配置待定，暂不采购）</span>
+        <span class="text-lg font-black text-slate-400">—</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== 测试环境采购清单（当前采购重点） ====== -->
+  <div class="mb-8">
+    <div class="flex items-center gap-2 mb-4">
+      <span class="px-3 py-1 rounded-lg bg-amber-100 text-amber-800 text-xs font-bold">🧪 测试环境</span>
+      <span class="text-xs text-slate-400">— 内部开发验证</span>
+    </div>
+
+    <div class="bg-white rounded-2xl card-shadow border border-amber-200 overflow-hidden">
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-amber-600 text-white">
+              <th class="px-5 py-3 text-left font-semibold w-8">序号</th>
+              <th class="px-5 py-3 text-left font-semibold">服务器角色</th>
+              <th class="px-5 py-3 text-left font-semibold">实例规格</th>
+              <th class="px-5 py-3 text-left font-semibold">存储</th>
+              <th class="px-5 py-3 text-left font-semibold">带宽</th>
+              <th class="px-5 py-3 text-left font-semibold">数量</th>
+              <th class="px-5 py-3 text-left font-semibold">用途说明</th>
+              <th class="px-5 py-3 text-left font-semibold">采购指导</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-amber-100">
+
+            <tr class="hover:bg-amber-50/50 transition-colors">
+              <td class="px-5 py-4"><span class="w-6 h-6 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center text-xs font-bold">1</span></td>
+              <td class="px-5 py-4 font-medium text-slate-700">负载均衡 + 静态资源服务器</td>
+              <td class="px-5 py-4">
+                <div class="space-y-0.5">
+                  <div class="flex items-center gap-1.5"><span class="text-xs text-slate-400 w-10">CPU</span><span class="font-semibold text-slate-700">2 核</span></div>
+                  <div class="flex items-center gap-1.5"><span class="text-xs text-slate-400 w-10">内存</span><span class="font-semibold text-slate-700">8 GB</span></div>
+                </div>
+              </td>
+              <td class="px-5 py-4 font-semibold text-slate-700">40 GB</td>
+              <td class="px-5 py-4">
+                <div class="text-xs space-y-0.5">
+                  <div class="text-amber-600 font-semibold">按流量计费</div>
+                  <div class="text-slate-400">峰值 20 Mbps</div>
+                </div>
+              </td>
+              <td class="px-5 py-4"><span class="inline-flex items-center justify-center w-10 h-7 rounded bg-amber-50 text-amber-600 font-bold text-sm">1</span></td>
+              <td class="px-5 py-4"><div class="text-xs text-slate-500">Nginx 反向代理 · 域名路由 · 静态资源托管</div></td>
+              <td class="px-5 py-4">
+                <div class="text-xs space-y-1">
+                  <div>☁️ <span class="text-slate-400">云厂商：</span><span class="font-semibold text-slate-700">百度云</span></div>
+                  <div class="text-xs text-blue-500 font-mono font-semibold mt-0.5">bcc.g5.c2m8</div>
+                  <div>📍 <span class="text-slate-400">地区：</span><span class="font-semibold text-slate-700">保定</span></div>
+                  <div>⏱️ <span class="text-slate-400">时长：</span><span class="font-semibold text-slate-700">1 年</span></div>
+                </div>
+              </td>
+            </tr>
+
+            <tr class="hover:bg-amber-50/50 transition-colors">
+              <td class="px-5 py-4"><span class="w-6 h-6 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center text-xs font-bold">2</span></td>
+              <td class="px-5 py-4 font-medium text-slate-700">测试应用服务器</td>
+              <td class="px-5 py-4">
+                <div class="space-y-0.5">
+                  <div class="flex items-center gap-1.5"><span class="text-xs text-slate-400 w-10">CPU</span><span class="font-semibold text-slate-700">2 核</span></div>
+                  <div class="flex items-center gap-1.5"><span class="text-xs text-slate-400 w-10">内存</span><span class="font-semibold text-slate-700">4 GB</span></div>
+                </div>
+              </td>
+              <td class="px-5 py-4 font-semibold text-slate-700">40 GB</td>
+              <td class="px-5 py-4"><span class="text-xs text-slate-400">内网（走 LB）</span></td>
+              <td class="px-5 py-4"><span class="inline-flex items-center justify-center w-10 h-7 rounded bg-amber-50 text-amber-600 font-bold text-sm">1</span></td>
+              <td class="px-5 py-4"><span class="text-xs text-slate-500">开发自测 · 联调 · 预发布验证（不对外）</span></td>
+              <td class="px-5 py-4"><span class="text-xs text-slate-400">—</span></td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+      <div class="border-t border-amber-200 bg-amber-50/30 px-5 py-3 flex items-center justify-between">
+        <span class="text-xs text-amber-600 font-medium">测试环境小计</span>
+        <span class="text-lg font-black text-amber-700">2</span>
+        <span class="text-xs text-amber-500">台</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== 共享数据库 ====== -->
+  <div class="mb-8">
+    <div class="flex items-center gap-2 mb-4">
+      <span class="px-3 py-1 rounded-lg bg-orange-100 text-orange-800 text-xs font-bold">🗄️ 共享数据库</span>
+      <span class="text-xs text-slate-400">— 测试与生产共用容器，库级隔离</span>
+    </div>
+
+    <div class="bg-white rounded-2xl card-shadow border border-orange-200 overflow-hidden">
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-orange-600 text-white">
+              <th class="px-5 py-3 text-left font-semibold w-8">序号</th>
+              <th class="px-5 py-3 text-left font-semibold">服务器角色</th>
+              <th class="px-5 py-3 text-left font-semibold">实例规格</th>
+              <th class="px-5 py-3 text-left font-semibold">存储</th>
+              <th class="px-5 py-3 text-left font-semibold">带宽</th>
+              <th class="px-5 py-3 text-left font-semibold">数量</th>
+              <th class="px-5 py-3 text-left font-semibold">库详情</th>
+              <th class="px-5 py-3 text-left font-semibold">采购指导</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="px-5 py-4"><span class="w-6 h-6 rounded-full bg-orange-100 text-orange-700 flex items-center justify-center text-xs font-bold">★</span></td>
+              <td class="px-5 py-4 font-medium text-slate-700">共享数据库容器</td>
+              <td class="px-5 py-4">
+                <div class="space-y-0.5">
+                  <div class="flex items-center gap-1.5"><span class="text-xs text-slate-400 w-10">引擎</span><span class="font-semibold text-slate-700">MySQL</span></div>
+                  <div class="flex items-center gap-1.5"><span class="text-xs text-slate-400 w-10">规格</span><span class="font-semibold text-slate-700">2 核 4G</span></div>
+                </div>
+              </td>
+              <td class="px-5 py-4 font-semibold text-slate-700">100 GB</td>
+              <td class="px-5 py-4"><span class="text-xs text-slate-400">内网访问</span></td>
+              <td class="px-5 py-4"><span class="inline-flex items-center justify-center w-10 h-7 rounded bg-orange-50 text-orange-600 font-bold text-sm">1</span></td>
+              <td class="px-5 py-4">
+                <div class="text-xs space-y-1">
+                  <div class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span><span class="text-amber-700 font-medium">test_db</span><span class="text-slate-400">— 测试库</span></div>
+                  <div class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-green-400"></span><span class="text-green-700 font-medium">prod_db</span><span class="text-slate-400">— 生产库</span></div>
+                </div>
+              </td>
+              <td class="px-5 py-4"><span class="text-xs text-slate-400">—</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="border-t border-orange-200 bg-orange-50/30 px-5 py-3 flex items-center justify-between">
+        <span class="text-xs text-orange-600 font-medium">共享数据库小计</span>
+        <span class="text-lg font-black text-orange-700">1</span>
+        <span class="text-xs text-orange-500">台</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== 总体汇总 ====== -->
+  <div class="bg-slate-800 rounded-2xl overflow-hidden">
+    <div class="px-6 py-4 flex flex-wrap items-center justify-between gap-4">
+      <div class="text-white text-sm">
+        <span class="text-slate-400">当前采购：</span>
+        <span class="text-amber-400 font-bold">测试环境 2 台</span>
+        <span class="text-slate-500"> + </span>
+        <span class="text-orange-400 font-bold">共享数据库 1 台</span>
+        <span class="text-slate-500"> ｜ </span>
+        <span class="text-slate-500">生产环境（待定）</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="text-slate-400 text-sm">当前合计：</span>
+        <span class="text-3xl font-black text-white">3</span>
+        <span class="text-slate-300 text-sm">台（待定项不含）</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 补充说明 -->
+  <div class="mt-5 grid grid-cols-1 md:grid-cols-2 gap-4">
+
+    <div class="bg-blue-50 border border-blue-200 rounded-xl p-4 flex gap-3">
+      <span class="text-blue-500 text-lg mt-0.5">💡</span>
+      <div class="text-sm text-blue-800 space-y-1">
+        <p class="font-semibold">部署说明：</p>
+        <ul class="text-blue-600 text-xs space-y-0.5 list-disc list-inside">
+          <li>测试与生产环境硬件资源完全隔离，各自拥有独立的负载均衡+静态资源服务器和应用服务器</li>
+          <li>数据库为唯一共享资源：同一容器，通过独立数据库（test_db / prod_db）实现数据隔离</li>
+          <li>负载均衡与静态资源初期合一部署，后续视负载压力可各自拆分为独立服务器</li>
+          <li>生产环境 LB 对外暴露公网 IP，测试环境 LB 仅内网或限定 IP 访问</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 flex gap-3">
+      <span class="text-amber-500 text-lg mt-0.5">💰</span>
+      <div class="text-sm text-amber-800 space-y-1">
+        <p class="font-semibold">当前采购重点：</p>
+        <ul class="text-amber-700 text-xs space-y-0.5 list-disc list-inside">
+          <li>优先采购测试环境 1 台「负载均衡 + 静态资源」服务器（2核4G / 40GB / 2Mbps），验证 Nginx 域名分流和静态资源托管方案</li>
+          <li>测试环境 LB 用固定 2Mbps 带宽即可</li>
+          <li>应用服务器走内网通信，无需独立公网带宽</li>
+          <li>生产环境配置待定，后续根据测试环境运行情况再确定规格</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>

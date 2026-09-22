@@ -1,0 +1,19 @@
+{
+  "playwright": { "command": "node dev040-page-routing.spec.cjs", "exitCode": 0 },
+  "typeCheck": { "command": "pnpm type-check", "exitCode": 0 },
+  "buildH5": { "command": "pnpm run build:h5", "exitCode": 0, "summary": "DONE Build complete." },
+  "diffCheck": { "command": "git diff --check", "exitCode": 0 },
+  "cachedCount": 0,
+  "ports": { "5173": "listening-via-static-verification-server", "6379": "not-observed-during-independent-verification" },
+  "independentVerification": {
+    "date": "2026-07-19",
+    "playwright": { "command": "node dev040-independent-verification.spec.cjs", "exitCode": null, "status": "pending-environment-retest", "reason": "latest H5 artifact unavailable because of OS-level esbuild execution failure" },
+    "typeCheck": { "command": "pnpm type-check", "exitCode": 0 },
+    "backendCompile": { "command": "mvn -pl yunjikeji-admin-server -am -DskipTests compile", "exitCode": 0, "reactor": "39/39 SUCCESS" },
+    "buildH5": { "command": "pnpm run build:h5", "exitCode": null, "status": "not-repeated", "reason": "original esbuild binary and Temp copy both timed out on --version" },
+    "diffCheck": { "command": "git diff --check", "exitCode": 0 },
+    "gitConflictAudit": { "activeOperation": false, "unmergedCount": 0, "stageConflictCount": 0, "conflictMarkerCount": 0, "cachedCount": 0 },
+    "conflictResolutionReady": true,
+    "finalIntegrationReady": false
+  }
+}

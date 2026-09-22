@@ -1,0 +1,326 @@
+{
+  "startedAt": "2026-07-18T05:50:07.079Z",
+  "baseUrl": "http://127.0.0.1:5173/yunjikeji/",
+  "viewports": [
+    {
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "layout": {
+        "innerWidth": 360,
+        "scrollWidth": 360,
+        "bodyScrollWidth": 360,
+        "tabCount": 5,
+        "tabY": [
+          61,
+          61,
+          61,
+          61,
+          61
+        ],
+        "tabWhiteSpace": [
+          "nowrap",
+          "nowrap",
+          "nowrap",
+          "nowrap",
+          "nowrap"
+        ],
+        "introDomCount": 0,
+        "introTitleTextCount": 0,
+        "introSubtitleTextCount": 0,
+        "categoryHeadingDomCount": 0,
+        "categoryTitleTextCount": 0,
+        "categoryTipTextCount": 0,
+        "sectionStyle": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "boxShadow": "none",
+          "padding": "0px"
+        },
+        "swiperToCardGap": 3.828125,
+        "buttons": [
+          {
+            "left": 14.375,
+            "right": 345.625,
+            "width": 331.25,
+            "height": 48
+          },
+          {
+            "left": 14.375,
+            "right": 345.625,
+            "width": 331.25,
+            "height": 48
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "layout": {
+        "innerWidth": 390,
+        "scrollWidth": 390,
+        "bodyScrollWidth": 390,
+        "tabCount": 5,
+        "tabY": [
+          67,
+          67,
+          67,
+          67,
+          67
+        ],
+        "tabWhiteSpace": [
+          "nowrap",
+          "nowrap",
+          "nowrap",
+          "nowrap",
+          "nowrap"
+        ],
+        "introDomCount": 0,
+        "introTitleTextCount": 0,
+        "introSubtitleTextCount": 0,
+        "categoryHeadingDomCount": 0,
+        "categoryTitleTextCount": 0,
+        "categoryTipTextCount": 0,
+        "sectionStyle": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "boxShadow": "none",
+          "padding": "0px"
+        },
+        "swiperToCardGap": 4.15625,
+        "buttons": [
+          {
+            "left": 24.9375,
+            "right": 365.0625,
+            "width": 340.125,
+            "height": 52
+          },
+          {
+            "left": 24.9375,
+            "right": 365.0625,
+            "width": 340.125,
+            "height": 52
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": []
+    },
+    {
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "layout": {
+        "innerWidth": 430,
+        "scrollWidth": 430,
+        "bodyScrollWidth": 430,
+        "tabCount": 5,
+        "tabY": [
+          73,
+          73,
+          73,
+          73,
+          73
+        ],
+        "tabWhiteSpace": [
+          "nowrap",
+          "nowrap",
+          "nowrap",
+          "nowrap",
+          "nowrap"
+        ],
+        "introDomCount": 0,
+        "introTitleTextCount": 0,
+        "introSubtitleTextCount": 0,
+        "categoryHeadingDomCount": 0,
+        "categoryTitleTextCount": 0,
+        "categoryTipTextCount": 0,
+        "sectionStyle": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "boxShadow": "none",
+          "padding": "0px"
+        },
+        "swiperToCardGap": 4.578125,
+        "buttons": [
+          {
+            "left": 27.5,
+            "right": 402.5,
+            "width": 375,
+            "height": 57.328125
+          },
+          {
+            "left": 27.5,
+            "right": 402.5,
+            "width": 375,
+            "height": 57.328125
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": []
+    }
+  ],
+  "states": {
+    "loading": {
+      "visible": true
+    },
+    "empty": {
+      "visible": true,
+      "fallbackTabs": 0
+    },
+    "error": {
+      "visible": true,
+      "message": "测试分类接口失败",
+      "fallbackTabs": 0
+    }
+  },
+  "swipe": {
+    "configuration": {
+      "enabledTopics": 5,
+      "displayMultipleItems": 3,
+      "circular": true
+    },
+    "left": {
+      "expected": "单选题",
+      "actual": "单选题",
+      "passed": true
+    },
+    "right": {
+      "expected": "判断题",
+      "actual": "判断题",
+      "passed": true
+    },
+    "requestedIds": [
+      "",
+      "FT-A",
+      "FT-B",
+      "FT-A"
+    ],
+    "threeItemBoundary": {
+      "count": 3,
+      "allVisible": true,
+      "tabs": [
+        {
+          "text": "01判断题",
+          "left": 18.171875,
+          "right": 131.21875,
+          "visible": true
+        },
+        {
+          "text": "02单选题",
+          "left": 138.46875,
+          "right": 251.515625,
+          "visible": true
+        },
+        {
+          "text": "03多选题",
+          "left": 258.765625,
+          "right": 371.8125,
+          "visible": true
+        }
+      ]
+    }
+  },
+  "race": {
+    "active": "多选题",
+    "requestedIds": [
+      "",
+      "FT-A",
+      "FT-B",
+      "FT-B",
+      "FT-A",
+      "topic-c",
+      "topic-c"
+    ],
+    "retainedSummary": [
+      "30题",
+      "60分"
+    ]
+  },
+  "actions": {
+    "starts": [
+      {
+        "method": "POST",
+        "path": "/yj-app-api/app-api/yj/practices/uav-basic-001/start",
+        "query": {
+          "mode": "standard",
+          "topicId": "FT-A"
+        }
+      },
+      {
+        "method": "POST",
+        "path": "/yj-app-api/app-api/yj/practices/uav-basic-001/start",
+        "query": {
+          "mode": "wrongReview",
+          "topicId": "FT-A"
+        }
+      }
+    ],
+    "navigation": [
+      "/pages/practice/answer?id=uav-basic-001&sessionId=S-1&mode=standard&topicId=FT-A&topicTitle=%E5%88%A4%E6%96%AD%E9%A2%98",
+      "/pages/practice/answer?id=uav-basic-001&sessionId=S-2&mode=wrongReview&topicId=FT-A&topicTitle=%E5%88%A4%E6%96%AD%E9%A2%98"
+    ],
+    "toasts": [
+      "当前练习服务暂无可复习错题",
+      "当前练习服务暂无可复习错题"
+    ]
+  },
+  "legacy": {
+    "introDomCount": 1,
+    "introVisible": true,
+    "sharedFields": [
+      "题目分类",
+      "题目编号",
+      "题量",
+      "总分",
+      "答题时间",
+      "阅卷方式"
+    ],
+    "actions": [
+      "开始练习",
+      "错题复练"
+    ],
+    "pageErrors": []
+  },
+  "visualContract": [
+    {
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "newPageIntroDom": 0,
+      "forbiddenIntroTexts": 0,
+      "categoryHeadingDom": 0,
+      "swiperToCardGap": 3.828125
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "newPageIntroDom": 0,
+      "forbiddenIntroTexts": 0,
+      "categoryHeadingDom": 0,
+      "swiperToCardGap": 4.15625
+    },
+    {
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "newPageIntroDom": 0,
+      "forbiddenIntroTexts": 0,
+      "categoryHeadingDom": 0,
+      "swiperToCardGap": 4.578125
+    }
+  ],
+  "failures": [],
+  "errors": [],
+  "finishedAt": "2026-07-18T05:50:23.770Z",
+  "status": "passed"
+}

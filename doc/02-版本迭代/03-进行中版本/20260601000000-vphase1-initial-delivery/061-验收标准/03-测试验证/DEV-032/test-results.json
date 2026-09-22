@@ -1,0 +1,616 @@
+{
+  "generatedAt": "2026-07-18T01:47:16.165Z",
+  "command": "pnpm exec node <DEV-032>/dev032-reference-home.spec.cjs",
+  "allPassed": true,
+  "results": [
+    {
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "url": "http://127.0.0.1:5173/yunjikeji/#/pages/home-reference-preview",
+      "status": 200,
+      "passed": true,
+      "checks": {
+        "httpOk": true,
+        "textsComplete": true,
+        "countsComplete": true,
+        "keySectionsVisible": true,
+        "imagesLoaded": true,
+        "noHorizontalOverflow": true,
+        "fiveEqualNavAreas": true,
+        "owlFloatsUpward": true,
+        "noScreenshotBackground": true,
+        "noConsoleErrors": true,
+        "noFailedRequests": true
+      },
+      "consoleErrors": [],
+      "failedRequests": [],
+      "audit": {
+        "viewport": {
+          "width": 360,
+          "height": 800
+        },
+        "documentWidths": {
+          "scrollWidth": 360,
+          "clientWidth": 360,
+          "bodyScrollWidth": 360,
+          "phoneScrollWidth": 360,
+          "phoneClientWidth": 360
+        },
+        "missingTexts": [],
+        "counts": {
+          "statusBars": 1,
+          "rewardPills": 2,
+          "closeButtons": 1,
+          "creationCards": 3,
+          "quickItems": 5,
+          "assistantCards": 3,
+          "suggestions": 2,
+          "navItems": 5,
+          "images": 5
+        },
+        "visible": {
+          "hero": true,
+          "tony": true,
+          "createPanel": true,
+          "assistantPanel": true,
+          "suggestions": true,
+          "askBox": true,
+          "bottomNav": true,
+          "owl": true
+        },
+        "rects": {
+          "phone": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 800,
+            "bottom": 800
+          },
+          "hero": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 155,
+            "bottom": 155
+          },
+          "tony": {
+            "x": 217,
+            "y": 26,
+            "width": 128,
+            "height": 136,
+            "bottom": 162
+          },
+          "createPanel": {
+            "x": 11,
+            "y": 155,
+            "width": 338,
+            "height": 278,
+            "bottom": 433
+          },
+          "xhsCard": {
+            "x": 23,
+            "y": 210,
+            "width": 149.3,
+            "height": 132,
+            "bottom": 342
+          },
+          "douyinCard": {
+            "x": 180.3,
+            "y": 210,
+            "width": 156.7,
+            "height": 62,
+            "bottom": 272
+          },
+          "momentsCard": {
+            "x": 180.3,
+            "y": 280,
+            "width": 156.7,
+            "height": 62,
+            "bottom": 342
+          },
+          "assistantPanel": {
+            "x": 11,
+            "y": 443,
+            "width": 338,
+            "height": 188,
+            "bottom": 631
+          },
+          "suggestions": {
+            "x": 11,
+            "y": 641,
+            "width": 338,
+            "height": 36,
+            "bottom": 677
+          },
+          "askBox": {
+            "x": 11,
+            "y": 686,
+            "width": 338,
+            "height": 47,
+            "bottom": 733
+          },
+          "bottomNav": {
+            "x": 0,
+            "y": 733,
+            "width": 360,
+            "height": 67,
+            "bottom": 800
+          },
+          "owl": {
+            "x": 149,
+            "y": 707,
+            "width": 62,
+            "height": 62,
+            "bottom": 769
+          }
+        },
+        "navRects": [
+          {
+            "x": 8,
+            "width": 68.796875
+          },
+          {
+            "x": 76.796875,
+            "width": 68.796875
+          },
+          {
+            "x": 145.59375,
+            "width": 68.796875
+          },
+          {
+            "x": 214.390625,
+            "width": 68.796875
+          },
+          {
+            "x": 283.1875,
+            "width": 68.8125
+          }
+        ],
+        "navWidthSpread": 0.015625,
+        "owlUpwardOffset": 26,
+        "images": [
+          {
+            "src": "/yunjikeji/static/reference-home/tony-robot.png",
+            "complete": true,
+            "naturalWidth": 132,
+            "naturalHeight": 142
+          },
+          {
+            "src": "/yunjikeji/static/reference-home/xiaohongshu.png",
+            "complete": true,
+            "naturalWidth": 105,
+            "naturalHeight": 80
+          },
+          {
+            "src": "/yunjikeji/static/reference-home/douyin.png",
+            "complete": true,
+            "naturalWidth": 70,
+            "naturalHeight": 70
+          },
+          {
+            "src": "/yunjikeji/static/reference-home/moments.png",
+            "complete": true,
+            "naturalWidth": 82,
+            "naturalHeight": 66
+          },
+          {
+            "src": "/yunjikeji/static/reference-home/owl-assistant.png",
+            "complete": true,
+            "naturalWidth": 136,
+            "naturalHeight": 134
+          }
+        ],
+        "screenshotLikeBackgrounds": [],
+        "bodyTextLength": 277
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:5173/yunjikeji/#/pages/home-reference-preview",
+      "status": 200,
+      "passed": true,
+      "checks": {
+        "httpOk": true,
+        "textsComplete": true,
+        "countsComplete": true,
+        "keySectionsVisible": true,
+        "imagesLoaded": true,
+        "noHorizontalOverflow": true,
+        "fiveEqualNavAreas": true,
+        "owlFloatsUpward": true,
+        "noScreenshotBackground": true,
+        "noConsoleErrors": true,
+        "noFailedRequests": true
+      },
+      "consoleErrors": [],
+      "failedRequests": [],
+      "audit": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "documentWidths": {
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "bodyScrollWidth": 390,
+          "phoneScrollWidth": 390,
+          "phoneClientWidth": 390
+        },
+        "missingTexts": [],
+        "counts": {
+          "statusBars": 1,
+          "rewardPills": 2,
+          "closeButtons": 1,
+          "creationCards": 3,
+          "quickItems": 5,
+          "assistantCards": 3,
+          "suggestions": 2,
+          "navItems": 5,
+          "images": 5
+        },
+        "visible": {
+          "hero": true,
+          "tony": true,
+          "createPanel": true,
+          "assistantPanel": true,
+          "suggestions": true,
+          "askBox": true,
+          "bottomNav": true,
+          "owl": true
+        },
+        "rects": {
+          "phone": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 844,
+            "bottom": 844
+          },
+          "hero": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 166,
+            "bottom": 166
+          },
+          "tony": {
+            "x": 229,
+            "y": 27,
+            "width": 140,
+            "height": 146,
+            "bottom": 173
+          },
+          "createPanel": {
+            "x": 14,
+            "y": 166,
+            "width": 362,
+            "height": 289,
+            "bottom": 455
+          },
+          "xhsCard": {
+            "x": 29,
+            "y": 221,
+            "width": 158,
+            "height": 140,
+            "bottom": 361
+          },
+          "douyinCard": {
+            "x": 195,
+            "y": 221,
+            "width": 166,
+            "height": 66,
+            "bottom": 287
+          },
+          "momentsCard": {
+            "x": 195,
+            "y": 295,
+            "width": 166,
+            "height": 66,
+            "bottom": 361
+          },
+          "assistantPanel": {
+            "x": 14,
+            "y": 465,
+            "width": 362,
+            "height": 188,
+            "bottom": 653
+          },
+          "suggestions": {
+            "x": 14,
+            "y": 663,
+            "width": 362,
+            "height": 36,
+            "bottom": 699
+          },
+          "askBox": {
+            "x": 14,
+            "y": 708,
+            "width": 362,
+            "height": 47,
+            "bottom": 755
+          },
+          "bottomNav": {
+            "x": 0,
+            "y": 777,
+            "width": 390,
+            "height": 67,
+            "bottom": 844
+          },
+          "owl": {
+            "x": 164,
+            "y": 751,
+            "width": 62,
+            "height": 62,
+            "bottom": 813
+          }
+        },
+        "navRects": [
+          {
+            "x": 8,
+            "width": 74.796875
+          },
+          {
+            "x": 82.796875,
+            "width": 74.796875
+          },
+          {
+            "x": 157.59375,
+            "width": 74.796875
+          },
+          {
+            "x": 232.390625,
+            "width": 74.796875
+          },
+          {
+            "x": 307.1875,
+            "width": 74.8125
+          }
+        ],
+        "navWidthSpread": 0.015625,
+        "owlUpwardOffset": 26,
+        "images": [
+          {
+            "src": "/yunjikeji/static/reference-home/tony-robot.png",
+            "complete": true,
+            "naturalWidth": 132,
+            "naturalHeight": 142
+          },
+          {
+            "src": "/yunjikeji/static/reference-home/xiaohongshu.png",
+            "complete": true,
+            "naturalWidth": 105,
+            "naturalHeight": 80
+          },
+          {
+            "src": "/yunjikeji/static/reference-home/douyin.png",
+            "complete": true,
+            "naturalWidth": 70,
+            "naturalHeight": 70
+          },
+          {
+            "src": "/yunjikeji/static/reference-home/moments.png",
+            "complete": true,
+            "naturalWidth": 82,
+            "naturalHeight": 66
+          },
+          {
+            "src": "/yunjikeji/static/reference-home/owl-assistant.png",
+            "complete": true,
+            "naturalWidth": 136,
+            "naturalHeight": 134
+          }
+        ],
+        "screenshotLikeBackgrounds": [],
+        "bodyTextLength": 277
+      }
+    },
+    {
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "url": "http://127.0.0.1:5173/yunjikeji/#/pages/home-reference-preview",
+      "status": 200,
+      "passed": true,
+      "checks": {
+        "httpOk": true,
+        "textsComplete": true,
+        "countsComplete": true,
+        "keySectionsVisible": true,
+        "imagesLoaded": true,
+        "noHorizontalOverflow": true,
+        "fiveEqualNavAreas": true,
+        "owlFloatsUpward": true,
+        "noScreenshotBackground": true,
+        "noConsoleErrors": true,
+        "noFailedRequests": true
+      },
+      "consoleErrors": [],
+      "failedRequests": [],
+      "audit": {
+        "viewport": {
+          "width": 430,
+          "height": 932
+        },
+        "documentWidths": {
+          "scrollWidth": 430,
+          "clientWidth": 430,
+          "bodyScrollWidth": 430,
+          "phoneScrollWidth": 430,
+          "phoneClientWidth": 430
+        },
+        "missingTexts": [],
+        "counts": {
+          "statusBars": 1,
+          "rewardPills": 2,
+          "closeButtons": 1,
+          "creationCards": 3,
+          "quickItems": 5,
+          "assistantCards": 3,
+          "suggestions": 2,
+          "navItems": 5,
+          "images": 5
+        },
+        "visible": {
+          "hero": true,
+          "tony": true,
+          "createPanel": true,
+          "assistantPanel": true,
+          "suggestions": true,
+          "askBox": true,
+          "bottomNav": true,
+          "owl": true
+        },
+        "rects": {
+          "phone": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 932,
+            "bottom": 932
+          },
+          "hero": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 166,
+            "bottom": 166
+          },
+          "tony": {
+            "x": 269,
+            "y": 27,
+            "width": 140,
+            "height": 146,
+            "bottom": 173
+          },
+          "createPanel": {
+            "x": 14,
+            "y": 166,
+            "width": 402,
+            "height": 289,
+            "bottom": 455
+          },
+          "xhsCard": {
+            "x": 29,
+            "y": 221,
+            "width": 177.5,
+            "height": 140,
+            "bottom": 361
+          },
+          "douyinCard": {
+            "x": 214.5,
+            "y": 221,
+            "width": 186.4,
+            "height": 66,
+            "bottom": 287
+          },
+          "momentsCard": {
+            "x": 214.5,
+            "y": 295,
+            "width": 186.4,
+            "height": 66,
+            "bottom": 361
+          },
+          "assistantPanel": {
+            "x": 14,
+            "y": 465,
+            "width": 402,
+            "height": 188,
+            "bottom": 653
+          },
+          "suggestions": {
+            "x": 14,
+            "y": 663,
+            "width": 402,
+            "height": 36,
+            "bottom": 699
+          },
+          "askBox": {
+            "x": 14,
+            "y": 708,
+            "width": 402,
+            "height": 47,
+            "bottom": 755
+          },
+          "bottomNav": {
+            "x": 0,
+            "y": 865,
+            "width": 430,
+            "height": 67,
+            "bottom": 932
+          },
+          "owl": {
+            "x": 184,
+            "y": 839,
+            "width": 62,
+            "height": 62,
+            "bottom": 901
+          }
+        },
+        "navRects": [
+          {
+            "x": 8,
+            "width": 82.796875
+          },
+          {
+            "x": 90.796875,
+            "width": 82.796875
+          },
+          {
+            "x": 173.59375,
+            "width": 82.796875
+          },
+          {
+            "x": 256.390625,
+            "width": 82.796875
+          },
+          {
+            "x": 339.1875,
+            "width": 82.8125
+          }
+        ],
+        "navWidthSpread": 0.015625,
+        "owlUpwardOffset": 26,
+        "images": [
+          {
+            "src": "/yunjikeji/static/reference-home/tony-robot.png",
+            "complete": true,
+            "naturalWidth": 132,
+            "naturalHeight": 142
+          },
+          {
+            "src": "/yunjikeji/static/reference-home/xiaohongshu.png",
+            "complete": true,
+            "naturalWidth": 105,
+            "naturalHeight": 80
+          },
+          {
+            "src": "/yunjikeji/static/reference-home/douyin.png",
+            "complete": true,
+            "naturalWidth": 70,
+            "naturalHeight": 70
+          },
+          {
+            "src": "/yunjikeji/static/reference-home/moments.png",
+            "complete": true,
+            "naturalWidth": 82,
+            "naturalHeight": 66
+          },
+          {
+            "src": "/yunjikeji/static/reference-home/owl-assistant.png",
+            "complete": true,
+            "naturalWidth": 136,
+            "naturalHeight": 134
+          }
+        ],
+        "screenshotLikeBackgrounds": [],
+        "bodyTextLength": 277
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "story": "Story-052",
+  "protectedCategoryId": 13,
+  "careerCategoryId": 14,
+  "selfAssessmentAgentInfoId": 2,
+  "careerAssessmentAgentInfoId": 3,
+  "expectedQuestionImportCount": 47,
+  "expectedAnswerImportCount": 111,
+  "sourceDirectory": "D:\\飞机\\-APP--main (4)\\-APP--main\\skills\\career-planning-coach",
+  "databaseWritesAllowedInDev070": false,
+  "businessSourceWritesAllowedInDev070": false,
+  "excludedCapabilities": [
+    "per-question persistence",
+    "resume after exit",
+    "latest-only restore"
+  ]
+}

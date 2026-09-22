@@ -1,0 +1,14 @@
+{
+  "score": 96,
+  "verdict": "pass",
+  "category_match": true,
+  "differences": [
+    "The custom warm illustrations are not pixel-identical to the reference artwork, but their scale, layering, hierarchy, and card coverage match the required composition.",
+    "The hero typography and decorative bands are slightly more restrained than the reference while preserving the same compact visual hierarchy."
+  ],
+  "suggestions": [
+    "Keep the current responsive geometry and bottom-bar measurements unchanged in subsequent edits.",
+    "Preserve the current transparent hero mascot treatment and five-card illustration coverage."
+  ],
+  "reasoning": "The final rework matches the required warm home-page category, left-large/right-two card composition, five layered illustrations, and raised three-part bottom bar. All explicit responsive, navigation, visibility, and browser gates pass, so the formal 95 threshold is met."
+}

@@ -1,0 +1,45 @@
+{
+  "executedAt": "2026-07-18T13:53:39.4107057+08:00",
+  "commands": [
+    {
+      "command": "node DEV-036/dev036-exam-assessment.spec.cjs",
+      "exitCode": 0,
+      "result": "passed: three viewports, bidirectional touch, request linkage, race protection, four states, both action flows and legacy regression"
+    },
+    {
+      "command": "pnpm type-check",
+      "exitCode": 0,
+      "result": "passed"
+    },
+    {
+      "command": "pnpm run build:h5",
+      "exitCode": 0,
+      "result": "passed: uni build completed"
+    },
+    {
+      "command": "git diff --check",
+      "exitCode": 0,
+      "result": "passed; output contains only existing LF-to-CRLF warnings"
+    }
+  ],
+  "boundaries": {
+    "head": "9cc2906104ef5d573dd6e8c5ae6a6e422335669a",
+    "taskWhitelist": [
+      "src/pages/home.vue",
+      "src/pages.json",
+      "src/pages/practice/exam-assessment.vue",
+      "src/components/PracticeStartSummary.vue",
+      "src/pages/practice/start.vue"
+    ],
+    "uniModulesDiff": false,
+    "applicationFilesChangedByVerifier": false,
+    "preExistingDirtyAreasExcludedFromTask": [
+      "backend",
+      "src/pages/center.vue",
+      "src/pages/center/self-test-report.vue",
+      "src/services/assessment.ts",
+      "src/services/customerAuth.ts",
+      "src/services/practice.ts"
+    ]
+  }
+}

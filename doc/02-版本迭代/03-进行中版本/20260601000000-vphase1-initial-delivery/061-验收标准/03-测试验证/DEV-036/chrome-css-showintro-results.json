@@ -1,0 +1,32 @@
+{
+  "tool": "chrome-devtools-mcp",
+  "viewport": "390x844, mobile, touch",
+  "cacheBust": "dev036-showintro",
+  "newPage": {
+    "url": "#/pages/practice/exam-assessment",
+    "introDomCount": 0,
+    "introTitleTextCount": 0,
+    "introSubtitleTextCount": 0,
+    "categoryHeadingDomCount": 0,
+    "categoryHeadingAndTipTextCount": 0,
+    "sectionStyle": {
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "boxShadow": "none",
+      "padding": "0px"
+    },
+    "swiperToCardGapPx": 4.15625,
+    "innerWidth": 390,
+    "scrollWidth": 390
+  },
+  "legacyPage": {
+    "url": "#/pages/practice/start",
+    "introDomCount": 1,
+    "introTitleTextCount": 1,
+    "introSubtitleTextCount": 1,
+    "display": "block",
+    "visibility": "visible",
+    "renderedHeightPx": 94.63542175292969
+  },
+  "verdict": "pass",
+  "environmentConcern": "The real current API remains protected by a valid-login requirement; browser-layer test data was used only to verify compiled DOM and CSS behavior."
+}

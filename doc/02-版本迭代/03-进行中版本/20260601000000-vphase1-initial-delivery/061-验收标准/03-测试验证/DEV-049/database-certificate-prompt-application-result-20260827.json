@@ -1,0 +1,82 @@
+{
+  "taskId": "DEV-049",
+  "acceptanceId": "AC-ASSESSMENT-AI-201",
+  "environment": "Test",
+  "executedAt": "2026-08-27T21:02:00+08:00",
+  "status": "PASS",
+  "verdict": "DATABASE_V3_CERTIFICATE_PROMPT=PASS",
+  "target": {
+    "table": "yj_agent_info",
+    "id": 2,
+    "name": "小题",
+    "tenantId": 1,
+    "status": 1,
+    "deleted": 0,
+    "uniqueRowCount": 1
+  },
+  "baseline": {
+    "charLengthCodePoints": 2284,
+    "byteLengthUtf8": 5809,
+    "sha256": "d7794b51e039db2ecd7589e60dd593d8f85648c9b774e414768a2539ad3c16ce"
+  },
+  "certificatePromptAddendum": {
+    "charLengthCodePoints": 156,
+    "byteLengthUtf8": 434,
+    "sha256": "1a1b04f8ffc3da874e119eebcbc190a897a3172af64e36395bb8fded1d2f6883",
+    "specificCertificateWhitelistRequired": true,
+    "fallbackWording": "已有培训或学习基础",
+    "forbiddenGenericWordingCount": 4,
+    "fabricatedCertificateForbidden": true
+  },
+  "firstExecution": {
+    "precheck": "READY",
+    "updatedRows": 1,
+    "postcheckCount": 1,
+    "replyStrategyUnchanged": true,
+    "aiModelConfigUnchanged": true,
+    "result": "PASS"
+  },
+  "idempotencyExecution": {
+    "precheck": "ALREADY_APPLIED",
+    "updatedRows": 0,
+    "postcheckCount": 1,
+    "replyStrategyUnchanged": true,
+    "aiModelConfigUnchanged": true,
+    "result": "PASS"
+  },
+  "currentDatabaseValue": {
+    "charLengthCodePoints": 2440,
+    "byteLengthUtf8": 6243,
+    "sha256": "974ef05f4cda6fe0e07d6076c06e0c87b33986461dcaf2d39feda7c1e2d8d414",
+    "allCertificateRuleMarkersPresent": true
+  },
+  "protectedFields": {
+    "replyStrategyCharLength": 85,
+    "replyStrategySha256": "184baf380d143497d22d042be6b95f2f4c98c558e308945146a5247fba411409",
+    "replyStrategyUnchanged": true,
+    "aiSceneCode": "practice_assessment",
+    "aiChannel": "ANTHROPIC",
+    "aiBaseUrl": "https://api.deepseek.com/anthropic",
+    "aiModel": "deepseek-v4-pro",
+    "aiTimeoutMillis": 120000,
+    "apiKeyUnchanged": true
+  },
+  "reportLengthBoundary": {
+    "minVisibleUnicodeCodePoints": 2500,
+    "maxVisibleUnicodeCodePoints": 3800,
+    "v3UserPromptPresent": true,
+    "backendHardValidationPresent": true,
+    "duplicatedIntoDatabaseSystemPrompt": false
+  },
+  "backup": {
+    "file": "C:\\Users\\renquan\\.codex\\db-backups\\feixingxueyuan\\DEV-049\\20260827205100-yj_agent_info-id2-before-v3-certificate.sql",
+    "repositoryStored": false,
+    "byteLength": 7093,
+    "sha256": "9248b9194765de1fb4a7f0ed91da1354a8af149c5fd43ea87759e3d95cdc8386",
+    "targetInsertCount": 1
+  },
+  "forwardScript": "../../../050-执行脚本/20260827205100-dml-update_yj_agent_info_v3_certificate_prompt.sql",
+  "rollbackScript": "../../../050-执行脚本/20260827205101-dml-rollback_yj_agent_info_v3_certificate_prompt.sql",
+  "executionBoundary": "仅变更 Local 正式记录指向的测试库；未调用模型、未连接生产库",
+  "secretsOrFullPromptRecorded": false
+}

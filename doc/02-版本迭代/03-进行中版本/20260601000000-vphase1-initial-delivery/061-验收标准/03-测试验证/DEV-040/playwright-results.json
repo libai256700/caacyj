@@ -1,0 +1,42 @@
+{
+  "startedAt": "2026-08-15T07:42:58.024Z",
+  "baseUrl": "http://127.0.0.1:5173/yunjikeji/",
+  "source": {
+    "status": "passed"
+  },
+  "runtime": [
+    {
+      "scenario": "guest-home-to-login",
+      "route": "#/pages/auth/login",
+      "homeTextCount": 0
+    },
+    {
+      "scenario": "enterprise-home-to-customer-service",
+      "route": "#/pages/service/customer-service",
+      "studentPracticeRequests": 0
+    },
+    {
+      "scenario": "student-home-to-training",
+      "route": "#/pages/practice/exam-topics"
+    },
+    {
+      "scenario": "answer-fallback-and-complete",
+      "relaunch": [
+        "/pages/practice/exam-assessment",
+        "/pages/home",
+        "/pages/home"
+      ]
+    },
+    {
+      "scenario": "answer-stack-navigate-back",
+      "calls": 1
+    },
+    {
+      "scenario": "logout-to-login",
+      "route": "/pages/auth/login"
+    }
+  ],
+  "errors": [],
+  "status": "passed",
+  "finishedAt": "2026-08-15T07:43:02.058Z"
+}

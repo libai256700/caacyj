@@ -1,0 +1,373 @@
+{
+  "generatedAt": "2026-07-18T03:44:23.070Z",
+  "command": "pnpm exec node <DEV-035>/dev035-home-position.spec.cjs",
+  "allPassed": true,
+  "results": [
+    {
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "passed": true,
+      "checks": {
+        "httpOk": true,
+        "removedCleanly": true,
+        "warmBackgroundUnchanged": true,
+        "topMatchesDev033": true,
+        "tonyMatchesDev033": true,
+        "downstreamMatchesDev033": true,
+        "welcomeNotCovered": true,
+        "noHorizontalOverflow": true,
+        "noBrowserErrors": true
+      },
+      "actual": {
+        "removedCounts": {
+          "rewardRow": 0,
+          "pill": 0,
+          "statusBar": 0,
+          "quickRow": 0
+        },
+        "removedExactPresent": [],
+        "backgrounds": {
+          "page": "rgb(245, 240, 234)",
+          "body": "rgb(245, 240, 234)",
+          "phone": "linear-gradient(rgb(247, 161, 106) 0px, rgb(248, 220, 200) 33%, rgb(245, 240, 234) 76%)"
+        },
+        "rects": {
+          "top": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 155,
+            "right": 360,
+            "bottom": 155
+          },
+          "title": {
+            "x": 21,
+            "y": 80,
+            "width": 154.25,
+            "height": 33,
+            "right": 175.25,
+            "bottom": 113
+          },
+          "subtitle": {
+            "x": 21,
+            "y": 115,
+            "width": 116.96875,
+            "height": 17,
+            "right": 137.96875,
+            "bottom": 132
+          },
+          "tony": {
+            "x": 217,
+            "y": 26,
+            "width": 128,
+            "height": 136,
+            "right": 345,
+            "bottom": 162
+          },
+          "create": {
+            "x": 11,
+            "y": 155,
+            "width": 338,
+            "height": 278,
+            "right": 349,
+            "bottom": 433
+          },
+          "assistant": {
+            "x": 11,
+            "y": 443,
+            "width": 338,
+            "height": 188,
+            "right": 349,
+            "bottom": 631
+          },
+          "suggestions": {
+            "x": 11,
+            "y": 641,
+            "width": 338,
+            "height": 36,
+            "right": 349,
+            "bottom": 677
+          },
+          "ask": {
+            "x": 11,
+            "y": 686,
+            "width": 338,
+            "height": 47,
+            "right": 349,
+            "bottom": 733
+          },
+          "nav": {
+            "x": 0,
+            "y": 733,
+            "width": 360,
+            "height": 67,
+            "right": 360,
+            "bottom": 800
+          }
+        },
+        "titleTonyOverlap": 0,
+        "subtitleTonyOverlap": 0,
+        "overflow": {
+          "scrollWidth": 360,
+          "clientWidth": 360
+        }
+      },
+      "baselineDeltas": {
+        "createY": 0,
+        "tonyBottom": 0,
+        "assistantY": 0,
+        "suggestionsY": 0,
+        "askY": 0
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "checks": {
+        "httpOk": true,
+        "removedCleanly": true,
+        "warmBackgroundUnchanged": true,
+        "topMatchesDev033": true,
+        "tonyMatchesDev033": true,
+        "downstreamMatchesDev033": true,
+        "welcomeNotCovered": true,
+        "noHorizontalOverflow": true,
+        "noBrowserErrors": true
+      },
+      "actual": {
+        "removedCounts": {
+          "rewardRow": 0,
+          "pill": 0,
+          "statusBar": 0,
+          "quickRow": 0
+        },
+        "removedExactPresent": [],
+        "backgrounds": {
+          "page": "rgb(245, 240, 234)",
+          "body": "rgb(245, 240, 234)",
+          "phone": "linear-gradient(rgb(247, 161, 106) 0px, rgb(248, 220, 200) 33%, rgb(245, 240, 234) 76%)"
+        },
+        "rects": {
+          "top": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 166,
+            "right": 390,
+            "bottom": 166
+          },
+          "title": {
+            "x": 26,
+            "y": 79,
+            "width": 166.59375,
+            "height": 36,
+            "right": 192.59375,
+            "bottom": 115
+          },
+          "subtitle": {
+            "x": 26,
+            "y": 115,
+            "width": 116.96875,
+            "height": 17,
+            "right": 142.96875,
+            "bottom": 132
+          },
+          "tony": {
+            "x": 229,
+            "y": 27,
+            "width": 140,
+            "height": 146,
+            "right": 369,
+            "bottom": 173
+          },
+          "create": {
+            "x": 14,
+            "y": 166,
+            "width": 362,
+            "height": 289,
+            "right": 376,
+            "bottom": 455
+          },
+          "assistant": {
+            "x": 14,
+            "y": 465,
+            "width": 362,
+            "height": 188,
+            "right": 376,
+            "bottom": 653
+          },
+          "suggestions": {
+            "x": 14,
+            "y": 663,
+            "width": 362,
+            "height": 36,
+            "right": 376,
+            "bottom": 699
+          },
+          "ask": {
+            "x": 14,
+            "y": 708,
+            "width": 362,
+            "height": 47,
+            "right": 376,
+            "bottom": 755
+          },
+          "nav": {
+            "x": 0,
+            "y": 777,
+            "width": 390,
+            "height": 67,
+            "right": 390,
+            "bottom": 844
+          }
+        },
+        "titleTonyOverlap": 0,
+        "subtitleTonyOverlap": 0,
+        "overflow": {
+          "scrollWidth": 390,
+          "clientWidth": 390
+        }
+      },
+      "baselineDeltas": {
+        "createY": 0,
+        "tonyBottom": 0,
+        "assistantY": 0,
+        "suggestionsY": 0,
+        "askY": 0
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": []
+    },
+    {
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "passed": true,
+      "checks": {
+        "httpOk": true,
+        "removedCleanly": true,
+        "warmBackgroundUnchanged": true,
+        "topMatchesDev033": true,
+        "tonyMatchesDev033": true,
+        "downstreamMatchesDev033": true,
+        "welcomeNotCovered": true,
+        "noHorizontalOverflow": true,
+        "noBrowserErrors": true
+      },
+      "actual": {
+        "removedCounts": {
+          "rewardRow": 0,
+          "pill": 0,
+          "statusBar": 0,
+          "quickRow": 0
+        },
+        "removedExactPresent": [],
+        "backgrounds": {
+          "page": "rgb(245, 240, 234)",
+          "body": "rgb(245, 240, 234)",
+          "phone": "linear-gradient(rgb(247, 161, 106) 0px, rgb(248, 220, 200) 33%, rgb(245, 240, 234) 76%)"
+        },
+        "rects": {
+          "top": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 166,
+            "right": 430,
+            "bottom": 166
+          },
+          "title": {
+            "x": 26,
+            "y": 79,
+            "width": 166.59375,
+            "height": 36,
+            "right": 192.59375,
+            "bottom": 115
+          },
+          "subtitle": {
+            "x": 26,
+            "y": 115,
+            "width": 116.96875,
+            "height": 17,
+            "right": 142.96875,
+            "bottom": 132
+          },
+          "tony": {
+            "x": 269,
+            "y": 27,
+            "width": 140,
+            "height": 146,
+            "right": 409,
+            "bottom": 173
+          },
+          "create": {
+            "x": 14,
+            "y": 166,
+            "width": 402,
+            "height": 289,
+            "right": 416,
+            "bottom": 455
+          },
+          "assistant": {
+            "x": 14,
+            "y": 465,
+            "width": 402,
+            "height": 188,
+            "right": 416,
+            "bottom": 653
+          },
+          "suggestions": {
+            "x": 14,
+            "y": 663,
+            "width": 402,
+            "height": 36,
+            "right": 416,
+            "bottom": 699
+          },
+          "ask": {
+            "x": 14,
+            "y": 708,
+            "width": 402,
+            "height": 47,
+            "right": 416,
+            "bottom": 755
+          },
+          "nav": {
+            "x": 0,
+            "y": 865,
+            "width": 430,
+            "height": 67,
+            "right": 430,
+            "bottom": 932
+          }
+        },
+        "titleTonyOverlap": 0,
+        "subtitleTonyOverlap": 0,
+        "overflow": {
+          "scrollWidth": 430,
+          "clientWidth": 430
+        }
+      },
+      "baselineDeltas": {
+        "createY": 0,
+        "tonyBottom": 0,
+        "assistantY": 0,
+        "suggestionsY": 0,
+        "askY": 0
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": []
+    }
+  ]
+}

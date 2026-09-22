@@ -1,0 +1,509 @@
+{
+  "generatedAt": "2026-08-17T19:58:42+08:00",
+  "sourceDir": "E:\\huiyitechworkspace\\knowledge-graph\\-APP--main\\-APP--main\\knowledge_base\\理论题库",
+  "mode": "dry-run",
+  "targetCategoryIds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "database": {
+    "connected": true,
+    "host": "114.111.30.111",
+    "port": 13306,
+    "database": "yunjikeji",
+    "portOpen": true,
+    "metadataSource": "database",
+    "answerChildCount": 0,
+    "foreignKeys": []
+  },
+  "summary": {
+    "sourceFiles": 11,
+    "sourceCategories": 11,
+    "sourceQuestions": 1535,
+    "sourceOptions": 4630,
+    "importQuestions": 1535,
+    "importOptions": 4630,
+    "incompleteQuestions": 23,
+    "answerDistribution": {
+      "B": 522,
+      "A": 496,
+      "C": 509,
+      "D": 8
+    },
+    "optionCountDistribution": {
+      "3": 1505,
+      "4": 28,
+      "1": 1,
+      "2": 1
+    }
+  },
+  "limits": {
+    "source": "database",
+    "values": {
+      "yj_practice_category.category_name": 100,
+      "yj_practice_exercises.question_stem": 2000,
+      "yj_practice_exercises.question_type": 32,
+      "yj_practice_exercises.correct_memo": 2000,
+      "yj_practice_exercises_answer.question_type": 32,
+      "yj_practice_exercises_answer.answer_code": 10,
+      "yj_practice_exercises_answer.answer_content": 255,
+      "yj_practice_exercises_answer_child.question_type": 32,
+      "yj_practice_exercises_answer_child.answer_content": 255,
+      "yj_practice_category.field_type": 10,
+      "yj_practice_category.creator": 64,
+      "yj_practice_category.updater": 64,
+      "yj_practice_exercises.creator": 64,
+      "yj_practice_exercises.updater": 64,
+      "yj_practice_exercises_answer.creator": 64,
+      "yj_practice_exercises_answer.updater": 64,
+      "yj_practice_exercises_answer_child.creator": 64,
+      "yj_practice_exercises_answer_child.updater": 64
+    }
+  },
+  "categoryMappings": [
+    {
+      "categoryName": "旋翼无人机",
+      "file": "E:\\huiyitechworkspace\\knowledge-graph\\-APP--main\\-APP--main\\knowledge_base\\理论题库\\旋翼无人机.md",
+      "matchedRows": [
+        {
+          "id": 7,
+          "category_name": "旋翼无人机",
+          "category_status": "\u0001",
+          "field_type": "rotary_uav",
+          "catalog_type": 0,
+          "sort_no": 70
+        }
+      ]
+    },
+    {
+      "categoryName": "无人机任务规划",
+      "file": "E:\\huiyitechworkspace\\knowledge-graph\\-APP--main\\-APP--main\\knowledge_base\\理论题库\\无人机任务规划.md",
+      "matchedRows": [
+        {
+          "id": 8,
+          "category_name": "无人机任务规划",
+          "category_status": "\u0001",
+          "field_type": "mission_pl",
+          "catalog_type": 0,
+          "sort_no": 80
+        }
+      ]
+    },
+    {
+      "categoryName": "无人机操作注意事项",
+      "file": "E:\\huiyitechworkspace\\knowledge-graph\\-APP--main\\-APP--main\\knowledge_base\\理论题库\\无人机操作注意事项.md",
+      "matchedRows": [
+        {
+          "id": 5,
+          "category_name": "无人机操作注意事项",
+          "category_status": "\u0001",
+          "field_type": "operation_",
+          "catalog_type": 0,
+          "sort_no": 50
+        }
+      ]
+    },
+    {
+      "categoryName": "无人机教员题库",
+      "file": "E:\\huiyitechworkspace\\knowledge-graph\\-APP--main\\-APP--main\\knowledge_base\\理论题库\\无人机教员题库.md",
+      "matchedRows": [
+        {
+          "id": 11,
+          "category_name": "无人机教员题库",
+          "category_status": "\u0001",
+          "field_type": "instructor",
+          "catalog_type": 0,
+          "sort_no": 110
+        }
+      ]
+    },
+    {
+      "categoryName": "无人机飞行手册、法律法规及其他",
+      "file": "E:\\huiyitechworkspace\\knowledge-graph\\-APP--main\\-APP--main\\knowledge_base\\理论题库\\无人机飞行手册、法律法规及其他.md",
+      "matchedRows": [
+        {
+          "id": 4,
+          "category_name": "无人机飞行手册、法律法规及其他",
+          "category_status": "\u0001",
+          "field_type": "flight_man",
+          "catalog_type": 0,
+          "sort_no": 40
+        }
+      ]
+    },
+    {
+      "categoryName": "概述",
+      "file": "E:\\huiyitechworkspace\\knowledge-graph\\-APP--main\\-APP--main\\knowledge_base\\理论题库\\概述.md",
+      "matchedRows": [
+        {
+          "id": 1,
+          "category_name": "概述",
+          "category_status": "\u0001",
+          "field_type": "overview",
+          "catalog_type": 0,
+          "sort_no": 10
+        }
+      ]
+    },
+    {
+      "categoryName": "气象",
+      "file": "E:\\huiyitechworkspace\\knowledge-graph\\-APP--main\\-APP--main\\knowledge_base\\理论题库\\气象.md",
+      "matchedRows": [
+        {
+          "id": 6,
+          "category_name": "气象",
+          "category_status": "\u0001",
+          "field_type": "meteorolog",
+          "catalog_type": 0,
+          "sort_no": 60
+        }
+      ]
+    },
+    {
+      "categoryName": "空中交通管制",
+      "file": "E:\\huiyitechworkspace\\knowledge-graph\\-APP--main\\-APP--main\\knowledge_base\\理论题库\\空中交通管制.md",
+      "matchedRows": [
+        {
+          "id": 3,
+          "category_name": "空中交通管制",
+          "category_status": "\u0001",
+          "field_type": "air_traffi",
+          "catalog_type": 0,
+          "sort_no": 30
+        }
+      ]
+    },
+    {
+      "categoryName": "系统组成及介绍",
+      "file": "E:\\huiyitechworkspace\\knowledge-graph\\-APP--main\\-APP--main\\knowledge_base\\理论题库\\系统组成及介绍.md",
+      "matchedRows": [
+        {
+          "id": 2,
+          "category_name": "系统组成及介绍",
+          "category_status": "\u0001",
+          "field_type": "system_com",
+          "catalog_type": 0,
+          "sort_no": 20
+        }
+      ]
+    },
+    {
+      "categoryName": "综合问答",
+      "file": "E:\\huiyitechworkspace\\knowledge-graph\\-APP--main\\-APP--main\\knowledge_base\\理论题库\\综合问答.md",
+      "matchedRows": [
+        {
+          "id": 10,
+          "category_name": "综合问答",
+          "category_status": "\u0001",
+          "field_type": "comprehens",
+          "catalog_type": 0,
+          "sort_no": 100
+        }
+      ]
+    },
+    {
+      "categoryName": "飞行原理与飞行性能",
+      "file": "E:\\huiyitechworkspace\\knowledge-graph\\-APP--main\\-APP--main\\knowledge_base\\理论题库\\飞行原理与飞行性能.md",
+      "matchedRows": [
+        {
+          "id": 9,
+          "category_name": "飞行原理与飞行性能",
+          "category_status": "\u0001",
+          "field_type": "flight_pri",
+          "catalog_type": 0,
+          "sort_no": 90
+        }
+      ]
+    }
+  ],
+  "incompleteQuestions": [
+    {
+      "file": "E:\\huiyitechworkspace\\knowledge-graph\\-APP--main\\-APP--main\\knowledge_base\\理论题库\\无人机任务规划.md",
+      "line": 781,
+      "questionNumber": 41,
+      "categoryName": "无人机任务规划",
+      "reasonCodes": [
+        "MISSING_STEM"
+      ],
+      "reasonMessages": [
+        "题干缺失，已阻断导入。"
+      ]
+    },
+    {
+      "file": "E:\\huiyitechworkspace\\knowledge-graph\\-APP--main\\-APP--main\\knowledge_base\\理论题库\\无人机任务规划.md",
+      "line": 1351,
+      "questionNumber": 71,
+      "categoryName": "无人机任务规划",
+      "reasonCodes": [
+        "MISSING_STEM"
+      ],
+      "reasonMessages": [
+        "题干缺失，已阻断导入。"
+      ]
+    },
+    {
+      "file": "E:\\huiyitechworkspace\\knowledge-graph\\-APP--main\\-APP--main\\knowledge_base\\理论题库\\无人机操作注意事项.md",
+      "line": 197,
+      "questionNumber": 11,
+      "categoryName": "无人机操作注意事项",
+      "reasonCodes": [
+        "MISSING_STEM"
+      ],
+      "reasonMessages": [
+        "题干缺失，已阻断导入。"
+      ]
+    },
+    {
+      "file": "E:\\huiyitechworkspace\\knowledge-graph\\-APP--main\\-APP--main\\knowledge_base\\理论题库\\无人机操作注意事项.md",
+      "line": 643,
+      "questionNumber": 31,
+      "categoryName": "无人机操作注意事项",
+      "reasonCodes": [
+        "MISSING_STEM"
+      ],
+      "reasonMessages": [
+        "题干缺失，已阻断导入。"
+      ]
+    },
+    {
+      "file": "E:\\huiyitechworkspace\\knowledge-graph\\-APP--main\\-APP--main\\knowledge_base\\理论题库\\无人机操作注意事项.md",
+      "line": 1173,
+      "questionNumber": 56,
+      "categoryName": "无人机操作注意事项",
+      "reasonCodes": [
+        "MISSING_STEM"
+      ],
+      "reasonMessages": [
+        "题干缺失，已阻断导入。"
+      ]
+    },
+    {
+      "file": "E:\\huiyitechworkspace\\knowledge-graph\\-APP--main\\-APP--main\\knowledge_base\\理论题库\\无人机操作注意事项.md",
+      "line": 1265,
+      "questionNumber": 61,
+      "categoryName": "无人机操作注意事项",
+      "reasonCodes": [
+        "MISSING_STEM"
+      ],
+      "reasonMessages": [
+        "题干缺失，已阻断导入。"
+      ]
+    },
+    {
+      "file": "E:\\huiyitechworkspace\\knowledge-graph\\-APP--main\\-APP--main\\knowledge_base\\理论题库\\无人机飞行手册、法律法规及其他.md",
+      "line": 87,
+      "questionNumber": 6,
+      "categoryName": "无人机飞行手册、法律法规及其他",
+      "reasonCodes": [
+        "MISSING_STEM"
+      ],
+      "reasonMessages": [
+        "题干缺失，已阻断导入。"
+      ]
+    },
+    {
+      "file": "E:\\huiyitechworkspace\\knowledge-graph\\-APP--main\\-APP--main\\knowledge_base\\理论题库\\无人机飞行手册、法律法规及其他.md",
+      "line": 403,
+      "questionNumber": 21,
+      "categoryName": "无人机飞行手册、法律法规及其他",
+      "reasonCodes": [
+        "MISSING_STEM"
+      ],
+      "reasonMessages": [
+        "题干缺失，已阻断导入。"
+      ]
+    },
+    {
+      "file": "E:\\huiyitechworkspace\\knowledge-graph\\-APP--main\\-APP--main\\knowledge_base\\理论题库\\无人机飞行手册、法律法规及其他.md",
+      "line": 519,
+      "questionNumber": 26,
+      "categoryName": "无人机飞行手册、法律法规及其他",
+      "reasonCodes": [
+        "DUPLICATE_ANSWER_LINE"
+      ],
+      "reasonMessages": [
+        "题目存在多条参考答案记录，已阻断导入。"
+      ]
+    },
+    {
+      "file": "E:\\huiyitechworkspace\\knowledge-graph\\-APP--main\\-APP--main\\knowledge_base\\理论题库\\无人机飞行手册、法律法规及其他.md",
+      "line": 1005,
+      "questionNumber": 51,
+      "categoryName": "无人机飞行手册、法律法规及其他",
+      "reasonCodes": [
+        "MISSING_STEM"
+      ],
+      "reasonMessages": [
+        "题干缺失，已阻断导入。"
+      ]
+    },
+    {
+      "file": "E:\\huiyitechworkspace\\knowledge-graph\\-APP--main\\-APP--main\\knowledge_base\\理论题库\\无人机飞行手册、法律法规及其他.md",
+      "line": 1421,
+      "questionNumber": 71,
+      "categoryName": "无人机飞行手册、法律法规及其他",
+      "reasonCodes": [
+        "MISSING_STEM"
+      ],
+      "reasonMessages": [
+        "题干缺失，已阻断导入。"
+      ]
+    },
+    {
+      "file": "E:\\huiyitechworkspace\\knowledge-graph\\-APP--main\\-APP--main\\knowledge_base\\理论题库\\无人机飞行手册、法律法规及其他.md",
+      "line": 1617,
+      "questionNumber": 81,
+      "categoryName": "无人机飞行手册、法律法规及其他",
+      "reasonCodes": [
+        "MISSING_STEM"
+      ],
+      "reasonMessages": [
+        "题干缺失，已阻断导入。"
+      ]
+    },
+    {
+      "file": "E:\\huiyitechworkspace\\knowledge-graph\\-APP--main\\-APP--main\\knowledge_base\\理论题库\\无人机飞行手册、法律法规及其他.md",
+      "line": 1969,
+      "questionNumber": 101,
+      "categoryName": "无人机飞行手册、法律法规及其他",
+      "reasonCodes": [
+        "MISSING_STEM"
+      ],
+      "reasonMessages": [
+        "题干缺失，已阻断导入。"
+      ]
+    },
+    {
+      "file": "E:\\huiyitechworkspace\\knowledge-graph\\-APP--main\\-APP--main\\knowledge_base\\理论题库\\无人机飞行手册、法律法规及其他.md",
+      "line": 2139,
+      "questionNumber": 111,
+      "categoryName": "无人机飞行手册、法律法规及其他",
+      "reasonCodes": [
+        "MISSING_STEM"
+      ],
+      "reasonMessages": [
+        "题干缺失，已阻断导入。"
+      ]
+    },
+    {
+      "file": "E:\\huiyitechworkspace\\knowledge-graph\\-APP--main\\-APP--main\\knowledge_base\\理论题库\\无人机飞行手册、法律法规及其他.md",
+      "line": 2315,
+      "questionNumber": 121,
+      "categoryName": "无人机飞行手册、法律法规及其他",
+      "reasonCodes": [
+        "MISSING_STEM"
+      ],
+      "reasonMessages": [
+        "题干缺失，已阻断导入。"
+      ]
+    },
+    {
+      "file": "E:\\huiyitechworkspace\\knowledge-graph\\-APP--main\\-APP--main\\knowledge_base\\理论题库\\空中交通管制.md",
+      "line": 173,
+      "questionNumber": 11,
+      "categoryName": "空中交通管制",
+      "reasonCodes": [
+        "MISSING_STEM"
+      ],
+      "reasonMessages": [
+        "题干缺失，已阻断导入。"
+      ]
+    },
+    {
+      "file": "E:\\huiyitechworkspace\\knowledge-graph\\-APP--main\\-APP--main\\knowledge_base\\理论题库\\空中交通管制.md",
+      "line": 373,
+      "questionNumber": 21,
+      "categoryName": "空中交通管制",
+      "reasonCodes": [
+        "MISSING_STEM"
+      ],
+      "reasonMessages": [
+        "题干缺失，已阻断导入。"
+      ]
+    },
+    {
+      "file": "E:\\huiyitechworkspace\\knowledge-graph\\-APP--main\\-APP--main\\knowledge_base\\理论题库\\空中交通管制.md",
+      "line": 579,
+      "questionNumber": 31,
+      "categoryName": "空中交通管制",
+      "reasonCodes": [
+        "MISSING_STEM"
+      ],
+      "reasonMessages": [
+        "题干缺失，已阻断导入。"
+      ]
+    },
+    {
+      "file": "E:\\huiyitechworkspace\\knowledge-graph\\-APP--main\\-APP--main\\knowledge_base\\理论题库\\系统组成及介绍.md",
+      "line": 689,
+      "questionNumber": 31,
+      "categoryName": "系统组成及介绍",
+      "reasonCodes": [
+        "MISSING_STEM"
+      ],
+      "reasonMessages": [
+        "题干缺失，已阻断导入。"
+      ]
+    },
+    {
+      "file": "E:\\huiyitechworkspace\\knowledge-graph\\-APP--main\\-APP--main\\knowledge_base\\理论题库\\系统组成及介绍.md",
+      "line": 1837,
+      "questionNumber": 81,
+      "categoryName": "系统组成及介绍",
+      "reasonCodes": [
+        "MISSING_STEM"
+      ],
+      "reasonMessages": [
+        "题干缺失，已阻断导入。"
+      ]
+    },
+    {
+      "file": "E:\\huiyitechworkspace\\knowledge-graph\\-APP--main\\-APP--main\\knowledge_base\\理论题库\\飞行原理与飞行性能.md",
+      "line": 393,
+      "questionNumber": 20,
+      "categoryName": "飞行原理与飞行性能",
+      "reasonCodes": [
+        "MISSING_STEM"
+      ],
+      "reasonMessages": [
+        "题干缺失，已阻断导入。"
+      ]
+    },
+    {
+      "file": "E:\\huiyitechworkspace\\knowledge-graph\\-APP--main\\-APP--main\\knowledge_base\\理论题库\\飞行原理与飞行性能.md",
+      "line": 7013,
+      "questionNumber": 281,
+      "categoryName": "飞行原理与飞行性能",
+      "reasonCodes": [
+        "MISSING_STEM"
+      ],
+      "reasonMessages": [
+        "题干缺失，已阻断导入。"
+      ]
+    },
+    {
+      "file": "E:\\huiyitechworkspace\\knowledge-graph\\-APP--main\\-APP--main\\knowledge_base\\理论题库\\飞行原理与飞行性能.md",
+      "line": 7283,
+      "questionNumber": 291,
+      "categoryName": "飞行原理与飞行性能",
+      "reasonCodes": [
+        "MISSING_STEM"
+      ],
+      "reasonMessages": [
+        "题干缺失，已阻断导入。"
+      ]
+    }
+  ],
+  "violations": [],
+  "violationCounts": {},
+  "canApply": true
+}

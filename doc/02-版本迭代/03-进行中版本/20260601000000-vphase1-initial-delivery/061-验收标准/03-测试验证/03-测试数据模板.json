@@ -1,0 +1,25 @@
+{
+  "api_cases": [],
+  "data_cases": [],
+  "interaction_cases": [
+    {
+      "case_id": "TC-UI-LOGIN-001",
+      "account": null,
+      "input": {
+        "phone": "13800138000",
+        "password": "abcdef",
+        "viewports": [
+          "360x800",
+          "390x844",
+          "430x932"
+        ]
+      },
+      "expected_page_state": {
+        "background": "rgb(245, 240, 234)",
+        "horizontal_overflow": false,
+        "text_clipping": false,
+        "unexpected_overlap": false
+      }
+    }
+  ]
+}

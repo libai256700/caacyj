@@ -1,0 +1,13 @@
+{
+  "baseline": "e64f2f0fc1aaed7184200f43b6b658a07ec47b7c",
+  "targetFile": "code/develop/yunjikeji/src/pages/home.vue",
+  "changes": [
+    "删除reward-row模板和CSS",
+    "删除appState导入与enterprise客服分支，固定实时聊天路由",
+    "恢复常规top166/content233/Tony140x146和小屏top155/content222/Tony128x136",
+    "welcome-copy padding-top设为80px承接顶部删除行位置",
+    "create-panel padding-bottom常规94px、小屏91px，较首轮各增加62px"
+  ],
+  "unexpectedChanges": [],
+  "passed": true
+}

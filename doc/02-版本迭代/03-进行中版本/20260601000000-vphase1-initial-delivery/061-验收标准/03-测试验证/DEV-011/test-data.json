@@ -1,0 +1,36 @@
+{
+  "task": "DEV-011",
+  "checkedAt": "2026-09-02T17:22:12+08:00",
+  "resource": "practice-record-detail",
+  "queryDefaults": {
+    "is_correct": false
+  },
+  "triStateOptions": [
+    {
+      "label": "不限",
+      "value": ""
+    },
+    {
+      "label": "是",
+      "value": true
+    },
+    {
+      "label": "否",
+      "value": false
+    }
+  ],
+  "expectedBehaviors": [
+    "首次进入错题管理时 is_correct=false",
+    "点击重置后恢复 is_correct=false",
+    "用户主动选择不限时不传 is_correct",
+    "用户主动选择是/否时分别传 true/false",
+    "默认 false 不扩散到其他资源页"
+  ],
+  "commands": [
+    "python verify_wrong_question_default_filter.py",
+    "mvn '-Dtest=UserPracticeExercisesRecordSqlContractTest' test",
+    "pnpm exec eslint src/views/yj/resource/config.ts src/views/yj/resource/index.vue",
+    "pnpm build:testhost",
+    "git diff --check"
+  ]
+}

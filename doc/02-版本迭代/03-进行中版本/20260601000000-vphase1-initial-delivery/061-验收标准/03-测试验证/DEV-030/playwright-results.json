@@ -1,0 +1,1303 @@
+{
+  "url": "http://127.0.0.1:5173/yunjikeji/#/pages/auth/login",
+  "executedAt": "2026-07-17T11:25:25.987Z",
+  "chromePath": "C:/Program Files/Google/Chrome/Application/chrome.exe",
+  "sourceChecks": {
+    "scriptSetupUnchanged": true,
+    "studentLogin": true,
+    "enterpriseLogin": true,
+    "roleBranch": true,
+    "loadingState": true,
+    "loadingText": true,
+    "wechatHandler": true,
+    "agreementToggle": true,
+    "userAgreement": true,
+    "privacyAgreement": true,
+    "internalPasswordInputUnchanged": true,
+    "verificationCodeDisplay": true,
+    "getCodeIsDisplayView": true,
+    "getCodeHasNoInteraction": true,
+    "noSmsFlow": true,
+    "noFieldIcons": true,
+    "iosIsView": true,
+    "iosHasNoInteraction": true,
+    "noIosHandler": true,
+    "appleAsset": true,
+    "noIosText": true
+  },
+  "viewports": [
+    {
+      "width": 360,
+      "height": 800,
+      "screenshots": {
+        "student": {
+          "path": "E:\\huiyitechworkspace\\feixingxueyuan\\doc\\02-版本迭代\\03-进行中版本\\20260601000000-vphase1-initial-delivery\\061-验收标准\\03-测试验证\\DEV-030\\login-360x800.png",
+          "bytes": 120319
+        },
+        "enterprise": {
+          "path": "E:\\huiyitechworkspace\\feixingxueyuan\\doc\\02-版本迭代\\03-进行中版本\\20260601000000-vphase1-initial-delivery\\061-验收标准\\03-测试验证\\DEV-030\\login-enterprise-360x800.png",
+          "bytes": 119135
+        }
+      },
+      "tabStates": {
+        "student": {
+          "panelClass": "login-content login-content--student",
+          "activeText": "学员登录",
+          "geometry": {
+            "containerWidth": 340,
+            "midpoint": 170,
+            "leftSurface": {
+              "type": "active",
+              "start": 0,
+              "end": 170,
+              "width": 170
+            },
+            "rightSurface": {
+              "type": "inactive",
+              "start": 112,
+              "end": 340,
+              "width": 228
+            },
+            "activeRatio": 0.5,
+            "inactiveVisibleRatio": 0.5,
+            "inactiveUnderlayRatio": 0.6705882352941176,
+            "overlap": 58,
+            "gap": 0,
+            "underlap": 58,
+            "outerEdgeDeviation": {
+              "left": 0,
+              "right": 0
+            },
+            "labelCenters": {
+              "actual": [
+                85,
+                255
+              ],
+              "expected": [
+                85,
+                255
+              ],
+              "ratios": [
+                0.25,
+                0.75
+              ],
+              "deviations": [
+                0,
+                0
+              ]
+            },
+            "tabItemWidths": [
+              170,
+              170
+            ],
+            "activeStyles": {
+              "surfaceBackground": "rgb(255, 255, 255)",
+              "surfaceBackdropFilter": "none",
+              "surfaceFilter": "none",
+              "itemBackground": "rgba(0, 0, 0, 0)",
+              "itemBackdropFilter": "none",
+              "itemFilter": "none",
+              "borderRadii": {
+                "topLeft": "40px",
+                "topRight": "58px",
+                "bottomLeft": "0px",
+                "bottomRight": "0px"
+              }
+            },
+            "inactiveStyles": {
+              "surfaceBackground": "rgba(255, 238, 225, 0.11)",
+              "surfaceBackdropFilter": "blur(0.8px) saturate(0.92)",
+              "surfaceFilter": "none",
+              "itemBackground": "rgba(0, 0, 0, 0)",
+              "itemBackdropFilter": "none",
+              "itemFilter": "none",
+              "borderRadii": {
+                "topLeft": "0px",
+                "topRight": "30px",
+                "bottomLeft": "0px",
+                "bottomRight": "0px"
+              }
+            }
+          },
+          "agreement": {
+            "before": {
+              "checkClass": "login-agreement__check",
+              "active": false,
+              "checkBackgroundColor": "rgb(255, 255, 255)",
+              "tickPresent": false,
+              "tickText": "",
+              "tickColor": null,
+              "tickVisibility": null,
+              "tickDisplay": null
+            },
+            "checked": {
+              "checkClass": "login-agreement__check login-agreement__check--active",
+              "active": true,
+              "checkBackgroundColor": "rgb(255, 255, 255)",
+              "tickPresent": true,
+              "tickText": "✓",
+              "tickColor": "rgb(26, 26, 26)",
+              "tickVisibility": "visible",
+              "tickDisplay": "block"
+            },
+            "afterCancel": {
+              "checkClass": "login-agreement__check",
+              "active": false,
+              "checkBackgroundColor": "rgb(255, 255, 255)",
+              "tickPresent": false,
+              "tickText": "",
+              "tickColor": null,
+              "tickVisibility": null,
+              "tickDisplay": null
+            },
+            "tickRgb": [
+              26,
+              26,
+              26
+            ]
+          }
+        },
+        "enterprise": {
+          "panelClass": "login-content login-content--enterprise",
+          "activeText": "企业登录",
+          "geometry": {
+            "containerWidth": 340,
+            "midpoint": 170,
+            "leftSurface": {
+              "type": "inactive",
+              "start": 0,
+              "end": 228,
+              "width": 228
+            },
+            "rightSurface": {
+              "type": "active",
+              "start": 170,
+              "end": 340,
+              "width": 170
+            },
+            "activeRatio": 0.5,
+            "inactiveVisibleRatio": 0.5,
+            "inactiveUnderlayRatio": 0.6705882352941176,
+            "overlap": 58,
+            "gap": 0,
+            "underlap": 58,
+            "outerEdgeDeviation": {
+              "left": 0,
+              "right": 0
+            },
+            "labelCenters": {
+              "actual": [
+                85,
+                255
+              ],
+              "expected": [
+                85,
+                255
+              ],
+              "ratios": [
+                0.25,
+                0.75
+              ],
+              "deviations": [
+                0,
+                0
+              ]
+            },
+            "tabItemWidths": [
+              170,
+              170
+            ],
+            "activeStyles": {
+              "surfaceBackground": "rgb(255, 255, 255)",
+              "surfaceBackdropFilter": "none",
+              "surfaceFilter": "none",
+              "itemBackground": "rgba(0, 0, 0, 0)",
+              "itemBackdropFilter": "none",
+              "itemFilter": "none",
+              "borderRadii": {
+                "topLeft": "58px",
+                "topRight": "30px",
+                "bottomLeft": "0px",
+                "bottomRight": "0px"
+              }
+            },
+            "inactiveStyles": {
+              "surfaceBackground": "rgba(255, 238, 225, 0.11)",
+              "surfaceBackdropFilter": "blur(0.8px) saturate(0.92)",
+              "surfaceFilter": "none",
+              "itemBackground": "rgba(0, 0, 0, 0)",
+              "itemBackdropFilter": "none",
+              "itemFilter": "none",
+              "borderRadii": {
+                "topLeft": "40px",
+                "topRight": "0px",
+                "bottomLeft": "0px",
+                "bottomRight": "0px"
+              }
+            }
+          },
+          "agreement": {
+            "before": {
+              "checkClass": "login-agreement__check",
+              "active": false,
+              "checkBackgroundColor": "rgb(255, 255, 255)",
+              "tickPresent": false,
+              "tickText": "",
+              "tickColor": null,
+              "tickVisibility": null,
+              "tickDisplay": null
+            },
+            "checked": {
+              "checkClass": "login-agreement__check login-agreement__check--active",
+              "active": true,
+              "checkBackgroundColor": "rgb(255, 255, 255)",
+              "tickPresent": true,
+              "tickText": "✓",
+              "tickColor": "rgb(26, 26, 26)",
+              "tickVisibility": "visible",
+              "tickDisplay": "block"
+            },
+            "afterCancel": {
+              "checkClass": "login-agreement__check",
+              "active": false,
+              "checkBackgroundColor": "rgb(255, 255, 255)",
+              "tickPresent": false,
+              "tickText": "",
+              "tickColor": null,
+              "tickVisibility": null,
+              "tickDisplay": null
+            },
+            "tickRgb": [
+              26,
+              26,
+              26
+            ]
+          }
+        }
+      },
+      "metrics": {
+        "backgroundColor": "rgb(245, 240, 234)",
+        "panelBackgroundColor": "rgba(0, 0, 0, 0)",
+        "panelBackgroundImage": "linear-gradient(rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 52px, rgba(255, 255, 255, 0.82) 58px, rgb(255, 255, 255) 64px, rgb(255, 255, 255) 100%)",
+        "panelBorderRadius": "40px 30px 36px 36px",
+        "panelBottomLeftRadius": "36px",
+        "panelBottomRightRadius": "36px",
+        "panelBottomGap": 16,
+        "inputBorderRadius": "25px",
+        "heroBackgroundImage": "linear-gradient(rgba(255, 190, 143, 0.22) 0%, rgba(238, 119, 54, 0.04) 48%, rgba(207, 79, 23, 0.18) 100%), linear-gradient(118deg, rgb(230, 111, 45) 0%, rgb(238, 135, 65) 45%, rgb(243, 163, 95) 100%)",
+        "tabsBackgroundColor": "rgba(0, 0, 0, 0)",
+        "overlayBackgroundColor": "rgba(255, 238, 225, 0.11)",
+        "overlayBackgroundImage": "linear-gradient(90deg, rgba(255, 238, 225, 0.18) 0%, rgba(255, 238, 225, 0.11) 38%, rgba(255, 238, 225, 0.035) 68%, rgba(255, 238, 225, 0.07) 100%), linear-gradient(rgba(255, 255, 255, 0.09) 0%, rgba(239, 136, 66, 0.06) 100%)",
+        "overlayBackdropFilter": "blur(0.8px) saturate(0.92)",
+        "overlayBottomLeftRadius": "0px",
+        "overlayBottomRightRadius": "0px",
+        "whiteCapTopRightRadius": "58px",
+        "whiteCapBottomRightRadius": "0px",
+        "mascotPanelOverlap": 26,
+        "panelAboveHero": true,
+        "buttonBackgroundImage": "linear-gradient(90deg, rgb(230, 111, 45) 0%, rgb(243, 163, 95) 100%)",
+        "buttonBoxShadow": "rgba(195, 91, 34, 0.22) 0px 9px 17px 0px",
+        "viewportWidth": 360,
+        "viewportHeight": 800,
+        "documentScrollWidth": 360,
+        "bodyScrollWidth": 360,
+        "pageScrollWidth": 360,
+        "pageClientWidth": 360,
+        "mascotLoaded": true,
+        "wechatIconLoaded": true,
+        "appleIconLoaded": true,
+        "fieldIconCount": 0,
+        "iosTagName": "UNI-VIEW",
+        "iosHasClickAttribute": false,
+        "iosTextContent": "",
+        "getCodeTagName": "UNI-VIEW",
+        "getCodeHasClickAttribute": false,
+        "getCodeTextContent": "获取验证码",
+        "labelStyles": [
+          {
+            "color": "rgb(98, 91, 86)",
+            "fontSize": "16px",
+            "fontWeight": "600"
+          },
+          {
+            "color": "rgb(98, 91, 86)",
+            "fontSize": "16px",
+            "fontWeight": "600"
+          }
+        ],
+        "textClipping": [],
+        "geometry": {
+          "brand": {
+            "x": 25,
+            "y": 104,
+            "width": 136,
+            "height": 43
+          },
+          "subtitle": {
+            "x": 25,
+            "y": 153,
+            "width": 123.359375,
+            "height": 22
+          },
+          "panel": {
+            "x": 10,
+            "y": 200,
+            "width": 340,
+            "height": 584
+          },
+          "mascot": {
+            "x": 230,
+            "y": 86,
+            "width": 108,
+            "height": 140
+          },
+          "phone": {
+            "x": 35,
+            "y": 306,
+            "width": 290,
+            "height": 50
+          },
+          "code": {
+            "x": 35,
+            "y": 414,
+            "width": 290,
+            "height": 50
+          },
+          "submit": {
+            "x": 35,
+            "y": 503,
+            "width": 290,
+            "height": 52
+          },
+          "agreement": {
+            "x": 35,
+            "y": 580,
+            "width": 290,
+            "height": 19
+          },
+          "thirdPartyTitle": {
+            "x": 145,
+            "y": 666,
+            "width": 70,
+            "height": 20
+          },
+          "wechat": {
+            "x": 115,
+            "y": 698,
+            "width": 44,
+            "height": 44
+          },
+          "ios": {
+            "x": 201,
+            "y": 698,
+            "width": 44,
+            "height": 44
+          }
+        },
+        "boxes": [
+          {
+            "selector": ".login-role-tabs",
+            "x": 10,
+            "y": 200,
+            "width": 340,
+            "height": 60
+          },
+          {
+            "selector": ".login-field:not(.login-field--code)",
+            "x": 35,
+            "y": 306,
+            "width": 290,
+            "height": 50
+          },
+          {
+            "selector": ".login-field--code",
+            "x": 35,
+            "y": 414,
+            "width": 290,
+            "height": 50
+          },
+          {
+            "selector": ".login-submit",
+            "x": 35,
+            "y": 503,
+            "width": 290,
+            "height": 52
+          },
+          {
+            "selector": ".login-agreement",
+            "x": 35,
+            "y": 580,
+            "width": 290,
+            "height": 19
+          },
+          {
+            "selector": ".login-third-party",
+            "x": 10,
+            "y": 666,
+            "width": 340,
+            "height": 76
+          },
+          {
+            "selector": ".login-icp",
+            "x": 10,
+            "y": 755,
+            "width": 340,
+            "height": 17
+          }
+        ]
+      },
+      "overlaps": [],
+      "pageErrors": [],
+      "agreementLinksOpened": null
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "screenshots": {
+        "student": {
+          "path": "E:\\huiyitechworkspace\\feixingxueyuan\\doc\\02-版本迭代\\03-进行中版本\\20260601000000-vphase1-initial-delivery\\061-验收标准\\03-测试验证\\DEV-030\\login-390x844.png",
+          "bytes": 124837
+        },
+        "enterprise": {
+          "path": "E:\\huiyitechworkspace\\feixingxueyuan\\doc\\02-版本迭代\\03-进行中版本\\20260601000000-vphase1-initial-delivery\\061-验收标准\\03-测试验证\\DEV-030\\login-enterprise-390x844.png",
+          "bytes": 124463
+        }
+      },
+      "tabStates": {
+        "student": {
+          "panelClass": "login-content login-content--student",
+          "activeText": "学员登录",
+          "geometry": {
+            "containerWidth": 366,
+            "midpoint": 183,
+            "leftSurface": {
+              "type": "active",
+              "start": 0,
+              "end": 183,
+              "width": 183
+            },
+            "rightSurface": {
+              "type": "inactive",
+              "start": 125,
+              "end": 366,
+              "width": 241
+            },
+            "activeRatio": 0.5,
+            "inactiveVisibleRatio": 0.5,
+            "inactiveUnderlayRatio": 0.6584699453551912,
+            "overlap": 58,
+            "gap": 0,
+            "underlap": 58,
+            "outerEdgeDeviation": {
+              "left": 0,
+              "right": 0
+            },
+            "labelCenters": {
+              "actual": [
+                91.5,
+                274.5
+              ],
+              "expected": [
+                91.5,
+                274.5
+              ],
+              "ratios": [
+                0.25,
+                0.75
+              ],
+              "deviations": [
+                0,
+                0
+              ]
+            },
+            "tabItemWidths": [
+              183,
+              183
+            ],
+            "activeStyles": {
+              "surfaceBackground": "rgb(255, 255, 255)",
+              "surfaceBackdropFilter": "none",
+              "surfaceFilter": "none",
+              "itemBackground": "rgba(0, 0, 0, 0)",
+              "itemBackdropFilter": "none",
+              "itemFilter": "none",
+              "borderRadii": {
+                "topLeft": "40px",
+                "topRight": "58px",
+                "bottomLeft": "0px",
+                "bottomRight": "0px"
+              }
+            },
+            "inactiveStyles": {
+              "surfaceBackground": "rgba(255, 238, 225, 0.11)",
+              "surfaceBackdropFilter": "blur(0.8px) saturate(0.92)",
+              "surfaceFilter": "none",
+              "itemBackground": "rgba(0, 0, 0, 0)",
+              "itemBackdropFilter": "none",
+              "itemFilter": "none",
+              "borderRadii": {
+                "topLeft": "0px",
+                "topRight": "30px",
+                "bottomLeft": "0px",
+                "bottomRight": "0px"
+              }
+            }
+          },
+          "agreement": {
+            "before": {
+              "checkClass": "login-agreement__check",
+              "active": false,
+              "checkBackgroundColor": "rgb(255, 255, 255)",
+              "tickPresent": false,
+              "tickText": "",
+              "tickColor": null,
+              "tickVisibility": null,
+              "tickDisplay": null
+            },
+            "checked": {
+              "checkClass": "login-agreement__check login-agreement__check--active",
+              "active": true,
+              "checkBackgroundColor": "rgb(255, 255, 255)",
+              "tickPresent": true,
+              "tickText": "✓",
+              "tickColor": "rgb(26, 26, 26)",
+              "tickVisibility": "visible",
+              "tickDisplay": "block"
+            },
+            "afterCancel": {
+              "checkClass": "login-agreement__check",
+              "active": false,
+              "checkBackgroundColor": "rgb(255, 255, 255)",
+              "tickPresent": false,
+              "tickText": "",
+              "tickColor": null,
+              "tickVisibility": null,
+              "tickDisplay": null
+            },
+            "tickRgb": [
+              26,
+              26,
+              26
+            ]
+          }
+        },
+        "enterprise": {
+          "panelClass": "login-content login-content--enterprise",
+          "activeText": "企业登录",
+          "geometry": {
+            "containerWidth": 366,
+            "midpoint": 183,
+            "leftSurface": {
+              "type": "inactive",
+              "start": 0,
+              "end": 241,
+              "width": 241
+            },
+            "rightSurface": {
+              "type": "active",
+              "start": 183,
+              "end": 366,
+              "width": 183
+            },
+            "activeRatio": 0.5,
+            "inactiveVisibleRatio": 0.5,
+            "inactiveUnderlayRatio": 0.6584699453551912,
+            "overlap": 58,
+            "gap": 0,
+            "underlap": 58,
+            "outerEdgeDeviation": {
+              "left": 0,
+              "right": 0
+            },
+            "labelCenters": {
+              "actual": [
+                91.5,
+                274.5
+              ],
+              "expected": [
+                91.5,
+                274.5
+              ],
+              "ratios": [
+                0.25,
+                0.75
+              ],
+              "deviations": [
+                0,
+                0
+              ]
+            },
+            "tabItemWidths": [
+              183,
+              183
+            ],
+            "activeStyles": {
+              "surfaceBackground": "rgb(255, 255, 255)",
+              "surfaceBackdropFilter": "none",
+              "surfaceFilter": "none",
+              "itemBackground": "rgba(0, 0, 0, 0)",
+              "itemBackdropFilter": "none",
+              "itemFilter": "none",
+              "borderRadii": {
+                "topLeft": "58px",
+                "topRight": "30px",
+                "bottomLeft": "0px",
+                "bottomRight": "0px"
+              }
+            },
+            "inactiveStyles": {
+              "surfaceBackground": "rgba(255, 238, 225, 0.11)",
+              "surfaceBackdropFilter": "blur(0.8px) saturate(0.92)",
+              "surfaceFilter": "none",
+              "itemBackground": "rgba(0, 0, 0, 0)",
+              "itemBackdropFilter": "none",
+              "itemFilter": "none",
+              "borderRadii": {
+                "topLeft": "40px",
+                "topRight": "0px",
+                "bottomLeft": "0px",
+                "bottomRight": "0px"
+              }
+            }
+          },
+          "agreement": {
+            "before": {
+              "checkClass": "login-agreement__check",
+              "active": false,
+              "checkBackgroundColor": "rgb(255, 255, 255)",
+              "tickPresent": false,
+              "tickText": "",
+              "tickColor": null,
+              "tickVisibility": null,
+              "tickDisplay": null
+            },
+            "checked": {
+              "checkClass": "login-agreement__check login-agreement__check--active",
+              "active": true,
+              "checkBackgroundColor": "rgb(255, 255, 255)",
+              "tickPresent": true,
+              "tickText": "✓",
+              "tickColor": "rgb(26, 26, 26)",
+              "tickVisibility": "visible",
+              "tickDisplay": "block"
+            },
+            "afterCancel": {
+              "checkClass": "login-agreement__check",
+              "active": false,
+              "checkBackgroundColor": "rgb(255, 255, 255)",
+              "tickPresent": false,
+              "tickText": "",
+              "tickColor": null,
+              "tickVisibility": null,
+              "tickDisplay": null
+            },
+            "tickRgb": [
+              26,
+              26,
+              26
+            ]
+          }
+        }
+      },
+      "metrics": {
+        "backgroundColor": "rgb(245, 240, 234)",
+        "panelBackgroundColor": "rgba(0, 0, 0, 0)",
+        "panelBackgroundImage": "linear-gradient(rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 52px, rgba(255, 255, 255, 0.82) 58px, rgb(255, 255, 255) 64px, rgb(255, 255, 255) 100%)",
+        "panelBorderRadius": "40px 30px 36px 36px",
+        "panelBottomLeftRadius": "36px",
+        "panelBottomRightRadius": "36px",
+        "panelBottomGap": 16,
+        "inputBorderRadius": "25px",
+        "heroBackgroundImage": "linear-gradient(rgba(255, 190, 143, 0.22) 0%, rgba(238, 119, 54, 0.04) 48%, rgba(207, 79, 23, 0.18) 100%), linear-gradient(118deg, rgb(230, 111, 45) 0%, rgb(238, 135, 65) 45%, rgb(243, 163, 95) 100%)",
+        "tabsBackgroundColor": "rgba(0, 0, 0, 0)",
+        "overlayBackgroundColor": "rgba(255, 238, 225, 0.11)",
+        "overlayBackgroundImage": "linear-gradient(90deg, rgba(255, 238, 225, 0.18) 0%, rgba(255, 238, 225, 0.11) 38%, rgba(255, 238, 225, 0.035) 68%, rgba(255, 238, 225, 0.07) 100%), linear-gradient(rgba(255, 255, 255, 0.09) 0%, rgba(239, 136, 66, 0.06) 100%)",
+        "overlayBackdropFilter": "blur(0.8px) saturate(0.92)",
+        "overlayBottomLeftRadius": "0px",
+        "overlayBottomRightRadius": "0px",
+        "whiteCapTopRightRadius": "58px",
+        "whiteCapBottomRightRadius": "0px",
+        "mascotPanelOverlap": 26,
+        "panelAboveHero": true,
+        "buttonBackgroundImage": "linear-gradient(90deg, rgb(230, 111, 45) 0%, rgb(243, 163, 95) 100%)",
+        "buttonBoxShadow": "rgba(195, 91, 34, 0.22) 0px 9px 17px 0px",
+        "viewportWidth": 390,
+        "viewportHeight": 844,
+        "documentScrollWidth": 390,
+        "bodyScrollWidth": 390,
+        "pageScrollWidth": 390,
+        "pageClientWidth": 390,
+        "mascotLoaded": true,
+        "wechatIconLoaded": true,
+        "appleIconLoaded": true,
+        "fieldIconCount": 0,
+        "iosTagName": "UNI-VIEW",
+        "iosHasClickAttribute": false,
+        "iosTextContent": "",
+        "getCodeTagName": "UNI-VIEW",
+        "getCodeHasClickAttribute": false,
+        "getCodeTextContent": "获取验证码",
+        "labelStyles": [
+          {
+            "color": "rgb(98, 91, 86)",
+            "fontSize": "16px",
+            "fontWeight": "600"
+          },
+          {
+            "color": "rgb(98, 91, 86)",
+            "fontSize": "16px",
+            "fontWeight": "600"
+          }
+        ],
+        "textClipping": [],
+        "geometry": {
+          "brand": {
+            "x": 25,
+            "y": 104,
+            "width": 136,
+            "height": 43
+          },
+          "subtitle": {
+            "x": 25,
+            "y": 153,
+            "width": 123.359375,
+            "height": 22
+          },
+          "panel": {
+            "x": 12,
+            "y": 200,
+            "width": 366,
+            "height": 628
+          },
+          "mascot": {
+            "x": 247,
+            "y": 86,
+            "width": 112,
+            "height": 140
+          },
+          "phone": {
+            "x": 39,
+            "y": 306,
+            "width": 312,
+            "height": 50
+          },
+          "code": {
+            "x": 39,
+            "y": 414,
+            "width": 312,
+            "height": 50
+          },
+          "submit": {
+            "x": 39,
+            "y": 503,
+            "width": 312,
+            "height": 52
+          },
+          "agreement": {
+            "x": 39,
+            "y": 580,
+            "width": 312,
+            "height": 19
+          },
+          "thirdPartyTitle": {
+            "x": 160,
+            "y": 710,
+            "width": 70,
+            "height": 20
+          },
+          "wechat": {
+            "x": 130,
+            "y": 742,
+            "width": 44,
+            "height": 44
+          },
+          "ios": {
+            "x": 216,
+            "y": 742,
+            "width": 44,
+            "height": 44
+          }
+        },
+        "boxes": [
+          {
+            "selector": ".login-role-tabs",
+            "x": 12,
+            "y": 200,
+            "width": 366,
+            "height": 60
+          },
+          {
+            "selector": ".login-field:not(.login-field--code)",
+            "x": 39,
+            "y": 306,
+            "width": 312,
+            "height": 50
+          },
+          {
+            "selector": ".login-field--code",
+            "x": 39,
+            "y": 414,
+            "width": 312,
+            "height": 50
+          },
+          {
+            "selector": ".login-submit",
+            "x": 39,
+            "y": 503,
+            "width": 312,
+            "height": 52
+          },
+          {
+            "selector": ".login-agreement",
+            "x": 39,
+            "y": 580,
+            "width": 312,
+            "height": 19
+          },
+          {
+            "selector": ".login-third-party",
+            "x": 12,
+            "y": 710,
+            "width": 366,
+            "height": 76
+          },
+          {
+            "selector": ".login-icp",
+            "x": 12,
+            "y": 799,
+            "width": 366,
+            "height": 17
+          }
+        ]
+      },
+      "overlaps": [],
+      "pageErrors": [],
+      "agreementLinksOpened": true
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "screenshots": {
+        "student": {
+          "path": "E:\\huiyitechworkspace\\feixingxueyuan\\doc\\02-版本迭代\\03-进行中版本\\20260601000000-vphase1-initial-delivery\\061-验收标准\\03-测试验证\\DEV-030\\login-430x932.png",
+          "bytes": 133159
+        },
+        "enterprise": {
+          "path": "E:\\huiyitechworkspace\\feixingxueyuan\\doc\\02-版本迭代\\03-进行中版本\\20260601000000-vphase1-initial-delivery\\061-验收标准\\03-测试验证\\DEV-030\\login-enterprise-430x932.png",
+          "bytes": 132782
+        }
+      },
+      "tabStates": {
+        "student": {
+          "panelClass": "login-content login-content--student",
+          "activeText": "学员登录",
+          "geometry": {
+            "containerWidth": 406,
+            "midpoint": 203,
+            "leftSurface": {
+              "type": "active",
+              "start": 0,
+              "end": 203,
+              "width": 203
+            },
+            "rightSurface": {
+              "type": "inactive",
+              "start": 145,
+              "end": 406,
+              "width": 261
+            },
+            "activeRatio": 0.5,
+            "inactiveVisibleRatio": 0.5,
+            "inactiveUnderlayRatio": 0.6428571428571429,
+            "overlap": 58,
+            "gap": 0,
+            "underlap": 58,
+            "outerEdgeDeviation": {
+              "left": 0,
+              "right": 0
+            },
+            "labelCenters": {
+              "actual": [
+                101.5,
+                304.5
+              ],
+              "expected": [
+                101.5,
+                304.5
+              ],
+              "ratios": [
+                0.25,
+                0.75
+              ],
+              "deviations": [
+                0,
+                0
+              ]
+            },
+            "tabItemWidths": [
+              203,
+              203
+            ],
+            "activeStyles": {
+              "surfaceBackground": "rgb(255, 255, 255)",
+              "surfaceBackdropFilter": "none",
+              "surfaceFilter": "none",
+              "itemBackground": "rgba(0, 0, 0, 0)",
+              "itemBackdropFilter": "none",
+              "itemFilter": "none",
+              "borderRadii": {
+                "topLeft": "40px",
+                "topRight": "58px",
+                "bottomLeft": "0px",
+                "bottomRight": "0px"
+              }
+            },
+            "inactiveStyles": {
+              "surfaceBackground": "rgba(255, 238, 225, 0.11)",
+              "surfaceBackdropFilter": "blur(0.8px) saturate(0.92)",
+              "surfaceFilter": "none",
+              "itemBackground": "rgba(0, 0, 0, 0)",
+              "itemBackdropFilter": "none",
+              "itemFilter": "none",
+              "borderRadii": {
+                "topLeft": "0px",
+                "topRight": "30px",
+                "bottomLeft": "0px",
+                "bottomRight": "0px"
+              }
+            }
+          },
+          "agreement": {
+            "before": {
+              "checkClass": "login-agreement__check",
+              "active": false,
+              "checkBackgroundColor": "rgb(255, 255, 255)",
+              "tickPresent": false,
+              "tickText": "",
+              "tickColor": null,
+              "tickVisibility": null,
+              "tickDisplay": null
+            },
+            "checked": {
+              "checkClass": "login-agreement__check login-agreement__check--active",
+              "active": true,
+              "checkBackgroundColor": "rgb(255, 255, 255)",
+              "tickPresent": true,
+              "tickText": "✓",
+              "tickColor": "rgb(26, 26, 26)",
+              "tickVisibility": "visible",
+              "tickDisplay": "block"
+            },
+            "afterCancel": {
+              "checkClass": "login-agreement__check",
+              "active": false,
+              "checkBackgroundColor": "rgb(255, 255, 255)",
+              "tickPresent": false,
+              "tickText": "",
+              "tickColor": null,
+              "tickVisibility": null,
+              "tickDisplay": null
+            },
+            "tickRgb": [
+              26,
+              26,
+              26
+            ]
+          }
+        },
+        "enterprise": {
+          "panelClass": "login-content login-content--enterprise",
+          "activeText": "企业登录",
+          "geometry": {
+            "containerWidth": 406,
+            "midpoint": 203,
+            "leftSurface": {
+              "type": "inactive",
+              "start": 0,
+              "end": 261,
+              "width": 261
+            },
+            "rightSurface": {
+              "type": "active",
+              "start": 203,
+              "end": 406,
+              "width": 203
+            },
+            "activeRatio": 0.5,
+            "inactiveVisibleRatio": 0.5,
+            "inactiveUnderlayRatio": 0.6428571428571429,
+            "overlap": 58,
+            "gap": 0,
+            "underlap": 58,
+            "outerEdgeDeviation": {
+              "left": 0,
+              "right": 0
+            },
+            "labelCenters": {
+              "actual": [
+                101.5,
+                304.5
+              ],
+              "expected": [
+                101.5,
+                304.5
+              ],
+              "ratios": [
+                0.25,
+                0.75
+              ],
+              "deviations": [
+                0,
+                0
+              ]
+            },
+            "tabItemWidths": [
+              203,
+              203
+            ],
+            "activeStyles": {
+              "surfaceBackground": "rgb(255, 255, 255)",
+              "surfaceBackdropFilter": "none",
+              "surfaceFilter": "none",
+              "itemBackground": "rgba(0, 0, 0, 0)",
+              "itemBackdropFilter": "none",
+              "itemFilter": "none",
+              "borderRadii": {
+                "topLeft": "58px",
+                "topRight": "30px",
+                "bottomLeft": "0px",
+                "bottomRight": "0px"
+              }
+            },
+            "inactiveStyles": {
+              "surfaceBackground": "rgba(255, 238, 225, 0.11)",
+              "surfaceBackdropFilter": "blur(0.8px) saturate(0.92)",
+              "surfaceFilter": "none",
+              "itemBackground": "rgba(0, 0, 0, 0)",
+              "itemBackdropFilter": "none",
+              "itemFilter": "none",
+              "borderRadii": {
+                "topLeft": "40px",
+                "topRight": "0px",
+                "bottomLeft": "0px",
+                "bottomRight": "0px"
+              }
+            }
+          },
+          "agreement": {
+            "before": {
+              "checkClass": "login-agreement__check",
+              "active": false,
+              "checkBackgroundColor": "rgb(255, 255, 255)",
+              "tickPresent": false,
+              "tickText": "",
+              "tickColor": null,
+              "tickVisibility": null,
+              "tickDisplay": null
+            },
+            "checked": {
+              "checkClass": "login-agreement__check login-agreement__check--active",
+              "active": true,
+              "checkBackgroundColor": "rgb(255, 255, 255)",
+              "tickPresent": true,
+              "tickText": "✓",
+              "tickColor": "rgb(26, 26, 26)",
+              "tickVisibility": "visible",
+              "tickDisplay": "block"
+            },
+            "afterCancel": {
+              "checkClass": "login-agreement__check",
+              "active": false,
+              "checkBackgroundColor": "rgb(255, 255, 255)",
+              "tickPresent": false,
+              "tickText": "",
+              "tickColor": null,
+              "tickVisibility": null,
+              "tickDisplay": null
+            },
+            "tickRgb": [
+              26,
+              26,
+              26
+            ]
+          }
+        }
+      },
+      "metrics": {
+        "backgroundColor": "rgb(245, 240, 234)",
+        "panelBackgroundColor": "rgba(0, 0, 0, 0)",
+        "panelBackgroundImage": "linear-gradient(rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 52px, rgba(255, 255, 255, 0.82) 58px, rgb(255, 255, 255) 64px, rgb(255, 255, 255) 100%)",
+        "panelBorderRadius": "40px 30px 36px 36px",
+        "panelBottomLeftRadius": "36px",
+        "panelBottomRightRadius": "36px",
+        "panelBottomGap": 16,
+        "inputBorderRadius": "25px",
+        "heroBackgroundImage": "linear-gradient(rgba(255, 190, 143, 0.22) 0%, rgba(238, 119, 54, 0.04) 48%, rgba(207, 79, 23, 0.18) 100%), linear-gradient(118deg, rgb(230, 111, 45) 0%, rgb(238, 135, 65) 45%, rgb(243, 163, 95) 100%)",
+        "tabsBackgroundColor": "rgba(0, 0, 0, 0)",
+        "overlayBackgroundColor": "rgba(255, 238, 225, 0.11)",
+        "overlayBackgroundImage": "linear-gradient(90deg, rgba(255, 238, 225, 0.18) 0%, rgba(255, 238, 225, 0.11) 38%, rgba(255, 238, 225, 0.035) 68%, rgba(255, 238, 225, 0.07) 100%), linear-gradient(rgba(255, 255, 255, 0.09) 0%, rgba(239, 136, 66, 0.06) 100%)",
+        "overlayBackdropFilter": "blur(0.8px) saturate(0.92)",
+        "overlayBottomLeftRadius": "0px",
+        "overlayBottomRightRadius": "0px",
+        "whiteCapTopRightRadius": "58px",
+        "whiteCapBottomRightRadius": "0px",
+        "mascotPanelOverlap": 26,
+        "panelAboveHero": true,
+        "buttonBackgroundImage": "linear-gradient(90deg, rgb(230, 111, 45) 0%, rgb(243, 163, 95) 100%)",
+        "buttonBoxShadow": "rgba(195, 91, 34, 0.22) 0px 9px 17px 0px",
+        "viewportWidth": 430,
+        "viewportHeight": 932,
+        "documentScrollWidth": 430,
+        "bodyScrollWidth": 430,
+        "pageScrollWidth": 430,
+        "pageClientWidth": 430,
+        "mascotLoaded": true,
+        "wechatIconLoaded": true,
+        "appleIconLoaded": true,
+        "fieldIconCount": 0,
+        "iosTagName": "UNI-VIEW",
+        "iosHasClickAttribute": false,
+        "iosTextContent": "",
+        "getCodeTagName": "UNI-VIEW",
+        "getCodeHasClickAttribute": false,
+        "getCodeTextContent": "获取验证码",
+        "labelStyles": [
+          {
+            "color": "rgb(98, 91, 86)",
+            "fontSize": "16px",
+            "fontWeight": "600"
+          },
+          {
+            "color": "rgb(98, 91, 86)",
+            "fontSize": "16px",
+            "fontWeight": "600"
+          }
+        ],
+        "textClipping": [],
+        "geometry": {
+          "brand": {
+            "x": 25,
+            "y": 104,
+            "width": 136,
+            "height": 43
+          },
+          "subtitle": {
+            "x": 25,
+            "y": 153,
+            "width": 123.359375,
+            "height": 22
+          },
+          "panel": {
+            "x": 12,
+            "y": 200,
+            "width": 406,
+            "height": 716
+          },
+          "mascot": {
+            "x": 287,
+            "y": 86,
+            "width": 112,
+            "height": 140
+          },
+          "phone": {
+            "x": 39,
+            "y": 306,
+            "width": 352,
+            "height": 50
+          },
+          "code": {
+            "x": 39,
+            "y": 414,
+            "width": 352,
+            "height": 50
+          },
+          "submit": {
+            "x": 39,
+            "y": 503,
+            "width": 352,
+            "height": 52
+          },
+          "agreement": {
+            "x": 39,
+            "y": 580,
+            "width": 352,
+            "height": 19
+          },
+          "thirdPartyTitle": {
+            "x": 180,
+            "y": 798,
+            "width": 70,
+            "height": 20
+          },
+          "wechat": {
+            "x": 150,
+            "y": 830,
+            "width": 44,
+            "height": 44
+          },
+          "ios": {
+            "x": 236,
+            "y": 830,
+            "width": 44,
+            "height": 44
+          }
+        },
+        "boxes": [
+          {
+            "selector": ".login-role-tabs",
+            "x": 12,
+            "y": 200,
+            "width": 406,
+            "height": 60
+          },
+          {
+            "selector": ".login-field:not(.login-field--code)",
+            "x": 39,
+            "y": 306,
+            "width": 352,
+            "height": 50
+          },
+          {
+            "selector": ".login-field--code",
+            "x": 39,
+            "y": 414,
+            "width": 352,
+            "height": 50
+          },
+          {
+            "selector": ".login-submit",
+            "x": 39,
+            "y": 503,
+            "width": 352,
+            "height": 52
+          },
+          {
+            "selector": ".login-agreement",
+            "x": 39,
+            "y": 580,
+            "width": 352,
+            "height": 19
+          },
+          {
+            "selector": ".login-third-party",
+            "x": 12,
+            "y": 798,
+            "width": 406,
+            "height": 76
+          },
+          {
+            "selector": ".login-icp",
+            "x": 12,
+            "y": 887,
+            "width": 406,
+            "height": 17
+          }
+        ]
+      },
+      "overlaps": [],
+      "pageErrors": [],
+      "agreementLinksOpened": null
+    }
+  ],
+  "status": "PASSED"
+}

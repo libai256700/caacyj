@@ -1,0 +1,80 @@
+{
+  "executedAt": "2026-08-17T22:32:08+08:00",
+  "environment": "local",
+  "database": {
+    "host": "114.111.30.111",
+    "port": 13306,
+    "name": "yunjikeji"
+  },
+  "sourceDir": "E:\\huiyitechworkspace\\knowledge-graph\\-APP--main\\-APP--main\\knowledge_base\\理论题库",
+  "dryRun": {
+    "passed": true,
+    "sourceFiles": 11,
+    "sourceCategories": 11,
+    "sourceQuestions": 1535,
+    "sourceOptions": 4630,
+    "importQuestions": 1535,
+    "importOptions": 4630,
+    "incompleteQuestions": 23
+  },
+  "apply": {
+    "applied": true,
+    "insertedQuestions": 1535,
+    "insertedAnswers": 4630,
+    "backupTables": {
+      "yj_practice_category": "yj_practice_category_bak_20260817223208139166",
+      "yj_practice_exercises": "yj_practice_exercises_bak_20260817223208139166",
+      "yj_practice_exercises_answer": "yj_practice_exercises_answer_bak_20260817223208139166",
+      "yj_practice_exercises_answer_child": "yj_practice_exercises_answer_child_bak_20260817223208139166"
+    },
+    "backupCounts": {
+      "yj_practice_category_bak_20260817223208139166": 12,
+      "yj_practice_exercises_bak_20260817223208139166": 1556,
+      "yj_practice_exercises_answer_bak_20260817223208139166": 4731,
+      "yj_practice_exercises_answer_child_bak_20260817223208139166": 0
+    }
+  },
+  "beforeCounts": {
+    "questionTotalCategories1To11": 1535,
+    "answerTotalCategories1To11": 4630,
+    "answerChildTotalCategories1To11": 0,
+    "category13QuestionCount": 21
+  },
+  "afterCounts": {
+    "questionTotalCategories1To11": 1535,
+    "answerTotalCategories1To11": 4630,
+    "answerChildTotalCategories1To11": 0,
+    "category13QuestionCount": 21,
+    "allQuestionTotal": 1556,
+    "allAnswerTotal": 4731,
+    "allCategoryTotal": 12
+  },
+  "verification": {
+    "emptyStemQuestions": 22,
+    "nonStandardCorrectAnswerQuestions": 1,
+    "duplicateCategorySortNoGroups": 0,
+    "questionTenantNonZero": 0,
+    "answerTenantNonZero": 0,
+    "maxCorrectMemoLength": 761
+  },
+  "independentAcceptance": {
+    "status": "PASS",
+    "evidenceFile": "061-验收标准/03-测试验证/DEV-059/independent-acceptance-pass.md"
+  },
+  "tests": {
+    "command": "python sql/tools/test_practice_theory_bank_import.py",
+    "result": "Ran 9 tests ... OK"
+  },
+  "notes": [
+    "分类 13 未参与替换，替换前后题量均为 21。",
+    "23 道待维护题已按约定导入，其中 22 道空题干、1 道无唯一正确答案。",
+    "2026-08-17 22:32 的真实 apply 结果已覆盖同目录旧版 apply-full-import 报告。",
+    "独立验收已 PASS。"
+  ],
+  "changedFiles": [
+    "sql/tools/practice_theory_bank_import.py",
+    "sql/tools/test_practice_theory_bank_import.py",
+    "doc/02-版本迭代/03-进行中版本/20260601000000-vphase1-initial-delivery/061-验收标准/03-测试验证/DEV-059/apply-full-import.json",
+    "doc/02-版本迭代/03-进行中版本/20260601000000-vphase1-initial-delivery/061-验收标准/03-测试验证/DEV-059/apply-full-import.md"
+  ]
+}

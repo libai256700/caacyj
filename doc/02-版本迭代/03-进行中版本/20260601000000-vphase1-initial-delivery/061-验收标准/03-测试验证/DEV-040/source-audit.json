@@ -1,0 +1,14 @@
+{
+  "applicationWhitelist": [
+    "code/develop/yunjikeji/src/pages/auth/login.vue",
+    "code/develop/yunjikeji/src/pages/home.vue",
+    "code/develop/yunjikeji/src/pages/index.vue",
+    "code/develop/yunjikeji/src/pages/practice/answer.vue"
+  ],
+  "changes": { "loginDefaultRoutes": 3, "homeLifecycleGuards": 2, "indexSessionRoute": 1, "answerRoutes": 2 },
+  "templateChanged": false,
+  "conditionExpressionsChanged": false,
+  "forbiddenTargetDiffCount": 0,
+  "remoteSmsAudit": { "sendLoginSmsCodeMatches": 2, "countdown60Matches": 1, "countdownGuardMatches": 1, "disabledBindingMatches": 1 },
+  "remoteCommit": "51e388283eab04d3642c60d8ed218d0ee7ad9708"
+}

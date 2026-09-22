@@ -1,0 +1,26 @@
+{
+  "baseline": "HEAD:code/develop/yunjikeji/src/pages/practice/answer.vue",
+  "current": "code/develop/yunjikeji/src/pages/practice/answer.vue",
+  "verification": "独立验收复跑",
+  "verifiedAt": "2026-07-18T17:16:34+08:00",
+  "COLOR_MAP_ONLY": 1,
+  "STRUCTURE_PRESERVED": 1,
+  "changedLines": 3,
+  "changedColorLiterals": 6,
+  "addedLines": 3,
+  "deletedLines": 3,
+  "exactExpectedMatch": true,
+  "targetSolidOldCount": 2,
+  "targetSolidNewCount": 2,
+  "oldGradientCount": 1,
+  "newGradientCount": 1,
+  "forbiddenFifthStopCount": 0,
+  "mappings": [
+    "page background: #d5f8e4 -> #F5F0EA",
+    ".answer-page background: #d5f8e4 -> #F5F0EA",
+    "gradient 0%: #fbffe1 -> #F7A16A",
+    "gradient 27%: #eafbdc -> #EF7D3B",
+    "gradient 61%: #d5f8e4 -> #F8DCC8",
+    "gradient 100%: #bdf3f7 -> #F5F0EA"
+  ]
+}

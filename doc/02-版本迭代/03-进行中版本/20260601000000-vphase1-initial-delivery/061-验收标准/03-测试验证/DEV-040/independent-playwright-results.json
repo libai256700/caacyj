@@ -1,0 +1,10 @@
+{
+  "startedAt": "2026-07-18T11:23:35.844Z",
+  "baseUrl": "http://127.0.0.1:5173/yunjikeji/",
+  "runtime": [],
+  "errors": [
+    "AssertionError [ERR_ASSERTION]: guest observed home content before login redirect\n\ntrue !== false\n\n    at runRuntime (E:\\huiyitechworkspace\\feixingxueyuan\\doc\\02-版本迭代\\03-进行中版本\\20260601000000-vphase1-initial-delivery\\061-验收标准\\03-测试验证\\DEV-040\\dev040-independent-verification.spec.cjs:214:12)\n    at runNextTicks (node:internal/process/task_queues:65:5)\n    at process.processImmediate (node:internal/timers:472:9)\n    at async E:\\huiyitechworkspace\\feixingxueyuan\\doc\\02-版本迭代\\03-进行中版本\\20260601000000-vphase1-initial-delivery\\061-验收标准\\03-测试验证\\DEV-040\\dev040-independent-verification.spec.cjs:335:5"
+  ],
+  "status": "failed",
+  "finishedAt": "2026-07-18T11:23:40.765Z"
+}

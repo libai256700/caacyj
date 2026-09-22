@@ -1,0 +1,19 @@
+{
+  "tool": "chrome-devtools-mcp",
+  "viewport": "390x844, mobile, touch",
+  "url": "http://127.0.0.1:5173/yunjikeji/#/pages/practice/exam-assessment",
+  "sessionInjection": "yunjikeji-user-session with Bearer dev036-token",
+  "request": {
+    "method": "GET",
+    "url": "/yj-app-api/app-api/yj/practices/current?mode=standard",
+    "httpStatus": 200,
+    "authorizationHeaderObserved": true,
+    "responseBody": {
+      "code": 401,
+      "msg": "账号未登录",
+      "data": null
+    }
+  },
+  "navigationResult": "application cleared the invalid session and redirected to #/pages/auth/login",
+  "verdict": "real request path and auth header verified; real authenticated integration not verified because no valid test account/token was available"
+}

@@ -1,0 +1,70 @@
+{
+  "executedAt": "2026-08-17T12:04:50+08:00",
+  "scope": "Story-050 local contract, compile, and protected-path checks",
+  "databaseExecuted": false,
+  "checks": [
+    {
+      "command": [
+        "static-sql-asset-contract"
+      ],
+      "cwd": "E:\\huiyitechworkspace\\feixingxueyuan\\doc\\02-版本迭代\\03-进行中版本\\20260601000000-vphase1-initial-delivery\\050-执行脚本",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "D:\\apache-maven-3.9.15\\bin\\mvn.cmd",
+        "-pl",
+        "yunjikeji-admin-server",
+        "-Dtest=PracticeSharedTenantContractTest,FrontPracticeServiceImplAssessmentHtmlTest",
+        "test"
+      ],
+      "cwd": "E:\\huiyitechworkspace\\feixingxueyuan\\code\\develop\\yunjikeji-admin-server",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "D:\\apache-maven-3.9.15\\bin\\mvn.cmd",
+        "-pl",
+        "yunjikeji-admin-server",
+        "-am",
+        "-DskipTests",
+        "compile"
+      ],
+      "cwd": "E:\\huiyitechworkspace\\feixingxueyuan\\code\\develop\\yunjikeji-admin-server",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "D:\\Program Files\\Git\\cmd\\git.exe",
+        "diff",
+        "--check"
+      ],
+      "cwd": "E:\\huiyitechworkspace\\feixingxueyuan",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "D:\\Program Files\\Git\\cmd\\git.exe",
+        "diff",
+        "--quiet",
+        "--",
+        ":(glob)**/uni_modules/**"
+      ],
+      "cwd": "E:\\huiyitechworkspace\\feixingxueyuan",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "D:\\Program Files\\Git\\cmd\\git.exe",
+        "diff",
+        "--cached",
+        "--quiet",
+        "--",
+        ":(glob)**/uni_modules/**"
+      ],
+      "cwd": "E:\\huiyitechworkspace\\feixingxueyuan",
+      "exitCode": 0
+    }
+  ],
+  "passed": true
+}

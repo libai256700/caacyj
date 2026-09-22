@@ -1,0 +1,25 @@
+{
+  "backend_state_matrix": [
+    { "category_id": 13, "event": "start_batch", "expected_status": 0, "expected_is_completed": 0 },
+    { "category_id": 14, "event": "start_batch", "expected_status": 0, "expected_is_completed": 0 },
+    { "category_id": 13, "event": "first_detail_write", "from_status": 0, "expected_status": 1 },
+    { "category_id": 14, "event": "first_detail_write", "from_status": 0, "expected_status": 1 },
+    { "category_id": 13, "event": "successful_finish", "expected_status": 2, "expected_is_completed": 1 },
+    { "category_id": 14, "event": "successful_report_entry_finish", "expected_status": 2, "expected_is_completed": 1 },
+    { "category_id": 13, "event": "retry_after_finished", "from_status": 2, "expected_status": 2 },
+    { "category_id": 14, "event": "retry_after_finished", "from_status": 2, "expected_status": 2 }
+  ],
+  "failure_matrix": [
+    { "category_id": 13, "event": "answer_write_failed", "expected_status": 2, "expected_is_completed": 0, "original_error_rethrown": true },
+    { "category_id": 14, "event": "answer_write_failed", "expected_status": 2, "expected_is_completed": 0, "original_error_rethrown": true }
+  ],
+  "frontend_state_matrix": [
+    { "category_id": 13, "batch_save_status": 1, "expected": "saving_notice_only" },
+    { "category_id": 14, "batch_save_status": 1, "expected": "saving_notice_only" },
+    { "category_id": 13, "batch_save_status": 0, "expected": "original_completed_restart_flow" },
+    { "category_id": 14, "batch_save_status": 0, "expected": "original_completed_restart_flow" },
+    { "category_id": 13, "batch_save_status": 2, "expected": "original_completed_restart_flow" },
+    { "category_id": 14, "batch_save_status": 2, "expected": "original_completed_restart_flow" }
+  ],
+  "saving_message": "上次评测正在初始化分析，请稍后"
+}

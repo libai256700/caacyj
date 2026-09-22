@@ -1,0 +1,43 @@
+{
+  "url": "http://127.0.0.1:5173/yunjikeji/#/pages/home",
+  "requestedViewport": {
+    "width": 390,
+    "height": 844,
+    "mobile": true,
+    "touch": true
+  },
+  "removedDomCounts": {
+    "statusBar": 0,
+    "signal": 0,
+    "wifi": 0,
+    "battery": 0,
+    "quickRow": 0,
+    "quickItems": 0
+  },
+  "removedExactTextsFound": [],
+  "backgrounds": {
+    "page": "rgb(245, 240, 234)",
+    "body": "rgb(245, 240, 234)",
+    "phone": "linear-gradient(rgb(247, 161, 106) 0px, rgb(248, 220, 200) 33%, rgb(245, 240, 234) 76%)"
+  },
+  "geometry": {
+    "topToCreateGap": 0,
+    "createToAssistantGap": 10,
+    "assistantToSuggestionsGap": 10,
+    "robotBottomClip": 7,
+    "navItems": 3,
+    "navWidthSpread": 0
+  },
+  "resources": {
+    "homeImagesLoaded": 5,
+    "failedHomeResources": 0
+  },
+  "console": {
+    "errors": [],
+    "warnings": [],
+    "issues": [
+      "既有表单字段缺少id或name，共1条；不属于首页DOM、资源或本任务改动"
+    ]
+  },
+  "passed": true
+}

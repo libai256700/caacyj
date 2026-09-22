@@ -1,0 +1,30 @@
+{
+  "baselineCommit": "232fcf3a682db88f49a7009ce9c5c2ef045f32ca",
+  "file": "code/develop/yunjikeji/src/pages/home.vue",
+  "templateChanges": [
+    "删除status-bar及其5:30、signal、wifi、battery子结构",
+    "删除quick-row及五项快捷入口结构"
+  ],
+  "scriptChanges": [
+    "删除仅供快捷栏使用的quickItems常量"
+  ],
+  "styleChanges": [
+    "page背景#dff6ff替换为#F5F0EA",
+    "preview-page背景#dff6ff替换为#F5F0EA",
+    "phone-screen仅替换三个颜色字面量，linear-gradient、180deg、三色标、0/33%/76%及作用范围不变",
+    "top-area高度收紧34px，content-scroll扣减同步收紧34px",
+    "删除status-bar及其图形CSS",
+    "删除quick-row、quick-item、quick-icon及颜色CSS",
+    "Tony容器按压缩头部等比缩放，底部裁切关系保持7px"
+  ],
+  "gradient": {
+    "function": "linear-gradient",
+    "direction": "180deg",
+    "colors": ["#F7A16A", "#F8DCC8", "#F5F0EA"],
+    "stops": ["0", "33%", "76%"],
+    "colorStopCount": 3,
+    "scope": ".phone-screen"
+  },
+  "unexpectedChanges": [],
+  "passed": true
+}

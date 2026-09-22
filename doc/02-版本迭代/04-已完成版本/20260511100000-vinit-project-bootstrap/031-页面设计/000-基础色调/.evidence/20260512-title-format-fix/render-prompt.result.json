@@ -1,0 +1,15 @@
+{
+  "command": [
+    "C:\\DevShared\\DevSoft\\miniconda3\\python.exe",
+    "D:\\ProjPort\\Work\\dev-skills\\skills\\00-1800-ui-design-generation\\scripts\\render_base_tone_prompt.py",
+    "--stage-dir",
+    "D:\\ProjPort\\Work\\feixingxueyuan\\doc\\02-版本迭代\\03-进行中版本\\20260511100000-vinit-project-bootstrap\\031-页面设计\\000-基础色调",
+    "--input-json",
+    "D:\\ProjPort\\Work\\feixingxueyuan\\doc\\02-版本迭代\\03-进行中版本\\20260511100000-vinit-project-bootstrap\\031-页面设计\\000-基础色调\\.evidence\\20260512-title-format-fix\\base-tone-stage-input.json",
+    "--output-path",
+    "D:\\ProjPort\\Work\\feixingxueyuan\\doc\\02-版本迭代\\03-进行中版本\\20260511100000-vinit-project-bootstrap\\031-页面设计\\000-基础色调\\01-提示词.md"
+  ],
+  "returncode": 0,
+  "stdout": "Generated base-tone prompt: D:\\ProjPort\\Work\\feixingxueyuan\\doc\\02-�汾����\\03-�����а汾\\20260511100000-vinit-project-bootstrap\\031-ҳ�����\\000-����ɫ��\\01-��ʾ��.md\n",
+  "stderr": ""
+}

@@ -1,0 +1,105 @@
+{
+  "generated_at": "2026-05-11T10:31:58.036594+00:00",
+  "model": "gpt-image-2",
+  "base_url": null,
+  "request_path": null,
+  "request": {
+    "model": "gpt-image-2",
+    "prompt": "飞行学院移动端智能考试基础色调指导图，竖屏移动端，目标尺寸 780x1387。画面必须是一个干净的产品设计指导板，不是营销海报，不是手机产品渲染图，不要出现手机机身、摄像头、品牌logo、认证徽章、人物、复杂3D或大段正文。整体参考浅天空、水面反光、清爽低饱和的感觉，但不要复制参考图里的手机外观。\n\n主体内容是移动端智能考试的配色系统展示：航空蓝主色、深主色、浅蓝页面底、白色卡片、暖橙警示、紫光智能入口、灰绿已掌握、正确绿、错误红、警示橙、禁用灰。用少量真实感但克制的移动端组件去标注这些颜色的用途，包括顶部导航、底部Tab、题卡、选项按钮、进度条、状态标签、解析提示块、倒计时警示块。阅读区保持高对比，交互区保持低干扰，卡片圆角克制，信息密度适中。\n\n版式上做成一张竖版UI规范板：上方是品牌色与辅助色的色块网格，中部是几个小型手机界面片段示意色彩落位，下方是状态色与禁用态示意。整体清爽、统一、专业，适合飞行学院移动端智能考试产品的后续页面继承。不要使用夸张渐变，不要出现营销文案，不要出现真实航空资质标识，不要让画面像参考图本身。",
+    "size": "780x1387",
+    "quality": "high",
+    "output_format": "jpeg"
+  },
+  "request_snapshot_path": "D:\\ProjPort\\Work\\feixingxueyuan\\doc\\02-版本迭代\\03-进行中版本\\20260511100000-vinit-project-bootstrap\\031-页面设计\\000-基础色调\\.evidence\\20260511-基础色调正式出图\\request.json",
+  "request_mode": "edits",
+  "page_ratio": null,
+  "final_resolution": "780x1387",
+  "reference_images": {
+    "local_paths": [
+      "D:\\ProjPort\\Work\\feixingxueyuan\\doc\\02-版本迭代\\03-进行中版本\\20260511100000-vinit-project-bootstrap\\031-页面设计\\006-参考图来源\\智能考试参考图\\photo_2026-05-11_17-26-12.jpg"
+    ],
+    "remote_urls": [],
+    "file_ids": [],
+    "mask_path": null
+  },
+  "return_field_types": [],
+  "images": [],
+  "errors": [
+    "{\"status\": 504, \"reason\": \"Gateway Time-out\", \"body\": \"\\n<!DOCTYPE html>\\n<html lang=\\\"en\\\"><head><meta http-equiv=\\\"Content-Type\\\" content=\\\"text/html; charset=UTF-8\\\">\\n    \\n    <meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1\\\">\\n    <link rel=\\\"shortcut icon\\\" href=\\\"//cnmcdn.com/favicon.ico\\\" />\\n    <title>504</title>\\n    <style type=\\\"text/css\\\">\\n        *{margin:0;padding:0;text-align:center;}\\n        html,body{width:100%;height:100%;}\\n        .content {\\n            padding-top: 5%;\\n        }\\n        .top {\\n            display: flex;\\n            justify-content: space-between;\\n            align-items: center;\\n            padding: 40px 0px;\\n            color: #7D7D7D;\\n        }\\n        .top div{\\n            width: 50%;\\n            word-break: break-all;\\n        }\\n        .top div:first-of-type {\\n            padding: 0px 20px;\\n            text-align: right;\\n        }\\n        .top div:last-of-type {\\n            border-left: 1px solid #CCCCCC;\\n            text-align: left;\\n            padding: 0px 20px;\\n        }\\n        .imageContent {\\n            display: flex;\\n            justify-content: space-between;\\n            color: #7D7D7D;\\n            max-width: 560px;\\n            margin: 0 auto;\\n        }\\n        .imageContent>div {\\n            margin: 0px 10px;\\n        }\\n        .visitor {\\n            background-image: url(https://cnmcdn.com/img/cdn/sj.png);\\n            width: 33px;\\n            height: 37px;\\n            margin: auto;\\n        }\\n        .protectNode {\\n            background-image: url(https://cnmcdn.com/img/cdn/jd.png);\\n            width: 61px;\\n            height: 37px;\\n            margin: auto;\\n        }\\n        .server {\\n            background-image: url(https://cnmcdn.com/img/cdn/yz.png);\\n            width: 47px;\\n            height: 43px;\\n            margin: auto;\\n        }\\n        .success {\\n            background-image: url(https://cnmcdn.com/img/cdn/zc.png);\\n            width: 102px;\\n            height: 24px;\\n        }\\n        .timeout {\\n            background-image: url(https://cnmcdn.com/img/cdn/wz.png);\\n            width: 100px;\\n            height: 24px;\\n        }\\n\\t\\th1{\\n\\t\\t\\tfont-size:16px;\\n\\t\\t}\\n        .nodeName {padding-top: 20px;}\\n    </style>\\n<script src=\\\"https://pv.sohu.com/cityjson?ie=utf-8\\\" type=\\\"text/javascript\\\"></script>\\n<script type=\\\"text/javascript\\\">\\nwindow.onload=function(){\\n\\tdocument.getElementById(\\\"clientip\\\").innerHTML=returnCitySN.cip;\\n\\tdocument.getElementById(\\\"clientcname\\\").innerHTML=returnCitySN.cname;\\n}\\n</script></head>\\n<body>\\n<div class=\\\"content\\\">\\n    <h1>Gateway Time-out 504 - 源站服务器连接超时</h1>\\n    <div class=\\\"top\\\">\\n        <div><span class=\\\"inline-block md:block heading-ray-id font-mono text-15 lg:text-sm lg:leading-relaxed\\\">您的IP: 117.151.90.126 &bull;</span></div>\\n        <div><span class=\\\"inline-block md:block heading-ray-id font-mono text-15 lg:text-sm lg:leading-relaxed\\\">节点IP: 154.219.121.59</span></div>\\n    </div>\\n    <div class=\\\"imageContent\\\">\\n        <div>\\n            <div class=\\\"visitor\\\"></div>\\n            <div class=\\\"nodeName\\\">网站访问者</div>\\n        </div>\\n        <div>\\n            <div class=\\\"success\\\"></div>\\n        </div>\\n        <div>\\n            <div class=\\\"protectNode\\\"></div>\\n            <div class=\\\"nodeName\\\">防护节点</div>\\n        </div>\\n        <div>\\n            <div class=\\\"timeout\\\"></div>\\n        </div>\\n        <div>\\n            <div class=\\\"server\\\"></div>\\n            <div style=\\\"padding-top: 14px;\\\">源站服务器</div>\\n        </div>\\n    </div>\\n</div>\\n<br>\\n<br>\\n<br>\\n          <div id=\\\"resolution-copy-section\\\" class=\\\"w-1/2 mt-6 text-15 leading-normal\\\">\\n            <h4 class=\\\"text-3xl leading-tight font-normal mb-4 text-black-dark antialiased\\\" data-translate=\\\"what_happened\\\">什么问题?</h4>\\n            <p>CDN节点请求源服务器时，请求被源服务器防火墙中断。</p>\\n          </div>\\n<br>\\n          <div id=\\\"resolution-copy-section\\\" class=\\\"w-1/2 mt-6 text-15 leading-normal\\\">\\n            <h4 class=\\\"text-3xl leading-tight font-normal mb-4 text-black-dark antialiased\\\" data-translate=\\\"what_can_i_do\\\">如何解决?</h4>\\n            <p>如果您是网站用户，请稍候重试，或者联系管理员。\\n\\n如果您是网站管理员，请检查您的源服务器防火墙是否拉黑了CDN的节点，检查\"}",
+    "{\"status\": 502, \"reason\": \"Bad Gateway\", \"body\": {\"error\": {\"message\": \"Upstream access forbidden, please contact administrator\", \"type\": \"upstream_error\"}}}",
+    "{\"status\": 502, \"reason\": \"Bad Gateway\", \"body\": {\"error\": {\"message\": \"Upstream access forbidden, please contact administrator\", \"type\": \"upstream_error\"}}}",
+    "{\"status\": 403, \"reason\": \"Forbidden\", \"body\": {\"code\": \"SUBSCRIPTION_NOT_FOUND\", \"message\": \"No active subscription found for this group\"}}"
+  ],
+  "attempts": [
+    {
+      "mode": "verified_route",
+      "channel_id": 11,
+      "channel_name": "jiankong-daye-wancheng",
+      "base_url": "https://api.chshapi.cn",
+      "request_path": "/v1/images/edits",
+      "success": false,
+      "error": {
+        "status": 504,
+        "reason": "Gateway Time-out",
+        "body": "\n<!DOCTYPE html>\n<html lang=\"en\"><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n    \n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <link rel=\"shortcut icon\" href=\"//cnmcdn.com/favicon.ico\" />\n    <title>504</title>\n    <style type=\"text/css\">\n        *{margin:0;padding:0;text-align:center;}\n        html,body{width:100%;height:100%;}\n        .content {\n            padding-top: 5%;\n        }\n        .top {\n            display: flex;\n            justify-content: space-between;\n            align-items: center;\n            padding: 40px 0px;\n            color: #7D7D7D;\n        }\n        .top div{\n            width: 50%;\n            word-break: break-all;\n        }\n        .top div:first-of-type {\n            padding: 0px 20px;\n            text-align: right;\n        }\n        .top div:last-of-type {\n            border-left: 1px solid #CCCCCC;\n            text-align: left;\n            padding: 0px 20px;\n        }\n        .imageContent {\n            display: flex;\n            justify-content: space-between;\n            color: #7D7D7D;\n            max-width: 560px;\n            margin: 0 auto;\n        }\n        .imageContent>div {\n            margin: 0px 10px;\n        }\n        .visitor {\n            background-image: url(https://cnmcdn.com/img/cdn/sj.png);\n            width: 33px;\n            height: 37px;\n            margin: auto;\n        }\n        .protectNode {\n            background-image: url(https://cnmcdn.com/img/cdn/jd.png);\n            width: 61px;\n            height: 37px;\n            margin: auto;\n        }\n        .server {\n            background-image: url(https://cnmcdn.com/img/cdn/yz.png);\n            width: 47px;\n            height: 43px;\n            margin: auto;\n        }\n        .success {\n            background-image: url(https://cnmcdn.com/img/cdn/zc.png);\n            width: 102px;\n            height: 24px;\n        }\n        .timeout {\n            background-image: url(https://cnmcdn.com/img/cdn/wz.png);\n            width: 100px;\n            height: 24px;\n        }\n\t\th1{\n\t\t\tfont-size:16px;\n\t\t}\n        .nodeName {padding-top: 20px;}\n    </style>\n<script src=\"https://pv.sohu.com/cityjson?ie=utf-8\" type=\"text/javascript\"></script>\n<script type=\"text/javascript\">\nwindow.onload=function(){\n\tdocument.getElementById(\"clientip\").innerHTML=returnCitySN.cip;\n\tdocument.getElementById(\"clientcname\").innerHTML=returnCitySN.cname;\n}\n</script></head>\n<body>\n<div class=\"content\">\n    <h1>Gateway Time-out 504 - 源站服务器连接超时</h1>\n    <div class=\"top\">\n        <div><span class=\"inline-block md:block heading-ray-id font-mono text-15 lg:text-sm lg:leading-relaxed\">您的IP: 117.151.90.126 &bull;</span></div>\n        <div><span class=\"inline-block md:block heading-ray-id font-mono text-15 lg:text-sm lg:leading-relaxed\">节点IP: 154.219.121.59</span></div>\n    </div>\n    <div class=\"imageContent\">\n        <div>\n            <div class=\"visitor\"></div>\n            <div class=\"nodeName\">网站访问者</div>\n        </div>\n        <div>\n            <div class=\"success\"></div>\n        </div>\n        <div>\n            <div class=\"protectNode\"></div>\n            <div class=\"nodeName\">防护节点</div>\n        </div>\n        <div>\n            <div class=\"timeout\"></div>\n        </div>\n        <div>\n            <div class=\"server\"></div>\n            <div style=\"padding-top: 14px;\">源站服务器</div>\n        </div>\n    </div>\n</div>\n<br>\n<br>\n<br>\n          <div id=\"resolution-copy-section\" class=\"w-1/2 mt-6 text-15 leading-normal\">\n            <h4 class=\"text-3xl leading-tight font-normal mb-4 text-black-dark antialiased\" data-translate=\"what_happened\">什么问题?</h4>\n            <p>CDN节点请求源服务器时，请求被源服务器防火墙中断。</p>\n          </div>\n<br>\n          <div id=\"resolution-copy-section\" class=\"w-1/2 mt-6 text-15 leading-normal\">\n            <h4 class=\"text-3xl leading-tight font-normal mb-4 text-black-dark antialiased\" data-translate=\"what_can_i_do\">如何解决?</h4>\n            <p>如果您是网站用户，请稍候重试，或者联系管理员。\n\n如果您是网站管理员，请检查您的源服务器防火墙是否拉黑了CDN的节点，检查"
+      }
+    },
+    {
+      "mode": "verified_route",
+      "channel_id": 2,
+      "channel_name": "modelgate-3586",
+      "base_url": "https://modelgate.top",
+      "request_path": "/v1/images/edits",
+      "success": false,
+      "error": {
+        "status": 502,
+        "reason": "Bad Gateway",
+        "body": {
+          "error": {
+            "message": "Upstream access forbidden, please contact administrator",
+            "type": "upstream_error"
+          }
+        }
+      }
+    },
+    {
+      "mode": "verified_route",
+      "channel_id": 3,
+      "channel_name": "modelgate-gmail",
+      "base_url": "https://modelgate.top",
+      "request_path": "/v1/images/edits",
+      "success": false,
+      "error": {
+        "status": 502,
+        "reason": "Bad Gateway",
+        "body": {
+          "error": {
+            "message": "Upstream access forbidden, please contact administrator",
+            "type": "upstream_error"
+          }
+        }
+      }
+    },
+    {
+      "mode": "verified_route",
+      "channel_id": 10,
+      "channel_name": "modelgate-wancheng",
+      "base_url": "https://modelgate.top",
+      "request_path": "/v1/images/edits",
+      "success": false,
+      "error": {
+        "status": 403,
+        "reason": "Forbidden",
+        "body": {
+          "code": "SUBSCRIPTION_NOT_FOUND",
+          "message": "No active subscription found for this group"
+        }
+      }
+    }
+  ],
+  "selected_route": null,
+  "route_config_path": "D:\\ProjPort\\Work\\dev-skills\\skills\\00-1700-image2-api-generation\\config\\verified-image-routes.json",
+  "verified_routes_scope": "Only represents the route-level upstream mapping verified during the 2026-05-03 session. Upstream availability, permissions, and model mapping may drift later.",
+  "verified_at": "2026-05-03",
+  "response_summary": {}
+}

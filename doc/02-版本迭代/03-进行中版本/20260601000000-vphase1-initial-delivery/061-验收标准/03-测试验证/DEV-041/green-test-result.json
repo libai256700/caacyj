@@ -1,0 +1,24 @@
+{
+  "date": "2026-07-19",
+  "command": "python verify_profile_tab_contract.py",
+  "exitCode": 0,
+  "passed": true,
+  "checks": {
+    "component_exists": true,
+    "component_three_items": true,
+    "component_routes": true,
+    "component_props": true,
+    "component_active_guard": true,
+    "component_relaunch": true,
+    "component_visual_contract": true,
+    "home_single_use": true,
+    "profile_single_use": true,
+    "profile_colors": true,
+    "profile_old_colors_absent": true,
+    "gradient_structure": true,
+    "home_frozen": true,
+    "profile_business_frozen": true,
+    "forbidden_app_diff_frozen": true
+  },
+  "actualForbiddenDiffSha256": "3344a0b2a0b25004e240fb277664cfbaeccb4e68d8ba332f1f32f3056a80f95d"
+}

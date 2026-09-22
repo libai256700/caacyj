@@ -1,0 +1,1396 @@
+{
+  "generatedAt": "2026-07-18T02:31:51.362Z",
+  "command": "pnpm exec node <DEV-033>/dev033-home-mapping.spec.cjs",
+  "allPassed": true,
+  "results": [
+    {
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "passed": true,
+      "status": 200,
+      "checks": {
+        "httpOk": true,
+        "mappedTextsComplete": true,
+        "stableTextsComplete": true,
+        "forbiddenTextsAbsent": true,
+        "countsComplete": true,
+        "imagesLoaded": true,
+        "owlUsesBrandAsset": true,
+        "noHorizontalOverflow": true,
+        "threeEqualNavAreas": true,
+        "continuousFlow": true,
+        "momentsArtDoesNotCoverTitle": true,
+        "frozenGeometryMatches": true,
+        "frozenBackgroundMatches": true,
+        "referenceHttpOk": true,
+        "noBrowserErrors": true
+      },
+      "actual": {
+        "viewport": {
+          "width": 360,
+          "height": 800
+        },
+        "mappedMissing": [],
+        "stableMissing": [],
+        "forbiddenPresent": [],
+        "counts": {
+          "statusBar": 1,
+          "rewardPills": 2,
+          "creationCards": 3,
+          "quickItems": 5,
+          "assistantCards": 3,
+          "suggestions": 2,
+          "navItems": 3,
+          "images": 5
+        },
+        "rects": {
+          "phone": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 800,
+            "right": 360,
+            "bottom": 800
+          },
+          "hero": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 155,
+            "right": 360,
+            "bottom": 155
+          },
+          "tony": {
+            "x": 217,
+            "y": 26,
+            "width": 128,
+            "height": 136,
+            "right": 345,
+            "bottom": 162
+          },
+          "createPanel": {
+            "x": 11,
+            "y": 155,
+            "width": 338,
+            "height": 278,
+            "right": 349,
+            "bottom": 433
+          },
+          "xhsCard": {
+            "x": 23,
+            "y": 210,
+            "width": 149.265625,
+            "height": 132,
+            "right": 172.265625,
+            "bottom": 342
+          },
+          "douyinCard": {
+            "x": 180.265625,
+            "y": 210,
+            "width": 156.734375,
+            "height": 62,
+            "right": 337,
+            "bottom": 272
+          },
+          "momentsCard": {
+            "x": 180.265625,
+            "y": 280,
+            "width": 156.734375,
+            "height": 62,
+            "right": 337,
+            "bottom": 342
+          },
+          "quickRow": {
+            "x": 23,
+            "y": 342,
+            "width": 314,
+            "height": 62,
+            "right": 337,
+            "bottom": 404
+          },
+          "assistantPanel": {
+            "x": 11,
+            "y": 443,
+            "width": 338,
+            "height": 188,
+            "right": 349,
+            "bottom": 631
+          },
+          "suggestions": {
+            "x": 11,
+            "y": 641,
+            "width": 338,
+            "height": 36,
+            "right": 349,
+            "bottom": 677
+          },
+          "askBox": {
+            "x": 11,
+            "y": 686,
+            "width": 338,
+            "height": 47,
+            "right": 349,
+            "bottom": 733
+          },
+          "bottomNav": {
+            "x": 0,
+            "y": 733,
+            "width": 360,
+            "height": 67,
+            "right": 360,
+            "bottom": 800
+          },
+          "owl": {
+            "x": 148.984375,
+            "y": 707,
+            "width": 62,
+            "height": 62,
+            "right": 210.984375,
+            "bottom": 769
+          },
+          "momentsTitle": {
+            "x": 191.265625,
+            "y": 292,
+            "width": 60,
+            "height": 20,
+            "right": 251.265625,
+            "bottom": 312
+          },
+          "momentsArt": {
+            "x": 268,
+            "y": 290,
+            "width": 69,
+            "height": 62,
+            "right": 337,
+            "bottom": 352
+          }
+        },
+        "assistantToSuggestionsGap": 10,
+        "momentsTitleArtOverlap": 0,
+        "navItems": [
+          {
+            "text": "\n首页",
+            "x": 8,
+            "width": 114.65625
+          },
+          {
+            "text": "AI助手",
+            "x": 122.65625,
+            "width": 114.671875
+          },
+          {
+            "text": "\n我的",
+            "x": 237.328125,
+            "width": 114.65625
+          }
+        ],
+        "navWidthSpread": 0.015625,
+        "overflow": {
+          "documentScrollWidth": 360,
+          "documentClientWidth": 360,
+          "bodyScrollWidth": 360
+        },
+        "images": [
+          {
+            "src": "/yunjikeji/static/reference-home/tony-robot.png",
+            "complete": true,
+            "naturalWidth": 132,
+            "naturalHeight": 142
+          },
+          {
+            "src": "/yunjikeji/static/reference-home/xiaohongshu.png",
+            "complete": true,
+            "naturalWidth": 105,
+            "naturalHeight": 80
+          },
+          {
+            "src": "/yunjikeji/static/reference-home/douyin.png",
+            "complete": true,
+            "naturalWidth": 70,
+            "naturalHeight": 70
+          },
+          {
+            "src": "/yunjikeji/static/reference-home/moments.png",
+            "complete": true,
+            "naturalWidth": 82,
+            "naturalHeight": 66
+          },
+          {
+            "src": "/yunjikeji/static/brand/jixiangwu-logo.png",
+            "complete": true,
+            "naturalWidth": 419,
+            "naturalHeight": 424
+          }
+        ],
+        "layoutBackground": "linear-gradient(rgb(114, 202, 255) 0px, rgb(188, 239, 255) 33%, rgb(239, 249, 252) 76%)",
+        "owlSource": "/yunjikeji/static/brand/jixiangwu-logo.png",
+        "bodyTextLength": 264
+      },
+      "reference": {
+        "viewport": {
+          "width": 360,
+          "height": 800
+        },
+        "mappedMissing": [
+          "考题测试",
+          "考题自测",
+          "考题测评",
+          "错题测评",
+          "常用功能",
+          "岗位查询",
+          "联系客服",
+          "个人资料"
+        ],
+        "stableMissing": [
+          "我的"
+        ],
+        "forbiddenPresent": [
+          "AI创作",
+          "小红书创作",
+          "抖音创作",
+          "朋友圈创作",
+          "智能助理",
+          "开单收银",
+          "学习",
+          "练口语",
+          "会员"
+        ],
+        "counts": {
+          "statusBar": 1,
+          "rewardPills": 2,
+          "creationCards": 3,
+          "quickItems": 5,
+          "assistantCards": 3,
+          "suggestions": 2,
+          "navItems": 5,
+          "images": 5
+        },
+        "rects": {
+          "phone": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 800,
+            "right": 360,
+            "bottom": 800
+          },
+          "hero": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 155,
+            "right": 360,
+            "bottom": 155
+          },
+          "tony": {
+            "x": 217,
+            "y": 26,
+            "width": 128,
+            "height": 136,
+            "right": 345,
+            "bottom": 162
+          },
+          "createPanel": {
+            "x": 11,
+            "y": 155,
+            "width": 338,
+            "height": 278,
+            "right": 349,
+            "bottom": 433
+          },
+          "xhsCard": {
+            "x": 23,
+            "y": 210,
+            "width": 149.265625,
+            "height": 132,
+            "right": 172.265625,
+            "bottom": 342
+          },
+          "douyinCard": {
+            "x": 180.265625,
+            "y": 210,
+            "width": 156.734375,
+            "height": 62,
+            "right": 337,
+            "bottom": 272
+          },
+          "momentsCard": {
+            "x": 180.265625,
+            "y": 280,
+            "width": 156.734375,
+            "height": 62,
+            "right": 337,
+            "bottom": 342
+          },
+          "quickRow": {
+            "x": 23,
+            "y": 342,
+            "width": 314,
+            "height": 62,
+            "right": 337,
+            "bottom": 404
+          },
+          "assistantPanel": {
+            "x": 11,
+            "y": 443,
+            "width": 338,
+            "height": 188,
+            "right": 349,
+            "bottom": 631
+          },
+          "suggestions": {
+            "x": 11,
+            "y": 641,
+            "width": 338,
+            "height": 36,
+            "right": 349,
+            "bottom": 677
+          },
+          "askBox": {
+            "x": 11,
+            "y": 686,
+            "width": 338,
+            "height": 47,
+            "right": 349,
+            "bottom": 733
+          },
+          "bottomNav": {
+            "x": 0,
+            "y": 733,
+            "width": 360,
+            "height": 67,
+            "right": 360,
+            "bottom": 800
+          },
+          "owl": {
+            "x": 148.984375,
+            "y": 707,
+            "width": 62,
+            "height": 62,
+            "right": 210.984375,
+            "bottom": 769
+          },
+          "momentsTitle": {
+            "x": 191.265625,
+            "y": 292,
+            "width": 75,
+            "height": 20,
+            "right": 266.265625,
+            "bottom": 312
+          },
+          "momentsArt": {
+            "x": 268,
+            "y": 290,
+            "width": 69,
+            "height": 62,
+            "right": 337,
+            "bottom": 352
+          }
+        },
+        "assistantToSuggestionsGap": 10,
+        "momentsTitleArtOverlap": 0,
+        "navItems": [
+          {
+            "text": "\n首页",
+            "x": 8,
+            "width": 68.796875
+          },
+          {
+            "text": "\n学习",
+            "x": 76.796875,
+            "width": 68.796875
+          },
+          {
+            "text": "AI助手",
+            "x": 145.59375,
+            "width": 68.796875
+          },
+          {
+            "text": "\n练口语",
+            "x": 214.390625,
+            "width": 68.796875
+          },
+          {
+            "text": "\n会员",
+            "x": 283.1875,
+            "width": 68.8125
+          }
+        ],
+        "navWidthSpread": 0.015625,
+        "overflow": {
+          "documentScrollWidth": 360,
+          "documentClientWidth": 360,
+          "bodyScrollWidth": 360
+        },
+        "images": [
+          {
+            "src": "/yunjikeji/static/reference-home/tony-robot.png",
+            "complete": true,
+            "naturalWidth": 132,
+            "naturalHeight": 142
+          },
+          {
+            "src": "/yunjikeji/static/reference-home/xiaohongshu.png",
+            "complete": true,
+            "naturalWidth": 105,
+            "naturalHeight": 80
+          },
+          {
+            "src": "/yunjikeji/static/reference-home/douyin.png",
+            "complete": true,
+            "naturalWidth": 70,
+            "naturalHeight": 70
+          },
+          {
+            "src": "/yunjikeji/static/reference-home/moments.png",
+            "complete": true,
+            "naturalWidth": 82,
+            "naturalHeight": 66
+          },
+          {
+            "src": "/yunjikeji/static/reference-home/owl-assistant.png",
+            "complete": true,
+            "naturalWidth": 136,
+            "naturalHeight": 134
+          }
+        ],
+        "layoutBackground": "linear-gradient(rgb(114, 202, 255) 0px, rgb(188, 239, 255) 33%, rgb(239, 249, 252) 76%)",
+        "owlSource": "/yunjikeji/static/reference-home/owl-assistant.png",
+        "bodyTextLength": 277
+      },
+      "geometryDiffs": [],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "referenceErrors": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "status": 200,
+      "checks": {
+        "httpOk": true,
+        "mappedTextsComplete": true,
+        "stableTextsComplete": true,
+        "forbiddenTextsAbsent": true,
+        "countsComplete": true,
+        "imagesLoaded": true,
+        "owlUsesBrandAsset": true,
+        "noHorizontalOverflow": true,
+        "threeEqualNavAreas": true,
+        "continuousFlow": true,
+        "momentsArtDoesNotCoverTitle": true,
+        "frozenGeometryMatches": true,
+        "frozenBackgroundMatches": true,
+        "referenceHttpOk": true,
+        "noBrowserErrors": true
+      },
+      "actual": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "mappedMissing": [],
+        "stableMissing": [],
+        "forbiddenPresent": [],
+        "counts": {
+          "statusBar": 1,
+          "rewardPills": 2,
+          "creationCards": 3,
+          "quickItems": 5,
+          "assistantCards": 3,
+          "suggestions": 2,
+          "navItems": 3,
+          "images": 5
+        },
+        "rects": {
+          "phone": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 844,
+            "right": 390,
+            "bottom": 844
+          },
+          "hero": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 166,
+            "right": 390,
+            "bottom": 166
+          },
+          "tony": {
+            "x": 229,
+            "y": 27,
+            "width": 140,
+            "height": 146,
+            "right": 369,
+            "bottom": 173
+          },
+          "createPanel": {
+            "x": 14,
+            "y": 166,
+            "width": 362,
+            "height": 289,
+            "right": 376,
+            "bottom": 455
+          },
+          "xhsCard": {
+            "x": 29,
+            "y": 221,
+            "width": 158.046875,
+            "height": 140,
+            "right": 187.046875,
+            "bottom": 361
+          },
+          "douyinCard": {
+            "x": 195.046875,
+            "y": 221,
+            "width": 165.953125,
+            "height": 66,
+            "right": 361,
+            "bottom": 287
+          },
+          "momentsCard": {
+            "x": 195.046875,
+            "y": 295,
+            "width": 165.953125,
+            "height": 66,
+            "right": 361,
+            "bottom": 361
+          },
+          "quickRow": {
+            "x": 29,
+            "y": 361,
+            "width": 332,
+            "height": 62,
+            "right": 361,
+            "bottom": 423
+          },
+          "assistantPanel": {
+            "x": 14,
+            "y": 465,
+            "width": 362,
+            "height": 188,
+            "right": 376,
+            "bottom": 653
+          },
+          "suggestions": {
+            "x": 14,
+            "y": 663,
+            "width": 362,
+            "height": 36,
+            "right": 376,
+            "bottom": 699
+          },
+          "askBox": {
+            "x": 14,
+            "y": 708,
+            "width": 362,
+            "height": 47,
+            "right": 376,
+            "bottom": 755
+          },
+          "bottomNav": {
+            "x": 0,
+            "y": 777,
+            "width": 390,
+            "height": 67,
+            "right": 390,
+            "bottom": 844
+          },
+          "owl": {
+            "x": 163.984375,
+            "y": 751,
+            "width": 62,
+            "height": 62,
+            "right": 225.984375,
+            "bottom": 813
+          },
+          "momentsTitle": {
+            "x": 206.046875,
+            "y": 307,
+            "width": 60,
+            "height": 20,
+            "right": 266.046875,
+            "bottom": 327
+          },
+          "momentsArt": {
+            "x": 292,
+            "y": 305,
+            "width": 69,
+            "height": 62,
+            "right": 361,
+            "bottom": 367
+          }
+        },
+        "assistantToSuggestionsGap": 10,
+        "momentsTitleArtOverlap": 0,
+        "navItems": [
+          {
+            "text": "\n首页",
+            "x": 8,
+            "width": 124.65625
+          },
+          {
+            "text": "AI助手",
+            "x": 132.65625,
+            "width": 124.671875
+          },
+          {
+            "text": "\n我的",
+            "x": 257.328125,
+            "width": 124.65625
+          }
+        ],
+        "navWidthSpread": 0.015625,
+        "overflow": {
+          "documentScrollWidth": 390,
+          "documentClientWidth": 390,
+          "bodyScrollWidth": 390
+        },
+        "images": [
+          {
+            "src": "/yunjikeji/static/reference-home/tony-robot.png",
+            "complete": true,
+            "naturalWidth": 132,
+            "naturalHeight": 142
+          },
+          {
+            "src": "/yunjikeji/static/reference-home/xiaohongshu.png",
+            "complete": true,
+            "naturalWidth": 105,
+            "naturalHeight": 80
+          },
+          {
+            "src": "/yunjikeji/static/reference-home/douyin.png",
+            "complete": true,
+            "naturalWidth": 70,
+            "naturalHeight": 70
+          },
+          {
+            "src": "/yunjikeji/static/reference-home/moments.png",
+            "complete": true,
+            "naturalWidth": 82,
+            "naturalHeight": 66
+          },
+          {
+            "src": "/yunjikeji/static/brand/jixiangwu-logo.png",
+            "complete": true,
+            "naturalWidth": 419,
+            "naturalHeight": 424
+          }
+        ],
+        "layoutBackground": "linear-gradient(rgb(114, 202, 255) 0px, rgb(188, 239, 255) 33%, rgb(239, 249, 252) 76%)",
+        "owlSource": "/yunjikeji/static/brand/jixiangwu-logo.png",
+        "bodyTextLength": 264
+      },
+      "reference": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "mappedMissing": [
+          "考题测试",
+          "考题自测",
+          "考题测评",
+          "错题测评",
+          "常用功能",
+          "岗位查询",
+          "联系客服",
+          "个人资料"
+        ],
+        "stableMissing": [
+          "我的"
+        ],
+        "forbiddenPresent": [
+          "AI创作",
+          "小红书创作",
+          "抖音创作",
+          "朋友圈创作",
+          "智能助理",
+          "开单收银",
+          "学习",
+          "练口语",
+          "会员"
+        ],
+        "counts": {
+          "statusBar": 1,
+          "rewardPills": 2,
+          "creationCards": 3,
+          "quickItems": 5,
+          "assistantCards": 3,
+          "suggestions": 2,
+          "navItems": 5,
+          "images": 5
+        },
+        "rects": {
+          "phone": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 844,
+            "right": 390,
+            "bottom": 844
+          },
+          "hero": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 166,
+            "right": 390,
+            "bottom": 166
+          },
+          "tony": {
+            "x": 229,
+            "y": 27,
+            "width": 140,
+            "height": 146,
+            "right": 369,
+            "bottom": 173
+          },
+          "createPanel": {
+            "x": 14,
+            "y": 166,
+            "width": 362,
+            "height": 289,
+            "right": 376,
+            "bottom": 455
+          },
+          "xhsCard": {
+            "x": 29,
+            "y": 221,
+            "width": 158.046875,
+            "height": 140,
+            "right": 187.046875,
+            "bottom": 361
+          },
+          "douyinCard": {
+            "x": 195.046875,
+            "y": 221,
+            "width": 165.953125,
+            "height": 66,
+            "right": 361,
+            "bottom": 287
+          },
+          "momentsCard": {
+            "x": 195.046875,
+            "y": 295,
+            "width": 165.953125,
+            "height": 66,
+            "right": 361,
+            "bottom": 361
+          },
+          "quickRow": {
+            "x": 29,
+            "y": 361,
+            "width": 332,
+            "height": 62,
+            "right": 361,
+            "bottom": 423
+          },
+          "assistantPanel": {
+            "x": 14,
+            "y": 465,
+            "width": 362,
+            "height": 188,
+            "right": 376,
+            "bottom": 653
+          },
+          "suggestions": {
+            "x": 14,
+            "y": 663,
+            "width": 362,
+            "height": 36,
+            "right": 376,
+            "bottom": 699
+          },
+          "askBox": {
+            "x": 14,
+            "y": 708,
+            "width": 362,
+            "height": 47,
+            "right": 376,
+            "bottom": 755
+          },
+          "bottomNav": {
+            "x": 0,
+            "y": 777,
+            "width": 390,
+            "height": 67,
+            "right": 390,
+            "bottom": 844
+          },
+          "owl": {
+            "x": 163.984375,
+            "y": 751,
+            "width": 62,
+            "height": 62,
+            "right": 225.984375,
+            "bottom": 813
+          },
+          "momentsTitle": {
+            "x": 206.046875,
+            "y": 307,
+            "width": 75,
+            "height": 20,
+            "right": 281.046875,
+            "bottom": 327
+          },
+          "momentsArt": {
+            "x": 292,
+            "y": 305,
+            "width": 69,
+            "height": 62,
+            "right": 361,
+            "bottom": 367
+          }
+        },
+        "assistantToSuggestionsGap": 10,
+        "momentsTitleArtOverlap": 0,
+        "navItems": [
+          {
+            "text": "\n首页",
+            "x": 8,
+            "width": 74.796875
+          },
+          {
+            "text": "\n学习",
+            "x": 82.796875,
+            "width": 74.796875
+          },
+          {
+            "text": "AI助手",
+            "x": 157.59375,
+            "width": 74.796875
+          },
+          {
+            "text": "\n练口语",
+            "x": 232.390625,
+            "width": 74.796875
+          },
+          {
+            "text": "\n会员",
+            "x": 307.1875,
+            "width": 74.8125
+          }
+        ],
+        "navWidthSpread": 0.015625,
+        "overflow": {
+          "documentScrollWidth": 390,
+          "documentClientWidth": 390,
+          "bodyScrollWidth": 390
+        },
+        "images": [
+          {
+            "src": "/yunjikeji/static/reference-home/tony-robot.png",
+            "complete": true,
+            "naturalWidth": 132,
+            "naturalHeight": 142
+          },
+          {
+            "src": "/yunjikeji/static/reference-home/xiaohongshu.png",
+            "complete": true,
+            "naturalWidth": 105,
+            "naturalHeight": 80
+          },
+          {
+            "src": "/yunjikeji/static/reference-home/douyin.png",
+            "complete": true,
+            "naturalWidth": 70,
+            "naturalHeight": 70
+          },
+          {
+            "src": "/yunjikeji/static/reference-home/moments.png",
+            "complete": true,
+            "naturalWidth": 82,
+            "naturalHeight": 66
+          },
+          {
+            "src": "/yunjikeji/static/reference-home/owl-assistant.png",
+            "complete": true,
+            "naturalWidth": 136,
+            "naturalHeight": 134
+          }
+        ],
+        "layoutBackground": "linear-gradient(rgb(114, 202, 255) 0px, rgb(188, 239, 255) 33%, rgb(239, 249, 252) 76%)",
+        "owlSource": "/yunjikeji/static/reference-home/owl-assistant.png",
+        "bodyTextLength": 277
+      },
+      "geometryDiffs": [],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "referenceErrors": []
+    },
+    {
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "passed": true,
+      "status": 200,
+      "checks": {
+        "httpOk": true,
+        "mappedTextsComplete": true,
+        "stableTextsComplete": true,
+        "forbiddenTextsAbsent": true,
+        "countsComplete": true,
+        "imagesLoaded": true,
+        "owlUsesBrandAsset": true,
+        "noHorizontalOverflow": true,
+        "threeEqualNavAreas": true,
+        "continuousFlow": true,
+        "momentsArtDoesNotCoverTitle": true,
+        "frozenGeometryMatches": true,
+        "frozenBackgroundMatches": true,
+        "referenceHttpOk": true,
+        "noBrowserErrors": true
+      },
+      "actual": {
+        "viewport": {
+          "width": 430,
+          "height": 932
+        },
+        "mappedMissing": [],
+        "stableMissing": [],
+        "forbiddenPresent": [],
+        "counts": {
+          "statusBar": 1,
+          "rewardPills": 2,
+          "creationCards": 3,
+          "quickItems": 5,
+          "assistantCards": 3,
+          "suggestions": 2,
+          "navItems": 3,
+          "images": 5
+        },
+        "rects": {
+          "phone": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 932,
+            "right": 430,
+            "bottom": 932
+          },
+          "hero": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 166,
+            "right": 430,
+            "bottom": 166
+          },
+          "tony": {
+            "x": 269,
+            "y": 27,
+            "width": 140,
+            "height": 146,
+            "right": 409,
+            "bottom": 173
+          },
+          "createPanel": {
+            "x": 14,
+            "y": 166,
+            "width": 402,
+            "height": 289,
+            "right": 416,
+            "bottom": 455
+          },
+          "xhsCard": {
+            "x": 29,
+            "y": 221,
+            "width": 177.546875,
+            "height": 140,
+            "right": 206.546875,
+            "bottom": 361
+          },
+          "douyinCard": {
+            "x": 214.546875,
+            "y": 221,
+            "width": 186.4375,
+            "height": 66,
+            "right": 400.984375,
+            "bottom": 287
+          },
+          "momentsCard": {
+            "x": 214.546875,
+            "y": 295,
+            "width": 186.4375,
+            "height": 66,
+            "right": 400.984375,
+            "bottom": 361
+          },
+          "quickRow": {
+            "x": 29,
+            "y": 361,
+            "width": 372,
+            "height": 62,
+            "right": 401,
+            "bottom": 423
+          },
+          "assistantPanel": {
+            "x": 14,
+            "y": 465,
+            "width": 402,
+            "height": 188,
+            "right": 416,
+            "bottom": 653
+          },
+          "suggestions": {
+            "x": 14,
+            "y": 663,
+            "width": 402,
+            "height": 36,
+            "right": 416,
+            "bottom": 699
+          },
+          "askBox": {
+            "x": 14,
+            "y": 708,
+            "width": 402,
+            "height": 47,
+            "right": 416,
+            "bottom": 755
+          },
+          "bottomNav": {
+            "x": 0,
+            "y": 865,
+            "width": 430,
+            "height": 67,
+            "right": 430,
+            "bottom": 932
+          },
+          "owl": {
+            "x": 184,
+            "y": 839,
+            "width": 62,
+            "height": 62,
+            "right": 246,
+            "bottom": 901
+          },
+          "momentsTitle": {
+            "x": 225.546875,
+            "y": 307,
+            "width": 60,
+            "height": 20,
+            "right": 285.546875,
+            "bottom": 327
+          },
+          "momentsArt": {
+            "x": 331.984375,
+            "y": 305,
+            "width": 69,
+            "height": 62,
+            "right": 400.984375,
+            "bottom": 367
+          }
+        },
+        "assistantToSuggestionsGap": 10,
+        "momentsTitleArtOverlap": 0,
+        "navItems": [
+          {
+            "text": "\n首页",
+            "x": 8,
+            "width": 138
+          },
+          {
+            "text": "AI助手",
+            "x": 146,
+            "width": 138
+          },
+          {
+            "text": "\n我的",
+            "x": 284,
+            "width": 138
+          }
+        ],
+        "navWidthSpread": 0,
+        "overflow": {
+          "documentScrollWidth": 430,
+          "documentClientWidth": 430,
+          "bodyScrollWidth": 430
+        },
+        "images": [
+          {
+            "src": "/yunjikeji/static/reference-home/tony-robot.png",
+            "complete": true,
+            "naturalWidth": 132,
+            "naturalHeight": 142
+          },
+          {
+            "src": "/yunjikeji/static/reference-home/xiaohongshu.png",
+            "complete": true,
+            "naturalWidth": 105,
+            "naturalHeight": 80
+          },
+          {
+            "src": "/yunjikeji/static/reference-home/douyin.png",
+            "complete": true,
+            "naturalWidth": 70,
+            "naturalHeight": 70
+          },
+          {
+            "src": "/yunjikeji/static/reference-home/moments.png",
+            "complete": true,
+            "naturalWidth": 82,
+            "naturalHeight": 66
+          },
+          {
+            "src": "/yunjikeji/static/brand/jixiangwu-logo.png",
+            "complete": true,
+            "naturalWidth": 419,
+            "naturalHeight": 424
+          }
+        ],
+        "layoutBackground": "linear-gradient(rgb(114, 202, 255) 0px, rgb(188, 239, 255) 33%, rgb(239, 249, 252) 76%)",
+        "owlSource": "/yunjikeji/static/brand/jixiangwu-logo.png",
+        "bodyTextLength": 264
+      },
+      "reference": {
+        "viewport": {
+          "width": 430,
+          "height": 932
+        },
+        "mappedMissing": [
+          "考题测试",
+          "考题自测",
+          "考题测评",
+          "错题测评",
+          "常用功能",
+          "岗位查询",
+          "联系客服",
+          "个人资料"
+        ],
+        "stableMissing": [
+          "我的"
+        ],
+        "forbiddenPresent": [
+          "AI创作",
+          "小红书创作",
+          "抖音创作",
+          "朋友圈创作",
+          "智能助理",
+          "开单收银",
+          "学习",
+          "练口语",
+          "会员"
+        ],
+        "counts": {
+          "statusBar": 1,
+          "rewardPills": 2,
+          "creationCards": 3,
+          "quickItems": 5,
+          "assistantCards": 3,
+          "suggestions": 2,
+          "navItems": 5,
+          "images": 5
+        },
+        "rects": {
+          "phone": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 932,
+            "right": 430,
+            "bottom": 932
+          },
+          "hero": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 166,
+            "right": 430,
+            "bottom": 166
+          },
+          "tony": {
+            "x": 269,
+            "y": 27,
+            "width": 140,
+            "height": 146,
+            "right": 409,
+            "bottom": 173
+          },
+          "createPanel": {
+            "x": 14,
+            "y": 166,
+            "width": 402,
+            "height": 289,
+            "right": 416,
+            "bottom": 455
+          },
+          "xhsCard": {
+            "x": 29,
+            "y": 221,
+            "width": 177.546875,
+            "height": 140,
+            "right": 206.546875,
+            "bottom": 361
+          },
+          "douyinCard": {
+            "x": 214.546875,
+            "y": 221,
+            "width": 186.4375,
+            "height": 66,
+            "right": 400.984375,
+            "bottom": 287
+          },
+          "momentsCard": {
+            "x": 214.546875,
+            "y": 295,
+            "width": 186.4375,
+            "height": 66,
+            "right": 400.984375,
+            "bottom": 361
+          },
+          "quickRow": {
+            "x": 29,
+            "y": 361,
+            "width": 372,
+            "height": 62,
+            "right": 401,
+            "bottom": 423
+          },
+          "assistantPanel": {
+            "x": 14,
+            "y": 465,
+            "width": 402,
+            "height": 188,
+            "right": 416,
+            "bottom": 653
+          },
+          "suggestions": {
+            "x": 14,
+            "y": 663,
+            "width": 402,
+            "height": 36,
+            "right": 416,
+            "bottom": 699
+          },
+          "askBox": {
+            "x": 14,
+            "y": 708,
+            "width": 402,
+            "height": 47,
+            "right": 416,
+            "bottom": 755
+          },
+          "bottomNav": {
+            "x": 0,
+            "y": 865,
+            "width": 430,
+            "height": 67,
+            "right": 430,
+            "bottom": 932
+          },
+          "owl": {
+            "x": 183.984375,
+            "y": 839,
+            "width": 62,
+            "height": 62,
+            "right": 245.984375,
+            "bottom": 901
+          },
+          "momentsTitle": {
+            "x": 225.546875,
+            "y": 307,
+            "width": 75,
+            "height": 20,
+            "right": 300.546875,
+            "bottom": 327
+          },
+          "momentsArt": {
+            "x": 331.984375,
+            "y": 305,
+            "width": 69,
+            "height": 62,
+            "right": 400.984375,
+            "bottom": 367
+          }
+        },
+        "assistantToSuggestionsGap": 10,
+        "momentsTitleArtOverlap": 0,
+        "navItems": [
+          {
+            "text": "\n首页",
+            "x": 8,
+            "width": 82.796875
+          },
+          {
+            "text": "\n学习",
+            "x": 90.796875,
+            "width": 82.796875
+          },
+          {
+            "text": "AI助手",
+            "x": 173.59375,
+            "width": 82.796875
+          },
+          {
+            "text": "\n练口语",
+            "x": 256.390625,
+            "width": 82.796875
+          },
+          {
+            "text": "\n会员",
+            "x": 339.1875,
+            "width": 82.8125
+          }
+        ],
+        "navWidthSpread": 0.015625,
+        "overflow": {
+          "documentScrollWidth": 430,
+          "documentClientWidth": 430,
+          "bodyScrollWidth": 430
+        },
+        "images": [
+          {
+            "src": "/yunjikeji/static/reference-home/tony-robot.png",
+            "complete": true,
+            "naturalWidth": 132,
+            "naturalHeight": 142
+          },
+          {
+            "src": "/yunjikeji/static/reference-home/xiaohongshu.png",
+            "complete": true,
+            "naturalWidth": 105,
+            "naturalHeight": 80
+          },
+          {
+            "src": "/yunjikeji/static/reference-home/douyin.png",
+            "complete": true,
+            "naturalWidth": 70,
+            "naturalHeight": 70
+          },
+          {
+            "src": "/yunjikeji/static/reference-home/moments.png",
+            "complete": true,
+            "naturalWidth": 82,
+            "naturalHeight": 66
+          },
+          {
+            "src": "/yunjikeji/static/reference-home/owl-assistant.png",
+            "complete": true,
+            "naturalWidth": 136,
+            "naturalHeight": 134
+          }
+        ],
+        "layoutBackground": "linear-gradient(rgb(114, 202, 255) 0px, rgb(188, 239, 255) 33%, rgb(239, 249, 252) 76%)",
+        "owlSource": "/yunjikeji/static/reference-home/owl-assistant.png",
+        "bodyTextLength": 277
+      },
+      "geometryDiffs": [],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "referenceErrors": []
+    }
+  ]
+}

@@ -1,0 +1,221 @@
+{
+  "fixture": "Playwright route 提供确定性练习接口响应；使用真实 answer.vue 组件状态，不向应用源码写入测试开关或假数据。",
+  "startedAt": "2026-08-18T10:06:14.997Z",
+  "baseUrl": "http://127.0.0.1:5173/yunjikeji/",
+  "checks": [
+    {
+      "scenario": "correctSingle",
+      "progressBefore": "1/ 3",
+      "getCountBeforeNext": 1,
+      "getCountAfterNext": 2,
+      "aiCalls": [
+        "/pages/practice/ai-answer?id=practice-060&sessionId=session-060&mode=standard&recordId=&catalogBatchId=&questionId=single-060&selectedOptionId=A"
+      ]
+    },
+    {
+      "scenario": "correctMultiple",
+      "progressBefore": "2/ 3",
+      "getCountBeforeNext": 1,
+      "getCountAfterNext": 2,
+      "aiCalls": [
+        "/pages/practice/ai-answer?id=practice-060&sessionId=session-060&mode=standard&recordId=&catalogBatchId=&questionId=multiple-060&selectedOptionId=C"
+      ]
+    },
+    {
+      "scenario": "correctText",
+      "progressBefore": "1/ 2",
+      "getCountBeforeNext": 1,
+      "getCountAfterNext": 2,
+      "aiCalls": [
+        "/pages/practice/ai-answer?id=practice-060&sessionId=session-060&mode=standard&recordId=&catalogBatchId=&questionId=text-060&selectedOptionId=%E6%AF%8F%E5%91%A8%E5%A4%8D%E7%9B%98%E5%AE%A2%E6%88%B7%E7%9B%AE%E6%A0%87%E5%B9%B6%E8%AE%B0%E5%BD%95%E5%90%8E%E7%BB%AD%E5%8A%A8%E4%BD%9C%E3%80%82"
+      ]
+    },
+    {
+      "scenario": "correctLast",
+      "getCountBeforeComplete": 1,
+      "relaunch": [
+        "/pages/home"
+      ]
+    },
+    {
+      "scenario": "wrongMultiple",
+      "wrongOptions": 2,
+      "correctOptions": 2,
+      "explicitNext": true
+    },
+    {
+      "scenario": "duplicateSingle",
+      "postCount": 1
+    },
+    {
+      "scenario": "responsiveCorrectResult",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "layout": {
+        "innerWidth": 360,
+        "innerHeight": 800,
+        "documentScrollWidth": 360,
+        "bodyScrollWidth": 360,
+        "cardStage": {
+          "top": 80.625,
+          "right": 348.484375,
+          "bottom": 716,
+          "left": 15.359375
+        },
+        "actions": {
+          "top": 716,
+          "right": 348.484375,
+          "bottom": 800,
+          "left": 15.359375
+        },
+        "primary": {
+          "top": 710.4799194335938,
+          "right": 333.09375,
+          "bottom": 755.5892944335938,
+          "left": 30.75
+        }
+      }
+    },
+    {
+      "scenario": "responsiveCorrectResult",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "layout": {
+        "innerWidth": 390,
+        "innerHeight": 844,
+        "documentScrollWidth": 390,
+        "bodyScrollWidth": 390,
+        "cardStage": {
+          "top": 87.359375,
+          "right": 377.53125,
+          "bottom": 753,
+          "left": 16.625
+        },
+        "actions": {
+          "top": 753,
+          "right": 377.53125,
+          "bottom": 844,
+          "left": 16.625
+        },
+        "primary": {
+          "top": 747.0198974609375,
+          "right": 360.9375,
+          "bottom": 795.8948974609375,
+          "left": 33.21875
+        }
+      }
+    },
+    {
+      "scenario": "responsiveCorrectResult",
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "layout": {
+        "innerWidth": 430,
+        "innerHeight": 932,
+        "documentScrollWidth": 430,
+        "bodyScrollWidth": 430,
+        "cardStage": {
+          "top": 96.3125,
+          "right": 416.25,
+          "bottom": 831.671875,
+          "left": 18.34375
+        },
+        "actions": {
+          "top": 831.671875,
+          "right": 416.25,
+          "bottom": 932,
+          "left": 18.34375
+        },
+        "primary": {
+          "top": 825.0784301757812,
+          "right": 398.0625,
+          "bottom": 878.9690551757812,
+          "left": 36.53125
+        }
+      }
+    }
+  ],
+  "failures": [],
+  "browserErrors": [
+    {
+      "scenario": "correctSingle",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "errors": []
+    },
+    {
+      "scenario": "correctMultiple",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "errors": []
+    },
+    {
+      "scenario": "correctText",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "errors": []
+    },
+    {
+      "scenario": "correctLast",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "errors": []
+    },
+    {
+      "scenario": "wrongMultiple",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "errors": []
+    },
+    {
+      "scenario": "duplicateSingle",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "errors": []
+    },
+    {
+      "scenario": "correctSingle",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "errors": []
+    },
+    {
+      "scenario": "correctSingle",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "errors": []
+    },
+    {
+      "scenario": "correctSingle",
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "errors": []
+    }
+  ],
+  "status": "passed",
+  "finishedAt": "2026-08-18T10:06:26.373Z"
+}

@@ -1,0 +1,37 @@
+{
+  "date": "2026-07-19",
+  "results": [
+    {
+      "command": "pnpm type-check",
+      "cwd": "code/develop/yunjikeji",
+      "exitCode": 0
+    },
+    {
+      "command": "pnpm run build:h5",
+      "cwd": "code/develop/yunjikeji",
+      "exitCode": 0,
+      "durationSeconds": 32.5,
+      "summary": "DONE Build complete."
+    },
+    {
+      "command": "git diff --check",
+      "cwd": ".",
+      "exitCode": 0,
+      "summary": "Only existing LF-to-CRLF working-copy warnings were emitted."
+    },
+    {
+      "command": "conflict marker audit",
+      "cwd": ".",
+      "exitCode": 0,
+      "matches": 0
+    },
+    {
+      "command": "staged and uni_modules audit",
+      "cwd": ".",
+      "exitCode": 0,
+      "stagedFiles": 0,
+      "uniModulesChanges": 0
+    }
+  ],
+  "browserAcceptance": "Pending independent Chrome DevTools mobile verification"
+}

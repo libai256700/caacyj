@@ -1,0 +1,45 @@
+{
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "headingExists": false,
+  "forbiddenHeadingTextPresent": false,
+  "section": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "boxShadow": "none",
+    "padding": "0px"
+  },
+  "intro": {
+    "exists": true,
+    "visible": true,
+    "display": "block",
+    "visibility": "visible",
+    "height": "60.3125px",
+    "padding": "30.16px 6.24px 4.16px",
+    "text": "确认练习信息请确认以下练习范围与规则，准备开始练习"
+  },
+  "rects": {
+    "swiper": {
+      "top": 66.546875,
+      "bottom": 135.171875,
+      "width": 360.90625,
+      "height": 68.625
+    },
+    "intro": {
+      "top": 139.328125,
+      "bottom": 233.953125,
+      "width": 360.90625,
+      "height": 94.625
+    },
+    "card": {
+      "top": 243.3125,
+      "bottom": 697.578125,
+      "width": 360.90625,
+      "height": 454.265625
+    }
+  },
+  "swiperToCardGap": 108.140625,
+  "verdict": "fail",
+  "reason": "The page-scoped selector does not hide the child component intro; the card is not directly below the category swiper."
+}

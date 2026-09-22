@@ -1,0 +1,8 @@
+{
+  "status": "failed-as-expected",
+  "exitCode": 1,
+  "assertion": "enterprise eligible defaults must route to the enterprise customer-service page",
+  "actual": 0,
+  "expected": 2,
+  "recordedAt": "2026-08-15T07:14:00+08:00"
+}

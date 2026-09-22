@@ -1,0 +1,41 @@
+{
+  "commands": [
+    {
+      "name": "playwright",
+      "command": "pnpm exec node <DEV-034>/dev034-home-tone.spec.cjs",
+      "exitCode": 0,
+      "result": "360x800、390x844、430x932全部通过"
+    },
+    {
+      "name": "type-check",
+      "command": "pnpm type-check",
+      "exitCode": 0
+    },
+    {
+      "name": "build-h5",
+      "command": "pnpm run build:h5",
+      "exitCode": 0,
+      "result": "DONE Build complete."
+    },
+    {
+      "name": "diff-check",
+      "command": "git diff --check",
+      "exitCode": 0
+    }
+  ],
+  "boundary": {
+    "head": "232fcf3a682db88f49a7009ce9c5c2ef045f32ca",
+    "homeReferencePreviewDiff": [],
+    "referenceHomeAssetsDiff": [],
+    "loginDiff": [],
+    "oldIndexDiff": [],
+    "uniModulesWorkingTreeDiff": [],
+    "uniModulesStagedDiff": [],
+    "taskApplicationFile": "code/develop/yunjikeji/src/pages/home.vue",
+    "preExistingUnrelatedDirtyFiles": [
+      "code/develop/yunjikeji/src/services/assessment.ts",
+      "code/develop/yunjikeji/src/services/customerAuth.ts",
+      "code/develop/yunjikeji/src/services/practice.ts"
+    ]
+  }
+}

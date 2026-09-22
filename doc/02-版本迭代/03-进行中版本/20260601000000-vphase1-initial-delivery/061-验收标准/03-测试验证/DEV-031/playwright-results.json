@@ -1,0 +1,89 @@
+{
+  "generatedAt": "2026-07-17T23:31:19.963Z",
+  "serverUrl": "http://127.0.0.1:5173",
+  "homeUrl": "http://127.0.0.1:5173/yunjikeji/#/pages/home",
+  "captures": [
+    {
+      "viewport": {
+        "name": "360x800",
+        "width": 360,
+        "height": 800
+      },
+      "screenshot": "E:\\huiyitechworkspace\\feixingxueyuan\\doc\\02-版本迭代\\03-进行中版本\\20260601000000-vphase1-initial-delivery\\061-验收标准\\03-测试验证\\DEV-031\\home-360x800.png",
+      "screenshotBytes": 108939,
+      "summary": {
+        "assessmentCards": 3,
+        "utilityCards": 2,
+        "heroOwl": true,
+        "illustrations": 5,
+        "illustrationLayers": 53,
+        "tabs": 3,
+        "tabLabels": [
+          "首页",
+          "AI工作台",
+          "我的"
+        ],
+        "owl": true,
+        "scrollWidth": 360,
+        "viewportWidth": 360
+      },
+      "consoleErrors": [],
+      "passed": true
+    },
+    {
+      "viewport": {
+        "name": "390x844",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "E:\\huiyitechworkspace\\feixingxueyuan\\doc\\02-版本迭代\\03-进行中版本\\20260601000000-vphase1-initial-delivery\\061-验收标准\\03-测试验证\\DEV-031\\home-390x844.png",
+      "screenshotBytes": 124821,
+      "summary": {
+        "assessmentCards": 3,
+        "utilityCards": 2,
+        "heroOwl": true,
+        "illustrations": 5,
+        "illustrationLayers": 53,
+        "tabs": 3,
+        "tabLabels": [
+          "首页",
+          "AI工作台",
+          "我的"
+        ],
+        "owl": true,
+        "scrollWidth": 390,
+        "viewportWidth": 390
+      },
+      "consoleErrors": [],
+      "passed": true
+    },
+    {
+      "viewport": {
+        "name": "430x932",
+        "width": 430,
+        "height": 932
+      },
+      "screenshot": "E:\\huiyitechworkspace\\feixingxueyuan\\doc\\02-版本迭代\\03-进行中版本\\20260601000000-vphase1-initial-delivery\\061-验收标准\\03-测试验证\\DEV-031\\home-430x932.png",
+      "screenshotBytes": 146268,
+      "summary": {
+        "assessmentCards": 3,
+        "utilityCards": 2,
+        "heroOwl": true,
+        "illustrations": 5,
+        "illustrationLayers": 53,
+        "tabs": 3,
+        "tabLabels": [
+          "首页",
+          "AI工作台",
+          "我的"
+        ],
+        "owl": true,
+        "scrollWidth": 430,
+        "viewportWidth": 430
+      },
+      "consoleErrors": [],
+      "passed": true
+    }
+  ],
+  "passed": true
+}

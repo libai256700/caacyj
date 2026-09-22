@@ -1,0 +1,89 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "customer_dto_code_field",
+      "passed": true,
+      "detail": "request VO exposes code and no password field"
+    },
+    {
+      "name": "customer_dto_six_digits",
+      "passed": true,
+      "detail": "request VO validates a six-digit code"
+    },
+    {
+      "name": "customer_member_login_consumption",
+      "passed": true,
+      "detail": "login consumes code in MEMBER_LOGIN scene"
+    },
+    {
+      "name": "customer_no_password_auth",
+      "passed": true,
+      "detail": "login-or-register does not read or match an account password"
+    },
+    {
+      "name": "customer_secure_random_password",
+      "passed": true,
+      "detail": "new account password uses 256 random bits and is encoded server-side"
+    },
+    {
+      "name": "company_dto_code_field",
+      "passed": true,
+      "detail": "request VO exposes code and no password field"
+    },
+    {
+      "name": "company_dto_six_digits",
+      "passed": true,
+      "detail": "request VO validates a six-digit code"
+    },
+    {
+      "name": "company_member_login_consumption",
+      "passed": true,
+      "detail": "login consumes code in MEMBER_LOGIN scene"
+    },
+    {
+      "name": "company_no_password_auth",
+      "passed": true,
+      "detail": "login-or-register does not read or match an account password"
+    },
+    {
+      "name": "company_secure_random_password",
+      "passed": true,
+      "detail": "new account password uses 256 random bits and is encoded server-side"
+    },
+    {
+      "name": "frontend_customer_code_payload",
+      "passed": true,
+      "detail": "student login sends mobile + code"
+    },
+    {
+      "name": "frontend_company_code_payload",
+      "passed": true,
+      "detail": "company login sends mobile + code"
+    },
+    {
+      "name": "sms_send_chain",
+      "passed": true,
+      "detail": "controller delegates through member auth and SMS API to SmsCodeService"
+    },
+    {
+      "name": "sms_saved_before_send",
+      "passed": true,
+      "detail": "SMS code row is inserted before provider send"
+    },
+    {
+      "name": "sms_same_store_and_scene",
+      "passed": true,
+      "detail": "send and consume use system_sms_code keyed by mobile + code + scene"
+    },
+    {
+      "name": "sms_persistence_fields_and_expiry",
+      "passed": true,
+      "detail": "row stores credential state; expiry is derived from createTime plus configured duration"
+    }
+  ],
+  "security_notes": [
+    "Random initial passwords are never included in responses or logs by the checked flow.",
+    "SMS provider failure after insert can leave an unused row; concurrent use is not atomically claimed in this task."
+  ]
+}

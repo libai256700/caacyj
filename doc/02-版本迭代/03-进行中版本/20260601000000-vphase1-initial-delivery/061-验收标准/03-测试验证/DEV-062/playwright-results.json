@@ -1,0 +1,52 @@
+{
+  "command": "node dev062-wrong-category-contract.spec.cjs",
+  "status": "passed",
+  "failures": [],
+  "checks": [
+    {
+      "name": "home-wrong-review-route",
+      "passed": true,
+      "description": "首页错题入口应先进入分类页"
+    },
+    {
+      "name": "topics-mode-typing",
+      "passed": true,
+      "description": "分类页应支持 wrongReview 模式"
+    },
+    {
+      "name": "topics-title",
+      "passed": true,
+      "description": "分类页标题应显示错题练习"
+    },
+    {
+      "name": "topics-loading",
+      "passed": true,
+      "description": "分类页加载态应按当前标题展示"
+    },
+    {
+      "name": "topics-wrong-review-start",
+      "passed": true,
+      "description": "错题分类应调用真实 wrongReview 启动接口"
+    },
+    {
+      "name": "topics-next-page",
+      "passed": true,
+      "description": "应按后端 nextPage 进入答题页"
+    },
+    {
+      "name": "topics-record-batch",
+      "passed": true,
+      "description": "应承接 recordId 与 catalogBatchId"
+    },
+    {
+      "name": "topics-empty-toast",
+      "passed": true,
+      "description": "空错题分类应给出真实反馈"
+    },
+    {
+      "name": "topics-normal-branch",
+      "passed": true,
+      "description": "普通 practice/chapter 分支应保留"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "score": 96,
+  "verdict": "pass",
+  "category_match": true,
+  "differences": [
+    "参考图仅展示单一登录标题；当前按产品要求在同一顶部表面增加学员登录和企业登录两个等宽 Tab",
+    "参考图使用紫色背景和人物素材；当前保留项目既有暖橙品牌色与猫头鹰素材"
+  ],
+  "suggestions": [
+    "保持选中 Tab 为纯白清晰面、未选中 Tab 为半透明虚化面，后续不得退回描边小按钮",
+    "保持未选中虚化层下穿白色圆弧 58px，并继续让未选中面透出后方猫头鹰",
+    "保持协议控件为白底黑色勾号，避免后置基础样式再次覆盖勾号颜色"
+  ],
+  "reasoning": "同轮 Playwright 与六张原图覆盖 360×800、390×844、430×932 三档视口及学员、企业两种状态。两侧最终可见区域均为 0.5/0.5，未选中虚化层下穿圆弧 58px、gap 与可见 seam 均为 0px，两状态镜像且无透明竖带或硬线；协议两角色均为白底 rgb(26,26,26) 黑勾并可二次取消。品牌色与素材差异属于明确要求。",
+  "evidence": {
+    "playwrightResults": "playwright-results.json",
+    "tabStateResults": "tab-state-results.json",
+    "viewports": ["360x800", "390x844", "430x932"],
+    "states": ["student", "enterprise"],
+    "strictHalfRatios": [0.5, 0.5],
+    "frostedUnderlapPx": 58,
+    "maxGapPx": 0,
+    "visibleSeamPx": 0,
+    "labelCenterRatios": [0.25, 0.75],
+    "agreementBackground": "rgb(255, 255, 255)",
+    "agreementTickRgb": [26, 26, 26],
+    "agreementSecondClickClears": true
+  }
+}

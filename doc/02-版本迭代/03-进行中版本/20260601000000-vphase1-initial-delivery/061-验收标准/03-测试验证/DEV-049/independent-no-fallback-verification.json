@@ -1,0 +1,77 @@
+{
+  "taskId": "DEV-049",
+  "caseId": "TC-CODE-ASSESSMENT-NO-FALLBACK-001",
+  "executedAt": "2026-08-15T13:52:00+08:00",
+  "verdict": "PASS",
+  "codeVerdict": "PASS",
+  "testDatabaseDmlRelease": "PASS_WITH_PRECHECK_AND_BACKUP",
+  "tests": {
+    "jointTargetTests": {
+      "exitCode": 0,
+      "testsRun": 40,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "reactorCompile": {
+      "exitCode": 0,
+      "modules": 39
+    },
+    "gitDiffCheck": {
+      "exitCode": 0
+    }
+  },
+  "runtimeAudit": {
+    "buildFallbackAssessmentFiles": 0,
+    "legacySummaryHtmlFiles": 0,
+    "assessmentAiFallbackLogFiles": 0,
+    "fallbackHtmlWillBeUsedFiles": 0,
+    "changedRuntimeSecretLiterals": 0,
+    "uniModulesWorktreeChanges": 0,
+    "uniModulesStagedChanges": 0
+  },
+  "mjsBaseline": {
+    "downloadsEqualsRepositoryRoot": true,
+    "fileSha256": "e3157405d145aa3332d4cbc6389d24237e6cc0e401afb9263210f1fc1c650108",
+    "brandJavaByteIdentical": true,
+    "brandChars": 1186,
+    "brandBytes": 2367,
+    "brandSha256": "e1eaf92680d12220b1886d971179db1bbd2622c5dfe2b3fee13444e4e153241d"
+  },
+  "sqlStaticAudit": {
+    "systemPromptPrefixExact": true,
+    "reportStructureExact": true,
+    "overviewRows": 11,
+    "newPromptChars": 4285,
+    "newPromptBytes": 9305,
+    "newPromptSha256": "c8f4803d24763630820d1e255c831f638ce0899f674fb05c3af7dc2e3cc79f75",
+    "oldPromptChars": 3988,
+    "oldPromptBytes": 8315,
+    "oldPromptSha256": "4172c6b6de5375c046d053bcdf8ab45a6b79f600b0f56c63a2d3130a4283a436",
+    "dmlExecuted": false
+  },
+  "closedDefects": [
+    "Java forbidden fields and parameterized tests now reject 自测题量",
+    "Java forbidden fields and parameterized tests now reject the legacy first-chapter 综合得分 label",
+    "合法的 MJS 画像标签 综合评分 remains accepted"
+  ],
+  "covered": [
+    "complete report accepted",
+    "AI disabled and missing key rejected",
+    "agent configuration query failure rejected",
+    "upstream exception rejected",
+    "empty short non-HTML rejected",
+    "each of six missing sections rejected",
+    "missing brand rejected",
+    "both compatible inserts failing rejected",
+    "legacy fallback hidden on detail read",
+    "complete historical report retained",
+    "invalid stored reports excluded from completion state",
+    "OpenAI compatibility retained"
+  ],
+  "pending": [
+    "test-server deployment",
+    "new test-database report record verification",
+    "authenticated assessment submit and report page end-to-end verification"
+  ]
+}

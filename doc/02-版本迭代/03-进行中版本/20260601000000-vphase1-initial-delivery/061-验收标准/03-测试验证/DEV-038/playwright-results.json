@@ -1,0 +1,1194 @@
+{
+  "fixture": "确定性视觉夹具：仅 Playwright 上下文设置可控登录存储并拦截练习接口，不写入应用源码，不代表真实账号联调。",
+  "startedAt": "2026-07-18T08:22:57.077Z",
+  "baseUrl": "http://127.0.0.1:5173/yunjikeji/",
+  "viewports": [
+    {
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "single": {
+        "innerWidth": 360,
+        "innerHeight": 800,
+        "documentScrollWidth": 360,
+        "bodyScrollWidth": 360,
+        "navText": "",
+        "progressText": "出题1/ 12",
+        "card": {
+          "left": 17.265625,
+          "top": 172.765625,
+          "right": 342.734375,
+          "bottom": 727.0625,
+          "width": 325.46875,
+          "height": 554.296875
+        },
+        "layer": {
+          "left": 25.890625,
+          "top": 181.390625,
+          "right": 334.109375,
+          "bottom": 735.6875,
+          "width": 308.21875,
+          "height": 554.296875
+        },
+        "illustration": {
+          "left": 160.34375,
+          "top": 82.53125,
+          "right": 354.25,
+          "bottom": 180.4375,
+          "width": 193.90625,
+          "height": 97.90625
+        },
+        "illustrationPixels": {
+          "naturalWidth": 520,
+          "naturalHeight": 260,
+          "opaquePixels": 20428,
+          "uniqueColors": 1470
+        },
+        "actions": {
+          "left": 12.46875,
+          "top": 727.0625,
+          "right": 347.53125,
+          "bottom": 789.453125,
+          "width": 335.0625,
+          "height": 62.390625
+        },
+        "primary": {
+          "left": 17.265625,
+          "top": 741.453125,
+          "right": 342.734375,
+          "bottom": 782.71875,
+          "width": 325.46875,
+          "height": 41.265625
+        },
+        "options": [
+          {
+            "left": 28.78125,
+            "top": 305.984375,
+            "right": 331.21875,
+            "bottom": 350.140625,
+            "width": 302.4375,
+            "height": 44.15625
+          },
+          {
+            "left": 28.78125,
+            "top": 358.765625,
+            "right": 331.21875,
+            "bottom": 402.921875,
+            "width": 302.4375,
+            "height": 44.15625
+          },
+          {
+            "left": 28.78125,
+            "top": 411.546875,
+            "right": 331.21875,
+            "bottom": 455.703125,
+            "width": 302.4375,
+            "height": 44.15625
+          },
+          {
+            "left": 28.78125,
+            "top": 464.328125,
+            "right": 331.21875,
+            "bottom": 508.484375,
+            "width": 302.4375,
+            "height": 44.15625
+          }
+        ],
+        "optionDisplay": "flex",
+        "optionColumns": "none",
+        "background": "linear-gradient(rgb(251, 255, 225) 0%, rgb(234, 251, 220) 27%, rgb(213, 248, 228) 61%, rgb(189, 243, 247) 100%)",
+        "scroll": null
+      },
+      "multiple": {
+        "innerWidth": 360,
+        "innerHeight": 800,
+        "documentScrollWidth": 360,
+        "bodyScrollWidth": 360,
+        "navText": "",
+        "progressText": "出题5/ 12",
+        "card": {
+          "left": 17.265625,
+          "top": 172.765625,
+          "right": 342.734375,
+          "bottom": 727.0625,
+          "width": 325.46875,
+          "height": 554.296875
+        },
+        "layer": {
+          "left": 25.890625,
+          "top": 181.390625,
+          "right": 334.109375,
+          "bottom": 735.6875,
+          "width": 308.21875,
+          "height": 554.296875
+        },
+        "illustration": {
+          "left": 160.34375,
+          "top": 82.53125,
+          "right": 354.25,
+          "bottom": 180.4375,
+          "width": 193.90625,
+          "height": 97.90625
+        },
+        "illustrationPixels": {
+          "naturalWidth": 520,
+          "naturalHeight": 260,
+          "opaquePixels": 20428,
+          "uniqueColors": 1470
+        },
+        "actions": {
+          "left": 12.46875,
+          "top": 727.0625,
+          "right": 347.53125,
+          "bottom": 789.453125,
+          "width": 335.0625,
+          "height": 62.390625
+        },
+        "primary": {
+          "left": 119.015625,
+          "top": 741.453125,
+          "right": 342.734375,
+          "bottom": 782.71875,
+          "width": 223.71875,
+          "height": 41.265625
+        },
+        "options": [
+          {
+            "left": 28.78125,
+            "top": 305.984375,
+            "right": 176.640625,
+            "bottom": 359.296875,
+            "width": 147.859375,
+            "height": 53.3125
+          },
+          {
+            "left": 183.359375,
+            "top": 305.984375,
+            "right": 331.21875,
+            "bottom": 359.296875,
+            "width": 147.859375,
+            "height": 53.3125
+          },
+          {
+            "left": 28.78125,
+            "top": 366.015625,
+            "right": 176.640625,
+            "bottom": 419.328125,
+            "width": 147.859375,
+            "height": 53.3125
+          },
+          {
+            "left": 183.359375,
+            "top": 366.015625,
+            "right": 331.21875,
+            "bottom": 419.328125,
+            "width": 147.859375,
+            "height": 53.3125
+          },
+          {
+            "left": 28.78125,
+            "top": 426.046875,
+            "right": 176.640625,
+            "bottom": 475.953125,
+            "width": 147.859375,
+            "height": 49.90625
+          },
+          {
+            "left": 183.359375,
+            "top": 426.046875,
+            "right": 331.21875,
+            "bottom": 475.953125,
+            "width": 147.859375,
+            "height": 49.90625
+          }
+        ],
+        "optionDisplay": "grid",
+        "optionColumns": "147.859px 147.859px",
+        "background": "linear-gradient(rgb(251, 255, 225) 0%, rgb(234, 251, 220) 27%, rgb(213, 248, 228) 61%, rgb(189, 243, 247) 100%)",
+        "scroll": null
+      },
+      "last": {
+        "innerWidth": 360,
+        "innerHeight": 800,
+        "documentScrollWidth": 360,
+        "bodyScrollWidth": 360,
+        "navText": "",
+        "progressText": "出题12/ 12",
+        "card": {
+          "left": 17.265625,
+          "top": 172.765625,
+          "right": 342.734375,
+          "bottom": 727.0625,
+          "width": 325.46875,
+          "height": 554.296875
+        },
+        "layer": {
+          "left": 25.890625,
+          "top": 181.390625,
+          "right": 334.109375,
+          "bottom": 735.6875,
+          "width": 308.21875,
+          "height": 554.296875
+        },
+        "illustration": {
+          "left": 160.34375,
+          "top": 82.53125,
+          "right": 354.25,
+          "bottom": 180.4375,
+          "width": 193.90625,
+          "height": 97.90625
+        },
+        "illustrationPixels": {
+          "naturalWidth": 520,
+          "naturalHeight": 260,
+          "opaquePixels": 20428,
+          "uniqueColors": 1470
+        },
+        "actions": {
+          "left": 12.46875,
+          "top": 727.0625,
+          "right": 347.53125,
+          "bottom": 789.453125,
+          "width": 335.0625,
+          "height": 62.390625
+        },
+        "primary": {
+          "left": 119.015625,
+          "top": 741.453125,
+          "right": 342.734375,
+          "bottom": 782.71875,
+          "width": 223.71875,
+          "height": 41.265625
+        },
+        "options": [
+          {
+            "left": 28.78125,
+            "top": 305.984375,
+            "right": 176.640625,
+            "bottom": 359.296875,
+            "width": 147.859375,
+            "height": 53.3125
+          },
+          {
+            "left": 183.359375,
+            "top": 305.984375,
+            "right": 331.21875,
+            "bottom": 359.296875,
+            "width": 147.859375,
+            "height": 53.3125
+          },
+          {
+            "left": 28.78125,
+            "top": 366.015625,
+            "right": 176.640625,
+            "bottom": 419.328125,
+            "width": 147.859375,
+            "height": 53.3125
+          },
+          {
+            "left": 183.359375,
+            "top": 366.015625,
+            "right": 331.21875,
+            "bottom": 419.328125,
+            "width": 147.859375,
+            "height": 53.3125
+          },
+          {
+            "left": 28.78125,
+            "top": 426.046875,
+            "right": 176.640625,
+            "bottom": 475.953125,
+            "width": 147.859375,
+            "height": 49.90625
+          },
+          {
+            "left": 183.359375,
+            "top": 426.046875,
+            "right": 331.21875,
+            "bottom": 475.953125,
+            "width": 147.859375,
+            "height": 49.90625
+          }
+        ],
+        "optionDisplay": "grid",
+        "optionColumns": "147.859px 147.859px",
+        "background": "linear-gradient(rgb(251, 255, 225) 0%, rgb(234, 251, 220) 27%, rgb(213, 248, 228) 61%, rgb(189, 243, 247) 100%)",
+        "scroll": null
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "single": {
+        "innerWidth": 390,
+        "innerHeight": 844,
+        "documentScrollWidth": 390,
+        "bodyScrollWidth": 390,
+        "navText": "",
+        "progressText": "出题1/ 12",
+        "card": {
+          "left": 22.859375,
+          "top": 198.625,
+          "right": 367.140625,
+          "bottom": 764.96875,
+          "width": 344.28125,
+          "height": 566.34375
+        },
+        "layer": {
+          "left": 32.21875,
+          "top": 207.984375,
+          "right": 357.78125,
+          "bottom": 774.328125,
+          "width": 325.5625,
+          "height": 566.34375
+        },
+        "illustration": {
+          "left": 149.765625,
+          "top": 94.625,
+          "right": 373.359375,
+          "bottom": 206.9375,
+          "width": 223.59375,
+          "height": 112.3125
+        },
+        "illustrationPixels": {
+          "naturalWidth": 520,
+          "naturalHeight": 260,
+          "opaquePixels": 20428,
+          "uniqueColors": 1470
+        },
+        "actions": {
+          "left": 17.671875,
+          "top": 764.96875,
+          "right": 372.328125,
+          "bottom": 832.5625,
+          "width": 354.65625,
+          "height": 67.59375
+        },
+        "primary": {
+          "left": 22.859375,
+          "top": 780.5625,
+          "right": 367.140625,
+          "bottom": 825.28125,
+          "width": 344.28125,
+          "height": 44.71875
+        },
+        "options": [
+          {
+            "left": 38.453125,
+            "top": 342.890625,
+            "right": 351.546875,
+            "bottom": 390.71875,
+            "width": 313.09375,
+            "height": 47.828125
+          },
+          {
+            "left": 38.453125,
+            "top": 400.078125,
+            "right": 351.546875,
+            "bottom": 447.90625,
+            "width": 313.09375,
+            "height": 47.828125
+          },
+          {
+            "left": 38.453125,
+            "top": 457.265625,
+            "right": 351.546875,
+            "bottom": 505.09375,
+            "width": 313.09375,
+            "height": 47.828125
+          },
+          {
+            "left": 38.453125,
+            "top": 514.453125,
+            "right": 351.546875,
+            "bottom": 562.28125,
+            "width": 313.09375,
+            "height": 47.828125
+          }
+        ],
+        "optionDisplay": "flex",
+        "optionColumns": "none",
+        "background": "linear-gradient(rgb(251, 255, 225) 0%, rgb(234, 251, 220) 27%, rgb(213, 248, 228) 61%, rgb(189, 243, 247) 100%)",
+        "scroll": null
+      },
+      "multiple": {
+        "innerWidth": 390,
+        "innerHeight": 844,
+        "documentScrollWidth": 390,
+        "bodyScrollWidth": 390,
+        "navText": "",
+        "progressText": "出题5/ 12",
+        "card": {
+          "left": 22.859375,
+          "top": 198.625,
+          "right": 367.140625,
+          "bottom": 764.96875,
+          "width": 344.28125,
+          "height": 566.34375
+        },
+        "layer": {
+          "left": 32.21875,
+          "top": 207.984375,
+          "right": 357.78125,
+          "bottom": 774.328125,
+          "width": 325.5625,
+          "height": 566.34375
+        },
+        "illustration": {
+          "left": 149.765625,
+          "top": 94.625,
+          "right": 373.359375,
+          "bottom": 206.9375,
+          "width": 223.59375,
+          "height": 112.3125
+        },
+        "illustrationPixels": {
+          "naturalWidth": 520,
+          "naturalHeight": 260,
+          "opaquePixels": 20428,
+          "uniqueColors": 1470
+        },
+        "actions": {
+          "left": 17.671875,
+          "top": 764.96875,
+          "right": 372.328125,
+          "bottom": 832.5625,
+          "width": 354.65625,
+          "height": 67.59375
+        },
+        "primary": {
+          "left": 145.5625,
+          "top": 780.5625,
+          "right": 367.140625,
+          "bottom": 825.28125,
+          "width": 221.578125,
+          "height": 44.71875
+        },
+        "options": [
+          {
+            "left": 38.453125,
+            "top": 342.890625,
+            "right": 190.3125,
+            "bottom": 403.484375,
+            "width": 151.859375,
+            "height": 60.59375
+          },
+          {
+            "left": 199.671875,
+            "top": 342.890625,
+            "right": 351.546875,
+            "bottom": 403.484375,
+            "width": 151.875,
+            "height": 60.59375
+          },
+          {
+            "left": 38.453125,
+            "top": 412.84375,
+            "right": 190.3125,
+            "bottom": 473.4375,
+            "width": 151.859375,
+            "height": 60.59375
+          },
+          {
+            "left": 199.671875,
+            "top": 412.84375,
+            "right": 351.546875,
+            "bottom": 473.4375,
+            "width": 151.875,
+            "height": 60.59375
+          },
+          {
+            "left": 38.453125,
+            "top": 482.796875,
+            "right": 190.3125,
+            "bottom": 543.390625,
+            "width": 151.859375,
+            "height": 60.59375
+          },
+          {
+            "left": 199.671875,
+            "top": 482.796875,
+            "right": 351.546875,
+            "bottom": 543.390625,
+            "width": 151.875,
+            "height": 60.59375
+          }
+        ],
+        "optionDisplay": "grid",
+        "optionColumns": "151.859px 151.875px",
+        "background": "linear-gradient(rgb(251, 255, 225) 0%, rgb(234, 251, 220) 27%, rgb(213, 248, 228) 61%, rgb(189, 243, 247) 100%)",
+        "scroll": null
+      },
+      "last": {
+        "innerWidth": 390,
+        "innerHeight": 844,
+        "documentScrollWidth": 390,
+        "bodyScrollWidth": 390,
+        "navText": "",
+        "progressText": "出题12/ 12",
+        "card": {
+          "left": 22.859375,
+          "top": 198.625,
+          "right": 367.140625,
+          "bottom": 764.96875,
+          "width": 344.28125,
+          "height": 566.34375
+        },
+        "layer": {
+          "left": 32.21875,
+          "top": 207.984375,
+          "right": 357.78125,
+          "bottom": 774.328125,
+          "width": 325.5625,
+          "height": 566.34375
+        },
+        "illustration": {
+          "left": 149.765625,
+          "top": 94.625,
+          "right": 373.359375,
+          "bottom": 206.9375,
+          "width": 223.59375,
+          "height": 112.3125
+        },
+        "illustrationPixels": {
+          "naturalWidth": 520,
+          "naturalHeight": 260,
+          "opaquePixels": 20428,
+          "uniqueColors": 1470
+        },
+        "actions": {
+          "left": 17.671875,
+          "top": 764.96875,
+          "right": 372.328125,
+          "bottom": 832.5625,
+          "width": 354.65625,
+          "height": 67.59375
+        },
+        "primary": {
+          "left": 145.5625,
+          "top": 780.5625,
+          "right": 367.140625,
+          "bottom": 825.28125,
+          "width": 221.578125,
+          "height": 44.71875
+        },
+        "options": [
+          {
+            "left": 38.453125,
+            "top": 342.890625,
+            "right": 190.3125,
+            "bottom": 403.484375,
+            "width": 151.859375,
+            "height": 60.59375
+          },
+          {
+            "left": 199.671875,
+            "top": 342.890625,
+            "right": 351.546875,
+            "bottom": 403.484375,
+            "width": 151.875,
+            "height": 60.59375
+          },
+          {
+            "left": 38.453125,
+            "top": 412.84375,
+            "right": 190.3125,
+            "bottom": 473.4375,
+            "width": 151.859375,
+            "height": 60.59375
+          },
+          {
+            "left": 199.671875,
+            "top": 412.84375,
+            "right": 351.546875,
+            "bottom": 473.4375,
+            "width": 151.875,
+            "height": 60.59375
+          },
+          {
+            "left": 38.453125,
+            "top": 482.796875,
+            "right": 190.3125,
+            "bottom": 543.390625,
+            "width": 151.859375,
+            "height": 60.59375
+          },
+          {
+            "left": 199.671875,
+            "top": 482.796875,
+            "right": 351.546875,
+            "bottom": 543.390625,
+            "width": 151.875,
+            "height": 60.59375
+          }
+        ],
+        "optionDisplay": "grid",
+        "optionColumns": "151.859px 151.875px",
+        "background": "linear-gradient(rgb(251, 255, 225) 0%, rgb(234, 251, 220) 27%, rgb(213, 248, 228) 61%, rgb(189, 243, 247) 100%)",
+        "scroll": null
+      }
+    },
+    {
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "single": {
+        "innerWidth": 430,
+        "innerHeight": 932,
+        "documentScrollWidth": 430,
+        "bodyScrollWidth": 430,
+        "navText": "",
+        "progressText": "出题1/ 12",
+        "card": {
+          "left": 25.203125,
+          "top": 218.984375,
+          "right": 404.796875,
+          "bottom": 844.875,
+          "width": 379.59375,
+          "height": 625.890625
+        },
+        "layer": {
+          "left": 35.515625,
+          "top": 229.296875,
+          "right": 394.484375,
+          "bottom": 855.1875,
+          "width": 358.96875,
+          "height": 625.890625
+        },
+        "illustration": {
+          "left": 165.125,
+          "top": 104.328125,
+          "right": 411.65625,
+          "bottom": 228.15625,
+          "width": 246.53125,
+          "height": 123.828125
+        },
+        "illustrationPixels": {
+          "naturalWidth": 520,
+          "naturalHeight": 260,
+          "opaquePixels": 20428,
+          "uniqueColors": 1470
+        },
+        "actions": {
+          "left": 19.484375,
+          "top": 844.875,
+          "right": 410.515625,
+          "bottom": 919.390625,
+          "width": 391.03125,
+          "height": 74.515625
+        },
+        "primary": {
+          "left": 25.203125,
+          "top": 862.0625,
+          "right": 404.796875,
+          "bottom": 911.359375,
+          "width": 379.59375,
+          "height": 49.296875
+        },
+        "options": [
+          {
+            "left": 42.390625,
+            "top": 378.078125,
+            "right": 387.609375,
+            "bottom": 430.8125,
+            "width": 345.21875,
+            "height": 52.734375
+          },
+          {
+            "left": 42.390625,
+            "top": 441.125,
+            "right": 387.609375,
+            "bottom": 493.859375,
+            "width": 345.21875,
+            "height": 52.734375
+          },
+          {
+            "left": 42.390625,
+            "top": 504.171875,
+            "right": 387.609375,
+            "bottom": 556.90625,
+            "width": 345.21875,
+            "height": 52.734375
+          },
+          {
+            "left": 42.390625,
+            "top": 567.21875,
+            "right": 387.609375,
+            "bottom": 619.953125,
+            "width": 345.21875,
+            "height": 52.734375
+          }
+        ],
+        "optionDisplay": "flex",
+        "optionColumns": "none",
+        "background": "linear-gradient(rgb(251, 255, 225) 0%, rgb(234, 251, 220) 27%, rgb(213, 248, 228) 61%, rgb(189, 243, 247) 100%)",
+        "scroll": null
+      },
+      "multiple": {
+        "innerWidth": 430,
+        "innerHeight": 932,
+        "documentScrollWidth": 430,
+        "bodyScrollWidth": 430,
+        "navText": "",
+        "progressText": "出题5/ 12",
+        "card": {
+          "left": 25.203125,
+          "top": 218.984375,
+          "right": 404.796875,
+          "bottom": 844.875,
+          "width": 379.59375,
+          "height": 625.890625
+        },
+        "layer": {
+          "left": 35.515625,
+          "top": 229.296875,
+          "right": 394.484375,
+          "bottom": 855.1875,
+          "width": 358.96875,
+          "height": 625.890625
+        },
+        "illustration": {
+          "left": 165.125,
+          "top": 104.328125,
+          "right": 411.65625,
+          "bottom": 228.15625,
+          "width": 246.53125,
+          "height": 123.828125
+        },
+        "illustrationPixels": {
+          "naturalWidth": 520,
+          "naturalHeight": 260,
+          "opaquePixels": 20428,
+          "uniqueColors": 1470
+        },
+        "actions": {
+          "left": 19.484375,
+          "top": 844.875,
+          "right": 410.515625,
+          "bottom": 919.390625,
+          "width": 391.03125,
+          "height": 74.515625
+        },
+        "primary": {
+          "left": 160.5,
+          "top": 862.0625,
+          "right": 404.796875,
+          "bottom": 911.359375,
+          "width": 244.296875,
+          "height": 49.296875
+        },
+        "options": [
+          {
+            "left": 42.390625,
+            "top": 378.078125,
+            "right": 209.84375,
+            "bottom": 444.671875,
+            "width": 167.453125,
+            "height": 66.59375
+          },
+          {
+            "left": 220.15625,
+            "top": 378.078125,
+            "right": 387.609375,
+            "bottom": 444.671875,
+            "width": 167.453125,
+            "height": 66.59375
+          },
+          {
+            "left": 42.390625,
+            "top": 454.984375,
+            "right": 209.84375,
+            "bottom": 521.578125,
+            "width": 167.453125,
+            "height": 66.59375
+          },
+          {
+            "left": 220.15625,
+            "top": 454.984375,
+            "right": 387.609375,
+            "bottom": 521.578125,
+            "width": 167.453125,
+            "height": 66.59375
+          },
+          {
+            "left": 42.390625,
+            "top": 531.890625,
+            "right": 209.84375,
+            "bottom": 598.484375,
+            "width": 167.453125,
+            "height": 66.59375
+          },
+          {
+            "left": 220.15625,
+            "top": 531.890625,
+            "right": 387.609375,
+            "bottom": 598.484375,
+            "width": 167.453125,
+            "height": 66.59375
+          }
+        ],
+        "optionDisplay": "grid",
+        "optionColumns": "167.453px 167.453px",
+        "background": "linear-gradient(rgb(251, 255, 225) 0%, rgb(234, 251, 220) 27%, rgb(213, 248, 228) 61%, rgb(189, 243, 247) 100%)",
+        "scroll": null
+      },
+      "last": {
+        "innerWidth": 430,
+        "innerHeight": 932,
+        "documentScrollWidth": 430,
+        "bodyScrollWidth": 430,
+        "navText": "",
+        "progressText": "出题12/ 12",
+        "card": {
+          "left": 25.203125,
+          "top": 218.984375,
+          "right": 404.796875,
+          "bottom": 844.875,
+          "width": 379.59375,
+          "height": 625.890625
+        },
+        "layer": {
+          "left": 35.515625,
+          "top": 229.296875,
+          "right": 394.484375,
+          "bottom": 855.1875,
+          "width": 358.96875,
+          "height": 625.890625
+        },
+        "illustration": {
+          "left": 165.125,
+          "top": 104.328125,
+          "right": 411.65625,
+          "bottom": 228.15625,
+          "width": 246.53125,
+          "height": 123.828125
+        },
+        "illustrationPixels": {
+          "naturalWidth": 520,
+          "naturalHeight": 260,
+          "opaquePixels": 20428,
+          "uniqueColors": 1470
+        },
+        "actions": {
+          "left": 19.484375,
+          "top": 844.875,
+          "right": 410.515625,
+          "bottom": 919.390625,
+          "width": 391.03125,
+          "height": 74.515625
+        },
+        "primary": {
+          "left": 160.5,
+          "top": 862.0625,
+          "right": 404.796875,
+          "bottom": 911.359375,
+          "width": 244.296875,
+          "height": 49.296875
+        },
+        "options": [
+          {
+            "left": 42.390625,
+            "top": 378.078125,
+            "right": 209.84375,
+            "bottom": 444.671875,
+            "width": 167.453125,
+            "height": 66.59375
+          },
+          {
+            "left": 220.15625,
+            "top": 378.078125,
+            "right": 387.609375,
+            "bottom": 444.671875,
+            "width": 167.453125,
+            "height": 66.59375
+          },
+          {
+            "left": 42.390625,
+            "top": 454.984375,
+            "right": 209.84375,
+            "bottom": 521.578125,
+            "width": 167.453125,
+            "height": 66.59375
+          },
+          {
+            "left": 220.15625,
+            "top": 454.984375,
+            "right": 387.609375,
+            "bottom": 521.578125,
+            "width": 167.453125,
+            "height": 66.59375
+          },
+          {
+            "left": 42.390625,
+            "top": 531.890625,
+            "right": 209.84375,
+            "bottom": 598.484375,
+            "width": 167.453125,
+            "height": 66.59375
+          },
+          {
+            "left": 220.15625,
+            "top": 531.890625,
+            "right": 387.609375,
+            "bottom": 598.484375,
+            "width": 167.453125,
+            "height": 66.59375
+          }
+        ],
+        "optionDisplay": "grid",
+        "optionColumns": "167.453px 167.453px",
+        "background": "linear-gradient(rgb(251, 255, 225) 0%, rgb(234, 251, 220) 27%, rgb(213, 248, 228) 61%, rgb(189, 243, 247) 100%)",
+        "scroll": null
+      }
+    }
+  ],
+  "interactions": [
+    {
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "scenario": "single-auto-submit",
+      "postCount": 1,
+      "body": {
+        "questionId": "single-001",
+        "selectedOptionId": "A",
+        "selectedOptionIds": [
+          "A"
+        ],
+        "currentIndex": 0
+      }
+    },
+    {
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "scenario": "multiple-error-analysis",
+      "selected": [
+        "B",
+        "D"
+      ],
+      "aiCalls": [
+        "/pages/practice/ai-answer?id=practice-038&sessionId=session-038&mode=standard&questionId=multiple-012&selectedOptionId=D"
+      ]
+    },
+    {
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "scenario": "last-complete",
+      "relaunch": [
+        "/pages/practice"
+      ]
+    },
+    {
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "scenario": "previous-real-index",
+      "requestedIndex": "10"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scenario": "single-auto-submit",
+      "postCount": 1,
+      "body": {
+        "questionId": "single-001",
+        "selectedOptionId": "A",
+        "selectedOptionIds": [
+          "A"
+        ],
+        "currentIndex": 0
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scenario": "multiple-error-analysis",
+      "selected": [
+        "B",
+        "D"
+      ],
+      "aiCalls": [
+        "/pages/practice/ai-answer?id=practice-038&sessionId=session-038&mode=standard&questionId=multiple-012&selectedOptionId=D"
+      ]
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scenario": "last-complete",
+      "relaunch": [
+        "/pages/practice"
+      ]
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scenario": "previous-real-index",
+      "requestedIndex": "10"
+    },
+    {
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "scenario": "single-auto-submit",
+      "postCount": 1,
+      "body": {
+        "questionId": "single-001",
+        "selectedOptionId": "A",
+        "selectedOptionIds": [
+          "A"
+        ],
+        "currentIndex": 0
+      }
+    },
+    {
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "scenario": "multiple-error-analysis",
+      "selected": [
+        "B",
+        "D"
+      ],
+      "aiCalls": [
+        "/pages/practice/ai-answer?id=practice-038&sessionId=session-038&mode=standard&questionId=multiple-012&selectedOptionId=D"
+      ]
+    },
+    {
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "scenario": "last-complete",
+      "relaunch": [
+        "/pages/practice"
+      ]
+    },
+    {
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "scenario": "previous-real-index",
+      "requestedIndex": "10"
+    }
+  ],
+  "specialChecks": [
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scenario": "text-non-empty-submit",
+      "body": {
+        "questionId": "text-003",
+        "selectedOptionId": "每周按客户目标分层复盘，并记录下一次跟进动作。",
+        "selectedOptionIds": [
+          "每周按客户目标分层复盘，并记录下一次跟进动作。"
+        ],
+        "currentIndex": 2
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scenario": "rapid-double-click-guard",
+      "postCount": 1
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scenario": "long-option-and-analysis-scroll",
+      "optionColumns": "151.859px 151.875px",
+      "optionWidths": [
+        151.859375,
+        151.875,
+        151.859375,
+        151.875,
+        151.859375,
+        151.875
+      ],
+      "scroll": {
+        "tagName": "DIV",
+        "className": "uni-scroll-view",
+        "clientHeight": 566,
+        "scrollHeight": 1286,
+        "scrollTop": 0
+      },
+      "scrollResult": {
+        "scrollTop": 720,
+        "maxScrollTop": 720
+      },
+      "actions": {
+        "left": 17.671875,
+        "top": 764.96875,
+        "right": 372.328125,
+        "bottom": 832.5625,
+        "width": 354.65625,
+        "height": 67.59375
+      }
+    },
+    {
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "scenario": "long-option-and-analysis-scroll",
+      "optionColumns": "147.859px 147.859px",
+      "optionWidths": [
+        147.859375,
+        147.859375,
+        147.859375,
+        147.859375,
+        147.859375,
+        147.859375
+      ],
+      "scroll": {
+        "tagName": "DIV",
+        "className": "uni-scroll-view",
+        "clientHeight": 554,
+        "scrollHeight": 1048,
+        "scrollTop": 0
+      },
+      "scrollResult": {
+        "scrollTop": 494,
+        "maxScrollTop": 494
+      },
+      "actions": {
+        "left": 12.46875,
+        "top": 727.0625,
+        "right": 347.53125,
+        "bottom": 789.453125,
+        "width": 335.0625,
+        "height": 62.390625
+      }
+    }
+  ],
+  "failures": [],
+  "errors": [],
+  "status": "passed",
+  "finishedAt": "2026-07-18T08:23:08.969Z"
+}

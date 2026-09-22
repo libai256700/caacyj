@@ -1,0 +1,57 @@
+{
+  "url": "http://127.0.0.1:5173/yunjikeji/#/pages/home",
+  "requestedViewport": {
+    "width": 390,
+    "height": 844,
+    "mobile": true,
+    "touch": true
+  },
+  "pageTitle": "首页",
+  "structure": {
+    "mappedTextsFound": [
+      "考题测试",
+      "考题自测",
+      "考题测评",
+      "错题测评",
+      "常用功能",
+      "岗位查询",
+      "联系客服",
+      "个人资料"
+    ],
+    "forbiddenNavTextsFound": [],
+    "creationCards": 3,
+    "quickItems": 5,
+    "assistantCards": 3,
+    "navItems": 3,
+    "navWidthSpread": 0.01041412353515625,
+    "horizontalOverflow": false
+  },
+  "resources": {
+    "totalRequests": 80,
+    "failedRequests": 0,
+    "imagesLoaded": 5,
+    "brandOwlStatus": 200
+  },
+  "console": {
+    "errors": [],
+    "warnings": [],
+    "issues": []
+  },
+  "clickResults": {
+    "default": [
+      { "method": "reLaunch", "url": "/pages/center" },
+      { "method": "navigateTo", "url": "/pages/practice" },
+      { "method": "navigateTo", "url": "/pages/practice" },
+      { "method": "navigateTo", "url": "/pages/jobs" },
+      { "method": "navigateTo", "url": "/pages/service/customer-service-chat?conversationId=default" },
+      { "method": "reLaunch", "url": "/pages/profile" },
+      { "method": "reLaunch", "url": "/pages/center" },
+      { "method": "reLaunch", "url": "/pages/profile" }
+    ],
+    "enterprise": [
+      { "method": "reLaunch", "url": "/pages/service/customer-service" }
+    ],
+    "directClickEvidence": "考题自测直接点击触发导航，未登录守卫随后将页面重定向到 /pages/auth/login。"
+  },
+  "passed": true
+}

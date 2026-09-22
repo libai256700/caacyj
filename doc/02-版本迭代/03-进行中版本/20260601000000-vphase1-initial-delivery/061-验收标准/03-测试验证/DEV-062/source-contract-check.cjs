@@ -1,0 +1,17 @@
+const assert = require('node:assert/strict')
+const fs = require('node:fs')
+const path = require('node:path')
+
+const root = path.resolve(__dirname, '../../../../../../..')
+const home = fs.readFileSync(path.join(root, 'code/develop/yunjikeji/src/pages/home.vue'), 'utf8')
+const topics = fs.readFileSync(path.join(root, 'code/develop/yunjikeji/src/pages/practice/exam-topics.vue'), 'utf8')
+
+assert(home.includes("openPage('/pages/practice/exam-topics?mode=wrongReview')"))
+assert(!home.includes("startPractice(practice.id, 'wrongReview')"))
+assert(topics.includes("type TopicEntryMode = 'practice' | 'chapter-test' | 'wrongReview'"))
+assert(topics.includes("fetchPracticeTopics('', mode.value)"))
+assert(topics.includes("startPractice(DEFAULT_PRACTICE_ID, 'wrongReview', selectedTopicId)"))
+assert(topics.includes('`${result.nextPage}?id=${encodeURIComponent(result.practiceId)}`'))
+assert(topics.includes('`/pages/practice/exam-assessment?practiceId='))
+assert(topics.includes("SelfTestLoadingOverlay"))
+console.log(JSON.stringify({ status: 'passed', checks: 8 }))

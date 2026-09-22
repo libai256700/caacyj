@@ -1,0 +1,68 @@
+{
+  "status": "passed",
+  "url": "http://127.0.0.1:5173/yunjikeji/?dev037=1784356718236#/pages/practice/exam-assessment",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "staticCheck": {
+    "COLOR_MAP_ONLY": 1,
+    "STRUCTURE_PRESERVED": 1,
+    "expectedNewCounts": {
+      "#F5F0EA": 2,
+      "rgba(247,161,106,.94)": 1,
+      "rgba(248,220,200,.92)": 1
+    },
+    "remainingOldCounts": {
+      "#edf7ff": 0,
+      "rgba(226,244,255,.94)": 0,
+      "rgba(244,250,255,.92)": 0,
+      "#f3f8fc": 0
+    },
+    "structureTokens": {
+      "linearGradient": true,
+      "stops": true,
+      "backgroundAsset": true
+    }
+  },
+  "runtime": {
+    "title": "考题测评",
+    "bodyText": "\n考题测评\n•••\n01\n判断题\n02\n单选题\n03\n多选题\n04\n填空题\n05\n简答题\n题目分类\n判断题\n题目编号\nUAV-THEORY-LIVE\n题量\n10题\n总分\n20分\n答题时间\n45分钟\n阅卷方式\n系统阅卷\n开始练习\n错题复练",
+    "innerWidth": 390,
+    "scrollWidth": 390,
+    "bodyScrollWidth": 390,
+    "pageBackgroundColor": "rgb(245, 240, 234)",
+    "backdropBackgroundImage": "linear-gradient(rgba(247, 161, 106, 0.94) 0%, rgba(248, 220, 200, 0.92) 58%, rgb(245, 240, 234) 100%), url(\"http://127.0.0.1:5173/yunjikeji/src/static/backgrounds/focus-atmosphere.png\")",
+    "tabCount": 5,
+    "tabY": [
+      67,
+      67,
+      67,
+      67,
+      67
+    ],
+    "buttons": [
+      {
+        "left": 24.9375,
+        "right": 365.0625,
+        "width": 340.125,
+        "height": 52
+      },
+      {
+        "left": 24.9375,
+        "right": 365.0625,
+        "width": 340.125,
+        "height": 52
+      }
+    ],
+    "introDomCount": 0
+  },
+  "geometry": {
+    "tabYMatchesBaseline": true,
+    "buttonsMatchBaseline": true,
+    "scrollWidthMatchesBaseline": true,
+    "bodyScrollWidthMatchesBaseline": true
+  },
+  "consoleErrors": [],
+  "pageErrors": []
+}

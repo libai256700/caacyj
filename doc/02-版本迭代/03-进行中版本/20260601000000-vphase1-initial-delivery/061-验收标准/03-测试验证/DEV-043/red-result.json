@@ -1,0 +1,262 @@
+{
+  "status": "FAIL",
+  "workspaceRoot": "E:/huiyitechworkspace/feixingxueyuan",
+  "outputGeneratedAt": "2026-08-10",
+  "summary": {
+    "totalChecks": 16,
+    "passedChecks": 0,
+    "failedChecks": 16
+  },
+  "checks": [
+    {
+      "checkId": "backend_parent_module_declared",
+      "title": "后端父 POM 已声明消息推送模块",
+      "acIds": [
+        "AC-PUSH-101",
+        "AC-PUSH-301"
+      ],
+      "passed": false,
+      "detail": "父 POM 必须纳入 yunjikeji-module-notification。",
+      "evidence": [
+        "code/develop/yunjikeji-admin-server/pom.xml"
+      ]
+    },
+    {
+      "checkId": "backend_module_pom_exists",
+      "title": "后端消息推送模块 POM 已建立",
+      "acIds": [
+        "AC-PUSH-101",
+        "AC-PUSH-301"
+      ],
+      "passed": false,
+      "detail": "消息推送模块至少需要独立 pom.xml。",
+      "evidence": [
+        "code/develop/yunjikeji-admin-server/yunjikeji-module-notification/pom.xml"
+      ]
+    },
+    {
+      "checkId": "backend_admin_controller_exists",
+      "title": "后端管理端控制器目录已建立",
+      "acIds": [
+        "AC-PUSH-101",
+        "AC-PUSH-301"
+      ],
+      "passed": false,
+      "detail": "管理平台至少需要消息推送管理控制器。",
+      "evidence": [
+        "code/develop/yunjikeji-admin-server/yunjikeji-module-notification/src/main/java/com/huiyitech/notification/controller/admin/"
+      ]
+    },
+    {
+      "checkId": "backend_app_controller_exists",
+      "title": "后端 App 控制器目录已建立",
+      "acIds": [
+        "AC-PUSH-101",
+        "AC-PUSH-102"
+      ],
+      "passed": false,
+      "detail": "App 侧至少需要设备绑定、消息列表、已读、打开上报接口。",
+      "evidence": [
+        "code/develop/yunjikeji-admin-server/yunjikeji-module-notification/src/main/java/com/huiyitech/notification/controller/app/"
+      ]
+    },
+    {
+      "checkId": "backend_service_exists",
+      "title": "后端核心服务目录已建立",
+      "acIds": [
+        "AC-PUSH-101",
+        "AC-PUSH-102",
+        "AC-PUSH-201"
+      ],
+      "passed": false,
+      "detail": "消息发送、设备绑定、消息中心读取与状态回写必须有 service 入口。",
+      "evidence": [
+        "code/develop/yunjikeji-admin-server/yunjikeji-module-notification/src/main/java/com/huiyitech/notification/service/"
+      ]
+    },
+    {
+      "checkId": "backend_push_provider_exists",
+      "title": "后端 PushProvider 与桥接 Provider 已建立",
+      "acIds": [
+        "AC-PUSH-102",
+        "AC-PUSH-301"
+      ],
+      "passed": false,
+      "detail": "后端必须按 PushProvider / NoopPushProvider / UniCloudHttpPushProvider 或等价 Bridge 方式建模，不得期待 Java UniPush SDK。",
+      "evidence": [
+        "code/develop/yunjikeji-admin-server/yunjikeji-module-notification/src/main/java/com/huiyitech/notification/provider/"
+      ]
+    },
+    {
+      "checkId": "backend_admin_api_contract_declared",
+      "title": "后端管理端消息推送 API 契约已落代码",
+      "acIds": [
+        "AC-PUSH-101",
+        "AC-PUSH-201",
+        "AC-PUSH-301"
+      ],
+      "passed": false,
+      "detail": "必须覆盖 page/get/create/update/delete/publish/cancel/retry/delivery-page/statistics。",
+      "evidence": [
+        "MISSING /notification/push/page",
+        "MISSING /notification/push/get",
+        "MISSING /notification/push/create",
+        "MISSING /notification/push/update",
+        "MISSING /notification/push/delete",
+        "MISSING /notification/push/publish",
+        "MISSING /notification/push/cancel",
+        "MISSING /notification/push/retry",
+        "MISSING /notification/push/delivery-page",
+        "MISSING /notification/push/statistics"
+      ]
+    },
+    {
+      "checkId": "backend_app_api_contract_declared",
+      "title": "后端 App 消息推送 API 契约已落代码",
+      "acIds": [
+        "AC-PUSH-101",
+        "AC-PUSH-102",
+        "AC-PUSH-301"
+      ],
+      "passed": false,
+      "detail": "必须覆盖 device bind/unbind、message page/{id}/unread/{id}/read/read-all/{id}/open。",
+      "evidence": [
+        "MISSING /notification/devices/bind",
+        "MISSING /notification/devices/unbind",
+        "MISSING /notification/messages/page",
+        "MISSING /notification/messages/{id}",
+        "MISSING /notification/messages/unread",
+        "MISSING /notification/messages/{id}/read",
+        "MISSING /notification/messages/read-all",
+        "MISSING /notification/messages/{id}/open"
+      ]
+    },
+    {
+      "checkId": "admin_ui_push_api_exists",
+      "title": "管理平台推送 API 封装已建立",
+      "acIds": [
+        "AC-PUSH-101",
+        "AC-PUSH-201"
+      ],
+      "passed": false,
+      "detail": "管理平台必须落前端 API 封装。",
+      "evidence": [
+        "MISSING /notification/push/page",
+        "MISSING /notification/push/get",
+        "MISSING /notification/push/create",
+        "MISSING /notification/push/update",
+        "MISSING /notification/push/delete",
+        "MISSING /notification/push/publish",
+        "MISSING /notification/push/cancel",
+        "MISSING /notification/push/retry",
+        "MISSING /notification/push/delivery-page",
+        "MISSING /notification/push/statistics"
+      ]
+    },
+    {
+      "checkId": "admin_ui_push_view_exists",
+      "title": "管理平台推送页面已建立",
+      "acIds": [
+        "AC-PUSH-101",
+        "AC-PUSH-201"
+      ],
+      "passed": false,
+      "detail": "管理平台至少应存在消息管理页面、编辑页或投递明细页之一。",
+      "evidence": [
+        "src/views/system/notify/push/index.vue",
+        "src/views/system/notify/push/PushForm.vue",
+        "src/views/system/notify/push/PushDetail.vue",
+        "src/views/system/notify/push/DeliveryDetail.vue",
+        "src/views/messages/push/index.vue",
+        "src/views/messages/push/PushForm.vue",
+        "src/views/messages/push/PushDetail.vue",
+        "src/views/messages/push/DeliveryDetail.vue"
+      ]
+    },
+    {
+      "checkId": "app_service_contract_exists",
+      "title": "手机 App 消息中心服务契约已建立",
+      "acIds": [
+        "AC-PUSH-101",
+        "AC-PUSH-102"
+      ],
+      "passed": false,
+      "detail": "App 侧必须具备设备绑定、消息列表、未读数、已读和打开上报服务封装。",
+      "evidence": [
+        "MISSING /app-api/yj/notification/devices/bind",
+        "MISSING /app-api/yj/notification/devices/unbind",
+        "MISSING /app-api/yj/notification/messages/page",
+        "MISSING /app-api/yj/notification/messages/{id}",
+        "MISSING /app-api/yj/notification/messages/unread",
+        "MISSING /app-api/yj/notification/messages/{id}/read",
+        "MISSING /app-api/yj/notification/messages/read-all",
+        "MISSING /app-api/yj/notification/messages/{id}/open"
+      ]
+    },
+    {
+      "checkId": "app_message_center_page_registered",
+      "title": "手机 App 消息中心页面已注册",
+      "acIds": [
+        "AC-PUSH-101"
+      ],
+      "passed": false,
+      "detail": "pages.json 至少需要登记消息中心页面路由。",
+      "evidence": [
+        "code/develop/yunjikeji/src/pages.json"
+      ]
+    },
+    {
+      "checkId": "app_push_lifecycle_exists",
+      "title": "手机 App 推送生命周期已接入",
+      "acIds": [
+        "AC-PUSH-102"
+      ],
+      "passed": false,
+      "detail": "App.vue 至少需要处理 clientId 获取/绑定与 onPushMessage 接收。",
+      "evidence": [
+        "code/develop/yunjikeji/src/App.vue"
+      ]
+    },
+    {
+      "checkId": "app_manifest_push_config_exists",
+      "title": "手机 App manifest 已出现推送配置",
+      "acIds": [
+        "AC-PUSH-102"
+      ],
+      "passed": false,
+      "detail": "manifest.json 需要出现 UniPush 相关配置锚点。",
+      "evidence": [
+        "code/develop/yunjikeji/src/manifest.json"
+      ]
+    },
+    {
+      "checkId": "app_unicloud_push_bridge_exists",
+      "title": "App 仓 UniCloud 推送桥接函数已建立",
+      "acIds": [
+        "AC-PUSH-102",
+        "AC-PUSH-301"
+      ],
+      "passed": false,
+      "detail": "App 仓必须存在 `uniCloud-aliyun/cloudfunctions/yj-push-bridge/index.js` 或设计最终确认的等价正式桥接路径。",
+      "evidence": [
+        "code/develop/yunjikeji/uniCloud-aliyun/cloudfunctions/yj-push-bridge/index.js"
+      ]
+    },
+    {
+      "checkId": "sql_push_tables_exist",
+      "title": "四张消息推送表已落脚本或代码引用",
+      "acIds": [
+        "AC-PUSH-201",
+        "AC-PUSH-301"
+      ],
+      "passed": false,
+      "detail": "必须能在仓库中定位到四张推送表。",
+      "evidence": [
+        "MISSING yj_push_message",
+        "MISSING yj_push_recipient",
+        "MISSING yj_push_device",
+        "MISSING yj_push_delivery"
+      ]
+    }
+  ]
+}

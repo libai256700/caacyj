@@ -1,0 +1,715 @@
+{
+  "generatedAt": "2026-07-17T23:31:50.903Z",
+  "homeUrl": "http://127.0.0.1:5173/yunjikeji/#/pages/home",
+  "viewports": [
+    {
+      "viewport": {
+        "name": "360x800",
+        "width": 360,
+        "height": 800
+      },
+      "screenshot": "E:\\huiyitechworkspace\\feixingxueyuan\\doc\\02-版本迭代\\03-进行中版本\\20260601000000-vphase1-initial-delivery\\061-验收标准\\03-测试验证\\DEV-031\\home-360x800.png",
+      "geometry": {
+        "scrollWidth": 360,
+        "viewportWidth": 360,
+        "viewportHeight": 800,
+        "primary": {
+          "x": 18.265625,
+          "y": 193.625,
+          "width": 144.375,
+          "height": 121.90625,
+          "top": 193.625,
+          "bottom": 315.53125
+        },
+        "exam": {
+          "x": 172.234375,
+          "y": 193.625,
+          "width": 169.5,
+          "height": 56.15625,
+          "top": 193.625,
+          "bottom": 249.78125
+        },
+        "wrong": {
+          "x": 172.234375,
+          "y": 259.375,
+          "width": 169.5,
+          "height": 56.15625,
+          "top": 259.375,
+          "bottom": 315.53125
+        },
+        "gridGap": 9.6,
+        "tab": {
+          "x": 0,
+          "y": 737.59375,
+          "width": 360,
+          "height": 62.40625,
+          "top": 737.59375,
+          "bottom": 800
+        },
+        "owl": {
+          "x": 151.671875,
+          "y": 722.75,
+          "width": 56.625,
+          "height": 56.625,
+          "top": 722.75,
+          "bottom": 779.375
+        },
+        "owlImage": {
+          "x": 150.7265625,
+          "y": 721.8046875,
+          "width": 58.515625,
+          "height": 58.515625,
+          "top": 721.8046875,
+          "bottom": 780.3203125
+        },
+        "owlStyle": {
+          "borderWidth": "3px",
+          "borderColor": "rgb(255, 255, 255)",
+          "borderRadius": "50%",
+          "overflow": "hidden"
+        },
+        "centerLabelOverlap": 0,
+        "activeIcon": {
+          "x": 54.390625,
+          "y": 751.59375,
+          "width": 20.171875,
+          "height": 20.15625,
+          "top": 751.59375,
+          "bottom": 771.75
+        },
+        "labels": [
+          {
+            "text": "首页",
+            "fontSize": "11.52px",
+            "rect": {
+              "x": 52.953125,
+              "y": 775.109375,
+              "width": 23.046875,
+              "height": 13.8125,
+              "top": 775.109375,
+              "bottom": 788.921875
+            }
+          },
+          {
+            "text": "AI工作台",
+            "fontSize": "11.04px",
+            "rect": {
+              "x": 157.421875,
+              "y": 781.765625,
+              "width": 45.125,
+              "height": 14.40625,
+              "top": 781.765625,
+              "bottom": 796.171875
+            }
+          },
+          {
+            "text": "我的",
+            "fontSize": "11.52px",
+            "rect": {
+              "x": 283.984375,
+              "y": 775.109375,
+              "width": 23.046875,
+              "height": 13.8125,
+              "top": 775.109375,
+              "bottom": 788.921875
+            }
+          }
+        ],
+        "illustrationAreas": [
+          {
+            "cardArea": 17600.21484375,
+            "visualArea": 4450.1220703125
+          },
+          {
+            "cardArea": 9518.484375,
+            "visualArea": 2823.3447265625
+          },
+          {
+            "cardArea": 9518.484375,
+            "visualArea": 2823.3447265625
+          },
+          {
+            "cardArea": 20338.119140625,
+            "visualArea": 5169.72900390625
+          },
+          {
+            "cardArea": 20338.119140625,
+            "visualArea": 5169.72900390625
+          }
+        ],
+        "textOverflow": []
+      },
+      "bottom": {
+        "tab": {
+          "top": 737.59375,
+          "bottom": 800,
+          "height": 62.40625
+        },
+        "finalCard": {
+          "top": 389.1875,
+          "bottom": 518.78125,
+          "height": 129.59375
+        }
+      },
+      "checks": {
+        "gridRatio": 0.44632506376072334,
+        "gridRatioOk": true,
+        "gapOk": true,
+        "heightOk": true,
+        "illustrationsOk": true,
+        "tabMetricsOk": true,
+        "noHorizontalOverflow": true,
+        "noTextClipping": true,
+        "centerLabelClearOfOwl": true,
+        "finalCardClearOfTabBar": true,
+        "noConsoleErrors": true,
+        "noPageErrors": true
+      },
+      "navigation": {
+        "selfAssessment": {
+          "expectedMethod": "reLaunch",
+          "expectedUrl": "/pages/center",
+          "actual": {
+            "method": "reLaunch",
+            "url": "/pages/center"
+          },
+          "passed": true
+        },
+        "practiceAssessment": {
+          "expectedMethod": "navigateTo",
+          "expectedUrl": "/pages/practice",
+          "actual": {
+            "method": "navigateTo",
+            "url": "/pages/practice"
+          },
+          "passed": true
+        },
+        "wrongRedo": {
+          "expectedMethod": "navigateTo",
+          "expectedUrl": "/pages/practice",
+          "actual": {
+            "method": "navigateTo",
+            "url": "/pages/practice"
+          },
+          "passed": true
+        },
+        "jobs": {
+          "expectedMethod": "navigateTo",
+          "expectedUrl": "/pages/jobs",
+          "actual": {
+            "method": "navigateTo",
+            "url": "/pages/jobs"
+          },
+          "passed": true
+        },
+        "customerService": {
+          "expectedMethod": "navigateTo",
+          "expectedUrl": "/pages/service/customer-service-chat?conversationId=default",
+          "actual": {
+            "method": "navigateTo",
+            "url": "/pages/service/customer-service-chat?conversationId=default"
+          },
+          "passed": true
+        },
+        "aiWorkspace": {
+          "expectedMethod": "reLaunch",
+          "expectedUrl": "/pages/center",
+          "actual": {
+            "method": "reLaunch",
+            "url": "/pages/center"
+          },
+          "passed": true
+        },
+        "profile": {
+          "expectedMethod": "reLaunch",
+          "expectedUrl": "/pages/profile",
+          "actual": {
+            "method": "reLaunch",
+            "url": "/pages/profile"
+          },
+          "passed": true
+        },
+        "enterpriseCustomerServiceSourceBranch": {
+          "expectedUrl": "/pages/service/customer-service",
+          "passed": true
+        }
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "passed": true
+    },
+    {
+      "viewport": {
+        "name": "390x844",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "E:\\huiyitechworkspace\\feixingxueyuan\\doc\\02-版本迭代\\03-进行中版本\\20260601000000-vphase1-initial-delivery\\061-验收标准\\03-测试验证\\DEV-031\\home-390x844.png",
+      "geometry": {
+        "scrollWidth": 390,
+        "viewportWidth": 390,
+        "viewportHeight": 844,
+        "primary": {
+          "x": 23.859375,
+          "y": 209.6875,
+          "width": 153.140625,
+          "height": 132.078125,
+          "top": 209.6875,
+          "bottom": 341.765625
+        },
+        "exam": {
+          "x": 186.359375,
+          "y": 209.6875,
+          "width": 179.78125,
+          "height": 61.359375,
+          "top": 209.6875,
+          "bottom": 271.046875
+        },
+        "wrong": {
+          "x": 186.359375,
+          "y": 280.40625,
+          "width": 179.78125,
+          "height": 61.359375,
+          "top": 280.40625,
+          "bottom": 341.765625
+        },
+        "gridGap": 9.36,
+        "tab": {
+          "x": 0,
+          "y": 776.453125,
+          "width": 390,
+          "height": 67.546875,
+          "top": 776.453125,
+          "bottom": 844
+        },
+        "owl": {
+          "x": 164.3125,
+          "y": 760.296875,
+          "width": 61.359375,
+          "height": 61.359375,
+          "top": 760.296875,
+          "bottom": 821.65625
+        },
+        "owlImage": {
+          "x": 164.240234375,
+          "y": 760.224609375,
+          "width": 61.50390625,
+          "height": 61.50390625,
+          "top": 760.224609375,
+          "bottom": 821.728515625
+        },
+        "owlStyle": {
+          "borderWidth": "4px",
+          "borderColor": "rgb(255, 255, 255)",
+          "borderRadius": "50%",
+          "overflow": "hidden"
+        },
+        "centerLabelOverlap": 0,
+        "activeIcon": {
+          "x": 62.390625,
+          "y": 791.546875,
+          "width": 21.84375,
+          "height": 21.84375,
+          "top": 791.546875,
+          "bottom": 813.390625
+        },
+        "labels": [
+          {
+            "text": "首页",
+            "fontSize": "12.48px",
+            "rect": {
+              "x": 60.828125,
+              "y": 817.015625,
+              "width": 24.96875,
+              "height": 14.96875,
+              "top": 817.015625,
+              "bottom": 831.984375
+            }
+          },
+          {
+            "text": "AI工作台",
+            "fontSize": "11.96px",
+            "rect": {
+              "x": 170.5625,
+              "y": 824.25,
+              "width": 48.859375,
+              "height": 15.59375,
+              "top": 824.25,
+              "bottom": 839.84375
+            }
+          },
+          {
+            "text": "我的",
+            "fontSize": "12.48px",
+            "rect": {
+              "x": 304.203125,
+              "y": 817.015625,
+              "width": 24.96875,
+              "height": 14.96875,
+              "top": 817.015625,
+              "bottom": 831.984375
+            }
+          }
+        ],
+        "illustrationAreas": [
+          {
+            "cardArea": 20226.526611328125,
+            "visualArea": 5299.385009765625
+          },
+          {
+            "cardArea": 11031.26513671875,
+            "visualArea": 3396.8798828125
+          },
+          {
+            "cardArea": 11031.26513671875,
+            "visualArea": 3396.8798828125
+          },
+          {
+            "cardArea": 23368.458251953125,
+            "visualArea": 6065.806640625
+          },
+          {
+            "cardArea": 23370.65185546875,
+            "visualArea": 6065.806640625
+          }
+        ],
+        "textOverflow": []
+      },
+      "bottom": {
+        "tab": {
+          "top": 776.453125,
+          "bottom": 844,
+          "height": 67.546875
+        },
+        "finalCard": {
+          "top": 421.390625,
+          "bottom": 561.78125,
+          "height": 140.390625
+        }
+      },
+      "checks": {
+        "gridRatio": 0.44741085107121137,
+        "gridRatioOk": true,
+        "gapOk": true,
+        "heightOk": true,
+        "illustrationsOk": true,
+        "tabMetricsOk": true,
+        "noHorizontalOverflow": true,
+        "noTextClipping": true,
+        "centerLabelClearOfOwl": true,
+        "finalCardClearOfTabBar": true,
+        "noConsoleErrors": true,
+        "noPageErrors": true
+      },
+      "navigation": {
+        "selfAssessment": {
+          "expectedMethod": "reLaunch",
+          "expectedUrl": "/pages/center",
+          "actual": {
+            "method": "reLaunch",
+            "url": "/pages/center"
+          },
+          "passed": true
+        },
+        "practiceAssessment": {
+          "expectedMethod": "navigateTo",
+          "expectedUrl": "/pages/practice",
+          "actual": {
+            "method": "navigateTo",
+            "url": "/pages/practice"
+          },
+          "passed": true
+        },
+        "wrongRedo": {
+          "expectedMethod": "navigateTo",
+          "expectedUrl": "/pages/practice",
+          "actual": {
+            "method": "navigateTo",
+            "url": "/pages/practice"
+          },
+          "passed": true
+        },
+        "jobs": {
+          "expectedMethod": "navigateTo",
+          "expectedUrl": "/pages/jobs",
+          "actual": {
+            "method": "navigateTo",
+            "url": "/pages/jobs"
+          },
+          "passed": true
+        },
+        "customerService": {
+          "expectedMethod": "navigateTo",
+          "expectedUrl": "/pages/service/customer-service-chat?conversationId=default",
+          "actual": {
+            "method": "navigateTo",
+            "url": "/pages/service/customer-service-chat?conversationId=default"
+          },
+          "passed": true
+        },
+        "aiWorkspace": {
+          "expectedMethod": "reLaunch",
+          "expectedUrl": "/pages/center",
+          "actual": {
+            "method": "reLaunch",
+            "url": "/pages/center"
+          },
+          "passed": true
+        },
+        "profile": {
+          "expectedMethod": "reLaunch",
+          "expectedUrl": "/pages/profile",
+          "actual": {
+            "method": "reLaunch",
+            "url": "/pages/profile"
+          },
+          "passed": true
+        },
+        "enterpriseCustomerServiceSourceBranch": {
+          "expectedUrl": "/pages/service/customer-service",
+          "passed": true
+        }
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "passed": true
+    },
+    {
+      "viewport": {
+        "name": "430x932",
+        "width": 430,
+        "height": 932
+      },
+      "screenshot": "E:\\huiyitechworkspace\\feixingxueyuan\\doc\\02-版本迭代\\03-进行中版本\\20260601000000-vphase1-initial-delivery\\061-验收标准\\03-测试验证\\DEV-031\\home-430x932.png",
+      "geometry": {
+        "scrollWidth": 430,
+        "viewportWidth": 430,
+        "viewportHeight": 932,
+        "primary": {
+          "x": 26.203125,
+          "y": 231.09375,
+          "width": 168.9375,
+          "height": 145.625,
+          "top": 231.09375,
+          "bottom": 376.71875
+        },
+        "exam": {
+          "x": 205.453125,
+          "y": 231.09375,
+          "width": 198.34375,
+          "height": 67.65625,
+          "top": 231.09375,
+          "bottom": 298.75
+        },
+        "wrong": {
+          "x": 205.453125,
+          "y": 309.0625,
+          "width": 198.34375,
+          "height": 67.65625,
+          "top": 309.0625,
+          "bottom": 376.71875
+        },
+        "gridGap": 10.32,
+        "tab": {
+          "x": 0,
+          "y": 857.640625,
+          "width": 430,
+          "height": 74.359375,
+          "top": 857.640625,
+          "bottom": 932
+        },
+        "owl": {
+          "x": 181.15625,
+          "y": 839.71875,
+          "width": 67.640625,
+          "height": 67.640625,
+          "top": 839.71875,
+          "bottom": 907.359375
+        },
+        "owlImage": {
+          "x": 180.552734375,
+          "y": 839.115234375,
+          "width": 68.84765625,
+          "height": 68.84765625,
+          "top": 839.115234375,
+          "bottom": 907.962890625
+        },
+        "owlStyle": {
+          "borderWidth": "4px",
+          "borderColor": "rgb(255, 255, 255)",
+          "borderRadius": "50%",
+          "overflow": "hidden"
+        },
+        "centerLabelOverlap": 0,
+        "activeIcon": {
+          "x": 68.78125,
+          "y": 874.171875,
+          "width": 24.09375,
+          "height": 24.078125,
+          "top": 874.171875,
+          "bottom": 898.25
+        },
+        "labels": [
+          {
+            "text": "首页",
+            "fontSize": "13.76px",
+            "rect": {
+              "x": 67.0625,
+              "y": 902.25,
+              "width": 27.53125,
+              "height": 16.515625,
+              "top": 902.25,
+              "bottom": 918.765625
+            }
+          },
+          {
+            "text": "AI工作台",
+            "fontSize": "13.1867px",
+            "rect": {
+              "x": 188.046875,
+              "y": 910.21875,
+              "width": 53.875,
+              "height": 17.203125,
+              "top": 910.21875,
+              "bottom": 927.421875
+            }
+          },
+          {
+            "text": "我的",
+            "fontSize": "13.76px",
+            "rect": {
+              "x": 335.390625,
+              "y": 902.25,
+              "width": 27.53125,
+              "height": 16.515625,
+              "top": 902.25,
+              "bottom": 918.765625
+            }
+          }
+        ],
+        "illustrationAreas": [
+          {
+            "cardArea": 24601.5234375,
+            "visualArea": 6442.570556640625
+          },
+          {
+            "cardArea": 13419.1943359375,
+            "visualArea": 4129.5908203125
+          },
+          {
+            "cardArea": 13419.1943359375,
+            "visualArea": 4129.5908203125
+          },
+          {
+            "cardArea": 28426.994873046875,
+            "visualArea": 7374.460693359375
+          },
+          {
+            "cardArea": 28426.994873046875,
+            "visualArea": 7374.460693359375
+          }
+        ],
+        "textOverflow": []
+      },
+      "bottom": {
+        "tab": {
+          "top": 857.640625,
+          "bottom": 932,
+          "height": 74.359375
+        },
+        "finalCard": {
+          "top": 464.3125,
+          "bottom": 619.109375,
+          "height": 154.796875
+        }
+      },
+      "checks": {
+        "gridRatio": 0.447396559201009,
+        "gridRatioOk": true,
+        "gapOk": true,
+        "heightOk": true,
+        "illustrationsOk": true,
+        "tabMetricsOk": true,
+        "noHorizontalOverflow": true,
+        "noTextClipping": true,
+        "centerLabelClearOfOwl": true,
+        "finalCardClearOfTabBar": true,
+        "noConsoleErrors": true,
+        "noPageErrors": true
+      },
+      "navigation": {
+        "selfAssessment": {
+          "expectedMethod": "reLaunch",
+          "expectedUrl": "/pages/center",
+          "actual": {
+            "method": "reLaunch",
+            "url": "/pages/center"
+          },
+          "passed": true
+        },
+        "practiceAssessment": {
+          "expectedMethod": "navigateTo",
+          "expectedUrl": "/pages/practice",
+          "actual": {
+            "method": "navigateTo",
+            "url": "/pages/practice"
+          },
+          "passed": true
+        },
+        "wrongRedo": {
+          "expectedMethod": "navigateTo",
+          "expectedUrl": "/pages/practice",
+          "actual": {
+            "method": "navigateTo",
+            "url": "/pages/practice"
+          },
+          "passed": true
+        },
+        "jobs": {
+          "expectedMethod": "navigateTo",
+          "expectedUrl": "/pages/jobs",
+          "actual": {
+            "method": "navigateTo",
+            "url": "/pages/jobs"
+          },
+          "passed": true
+        },
+        "customerService": {
+          "expectedMethod": "navigateTo",
+          "expectedUrl": "/pages/service/customer-service-chat?conversationId=default",
+          "actual": {
+            "method": "navigateTo",
+            "url": "/pages/service/customer-service-chat?conversationId=default"
+          },
+          "passed": true
+        },
+        "aiWorkspace": {
+          "expectedMethod": "reLaunch",
+          "expectedUrl": "/pages/center",
+          "actual": {
+            "method": "reLaunch",
+            "url": "/pages/center"
+          },
+          "passed": true
+        },
+        "profile": {
+          "expectedMethod": "reLaunch",
+          "expectedUrl": "/pages/profile",
+          "actual": {
+            "method": "reLaunch",
+            "url": "/pages/profile"
+          },
+          "passed": true
+        },
+        "enterpriseCustomerServiceSourceBranch": {
+          "expectedUrl": "/pages/service/customer-service",
+          "passed": true
+        }
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "passed": true
+    }
+  ],
+  "passed": true
+}

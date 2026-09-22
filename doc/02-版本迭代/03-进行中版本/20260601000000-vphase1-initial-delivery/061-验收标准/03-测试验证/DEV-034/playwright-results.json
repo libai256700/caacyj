@@ -1,0 +1,739 @@
+{
+  "generatedAt": "2026-07-18T03:06:52.936Z",
+  "command": "pnpm exec node <DEV-034>/dev034-home-tone.spec.cjs",
+  "allPassed": true,
+  "results": [
+    {
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "status": 200,
+      "passed": true,
+      "checks": {
+        "httpOk": true,
+        "targetDomRemoved": true,
+        "targetTextsRemoved": true,
+        "expectedContentPreserved": true,
+        "contentCountsPreserved": true,
+        "exactWarmBackground": true,
+        "contentMovesNaturally": true,
+        "robotAndCardsNotClipped": true,
+        "threeEqualNavAreas": true,
+        "noHorizontalOverflow": true,
+        "imagesLoaded": true,
+        "baselineComparisonPassed": true,
+        "noBrowserErrors": true
+      },
+      "actual": {
+        "viewport": {
+          "width": 360,
+          "height": 800
+        },
+        "expectedMissing": [],
+        "removedTextPresent": [],
+        "removedCounts": {
+          "statusBar": 0,
+          "signal": 0,
+          "wifi": 0,
+          "battery": 0,
+          "quickRow": 0,
+          "quickItems": 0
+        },
+        "counts": {
+          "creationCards": 3,
+          "assistantCards": 3,
+          "suggestions": 2,
+          "navItems": 3,
+          "images": 5
+        },
+        "backgrounds": {
+          "page": "rgb(245, 240, 234)",
+          "phone": "linear-gradient(rgb(247, 161, 106) 0px, rgb(248, 220, 200) 33%, rgb(245, 240, 234) 76%)",
+          "body": "rgb(245, 240, 234)"
+        },
+        "rects": {
+          "phone": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 800,
+            "right": 360,
+            "bottom": 800
+          },
+          "top": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 121,
+            "right": 360,
+            "bottom": 121
+          },
+          "reward": {
+            "x": 21,
+            "y": 0,
+            "width": 318,
+            "height": 34,
+            "right": 339,
+            "bottom": 34
+          },
+          "welcome": {
+            "x": 21,
+            "y": 34,
+            "width": 318,
+            "height": 66,
+            "right": 339,
+            "bottom": 100
+          },
+          "tony": {
+            "x": 231,
+            "y": 7,
+            "width": 114,
+            "height": 121,
+            "right": 345,
+            "bottom": 128
+          },
+          "create": {
+            "x": 11,
+            "y": 121,
+            "width": 338,
+            "height": 216,
+            "right": 349,
+            "bottom": 337
+          },
+          "xhs": {
+            "x": 23,
+            "y": 176,
+            "width": 149.265625,
+            "height": 132,
+            "right": 172.265625,
+            "bottom": 308
+          },
+          "douyin": {
+            "x": 180.265625,
+            "y": 176,
+            "width": 156.734375,
+            "height": 62,
+            "right": 337,
+            "bottom": 238
+          },
+          "moments": {
+            "x": 180.265625,
+            "y": 246,
+            "width": 156.734375,
+            "height": 62,
+            "right": 337,
+            "bottom": 308
+          },
+          "assistant": {
+            "x": 11,
+            "y": 347,
+            "width": 338,
+            "height": 188,
+            "right": 349,
+            "bottom": 535
+          },
+          "suggestions": {
+            "x": 11,
+            "y": 545,
+            "width": 338,
+            "height": 36,
+            "right": 349,
+            "bottom": 581
+          },
+          "ask": {
+            "x": 11,
+            "y": 590,
+            "width": 338,
+            "height": 47,
+            "right": 349,
+            "bottom": 637
+          },
+          "nav": {
+            "x": 0,
+            "y": 733,
+            "width": 360,
+            "height": 67,
+            "right": 360,
+            "bottom": 800
+          },
+          "owl": {
+            "x": 148.984375,
+            "y": 707,
+            "width": 62,
+            "height": 62,
+            "right": 210.984375,
+            "bottom": 769
+          }
+        },
+        "topToCreateGap": 0,
+        "createToAssistantGap": 10,
+        "assistantToSuggestionsGap": 10,
+        "askToNavGap": 96,
+        "robotClipBottom": 7,
+        "robotAspect": 0.9421487603305785,
+        "nav": [
+          {
+            "text": "\n首页",
+            "x": 8,
+            "width": 114.65625
+          },
+          {
+            "text": "AI助手",
+            "x": 122.65625,
+            "width": 114.671875
+          },
+          {
+            "text": "\n我的",
+            "x": 237.328125,
+            "width": 114.65625
+          }
+        ],
+        "navWidthSpread": 0.015625,
+        "overflow": {
+          "documentScrollWidth": 360,
+          "documentClientWidth": 360,
+          "bodyScrollWidth": 360
+        },
+        "images": [
+          {
+            "src": "/yunjikeji/static/reference-home/tony-robot.png",
+            "complete": true,
+            "naturalWidth": 132,
+            "naturalHeight": 142
+          },
+          {
+            "src": "/yunjikeji/static/reference-home/xiaohongshu.png",
+            "complete": true,
+            "naturalWidth": 105,
+            "naturalHeight": 80
+          },
+          {
+            "src": "/yunjikeji/static/reference-home/douyin.png",
+            "complete": true,
+            "naturalWidth": 70,
+            "naturalHeight": 70
+          },
+          {
+            "src": "/yunjikeji/static/reference-home/moments.png",
+            "complete": true,
+            "naturalWidth": 82,
+            "naturalHeight": 66
+          },
+          {
+            "src": "/yunjikeji/static/brand/jixiangwu-logo.png",
+            "complete": true,
+            "naturalWidth": 419,
+            "naturalHeight": 424
+          }
+        ]
+      },
+      "baselineComparison": {
+        "topReducedBy34": true,
+        "createStarts34Earlier": true,
+        "createReducedByQuickRow62": true,
+        "cardsKeepDimensions": true,
+        "downstreamMovesBy96": true,
+        "downstreamDimensionsUnchanged": true,
+        "bottomNavUnchanged": true,
+        "robotScaledProportionally": true,
+        "robotClipUnchanged": true,
+        "scale": {
+          "x": 0.891,
+          "y": 0.89
+        }
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": 200,
+      "passed": true,
+      "checks": {
+        "httpOk": true,
+        "targetDomRemoved": true,
+        "targetTextsRemoved": true,
+        "expectedContentPreserved": true,
+        "contentCountsPreserved": true,
+        "exactWarmBackground": true,
+        "contentMovesNaturally": true,
+        "robotAndCardsNotClipped": true,
+        "threeEqualNavAreas": true,
+        "noHorizontalOverflow": true,
+        "imagesLoaded": true,
+        "baselineComparisonPassed": true,
+        "noBrowserErrors": true
+      },
+      "actual": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "expectedMissing": [],
+        "removedTextPresent": [],
+        "removedCounts": {
+          "statusBar": 0,
+          "signal": 0,
+          "wifi": 0,
+          "battery": 0,
+          "quickRow": 0,
+          "quickItems": 0
+        },
+        "counts": {
+          "creationCards": 3,
+          "assistantCards": 3,
+          "suggestions": 2,
+          "navItems": 3,
+          "images": 5
+        },
+        "backgrounds": {
+          "page": "rgb(245, 240, 234)",
+          "phone": "linear-gradient(rgb(247, 161, 106) 0px, rgb(248, 220, 200) 33%, rgb(245, 240, 234) 76%)",
+          "body": "rgb(245, 240, 234)"
+        },
+        "rects": {
+          "phone": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 844,
+            "right": 390,
+            "bottom": 844
+          },
+          "top": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 132,
+            "right": 390,
+            "bottom": 132
+          },
+          "reward": {
+            "x": 26,
+            "y": 0,
+            "width": 338,
+            "height": 34,
+            "right": 364,
+            "bottom": 34
+          },
+          "welcome": {
+            "x": 26,
+            "y": 34,
+            "width": 338,
+            "height": 66,
+            "right": 364,
+            "bottom": 100
+          },
+          "tony": {
+            "x": 243,
+            "y": 7,
+            "width": 126,
+            "height": 132,
+            "right": 369,
+            "bottom": 139
+          },
+          "create": {
+            "x": 14,
+            "y": 132,
+            "width": 362,
+            "height": 227,
+            "right": 376,
+            "bottom": 359
+          },
+          "xhs": {
+            "x": 29,
+            "y": 187,
+            "width": 158.046875,
+            "height": 140,
+            "right": 187.046875,
+            "bottom": 327
+          },
+          "douyin": {
+            "x": 195.046875,
+            "y": 187,
+            "width": 165.953125,
+            "height": 66,
+            "right": 361,
+            "bottom": 253
+          },
+          "moments": {
+            "x": 195.046875,
+            "y": 261,
+            "width": 165.953125,
+            "height": 66,
+            "right": 361,
+            "bottom": 327
+          },
+          "assistant": {
+            "x": 14,
+            "y": 369,
+            "width": 362,
+            "height": 188,
+            "right": 376,
+            "bottom": 557
+          },
+          "suggestions": {
+            "x": 14,
+            "y": 567,
+            "width": 362,
+            "height": 36,
+            "right": 376,
+            "bottom": 603
+          },
+          "ask": {
+            "x": 14,
+            "y": 612,
+            "width": 362,
+            "height": 47,
+            "right": 376,
+            "bottom": 659
+          },
+          "nav": {
+            "x": 0,
+            "y": 777,
+            "width": 390,
+            "height": 67,
+            "right": 390,
+            "bottom": 844
+          },
+          "owl": {
+            "x": 163.984375,
+            "y": 751,
+            "width": 62,
+            "height": 62,
+            "right": 225.984375,
+            "bottom": 813
+          }
+        },
+        "topToCreateGap": 0,
+        "createToAssistantGap": 10,
+        "assistantToSuggestionsGap": 10,
+        "askToNavGap": 118,
+        "robotClipBottom": 7,
+        "robotAspect": 0.9545454545454546,
+        "nav": [
+          {
+            "text": "\n首页",
+            "x": 8,
+            "width": 124.65625
+          },
+          {
+            "text": "AI助手",
+            "x": 132.65625,
+            "width": 124.671875
+          },
+          {
+            "text": "\n我的",
+            "x": 257.328125,
+            "width": 124.65625
+          }
+        ],
+        "navWidthSpread": 0.015625,
+        "overflow": {
+          "documentScrollWidth": 390,
+          "documentClientWidth": 390,
+          "bodyScrollWidth": 390
+        },
+        "images": [
+          {
+            "src": "/yunjikeji/static/reference-home/tony-robot.png",
+            "complete": true,
+            "naturalWidth": 132,
+            "naturalHeight": 142
+          },
+          {
+            "src": "/yunjikeji/static/reference-home/xiaohongshu.png",
+            "complete": true,
+            "naturalWidth": 105,
+            "naturalHeight": 80
+          },
+          {
+            "src": "/yunjikeji/static/reference-home/douyin.png",
+            "complete": true,
+            "naturalWidth": 70,
+            "naturalHeight": 70
+          },
+          {
+            "src": "/yunjikeji/static/reference-home/moments.png",
+            "complete": true,
+            "naturalWidth": 82,
+            "naturalHeight": 66
+          },
+          {
+            "src": "/yunjikeji/static/brand/jixiangwu-logo.png",
+            "complete": true,
+            "naturalWidth": 419,
+            "naturalHeight": 424
+          }
+        ]
+      },
+      "baselineComparison": {
+        "topReducedBy34": true,
+        "createStarts34Earlier": true,
+        "createReducedByQuickRow62": true,
+        "cardsKeepDimensions": true,
+        "downstreamMovesBy96": true,
+        "downstreamDimensionsUnchanged": true,
+        "bottomNavUnchanged": true,
+        "robotScaledProportionally": true,
+        "robotClipUnchanged": true,
+        "scale": {
+          "x": 0.9,
+          "y": 0.904
+        }
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": []
+    },
+    {
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "status": 200,
+      "passed": true,
+      "checks": {
+        "httpOk": true,
+        "targetDomRemoved": true,
+        "targetTextsRemoved": true,
+        "expectedContentPreserved": true,
+        "contentCountsPreserved": true,
+        "exactWarmBackground": true,
+        "contentMovesNaturally": true,
+        "robotAndCardsNotClipped": true,
+        "threeEqualNavAreas": true,
+        "noHorizontalOverflow": true,
+        "imagesLoaded": true,
+        "baselineComparisonPassed": true,
+        "noBrowserErrors": true
+      },
+      "actual": {
+        "viewport": {
+          "width": 430,
+          "height": 932
+        },
+        "expectedMissing": [],
+        "removedTextPresent": [],
+        "removedCounts": {
+          "statusBar": 0,
+          "signal": 0,
+          "wifi": 0,
+          "battery": 0,
+          "quickRow": 0,
+          "quickItems": 0
+        },
+        "counts": {
+          "creationCards": 3,
+          "assistantCards": 3,
+          "suggestions": 2,
+          "navItems": 3,
+          "images": 5
+        },
+        "backgrounds": {
+          "page": "rgb(245, 240, 234)",
+          "phone": "linear-gradient(rgb(247, 161, 106) 0px, rgb(248, 220, 200) 33%, rgb(245, 240, 234) 76%)",
+          "body": "rgb(245, 240, 234)"
+        },
+        "rects": {
+          "phone": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 932,
+            "right": 430,
+            "bottom": 932
+          },
+          "top": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 132,
+            "right": 430,
+            "bottom": 132
+          },
+          "reward": {
+            "x": 26,
+            "y": 0,
+            "width": 378,
+            "height": 34,
+            "right": 404,
+            "bottom": 34
+          },
+          "welcome": {
+            "x": 26,
+            "y": 34,
+            "width": 378,
+            "height": 66,
+            "right": 404,
+            "bottom": 100
+          },
+          "tony": {
+            "x": 283,
+            "y": 7,
+            "width": 126,
+            "height": 132,
+            "right": 409,
+            "bottom": 139
+          },
+          "create": {
+            "x": 14,
+            "y": 132,
+            "width": 402,
+            "height": 227,
+            "right": 416,
+            "bottom": 359
+          },
+          "xhs": {
+            "x": 29,
+            "y": 187,
+            "width": 177.546875,
+            "height": 140,
+            "right": 206.546875,
+            "bottom": 327
+          },
+          "douyin": {
+            "x": 214.546875,
+            "y": 187,
+            "width": 186.4375,
+            "height": 66,
+            "right": 400.984375,
+            "bottom": 253
+          },
+          "moments": {
+            "x": 214.546875,
+            "y": 261,
+            "width": 186.4375,
+            "height": 66,
+            "right": 400.984375,
+            "bottom": 327
+          },
+          "assistant": {
+            "x": 14,
+            "y": 369,
+            "width": 402,
+            "height": 188,
+            "right": 416,
+            "bottom": 557
+          },
+          "suggestions": {
+            "x": 14,
+            "y": 567,
+            "width": 402,
+            "height": 36,
+            "right": 416,
+            "bottom": 603
+          },
+          "ask": {
+            "x": 14,
+            "y": 612,
+            "width": 402,
+            "height": 47,
+            "right": 416,
+            "bottom": 659
+          },
+          "nav": {
+            "x": 0,
+            "y": 865,
+            "width": 430,
+            "height": 67,
+            "right": 430,
+            "bottom": 932
+          },
+          "owl": {
+            "x": 184,
+            "y": 839,
+            "width": 62,
+            "height": 62,
+            "right": 246,
+            "bottom": 901
+          }
+        },
+        "topToCreateGap": 0,
+        "createToAssistantGap": 10,
+        "assistantToSuggestionsGap": 10,
+        "askToNavGap": 206,
+        "robotClipBottom": 7,
+        "robotAspect": 0.9545454545454546,
+        "nav": [
+          {
+            "text": "\n首页",
+            "x": 8,
+            "width": 138
+          },
+          {
+            "text": "AI助手",
+            "x": 146,
+            "width": 138
+          },
+          {
+            "text": "\n我的",
+            "x": 284,
+            "width": 138
+          }
+        ],
+        "navWidthSpread": 0,
+        "overflow": {
+          "documentScrollWidth": 430,
+          "documentClientWidth": 430,
+          "bodyScrollWidth": 430
+        },
+        "images": [
+          {
+            "src": "/yunjikeji/static/reference-home/tony-robot.png",
+            "complete": true,
+            "naturalWidth": 132,
+            "naturalHeight": 142
+          },
+          {
+            "src": "/yunjikeji/static/reference-home/xiaohongshu.png",
+            "complete": true,
+            "naturalWidth": 105,
+            "naturalHeight": 80
+          },
+          {
+            "src": "/yunjikeji/static/reference-home/douyin.png",
+            "complete": true,
+            "naturalWidth": 70,
+            "naturalHeight": 70
+          },
+          {
+            "src": "/yunjikeji/static/reference-home/moments.png",
+            "complete": true,
+            "naturalWidth": 82,
+            "naturalHeight": 66
+          },
+          {
+            "src": "/yunjikeji/static/brand/jixiangwu-logo.png",
+            "complete": true,
+            "naturalWidth": 419,
+            "naturalHeight": 424
+          }
+        ]
+      },
+      "baselineComparison": {
+        "topReducedBy34": true,
+        "createStarts34Earlier": true,
+        "createReducedByQuickRow62": true,
+        "cardsKeepDimensions": true,
+        "downstreamMovesBy96": true,
+        "downstreamDimensionsUnchanged": true,
+        "bottomNavUnchanged": true,
+        "robotScaledProportionally": true,
+        "robotClipUnchanged": true,
+        "scale": {
+          "x": 0.9,
+          "y": 0.904
+        }
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": []
+    }
+  ]
+}

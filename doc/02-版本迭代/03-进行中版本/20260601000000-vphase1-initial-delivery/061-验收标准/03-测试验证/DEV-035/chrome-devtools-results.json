@@ -1,0 +1,27 @@
+{
+  "url": "http://127.0.0.1:5173/yunjikeji/?dev035retry=1784346000000#/pages/home",
+  "viewport": { "width": 390, "height": 844 },
+  "removed": {
+    "rewardRow": 0,
+    "pill": 0,
+    "statusBar": 0,
+    "quickRow": 0,
+    "quickItems": 0,
+    "removedExactTextsFound": [],
+    "ghostContentFound": 0
+  },
+  "background": "linear-gradient(rgb(247, 161, 106) 0px, rgb(248, 220, 200) 33%, rgb(245, 240, 234) 76%)",
+  "coordinates": {
+    "topAreaHeight": 166,
+    "tony": { "width": 140, "height": 146, "bottom": 173 },
+    "createY": 166,
+    "assistantY": 465,
+    "suggestionsY": 663,
+    "askY": 708,
+    "allDev033Deltas": 0
+  },
+  "horizontalOverflow": false,
+  "imagesLoaded": 5,
+  "passed": true,
+  "firstFailureClosed": "首轮assistant/suggestions/ask统一-62px，本次全部恢复到DEV-033基线"
+}

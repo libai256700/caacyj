@@ -1,0 +1,34 @@
+{
+  "executed_at": "2026-08-15T13:07:26+08:00",
+  "verdict": "partial",
+  "defects_found": 0,
+  "source_contract": {
+    "result": "passed",
+    "unique_report_page": true,
+    "unique_action_button": true,
+    "button_text": "返回首页",
+    "button_handler": "goHome",
+    "legacy_text_matches": 0,
+    "legacy_handler_matches": 0,
+    "navigate_back_fail_handler": "goHome",
+    "relaunch_url": "/pages/home"
+  },
+  "entry_points": {
+    "home_latest_report_with_record_id": "passed",
+    "answer_submit_report_with_record_id": "passed",
+    "shared_report_route": "/pages/center/self-test-report"
+  },
+  "commands": {
+    "return_home_contract": "passed",
+    "type_check": "passed",
+    "build_h5": "passed",
+    "git_diff_check": "passed",
+    "uni_modules_changes": 0
+  },
+  "browser": {
+    "result": "not_executed",
+    "local_h5_port_listening": true,
+    "reusable_playwright_login_context": false,
+    "reason": "The existing browser was not exposed through CDP and no reusable authorized Playwright login state was available. No account, token, or report data was fabricated."
+  }
+}

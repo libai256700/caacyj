@@ -1,0 +1,32 @@
+{
+  "verifiedAt": "2026-07-18T09:47:16+08:00",
+  "commands": [
+    {
+      "name": "playwright",
+      "command": "pnpm exec node <DEV-032>/dev032-reference-home.spec.cjs",
+      "exitCode": 0,
+      "result": "three viewports passed"
+    },
+    {
+      "name": "type-check",
+      "command": "pnpm type-check",
+      "exitCode": 0
+    },
+    {
+      "name": "build-h5",
+      "command": "pnpm run build:h5",
+      "exitCode": 0,
+      "result": "DONE Build complete."
+    },
+    {
+      "name": "diff-check",
+      "command": "git diff --check",
+      "exitCode": 0
+    }
+  ],
+  "chromeDevTools": {
+    "attempted": true,
+    "completed": false,
+    "reason": "The browser is already running for the chrome-devtools-mcp chrome-profile; the shared profile was locked by another debugging session."
+  }
+}

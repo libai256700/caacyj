@@ -1,0 +1,80 @@
+{
+  "status": "passed-with-controlled-api-stub",
+  "baseUrl": "http://127.0.0.1:3000/yj/assessment/question",
+  "assertions": {
+    "requiredColumn": true,
+    "rowLabelsYesNo": true,
+    "editReflectsFalse": true,
+    "optionsYesNo": true,
+    "saveRefreshReopenTrue": true,
+    "falsePayloadPreserved": true,
+    "createDefaultsTrue": true,
+    "existingActionsRendered": true
+  },
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/admin-api/yj/assessment-question/page",
+      "query": {
+        "pageNo": "1",
+        "pageSize": "10"
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/admin-api/yj/assessment-question/get",
+      "id": 85001,
+      "responseIsRequired": false
+    },
+    {
+      "method": "PUT",
+      "path": "/admin-api/yj/assessment-question/update",
+      "body": {
+        "id": 85001,
+        "title": "DEV-085 optional question",
+        "question_type": "1",
+        "question_content": "Optional question content",
+        "is_required": true,
+        "status": true,
+        "sort_no": 1
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/admin-api/yj/assessment-question/page",
+      "query": {
+        "pageNo": "1",
+        "pageSize": "10"
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/admin-api/yj/assessment-question/get",
+      "id": 85001,
+      "responseIsRequired": true
+    },
+    {
+      "method": "PUT",
+      "path": "/admin-api/yj/assessment-question/update",
+      "body": {
+        "id": 85001,
+        "title": "DEV-085 optional question",
+        "question_type": "1",
+        "question_content": "Optional question content",
+        "is_required": false,
+        "status": true,
+        "sort_no": 1
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/admin-api/yj/assessment-question/page",
+      "query": {
+        "pageNo": "1",
+        "pageSize": "10"
+      }
+    }
+  ],
+  "pageErrors": [],
+  "limitation": "Controlled API stubs validate the real frontend only; no real backend or database write occurred."
+}

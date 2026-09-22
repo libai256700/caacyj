@@ -1,0 +1,25 @@
+{
+  "api_cases": [],
+  "data_cases": [],
+  "interaction_cases": [
+    {
+      "case_id": "TC-UI-ASSESS-REQUIRED-001",
+      "account": {
+        "mode": "controlled-permission-response",
+        "real_account_used": false
+      },
+      "input": {
+        "rows": [
+          { "id": 85001, "is_required": false },
+          { "id": 85002, "is_required": true }
+        ]
+      },
+      "expected_page_state": {
+        "column": "是否必填",
+        "values": ["否", "是"],
+        "edit_options": ["是", "否"],
+        "create_default": "是"
+      }
+    }
+  ]
+}

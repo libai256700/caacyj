@@ -1,0 +1,43 @@
+{
+  "commands": [
+    {
+      "name": "playwright-initial",
+      "command": "pnpm exec node <DEV-033>/dev033-home-mapping.spec.cjs",
+      "exitCode": 1,
+      "result": "测试断言误把保留辅助文案识别为旧标题，并用标题容器宽度判断配图遮挡；页面、几何、浏览器错误和导航结果实际均通过。"
+    },
+    {
+      "name": "playwright-final",
+      "command": "pnpm exec node <DEV-033>/dev033-home-mapping.spec.cjs",
+      "exitCode": 0,
+      "result": "360x800、390x844、430x932全部通过。"
+    },
+    {
+      "name": "type-check",
+      "command": "pnpm type-check",
+      "exitCode": 0
+    },
+    {
+      "name": "build-h5",
+      "command": "pnpm run build:h5",
+      "exitCode": 0,
+      "result": "DONE Build complete."
+    },
+    {
+      "name": "diff-check",
+      "command": "git diff --check",
+      "exitCode": 0
+    }
+  ],
+  "boundary": {
+    "frozenPreviewDiff": [],
+    "frozenAssetsDiff": [],
+    "oldIndexDiff": [],
+    "loginDiff": [],
+    "uniModulesWorkingTreeDiff": [],
+    "uniModulesStagedDiff": [],
+    "scopedApplicationStatus": [
+      "M code/develop/yunjikeji/src/pages/home.vue"
+    ]
+  }
+}

@@ -1,0 +1,560 @@
+{
+  "fixture": "确定性视觉夹具：仅 Playwright 上下文设置登录存储并拦截练习接口，不写入产品源码。",
+  "baseline": "DEV-038/playwright-results.json single geometry",
+  "startedAt": "2026-07-18T09:16:29.649Z",
+  "baseUrl": "http://127.0.0.1:5173/yunjikeji/",
+  "viewports": [
+    {
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "layout": {
+        "innerWidth": 360,
+        "innerHeight": 800,
+        "documentScrollWidth": 360,
+        "bodyScrollWidth": 360,
+        "card": {
+          "left": 17.265625,
+          "top": 172.765625,
+          "right": 342.734375,
+          "bottom": 727.0625,
+          "width": 325.46875,
+          "height": 554.296875
+        },
+        "layer": {
+          "left": 25.890625,
+          "top": 181.390625,
+          "right": 334.109375,
+          "bottom": 735.6875,
+          "width": 308.21875,
+          "height": 554.296875
+        },
+        "illustration": {
+          "left": 160.34375,
+          "top": 82.53125,
+          "right": 354.25,
+          "bottom": 180.4375,
+          "width": 193.90625,
+          "height": 97.90625
+        },
+        "actions": {
+          "left": 12.46875,
+          "top": 727.0625,
+          "right": 347.53125,
+          "bottom": 789.453125,
+          "width": 335.0625,
+          "height": 62.390625
+        },
+        "primary": {
+          "left": 17.265625,
+          "top": 741.453125,
+          "right": 342.734375,
+          "bottom": 782.71875,
+          "width": 325.46875,
+          "height": 41.265625
+        },
+        "options": [
+          {
+            "left": 28.78125,
+            "top": 305.984375,
+            "right": 331.21875,
+            "bottom": 350.140625,
+            "width": 302.4375,
+            "height": 44.15625
+          },
+          {
+            "left": 28.78125,
+            "top": 358.765625,
+            "right": 331.21875,
+            "bottom": 402.921875,
+            "width": 302.4375,
+            "height": 44.15625
+          },
+          {
+            "left": 28.78125,
+            "top": 411.546875,
+            "right": 331.21875,
+            "bottom": 455.703125,
+            "width": 302.4375,
+            "height": 44.15625
+          },
+          {
+            "left": 28.78125,
+            "top": 464.328125,
+            "right": 331.21875,
+            "bottom": 508.484375,
+            "width": 302.4375,
+            "height": 44.15625
+          }
+        ],
+        "pageBackground": "rgb(245, 240, 234)",
+        "rootBackground": "rgba(0, 0, 0, 0)",
+        "gradient": "linear-gradient(rgb(247, 161, 106) 0%, rgb(239, 125, 59) 27%, rgb(248, 220, 200) 61%, rgb(245, 240, 234) 100%)"
+      },
+      "baselineGeometry": {
+        "innerWidth": 360,
+        "innerHeight": 800,
+        "documentScrollWidth": 360,
+        "bodyScrollWidth": 360,
+        "navText": "",
+        "progressText": "出题1/ 12",
+        "card": {
+          "left": 17.265625,
+          "top": 172.765625,
+          "right": 342.734375,
+          "bottom": 727.0625,
+          "width": 325.46875,
+          "height": 554.296875
+        },
+        "layer": {
+          "left": 25.890625,
+          "top": 181.390625,
+          "right": 334.109375,
+          "bottom": 735.6875,
+          "width": 308.21875,
+          "height": 554.296875
+        },
+        "illustration": {
+          "left": 160.34375,
+          "top": 82.53125,
+          "right": 354.25,
+          "bottom": 180.4375,
+          "width": 193.90625,
+          "height": 97.90625
+        },
+        "illustrationPixels": {
+          "naturalWidth": 520,
+          "naturalHeight": 260,
+          "opaquePixels": 20428,
+          "uniqueColors": 1470
+        },
+        "actions": {
+          "left": 12.46875,
+          "top": 727.0625,
+          "right": 347.53125,
+          "bottom": 789.453125,
+          "width": 335.0625,
+          "height": 62.390625
+        },
+        "primary": {
+          "left": 17.265625,
+          "top": 741.453125,
+          "right": 342.734375,
+          "bottom": 782.71875,
+          "width": 325.46875,
+          "height": 41.265625
+        },
+        "options": [
+          {
+            "left": 28.78125,
+            "top": 305.984375,
+            "right": 331.21875,
+            "bottom": 350.140625,
+            "width": 302.4375,
+            "height": 44.15625
+          },
+          {
+            "left": 28.78125,
+            "top": 358.765625,
+            "right": 331.21875,
+            "bottom": 402.921875,
+            "width": 302.4375,
+            "height": 44.15625
+          },
+          {
+            "left": 28.78125,
+            "top": 411.546875,
+            "right": 331.21875,
+            "bottom": 455.703125,
+            "width": 302.4375,
+            "height": 44.15625
+          },
+          {
+            "left": 28.78125,
+            "top": 464.328125,
+            "right": 331.21875,
+            "bottom": 508.484375,
+            "width": 302.4375,
+            "height": 44.15625
+          }
+        ],
+        "optionDisplay": "flex",
+        "optionColumns": "none",
+        "background": "linear-gradient(rgb(251, 255, 225) 0%, rgb(234, 251, 220) 27%, rgb(213, 248, 228) 61%, rgb(189, 243, 247) 100%)",
+        "scroll": null
+      },
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "layout": {
+        "innerWidth": 390,
+        "innerHeight": 844,
+        "documentScrollWidth": 390,
+        "bodyScrollWidth": 390,
+        "card": {
+          "left": 22.859375,
+          "top": 198.625,
+          "right": 367.140625,
+          "bottom": 764.96875,
+          "width": 344.28125,
+          "height": 566.34375
+        },
+        "layer": {
+          "left": 32.21875,
+          "top": 207.984375,
+          "right": 357.78125,
+          "bottom": 774.328125,
+          "width": 325.5625,
+          "height": 566.34375
+        },
+        "illustration": {
+          "left": 149.765625,
+          "top": 94.625,
+          "right": 373.359375,
+          "bottom": 206.9375,
+          "width": 223.59375,
+          "height": 112.3125
+        },
+        "actions": {
+          "left": 17.671875,
+          "top": 764.96875,
+          "right": 372.328125,
+          "bottom": 832.5625,
+          "width": 354.65625,
+          "height": 67.59375
+        },
+        "primary": {
+          "left": 22.859375,
+          "top": 780.5625,
+          "right": 367.140625,
+          "bottom": 825.28125,
+          "width": 344.28125,
+          "height": 44.71875
+        },
+        "options": [
+          {
+            "left": 38.453125,
+            "top": 342.890625,
+            "right": 351.546875,
+            "bottom": 390.71875,
+            "width": 313.09375,
+            "height": 47.828125
+          },
+          {
+            "left": 38.453125,
+            "top": 400.078125,
+            "right": 351.546875,
+            "bottom": 447.90625,
+            "width": 313.09375,
+            "height": 47.828125
+          },
+          {
+            "left": 38.453125,
+            "top": 457.265625,
+            "right": 351.546875,
+            "bottom": 505.09375,
+            "width": 313.09375,
+            "height": 47.828125
+          },
+          {
+            "left": 38.453125,
+            "top": 514.453125,
+            "right": 351.546875,
+            "bottom": 562.28125,
+            "width": 313.09375,
+            "height": 47.828125
+          }
+        ],
+        "pageBackground": "rgb(245, 240, 234)",
+        "rootBackground": "rgba(0, 0, 0, 0)",
+        "gradient": "linear-gradient(rgb(247, 161, 106) 0%, rgb(239, 125, 59) 27%, rgb(248, 220, 200) 61%, rgb(245, 240, 234) 100%)"
+      },
+      "baselineGeometry": {
+        "innerWidth": 390,
+        "innerHeight": 844,
+        "documentScrollWidth": 390,
+        "bodyScrollWidth": 390,
+        "navText": "",
+        "progressText": "出题1/ 12",
+        "card": {
+          "left": 22.859375,
+          "top": 198.625,
+          "right": 367.140625,
+          "bottom": 764.96875,
+          "width": 344.28125,
+          "height": 566.34375
+        },
+        "layer": {
+          "left": 32.21875,
+          "top": 207.984375,
+          "right": 357.78125,
+          "bottom": 774.328125,
+          "width": 325.5625,
+          "height": 566.34375
+        },
+        "illustration": {
+          "left": 149.765625,
+          "top": 94.625,
+          "right": 373.359375,
+          "bottom": 206.9375,
+          "width": 223.59375,
+          "height": 112.3125
+        },
+        "illustrationPixels": {
+          "naturalWidth": 520,
+          "naturalHeight": 260,
+          "opaquePixels": 20428,
+          "uniqueColors": 1470
+        },
+        "actions": {
+          "left": 17.671875,
+          "top": 764.96875,
+          "right": 372.328125,
+          "bottom": 832.5625,
+          "width": 354.65625,
+          "height": 67.59375
+        },
+        "primary": {
+          "left": 22.859375,
+          "top": 780.5625,
+          "right": 367.140625,
+          "bottom": 825.28125,
+          "width": 344.28125,
+          "height": 44.71875
+        },
+        "options": [
+          {
+            "left": 38.453125,
+            "top": 342.890625,
+            "right": 351.546875,
+            "bottom": 390.71875,
+            "width": 313.09375,
+            "height": 47.828125
+          },
+          {
+            "left": 38.453125,
+            "top": 400.078125,
+            "right": 351.546875,
+            "bottom": 447.90625,
+            "width": 313.09375,
+            "height": 47.828125
+          },
+          {
+            "left": 38.453125,
+            "top": 457.265625,
+            "right": 351.546875,
+            "bottom": 505.09375,
+            "width": 313.09375,
+            "height": 47.828125
+          },
+          {
+            "left": 38.453125,
+            "top": 514.453125,
+            "right": 351.546875,
+            "bottom": 562.28125,
+            "width": 313.09375,
+            "height": 47.828125
+          }
+        ],
+        "optionDisplay": "flex",
+        "optionColumns": "none",
+        "background": "linear-gradient(rgb(251, 255, 225) 0%, rgb(234, 251, 220) 27%, rgb(213, 248, 228) 61%, rgb(189, 243, 247) 100%)",
+        "scroll": null
+      },
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "layout": {
+        "innerWidth": 430,
+        "innerHeight": 932,
+        "documentScrollWidth": 430,
+        "bodyScrollWidth": 430,
+        "card": {
+          "left": 25.203125,
+          "top": 218.984375,
+          "right": 404.796875,
+          "bottom": 844.875,
+          "width": 379.59375,
+          "height": 625.890625
+        },
+        "layer": {
+          "left": 35.515625,
+          "top": 229.296875,
+          "right": 394.484375,
+          "bottom": 855.1875,
+          "width": 358.96875,
+          "height": 625.890625
+        },
+        "illustration": {
+          "left": 165.125,
+          "top": 104.328125,
+          "right": 411.65625,
+          "bottom": 228.15625,
+          "width": 246.53125,
+          "height": 123.828125
+        },
+        "actions": {
+          "left": 19.484375,
+          "top": 844.875,
+          "right": 410.515625,
+          "bottom": 919.390625,
+          "width": 391.03125,
+          "height": 74.515625
+        },
+        "primary": {
+          "left": 25.203125,
+          "top": 862.0625,
+          "right": 404.796875,
+          "bottom": 911.359375,
+          "width": 379.59375,
+          "height": 49.296875
+        },
+        "options": [
+          {
+            "left": 42.390625,
+            "top": 378.078125,
+            "right": 387.609375,
+            "bottom": 430.8125,
+            "width": 345.21875,
+            "height": 52.734375
+          },
+          {
+            "left": 42.390625,
+            "top": 441.125,
+            "right": 387.609375,
+            "bottom": 493.859375,
+            "width": 345.21875,
+            "height": 52.734375
+          },
+          {
+            "left": 42.390625,
+            "top": 504.171875,
+            "right": 387.609375,
+            "bottom": 556.90625,
+            "width": 345.21875,
+            "height": 52.734375
+          },
+          {
+            "left": 42.390625,
+            "top": 567.21875,
+            "right": 387.609375,
+            "bottom": 619.953125,
+            "width": 345.21875,
+            "height": 52.734375
+          }
+        ],
+        "pageBackground": "rgb(245, 240, 234)",
+        "rootBackground": "rgba(0, 0, 0, 0)",
+        "gradient": "linear-gradient(rgb(247, 161, 106) 0%, rgb(239, 125, 59) 27%, rgb(248, 220, 200) 61%, rgb(245, 240, 234) 100%)"
+      },
+      "baselineGeometry": {
+        "innerWidth": 430,
+        "innerHeight": 932,
+        "documentScrollWidth": 430,
+        "bodyScrollWidth": 430,
+        "navText": "",
+        "progressText": "出题1/ 12",
+        "card": {
+          "left": 25.203125,
+          "top": 218.984375,
+          "right": 404.796875,
+          "bottom": 844.875,
+          "width": 379.59375,
+          "height": 625.890625
+        },
+        "layer": {
+          "left": 35.515625,
+          "top": 229.296875,
+          "right": 394.484375,
+          "bottom": 855.1875,
+          "width": 358.96875,
+          "height": 625.890625
+        },
+        "illustration": {
+          "left": 165.125,
+          "top": 104.328125,
+          "right": 411.65625,
+          "bottom": 228.15625,
+          "width": 246.53125,
+          "height": 123.828125
+        },
+        "illustrationPixels": {
+          "naturalWidth": 520,
+          "naturalHeight": 260,
+          "opaquePixels": 20428,
+          "uniqueColors": 1470
+        },
+        "actions": {
+          "left": 19.484375,
+          "top": 844.875,
+          "right": 410.515625,
+          "bottom": 919.390625,
+          "width": 391.03125,
+          "height": 74.515625
+        },
+        "primary": {
+          "left": 25.203125,
+          "top": 862.0625,
+          "right": 404.796875,
+          "bottom": 911.359375,
+          "width": 379.59375,
+          "height": 49.296875
+        },
+        "options": [
+          {
+            "left": 42.390625,
+            "top": 378.078125,
+            "right": 387.609375,
+            "bottom": 430.8125,
+            "width": 345.21875,
+            "height": 52.734375
+          },
+          {
+            "left": 42.390625,
+            "top": 441.125,
+            "right": 387.609375,
+            "bottom": 493.859375,
+            "width": 345.21875,
+            "height": 52.734375
+          },
+          {
+            "left": 42.390625,
+            "top": 504.171875,
+            "right": 387.609375,
+            "bottom": 556.90625,
+            "width": 345.21875,
+            "height": 52.734375
+          },
+          {
+            "left": 42.390625,
+            "top": 567.21875,
+            "right": 387.609375,
+            "bottom": 619.953125,
+            "width": 345.21875,
+            "height": 52.734375
+          }
+        ],
+        "optionDisplay": "flex",
+        "optionColumns": "none",
+        "background": "linear-gradient(rgb(251, 255, 225) 0%, rgb(234, 251, 220) 27%, rgb(213, 248, 228) 61%, rgb(189, 243, 247) 100%)",
+        "scroll": null
+      },
+      "pageErrors": [],
+      "consoleErrors": []
+    }
+  ],
+  "errors": [],
+  "status": "passed",
+  "finishedAt": "2026-07-18T09:16:33.937Z"
+}

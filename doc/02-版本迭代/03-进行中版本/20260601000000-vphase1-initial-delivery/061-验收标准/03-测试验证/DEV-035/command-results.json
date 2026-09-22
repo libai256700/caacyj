@@ -1,0 +1,29 @@
+{
+  "history": [
+    {
+      "name": "playwright-first-run",
+      "exitCode": 1,
+      "result": "三档assistant/suggestions/ask均比DEV-033提前62px，视觉88/revise"
+    }
+  ],
+  "finalCommands": [
+    {
+      "name": "playwright-final",
+      "command": "pnpm exec node <DEV-035>/dev035-home-position.spec.cjs",
+      "exitCode": 0,
+      "result": "三档allPassed=true，五个基线delta均为0"
+    },
+    { "name": "type-check", "command": "pnpm type-check", "exitCode": 0 },
+    { "name": "build-h5", "command": "pnpm run build:h5", "exitCode": 0, "result": "DONE Build complete." },
+    { "name": "diff-check", "command": "git diff --check", "exitCode": 0 }
+  ],
+  "boundary": {
+    "head": "e64f2f0fc1aaed7184200f43b6b658a07ec47b7c",
+    "homeChange": "目标reward删除、位置恢复、固定客服实时聊天路由及create-panel常规/小屏各增加62px",
+    "referencePreviewDiff": [],
+    "loginDiff": [],
+    "indexDiff": [],
+    "uniModulesStagedDiff": [],
+    "preExistingServicesDirty": ["assessment.ts", "customerAuth.ts", "practice.ts"]
+  }
+}

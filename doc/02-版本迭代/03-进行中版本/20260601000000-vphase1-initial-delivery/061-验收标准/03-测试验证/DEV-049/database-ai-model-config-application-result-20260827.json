@@ -1,0 +1,36 @@
+{
+  "executedAt": "2026-08-27T19:13:05+08:00",
+  "environment": "Local formal test database",
+  "databaseTarget": "yunjikeji.yj_ai_model_config",
+  "target": {
+    "id": 2,
+    "sceneCode": "practice_assessment",
+    "channel": "ANTHROPIC",
+    "baseUrl": "https://api.deepseek.com/anthropic",
+    "model": "deepseek-v4-pro",
+    "timeoutMillis": 120000
+  },
+  "transaction": {
+    "activeCount": 1,
+    "updatedRows": 1,
+    "postcheckCount": 1,
+    "result": "PASS"
+  },
+  "apiKey": {
+    "plaintextPersisted": false,
+    "changed": true,
+    "previousSha256Prefix": "9b551fed",
+    "currentSha256Prefix": "ac82b1ce"
+  },
+  "promptIntegrity": {
+    "agentInfoId": 2,
+    "charLength": 2284,
+    "byteLength": 5809,
+    "sha256": "d7794b51e039db2ecd7589e60dd593d8f85648c9b774e414768a2539ad3c16ce",
+    "unchanged": true
+  },
+  "rollback": {
+    "script": "../../../050-执行脚本/20260827190501-dml-rollback_practice_assessment_anthropic_config.sql",
+    "credentialSource": "external restricted backup; not included in this evidence"
+  }
+}

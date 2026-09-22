@@ -1,0 +1,35 @@
+{
+  "executed_at": "2026-08-15T12:28:36+08:00",
+  "verdict": "partial",
+  "target_tests": {
+    "result": "passed",
+    "tests_run": 9,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "compile": {
+    "result": "passed",
+    "reactor_modules": 39
+  },
+  "provider_smoke": {
+    "result": "passed",
+    "http_status": 200,
+    "response_model": "deepseek-v4-flash",
+    "text_block_count": 1,
+    "text_length": 6,
+    "api_key": "<REDACTED>"
+  },
+  "source_audit": {
+    "old_proxy_matches": 0,
+    "configured_key_source_files": 1,
+    "configured_key_source": "application.yaml",
+    "diagnostic_log_categories": 5,
+    "diagnostic_logs_redacted": true,
+    "git_diff_check": "passed",
+    "uni_modules_changes": 0
+  },
+  "open_items": [
+    "The test server has not been deployed, so new-report persistence and report-page consistency remain unexecuted."
+  ]
+}

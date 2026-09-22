@@ -1,0 +1,52 @@
+{
+  "defaultCalls": [
+    {
+      "method": "reLaunch",
+      "url": "/pages/center"
+    },
+    {
+      "method": "navigateTo",
+      "url": "/pages/jobs"
+    },
+    {
+      "method": "navigateTo",
+      "url": "/pages/service/customer-service-chat?conversationId=default"
+    },
+    {
+      "method": "reLaunch",
+      "url": "/pages/profile"
+    }
+  ],
+  "enterpriseCalls": [
+    {
+      "method": "navigateTo",
+      "url": "/pages/service/customer-service-chat?conversationId=default"
+    }
+  ],
+  "expectedDefault": [
+    {
+      "method": "reLaunch",
+      "url": "/pages/center"
+    },
+    {
+      "method": "navigateTo",
+      "url": "/pages/jobs"
+    },
+    {
+      "method": "navigateTo",
+      "url": "/pages/service/customer-service-chat?conversationId=default"
+    },
+    {
+      "method": "reLaunch",
+      "url": "/pages/profile"
+    }
+  ],
+  "expectedEnterprise": [
+    {
+      "method": "navigateTo",
+      "url": "/pages/service/customer-service-chat?conversationId=default"
+    }
+  ],
+  "defaultPassed": true,
+  "enterprisePassed": true
+}

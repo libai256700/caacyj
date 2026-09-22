@@ -1,0 +1,79 @@
+{
+  "taskId": "DEV-049",
+  "acceptanceId": "AC-ASSESSMENT-AI-201",
+  "environment": "Test",
+  "executedAt": "2026-08-27",
+  "status": "PASS",
+  "verdict": "DATABASE_V3_PROMPT=PASS",
+  "currentV3Pass": true,
+  "evidencePurpose": "证明测试库yj_agent_info.id=2当前运行时提示词已命中V3基线并补齐证照表述规则",
+  "database": "yunjikeji",
+  "target": {
+    "table": "yj_agent_info",
+    "id": 2,
+    "name": "小题",
+    "tenantId": 1,
+    "status": 1,
+    "deleted": 0
+  },
+  "currentV3Verification": {
+    "charLengthCodePoints": 2440,
+    "byteLengthUtf8": 6243,
+    "sha256": "974ef05f4cda6fe0e07d6076c06e0c87b33986461dcaf2d39feda7c1e2d8d414",
+    "targetHashMatched": true,
+    "applicationStatus": "VERIFIED_CURRENT_DATABASE_VALUE",
+    "structure": "默认8章加按选择动态生成的A-G章节",
+    "markers": {
+      "ruleEnginePriorityPresent": true,
+      "verifiedKnowledgePresent": true,
+      "certificateWordingRulePresent": true,
+      "neutralCertificateWordingPresent": true,
+      "fourForbiddenGenericCertificateWordingsPresent": true,
+      "legacySixChapterMarkerPresent": false,
+      "dataBrandMarkerPresent": false
+    },
+    "postcheck": "PASS"
+  },
+  "certificatePromptPatch": {
+    "baselineCharLengthCodePoints": 2284,
+    "baselineByteLengthUtf8": 5809,
+    "baselineSha256": "d7794b51e039db2ecd7589e60dd593d8f85648c9b774e414768a2539ad3c16ce",
+    "addendumCharLengthCodePoints": 156,
+    "addendumByteLengthUtf8": 434,
+    "addendumSha256": "1a1b04f8ffc3da874e119eebcbc190a897a3172af64e36395bb8fded1d2f6883",
+    "firstExecutionUpdatedRows": 1,
+    "idempotencyExecutionUpdatedRows": 0,
+    "replyStrategyUnchanged": true,
+    "aiModelConfigUnchanged": true
+  },
+  "backups": {
+    "sourceSnapshot": {
+      "file": "database-backup-yj_agent_info-id2-before-v3-20260827.sql",
+      "byteLength": 11194,
+      "sha256": "28f238c850463136766cbcfb82beb14b01170b7a664648ab24632eef986e1b2b"
+    },
+    "restoreSafe": {
+      "file": "database-backup-yj_agent_info-id2-before-v3-20260827-restore.sql",
+      "byteLength": 10937,
+      "sha256": "1625ade26898b5ad937ad0dbaae266a261e35681c3763abe584b28da08f4ad45"
+    },
+    "certificatePatchSourceSnapshot": {
+      "file": "C:\\Users\\renquan\\.codex\\db-backups\\feixingxueyuan\\DEV-049\\20260827205100-yj_agent_info-id2-before-v3-certificate.sql",
+      "repositoryStored": false,
+      "byteLength": 7093,
+      "sha256": "9248b9194765de1fb4a7f0ed91da1354a8af149c5fd43ea87759e3d95cdc8386"
+    }
+  },
+  "historicalPredecessor": {
+    "charLengthCodePoints": 2284,
+    "byteLengthUtf8": 5809,
+    "sha256": "d7794b51e039db2ecd7589e60dd593d8f85648c9b774e414768a2539ad3c16ce",
+    "structure": "V3基线，未包含证照表述补丁",
+    "evidenceOnly": true
+  },
+  "baseV3ForwardScript": "../../../050-执行脚本/20260815120000-dml-update_yj_agent_info_self_test_prompt_from_mjs.sql",
+  "forwardScript": "../../../050-执行脚本/20260827205100-dml-update_yj_agent_info_v3_certificate_prompt.sql",
+  "rollbackScript": "../../../050-执行脚本/20260827205101-dml-rollback_yj_agent_info_v3_certificate_prompt.sql",
+  "executionBoundary": "仅记录测试库结果；生产库禁止直接执行",
+  "secretsOrFullPromptRecorded": false
+}
