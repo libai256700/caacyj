@@ -1,0 +1,25 @@
+{
+  "task_code": "TASK-008",
+  "asset_type": "question_bank_import_baseline",
+  "generated_at": "2026-05-13T22:20:00+08:00",
+  "expected_total_questions": 1512,
+  "default_question_type": "single_choice",
+  "manual_review_categories": [
+    "flight_manual_and_regulations",
+    "comprehensive_qa",
+    "instructor_question_bank"
+  ],
+  "categories": [
+    { "category_code": "overview", "category_name": "概述", "expected_question_count": 58, "default_parse_status": "parsed" },
+    { "category_code": "system_components", "category_name": "系统组成及介绍", "expected_question_count": 148, "default_parse_status": "parsed" },
+    { "category_code": "air_traffic_control", "category_name": "空中交通管制", "expected_question_count": 37, "default_parse_status": "parsed" },
+    { "category_code": "flight_manual_and_regulations", "category_name": "无人机飞行手册、法律法规及其他", "expected_question_count": 130, "default_parse_status": "parsed", "allow_needs_manual_review": true },
+    { "category_code": "operation_precautions", "category_name": "无人机操作注意事项", "expected_question_count": 79, "default_parse_status": "parsed" },
+    { "category_code": "meteorology", "category_name": "气象", "expected_question_count": 255, "default_parse_status": "parsed" },
+    { "category_code": "rotary_uav", "category_name": "旋翼无人机", "expected_question_count": 77, "default_parse_status": "parsed" },
+    { "category_code": "mission_planning", "category_name": "无人机任务规划", "expected_question_count": 74, "default_parse_status": "parsed" },
+    { "category_code": "flight_principles_and_performance", "category_name": "飞行原理与飞行性能", "expected_question_count": 300, "default_parse_status": "parsed" },
+    { "category_code": "comprehensive_qa", "category_name": "综合问答", "expected_question_count": 199, "default_parse_status": "needs_manual_review" },
+    { "category_code": "instructor_question_bank", "category_name": "无人机教员题库", "expected_question_count": 155, "default_parse_status": "needs_manual_review" }
+  ]
+}

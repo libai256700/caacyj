@@ -1,0 +1,47 @@
++-----------------------------------+
+| TABLE_NAME                        |
++-----------------------------------+
+| yk_practice_record                |
+| yk_practice_session               |
+| yk_question                       |
+| yk_question_category              |
+| yk_question_import_option_staging |
+| yk_question_import_staging        |
+| yk_question_option                |
+| yk_wrong_question_book            |
++-----------------------------------+
++-----------------------------------+-----------------------------------------------+---------+
+| category_code                     | category_name                                 | sort_no |
++-----------------------------------+-----------------------------------------------+---------+
+| overview                          | 概述                                          |      10 |
+| system_components                 | 系统组成及介绍                                |      20 |
+| air_traffic_control               | 空中交通管制                                  |      30 |
+| flight_manual_and_regulations     | 无人机飞行手册、法律法规及其他                |      40 |
+| operation_precautions             | 无人机操作注意事项                            |      50 |
+| meteorology                       | 气象                                          |      60 |
+| rotary_uav                        | 旋翼无人机                                    |      70 |
+| mission_planning                  | 无人机任务规划                                |      80 |
+| flight_principles_and_performance | 飞行原理与飞行性能                            |      90 |
+| comprehensive_qa                  | 综合问答                                      |     100 |
+| instructor_question_bank          | 无人机教员题库                                |     110 |
++-----------------------------------+-----------------------------------------------+---------+
++-----------------------+
+| formal_question_count |
++-----------------------+
+|                     1 |
++-----------------------+
++---------------------+
+| formal_option_count |
++---------------------+
+|                   4 |
++---------------------+
++------------------------+
+| practice_session_count |
++------------------------+
+|                      0 |
++------------------------+
++------------------+
+| wrong_book_count |
++------------------+
+|                0 |
++------------------+

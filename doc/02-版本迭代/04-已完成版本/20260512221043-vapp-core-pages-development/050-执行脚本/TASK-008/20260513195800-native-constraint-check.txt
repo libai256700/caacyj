@@ -1,0 +1,17 @@
+﻿mysql.exe : mysql: [Warning] Using a password on the command line interface can be insecure.
+At line:2 char:11
++ $result = & 'C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql.exe' - ...
++           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (mysql: [Warning...an be insecure.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+question_type	varchar(32)	NO	NULL
+mode	varchar(32)	NO	standard
+status	varchar(32)	NO	in_progress
+yk_practice_record	fk_yk_practice_record_question	yk_question
+yk_practice_record	fk_yk_practice_record_session_user	yk_practice_session
+yk_practice_session	fk_yk_practice_session_category	yk_question_category
+yk_practice_session	fk_yk_practice_session_user	yk_user_account
+yk_question	fk_tmp_yk_question_category	yk_question_category
+yk_question	fk_yk_question_category	yk_question_category
+yk_question_option	fk_yk_question_option_question	yk_question

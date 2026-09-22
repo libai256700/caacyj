@@ -1,0 +1,13 @@
+{
+  "command": [
+    "C:\\DevShared\\DevSoft\\miniconda3\\python.exe",
+    "D:\\ProjPort\\Work\\dev-skills\\skills\\00-1800-ui-design-generation\\scripts\\render_page_background_prompt.py",
+    "--input-json",
+    "D:\\ProjPort\\Work\\feixingxueyuan\\doc\\02-版本迭代\\03-进行中版本\\20260511100000-vinit-project-bootstrap\\031-页面设计\\001-页面背景\\001-登录背景\\.evidence\\20260512-165753-page-background\\page-background-stage-input.json",
+    "--output-path",
+    "D:\\ProjPort\\Work\\feixingxueyuan\\doc\\02-版本迭代\\03-进行中版本\\20260511100000-vinit-project-bootstrap\\031-页面设计\\001-页面背景\\001-登录背景\\01-提示词.md"
+  ],
+  "returncode": 0,
+  "stdout": "Generated page-background prompt: D:\\ProjPort\\Work\\feixingxueyuan\\doc\\02-�汾����\\03-�����а汾\\20260511100000-vinit-project-bootstrap\\031-ҳ�����\\001-ҳ�汳��\\001-��¼����\\01-��ʾ��.md\n",
+  "stderr": ""
+}

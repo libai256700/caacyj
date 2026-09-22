@@ -1,0 +1,5 @@
+batch_no,question_code,option_code,option_label,option_content,is_correct,sort_no
+20260513-batch-001,Q-OVERVIEW-0001,A,A,选项A,1,10
+20260513-batch-001,Q-OVERVIEW-0001,B,B,选项B,0,20
+20260513-batch-001,Q-OVERVIEW-0001,C,C,选项C,0,30
+20260513-batch-001,Q-OVERVIEW-0001,D,D,选项D,0,40

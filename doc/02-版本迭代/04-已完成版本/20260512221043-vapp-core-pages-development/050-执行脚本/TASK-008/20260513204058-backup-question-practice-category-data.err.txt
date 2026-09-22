@@ -1,0 +1,1 @@
+mysqldump: Couldn't execute 'SELECT COLUMN_NAME,                       JSON_EXTRACT(HISTOGRAM, '$."number-of-buckets-specified"')                FROM information_schema.COLUMN_STATISTICS                WHERE SCHEMA_NAME = 'yunjikeji' AND TABLE_NAME = 'yk_question';': Unknown table 'column_statistics' in information_schema (1109)

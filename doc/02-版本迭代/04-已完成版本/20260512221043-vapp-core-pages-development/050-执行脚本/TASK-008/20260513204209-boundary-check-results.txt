@@ -1,0 +1,10 @@
++-----------------------+-----------+
+| item                  | row_count |
++-----------------------+-----------+
+| staging_question_rows |         0 |
+| staging_option_rows   |         0 |
+| formal_question_rows  |         1 |
+| formal_option_rows    |         4 |
+| category_rows         |        11 |
+| wrong_book_rows       |         0 |
++-----------------------+-----------+

@@ -1,0 +1,44 @@
+﻿mysql.exe : mysql: [Warning] Using a password on the command line interface can be insecure.
+At line:3 char:11
++ $result = & 'C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql.exe' - ...
++           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (mysql: [Warning...an be insecure.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+overview	??	10	online
+system_components	???????	20	online
+air_traffic_control	??????	30	online
+flight_manual_and_regulations	???????????????	40	online
+operation_precautions	?????????	50	online
+meteorology	??	60	online
+rotary_uav	?????	70	online
+mission_planning	???????	80	online
+flight_principles_and_performance	?????????	90	online
+comprehensive_qa	????	100	online
+instructor_question_bank	???????	110	online
+mode	varchar(32)	NO	standard
+status	varchar(32)	NO	in_progress
+correct_flag	tinyint(1)	NO	0
+yk_practice_record	fk_yk_practice_record_question	yk_question
+yk_practice_record	fk_yk_practice_record_session_user	yk_practice_session
+yk_practice_session	fk_yk_practice_session_category	yk_question_category
+yk_practice_session	fk_yk_practice_session_user	yk_user_account
+yk_question	fk_tmp_yk_question_category	yk_question_category
+yk_question	fk_yk_question_category	yk_question_category
+yk_question_option	fk_yk_question_option_question	yk_question
+yk_practice_record	idx_yk_practice_record_session_time
+yk_practice_record	idx_yk_practice_record_session_time
+yk_practice_record	uk_yk_practice_record_session_question
+yk_practice_record	uk_yk_practice_record_session_question
+yk_practice_session	uk_yk_practice_session_session_id
+yk_practice_session	uk_yk_practice_session_session_user
+yk_practice_session	uk_yk_practice_session_session_user
+yk_question	idx_yk_question_category_status
+yk_question	idx_yk_question_category_status
+yk_question	idx_yk_question_category_status
+yk_question	idx_yk_question_category_status
+yk_question	uk_yk_question_code
+yk_question_option	uk_yk_question_option_question_code
+yk_question_option	uk_yk_question_option_question_code
+1	Q-OVERVIEW-0001	single_choice	TODO_STEM	A	SOURCE_REF	online
+4

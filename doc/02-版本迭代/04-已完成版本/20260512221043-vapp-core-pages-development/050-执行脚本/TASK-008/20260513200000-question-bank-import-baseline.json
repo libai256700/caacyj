@@ -1,0 +1,101 @@
+{
+  "task_code": "TASK-008",
+  "asset_type": "question_bank_import_baseline",
+  "generated_at": "2026-05-13T20:00:00+08:00",
+  "expected_total_questions": 1512,
+  "default_question_type": "single_choice",
+  "question_type_rules": {
+    "single_choice": "default route for current extracted rows",
+    "judge": "only explicit binary true-or-false questions should be normalized to judge",
+    "multiple_choice": "do not bulk-import automatically in this round unless the extracted row already has an explicit multi-answer result"
+  },
+  "parse_status_policy": {
+    "parsed": "Normalized row is complete and can be imported by batch SQL into yk_question and yk_question_option.",
+    "needs_manual_review": "Keep the row in staging for traceability, but do not import it until manual supplement or structure confirmation is complete.",
+    "ignored_noise": "Noise-only source rows or non-question files may be kept in staging for traceability; batch SQL will ignore them."
+  },
+  "noise_file_strategy": {
+    "preferred_action": "Do not load pure noise files into formal question tables.",
+    "traceability_action": "If the extraction result must keep the noise trace, load it into yk_question_import_staging with parse_status=ignored_noise and a review_reason."
+  },
+  "manual_review_categories": [
+    "flight_manual_and_regulations",
+    "comprehensive_qa",
+    "instructor_question_bank"
+  ],
+  "target_mapping": {
+    "question_staging_table": "yk_question_import_staging",
+    "option_staging_table": "yk_question_import_option_staging",
+    "formal_question_table": "yk_question",
+    "formal_option_table": "yk_question_option"
+  },
+  "categories": [
+    {
+      "category_code": "overview",
+      "category_name": "概述",
+      "expected_question_count": 58,
+      "default_parse_status": "parsed"
+    },
+    {
+      "category_code": "system_components",
+      "category_name": "系统组成及介绍",
+      "expected_question_count": 148,
+      "default_parse_status": "parsed"
+    },
+    {
+      "category_code": "air_traffic_control",
+      "category_name": "空中交通管制",
+      "expected_question_count": 37,
+      "default_parse_status": "parsed"
+    },
+    {
+      "category_code": "flight_manual_and_regulations",
+      "category_name": "无人机飞行手册、法律法规及其他",
+      "expected_question_count": 130,
+      "default_parse_status": "parsed",
+      "allow_needs_manual_review": true
+    },
+    {
+      "category_code": "operation_precautions",
+      "category_name": "无人机操作注意事项",
+      "expected_question_count": 79,
+      "default_parse_status": "parsed"
+    },
+    {
+      "category_code": "meteorology",
+      "category_name": "气象",
+      "expected_question_count": 255,
+      "default_parse_status": "parsed"
+    },
+    {
+      "category_code": "rotary_uav",
+      "category_name": "旋翼无人机",
+      "expected_question_count": 77,
+      "default_parse_status": "parsed"
+    },
+    {
+      "category_code": "mission_planning",
+      "category_name": "无人机任务规划",
+      "expected_question_count": 74,
+      "default_parse_status": "parsed"
+    },
+    {
+      "category_code": "flight_principles_and_performance",
+      "category_name": "飞行原理与飞行性能",
+      "expected_question_count": 300,
+      "default_parse_status": "parsed"
+    },
+    {
+      "category_code": "comprehensive_qa",
+      "category_name": "综合问答",
+      "expected_question_count": 199,
+      "default_parse_status": "needs_manual_review"
+    },
+    {
+      "category_code": "instructor_question_bank",
+      "category_name": "无人机教员题库",
+      "expected_question_count": 155,
+      "default_parse_status": "needs_manual_review"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+category_code	category_name	imported_question_count
+overview	概述	1
+system_components	系统组成及介绍	0
+air_traffic_control	空中交通管制	0
+flight_manual_and_regulations	无人机飞行手册、法律法规及其他	0
+operation_precautions	无人机操作注意事项	0
+meteorology	气象	0
+rotary_uav	旋翼无人机	0
+mission_planning	无人机任务规划	0
+flight_principles_and_performance	飞行原理与飞行性能	0
+comprehensive_qa	综合问答	0
+instructor_question_bank	无人机教员题库	0

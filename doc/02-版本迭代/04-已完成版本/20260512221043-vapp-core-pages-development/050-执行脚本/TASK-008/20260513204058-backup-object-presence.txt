@@ -1,0 +1,23 @@
++------------+-----------------------------------+
+| item       | detail                            |
++------------+-----------------------------------+
+| db_version | 5.7.44-7.0.1.5-log                |
+| table      | yk_practice_record                |
+| table      | yk_practice_session               |
+| table      | yk_question                       |
+| table      | yk_question_category              |
+| table      | yk_question_import_option_staging |
+| table      | yk_question_import_staging        |
+| table      | yk_question_option                |
+| table      | yk_user_account                   |
++------------+-----------------------------------+
++-----------------------------------+-----------+
+| table_name                        | row_count |
++-----------------------------------+-----------+
+| yk_question                       |         1 |
+| yk_practice_record                |         0 |
+| yk_question_category              |        11 |
+| yk_question_import_staging        |         0 |
+| yk_question_import_option_staging |         0 |
+| yk_practice_session               |         0 |
++-----------------------------------+-----------+

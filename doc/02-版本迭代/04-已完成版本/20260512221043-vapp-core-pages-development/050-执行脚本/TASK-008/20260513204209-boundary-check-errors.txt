@@ -1,0 +1,1 @@
+ERROR 1054 (42S22) at line 18: Unknown column 'category_code' in 'field list'
