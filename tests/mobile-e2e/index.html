@@ -1,0 +1,778 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
+  <title>Android 真机交互测试场景</title>
+  <style>
+    :root {
+      --ink: #21313a;
+      --muted: #64737b;
+      --line: #d9e2e7;
+      --canvas: #f4f7f8;
+      --surface: #ffffff;
+      --navy: #203d4c;
+      --green-soft: #e4f3e9;
+      --gray-soft: #edf1f3;
+      --blue-soft: #e7f1f8;
+      --red-soft: #fdeaea;
+      --accent: #cc6b25;
+    }
+
+    * { box-sizing: border-box; }
+    html { min-width: 320px; background: var(--canvas); }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--canvas);
+      font-family: "Microsoft YaHei", "PingFang SC", system-ui, sans-serif;
+      font-size: 14px;
+      line-height: 1.55;
+    }
+    .app-shell { min-height: 100vh; }
+    .topbar {
+      display: flex;
+      align-items: center;
+      min-height: 68px;
+      padding: 14px 30px;
+      color: #fff;
+      background: var(--navy);
+    }
+    .topbar-inner { display: flex; width: 100%; align-items: center; justify-content: space-between; gap: 18px; }
+    .brand { display: flex; align-items: center; gap: 14px; }
+    .brand-mark {
+      display: grid;
+      width: 34px;
+      height: 34px;
+      place-items: center;
+      color: var(--navy);
+      background: #ef9c54;
+      border-radius: 8px;
+      font-weight: 800;
+    }
+    .brand-title { margin: 0; font-size: 17px; font-weight: 700; }
+    .brand-subtitle { margin: 2px 0 0; color: #b7c9d0; font-size: 12px; }
+    .workspace { max-width: 1500px; margin: 0 auto; padding: 26px 30px 40px; }
+    .panel {
+      overflow: hidden;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: 0 12px 28px rgba(32, 61, 76, .08);
+    }
+    .panel-head { padding: 18px 20px; border-bottom: 1px solid var(--line); }
+    .panel-title { margin: 0; font-size: 16px; }
+    .panel-description { margin: 4px 0 0; color: var(--muted); font-size: 12px; }
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; min-width: 1480px; border-collapse: collapse; }
+    th {
+      padding: 11px 14px;
+      color: var(--muted);
+      background: #f7f9fa;
+      border-bottom: 1px solid var(--line);
+      font-size: 12px;
+      font-weight: 700;
+      text-align: left;
+      white-space: nowrap;
+    }
+    td { padding: 15px 14px; border-bottom: 1px solid #edf1f2; vertical-align: top; }
+    tbody tr:last-child td { border-bottom: 0; }
+    tbody tr:hover { background: #f8fbfb; }
+    .module { width: 130px; color: var(--navy); font-weight: 700; white-space: nowrap; }
+    .function { width: 225px; font-weight: 700; }
+    .user-action { min-width: 360px; color: var(--muted); }
+    .expected { min-width: 330px; color: var(--muted); }
+    .test-id { width: 128px; color: var(--navy); font-family: Consolas, "SFMono-Regular", monospace; font-size: 12px; font-weight: 700; white-space: nowrap; }
+    .operation { width: 112px; white-space: nowrap; }
+    th:last-child, td:last-child { position: sticky; right: 0; z-index: 2; border-left: 1px solid var(--line); }
+    th:last-child { background: #f7f9fa; }
+    td:last-child { background: var(--surface); }
+    tbody tr:hover td:last-child { background: #f8fbfb; }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .script-ready, .result-pass { color: #196c42; background: var(--green-soft); }
+    .script-pending, .result-pending { color: #5e6c73; background: var(--gray-soft); }
+    .result-running { color: #176891; background: var(--blue-soft); }
+    .result-failed { color: #a13030; background: var(--red-soft); }
+    .run-button {
+      min-width: 72px;
+      height: 32px;
+      padding: 0 12px;
+      border: 1px solid #1d5b76;
+      border-radius: 5px;
+      color: #fff;
+      background: #1d5b76;
+      font: inherit;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .run-button--active {
+      border-color: #176891;
+      color: #fff;
+      background: #176891;
+      cursor: wait;
+    }
+    .run-button--waiting { color: #52636b; background: #e7eef1; }
+    .run-button--unbound { border-color: #d4dde1; color: #8a989f; background: #edf1f3; }
+    .run-button:hover:not(:disabled) { background: #16475e; }
+    .run-button:focus-visible { outline: 2px solid #ef9c54; outline-offset: 2px; }
+    .run-button:disabled { border-color: #d4dde1; color: #8a989f; background: #edf1f3; cursor: not-allowed; }
+    .run-button.run-button--active:disabled { border-color: #176891; color: #fff; background: #176891; cursor: wait; }
+    .run-button.run-button--waiting:disabled { border-color: #c8d5da; color: #52636b; background: #e7eef1; }
+    .run-button.run-button--unbound:disabled { border-color: #d4dde1; color: #8a989f; background: #edf1f3; }
+    .device-status {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 5px 10px;
+      border: 1px solid rgba(255, 255, 255, .24);
+      border-radius: 5px;
+      color: #e6f0f3;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+    .device-status--ready { color: #d9f2e3; border-color: rgba(152, 221, 173, .6); }
+    .run-panel { margin-top: 18px; }
+    .run-panel[hidden] { display: none; }
+    .run-panel__head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .run-panel__title { margin: 0; font-size: 14px; }
+    .run-panel__meta { color: var(--muted); font-size: 12px; }
+    .run-summary {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      margin-top: 10px;
+      padding: 2px 8px;
+      color: var(--muted);
+      background: #f2f6f7;
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      font-size: 12px;
+    }
+    .run-panel__output {
+      max-height: 320px;
+      margin: 14px 0 0;
+      padding: 14px;
+      overflow: auto;
+      border: 1px solid #203d4c;
+      border-radius: 5px;
+      color: #d9e8ef;
+      background: #142d39;
+      font: 12px/1.55 Consolas, "SFMono-Regular", monospace;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .report-link { color: #176891; font-size: 12px; font-weight: 700; text-decoration: none; }
+    .report-link:hover { text-decoration: underline; }
+    .footer-note { margin: 18px 0 0; color: var(--muted); font-size: 11px; }
+
+    @media (max-width: 700px) {
+      .topbar { padding: 14px 16px; }
+      .workspace { padding: 16px 12px 28px; }
+      .panel-head { padding: 16px; }
+      td, th { padding-right: 12px; padding-left: 12px; }
+      .topbar-inner { align-items: flex-start; flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <div class="brand">
+          <div class="brand-mark">QA</div>
+          <div>
+            <h1 class="brand-title">Android 真机交互测试</h1>
+            <p class="brand-subtitle">场景拆分审核台 · 本机自动化控制台</p>
+          </div>
+        </div>
+        <div id="device-status" class="device-status">正在连接测试控制台</div>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <section class="panel" aria-labelledby="scenario-list-title">
+        <div class="panel-head">
+          <h2 class="panel-title" id="scenario-list-title">测试场景总表</h2>
+          <p class="panel-description">点击功能点只运行该功能点绑定的 1 个脚本；同一个测试编号下的多个功能点共用同一脚本，不会一次运行整组功能。</p>
+          <div id="run-summary" class="run-summary" aria-live="polite">尚未启动脚本 · 已绑定脚本可单独运行</div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>模块名称</th>
+                <th>功能名称</th>
+                <th>用户操作</th>
+                <th>期望结果</th>
+                <th>是否有脚本</th>
+                <th>测试编号</th>
+                <th>执行结果</th>
+                <th>操作</th>
+              </tr>
+            </thead>
+            <tbody id="scenario-rows"></tbody>
+          </table>
+        </div>
+      </section>
+      <section id="run-panel" class="panel run-panel" hidden aria-live="polite">
+        <div class="panel-head run-panel__head">
+          <div>
+            <h2 class="run-panel__title" id="run-title">测试运行</h2>
+            <div class="run-panel__meta" id="run-meta"></div>
+          </div>
+          <a id="report-link" class="report-link" href="#" hidden target="_blank" rel="noopener">查看报告</a>
+        </div>
+        <pre id="run-output" class="run-panel__output"></pre>
+      </section>
+      <p class="footer-note">控制台只监听本机地址，只能运行已登记的测试脚本；脚本会实际控制当前通过 ADB 连接的 Android 设备。</p>
+    </main>
+  </div>
+
+  <script>
+    const scenarios = [
+      {
+        domain: '交互布局',
+        name: '顶部导航刘海安全区',
+        acceptance: '打开首页、岗位招聘、客服中心、AI 中心、逐题练习、自测记录和自测报告页面；查看每个页面最上方的导航栏。',
+        expected: '顶部导航栏完整显示在刘海和状态栏下方；返回按钮、标题和右侧操作均未被遮挡。',
+        automation: '已编写',
+        execution: '通过（LAYOUT-001）',
+      },
+      {
+        domain: '交互布局',
+        name: '顶部导航固定',
+        acceptance: '在岗位招聘、客服中心、AI 中心、逐题练习、自测记录和自测报告页面向上滑动中间内容区域。',
+        expected: '顶部导航栏始终停留在原位置；导航栏不随列表或正文一起向上移动。',
+        automation: '已编写',
+        execution: '通过（LAYOUT-001）',
+      },
+      {
+        domain: '交互布局',
+        name: '底部导航固定',
+        acceptance: '在首页、岗位招聘、客服中心、AI 中心和我的页面向上滑动中间内容区域。',
+        expected: '底部导航栏始终停留在屏幕底部安全区域上方；内容不会覆盖底部导航。',
+        automation: '已编写',
+        execution: '通过（LAYOUT-001）',
+      },
+      {
+        domain: '交互布局',
+        name: '中间区域独立滚动',
+        acceptance: '在岗位招聘、客服中心、AI 中心、逐题练习、自测记录和自测报告页面向上滑动，再向下滑动中间内容区域。',
+        expected: '只有中间内容区域滚动；顶部导航和底部导航保持固定；返回按钮和底部入口仍可直接操作。',
+        automation: '已编写',
+        execution: '通过（LAYOUT-001）',
+      },
+      {
+        domain: '认证',
+        name: '登录页展示与协议前置',
+        acceptance: '清除应用本地会话；冷启动应用；点击默认角色区域、用户协议入口和隐私政策入口；不勾选协议点击一键登录；返回后勾选协议并再次点击一键登录。',
+        expected: '应用进入未登录登录页；默认角色为学员；协议入口可打开；未勾选协议时不发起授权；勾选后允许继续。',
+        automation: '待编写',
+        execution: '未执行',
+      },
+      {
+        domain: '认证',
+        name: '包体内置协议阅读',
+        acceptance: '在未登录状态依次点击“用户服务协议”和“隐私政策”；阅读内容后分别返回登录页。',
+        expected: '两份协议均在包体内直接显示标题和正文；不依赖网络，不显示加载、失败或重试状态。',
+        automation: '已编写',
+        execution: '待执行',
+      },
+      {
+        domain: '认证',
+        name: '一键登录按钮可操作',
+        acceptance: '勾选用户协议；点击“一键登录”按钮一次；等待页面跳转。',
+        expected: '只发起一个运营商授权流程；按钮加载态结束后进入授权页或返回明确错误。',
+        automation: '已编写',
+        execution: '通过',
+      },
+      {
+        domain: '认证',
+        name: '运营商授权页展示',
+        acceptance: '在运营商授权页向下滑动，依次查看手机号掩码、应用名称和协议提示。',
+        expected: '手机号掩码、应用名称和协议提示均存在且无遮挡。',
+        automation: '已编写',
+        execution: '通过',
+      },
+      {
+        domain: '认证',
+        name: '运营商授权确认回调',
+        acceptance: '在运营商授权页点击“同意”或“确认授权”；等待页面返回应用。',
+        expected: '授权页关闭并回到应用；客户端收到授权回调，进入登录处理流程。',
+        automation: '已编写',
+        execution: '通过',
+      },
+      {
+        domain: '认证',
+        name: '一键登录后端校验',
+        acceptance: '完成运营商授权；保持应用前台不操作；等待登录请求处理结束。',
+        expected: '后端校验成功；客户端收到成功响应，不重复提交登录请求。',
+        automation: '已编写',
+        execution: '通过',
+      },
+      {
+        domain: '认证',
+        name: '登录成功首页落地',
+        acceptance: '保持应用前台不操作；等待页面跳转。',
+        expected: '进入首页；学员身份内容可见，不停留在登录页。',
+        automation: '已编写',
+        execution: '通过',
+      },
+      {
+        domain: '认证',
+        name: '会话重启恢复',
+        acceptance: '提交登录操作后打开系统最近任务；划掉应用进程；点击应用图标重新启动。',
+        expected: '重新启动后保持登录态，不重复要求运营商授权。',
+        automation: '已编写',
+        execution: '通过',
+      },
+      {
+        domain: '认证',
+        name: '授权取消返回登录页',
+        acceptance: '在运营商授权页点击“取消”或使用系统返回键；再次点击“一键登录”按钮。',
+        expected: '返回登录页；不创建登录会话；一键登录按钮可再次操作。',
+        automation: '已编写',
+        execution: '通过',
+      },
+      {
+        domain: '认证',
+        name: '重复点击只发起一次请求',
+        acceptance: '在登录页连续快速点击“一键登录”按钮 3 次。',
+        expected: '只出现一个授权流程；只产生一次登录请求；不创建重复会话。',
+        automation: '已编写',
+        execution: '通过',
+      },
+      {
+        domain: '认证',
+        name: '短信登录入口切换',
+        acceptance: '在登录页点击“短信登录”切换入口。',
+        expected: '短信登录表单展示手机号输入框、验证码输入框和提交按钮。',
+        automation: '已编写',
+        execution: '通过',
+      },
+      {
+        domain: '认证',
+        name: '手机号输入',
+        acceptance: '点击手机号输入框；输入配置的测试手机号。',
+        expected: '手机号完整写入输入框，表单状态同步更新。',
+        automation: '已编写',
+        execution: '通过',
+      },
+      {
+        domain: '认证',
+        name: '手机号格式校验',
+        acceptance: '点击手机号输入框；输入格式不符合要求的手机号；点击提交按钮。',
+        expected: '阻止提交并提示手机号格式错误；不发起登录请求。',
+        automation: '已编写',
+        execution: '通过',
+      },
+      {
+        domain: '认证',
+        name: '验证码输入',
+        acceptance: '点击验证码输入框；输入配置的固定验证码。',
+        expected: '验证码完整写入输入框，输入过程中不被键盘或页面切换遮挡。',
+        automation: '已编写',
+        execution: '通过',
+      },
+      {
+        domain: '认证',
+        name: '固定验证码提交',
+        acceptance: '输入测试手机号和固定验证码；不点击获取短信按钮；点击登录提交按钮。',
+        expected: '不发送真实短信；固定验证码通过表单校验并进入提交流程。',
+        automation: '已编写',
+        execution: '通过',
+      },
+      {
+        domain: '认证',
+        name: '短信登录请求状态',
+        acceptance: '填写手机号和验证码；点击登录提交按钮一次；等待请求返回。',
+        expected: '只产生一次登录请求；请求完成后提交按钮加载态结束。',
+        automation: '已编写',
+        execution: '通过',
+      },
+      {
+        domain: '认证',
+        name: '短信登录后端校验',
+        acceptance: '输入正确手机号和固定验证码；点击登录提交按钮；保持应用前台不操作；等待登录请求处理结束。',
+        expected: '后端校验通过并建立登录会话；客户端收到成功响应。',
+        automation: '已编写',
+        execution: '通过',
+      },
+      {
+        domain: '认证',
+        name: '短信登录首页落地',
+        acceptance: '提交短信登录后保持应用前台不操作；等待页面跳转；打开系统最近任务并重新启动应用。',
+        expected: '进入首页；重新启动应用后按规则恢复登录会话。',
+        automation: '已编写',
+        execution: '通过',
+      },
+      {
+        domain: '自测',
+        name: '短信验证码登录前置',
+        acceptance: '启动应用；点击“短信登录”切换入口；输入配置的测试手机号和固定验证码；勾选用户协议；点击“登录 / 注册”。',
+        expected: '通过短信验证码建立学员登录态；不调用一键登录；进入首页。',
+        automation: '已编写',
+        execution: '通过',
+      },
+      {
+        domain: '自测',
+        name: '自测入口',
+        acceptance: '在首页点击“开始测评”。',
+        expected: '进入自我测评资料页；若已有测评记录，出现重新测评确认弹窗。',
+        automation: '已编写',
+        execution: '通过',
+      },
+      {
+        domain: '自测',
+        name: '基本资料填写',
+        acceptance: '在资料页点击姓名输入框；输入 AutoTest；点击“下一步”。',
+        expected: '资料保存成功；进入自测题目页。',
+        automation: '已编写',
+        execution: '通过',
+      },
+      {
+        domain: '自测',
+        name: '首题加载',
+        acceptance: '进入自测题目页；等待页面加载完成。',
+        expected: '题目操作区域、返回按钮和提交按钮正常显示，可继续进行答题操作。',
+        automation: '已编写',
+        execution: '通过',
+      },
+      {
+        domain: '自测',
+        name: '自测题目作答与提交',
+        acceptance: '对当前题目点击任一选项，或点击文本输入框输入任意内容；点击“下一题”；重复操作直到最后一题点击“提交并生成报告”。',
+        expected: '每次操作后答案被保存；最后一次操作提交整套答案并出现提交结果；不判断题目内容或答案对错。',
+        automation: '已编写',
+        execution: '通过',
+      },
+      {
+        domain: '自测',
+        name: '下一题交互',
+        acceptance: '在当前题目完成选择或输入；点击“下一题”。',
+        expected: '题目位置向后推进；题目计数更新；页面继续展示题目操作区。',
+        automation: '已编写',
+        execution: '通过',
+      },
+      {
+        domain: '自测',
+        name: '上一题交互',
+        acceptance: '完成一次“下一题”操作后点击“上一题”。',
+        expected: '题目位置返回上一题；已加载的题目操作区保持可用。',
+        automation: '已编写',
+        execution: '通过',
+      },
+      {
+        domain: '自测',
+        name: '自测页面返回',
+        acceptance: '在自测题目页点击返回按钮；等待页面返回首页。',
+        expected: '返回首页；不提交当前题目；首页操作区继续可用。',
+        automation: '已编写',
+        execution: '通过',
+      },
+      {
+        domain: '岗位招聘',
+        name: '岗位列表加载',
+        acceptance: '在首页点击“岗位招聘”；等待岗位列表加载完成。',
+        expected: '展示岗位卡片，或展示明确的空态、错误态；页面可继续操作。',
+        automation: '已编写',
+        execution: '通过',
+      },
+      {
+        domain: '岗位招聘',
+        name: '岗位列表滚动浏览',
+        acceptance: '在岗位列表向上滑动，直到后续岗位卡片出现。',
+        expected: '列表继续展示后续岗位卡片；不白屏、不崩溃。',
+        automation: '已编写',
+        execution: '通过',
+      },
+      {
+        domain: '岗位招聘',
+        name: '岗位外部详情跳转',
+        acceptance: '在岗位卡片点击“查看详情”。',
+        expected: '已通过组织审核时打开对应外部详情；未通过时展示组织绑定提示。',
+        automation: '已编写',
+        execution: '通过（组织绑定提示分支）',
+      },
+      {
+        domain: '岗位招聘',
+        name: '外部详情返回后保持岗位位置',
+        acceptance: '在岗位列表向上滑动到后续岗位；点击“查看详情”打开外部页面；使用系统返回键回到应用。',
+        expected: '返回后仍展示离开前的岗位位置，不回到列表顶部。',
+        automation: '已编写',
+        execution: '通过（共享 4 项）',
+      },
+      {
+        domain: '岗位招聘',
+        name: '教员岗位筛选',
+        acceptance: '在岗位招聘页面点击“教员”。',
+        expected: '只展示岗位名称包含“教员、讲师、教师、老师、培训、教学或授课”任一用词的岗位；没有匹配岗位时展示明确空态。',
+        automation: '已编写',
+        execution: '待执行',
+      },
+      {
+        domain: '岗位招聘',
+        name: '工程师岗位筛选',
+        acceptance: '在岗位招聘页面点击“工程师”。',
+        expected: '只展示岗位名称包含“工程师”的岗位；没有匹配岗位时展示明确空态。',
+        automation: '已编写',
+        execution: '待执行',
+      },
+      {
+        domain: '岗位招聘',
+        name: '工作省份选项展示',
+        acceptance: '在岗位招聘页面点击“工作省份”。',
+        expected: '展示“全部省份”和省级行政区选项，可继续选择省份。',
+        automation: '已编写',
+        execution: '待执行',
+      },
+      {
+        domain: '岗位招聘',
+        name: '湖北省岗位筛选',
+        acceptance: '在岗位招聘页面点击“工作省份”；在省份选项中滚动至“湖北省”；点击“湖北省”。',
+        expected: '只展示工作地点包含“湖北”或“湖北省”的岗位；没有匹配岗位时展示明确空态。',
+        automation: '已编写',
+        execution: '待执行',
+      },
+      {
+        domain: '核心导航',
+        name: '登录后主流程导航',
+        acceptance: '依次点击首页、岗位招聘、联系客服、AI 中心、我的、关于小技和逐题练习入口；每次操作后使用系统返回键回到首页。',
+        expected: '七个入口均可打开；每次返回后回到首页；过程中无白屏或崩溃。',
+        automation: '已编写',
+        execution: '待重新执行',
+      },
+      {
+        domain: '练习',
+        name: '逐题练习选题与答题入口',
+        acceptance: '点击“逐题练习”；点击第一个题目主题卡片；点击“开始练习”；在第一题点击任一选项；等待提交结果；点击“下一题”；点击“上一题”。',
+        expected: '进入答题页；任一合法选项可以提交并出现结果态；点击“下一题”进入后续题目；点击“上一题”返回上一题并保持答题页可操作；不判断题目内容或答案对错。',
+        automation: '已编写',
+        execution: '通过 7/7',
+      },
+    ];
+
+    const state = { api: false, payload: null, selectedRunId: null };
+    const rows = document.querySelector('#scenario-rows');
+    const deviceStatus = document.querySelector('#device-status');
+    const runPanel = document.querySelector('#run-panel');
+    const runTitle = document.querySelector('#run-title');
+    const runMeta = document.querySelector('#run-meta');
+    const runOutput = document.querySelector('#run-output');
+    const reportLink = document.querySelector('#report-link');
+    const runSummary = document.querySelector('#run-summary');
+
+    const escapeHtml = (value) => String(value ?? '').replace(/[&<>'"]/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[char]));
+    const scriptClass = (value) => value === '已编写' ? 'script-ready' : 'script-pending';
+    const resultClass = (value) => {
+      if (String(value).startsWith('通过')) return 'result-pass';
+      if (String(value).startsWith('运行中')) return 'result-running';
+      if (String(value).startsWith('失败')) return 'result-failed';
+      return 'result-pending';
+    };
+
+    // The mapping deliberately stays at the feature level: several small
+    // acceptance rows may share one end-to-end script, but each row exposes
+    // the exact script ID that will be triggered by its Run button.
+    function testIdFor(item) {
+      if (item.automation !== '已编写') return '';
+      if (item.domain === '交互布局') return 'LAYOUT-001';
+      if (item.domain === '认证') {
+        if (item.name.includes('协议阅读')) return 'AGREEMENT-001';
+        const smsNames = ['短信', '手机号输入', '手机号格式校验', '验证码输入', '固定验证码提交'];
+        return smsNames.some((keyword) => item.name.includes(keyword)) ? 'AUTH-003' : 'AUTH-002';
+      }
+      if (item.domain === '自测') return 'SELF-TEST-001';
+      if (item.domain === '岗位招聘') {
+        if (item.name.includes('筛选') || item.name.includes('省份')) return 'JOBS-003';
+        if (item.name.includes('外部详情返回')) return 'JOBS-002';
+        return 'JOBS-001';
+      }
+      if (item.domain === '核心导航') return 'CORE-001';
+      if (item.domain === '练习') return item.name.includes('逐题') ? 'PRACTICE-001' : 'PRACTICE-002';
+      if (item.domain === '个人中心') return 'PROFILE-001';
+      return '';
+    }
+
+    scenarios.forEach((item) => { item.testId = testIdFor(item); });
+
+    function findRun(testId) {
+      const active = state.payload?.activeRun;
+      if (active?.testId === testId) return active;
+      return state.payload?.runs?.find((run) => run.testId === testId) || null;
+    }
+
+    function resultFor(item) {
+      const active = state.payload?.activeRun;
+      if (active?.status === 'running' && item.testId) {
+        return active.testId === item.testId ? `运行中（${active.testId}）` : '待运行（设备忙）';
+      }
+      const run = findRun(item.testId);
+      if (run?.status === 'running') return '运行中';
+      if (run?.status === 'failed') return `失败（${item.testId}）`;
+      if (run?.status === 'passed') return `通过（${item.testId}）`;
+      const report = state.payload?.latestReports?.[item.testId];
+      if (report?.status === 'passed') return `通过（${item.testId}）`;
+      if (report?.status === 'failed') return `失败（${item.testId}）`;
+      if (item.testId) return `准备运行（${item.testId}）`;
+      return item.execution;
+    }
+
+    function renderRunSummary() {
+      const active = state.payload?.activeRun;
+      if (!state.api) {
+        runSummary.textContent = '控制台未连接 · 无法启动脚本';
+        return;
+      }
+      if (active?.status === 'running') {
+        runSummary.textContent = `正在运行 1 个脚本：${active.testId} · 其余已绑定脚本为“待运行”`;
+        return;
+      }
+      runSummary.textContent = '当前没有脚本运行 · 点击“运行”只执行该功能点绑定的 1 个脚本';
+    }
+
+    function renderRows() {
+      rows.innerHTML = scenarios.map((item, index) => {
+        const result = resultFor(item);
+        const active = state.payload?.activeRun;
+        const busy = active?.status === 'running';
+        const deviceReady = Boolean(state.payload?.device?.devices?.some((device) => device.status === 'device'));
+        const canRun = Boolean(item.testId) && state.api && deviceReady;
+        const disabled = !canRun || busy;
+        const scriptLabel = item.testId ? '已编写' : item.automation;
+        const isActive = busy && item.testId === active.testId;
+        const buttonLabel = !item.testId
+          ? '未绑定'
+          : isActive
+            ? '运行中'
+            : busy
+              ? '待运行'
+              : '运行';
+        const buttonClass = !item.testId
+          ? 'run-button--unbound'
+          : isActive
+            ? 'run-button--active'
+            : busy
+              ? 'run-button--waiting'
+              : '';
+        const title = !state.api
+          ? '请先启动本地测试控制台'
+          : !deviceReady
+            ? '请先连接 Android 真机并确认 ADB 状态为 device'
+            : isActive
+              ? `正在执行 ${active.testId}，本次只运行 1 个脚本`
+              : disabled && busy
+                ? `设备正在运行 ${active.testId}，当前脚本排队等待`
+                : !item.testId
+                  ? '该功能点尚未绑定自动化脚本'
+                  : '';
+        return `
+          <tr>
+            <td class="module">${escapeHtml(item.domain)}</td>
+            <td class="function">${escapeHtml(item.name)}</td>
+            <td class="user-action">${escapeHtml(item.acceptance)}</td>
+            <td class="expected">${escapeHtml(item.expected)}</td>
+            <td><span class="pill ${scriptClass(scriptLabel)}">${escapeHtml(scriptLabel)}</span></td>
+            <td class="test-id">${item.testId ? escapeHtml(item.testId) : '—'}</td>
+            <td><span class="pill ${resultClass(result)}">${escapeHtml(result)}</span></td>
+            <td class="operation"><button class="run-button ${buttonClass}" type="button" data-test-id="${escapeHtml(item.testId)}" aria-label="${escapeHtml(buttonLabel)} ${escapeHtml(item.name)} ${escapeHtml(item.testId)}" ${disabled ? 'disabled' : ''} title="${escapeHtml(title)}">${buttonLabel}</button></td>
+          </tr>`;
+      }).join('');
+      rows.querySelectorAll('.run-button:not(:disabled)').forEach((button) => {
+        button.addEventListener('click', () => startRun(button.dataset.testId));
+      });
+      renderRunSummary();
+    }
+
+    function formatTime(value) {
+      if (!value) return '';
+      try { return new Date(value).toLocaleString('zh-CN', { hour12: false }); } catch { return value; }
+    }
+
+    function renderRunPanel() {
+      const run = state.payload?.activeRun || (state.selectedRunId && state.payload?.runs?.find((item) => item.id === state.selectedRunId));
+      if (!run) {
+        runPanel.hidden = true;
+        return;
+      }
+      runPanel.hidden = false;
+      runTitle.textContent = `${run.testId} · ${run.label}`;
+      runMeta.textContent = run.status === 'running'
+        ? `运行中 · 本次执行 ${run.scriptCount || 1} 个脚本 · 开始于 ${formatTime(run.startedAt)}`
+        : `${run.status === 'passed' ? '通过' : '失败'} · 执行 ${run.scriptCount || 1} 个脚本 · ${formatTime(run.finishedAt || run.updatedAt)}${run.error ? ` · ${run.error}` : ''}`;
+      runOutput.textContent = run.output || '等待脚本输出…';
+      runOutput.scrollTop = runOutput.scrollHeight;
+      if (run.report?.reportUrl) {
+        reportLink.hidden = false;
+        reportLink.href = run.report.reportUrl;
+      } else {
+        reportLink.hidden = true;
+        reportLink.removeAttribute('href');
+      }
+    }
+
+    function renderDevice() {
+      const devices = state.payload?.device?.devices || [];
+      const ready = devices.filter((device) => device.status === 'device');
+      deviceStatus.textContent = ready.length ? `设备已连接 · ${ready.map((device) => device.serial).join('、')}` : '未发现可用 Android 设备';
+      deviceStatus.classList.toggle('device-status--ready', ready.length > 0);
+    }
+
+    async function refreshState() {
+      try {
+        const response = await fetch('/api/state', { cache: 'no-store' });
+        if (!response.ok) throw new Error(`控制台响应 ${response.status}`);
+        state.payload = await response.json();
+        state.api = true;
+        renderRows();
+        renderDevice();
+        renderRunPanel();
+      } catch (error) {
+        state.api = false;
+        deviceStatus.textContent = '控制台未启动 · 请运行 npm start';
+        deviceStatus.classList.remove('device-status--ready');
+        renderRows();
+        if (!state.payload?.activeRun) renderRunPanel();
+      }
+    }
+
+    async function startRun(testId) {
+      if (!testId) return;
+      try {
+        const response = await fetch('/api/runs', {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ testId })
+        });
+        const payload = await response.json();
+        if (!response.ok) throw new Error(payload.error || `启动失败（${response.status}）`);
+        state.selectedRunId = payload.run.id;
+        await refreshState();
+      } catch (error) {
+        state.selectedRunId = null;
+        runPanel.hidden = false;
+        runTitle.textContent = '无法启动测试';
+        runMeta.textContent = '';
+        runOutput.textContent = error.message;
+        reportLink.hidden = true;
+        renderRows();
+      }
+    }
+
+    renderRows();
+    refreshState();
+    window.setInterval(refreshState, 1200);
+  </script>
+</body>
+</html>

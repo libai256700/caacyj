@@ -1,0 +1,8 @@
+{
+  "name": "mobile-e2e-console",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs"
+  }
+}
