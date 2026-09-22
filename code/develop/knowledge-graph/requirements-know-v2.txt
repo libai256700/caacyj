@@ -1,0 +1,7 @@
+flask
+flask-cors
+neo4j
+requests
+werkzeug
+whoosh
+jieba

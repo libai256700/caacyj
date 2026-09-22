@@ -1,0 +1,64 @@
+{
+  "agent_browser": "agent-browser",
+  "agent_browser_fallbacks": [
+    "~/.npm-global/bin/agent-browser",
+    "~/.npm-packages/bin/agent-browser",
+    "~/.local/bin/agent-browser",
+    "/opt/homebrew/bin/agent-browser",
+    "/usr/local/bin/agent-browser"
+  ],
+  "report_dir": "~/.openclaw/workspace/reports",
+  "snapshot_dir": "~/.openclaw/workspace/reports/job_crawler_snapshots",
+  "folder_token": "",
+  "chat_id": "",
+  "lark_cli": "lark-cli",
+  "keywords": [
+    "无人机飞手",
+    "CAAC",
+    "低空经济",
+    "eVTOL",
+    "无人机教员"
+  ],
+  "platforms": [
+    "猎聘",
+    "前程无忧",
+    "国聘",
+    "智联招聘"
+  ],
+  "zhaopin_city_code": "",
+  "duplicate_retention_days": 30,
+  "snapshot_retention_days": 30,
+  "repeated_detail_limit": 80,
+  "volume_drop_ratio": 0.5,
+  "pagination_pause_seconds": 1.5,
+  "max_pages_per_query": {
+    "猎聘": 5,
+    "前程无忧": 5,
+    "国聘": 3,
+    "智联招聘": 5
+  },
+  "max_failed_combination_rate": 0.2,
+  "result_caps": {
+    "猎聘": 40,
+    "前程无忧": 20,
+    "国聘": 20,
+    "智联招聘": 20
+  },
+  "quality_thresholds": {
+    "min_url_match_rate": 0.75,
+    "min_actionable_url_rate": 0.75,
+    "max_missing_company_rate": 0.45,
+    "max_missing_salary_rate": 0.55,
+    "max_missing_location_rate": 0.35,
+    "max_missing_url_rate": 0.25,
+    "max_invalid_location_rate": 0.0,
+    "max_invalid_salary_rate": 0.0,
+    "platforms": {
+      "智联招聘": {
+        "max_missing_company_rate": 0.15,
+        "critical_missing_company_rate": 0.25
+      }
+    }
+  },
+  "staff": []
+}

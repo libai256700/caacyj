@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<title>云技 · 知识图谱</title>
+<script src="vis-data.min.js"></script>
+<script src="vis-network.min.js"></script>
+<style>
+:root{color-scheme:dark;--bg:#070b14;--panel:#0d1424d9;--panel2:#111b30e8;--line:#263652;--text:#eef6ff;--muted:#9fb0c5;--dim:#65758b;--primary:#42a5f5;--accent:#26c6da;--category:#ffa726;--shadow:0 18px 50px rgba(0,0,0,.35);--radius:14px;--q-h:48px}
+*{box-sizing:border-box;margin:0;padding:0}html,body{width:100%;height:100%;overflow:hidden}body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","PingFang SC","Microsoft YaHei",Arial,sans-serif;background:#070b14;color:var(--text)}button,input{font:inherit}button{cursor:pointer;border:0}
+.app{height:100%;display:grid;grid-template-rows:var(--q-h) minmax(0,1fr);grid-template-columns:200px minmax(0,1fr)}
+.topbar{grid-column:1/3;display:flex;align-items:center;gap:8px;padding:0 12px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,rgba(16,28,49,.92),rgba(8,13,24,.76));z-index:20}.brand{font-weight:900;font-size:13px;white-space:nowrap}.brand span{color:var(--category)}
+.q-btn{padding:6px 12px;border-radius:8px;font-weight:800;font-size:11px;background:var(--line);color:var(--muted)}.q-btn:hover{color:#fff;background:var(--line2)}.q-btn.active{background:var(--primary);color:#fff}
+.stats{font-size:11px;color:var(--dim);margin-left:auto;white-space:nowrap}
+.sidebar{border-right:1px solid var(--line);background:var(--panel2);overflow-y:auto;padding:10px 8px}.sb-title{font-size:10px;text-transform:uppercase;color:var(--category);font-weight:950;padding:6px 4px 4px;border-bottom:1px solid var(--line);margin-bottom:4px}.sb-row{display:flex;justify-content:space-between;align-items:center;padding:4px 6px;font-size:11px;color:var(--muted);border-radius:6px;cursor:pointer}.sb-row:hover{background:rgba(66,165,245,.08)}.sb-row .cnt{font-size:10px;color:var(--dim);background:rgba(255,255,255,.05);padding:0 5px;border-radius:999px}.sb-row .dot{width:7px;height:7px;border-radius:50%;display:inline-block;margin-right:5px;vertical-align:middle}
+.sb-sublist{display:none}.sb-sublist.open{display:block;background:rgba(5,9,17,.5);border-left:2px solid var(--category);border-radius:0 6px 6px 0;margin:2px 0 4px 4px;padding:2px 0}.sb-subitem{padding:5px 8px 5px 18px;font-size:12px;color:#eef6ff;border-radius:4px;cursor:pointer;white-space:normal;overflow:visible}.sb-subitem:hover{background:rgba(66,165,245,.2);color:#fff}
+.ctrl-row{display:flex;align-items:center;gap:6px;padding:4px 6px;font-size:11px;color:var(--muted)}.ctrl-row input{accent-color:var(--category)}
+.main-wrap{position:relative;min-width:0;overflow:hidden;background:radial-gradient(circle at 50% 45%,rgba(33,72,118,.44),rgba(8,13,24,.92) 55%,#03060b);background-image:linear-gradient(rgba(255,255,255,.03)1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.02)1px,transparent 1px);background-size:42px 42px}
+#graph2d{position:absolute;inset:0;z-index:2}.hud{position:absolute;left:10px;top:10px;z-index:6;display:flex;gap:6px;pointer-events:none}.hud span{pointer-events:auto;border:1px solid var(--line);border-radius:999px;background:rgba(8,13,24,.7);padding:4px 8px;font-size:11px;color:var(--muted)}.hud b{color:#fff}
+.detail-panel{position:absolute;right:0;top:0;bottom:0;z-index:10;width:0;overflow:hidden;transition:width .2s ease;background:rgba(13,20,36,.95);border-left:1px solid var(--line)}.detail-panel.open{width:300px}.dp-inner{width:300px;height:100%;overflow-y:auto;padding:12px}.dp-name{font-size:15px;font-weight:950}.dp-type{display:inline-block;padding:2px 6px;border-radius:999px;font-size:10px;font-weight:900;color:#fff;margin:4px 0 8px}.dp-section{margin-bottom:10px}.dp-stitle{font-size:10px;font-weight:950;color:var(--category);text-transform:uppercase;border-bottom:1px solid var(--line);padding-bottom:3px;margin-bottom:4px}.dp-row{display:flex;padding:3px 0;font-size:11px;border-bottom:1px solid rgba(100,140,190,.06)}.dp-row .k{color:var(--primary);font-weight:800;min-width:70px}.dp-row .v{color:var(--muted);word-break:break-word}
+.toast{position:fixed;right:12px;top:58px;z-index:120;display:none;max-width:320px;border:1px solid var(--line);border-radius:12px;background:rgba(13,20,36,.92);padding:8px 12px;font-size:12px}.toast.show{display:block}
+.loading{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;background:rgba(2,5,10,.5)}.loading.hide{display:none}.loader{border:1px solid var(--line);border-radius:14px;background:rgba(13,20,36,.92);padding:12px 14px;font-size:13px}.spin{width:18px;height:18px;border:3px solid rgba(255,255,255,.18);border-top-color:var(--primary);border-radius:50%;animation:spin .8s linear infinite;display:inline-block;vertical-align:middle;margin-right:8px}@keyframes spin{to{transform:rotate(360deg)}}
+.legend{position:absolute;left:50%;bottom:8px;transform:translateX(-50%);z-index:7;display:flex;gap:4px;flex-wrap:wrap;justify-content:center;padding:4px 8px;border:1px solid var(--line);border-radius:10px;background:rgba(8,13,24,.7)}.legend-item{display:flex;align-items:center;gap:3px;font-size:9px;color:var(--muted)}.legend-dot{width:6px;height:6px;border-radius:50%}
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="topbar">
+    <div class="brand">⚡ 云技<span>·</span>图谱 <span style="font-size:9px;color:var(--dim);font-weight:400">v2.1</span></div>
+    <button class="q-btn" id="fitBtn">⊞ 适配</button>
+    <button class="q-btn" id="toggleLinesBtn">🔗 连线</button>
+    <span class="stats" id="statsBadge">-</span>
+  </div>
+  <aside class="sidebar">
+    <div class="sb-title">📊 统计</div>
+    <div id="dbInfo" style="font-size:11px;color:var(--dim);padding:4px 6px;line-height:1.6"></div>
+    <div class="sb-title" style="margin-top:8px">🏷️ 节点类型</div>
+    <div id="labelList"></div>
+    <div class="sb-title" style="margin-top:8px">🔽 显示</div>
+    <div class="ctrl-row"><input type="checkbox" id="docToggle" checked><label for="docToggle">显示文档节点</label></div>
+  </aside>
+  <main class="main-wrap">
+    <div id="graph2d"></div>
+    <div class="hud"><span><b id="nodeCount">0</b> 节点 · <b id="edgeCount">0</b> 边</span></div>
+    <div class="legend" id="legend"></div>
+    <div class="detail-panel" id="detailPanel">
+      <div class="dp-inner" id="dpInner"></div>
+    </div>
+  </main>
+</div>
+<div class="loading" id="loading"><div class="loader"><span class="spin"></span>加载图谱…</div></div>
+<div class="toast" id="toast"></div>
+
+<script>
+var C={"Category":"#ffa726","KnowledgePoint":"#42a5f5","Component":"#66bb6a","Skill":"#ab47bc","Regulation":"#ef5350","Certification":"#26c6da","Document":"#78909c","Position":"#ff7043","Company":"#29b6f6","Organization":"#29b6f6","Location":"#8d6e63","SalaryRange":"#9ccc65","SalaryItem":"#9ccc65","Person":"#ab47bc","Policy":"#ef5350","Event":"#ffa726","Department":"#26c6da","Product":"#66bb6a","Platform":"#42a5f5","PlatformPresence":"#42a5f5","SocialAccount":"#42a5f5","EducationRequirement":"#ff7043","Course":"#66bb6a"};
+var $=function(i){return document.getElementById(i)};
+function esc(s){return String(s??'').replace(/[&<>'"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]})}
+function toast(m,t){var e=$('toast');e.textContent=m;e.className='toast show'+(t?' '+t:'');clearTimeout(e._t);e._t=setTimeout(function(){e.classList.remove('show')},2500)}
+function clr(n){return C[n.type]||'#90a4ae'}
+
+var allNodes=[],allEdges=[],nodeMap=new Map(),visNodes=null,visEdges=null,network=null;
+var showDoc=true;
+
+function applyDocFilter(nodeUpdates){
+  return nodeUpdates.map(function(u){
+    if(!showDoc&&(u._type==='Document'||u._type==='doc_'))return Object.assign({},u,{opacity:0});
+    return u;
+  });
+}
+
+async function loadData(){
+  try{
+    var d=await(await fetch('/api/graph')).json();
+    allNodes=(d.nodes||[]).filter(function(n){return n.id});
+    allEdges=(d.edges||[]);
+    var seen=new Set();
+    allNodes=allNodes.filter(function(n){var k=n.id;if(seen.has(k))return false;seen.add(k);return true});
+    nodeMap=new Map(allNodes.map(function(n){return[n.id,n]}));
+    buildSidebar();
+    renderGraph();
+    buildLegend();
+    $('loading').classList.add('hide');
+    toast('✅ '+allNodes.length+' 节点 '+allEdges.length+' 边');
+  }catch(e){toast('❌ 加载失败','error');$('loading').classList.add('hide')}
+}
+
+function renderGraph(){
+  var c=$('graph2d');
+  if(!c.offsetHeight){c.style.height='100%';c.style.minHeight='400px'}
+  var sizeMap={Category:15,Company:12,Organization:10,Position:8,Document:7,Person:6};
+  function sz(t){return sizeMap[t]||6}
+  
+  visNodes=new vis.DataSet(allNodes.map(function(n){
+    return{id:n.id,label:'',title:n.name+' ['+n.type+']',
+      color:{background:clr(n),border:'#fff'},borderWidth:2,size:sz(n.type),
+      shape:'dot',font:{size:11,color:'#eef6ff'},_name:n.name,_type:n.type};
+  }));
+  // 线条默认全显示
+  visEdges=new vis.DataSet(allEdges.map(function(e){
+    return{id:e.id,from:e.from,to:e.to,width:0.4,
+      color:{color:'rgba(100,150,210,.3)',highlight:'rgba(66,165,245,.7)'},
+      arrows:{to:{enabled:true,scaleFactor:0.15}},
+      title:e.label,smooth:{type:'continuous'}};
+  }));
+  
+  if(network)network.destroy();
+  network=new vis.Network(c,{nodes:visNodes,edges:visEdges},{
+    nodes:{font:{face:'PingFang SC'}},edges:{smooth:{type:'continuous'}},
+    physics:{barnesHut:{gravitationalConstant:-2500,centralGravity:0.2,springLength:130,springConstant:0.03,damping:0.1},stabilization:{iterations:60}},
+    interaction:{hover:true,tooltipDelay:300},
+    layout:{randomSeed:42}
+  });
+  
+  var guard=setTimeout(function(){$('loading').classList.add('hide')},8000);
+  network.once('stabilizationIterationsDone',function(){
+    clearTimeout(guard);
+    network.setOptions({physics:{enabled:false}});
+    network.fit({animation:{duration:300}});
+    $('loading').classList.add('hide');
+  });
+  
+  // 点击节点显示详情 + 高亮（线条不变）
+  network.on('click',function(p){
+    if(p.nodes&&p.nodes.length){
+      var id=p.nodes[0];
+      showDetail(id);
+      var ids=network.getConnectedNodes(id);ids.push(id);
+      // 高亮关联边，其余变淡
+      visEdges.update(visEdges.get().map(function(e){
+        var hl=e.from===id||e.to===id||ids.indexOf(e.from)!==-1||ids.indexOf(e.to)!==-1;
+        return{id:e.id,opacity:hl?1:.08,width:hl?1:0.3};
+      }));
+      visNodes.update(applyDocFilter(visNodes.get().map(function(n){
+        return{id:n.id,opacity:ids.indexOf(n.id)!==-1?1:.15,label:ids.indexOf(n.id)!==-1?(nodeMap.get(n.id)?.name||''):'',_type:n._type}})));
+    }else{
+      // 点空白只取消高亮，线条保持
+      visNodes.update(applyDocFilter(visNodes.get().map(function(n){return{id:n.id,opacity:1,label:'',_type:n._type}})));
+      visEdges.update(visEdges.get().map(function(e){return{id:e.id,opacity:1,width:0.4}}));
+      $('detailPanel').classList.remove('open');
+    }
+  });
+  network.on('hoverNode',function(p){
+    var n=nodeMap.get(p.node);
+    if(n)visNodes.update({id:p.node,label:n.name,font:{size:12,color:'#eef6ff',strokeWidth:2,strokeColor:'#0a1020'}});
+  });
+  network.on('blurNode',function(p){
+    var sel=$('detailPanel').classList.contains('open');
+    if(!sel)visNodes.update({id:p.node,label:''});
+  });
+  updateCounts();
+  setTimeout(function(){if(network)network.fit({animation:true})},1200);
+}
+
+function showDetail(id,mode){
+  var n=nodeMap.get(id);if(!n)return;
+  var isEdit=mode==='edit';
+  
+  var rels=[];
+  allEdges.forEach(function(e){
+    if(e.from===id){var o=nodeMap.get(e.to);if(o)rels.push({dir:'→',label:e.label,other:o.name,otherId:o.id,edge:e})}
+    if(e.to===id){var o=nodeMap.get(e.from);if(o)rels.push({dir:'←',label:e.label,other:o.name,otherId:o.id,edge:e})}
+  });
+  
+  var h='<div class="dp-name">'+esc(n.name)+'</div>';
+  h+='<div class="dp-type" style="background:'+clr(n)+'">'+esc(n.type)+'</div>';
+  
+  // 管理按钮
+  h+='<div style="display:flex;gap:4px;margin:6px 0 10px;flex-wrap:wrap">';
+  if(isEdit){
+    h+='<button class="q-btn" onclick="saveNode(\''+esc(n.id)+'\')" style="background:var(--primary);color:#fff;padding:4px 10px;font-size:10px">💾 保存</button>';
+    h+='<button class="q-btn" onclick="showDetail(\''+esc(n.id)+'\')" style="padding:4px 10px;font-size:10px">取消</button>';
+  }else{
+    h+='<button class="q-btn" onclick="showDetail(\''+esc(n.id)+'\',\'edit\')" style="padding:4px 10px;font-size:10px">✏️ 编辑</button>';
+    h+='<button class="q-btn" onclick="delNode(\''+esc(n.id)+'\')" style="padding:4px 10px;font-size:10px;color:#ff6b6b">🗑️ 删除</button>';
+    h+='<button class="q-btn" onclick="showAddEdge(\''+esc(n.id)+'\')" style="padding:4px 10px;font-size:10px">➕ 加关系</button>';
+  }
+  h+='</div>';
+  
+  // 属性
+  h+='<div class="dp-section"><div class="dp-stitle">属性</div>';
+  if(isEdit){
+    // 编辑模式
+    var typeOpts=Object.keys(C).sort().map(function(t){return'<option value="'+esc(t)+'"'+(t===n.type?' selected':'')+'>'+esc(t)+'</option>'}).join('');
+    h+='<div class="dp-row"><span class="k">名称</span><span class="v"><input id="eName" value="'+esc(n.name)+'" style="width:100%;background:rgba(5,9,17,.8);border:1px solid var(--line);border-radius:6px;color:var(--text);padding:4px 6px;font-size:11px"></span></div>';
+    h+='<div class="dp-row"><span class="k">类型</span><span class="v"><select id="eType" style="width:100%;background:rgba(5,9,17,.8);border:1px solid var(--line);border-radius:6px;color:var(--text);padding:4px 6px;font-size:11px">'+typeOpts+'</select></span></div>';
+    h+='<div class="dp-row"><span class="k">描述</span><span class="v"><textarea id="eDesc" style="width:100%;background:rgba(5,9,17,.8);border:1px solid var(--line);border-radius:6px;color:var(--text);padding:4px 6px;font-size:11px;min-height:40px">'+esc(n.description||n.title||'')+'</textarea></span></div>';
+  }else{
+    ['description','source_doc','category'].forEach(function(k){if(n[k])h+='<div class="dp-row"><span class="k">'+esc(k)+'</span><span class="v">'+esc(n[k])+'</span></div>'});
+  }
+  h+='</div>';
+  
+  // 关系（编辑模式下显示删除按钮）
+  if(rels.length){
+    h+='<div class="dp-section"><div class="dp-stitle">关系 ('+rels.length+')</div>';
+    rels.slice(0,40).forEach(function(r){
+      h+='<div class="dp-row" style="font-size:10px;align-items:center">';
+      h+='<span class="v" style="flex:1">'+esc(r.dir)+' '+esc(r.label)+' → '+esc(r.other)+'</span>';
+      if(isEdit){
+        h+='<button onclick="delEdge(\''+esc(r.edge.from)+'\',\''+esc(r.edge.to)+'\',\''+esc(r.label)+'\')" style="background:none;border:0;color:var(--danger);font-size:12px;cursor:pointer;padding:0 4px" title="删除关系">✕</button>';
+      }
+      h+='</div>';
+    });
+    h+='</div>';
+  }
+  
+  $('dpInner').innerHTML=h;
+  $('detailPanel').classList.add('open');
+}
+
+// ==================== 管理操作 ====================
+async function saveNode(id){
+  var name=$('eName')?.value;
+  var type=$('eType')?.value;
+  var desc=$('eDesc')?.value;
+  if(!name){toast('名称不能为空','error');return}
+  try{
+    var r=await fetch('/api/entity/'+encodeURIComponent(id),{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:name,type:type,description:desc})});
+    var d=await r.json();
+    if(d.error)throw new Error(d.error);
+    toast('✅ 已更新');
+    loadData();
+  }catch(e){toast('❌ '+e.message,'error')}
+}
+
+async function delNode(id){
+  if(!confirm('确认删除此节点？相关关系也会被删除！'))return;
+  try{
+    var r=await fetch('/api/entity/'+encodeURIComponent(id),{method:'DELETE'});
+    var d=await r.json();
+    if(d.error)throw new Error(d.error);
+    toast('✅ 已删除');
+    $('detailPanel').classList.remove('open');
+    loadData();
+  }catch(e){toast('❌ '+e.message,'error')}
+}
+
+async function delEdge(fromId,toId,type){
+  if(!confirm('确认删除此关系？'))return;
+  try{
+    var r=await fetch('/api/edge',{method:'DELETE',headers:{'Content-Type':'application/json'},body:JSON.stringify({from_id:fromId,to_id:toId,type:type})});
+    var d=await r.json();
+    if(d.error)throw new Error(d.error);
+    toast('✅ 关系已删除');
+    loadData();
+  }catch(e){toast('❌ '+e.message,'error')}
+}
+
+var _addEdgeFrom=null;
+function showAddEdge(fromId){
+  _addEdgeFrom=fromId;
+  var n=nodeMap.get(fromId);
+  var opts=allNodes.filter(function(x){return x.id!==fromId}).sort(function(a,b){return(a.name||'').localeCompare(b.name||'','zh-CN')}).map(function(x){
+    return'<option value="'+esc(x.id)+'">'+esc(x.name||'')+' ('+esc(x.type)+')</option>';
+  }).join('');
+  var typeOpts=['BELONGS_TO','CONTAINS','REFERENCES','REQUIRED_BY','MANAGES','REGULATES','PROVIDES','RELATED_TO','HAS_SALARY','LOCATED_IN'].map(function(t){
+    return'<option value="'+t+'">'+t+'</option>';
+  }).join('');
+  
+  var h='<div class="dp-name">添加关系</div>';
+  h+='<div class="dp-section" style="margin-top:8px">';
+  h+='<div class="dp-row"><span class="k">从</span><span class="v">'+esc(n.name)+'</span></div>';
+  h+='<div class="dp-row"><span class="k">到</span><span class="v"><select id="aeTo" style="width:100%;background:rgba(5,9,17,.8);border:1px solid var(--line);border-radius:6px;color:var(--text);padding:4px;font-size:11px">'+opts+'</select></span></div>';
+  h+='<div class="dp-row"><span class="k">类型</span><span class="v"><select id="aeType" style="width:100%;background:rgba(5,9,17,.8);border:1px solid var(--line);border-radius:6px;color:var(--text);padding:4px;font-size:11px">'+typeOpts+'</select></span></div>';
+  h+='<div class="dp-row"><span class="k">描述</span><span class="v"><input id="aeDesc" style="width:100%;background:rgba(5,9,17,.8);border:1px solid var(--line);border-radius:6px;color:var(--text);padding:4px;font-size:11px" placeholder="可选"></span></div>';
+  h+='<div style="margin-top:8px"><button class="q-btn" onclick="doAddEdge()" style="background:var(--primary);color:#fff;padding:6px 14px;font-size:11px">✅ 创建</button> ';
+  h+='<button class="q-btn" onclick="showDetail(\''+esc(fromId)+'\')" style="padding:6px 14px;font-size:11px">取消</button></div>';
+  h+='</div>';
+  $('dpInner').innerHTML=h;
+  $('detailPanel').classList.add('open');
+}
+
+async function doAddEdge(){
+  var to=$('aeTo')?.value;
+  var type=$('aeType')?.value;
+  var desc=$('aeDesc')?.value||'';
+  if(!to||!type){toast('请选择目标和类型','error');return}
+  try{
+    var r=await fetch('/api/edge',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({from_id:_addEdgeFrom,to_id:to,type:type,description:desc})});
+    var d=await r.json();
+    if(d.error)throw new Error(d.error);
+    toast('✅ 关系已创建');
+    _addEdgeFrom=null;
+    loadData();
+  }catch(e){toast('❌ '+e.message,'error')}
+}
+
+function buildSidebar(){
+  var types={};
+  allNodes.forEach(function(n){var t=n.type||'?';types[t]=(types[t]||0)+1});
+  $('dbInfo').innerHTML='节点: <b>'+allNodes.length+'</b><br>边: <b>'+allEdges.length+'</b>';
+  
+  $('labelList').innerHTML=Object.keys(types).sort().map(function(t){
+    var co=C[t]||'#90a4ae';
+    var nodesOfType=allNodes.filter(function(n){return n.type===t}).sort(function(a,b){return(a.label||'').localeCompare(b.label||'','zh-CN')});
+    var items='';
+    for(var idx=0;idx<nodesOfType.length;idx++){
+      var node=nodesOfType[idx];
+      var safeId=String(node.id||'').replace(/'/g,'\\x27');
+      items+='<div onclick="focusNode(\''+safeId+'\')" style="padding:4px 8px 4px 18px;font-size:12px;color:#ffa726;cursor:pointer;border-bottom:1px solid rgba(100,140,190,.1)">'+(node.label||'无名称')+'</div>';
+    }
+    var itemCount = nodesOfType.length;
+    return '<div class="sb-row" onclick="toggleList(this)"><span><span class="dot" style="background:'+co+';box-shadow:0 0 8px '+co+'"></span>'+esc(t)+'</span><span class="cnt">'+types[t]+'</span></div>'+
+      '<div class="sb-sublist">'+items+'<div style="padding:2px 18px;font-size:9px;color:#65758b">共'+itemCount+'个节点</div></div>';
+  }).join('');
+  
+  $('docToggle').addEventListener('change',function(){
+    showDoc=this.checked;
+    visNodes.update(applyDocFilter(visNodes.get().map(function(n){return{id:n.id,opacity:1,_type:n._type}})));
+    updateCounts();
+  });
+}
+
+function toggleList(el){
+  var sub=el.nextElementSibling;
+  if(sub&&sub.classList.contains('sb-sublist'))sub.classList.toggle('open');
+}
+
+function focusNode(id){
+  if(!network||!visNodes)return;
+  network.focus(id,{scale:2,animation:{duration:400}});
+  network.selectNodes([id],false);
+  showDetail(id);
+  var ids=network.getConnectedNodes(id);ids.push(id);
+  visEdges.update(visEdges.get().map(function(e){
+    var hl=e.from===id||e.to===id||ids.indexOf(e.from)!==-1||ids.indexOf(e.to)!==-1;
+    return{id:e.id,opacity:hl?1:.08,width:hl?1:0.3};
+  }));
+  visNodes.update(applyDocFilter(visNodes.get().map(function(n){
+    return{id:n.id,opacity:ids.indexOf(n.id)!==-1?1:.15,label:ids.indexOf(n.id)!==-1?(nodeMap.get(n.id)?.name||''):'',_type:n._type}})));
+}
+
+function buildLegend(){
+  var m={};
+  allNodes.forEach(function(n){if(n.type)m[n.type]=1});
+  var o=['Category','Department','Policy','Event','Product','Organization','Person','Position','Location','SalaryItem','SalaryRange','Document','Company','Course','Certification','Regulation','Platform'];
+  $('legend').innerHTML=o.filter(function(t){return m[t]}).map(function(t){
+    return '<div class="legend-item"><div class="legend-dot" style="background:'+(C[t]||'#777')+'"></div>'+t+'</div>';
+  }).join('');
+}
+
+function updateCounts(){$('nodeCount').textContent=visNodes?visNodes.length:0;$('edgeCount').textContent=visEdges?visEdges.length:0}
+
+document.addEventListener('DOMContentLoaded',function(){
+  $('fitBtn').addEventListener('click',function(){if(network)network.fit({animation:true})});
+  
+  var linesVisible=true;
+  $('toggleLinesBtn').textContent='🔗 隐藏连线';
+  $('toggleLinesBtn').addEventListener('click',function(){
+    linesVisible=!linesVisible;
+    if(linesVisible){
+      visEdges.add(allEdges.map(function(e){
+        return{id:e.id,from:e.from,to:e.to,width:0.4,
+          color:{color:'rgba(100,150,210,.3)',highlight:'rgba(66,165,245,.7)'},
+          arrows:{to:{enabled:true,scaleFactor:0.15}},
+          title:e.label,smooth:{type:'continuous'}};
+      }));
+      $('toggleLinesBtn').textContent='🔗 隐藏连线';
+      $('toggleLinesBtn').style.background='linear-gradient(135deg,var(--primary),var(--accent))';
+    }else{
+      visEdges.clear();
+      $('toggleLinesBtn').textContent='🔗 显示连线';
+      $('toggleLinesBtn').style.background='';
+    }
+  });
+  loadData();
+  fetch('/api/stats').then(function(r){return r.json()}).then(function(s){
+    $('statsBadge').innerHTML=s.entities+' 实体 · '+s.relations+' 关系';
+  }).catch(function(){});
+});
+</script>
+</body>
+</html>

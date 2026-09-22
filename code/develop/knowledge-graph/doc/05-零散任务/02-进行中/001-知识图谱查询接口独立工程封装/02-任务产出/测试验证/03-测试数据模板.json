@@ -1,0 +1,30 @@
+{
+  "api_cases": [
+    {
+      "case_id": "TC-API-001",
+      "request": {},
+      "expected_response": {}
+    },
+    {
+      "case_id": "TC-API-002",
+      "request": {},
+      "expected_response": {}
+    }
+  ],
+  "data_cases": [
+    {
+      "case_id": "TC-DATA-001",
+      "query": "",
+      "expected_rows": [],
+      "expected_state": {}
+    }
+  ],
+  "interaction_cases": [
+    {
+      "case_id": "TC-UI-001",
+      "account": {},
+      "input": {},
+      "expected_page_state": {}
+    }
+  ]
+}

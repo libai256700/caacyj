@@ -1,0 +1,348 @@
+{
+  "schema_version": "domain-sync-package-v2",
+  "built_at": "2026-06-06T04:27:20+00:00",
+  "domain": "question_bank",
+  "semantic_schema_version": "semantic-graph-v2",
+  "source_manifest": {
+    "schema_version": "ingest-manifest-v2",
+    "generated_at": "2026-06-06T04:27:19+00:00",
+    "sqlite_fingerprint": {
+      "chunk_count": 2363,
+      "doc_count": 24,
+      "text_bytes": 660395,
+      "max_created_at": "2026-06-06 07:24:48",
+      "schema": "chunks-v1",
+      "fingerprint": "b30a4281bf0d7b9b490558c046eb34b11d2c6615e7d8cc03fefa330ce5f52f65"
+    }
+  },
+  "domain_fingerprint": {
+    "schema": "domain-chunks-v1",
+    "chunk_count": 1379,
+    "doc_count": 10,
+    "text_bytes": 882124,
+    "fingerprint": "1d8ca3cef75c509904048639b76137c3c9ccbb486955bb3e141803617a71ab21"
+  },
+  "previous_domain_fingerprint": {
+    "schema": "domain-chunks-v1",
+    "chunk_count": 1379,
+    "doc_count": 10,
+    "text_bytes": 882124,
+    "fingerprint": "1d8ca3cef75c509904048639b76137c3c9ccbb486955bb3e141803617a71ab21"
+  },
+  "documents": [
+    "理论题库_旋翼无人机.txt",
+    "理论题库_无人机任务规划.txt",
+    "理论题库_无人机操作注意事项.txt",
+    "理论题库_无人机教员题库.txt",
+    "理论题库_概述.txt",
+    "理论题库_气象.txt",
+    "理论题库_空中交通管制.txt",
+    "理论题库_系统组成及介绍.txt",
+    "理论题库_综合问答.txt",
+    "理论题库_飞行原理与飞行性能.txt"
+  ],
+  "chunks_file": "chunks.jsonl",
+  "incremental": {
+    "schema": "domain-sync-delta-v1",
+    "base_fingerprint": {
+      "schema": "domain-chunks-v1",
+      "chunk_count": 1379,
+      "doc_count": 10,
+      "text_bytes": 882124,
+      "fingerprint": "1d8ca3cef75c509904048639b76137c3c9ccbb486955bb3e141803617a71ab21"
+    },
+    "target_fingerprint": {
+      "schema": "domain-chunks-v1",
+      "chunk_count": 1379,
+      "doc_count": 10,
+      "text_bytes": 882124,
+      "fingerprint": "1d8ca3cef75c509904048639b76137c3c9ccbb486955bb3e141803617a71ab21"
+    },
+    "can_apply_incrementally": true,
+    "changed_chunks_file": "changed_chunks.jsonl",
+    "deleted_chunks_file": "deleted_chunks.jsonl",
+    "tombstones_file": "tombstones.jsonl",
+    "chunk_fingerprints_file": "chunk_fingerprints.json",
+    "doc_fingerprints_file": "doc_fingerprints.json",
+    "doc_changes_file": "doc_changes.jsonl",
+    "counts": {
+      "previous_chunks": 1379,
+      "current_chunks": 1379,
+      "changed_chunks": 0,
+      "deleted_chunks": 0,
+      "tombstones": 0,
+      "changed_docs": 0
+    }
+  },
+  "canonical_tables": [
+    {
+      "table": "question_banks",
+      "path": "/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/sync_packages/question_bank/canonical/question_banks.csv",
+      "row_count": 10,
+      "source_path": "/Users/xiaoji/Documents/知识库分析/data/canonical/question_banks.csv"
+    },
+    {
+      "table": "documents",
+      "path": "/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/sync_packages/question_bank/canonical/documents.csv",
+      "row_count": 10,
+      "source_path": "/Users/xiaoji/Documents/知识库分析/data/canonical/documents.csv"
+    },
+    {
+      "table": "document_chunks",
+      "path": "/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/sync_packages/question_bank/canonical/document_chunks.csv",
+      "row_count": 1379,
+      "source_path": "/Users/xiaoji/Documents/知识库分析/data/canonical/document_chunks.csv"
+    }
+  ],
+  "graph_export": {
+    "available": true,
+    "nodes_file": "graph_nodes.jsonl",
+    "relationships_file": "graph_relationships.jsonl",
+    "rejected_relationships_file": "graph_relationships_rejected.jsonl",
+    "node_count": 1924,
+    "relationship_count": 5163,
+    "rejected_relationship_count": 1847
+  },
+  "graph_snapshot": {
+    "entity_count": 1906,
+    "relationship_count": 49875,
+    "relationship_types": [
+      {
+        "type": "AFFECTS",
+        "count": 21
+      },
+      {
+        "type": "AWARDS",
+        "count": 932
+      },
+      {
+        "type": "BELONGS_TO",
+        "count": 162
+      },
+      {
+        "type": "CONTAINS",
+        "count": 2092
+      },
+      {
+        "type": "DEFINED_BY",
+        "count": 3545
+      },
+      {
+        "type": "DESCRIBES",
+        "count": 596
+      },
+      {
+        "type": "HAS_CLASS",
+        "count": 1832
+      },
+      {
+        "type": "HAS_LEVEL",
+        "count": 362
+      },
+      {
+        "type": "HAS_PROPERTY",
+        "count": 2407
+      },
+      {
+        "type": "ISSUED_BY",
+        "count": 300
+      },
+      {
+        "type": "MENTIONS",
+        "count": 2009
+      },
+      {
+        "type": "OFFERS",
+        "count": 624
+      },
+      {
+        "type": "PART_OF",
+        "count": 6627
+      },
+      {
+        "type": "REFERS_TO",
+        "count": 4472
+      },
+      {
+        "type": "REGULATES",
+        "count": 6378
+      },
+      {
+        "type": "REQUIRES",
+        "count": 10918
+      },
+      {
+        "type": "REQUIRES_SKILL",
+        "count": 2810
+      },
+      {
+        "type": "SUBCLASS_OF",
+        "count": 3788
+      }
+    ],
+    "source_doc_coverage_rate": 1.0,
+    "source_chunk_id_coverage_rate": 1.0,
+    "schema_version_coverage_rate": 1.0,
+    "unresolved_source_docs": [],
+    "source_docs": [
+      {
+        "source_doc": "理论题库_飞行原理与飞行性能.txt",
+        "sqlite_doc_name": "理论题库_飞行原理与飞行性能.txt",
+        "resolved": true,
+        "entity_count": 301,
+        "with_source_chunk_ids": 301,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "理论题库_气象.txt",
+        "sqlite_doc_name": "理论题库_气象.txt",
+        "resolved": true,
+        "entity_count": 259,
+        "with_source_chunk_ids": 259,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "理论题库_综合问答.txt",
+        "sqlite_doc_name": "理论题库_综合问答.txt",
+        "resolved": true,
+        "entity_count": 202,
+        "with_source_chunk_ids": 202,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "理论题库_无人机教员题库.txt",
+        "sqlite_doc_name": "理论题库_无人机教员题库.txt",
+        "resolved": true,
+        "entity_count": 160,
+        "with_source_chunk_ids": 160,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "理论题库_系统组成及介绍.txt",
+        "sqlite_doc_name": "理论题库_系统组成及介绍.txt",
+        "resolved": true,
+        "entity_count": 150,
+        "with_source_chunk_ids": 150,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "理论题库_无人机飞行手册、法律法规及其他.txt",
+        "sqlite_doc_name": "理论题库_无人机飞行手册、法律法规及其他.txt",
+        "resolved": true,
+        "entity_count": 124,
+        "with_source_chunk_ids": 124,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+        "sqlite_doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+        "resolved": true,
+        "entity_count": 118,
+        "with_source_chunk_ids": 118,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+        "sqlite_doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+        "resolved": true,
+        "entity_count": 84,
+        "with_source_chunk_ids": 84,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "理论题库_旋翼无人机.txt",
+        "sqlite_doc_name": "理论题库_旋翼无人机.txt",
+        "resolved": true,
+        "entity_count": 80,
+        "with_source_chunk_ids": 80,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "理论题库_无人机操作注意事项.txt",
+        "sqlite_doc_name": "理论题库_无人机操作注意事项.txt",
+        "resolved": true,
+        "entity_count": 77,
+        "with_source_chunk_ids": 77,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "理论题库_无人机任务规划.txt",
+        "sqlite_doc_name": "理论题库_无人机任务规划.txt",
+        "resolved": true,
+        "entity_count": 76,
+        "with_source_chunk_ids": 76,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "无人机任务规划",
+        "sqlite_doc_name": "理论题库_无人机任务规划.txt",
+        "resolved": true,
+        "entity_count": 63,
+        "with_source_chunk_ids": 63,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "理论题库_概述.txt",
+        "sqlite_doc_name": "理论题库_概述.txt",
+        "resolved": true,
+        "entity_count": 57,
+        "with_source_chunk_ids": 57,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "无人机教员题库",
+        "sqlite_doc_name": "理论题库_无人机教员题库.txt",
+        "resolved": true,
+        "entity_count": 45,
+        "with_source_chunk_ids": 45,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "气象",
+        "sqlite_doc_name": "理论题库_气象.txt",
+        "resolved": true,
+        "entity_count": 45,
+        "with_source_chunk_ids": 45,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "理论题库_空中交通管制.txt",
+        "sqlite_doc_name": "理论题库_空中交通管制.txt",
+        "resolved": true,
+        "entity_count": 40,
+        "with_source_chunk_ids": 40,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "question_banks.csv",
+        "sqlite_doc_name": null,
+        "resolved": true,
+        "entity_count": 16,
+        "with_source_chunk_ids": 16,
+        "source_type": "canonical_table",
+        "canonical_table": "question_banks"
+      },
+      {
+        "source_doc": "政策法规_中华人民共和国民用航空法_2025修订_2026-07-01施行.txt",
+        "sqlite_doc_name": "政策法规_中华人民共和国民用航空法_2025修订_2026-07-01施行.txt",
+        "resolved": true,
+        "entity_count": 9,
+        "with_source_chunk_ids": 9,
+        "source_type": "sqlite_document"
+      }
+    ]
+  },
+  "remote_rebuild": {
+    "authority": "Use chunks.jsonl, canonical subsets, and graph export files as package inputs; rebuild derived layers remotely.",
+    "layers": [
+      "bm25",
+      "dense_bge_m3",
+      "neo4j_subgraph"
+    ],
+    "do_not_sync_as_authority": [
+      "bm25 index files",
+      "dense sqlite index",
+      "neo4j database files"
+    ]
+  }
+}

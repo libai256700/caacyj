@@ -1,0 +1,34 @@
+{
+  "run_id": "multihop_bridge_governance_20260612_224408",
+  "dry_run": true,
+  "report_dir": "/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/review_reports/multihop_bridge_governance_20260612_224408",
+  "before_counts": {
+    "course_requires_skill_mentions_kp": 50,
+    "student_requires_skill_mentions_kp": 133,
+    "position_requires_skill_mentions_kp": 1310,
+    "instructor_requires_skill_mentions_kp": 18
+  },
+  "after_counts": {
+    "course_requires_skill_mentions_kp": 50,
+    "student_requires_skill_mentions_kp": 133,
+    "position_requires_skill_mentions_kp": 1310,
+    "instructor_requires_skill_mentions_kp": 18
+  },
+  "node_chunk_normalization": {
+    "scanned_nodes_with_chunks": 5388,
+    "planned_or_applied_node_chunk_updates": 0,
+    "by_primary_label": {}
+  },
+  "bridge_result": {
+    "planned": 0,
+    "nodes_merged": 0,
+    "relationships_merged": 0
+  },
+  "bridge_audit_backfill": {
+    "planned_node_updates": 0,
+    "planned_relationship_updates": 0,
+    "nodes_updated": 0,
+    "relationships_updated": 0
+  },
+  "bridge_plan_by_domain": {}
+}

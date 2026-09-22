@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3D 知识图谱</title>
+<script src="/three.min.js"></script>
+<script src="/3d-force-graph.min.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #0a0a1a; color: #e0e0e0; overflow: hidden; height: 100vh; }
+
+#graph-container { width: 100vw; height: 100vh; }
+
+/* Left Panel */
+#left-panel {
+  position: fixed; top: 20px; left: 20px; width: 260px; max-height: calc(100vh - 120px);
+  background: rgba(20, 20, 40, 0.92); border: 1px solid rgba(100, 120, 255, 0.3);
+  border-radius: 12px; padding: 16px; z-index: 100; overflow-y: auto;
+  backdrop-filter: blur(10px); box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+#left-panel::-webkit-scrollbar { width: 4px; }
+#left-panel::-webkit-scrollbar-thumb { background: rgba(100,120,255,0.4); border-radius: 2px; }
+
+#panel-title { font-size: 16px; font-weight: 700; color: #8ab4ff; margin-bottom: 12px; letter-spacing: 1px; }
+
+#search-box {
+  width: 100%; padding: 8px 12px; border: 1px solid rgba(100,120,255,0.3);
+  background: rgba(0,0,0,0.3); border-radius: 6px; color: #e0e0e0; font-size: 13px;
+  outline: none; margin-bottom: 12px;
+}
+#search-box:focus { border-color: #5b7cfa; }
+
+#legend { list-style: none; }
+#legend li {
+  display: flex; align-items: center; padding: 3px 0; cursor: pointer;
+  font-size: 12px; border-radius: 4px; transition: background 0.15s;
+}
+#legend li:hover { background: rgba(100,120,255,0.1); }
+#legend li.active { background: rgba(100,120,255,0.2); }
+.legend-dot {
+  width: 10px; height: 10px; border-radius: 50%; margin-right: 8px; flex-shrink: 0;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+.legend-label { flex: 1; }
+.legend-count { color: #888; font-size: 11px; margin-left: 6px; }
+
+/* Bottom Bar */
+#bottom-bar {
+  position: fixed; bottom: 0; left: 0; right: 0; height: 44px;
+  background: rgba(20, 20, 40, 0.92); border-top: 1px solid rgba(100,120,255,0.3);
+  display: flex; align-items: center; padding: 0 20px; z-index: 100;
+  backdrop-filter: blur(10px); font-size: 13px;
+}
+#bottom-bar .stat { margin-right: 24px; color: #aaa; }
+#bottom-bar .stat strong { color: #8ab4ff; }
+
+/* Context Menu */
+#context-menu {
+  position: fixed; display: none; z-index: 200;
+  background: rgba(25, 25, 50, 0.95); border: 1px solid rgba(100,120,255,0.3);
+  border-radius: 8px; padding: 4px 0; min-width: 160px;
+  backdrop-filter: blur(10px); box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+}
+#context-menu .menu-item {
+  padding: 8px 16px; cursor: pointer; font-size: 13px; transition: background 0.1s;
+}
+#context-menu .menu-item:hover { background: rgba(100,120,255,0.2); }
+#context-menu .menu-item.danger { color: #f06262; }
+#context-menu .menu-item.danger:hover { background: rgba(240,98,98,0.15); }
+#context-menu .menu-sep { height: 1px; background: rgba(100,120,255,0.15); margin: 4px 0; }
+
+/* Modal */
+#modal-overlay {
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.6); z-index: 300; display: none;
+  justify-content: center; align-items: center;
+}
+#modal-overlay.show { display: flex; }
+#modal {
+  background: rgba(25, 25, 50, 0.97); border: 1px solid rgba(100,120,255,0.3);
+  border-radius: 12px; padding: 24px; min-width: 380px; max-width: 500px;
+  max-height: 80vh; overflow-y: auto; backdrop-filter: blur(10px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+}
+#modal h3 { font-size: 16px; color: #8ab4ff; margin-bottom: 16px; }
+#modal .form-group { margin-bottom: 12px; }
+#modal label { display: block; font-size: 12px; color: #999; margin-bottom: 4px; }
+#modal input, #modal textarea, #modal select {
+  width: 100%; padding: 7px 10px; border: 1px solid rgba(100,120,255,0.2);
+  background: rgba(0,0,0,0.3); border-radius: 6px; color: #e0e0e0; font-size: 13px;
+  outline: none;
+}
+#modal input:focus, #modal textarea:focus, #modal select:focus { border-color: #5b7cfa; }
+#modal textarea { resize: vertical; min-height: 60px; }
+#modal .btn-row { display: flex; gap: 8px; justify-content: flex-end; margin-top: 16px; }
+#modal .btn {
+  padding: 7px 18px; border: none; border-radius: 6px; font-size: 13px; cursor: pointer;
+  transition: opacity 0.15s;
+}
+#modal .btn:hover { opacity: 0.85; }
+#modal .btn-primary { background: #4a6cf7; color: #fff; }
+#modal .btn-secondary { background: rgba(255,255,255,0.1); color: #ccc; }
+#modal .btn-danger { background: #d32f2f; color: #fff; }
+
+/* Edge drawing hint */
+#edge-hint {
+  position: fixed; bottom: 56px; left: 50%; transform: translateX(-50%);
+  background: rgba(20,20,40,0.85); border: 1px solid rgba(100,120,255,0.3);
+  border-radius: 8px; padding: 6px 16px; font-size: 13px; z-index: 150;
+  display: none; backdrop-filter: blur(5px); color: #bbb;
+}
+
+/* Node tooltip */
+.graph-tooltip {
+  background: rgba(15,15,35,0.95) !important;
+  border: 1px solid rgba(100,120,255,0.4) !important;
+  border-radius: 8px !important;
+  padding: 8px 12px !important;
+  font-size: 13px !important;
+  color: #e0e0e0 !important;
+  pointer-events: none;
+  backdrop-filter: blur(8px);
+}
+
+/* Search result highlight */
+.search-result-item {
+  padding: 5px 8px; margin: 3px 0; border-radius: 4px; font-size: 12px;
+  cursor: pointer; transition: background 0.15s;
+}
+.search-result-item:hover { background: rgba(100,120,255,0.15); }
+
+/* Status indicator */
+#status-indicator {
+  position: fixed; top: 20px; right: 20px; z-index: 100;
+  display: flex; align-items: center; gap: 6px; font-size: 12px; color: #888;
+}
+#status-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+#status-dot.connected { background: #4caf50; }
+#status-dot.error { background: #f44336; }
+#status-dot.loading { background: #ff9800; animation: pulse 1s infinite; }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+.toggle-btn {
+  background: none; border: 1px solid rgba(100,120,255,0.3); color: #8ab4ff;
+  padding: 4px 10px; border-radius: 4px; cursor: pointer; font-size: 11px; margin-bottom: 8px;
+  transition: background 0.15s;
+}
+.toggle-btn:hover { background: rgba(100,120,255,0.15); }
+</style>
+</head>
+<body>
+
+<div id="graph-container"></div>
+
+<!-- Status -->
+<div id="status-indicator">
+  <span id="status-dot" class="loading"></span>
+  <span id="status-text">加载中...</span>
+</div>
+
+<!-- Left Panel -->
+<div id="left-panel">
+  <div id="panel-title">🔬 知识图谱 3D</div>
+  <input id="search-box" type="text" placeholder="搜索节点..." autocomplete="off" spellcheck="false">
+  <button class="toggle-btn" id="toggle-legend-btn">📋 收起图例</button>
+  <ul id="legend"></ul>
+  <div id="search-results"></div>
+</div>
+
+<!-- Bottom Bar -->
+<div id="bottom-bar">
+  <span class="stat">节点: <strong id="stat-nodes">0</strong></span>
+  <span class="stat">关系: <strong id="stat-edges">0</strong></span>
+  <span class="stat" id="stat-selected" style="display:none">
+    选中: <strong id="selected-info">-</strong>
+  </span>
+</div>
+
+<!-- Context Menu -->
+<div id="context-menu">
+  <div class="menu-item" data-action="edit">✏️ 编辑属性</div>
+  <div class="menu-sep"></div>
+  <div class="menu-item danger" data-action="delete">🗑️ 删除节点</div>
+</div>
+
+<!-- Edge Context Menu -->
+<div id="edge-context-menu" style="display:none;position:fixed;z-index:200;background:rgba(25,25,50,0.95);border:1px solid rgba(100,120,255,0.3);border-radius:8px;padding:4px 0;min-width:160px;backdrop-filter:blur(10px);box-shadow:0 4px 20px rgba(0,0,0,0.6);">
+  <div class="menu-item danger" data-action="delete-edge">🗑️ 删除关系</div>
+</div>
+
+<!-- Edge Drawing Hint -->
+<div id="edge-hint">点击另一个节点创建关系</div>
+
+<!-- Modal -->
+<div id="modal-overlay">
+  <div id="modal">
+    <h3 id="modal-title">编辑节点</h3>
+    <div id="modal-body"></div>
+    <div class="btn-row">
+      <button class="btn btn-secondary" onclick="closeModal()">取消</button>
+      <button class="btn btn-primary" id="modal-save-btn">保存</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ========== State ==========
+let graphData = { nodes: [], edges: [] };
+let allLabels = [];
+let typeColors = {};
+let selectedNode = null;
+let highlightNodes = new Set();
+let highlightEdges = new Set();
+let edgeDrawing = null;  // { from: nodeId } when dragging edge
+let contextTarget = null; // node for context menu
+let edgeContextTarget = null; // edge for context menu
+let typeVisibility = {};
+
+const COLOR_PALETTE = [
+  '#e6194b','#3cb44b','#ffe119','#4363d8','#f58231',
+  '#911eb4','#42d4f4','#f032e6','#bfef45','#fabed4',
+  '#469990','#dcbeff','#9A6324','#fffac8','#800000',
+  '#aaffc3','#808000','#ffd8b1','#000075','#a9a9a9'
+];
+
+// ========== Init Force Graph ==========
+const elem = document.getElementById('graph-container');
+const Graph = ForceGraph3D()(elem)
+  .backgroundColor('#0a0a1a')
+  .nodeRelSize(6)
+  .nodeId('id')
+  .nodeVal(8)
+  .linkLabel('label')
+  .linkColor(() => 'rgba(180, 190, 255, 0.25)')
+  .linkWidth(1.2)
+  .linkDirectionalParticles(1)
+  .linkDirectionalParticleSpeed(0.005)
+  .linkDirectionalParticleWidth(2)
+  .linkDirectionalArrowLength(4)
+  .linkDirectionalArrowRelPos(1)
+  .linkHoverPrecision(5)
+  .nodeThreeObject(node => {
+    const color = node.color || typeColors[node.type] || '#888';
+    const group = new THREE.Group();
+
+    // Main sphere
+    const sphereGeo = new THREE.SphereGeometry(node.type === 'Company' ? 10 : node.type === 'Course' ? 7 : node.type === 'Document' ? 6 : 5);
+    const sphereMat = new THREE.MeshPhongMaterial({
+      color: color,
+      emissive: color,
+      emissiveIntensity: 0.2,
+      transparent: true,
+      opacity: 1,
+    });
+    const sphere = new THREE.Mesh(sphereGeo, sphereMat);
+    group.add(sphere);
+
+    // Glow ring
+    const ringGeo = new THREE.RingGeometry(6, 7.5, 32);
+    const ringMat = new THREE.MeshBasicMaterial({
+      color: color,
+      transparent: true,
+      opacity: 0.3,
+      side: THREE.DoubleSide,
+    });
+    const ring = new THREE.Mesh(ringGeo, ringMat);
+    ring.rotation.x = Math.PI / 2;
+    ring.position.y = -1;
+    group.add(ring);
+
+    return group;
+  })
+  .nodeLabel(node => {
+    const props = node.properties || {};
+    const lines = [node.label || node.id];
+    if (props.description && props.description.length < 100) lines.push(props.description);
+    return lines.join('<br>');
+  })
+  .onNodeClick(node => {
+    // Close edge drawing mode
+    if (edgeDrawing) {
+      createEdge(edgeDrawing.from, node.id);
+      edgeDrawing = null;
+      document.getElementById('edge-hint').style.display = 'none';
+      return;
+    }
+    selectNode(node);
+  })
+  .onNodeRightClick(node => {
+    contextTarget = node;
+    showContextMenu(event.clientX, event.clientY);
+  })
+  .onNodeHover(node => {
+    document.body.style.cursor = node ? 'pointer' : 'default';
+    if (node && !edgeDrawing) {
+      // Highlight connected
+      const connectedNodes = new Set([node.id]);
+      const connectedEdges = new Set();
+      graphData.edges.forEach(e => {
+        if (e.from === node.id || e.to === node.id) {
+          connectedNodes.add(e.from);
+          connectedNodes.add(e.to);
+          connectedEdges.add(e.from + e.to + e.label);
+        }
+      });
+      Graph.nodeColor(n => connectedNodes.has(n.id) ? n.color || typeColors[n.type] || '#888' : 'rgba(100,100,100,0.15)');
+      Graph.linkColor(l => connectedEdges.has(l.from + l.to + l.label) ? 'rgba(180, 190, 255, 0.6)' : 'rgba(100,100,100,0.05)');
+      Graph.linkWidth(l => connectedEdges.has(l.from + l.to + l.label) ? 2 : 0.3);
+    } else if (!edgeDrawing) {
+      resetGraphColors();
+    }
+  })
+  .onLinkClick(link => {
+    if (edgeDrawing) return;
+    edgeContextTarget = link;
+    showEdgeContextMenu(event.clientX, event.clientY);
+  })
+  .onBackgroundClick(() => {
+    closeContextMenu();
+    closeEdgeContextMenu();
+    if (edgeDrawing) {
+      edgeDrawing = null;
+      document.getElementById('edge-hint').style.display = 'none';
+    }
+  })
+  .onBackgroundRightClick(ev => {
+    closeContextMenu();
+    // Double-click (approx via timeout)
+  });
+
+// Handle double-click on background for node creation
+let lastBgClick = 0;
+Graph.onBackgroundClick(() => {
+  const now = Date.now();
+  if (now - lastBgClick < 400) {
+    // Double click
+    const pos = getGraphCenter();
+    showCreateNodeModal(pos);
+  }
+  lastBgClick = now;
+});
+
+// ========== Data Loading ==========
+async function loadGraph() {
+  const dot = document.getElementById('status-dot');
+  const text = document.getElementById('status-text');
+  dot.className = 'loading';
+  text.textContent = '加载图谱数据...';
+
+  try {
+    const resp = await fetch('/api/graph-3d');
+    const data = await resp.json();
+    graphData = data;
+
+    // Build type info
+    const typeMap = {};
+    data.nodes.forEach(n => {
+      if (!typeMap[n.type]) typeMap[n.type] = { count: 0, color: n.color || '#888' };
+      typeMap[n.type].count++;
+    });
+    allLabels = Object.keys(typeMap).sort((a, b) => typeMap[b].count - typeMap[a].count);
+    allLabels.forEach((label, i) => {
+      typeColors[label] = typeMap[label].color || COLOR_PALETTE[i % COLOR_PALETTE.length];
+    });
+
+    // Group nodes by type
+    const groupMap = {};
+    allLabels.forEach((l, i) => { groupMap[l] = i + 1; });
+    data.nodes.forEach(n => { n.group = groupMap[n.type] || 0; });
+
+    // Set graph data
+    Graph.graphData(data);
+
+    // Update UI
+    updateStats();
+    buildLegend();
+    updateStatus('connected', `已加载 ${data.nodes.length} 节点, ${data.edges.length} 关系`);
+
+  } catch (err) {
+    updateStatus('error', '加载失败: ' + err.message);
+  }
+}
+
+function updateStatus(cls, msg) {
+  const dot = document.getElementById('status-dot');
+  const text = document.getElementById('status-text');
+  dot.className = cls;
+  text.textContent = msg;
+}
+
+function updateStats() {
+  document.getElementById('stat-nodes').textContent = graphData.nodes.length;
+  document.getElementById('stat-edges').textContent = graphData.edges.length;
+}
+
+function resetGraphColors() {
+  Graph.nodeColor(n => n.color || typeColors[n.type] || '#888');
+  Graph.linkColor(() => 'rgba(180, 190, 255, 0.25)');
+  Graph.linkWidth(() => 1.2);
+}
+
+// ========== Legend ==========
+function buildLegend() {
+  const legend = document.getElementById('legend');
+  legend.innerHTML = '';
+  allLabels.forEach(label => {
+    const color = typeColors[label] || '#888';
+    const count = graphData.nodes.filter(n => n.type === label).length;
+    const li = document.createElement('li');
+    li.dataset.label = label;
+    typeVisibility[label] = true;
+    li.className = 'active';
+    li.innerHTML = `
+      <span class="legend-dot" style="background:${color}"></span>
+      <span class="legend-label">${label}</span>
+      <span class="legend-count">${count}</span>
+    `;
+    li.addEventListener('click', () => toggleTypeVisibility(label, li));
+    legend.appendChild(li);
+  });
+}
+
+function toggleTypeVisibility(label, li) {
+  typeVisibility[label] = !typeVisibility[label];
+  li.classList.toggle('active', typeVisibility[label]);
+  const filtered = {
+    nodes: graphData.nodes.filter(n => typeVisibility[n.type] !== false),
+    edges: graphData.edges.filter(e => {
+      const from = graphData.nodes.find(n => n.id === e.from);
+      const to = graphData.nodes.find(n => n.id === e.to);
+      return from && to && typeVisibility[from.type] !== false && typeVisibility[to.type] !== false;
+    })
+  };
+  Graph.graphData(filtered);
+  updateStats();
+}
+
+// ========== Toggle legend ==========
+document.getElementById('toggle-legend-btn').addEventListener('click', function() {
+  const legend = document.getElementById('legend');
+  if (legend.style.display === 'none') {
+    legend.style.display = '';
+    this.textContent = '📋 收起图例';
+  } else {
+    legend.style.display = 'none';
+    this.textContent = '📋 展开图例';
+  }
+});
+
+// ========== Search ==========
+let searchTimeout = null;
+document.getElementById('search-box').addEventListener('input', function() {
+  clearTimeout(searchTimeout);
+  const q = this.value.trim();
+  const resultsDiv = document.getElementById('search-results');
+  if (!q) { resultsDiv.innerHTML = ''; return; }
+  searchTimeout = setTimeout(() => {
+    const results = graphData.nodes.filter(n => {
+      const label = (n.label || '').toLowerCase();
+      const id = (n.id || '').toLowerCase();
+      const type = (n.type || '').toLowerCase();
+      const ql = q.toLowerCase();
+      return label.includes(ql) || id.includes(ql) || type.includes(ql);
+    }).slice(0, 30);
+    resultsDiv.innerHTML = results.map(r => {
+      const color = r.color || typeColors[r.type] || '#888';
+      return `<div class="search-result-item" style="border-left:3px solid ${color};padding-left:8px"
+                onclick="focusNode('${r.id}')">
+        <strong>${r.label || r.id}</strong> <span style="color:#888;font-size:11px">${r.type}</span>
+      </div>`;
+    }).join('');
+  }, 200);
+});
+
+function focusNode(id) {
+  const node = graphData.nodes.find(n => n.id === id);
+  if (node) {
+    Graph.centerAt(node.x, node.y, 800);
+    Graph.zoomToFit(800, 150, n => n.id === id);
+    selectNode(node);
+  }
+}
+
+// ========== Node Selection ==========
+function selectNode(node) {
+  selectedNode = node;
+  highlightNodes.clear();
+  highlightEdges.clear();
+  if (node) {
+    highlightNodes.add(node.id);
+    graphData.edges.forEach(e => {
+      if (e.from === node.id || e.to === node.id) {
+        highlightNodes.add(e.from);
+        highlightNodes.add(e.to);
+        highlightEdges.add(e.from + e.to + e.label);
+      }
+    });
+    Graph.nodeColor(n => highlightNodes.has(n.id) ? (n.color || typeColors[n.type] || '#888') : 'rgba(60,60,80,0.15)');
+    Graph.linkColor(l => highlightEdges.has(l.from + l.to + l.label) ? 'rgba(180, 190, 255, 0.7)' : 'rgba(60,60,80,0.08)');
+    Graph.linkWidth(l => highlightEdges.has(l.from + l.to + l.label) ? 2.5 : 0.3);
+    // Enable node labels for selected
+    Graph.nodeLabel(n => {
+      if (!highlightNodes.has(n.id)) return null;
+      const props = n.properties || {};
+      const lines = [`<b>${n.label || n.id}</b>`, `类型: ${n.type}`];
+      if (props.description) lines.push(`描述: ${props.description}`);
+      return lines.join('<br>');
+    });
+  } else {
+    resetGraphColors();
+    Graph.nodeLabel(n => {
+      const props = n.properties || {};
+      const lines = [n.label || n.id];
+      if (props.description && props.description.length < 80) lines.push(props.description);
+      return lines.join('<br>');
+    });
+  }
+
+  // Update bottom bar
+  const sel = document.getElementById('stat-selected');
+  const info = document.getElementById('selected-info');
+  if (node) {
+    sel.style.display = 'inline';
+    info.textContent = `${node.label || node.id} (${node.type})`;
+  } else {
+    sel.style.display = 'none';
+  }
+}
+
+// ========== Context Menu ==========
+function showContextMenu(x, y) {
+  const menu = document.getElementById('context-menu');
+  menu.style.left = x + 'px';
+  menu.style.top = y + 'px';
+  menu.style.display = 'block';
+}
+
+function closeContextMenu() {
+  document.getElementById('context-menu').style.display = 'none';
+  contextTarget = null;
+}
+
+function showEdgeContextMenu(x, y) {
+  const menu = document.getElementById('edge-context-menu');
+  menu.style.left = x + 'px';
+  menu.style.top = y + 'px';
+  menu.style.display = 'block';
+}
+
+function closeEdgeContextMenu() {
+  document.getElementById('edge-context-menu').style.display = 'none';
+  edgeContextTarget = null;
+}
+
+document.addEventListener('click', e => {
+  if (!e.target.closest('#context-menu')) closeContextMenu();
+  if (!e.target.closest('#edge-context-menu')) closeEdgeContextMenu();
+});
+
+// Context menu actions
+document.querySelectorAll('#context-menu .menu-item').forEach(item => {
+  item.addEventListener('click', () => {
+    const action = item.dataset.action;
+    if (action === 'edit' && contextTarget) {
+      showEditModal(contextTarget);
+    } else if (action === 'delete' && contextTarget) {
+      deleteNode(contextTarget);
+    }
+    closeContextMenu();
+  });
+});
+
+document.querySelectorAll('#edge-context-menu .menu-item').forEach(item => {
+  item.addEventListener('click', () => {
+    const action = item.dataset.action;
+    if (action === 'delete-edge' && edgeContextTarget) {
+      deleteEdge(edgeContextTarget);
+    }
+    closeEdgeContextMenu();
+  });
+});
+
+// ========== Node CRUD ==========
+async function deleteNode(node) {
+  if (!confirm(`确定删除节点 "${node.label || node.id}" 吗？\n此操作不可撤销。`)) return;
+  try {
+    const resp = await fetch(`/api/node/${encodeURIComponent(node.id)}`, { method: 'DELETE' });
+    const data = await resp.json();
+    if (data.status === 'ok') {
+      graphData.nodes = graphData.nodes.filter(n => n.id !== node.id);
+      graphData.edges = graphData.edges.filter(e => e.from !== node.id && e.to !== node.id);
+      Graph.graphData(graphData);
+      updateStats();
+      buildLegend();
+      selectNode(null);
+    } else {
+      alert('删除失败: ' + (data.error || '未知错误'));
+    }
+  } catch (err) {
+    alert('删除失败: ' + err.message);
+  }
+}
+
+async function deleteEdge(edge) {
+  if (!confirm(`确定删除关系 "${edge.label}" 吗？`)) return;
+  try {
+    const resp = await fetch('/api/edge-3d', {
+      method: 'DELETE',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ from: edge.from, to: edge.to, label: edge.label })
+    });
+    const data = await resp.json();
+    if (data.status === 'ok') {
+      graphData.edges = graphData.edges.filter(e => !(e.from === edge.from && e.to === edge.to && e.label === edge.label));
+      Graph.graphData(graphData);
+      updateStats();
+    } else {
+      alert('删除关系失败: ' + (data.error || '未知错误'));
+    }
+  } catch (err) {
+    alert('删除关系失败: ' + err.message);
+  }
+}
+
+// ========== Node Create (double click) ==========
+function showCreateNodeModal(pos) {
+  const overlay = document.getElementById('modal-overlay');
+  const body = document.getElementById('modal-body');
+  const title = document.getElementById('modal-title');
+
+  title.textContent = '🆕 创建新节点';
+  const typeOptions = allLabels.map(l => `<option value="${l}">${l}</option>`).join('');
+  body.innerHTML = `
+    <div class="form-group">
+      <label>名称 *</label>
+      <input id="modal-name" type="text" placeholder="节点名称">
+    </div>
+    <div class="form-group">
+      <label>类型</label>
+      <select id="modal-type">${typeOptions}</select>
+    </div>
+    <div class="form-group">
+      <label>描述</label>
+      <textarea id="modal-desc" placeholder="节点描述"></textarea>
+    </div>
+    <div class="form-group">
+      <label>其他属性 (JSON)</label>
+      <textarea id="modal-props" placeholder='{"key": "value"}' style="font-family:monospace;font-size:12px;min-height:50px;"></textarea>
+    </div>
+  `;
+  overlay.classList.add('show');
+  document.getElementById('modal-name').focus();
+
+  document.getElementById('modal-save-btn').onclick = async () => {
+    const name = document.getElementById('modal-name').value.trim();
+    const type = document.getElementById('modal-type').value;
+    const desc = document.getElementById('modal-desc').value.trim();
+    let extraProps = {};
+    try {
+      const raw = document.getElementById('modal-props').value.trim();
+      if (raw) extraProps = JSON.parse(raw);
+    } catch(e) {
+      alert('属性 JSON 格式错误');
+      return;
+    }
+    if (!name) { alert('名称不能为空'); return; }
+    try {
+      const resp = await fetch('/api/node', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name, type,
+          description: desc,
+          properties: extraProps
+        })
+      });
+      const data = await resp.json();
+      if (data.id) {
+        closeModal();
+        // Reload graph
+        await loadGraph();
+      } else {
+        alert('创建失败: ' + (data.error || '未知错误'));
+      }
+    } catch (err) {
+      alert('创建失败: ' + err.message);
+    }
+  };
+}
+
+// ========== Node Edit Modal ==========
+function showEditModal(node) {
+  const overlay = document.getElementById('modal-overlay');
+  const body = document.getElementById('modal-body');
+  const title = document.getElementById('modal-title');
+
+  title.textContent = `✏️ 编辑: ${node.label || node.id}`;
+  const props = node.properties || {};
+  const propRows = Object.entries(props)
+    .filter(([k]) => k !== 'embedding')
+    .map(([k, v]) => {
+      if (typeof v === 'object') v = JSON.stringify(v);
+      return `<div class="form-group"><label>${k}</label><input class="prop-input" data-key="${k}" value="${escHtml(v || '')}"></div>`;
+    }).join('');
+
+  body.innerHTML = `
+    <div class="form-group">
+      <label>名称</label>
+      <input id="modal-name" value="${escHtml(node.label || node.id)}">
+    </div>
+    <div class="form-group">
+      <label>类型</label>
+      <input id="modal-type" value="${escHtml(node.type)}" readonly style="opacity:0.5">
+    </div>
+    ${propRows}
+    <div class="form-group" style="margin-top:8px;border-top:1px solid rgba(100,120,255,0.15);padding-top:8px;">
+      <label style="color:#5b7cfa">+ 添加属性</label>
+      <div style="display:flex;gap:6px">
+        <input id="new-prop-key" placeholder="属性名" style="width:120px">
+        <input id="new-prop-val" placeholder="值" style="flex:1">
+        <button class="btn btn-primary" style="padding:7px 12px" onclick="addPropField()">添加</button>
+      </div>
+    </div>
+  `;
+  overlay.classList.add('show');
+
+  document.getElementById('modal-save-btn').onclick = async () => {
+    const name = document.getElementById('modal-name').value.trim();
+    const updates = {};
+    if (name) updates.name = name;
+
+    document.querySelectorAll('.prop-input').forEach(inp => {
+      updates[inp.dataset.key] = inp.value;
+    });
+
+    try {
+      const resp = await fetch(`/api/node/${encodeURIComponent(node.id)}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(updates)
+      });
+      const data = await resp.json();
+      if (data.status === 'ok') {
+        closeModal();
+        await loadGraph();
+      } else {
+        alert('更新失败: ' + (data.error || '未知错误'));
+      }
+    } catch (err) {
+      alert('更新失败: ' + err.message);
+    }
+  };
+}
+
+function addPropField() {
+  const key = document.getElementById('new-prop-key').value.trim();
+  const val = document.getElementById('new-prop-val').value.trim();
+  if (!key) return;
+  const container = document.querySelector('#modal-body');
+  const grp = document.createElement('div');
+  grp.className = 'form-group';
+  grp.innerHTML = `<label>${key}</label><input class="prop-input" data-key="${key}" value="${escHtml(val)}">`;
+  container.insertBefore(grp, container.lastElementChild);
+  document.getElementById('new-prop-key').value = '';
+  document.getElementById('new-prop-val').value = '';
+}
+
+function closeModal() {
+  document.getElementById('modal-overlay').classList.remove('show');
+}
+
+// ========== Edge Drawing ==========
+Graph.onNodeDrag(node => {
+  // This fires during drag, we use it to detect edge drawing start
+});
+
+Graph.onNodeDragEnd(node => {
+  if (!edgeDrawing) {
+    edgeDrawing = { from: node.id };
+    document.getElementById('edge-hint').style.display = 'block';
+    // Highlight the source node
+    selectNode(node);
+  }
+});
+
+// ========== Create Edge ==========
+async function createEdge(fromId, toId) {
+  const relTypes = ['RELATES_TO', 'BELONGS_TO', 'REFERENCES', 'INCLUDES', 'USES', 'REQUIRES', 'DESCRIBES', 'OFFERS', 'AWARDS', 'LOCATED_AT', 'MENTIONS', 'REGULATES'];
+  const from = graphData.nodes.find(n => n.id === fromId);
+  const to = graphData.nodes.find(n => n.id === toId);
+  if (!from || !to) return;
+
+  const type = prompt(`创建从 "${from.label || fromId}" 到 "${to.label || toId}" 的关系类型:\n可选: ${relTypes.join(', ')}`, 'RELATES_TO');
+  if (!type) return;
+
+  try {
+    const resp = await fetch('/api/edge-3d', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ from: fromId, to: toId, label: type.trim().toUpperCase() })
+    });
+    const data = await resp.json();
+    if (data.status === 'ok') {
+      await loadGraph();
+    } else {
+      alert('创建关系失败: ' + (data.error || '未知错误'));
+    }
+  } catch (err) {
+    alert('创建关系失败: ' + err.message);
+  }
+}
+
+// ========== Utils ==========
+function escHtml(s) {
+  if (typeof s !== 'string') return String(s || '');
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function getGraphCenter() {
+  // Return current camera target as "center" position
+  return { x: 0, y: 0, z: 0 };
+}
+
+// Keyboard shortcuts
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    closeModal();
+    closeContextMenu();
+    closeEdgeContextMenu();
+    if (edgeDrawing) {
+      edgeDrawing = null;
+      document.getElementById('edge-hint').style.display = 'none';
+    }
+  }
+});
+
+// ========== Start ==========
+loadGraph();
+</script>
+</body>
+</html>

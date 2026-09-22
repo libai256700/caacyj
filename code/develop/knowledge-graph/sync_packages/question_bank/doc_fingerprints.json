@@ -1,0 +1,72 @@
+{
+  "理论题库_旋翼无人机.txt": {
+    "domain": "question_bank",
+    "doc_name": "理论题库_旋翼无人机.txt",
+    "chunk_count": 77,
+    "text_bytes": 50245,
+    "fingerprint": "47d026d85718472f3eae1c64c27a0a6b7b7d8e3893c31e4fe44aae0a0b0a15ec"
+  },
+  "理论题库_无人机任务规划.txt": {
+    "domain": "question_bank",
+    "doc_name": "理论题库_无人机任务规划.txt",
+    "chunk_count": 73,
+    "text_bytes": 40019,
+    "fingerprint": "2b0b700c1c61fb6d44cf4efd7a4130b2105687636d5e159084a13cfdf2827ead"
+  },
+  "理论题库_无人机操作注意事项.txt": {
+    "domain": "question_bank",
+    "doc_name": "理论题库_无人机操作注意事项.txt",
+    "chunk_count": 76,
+    "text_bytes": 49683,
+    "fingerprint": "cadb0401a3886efe6779141eeffbeb03578434fe20b9c2f5b6e42d6ea7e8bdd5"
+  },
+  "理论题库_无人机教员题库.txt": {
+    "domain": "question_bank",
+    "doc_name": "理论题库_无人机教员题库.txt",
+    "chunk_count": 157,
+    "text_bytes": 36113,
+    "fingerprint": "42e2639175c2d0fd42472698195d2c1d60c1d50d11375024049efbb0b78d4549"
+  },
+  "理论题库_概述.txt": {
+    "domain": "question_bank",
+    "doc_name": "理论题库_概述.txt",
+    "chunk_count": 56,
+    "text_bytes": 28211,
+    "fingerprint": "3b5accf5da578bd40d9646a6e576c9ba7bc21a4dc5a5998b48b9cfed1d6c60bc"
+  },
+  "理论题库_气象.txt": {
+    "domain": "question_bank",
+    "doc_name": "理论题库_气象.txt",
+    "chunk_count": 256,
+    "text_bytes": 161062,
+    "fingerprint": "69f95aacbdd1241dc77192b51a3b816cef4c1420a743b4686f001552981d0f6b"
+  },
+  "理论题库_空中交通管制.txt": {
+    "domain": "question_bank",
+    "doc_name": "理论题库_空中交通管制.txt",
+    "chunk_count": 37,
+    "text_bytes": 26741,
+    "fingerprint": "9f140cc86f82c0e5220fdd38b70c724df20f0f970677a9b2eade3a85e09f03ea"
+  },
+  "理论题库_系统组成及介绍.txt": {
+    "domain": "question_bank",
+    "doc_name": "理论题库_系统组成及介绍.txt",
+    "chunk_count": 148,
+    "text_bytes": 80255,
+    "fingerprint": "fdb8a94b891b542a73a9f32312a8f7cd49cecb47656e8d9342875721bc9869b1"
+  },
+  "理论题库_综合问答.txt": {
+    "domain": "question_bank",
+    "doc_name": "理论题库_综合问答.txt",
+    "chunk_count": 199,
+    "text_bytes": 128874,
+    "fingerprint": "b44da7ddeeb23838e7ad36e3268225382e969f02efe862db43b4fa6bc3dc15ca"
+  },
+  "理论题库_飞行原理与飞行性能.txt": {
+    "domain": "question_bank",
+    "doc_name": "理论题库_飞行原理与飞行性能.txt",
+    "chunk_count": 300,
+    "text_bytes": 280921,
+    "fingerprint": "3db3b7184b388fbaad2daf2ff8fe4796cd6904cfb9d6788a57a5bc94c7432899"
+  }
+}

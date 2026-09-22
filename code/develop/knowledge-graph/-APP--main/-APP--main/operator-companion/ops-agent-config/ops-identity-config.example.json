@@ -1,0 +1,63 @@
+{
+  "schema_version": "kg-ops-identity-gateway-config-v1",
+  "identity_verifier": {
+    "kind": "hs256-jwt-gateway-v1",
+    "algorithm": "HS256",
+    "issuer": "urn:replace-with-trusted-private-admin-gateway",
+    "audience": "ops-admin-agent",
+    "secret_ref": {
+      "value": "secretref:KG_OPS_IDENTITY_HS256_SECRET",
+      "encoding": "base64url"
+    },
+    "token_source": {
+      "wsgi_environ_key": "HTTP_AUTHORIZATION",
+      "scheme": "Bearer"
+    },
+    "time_policy": {
+      "leeway_seconds": 5,
+      "max_lifetime_seconds": 300
+    },
+    "claim_mapping": {
+      "subject": "sub",
+      "roles": "roles",
+      "authn_methods": "amr"
+    },
+    "identity_contract": {
+      "service_account": "ops-admin-agent",
+      "token_kind": "ops-admin-access",
+      "network_zone": "private-admin",
+      "required_authn_methods": ["mfa", "mtls", "oidc"],
+      "allowed_roles": ["ops-observer", "ops-maintainer"]
+    }
+  },
+  "confirmation_verifier": {
+    "kind": "hs256-jwt-gateway-v1",
+    "algorithm": "HS256",
+    "issuer": "private-admin-confirmation-gateway",
+    "audience": "maintenance-controller-cloud",
+    "secret_ref": {
+      "value": "secretref:KG_OPS_CONFIRMATION_HS256_SECRET",
+      "encoding": "base64url"
+    },
+    "token_source": {
+      "wsgi_environ_key": "HTTP_X_KG_MAINTENANCE_CONFIRMATION",
+      "scheme": "Bearer"
+    },
+    "time_policy": {
+      "leeway_seconds": 0,
+      "max_lifetime_seconds": 120
+    },
+    "claim_mapping": {
+      "plan_id": "plan_id",
+      "confirmation_id": "confirmation_id",
+      "confirmed_by": "confirmed_by",
+      "authn_methods": "amr",
+      "decision": "decision"
+    },
+    "confirmation_contract": {
+      "schema_version": "maintenance-confirmation-v2",
+      "required_authn_methods": ["mfa"],
+      "decision": "approved"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "run_id": "remove_synthetic_kg_seeds_20260612_223259",
+  "created_at": "2026-06-12T22:33:00",
+  "confirmed": false,
+  "sqlite_before": {
+    "chunks": [],
+    "documents": [],
+    "totals": {
+      "chunks": 2419,
+      "documents": 25
+    }
+  },
+  "dense_before": {
+    "exists": true,
+    "rows": [],
+    "totals": {
+      "embeddings": 2419
+    }
+  },
+  "neo4j_before": {
+    "documents": [],
+    "entities": [],
+    "relations": []
+  }
+}

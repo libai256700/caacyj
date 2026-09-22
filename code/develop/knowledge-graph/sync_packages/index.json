@@ -1,0 +1,110 @@
+{
+  "built_at": "2026-06-06T04:27:26+00:00",
+  "packages": [
+    {
+      "domain": "regulation",
+      "package_dir": "/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/sync_packages/regulation",
+      "domain_fingerprint": {
+        "schema": "domain-chunks-v1",
+        "chunk_count": 753,
+        "doc_count": 4,
+        "text_bytes": 357269,
+        "fingerprint": "0f922ccfa153ffdaed695fdf2db6591263fde05dff9a1945433095d9b3b5f6b8"
+      },
+      "incremental": {
+        "base_fingerprint": {
+          "schema": "domain-chunks-v1",
+          "chunk_count": 753,
+          "doc_count": 4,
+          "text_bytes": 357269,
+          "fingerprint": "0f922ccfa153ffdaed695fdf2db6591263fde05dff9a1945433095d9b3b5f6b8"
+        },
+        "target_fingerprint": {
+          "schema": "domain-chunks-v1",
+          "chunk_count": 753,
+          "doc_count": 4,
+          "text_bytes": 357269,
+          "fingerprint": "0f922ccfa153ffdaed695fdf2db6591263fde05dff9a1945433095d9b3b5f6b8"
+        },
+        "counts": {
+          "previous_chunks": 753,
+          "current_chunks": 753,
+          "changed_chunks": 0,
+          "deleted_chunks": 0,
+          "tombstones": 0,
+          "changed_docs": 0
+        }
+      }
+    },
+    {
+      "domain": "question_bank",
+      "package_dir": "/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/sync_packages/question_bank",
+      "domain_fingerprint": {
+        "schema": "domain-chunks-v1",
+        "chunk_count": 1379,
+        "doc_count": 10,
+        "text_bytes": 882124,
+        "fingerprint": "1d8ca3cef75c509904048639b76137c3c9ccbb486955bb3e141803617a71ab21"
+      },
+      "incremental": {
+        "base_fingerprint": {
+          "schema": "domain-chunks-v1",
+          "chunk_count": 1379,
+          "doc_count": 10,
+          "text_bytes": 882124,
+          "fingerprint": "1d8ca3cef75c509904048639b76137c3c9ccbb486955bb3e141803617a71ab21"
+        },
+        "target_fingerprint": {
+          "schema": "domain-chunks-v1",
+          "chunk_count": 1379,
+          "doc_count": 10,
+          "text_bytes": 882124,
+          "fingerprint": "1d8ca3cef75c509904048639b76137c3c9ccbb486955bb3e141803617a71ab21"
+        },
+        "counts": {
+          "previous_chunks": 1379,
+          "current_chunks": 1379,
+          "changed_chunks": 0,
+          "deleted_chunks": 0,
+          "tombstones": 0,
+          "changed_docs": 0
+        }
+      }
+    },
+    {
+      "domain": "textbook",
+      "package_dir": "/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/sync_packages/textbook",
+      "domain_fingerprint": {
+        "schema": "domain-chunks-v1",
+        "chunk_count": 202,
+        "doc_count": 2,
+        "text_bytes": 520192,
+        "fingerprint": "a130d5d4d6d81b46f0e70c8a1f71c47520a0fc638bfdfc213c9a02a128c25a3d"
+      },
+      "incremental": {
+        "base_fingerprint": {
+          "schema": "domain-chunks-v1",
+          "chunk_count": 202,
+          "doc_count": 2,
+          "text_bytes": 520192,
+          "fingerprint": "a130d5d4d6d81b46f0e70c8a1f71c47520a0fc638bfdfc213c9a02a128c25a3d"
+        },
+        "target_fingerprint": {
+          "schema": "domain-chunks-v1",
+          "chunk_count": 202,
+          "doc_count": 2,
+          "text_bytes": 520192,
+          "fingerprint": "a130d5d4d6d81b46f0e70c8a1f71c47520a0fc638bfdfc213c9a02a128c25a3d"
+        },
+        "counts": {
+          "previous_chunks": 202,
+          "current_chunks": 202,
+          "changed_chunks": 0,
+          "deleted_chunks": 0,
+          "tombstones": 0,
+          "changed_docs": 0
+        }
+      }
+    }
+  ]
+}

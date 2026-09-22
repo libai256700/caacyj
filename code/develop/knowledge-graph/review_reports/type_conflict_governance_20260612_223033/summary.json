@@ -1,0 +1,14 @@
+{
+  "run_id": "type_conflict_governance_20260612_223033",
+  "dry_run": true,
+  "before_conflict_groups": 14,
+  "planned_actions": {
+    "quarantine_company": 3,
+    "merge": 8,
+    "rename_positions": 2,
+    "rename_knowledge_point": 1
+  },
+  "results": [],
+  "after_conflict_groups": 14,
+  "report_dir": "/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/review_reports/type_conflict_governance_20260612_223033"
+}

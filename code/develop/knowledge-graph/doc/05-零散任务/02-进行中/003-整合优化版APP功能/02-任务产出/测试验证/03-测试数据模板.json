@@ -1,0 +1,47 @@
+{
+  "environment_gate": {
+    "required_environment": "formal Test",
+    "service_base_url": null,
+    "page_url": null,
+    "neo4j_uri": null,
+    "sqlite_entry": null,
+    "startup_or_deployment_entry": null,
+    "status": "blocked_missing_formal_record"
+  },
+  "api_cases": [
+    {
+      "case_id": "TC-API-001",
+      "scope": "local_code_precheck_only",
+      "requests": ["POST user_query envelope", "legacy GET q", "unknown field", "source allowlist", "405 fallback"],
+      "expected": "syntax and unit assertions pass"
+    },
+    {
+      "case_id": "TC-API-002",
+      "scope": "formal_test_environment",
+      "requests": ["GET /api/health", "POST /api/ask", "GET /api/ask", "invalid envelope", "disabled source"],
+      "expected": "real HTTP responses match the acceptance contract"
+    }
+  ],
+  "data_cases": [
+    {
+      "case_id": "TC-DATA-001",
+      "scope": "local_static_precheck_only",
+      "expected_paths": ["rag_chunks.db", "rag_index", "neo4j", "pipeline/config.json", "pipeline/static/3d.html"]
+    },
+    {
+      "case_id": "TC-DATA-002",
+      "scope": "formal_test_environment",
+      "queries": ["Neo4j read-only statistics", "SQLite read-only counts", "runtime logs"],
+      "expected": "current real Test data and configuration remain readable without blocking errors"
+    }
+  ],
+  "interaction_cases": [
+    {
+      "case_id": "TC-UI-002",
+      "scope": "formal_test_environment",
+      "actions": ["load real graph", "legacy GET ask", "optimized ask", "import", "Cypher", "2D CRUD", "3D CRUD"],
+      "expected": "optimized and retained capabilities work against real Test data"
+    }
+  ]
+}
+

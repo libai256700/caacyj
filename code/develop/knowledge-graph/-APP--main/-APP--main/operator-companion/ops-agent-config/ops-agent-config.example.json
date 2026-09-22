@@ -1,0 +1,56 @@
+{
+  "schema_version": "ops-agent-config-v1",
+  "agent_id": "ops-admin-agent",
+  "identity": {
+    "accepted_audience": "ops-admin-agent",
+    "rejected_public_audience": "public-app-agent",
+    "service_account": "ops-admin-agent",
+    "token_kind": "ops-admin-access",
+    "required_authn_methods": ["mfa", "mtls", "oidc"],
+    "required_roles": ["ops-observer", "ops-maintainer"],
+    "credential_source": "verified-private-gateway-claims"
+  },
+  "network": {
+    "zone": "private-admin",
+    "route_prefix": "/ops/",
+    "public_ingress": false,
+    "public_token_rejected": true
+  },
+  "tool_registry": {
+    "hybrid-audit-cloud": true,
+    "quality-dashboard-cloud": true,
+    "maintenance-controller-cloud": true
+  },
+  "allowlist_files": {
+    "tools": "tool-allowlist.json",
+    "jobs": "job-allowlist.json"
+  },
+  "data_policy": {
+    "allowed_classes": [
+      "sanitized_aggregate_metrics",
+      "release_identities",
+      "error_codes",
+      "diagnostic_codes",
+      "job_status"
+    ],
+    "forbidden_classes": [
+      "raw_user_questions",
+      "full_conversations",
+      "knowledge_body_text",
+      "raw_traces",
+      "provider_payloads",
+      "provider_credentials",
+      "command_output"
+    ]
+  },
+  "capabilities": {
+    "root_shell": false,
+    "arbitrary_shell": false,
+    "arbitrary_sql": false,
+    "arbitrary_cypher": false,
+    "active_write": false,
+    "arbitrary_delete": false,
+    "provider_credentials_read": false,
+    "release_activation": false
+  }
+}

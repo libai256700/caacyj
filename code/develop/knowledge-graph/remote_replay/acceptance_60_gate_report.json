@@ -1,0 +1,1409 @@
+{
+  "fixture": "/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/remote_replay/acceptance_60_retrieval_questions.jsonl",
+  "base_dir": "remote_replay",
+  "shape_failures": [],
+  "summary": {
+    "total": 60,
+    "passed": 60,
+    "failed": 0,
+    "domains": {
+      "question_bank": {
+        "total": 20,
+        "passed": 20,
+        "failed": 0
+      },
+      "regulation": {
+        "total": 20,
+        "passed": 20,
+        "failed": 0
+      },
+      "textbook": {
+        "total": 20,
+        "passed": 20,
+        "failed": 0
+      }
+    }
+  },
+  "results": [
+    {
+      "id": "reg-001",
+      "domain": "regulation",
+      "query": "新版民航法什么时候施行",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "regulation:cn_civil_aviation_law_2025:art_262",
+        "doc_name": "政策法规_中华人民共和国民用航空法_2025修订_2026-07-01施行.txt",
+        "chunk_index": 263,
+        "retrievers": "bm25+kg",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "reg-002",
+      "domain": "regulation",
+      "query": "CCAR-92 对操控员执照有什么要求",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "regulation:ccar_92:art_092_053",
+        "doc_name": "政策法规_CCAR-92部.txt",
+        "chunk_index": 8,
+        "retrievers": "bm25+dense+kg_path",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "reg-003",
+      "domain": "regulation",
+      "query": "民用无人驾驶航空器登记管理要求是什么",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "regulation:ccar_92:art_092_201",
+        "doc_name": "政策法规_CCAR-92部.txt",
+        "chunk_index": 33,
+        "retrievers": "bm25",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "reg-004",
+      "domain": "regulation",
+      "query": "运营合格证申请需要哪些材料",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "regulation:ccar_92:art_092_649",
+        "doc_name": "政策法规_CCAR-92部.txt",
+        "chunk_index": 148,
+        "retrievers": "bm25",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "reg-005",
+      "domain": "regulation",
+      "query": "无人驾驶航空器管制空域有哪些规定",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "regulation:ccar_92:art_092_051",
+        "doc_name": "政策法规_CCAR-92部.txt",
+        "chunk_index": 6,
+        "retrievers": "dense",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 15,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "reg-006",
+      "domain": "regulation",
+      "query": "民航法对经营许可证有什么规定",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "regulation:cn_civil_aviation_law_2025:art_103",
+        "doc_name": "政策法规_中华人民共和国民用航空法_2025修订_2026-07-01施行.txt",
+        "chunk_index": 104,
+        "retrievers": "bm25",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "reg-007",
+      "domain": "regulation",
+      "query": "民航法对适航证书有什么要求",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "regulation:cn_civil_aviation_law_2025:art_031",
+        "doc_name": "政策法规_中华人民共和国民用航空法_2025修订_2026-07-01施行.txt",
+        "chunk_index": 32,
+        "retrievers": "bm25",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "reg-008",
+      "domain": "regulation",
+      "query": "民航法事故调查由谁组织",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "regulation:cn_civil_aviation_law_2025:art_180",
+        "doc_name": "政策法规_中华人民共和国民用航空法_2025修订_2026-07-01施行.txt",
+        "chunk_index": 181,
+        "retrievers": "bm25",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "reg-009",
+      "domain": "regulation",
+      "query": "民用机场建设规划有什么要求",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "regulation:cn_civil_aviation_law_2025:art_053",
+        "doc_name": "政策法规_中华人民共和国民用航空法_2025修订_2026-07-01施行.txt",
+        "chunk_index": 54,
+        "retrievers": "bm25",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "reg-010",
+      "domain": "regulation",
+      "query": "CCAR-92 安全操控要求包括什么",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "regulation:ccar_92:art_092_051",
+        "doc_name": "政策法规_CCAR-92部.txt",
+        "chunk_index": 6,
+        "retrievers": "bm25+dense+kg_path",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "reg-011",
+      "domain": "regulation",
+      "query": "CCAR-92 实名登记注销有哪些情形",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "regulation:ccar_92:art_092_207",
+        "doc_name": "政策法规_CCAR-92部.txt",
+        "chunk_index": 36,
+        "retrievers": "bm25",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "reg-012",
+      "domain": "regulation",
+      "query": "CCAR-92 登记管理的一般要求是什么",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "regulation:ccar_92:art_092_201",
+        "doc_name": "政策法规_CCAR-92部.txt",
+        "chunk_index": 33,
+        "retrievers": "bm25+kg_path",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "reg-013",
+      "domain": "regulation",
+      "query": "CCAR-92 电子围栏安装有什么要求",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "regulation:ccar_92:art_092_613",
+        "doc_name": "政策法规_CCAR-92部.txt",
+        "chunk_index": 127,
+        "retrievers": "bm25",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "reg-014",
+      "domain": "regulation",
+      "query": "训练机构规范对合格证件伪造如何处理",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "regulation:uas_training_org_spec:clause_014_002_006",
+        "doc_name": "政策法规_《民用中小型无人驾驶航空器操控员训练机构规范》.txt",
+        "chunk_index": 173,
+        "retrievers": "bm25",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "reg-015",
+      "domain": "regulation",
+      "query": "训练机构规范实践飞行场地有什么要求",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "regulation:uas_training_org_spec:preface_000:af0bd7dc20",
+        "doc_name": "政策法规_《民用中小型无人驾驶航空器操控员训练机构规范》.txt",
+        "chunk_index": 0,
+        "retrievers": "bm25+kg",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "reg-016",
+      "domain": "regulation",
+      "query": "CCAR-92 理论考试禁止哪些行为",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "regulation:ccar_92:art_092_099",
+        "doc_name": "政策法规_CCAR-92部.txt",
+        "chunk_index": 31,
+        "retrievers": "bm25",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "reg-017",
+      "domain": "regulation",
+      "query": "CCAR-92 执照有效期满前多久申请重新颁发",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "regulation:ccar_92:art_092_063",
+        "doc_name": "政策法规_CCAR-92部.txt",
+        "chunk_index": 13,
+        "retrievers": "bm25+kg",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "reg-018",
+      "domain": "regulation",
+      "query": "CCAR-92 飞行经历记录包括什么",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "regulation:ccar_92:art_092_069",
+        "doc_name": "政策法规_CCAR-92部.txt",
+        "chunk_index": 16,
+        "retrievers": "bm25+kg",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "reg-019",
+      "domain": "regulation",
+      "query": "民航法空域管理原则是什么",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "regulation:cn_civil_aviation_law_2025:art_075",
+        "doc_name": "政策法规_中华人民共和国民用航空法_2025修订_2026-07-01施行.txt",
+        "chunk_index": 76,
+        "retrievers": "bm25",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "reg-020",
+      "domain": "regulation",
+      "query": "民航法规定民用航空器发生事故机长如何报告",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "regulation:cn_civil_aviation_law_2025:art_242",
+        "doc_name": "政策法规_中华人民共和国民用航空法_2025修订_2026-07-01施行.txt",
+        "chunk_index": 243,
+        "retrievers": "bm25",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 17,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "qb-001",
+      "domain": "question_bank",
+      "query": "GPS 可以提供哪些信息",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "question_bank:理论题库_综合问答:q_0039:idx_0038",
+        "doc_name": "理论题库_综合问答.txt",
+        "chunk_index": 38,
+        "retrievers": "bm25",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "qb-002",
+      "domain": "question_bank",
+      "query": "无人机任务规划包括哪些内容",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "question_bank:理论题库_无人机任务规划:q_0018:idx_0017",
+        "doc_name": "理论题库_无人机任务规划.txt",
+        "chunk_index": 17,
+        "retrievers": "bm25+kg",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "qb-003",
+      "domain": "question_bank",
+      "query": "地面站的主要功能是什么",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "question_bank:理论题库_系统组成及介绍:q_0095:idx_0092",
+        "doc_name": "理论题库_系统组成及介绍.txt",
+        "chunk_index": 92,
+        "retrievers": "bm25",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "qb-004",
+      "domain": "question_bank",
+      "query": "航线规划时需要考虑哪些因素",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "question_bank:理论题库_无人机任务规划:q_0035:idx_0034",
+        "doc_name": "理论题库_无人机任务规划.txt",
+        "chunk_index": 34,
+        "retrievers": "bm25",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "qb-005",
+      "domain": "question_bank",
+      "query": "飞行前检查的第一项是什么",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "question_bank:理论题库_综合问答:q_0131:idx_0130",
+        "doc_name": "理论题库_综合问答.txt",
+        "chunk_index": 130,
+        "retrievers": "bm25",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "qb-006",
+      "domain": "question_bank",
+      "query": "六轴飞行器螺旋桨如何安装",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "question_bank:理论题库_旋翼无人机:q_0001:idx_0000",
+        "doc_name": "理论题库_旋翼无人机.txt",
+        "chunk_index": 0,
+        "retrievers": "bm25+dense",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "qb-007",
+      "domain": "question_bank",
+      "query": "多轴飞行器的轴是什么意思",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "question_bank:理论题库_旋翼无人机:q_0014:idx_0013",
+        "doc_name": "理论题库_旋翼无人机.txt",
+        "chunk_index": 13,
+        "retrievers": "bm25",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "qb-008",
+      "domain": "question_bank",
+      "query": "多轴飞行器运输时要注意什么",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "question_bank:理论题库_旋翼无人机:q_0005:idx_0004",
+        "doc_name": "理论题库_旋翼无人机.txt",
+        "chunk_index": 4,
+        "retrievers": "bm25+dense",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "qb-009",
+      "domain": "question_bank",
+      "query": "大多数多轴飞行器利用什么实现速度感知",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "question_bank:理论题库_旋翼无人机:q_0013:idx_0012",
+        "doc_name": "理论题库_旋翼无人机.txt",
+        "chunk_index": 12,
+        "retrievers": "bm25",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "qb-010",
+      "domain": "question_bank",
+      "query": "多轴飞行器通过改变什么控制飞行轨迹",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "question_bank:理论题库_旋翼无人机:q_0020:idx_0019",
+        "doc_name": "理论题库_旋翼无人机.txt",
+        "chunk_index": 19,
+        "retrievers": "bm25",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "qb-011",
+      "domain": "question_bank",
+      "query": "多旋翼动力电池充电应选用什么充电器",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "question_bank:理论题库_旋翼无人机:q_0015:idx_0014",
+        "doc_name": "理论题库_旋翼无人机.txt",
+        "chunk_index": 14,
+        "retrievers": "bm25+kg",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "qb-012",
+      "domain": "question_bank",
+      "query": "高海拔多轴飞行器难离地怎么办",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "question_bank:理论题库_旋翼无人机:q_0011:idx_0010",
+        "doc_name": "理论题库_旋翼无人机.txt",
+        "chunk_index": 10,
+        "retrievers": "bm25+dense",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "qb-013",
+      "domain": "question_bank",
+      "query": "四轴飞行器如何实现控制",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "question_bank:理论题库_旋翼无人机:q_0023:idx_0022",
+        "doc_name": "理论题库_旋翼无人机.txt",
+        "chunk_index": 22,
+        "retrievers": "bm25",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "qb-014",
+      "domain": "question_bank",
+      "query": "空中交通管制中航线交叉由谁调整",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "question_bank:理论题库_空中交通管制:q_0010:idx_0008",
+        "doc_name": "理论题库_空中交通管制.txt",
+        "chunk_index": 8,
+        "retrievers": "bm25+kg",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "qb-015",
+      "domain": "question_bank",
+      "query": "雷暴天气对无人机飞行有什么影响",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "question_bank:理论题库_气象:q_0097:idx_0096",
+        "doc_name": "理论题库_气象.txt",
+        "chunk_index": 96,
+        "retrievers": "bm25",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "qb-016",
+      "domain": "question_bank",
+      "query": "动力失效后为什么不能保持上仰姿态",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "question_bank:理论题库_综合问答:q_0090:idx_0089",
+        "doc_name": "理论题库_综合问答.txt",
+        "chunk_index": 89,
+        "retrievers": "bm25",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "qb-017",
+      "domain": "question_bank",
+      "query": "飞控电调电机螺旋桨属于什么平台设备",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "question_bank:理论题库_综合问答:q_0053:idx_0052",
+        "doc_name": "理论题库_综合问答.txt",
+        "chunk_index": 52,
+        "retrievers": "bm25",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "qb-018",
+      "domain": "question_bank",
+      "query": "无人机飞行模式有哪些",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "question_bank:理论题库_系统组成及介绍:q_0148:idx_0145",
+        "doc_name": "理论题库_系统组成及介绍.txt",
+        "chunk_index": 145,
+        "retrievers": "bm25",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "qb-019",
+      "domain": "question_bank",
+      "query": "夜间飞行前重点检查什么设备",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "question_bank:理论题库_无人机操作注意事项:q_0001:idx_0073",
+        "doc_name": "理论题库_无人机操作注意事项.txt",
+        "chunk_index": 73,
+        "retrievers": "bm25",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "qb-020",
+      "domain": "question_bank",
+      "query": "无人机飞行日志至少保存多久",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "question_bank:理论题库_无人机任务规划:q_0001:idx_0072",
+        "doc_name": "理论题库_无人机任务规划.txt",
+        "chunk_index": 72,
+        "retrievers": "bm25+kg_path",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "tb-001",
+      "domain": "textbook",
+      "query": "固定翼飞机主要结构由哪些组成",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0020:f31ab42e52",
+        "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+        "chunk_index": 20,
+        "retrievers": "bm25",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "tb-002",
+      "domain": "textbook",
+      "query": "固定翼无人机升力如何产生",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0009:200c37234f",
+        "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+        "chunk_index": 9,
+        "retrievers": "bm25",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "tb-003",
+      "domain": "textbook",
+      "query": "多旋翼无人机的结构特点是什么",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0024:0f32ef650e",
+        "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+        "chunk_index": 24,
+        "retrievers": "bm25",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 7,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "tb-004",
+      "domain": "textbook",
+      "query": "无人机通信链路由哪些部分组成",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0034:159d19dc03",
+        "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+        "chunk_index": 34,
+        "retrievers": "bm25",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "tb-005",
+      "domain": "textbook",
+      "query": "无人机导航系统有哪些组成",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0011:364e7d8ec1",
+        "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+        "chunk_index": 11,
+        "retrievers": "bm25+dense",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "tb-006",
+      "domain": "textbook",
+      "query": "无人机机身主要功用是什么",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0003:6c2cf1513b",
+        "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+        "chunk_index": 3,
+        "retrievers": "bm25+dense",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "tb-007",
+      "domain": "textbook",
+      "query": "机翼在飞机上有什么作用",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0003:6c2cf1513b",
+        "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+        "chunk_index": 3,
+        "retrievers": "bm25+dense",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 3,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "tb-008",
+      "domain": "textbook",
+      "query": "起落架主要功用是支撑飞行器停放滑行起飞着陆滑跑吗",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0023:7a29e1fdf4",
+        "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+        "chunk_index": 23,
+        "retrievers": "bm25",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 9,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "tb-009",
+      "domain": "textbook",
+      "query": "活塞发动机动力系统四个行程是什么",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0007:f37f19c5f7",
+        "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+        "chunk_index": 7,
+        "retrievers": "bm25+dense",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "tb-010",
+      "domain": "textbook",
+      "query": "无刷电机有哪些优点",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0009:c94a535ef0",
+        "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+        "chunk_index": 9,
+        "retrievers": "bm25+dense",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 16,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "tb-011",
+      "domain": "textbook",
+      "query": "电子调速器 ESC 的作用是什么",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0021:32d1e29d95",
+        "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+        "chunk_index": 21,
+        "retrievers": "bm25",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "tb-012",
+      "domain": "textbook",
+      "query": "电调接线一般怎么连接",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0010:3bfe3da39d",
+        "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+        "chunk_index": 10,
+        "retrievers": "bm25+dense",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "tb-013",
+      "domain": "textbook",
+      "query": "飞控系统的硬件组成有哪些",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0011:364e7d8ec1",
+        "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+        "chunk_index": 11,
+        "retrievers": "bm25+dense",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "tb-014",
+      "domain": "textbook",
+      "query": "地面站系统由哪些硬件设备组成",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0015:ace750fe29",
+        "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+        "chunk_index": 15,
+        "retrievers": "bm25",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "tb-015",
+      "domain": "textbook",
+      "query": "锂聚合物电池主要构造包括什么",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0009:c94a535ef0",
+        "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+        "chunk_index": 9,
+        "retrievers": "bm25+dense",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "tb-016",
+      "domain": "textbook",
+      "query": "碳纤维复合材料有什么特性",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0039:41f2e3da3d",
+        "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+        "chunk_index": 39,
+        "retrievers": "bm25",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "tb-017",
+      "domain": "textbook",
+      "query": "任务载荷有哪些应用场景",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0049:f109cf7ffc",
+        "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+        "chunk_index": 49,
+        "retrievers": "bm25+kg_path",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "tb-018",
+      "domain": "textbook",
+      "query": "惯性导航系统中加速度计的作用是什么",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0026:be0b014912",
+        "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+        "chunk_index": 26,
+        "retrievers": "bm25",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 20,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "tb-019",
+      "domain": "textbook",
+      "query": "旋翼飞行器有哪些形式",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0004:af54cb8f4b",
+        "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+        "chunk_index": 4,
+        "retrievers": "bm25+dense",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 7,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    },
+    {
+      "id": "tb-020",
+      "domain": "textbook",
+      "query": "无人机系统结构与设计可供无人机爱好者参考吗",
+      "ok": true,
+      "failures": [],
+      "top": {
+        "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0000:5c70dd89e6",
+        "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+        "chunk_index": 0,
+        "retrievers": "bm25+dense+kg_path",
+        "text_source": "replay_sqlite"
+      },
+      "retriever_counts": {
+        "bm25": 20,
+        "dense": 12,
+        "kg": 4,
+        "fused": 8
+      },
+      "degraded": false,
+      "degraded_reasons": [],
+      "source_count": 8
+    }
+  ]
+}

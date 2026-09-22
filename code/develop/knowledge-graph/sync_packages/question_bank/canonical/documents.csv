@@ -1,0 +1,11 @@
+document_id,domain,doc_name,title,chunk_count,first_chunk_id,created_at_min,created_at_max
+doc_30696ebd9e75,question_bank,理论题库_气象.txt,气象,256,question_bank:理论题库_气象:q_0001:idx_0000,2026-06-06 07:24:48,2026-06-06 07:24:48
+doc_487fc33b7bff,question_bank,理论题库_概述.txt,概述,56,question_bank:理论题库_概述:q_0001:idx_0000,2026-06-06 07:24:48,2026-06-06 07:24:48
+doc_59e255f9f925,question_bank,理论题库_空中交通管制.txt,空中交通管制,37,question_bank:理论题库_空中交通管制:q_0002:idx_0000,2026-06-06 07:24:48,2026-06-06 07:24:48
+doc_6059438b1f3d,question_bank,理论题库_系统组成及介绍.txt,系统组成及介绍,148,question_bank:理论题库_系统组成及介绍:q_0001:idx_0000,2026-06-06 07:24:48,2026-06-06 07:24:48
+doc_8ee36f893ed2,question_bank,理论题库_无人机教员题库.txt,无人机教员题库,157,question_bank:理论题库_无人机教员题库:q_0001:idx_0000,2026-06-06 07:24:48,2026-06-06 07:24:48
+doc_9594f3efdafb,question_bank,理论题库_综合问答.txt,综合问答,199,question_bank:理论题库_综合问答:q_0001:idx_0000,2026-06-06 07:24:48,2026-06-06 07:24:48
+doc_9fe52a2ecb90,question_bank,理论题库_无人机操作注意事项.txt,无人机操作注意事项,76,question_bank:理论题库_无人机操作注意事项:q_0001:idx_0000,2026-06-06 07:24:48,2026-06-06 07:24:48
+doc_b05fc00e1a94,question_bank,理论题库_旋翼无人机.txt,旋翼无人机,77,question_bank:理论题库_旋翼无人机:q_0001:idx_0000,2026-06-06 07:24:48,2026-06-06 07:24:48
+doc_dcfe7e80158b,question_bank,理论题库_飞行原理与飞行性能.txt,飞行原理与飞行性能,300,question_bank:理论题库_飞行原理与飞行性能:q_0001:idx_0000,2026-06-06 07:24:48,2026-06-06 07:24:48
+doc_f0e848f64804,question_bank,理论题库_无人机任务规划.txt,无人机任务规划,73,question_bank:理论题库_无人机任务规划:q_0001:idx_0000,2026-06-06 07:24:48,2026-06-06 07:24:48

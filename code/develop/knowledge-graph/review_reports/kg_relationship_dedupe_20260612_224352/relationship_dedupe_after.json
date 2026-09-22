@@ -1,0 +1,18 @@
+{
+  "run_id": "kg_relationship_dedupe_20260612_224352",
+  "created_at": "2026-06-12T22:43:54",
+  "actions": {
+    "dedupe": {
+      "groups_merged": 587,
+      "relationships_deleted": 587
+    },
+    "has_salary_converted": 0
+  },
+  "after": {
+    "nodes": 5892,
+    "relationships": 152379,
+    "duplicate_groups": 0,
+    "duplicate_relationships": 0,
+    "has_salary": 0
+  }
+}

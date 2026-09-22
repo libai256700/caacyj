@@ -1,0 +1,3393 @@
+{
+  "created_at": "2026-06-12T22:30:34",
+  "stats": {
+    "nodes": 5903,
+    "rels": 153269,
+    "entities": 5850,
+    "documents": 78,
+    "chunk_nodes": 0,
+    "rels_per_entity": 26.2,
+    "rels_per_node": 25.96
+  },
+  "rel_distribution": [
+    {
+      "rel_type": "PART_OF",
+      "count": 54307
+    },
+    {
+      "rel_type": "DEFINED_BY",
+      "count": 27352
+    },
+    {
+      "rel_type": "REQUIRES",
+      "count": 14058
+    },
+    {
+      "rel_type": "MENTIONS",
+      "count": 9055
+    },
+    {
+      "rel_type": "REGULATES",
+      "count": 8226
+    },
+    {
+      "rel_type": "REFERS_TO",
+      "count": 7065
+    },
+    {
+      "rel_type": "DESCRIBES",
+      "count": 5246
+    },
+    {
+      "rel_type": "OFFERS",
+      "count": 4974
+    },
+    {
+      "rel_type": "REQUIRES_SKILL",
+      "count": 4657
+    },
+    {
+      "rel_type": "CONTAINS",
+      "count": 4162
+    },
+    {
+      "rel_type": "HAS_PROPERTY",
+      "count": 3625
+    },
+    {
+      "rel_type": "AFFECTS",
+      "count": 3074
+    },
+    {
+      "rel_type": "BELONGS_TO",
+      "count": 2702
+    },
+    {
+      "rel_type": "ISSUED_BY",
+      "count": 2416
+    },
+    {
+      "rel_type": "HAS_CLASS",
+      "count": 2339
+    },
+    {
+      "rel_type": "LOCATED_AT",
+      "count": 11
+    }
+  ],
+  "high_degree_nodes": [
+    {
+      "name": "第1章 航空器与无人机",
+      "labels": [
+        "Entity",
+        "Chapter"
+      ],
+      "type": "Chapter",
+      "source_doc": "教材第1章",
+      "degree": 1172
+    },
+    {
+      "name": "第2章 无人机的飞行原理及结构",
+      "labels": [
+        "Entity",
+        "Chapter"
+      ],
+      "type": "Chapter",
+      "source_doc": "教材第2章",
+      "degree": 1169
+    },
+    {
+      "name": "第3章 无人机的动力",
+      "labels": [
+        "Entity",
+        "Chapter"
+      ],
+      "type": "Chapter",
+      "source_doc": "教材第3章",
+      "degree": 1168
+    },
+    {
+      "name": "第4章 无人机飞控操作系统",
+      "labels": [
+        "Entity",
+        "Chapter"
+      ],
+      "type": "Chapter",
+      "source_doc": "教材第4章",
+      "degree": 1164
+    },
+    {
+      "name": "第5章 无人机通信",
+      "labels": [
+        "Entity",
+        "Chapter"
+      ],
+      "type": "Chapter",
+      "source_doc": "教材第5章",
+      "degree": 1164
+    },
+    {
+      "name": "第6章 无人机材料",
+      "labels": [
+        "Entity",
+        "Chapter"
+      ],
+      "type": "Chapter",
+      "source_doc": "教材第6章",
+      "degree": 1161
+    },
+    {
+      "name": "第8章 无人机与体育竞技",
+      "labels": [
+        "Entity",
+        "Chapter"
+      ],
+      "type": "Chapter",
+      "source_doc": "教材第8章",
+      "degree": 1156
+    },
+    {
+      "name": "第7章 任务载荷及应用场景",
+      "labels": [
+        "Entity",
+        "Chapter"
+      ],
+      "type": "Chapter",
+      "source_doc": "教材第7章",
+      "degree": 1142
+    },
+    {
+      "name": "第9章 反无人机方法",
+      "labels": [
+        "Entity",
+        "Chapter"
+      ],
+      "type": "Chapter",
+      "source_doc": "教材第9章",
+      "degree": 1141
+    },
+    {
+      "name": "湖北云技科技有限公司无人机执照培训项目客户管理与跟进制度",
+      "labels": [
+        "Entity",
+        "Policy"
+      ],
+      "type": "Policy",
+      "source_doc": "人事制度_湖北云技科技有限公司无人机执照培训项目客户管理与跟进制度.txt",
+      "degree": 1062
+    },
+    {
+      "name": "设计教材·P4T3_固定翼结构设计（章节）",
+      "labels": [
+        "Entity",
+        "Chapter"
+      ],
+      "type": "Chapter",
+      "source_doc": "设计教材·P4T3_固定翼结构设计",
+      "degree": 964
+    },
+    {
+      "name": "无人机任务规划（知识点）",
+      "labels": [
+        "Entity",
+        "KnowledgePoint"
+      ],
+      "type": "KnowledgePoint",
+      "source_doc": "无人机任务规划",
+      "degree": 961
+    },
+    {
+      "name": "结构设计软件介绍",
+      "labels": [
+        "Entity",
+        "Section"
+      ],
+      "type": "Section",
+      "source_doc": "设计教材·P4T1_结构设计软件",
+      "degree": 961
+    },
+    {
+      "name": "无人机制作的准备",
+      "labels": [
+        "Entity",
+        "Chapter"
+      ],
+      "type": "Chapter",
+      "source_doc": "设计教材·P5T1_制作准备",
+      "degree": 961
+    },
+    {
+      "name": "空中交通管制（知识点）",
+      "labels": [
+        "Entity",
+        "KnowledgePoint"
+      ],
+      "type": "KnowledgePoint",
+      "source_doc": "空中交通管制",
+      "degree": 961
+    },
+    {
+      "name": "设计准备",
+      "labels": [
+        "Entity",
+        "Section"
+      ],
+      "type": "Section",
+      "source_doc": "设计教材·P4T2_设计准备",
+      "degree": 959
+    },
+    {
+      "name": "固定翼无人机制作",
+      "labels": [
+        "Entity",
+        "Section"
+      ],
+      "type": "Section",
+      "source_doc": "设计教材·P5T2_固定翼制作",
+      "degree": 957
+    },
+    {
+      "name": "旋翼无人机（知识点）",
+      "labels": [
+        "Entity",
+        "KnowledgePoint"
+      ],
+      "type": "KnowledgePoint",
+      "source_doc": "旋翼无人机",
+      "degree": 952
+    },
+    {
+      "name": "学习任务3 多旋翼无人机制作",
+      "labels": [
+        "Entity",
+        "Chapter"
+      ],
+      "type": "Chapter",
+      "source_doc": "设计教材·P5T3_多旋翼制作",
+      "degree": 947
+    },
+    {
+      "name": "无人机",
+      "labels": [
+        "Entity",
+        "KnowledgePoint"
+      ],
+      "type": "KnowledgePoint",
+      "source_doc": "概述",
+      "degree": 937
+    },
+    {
+      "name": "气象（知识点）",
+      "labels": [
+        "Entity",
+        "KnowledgePoint"
+      ],
+      "type": "KnowledgePoint",
+      "source_doc": "气象",
+      "degree": 932
+    },
+    {
+      "name": "无人机飞行手册（知识点）",
+      "labels": [
+        "Entity",
+        "KnowledgePoint"
+      ],
+      "type": "KnowledgePoint",
+      "source_doc": "无人机飞行手册",
+      "degree": 929
+    },
+    {
+      "name": "遥控器功能",
+      "labels": [
+        "Entity",
+        "KnowledgePoint"
+      ],
+      "type": "KnowledgePoint",
+      "source_doc": "综合问答",
+      "degree": 925
+    },
+    {
+      "name": "无人机系统飞行器平台",
+      "labels": [
+        "Entity",
+        "KnowledgePoint"
+      ],
+      "type": "KnowledgePoint",
+      "source_doc": "系统组成及介绍",
+      "degree": 925
+    },
+    {
+      "name": "伯努利定理",
+      "labels": [
+        "Entity",
+        "KnowledgePoint"
+      ],
+      "type": "KnowledgePoint",
+      "source_doc": "教材第2章",
+      "degree": 759
+    },
+    {
+      "name": "多旋翼无人机系统",
+      "labels": [
+        "Entity",
+        "KnowledgePoint"
+      ],
+      "type": "KnowledgePoint",
+      "source_doc": "教材第1章",
+      "degree": 759
+    },
+    {
+      "name": "桨叶方向",
+      "labels": [
+        "Entity",
+        "KnowledgePoint"
+      ],
+      "type": "KnowledgePoint",
+      "source_doc": "教材第3章",
+      "degree": 747
+    },
+    {
+      "name": "微调杆",
+      "labels": [
+        "Entity",
+        "KnowledgePoint"
+      ],
+      "type": "KnowledgePoint",
+      "source_doc": "教材第5章",
+      "degree": 744
+    },
+    {
+      "name": "光流传感器",
+      "labels": [
+        "Entity",
+        "KnowledgePoint"
+      ],
+      "type": "KnowledgePoint",
+      "source_doc": "教材第4章",
+      "degree": 744
+    },
+    {
+      "name": "CCAR-92部D章设计批准",
+      "labels": [
+        "Entity",
+        "Regulation"
+      ],
+      "type": "Regulation",
+      "source_doc": "CCAR-92部_D章_设计批准(下)",
+      "degree": 738
+    },
+    {
+      "name": "CCAR-92部D章适航管理一般规定",
+      "labels": [
+        "Entity",
+        "Regulation"
+      ],
+      "type": "Regulation",
+      "source_doc": "CCAR-92部_D章_一般规定",
+      "degree": 738
+    },
+    {
+      "name": "CCAR-92部_A章_总则",
+      "labels": [
+        "Entity",
+        "Regulation"
+      ],
+      "type": "Regulation",
+      "source_doc": "CCAR-92部_A章_总则",
+      "degree": 738
+    },
+    {
+      "name": "CCAR-92部B章《申请条件与颁发》",
+      "labels": [
+        "Entity",
+        "Regulation"
+      ],
+      "type": "Regulation",
+      "source_doc": "CCAR-92部_B章_申请条件与颁发",
+      "degree": 736
+    },
+    {
+      "name": "CCAR-92部D章第二节设计批准",
+      "labels": [
+        "Entity",
+        "Regulation"
+      ],
+      "type": "Regulation",
+      "source_doc": "CCAR-92部_D章_设计批准(上)",
+      "degree": 736
+    },
+    {
+      "name": "CCAR-92部 C章 登记管理",
+      "labels": [
+        "Entity",
+        "Regulation"
+      ],
+      "type": "Regulation",
+      "source_doc": "CCAR-92部_C章_登记管理",
+      "degree": 736
+    },
+    {
+      "name": "CCAR-92部B章",
+      "labels": [
+        "Entity",
+        "Regulation"
+      ],
+      "type": "Regulation",
+      "source_doc": "CCAR-92部_B章_等级与合规",
+      "degree": 735
+    },
+    {
+      "name": "CCAR-92部D章生产与适航",
+      "labels": [
+        "Entity",
+        "Regulation"
+      ],
+      "type": "Regulation",
+      "source_doc": "CCAR-92部_D章_生产与适航",
+      "degree": 734
+    },
+    {
+      "name": "CCAR-92部_F章_一般规定",
+      "labels": [
+        "Entity",
+        "Regulation"
+      ],
+      "type": "Regulation",
+      "source_doc": "CCAR-92部_F章_一般规定",
+      "degree": 733
+    },
+    {
+      "name": "CCAR-92部E章空中交通管理",
+      "labels": [
+        "Entity",
+        "Regulation"
+      ],
+      "type": "Regulation",
+      "source_doc": "CCAR-92部_E章_空中交通管理",
+      "degree": 733
+    },
+    {
+      "name": "CCAR-92部B章考试与检查",
+      "labels": [
+        "Entity",
+        "Regulation"
+      ],
+      "type": "Regulation",
+      "source_doc": "CCAR-92部_B章_考试与检查",
+      "degree": 732
+    },
+    {
+      "name": "CCAR-92部_B章_安全操控与执照",
+      "labels": [
+        "Entity",
+        "Regulation"
+      ],
+      "type": "Regulation",
+      "source_doc": "CCAR-92部_B章_安全操控与执照",
+      "degree": 731
+    },
+    {
+      "name": "CCAR-92部_B章_申请条件与颁发",
+      "labels": [
+        "Entity",
+        "Regulation"
+      ],
+      "type": "Regulation",
+      "source_doc": "CCAR-92部_B章_申请条件与颁发",
+      "degree": 730
+    },
+    {
+      "name": "城市楼宇监控",
+      "labels": [
+        "Entity",
+        "Scenario"
+      ],
+      "type": "Scenario",
+      "source_doc": "教材第7章",
+      "degree": 727
+    },
+    {
+      "name": "对无人机竞赛的全面了解",
+      "labels": [
+        "Entity",
+        "Skill"
+      ],
+      "type": "Skill",
+      "source_doc": "教材第8章",
+      "degree": 726
+    },
+    {
+      "name": "蜂窝夹层复合材料",
+      "labels": [
+        "Entity",
+        "KnowledgePoint"
+      ],
+      "type": "KnowledgePoint",
+      "source_doc": "教材第6章",
+      "degree": 725
+    },
+    {
+      "name": "民用无人驾驶航空器及操控员管理",
+      "labels": [
+        "Entity",
+        "Section"
+      ],
+      "type": "Section",
+      "source_doc": "教材第9章",
+      "degree": 721
+    },
+    {
+      "name": "民用无人驾驶航空器实名登记",
+      "labels": [
+        "Entity",
+        "KnowledgePoint"
+      ],
+      "type": "KnowledgePoint",
+      "source_doc": "教材第9章",
+      "degree": 719
+    },
+    {
+      "name": "民用无人驾驶航空器操控员执照",
+      "labels": [
+        "Entity",
+        "Certification",
+        "KnowledgePoint",
+        "LicenseLevel"
+      ],
+      "type": "Certification",
+      "source_doc": "CCAR-92部_B章_申请条件与颁发",
+      "degree": 687
+    },
+    {
+      "name": "9.1 无人机的威胁",
+      "labels": [
+        "Entity",
+        "Section"
+      ],
+      "type": "Section",
+      "source_doc": "教材第9章",
+      "degree": 671
+    },
+    {
+      "name": "1.1 航空器",
+      "labels": [
+        "Entity",
+        "Section"
+      ],
+      "type": "Section",
+      "source_doc": "教材第1章",
+      "degree": 670
+    }
+  ],
+  "self_loops": [],
+  "duplicate_edges": [
+    {
+      "from_name": "湖北云技科技有限公司薪酬体系",
+      "rel_type": "AFFECTS",
+      "to_name": "无人机飞手",
+      "count": 22
+    },
+    {
+      "from_name": "无人机飞手",
+      "rel_type": "REQUIRES_SKILL",
+      "to_name": "无人机综合能力",
+      "count": 22
+    },
+    {
+      "from_name": "湖北云技科技有限公司",
+      "rel_type": "BELONGS_TO",
+      "to_name": "无人机飞手",
+      "count": 22
+    },
+    {
+      "from_name": "云技科技员工手册",
+      "rel_type": "AFFECTS",
+      "to_name": "无人机飞手",
+      "count": 22
+    },
+    {
+      "from_name": "湖北云技科技新员工面试及入职流程",
+      "rel_type": "AFFECTS",
+      "to_name": "无人机飞手",
+      "count": 22
+    },
+    {
+      "from_name": "云技科技新员工培训资料",
+      "rel_type": "AFFECTS",
+      "to_name": "无人机飞手",
+      "count": 22
+    },
+    {
+      "from_name": "湖北云技科技有限公司无人机执照培训项目客户管理与跟进制度",
+      "rel_type": "AFFECTS",
+      "to_name": "无人机飞手",
+      "count": 22
+    },
+    {
+      "from_name": "云技科技员工手册",
+      "rel_type": "AFFECTS",
+      "to_name": "\\*\\*无人机飞手\\*\\*",
+      "count": 12
+    },
+    {
+      "from_name": "\\*\\*无人机飞手\\*\\*",
+      "rel_type": "REQUIRES_SKILL",
+      "to_name": "无人机综合能力",
+      "count": 12
+    },
+    {
+      "from_name": "湖北云技科技有限公司",
+      "rel_type": "BELONGS_TO",
+      "to_name": "\\*\\*无人机飞手\\*\\*",
+      "count": 12
+    },
+    {
+      "from_name": "湖北云技科技有限公司无人机执照培训项目客户管理与跟进制度",
+      "rel_type": "AFFECTS",
+      "to_name": "\\*\\*无人机飞手\\*\\*",
+      "count": 11
+    },
+    {
+      "from_name": "湖北云技科技有限公司薪酬体系",
+      "rel_type": "AFFECTS",
+      "to_name": "\\*\\*无人机飞手\\*\\*",
+      "count": 11
+    },
+    {
+      "from_name": "湖北云技科技新员工面试及入职流程",
+      "rel_type": "AFFECTS",
+      "to_name": "\\*\\*无人机飞手\\*\\*",
+      "count": 11
+    },
+    {
+      "from_name": "云技科技新员工培训资料",
+      "rel_type": "AFFECTS",
+      "to_name": "\\*\\*无人机飞手\\*\\*",
+      "count": 11
+    },
+    {
+      "from_name": "私信",
+      "rel_type": "REFERS_TO",
+      "to_name": "多旋翼教员考证班",
+      "count": 6
+    },
+    {
+      "from_name": "私信",
+      "rel_type": "REFERS_TO",
+      "to_name": "装调检修班",
+      "count": 6
+    },
+    {
+      "from_name": "湖北云技科技有限公司无人机执照培训项目客户管理与跟进制度",
+      "rel_type": "AFFECTS",
+      "to_name": "私信",
+      "count": 6
+    },
+    {
+      "from_name": "私信",
+      "rel_type": "REFERS_TO",
+      "to_name": "垂起教员考证班",
+      "count": 6
+    },
+    {
+      "from_name": "概述",
+      "rel_type": "MENTIONS",
+      "to_name": "无人机综合能力",
+      "count": 5
+    },
+    {
+      "from_name": "旋翼无人机",
+      "rel_type": "MENTIONS",
+      "to_name": "多旋翼操控",
+      "count": 5
+    },
+    {
+      "from_name": "无人机飞手",
+      "rel_type": "BELONGS_TO",
+      "to_name": "新乡市红旗区云疆无人机科技中心(个体工商户)",
+      "count": 5
+    },
+    {
+      "from_name": "\\*\\*无人机飞手\\*\\*",
+      "rel_type": "BELONGS_TO",
+      "to_name": "新乡市红旗区云疆无人机科技中心(个体工商户)",
+      "count": 5
+    },
+    {
+      "from_name": "无人机操作注意事项",
+      "rel_type": "MENTIONS",
+      "to_name": "无人机综合能力",
+      "count": 5
+    },
+    {
+      "from_name": "综合问答",
+      "rel_type": "MENTIONS",
+      "to_name": "无人机综合能力",
+      "count": 5
+    },
+    {
+      "from_name": "无人机教员题库",
+      "rel_type": "MENTIONS",
+      "to_name": "教员教学能力",
+      "count": 5
+    },
+    {
+      "from_name": "系统组成及介绍",
+      "rel_type": "MENTIONS",
+      "to_name": "无人机综合能力",
+      "count": 5
+    },
+    {
+      "from_name": "飞行原理",
+      "rel_type": "DEFINED_BY",
+      "to_name": "中华人民共和国民用航空法_2025修订_2026-07-01施行",
+      "count": 4
+    },
+    {
+      "from_name": "飞行原理",
+      "rel_type": "DEFINED_BY",
+      "to_name": "CCAR-92部",
+      "count": 4
+    },
+    {
+      "from_name": "法律法规合规",
+      "rel_type": "DEFINED_BY",
+      "to_name": "民用无人驾驶航空器操控员执照考试管理办法_MD-92-FS-02_2024-05-11",
+      "count": 4
+    },
+    {
+      "from_name": "飞行原理",
+      "rel_type": "DEFINED_BY",
+      "to_name": "《民用中小型无人驾驶航空器操控员训练机构规范》",
+      "count": 4
+    },
+    {
+      "from_name": "飞行原理",
+      "rel_type": "DEFINED_BY",
+      "to_name": "民用无人驾驶航空器操控员执照考试管理办法_MD-92-FS-02_2024-05-11",
+      "count": 4
+    },
+    {
+      "from_name": "无人机操作注意事项",
+      "rel_type": "MENTIONS",
+      "to_name": "视距内运行",
+      "count": 4
+    },
+    {
+      "from_name": "无人机操作注意事项",
+      "rel_type": "MENTIONS",
+      "to_name": "超视距运行",
+      "count": 4
+    },
+    {
+      "from_name": "综合问答",
+      "rel_type": "MENTIONS",
+      "to_name": "视距内运行",
+      "count": 4
+    },
+    {
+      "from_name": "无人机操作",
+      "rel_type": "BELONGS_TO",
+      "to_name": "智光集能（江苏）新能源科技有限公司",
+      "count": 4
+    },
+    {
+      "from_name": "综合问答",
+      "rel_type": "MENTIONS",
+      "to_name": "超视距运行",
+      "count": 4
+    },
+    {
+      "from_name": "法律法规合规",
+      "rel_type": "DEFINED_BY",
+      "to_name": "中华人民共和国民用航空法_2025修订_2026-07-01施行",
+      "count": 4
+    },
+    {
+      "from_name": "云技科技员工手册",
+      "rel_type": "AFFECTS",
+      "to_name": "无人机操作",
+      "count": 4
+    },
+    {
+      "from_name": "湖北云技科技有限公司无人机执照培训项目客户管理与跟进制度",
+      "rel_type": "AFFECTS",
+      "to_name": "李先生",
+      "count": 4
+    },
+    {
+      "from_name": "综合问答",
+      "rel_type": "MENTIONS",
+      "to_name": "多旋翼操控",
+      "count": 4
+    },
+    {
+      "from_name": "无人机操作注意事项",
+      "rel_type": "MENTIONS",
+      "to_name": "多旋翼操控",
+      "count": 4
+    },
+    {
+      "from_name": "系统组成及介绍",
+      "rel_type": "MENTIONS",
+      "to_name": "多旋翼操控",
+      "count": 4
+    },
+    {
+      "from_name": "系统组成及介绍",
+      "rel_type": "MENTIONS",
+      "to_name": "超视距运行",
+      "count": 4
+    },
+    {
+      "from_name": "空中交通管制",
+      "rel_type": "MENTIONS",
+      "to_name": "视距内运行",
+      "count": 4
+    },
+    {
+      "from_name": "空中交通管制",
+      "rel_type": "MENTIONS",
+      "to_name": "多旋翼操控",
+      "count": 4
+    },
+    {
+      "from_name": "系统组成及介绍",
+      "rel_type": "MENTIONS",
+      "to_name": "视距内运行",
+      "count": 4
+    },
+    {
+      "from_name": "空中交通管制",
+      "rel_type": "MENTIONS",
+      "to_name": "超视距运行",
+      "count": 4
+    },
+    {
+      "from_name": "湖北云技科技有限公司薪酬体系",
+      "rel_type": "AFFECTS",
+      "to_name": "无人机",
+      "count": 4
+    },
+    {
+      "from_name": "无人机教员题库",
+      "rel_type": "MENTIONS",
+      "to_name": "多旋翼操控",
+      "count": 4
+    },
+    {
+      "from_name": "概述",
+      "rel_type": "MENTIONS",
+      "to_name": "多旋翼操控",
+      "count": 4
+    }
+  ],
+  "document_contains": [
+    {
+      "document": "气象",
+      "contains_count": 301
+    },
+    {
+      "document": "飞行原理与飞行性能",
+      "contains_count": 300
+    },
+    {
+      "document": "中华人民共和国民用航空法_2025修订_2026-07-01施行",
+      "contains_count": 264
+    },
+    {
+      "document": "《民用中小型无人驾驶航空器操控员训练机构规范》",
+      "contains_count": 243
+    },
+    {
+      "document": "综合问答",
+      "contains_count": 241
+    },
+    {
+      "document": "无人机教员题库",
+      "contains_count": 202
+    },
+    {
+      "document": "CCAR-92部",
+      "contains_count": 192
+    },
+    {
+      "document": "系统组成及介绍",
+      "contains_count": 187
+    },
+    {
+      "document": "无人机任务规划",
+      "contains_count": 136
+    },
+    {
+      "document": "概述",
+      "contains_count": 126
+    },
+    {
+      "document": "无人机飞行手册、法律法规及其他",
+      "contains_count": 123
+    },
+    {
+      "document": "2023_无人机系统结构与设计_机械工业出版社_李宏达",
+      "contains_count": 118
+    },
+    {
+      "document": "无人机操作注意事项",
+      "contains_count": 116
+    },
+    {
+      "document": "2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦",
+      "contains_count": 84
+    },
+    {
+      "document": "空中交通管制",
+      "contains_count": 81
+    },
+    {
+      "document": "旋翼无人机",
+      "contains_count": 77
+    },
+    {
+      "document": "云技科技员工手册",
+      "contains_count": 61
+    },
+    {
+      "document": "云技科技新员工培训资料",
+      "contains_count": 57
+    },
+    {
+      "document": "民用无人驾驶航空器操控员执照考试管理办法_MD-92-FS-02_2024-05-11",
+      "contains_count": 56
+    },
+    {
+      "document": "价格表",
+      "contains_count": 48
+    },
+    {
+      "document": "公司产品介绍",
+      "contains_count": 42
+    },
+    {
+      "document": "教材第7章",
+      "contains_count": 42
+    },
+    {
+      "document": "CCAR-92部_B章_考试与检查",
+      "contains_count": 40
+    },
+    {
+      "document": "教材第9章",
+      "contains_count": 40
+    },
+    {
+      "document": "教材第3章",
+      "contains_count": 39
+    },
+    {
+      "document": "湖北云技科技有限公司薪酬体系",
+      "contains_count": 39
+    },
+    {
+      "document": "CCAR-92部_F章_一般运行要求(下)",
+      "contains_count": 38
+    },
+    {
+      "document": "教材第5章",
+      "contains_count": 37
+    },
+    {
+      "document": "CCAR-92部_F章_审定类运行(下)",
+      "contains_count": 35
+    },
+    {
+      "document": "CCAR-92部_B章_申请条件与颁发",
+      "contains_count": 34
+    },
+    {
+      "document": "无人机飞行手册",
+      "contains_count": 33
+    },
+    {
+      "document": "CCAR-92部_F章_一般运行要求(上)",
+      "contains_count": 33
+    },
+    {
+      "document": "教材第4章",
+      "contains_count": 32
+    },
+    {
+      "document": "教材第1章",
+      "contains_count": 32
+    },
+    {
+      "document": "CCAR-92部_B章_安全操控与执照",
+      "contains_count": 31
+    },
+    {
+      "document": "CCAR-92部_F章_审定类运行(上)",
+      "contains_count": 31
+    },
+    {
+      "document": "湖北云技科技新员工面试及入职流程（文档）",
+      "contains_count": 31
+    },
+    {
+      "document": "教材第2章",
+      "contains_count": 30
+    },
+    {
+      "document": "CCAR-92部_E章_空中交通管理",
+      "contains_count": 29
+    },
+    {
+      "document": "设计教材·P5T3_多旋翼制作",
+      "contains_count": 27
+    },
+    {
+      "document": "公司介绍",
+      "contains_count": 26
+    },
+    {
+      "document": "政策法规_中华人民共和国民用航空法_2025修订_2026-07-01施行.txt",
+      "contains_count": 26
+    },
+    {
+      "document": "CCAR-92部_D章_设计批准(下)",
+      "contains_count": 26
+    },
+    {
+      "document": "教材第6章",
+      "contains_count": 25
+    },
+    {
+      "document": "设计教材·P4T3_固定翼结构设计",
+      "contains_count": 25
+    },
+    {
+      "document": "设计教材·P5T2_固定翼制作",
+      "contains_count": 25
+    },
+    {
+      "document": "政策法规_民用无人驾驶航空器操控员执照考试管理办法_MD-92-FS-02_2024-05-11.txt",
+      "contains_count": 25
+    },
+    {
+      "document": "CCAR-92部_F章_运营许可",
+      "contains_count": 25
+    },
+    {
+      "document": "CCAR-92部_D章_设计批准(上)",
+      "contains_count": 24
+    },
+    {
+      "document": "CCAR-92部_D章_一般规定",
+      "contains_count": 24
+    }
+  ],
+  "relation_samples": {
+    "REQUIRES": [
+      {
+        "from_name": "民用无人驾驶航空器运营合格证",
+        "from_labels": [
+          "Entity",
+          "Certification",
+          "KnowledgePoint"
+        ],
+        "from_type": "Certification",
+        "from_source_doc": "教材第9章",
+        "to_name": "伯努利定理",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "to_type": "KnowledgePoint",
+        "to_source_doc": "教材第2章",
+        "a_degree": 614,
+        "b_degree": 759
+      },
+      {
+        "from_name": "民用无人驾驶航空器运营合格证",
+        "from_labels": [
+          "Entity",
+          "Certification",
+          "KnowledgePoint"
+        ],
+        "from_type": "Certification",
+        "from_source_doc": "教材第9章",
+        "to_name": "多旋翼无人机系统",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "to_type": "KnowledgePoint",
+        "to_source_doc": "教材第1章",
+        "a_degree": 614,
+        "b_degree": 759
+      },
+      {
+        "from_name": "民用无人驾驶航空器运营合格证",
+        "from_labels": [
+          "Entity",
+          "Certification",
+          "KnowledgePoint"
+        ],
+        "from_type": "Certification",
+        "from_source_doc": "教材第9章",
+        "to_name": "桨叶方向",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "to_type": "KnowledgePoint",
+        "to_source_doc": "教材第3章",
+        "a_degree": 614,
+        "b_degree": 747
+      },
+      {
+        "from_name": "民用无人驾驶航空器运营合格证",
+        "from_labels": [
+          "Entity",
+          "Certification",
+          "KnowledgePoint"
+        ],
+        "from_type": "Certification",
+        "from_source_doc": "教材第9章",
+        "to_name": "光流传感器",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "to_type": "KnowledgePoint",
+        "to_source_doc": "教材第4章",
+        "a_degree": 614,
+        "b_degree": 744
+      },
+      {
+        "from_name": "民用无人驾驶航空器运营合格证",
+        "from_labels": [
+          "Entity",
+          "Certification",
+          "KnowledgePoint"
+        ],
+        "from_type": "Certification",
+        "from_source_doc": "教材第9章",
+        "to_name": "微调杆",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "to_type": "KnowledgePoint",
+        "to_source_doc": "教材第5章",
+        "a_degree": 614,
+        "b_degree": 744
+      },
+      {
+        "from_name": "民用无人驾驶航空器运营合格证",
+        "from_labels": [
+          "Entity",
+          "Certification",
+          "KnowledgePoint"
+        ],
+        "from_type": "Certification",
+        "from_source_doc": "教材第9章",
+        "to_name": "城市楼宇监控",
+        "to_labels": [
+          "Entity",
+          "Scenario"
+        ],
+        "to_type": "Scenario",
+        "to_source_doc": "教材第7章",
+        "a_degree": 614,
+        "b_degree": 727
+      },
+      {
+        "from_name": "民用无人驾驶航空器运营合格证",
+        "from_labels": [
+          "Entity",
+          "Certification",
+          "KnowledgePoint"
+        ],
+        "from_type": "Certification",
+        "from_source_doc": "教材第9章",
+        "to_name": "对无人机竞赛的全面了解",
+        "to_labels": [
+          "Entity",
+          "Skill"
+        ],
+        "to_type": "Skill",
+        "to_source_doc": "教材第8章",
+        "a_degree": 614,
+        "b_degree": 726
+      },
+      {
+        "from_name": "民用无人驾驶航空器运营合格证",
+        "from_labels": [
+          "Entity",
+          "Certification",
+          "KnowledgePoint"
+        ],
+        "from_type": "Certification",
+        "from_source_doc": "教材第9章",
+        "to_name": "蜂窝夹层复合材料",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "to_type": "KnowledgePoint",
+        "to_source_doc": "教材第6章",
+        "a_degree": 614,
+        "b_degree": 725
+      },
+      {
+        "from_name": "轻于空气航空器",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "from_type": "KnowledgePoint",
+        "from_source_doc": "教材第1章",
+        "to_name": "多旋翼无人机系统",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "to_type": "KnowledgePoint",
+        "to_source_doc": "教材第1章",
+        "a_degree": 578,
+        "b_degree": 759
+      },
+      {
+        "from_name": "3.5 氢燃料电池动力",
+        "from_labels": [
+          "Entity",
+          "Section"
+        ],
+        "from_type": "Section",
+        "from_source_doc": "教材第3章",
+        "to_name": "多旋翼无人机系统",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "to_type": "KnowledgePoint",
+        "to_source_doc": "教材第1章",
+        "a_degree": 578,
+        "b_degree": 759
+      },
+      {
+        "from_name": "遥控器信号",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "from_type": "KnowledgePoint",
+        "from_source_doc": "教材第5章",
+        "to_name": "多旋翼无人机系统",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "to_type": "KnowledgePoint",
+        "to_source_doc": "教材第1章",
+        "a_degree": 578,
+        "b_degree": 759
+      },
+      {
+        "from_name": "木材",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "from_type": "KnowledgePoint",
+        "from_source_doc": "教材第6章",
+        "to_name": "多旋翼无人机系统",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "to_type": "KnowledgePoint",
+        "to_source_doc": "教材第1章",
+        "a_degree": 578,
+        "b_degree": 759
+      },
+      {
+        "from_name": "3.5 氢燃料电池动力",
+        "from_labels": [
+          "Entity",
+          "Section"
+        ],
+        "from_type": "Section",
+        "from_source_doc": "教材第3章",
+        "to_name": "伯努利定理",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "to_type": "KnowledgePoint",
+        "to_source_doc": "教材第2章",
+        "a_degree": 578,
+        "b_degree": 759
+      },
+      {
+        "from_name": "轻于空气航空器",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "from_type": "KnowledgePoint",
+        "from_source_doc": "教材第1章",
+        "to_name": "伯努利定理",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "to_type": "KnowledgePoint",
+        "to_source_doc": "教材第2章",
+        "a_degree": 578,
+        "b_degree": 759
+      },
+      {
+        "from_name": "姿态传感器",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "from_type": "KnowledgePoint",
+        "from_source_doc": "教材第4章",
+        "to_name": "伯努利定理",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "to_type": "KnowledgePoint",
+        "to_source_doc": "教材第2章",
+        "a_degree": 578,
+        "b_degree": 759
+      },
+      {
+        "from_name": "姿态传感器",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "from_type": "KnowledgePoint",
+        "from_source_doc": "教材第4章",
+        "to_name": "多旋翼无人机系统",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "to_type": "KnowledgePoint",
+        "to_source_doc": "教材第1章",
+        "a_degree": 578,
+        "b_degree": 759
+      },
+      {
+        "from_name": "遥控器信号",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "from_type": "KnowledgePoint",
+        "from_source_doc": "教材第5章",
+        "to_name": "伯努利定理",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "to_type": "KnowledgePoint",
+        "to_source_doc": "教材第2章",
+        "a_degree": 578,
+        "b_degree": 759
+      },
+      {
+        "from_name": "木材",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "from_type": "KnowledgePoint",
+        "from_source_doc": "教材第6章",
+        "to_name": "伯努利定理",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "to_type": "KnowledgePoint",
+        "to_source_doc": "教材第2章",
+        "a_degree": 578,
+        "b_degree": 759
+      },
+      {
+        "from_name": "民用无人驾驶航空器运营合格证",
+        "from_labels": [
+          "Entity",
+          "Certification",
+          "KnowledgePoint"
+        ],
+        "from_type": "Certification",
+        "from_source_doc": "教材第9章",
+        "to_name": "民用无人驾驶航空器及操控员管理",
+        "to_labels": [
+          "Entity",
+          "Section"
+        ],
+        "to_type": "Section",
+        "to_source_doc": "教材第9章",
+        "a_degree": 614,
+        "b_degree": 721
+      },
+      {
+        "from_name": "民用无人驾驶航空器运营合格证",
+        "from_labels": [
+          "Entity",
+          "Certification",
+          "KnowledgePoint"
+        ],
+        "from_type": "Certification",
+        "from_source_doc": "教材第9章",
+        "to_name": "民用无人驾驶航空器实名登记",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "to_type": "KnowledgePoint",
+        "to_source_doc": "教材第9章",
+        "a_degree": 614,
+        "b_degree": 719
+      },
+      {
+        "from_name": "无人机防控设备",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "from_type": "KnowledgePoint",
+        "from_source_doc": "教材第9章",
+        "to_name": "多旋翼无人机系统",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "to_type": "KnowledgePoint",
+        "to_source_doc": "教材第1章",
+        "a_degree": 573,
+        "b_degree": 759
+      },
+      {
+        "from_name": "运动相机",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "from_type": "KnowledgePoint",
+        "from_source_doc": "教材第7章",
+        "to_name": "伯努利定理",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "to_type": "KnowledgePoint",
+        "to_source_doc": "教材第2章",
+        "a_degree": 573,
+        "b_degree": 759
+      },
+      {
+        "from_name": "无人机防控设备",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "from_type": "KnowledgePoint",
+        "from_source_doc": "教材第9章",
+        "to_name": "伯努利定理",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "to_type": "KnowledgePoint",
+        "to_source_doc": "教材第2章",
+        "a_degree": 573,
+        "b_degree": 759
+      },
+      {
+        "from_name": "运动相机",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "from_type": "KnowledgePoint",
+        "from_source_doc": "教材第7章",
+        "to_name": "多旋翼无人机系统",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "to_type": "KnowledgePoint",
+        "to_source_doc": "教材第1章",
+        "a_degree": 573,
+        "b_degree": 759
+      },
+      {
+        "from_name": "穿越机竞速",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "from_type": "KnowledgePoint",
+        "from_source_doc": "教材第8章",
+        "to_name": "多旋翼无人机系统",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "to_type": "KnowledgePoint",
+        "to_source_doc": "教材第1章",
+        "a_degree": 572,
+        "b_degree": 759
+      }
+    ],
+    "PART_OF": [
+      {
+        "from_name": "多旋翼无人机系统",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "from_type": "KnowledgePoint",
+        "from_source_doc": "教材第1章",
+        "to_name": "第1章 航空器与无人机",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第1章",
+        "a_degree": 759,
+        "b_degree": 1172
+      },
+      {
+        "from_name": "伯努利定理",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "from_type": "KnowledgePoint",
+        "from_source_doc": "教材第2章",
+        "to_name": "第1章 航空器与无人机",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第1章",
+        "a_degree": 759,
+        "b_degree": 1172
+      },
+      {
+        "from_name": "多旋翼无人机系统",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "from_type": "KnowledgePoint",
+        "from_source_doc": "教材第1章",
+        "to_name": "第2章 无人机的飞行原理及结构",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第2章",
+        "a_degree": 759,
+        "b_degree": 1169
+      },
+      {
+        "from_name": "伯努利定理",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "from_type": "KnowledgePoint",
+        "from_source_doc": "教材第2章",
+        "to_name": "第2章 无人机的飞行原理及结构",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第2章",
+        "a_degree": 759,
+        "b_degree": 1169
+      },
+      {
+        "from_name": "伯努利定理",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "from_type": "KnowledgePoint",
+        "from_source_doc": "教材第2章",
+        "to_name": "第3章 无人机的动力",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第3章",
+        "a_degree": 759,
+        "b_degree": 1168
+      },
+      {
+        "from_name": "多旋翼无人机系统",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "from_type": "KnowledgePoint",
+        "from_source_doc": "教材第1章",
+        "to_name": "第3章 无人机的动力",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第3章",
+        "a_degree": 759,
+        "b_degree": 1168
+      },
+      {
+        "from_name": "伯努利定理",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "from_type": "KnowledgePoint",
+        "from_source_doc": "教材第2章",
+        "to_name": "第4章 无人机飞控操作系统",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第4章",
+        "a_degree": 759,
+        "b_degree": 1164
+      },
+      {
+        "from_name": "多旋翼无人机系统",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "from_type": "KnowledgePoint",
+        "from_source_doc": "教材第1章",
+        "to_name": "第5章 无人机通信",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第5章",
+        "a_degree": 759,
+        "b_degree": 1164
+      },
+      {
+        "from_name": "伯努利定理",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "from_type": "KnowledgePoint",
+        "from_source_doc": "教材第2章",
+        "to_name": "第5章 无人机通信",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第5章",
+        "a_degree": 759,
+        "b_degree": 1164
+      },
+      {
+        "from_name": "多旋翼无人机系统",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "from_type": "KnowledgePoint",
+        "from_source_doc": "教材第1章",
+        "to_name": "第4章 无人机飞控操作系统",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第4章",
+        "a_degree": 759,
+        "b_degree": 1164
+      },
+      {
+        "from_name": "多旋翼无人机系统",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "from_type": "KnowledgePoint",
+        "from_source_doc": "教材第1章",
+        "to_name": "第6章 无人机材料",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第6章",
+        "a_degree": 759,
+        "b_degree": 1161
+      },
+      {
+        "from_name": "伯努利定理",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "from_type": "KnowledgePoint",
+        "from_source_doc": "教材第2章",
+        "to_name": "第6章 无人机材料",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第6章",
+        "a_degree": 759,
+        "b_degree": 1161
+      },
+      {
+        "from_name": "桨叶方向",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "from_type": "KnowledgePoint",
+        "from_source_doc": "教材第3章",
+        "to_name": "第1章 航空器与无人机",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第1章",
+        "a_degree": 747,
+        "b_degree": 1172
+      },
+      {
+        "from_name": "桨叶方向",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "from_type": "KnowledgePoint",
+        "from_source_doc": "教材第3章",
+        "to_name": "第2章 无人机的飞行原理及结构",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第2章",
+        "a_degree": 747,
+        "b_degree": 1169
+      },
+      {
+        "from_name": "微调杆",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "from_type": "KnowledgePoint",
+        "from_source_doc": "教材第5章",
+        "to_name": "第1章 航空器与无人机",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第1章",
+        "a_degree": 744,
+        "b_degree": 1172
+      },
+      {
+        "from_name": "光流传感器",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "from_type": "KnowledgePoint",
+        "from_source_doc": "教材第4章",
+        "to_name": "第1章 航空器与无人机",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第1章",
+        "a_degree": 744,
+        "b_degree": 1172
+      },
+      {
+        "from_name": "多旋翼无人机系统",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "from_type": "KnowledgePoint",
+        "from_source_doc": "教材第1章",
+        "to_name": "第8章 无人机与体育竞技",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第8章",
+        "a_degree": 759,
+        "b_degree": 1156
+      },
+      {
+        "from_name": "伯努利定理",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "from_type": "KnowledgePoint",
+        "from_source_doc": "教材第2章",
+        "to_name": "第8章 无人机与体育竞技",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第8章",
+        "a_degree": 759,
+        "b_degree": 1156
+      },
+      {
+        "from_name": "桨叶方向",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "from_type": "KnowledgePoint",
+        "from_source_doc": "教材第3章",
+        "to_name": "第3章 无人机的动力",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第3章",
+        "a_degree": 747,
+        "b_degree": 1168
+      },
+      {
+        "from_name": "微调杆",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "from_type": "KnowledgePoint",
+        "from_source_doc": "教材第5章",
+        "to_name": "第2章 无人机的飞行原理及结构",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第2章",
+        "a_degree": 744,
+        "b_degree": 1169
+      },
+      {
+        "from_name": "光流传感器",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "from_type": "KnowledgePoint",
+        "from_source_doc": "教材第4章",
+        "to_name": "第2章 无人机的飞行原理及结构",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第2章",
+        "a_degree": 744,
+        "b_degree": 1169
+      },
+      {
+        "from_name": "光流传感器",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "from_type": "KnowledgePoint",
+        "from_source_doc": "教材第4章",
+        "to_name": "第3章 无人机的动力",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第3章",
+        "a_degree": 744,
+        "b_degree": 1168
+      },
+      {
+        "from_name": "微调杆",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "from_type": "KnowledgePoint",
+        "from_source_doc": "教材第5章",
+        "to_name": "第3章 无人机的动力",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第3章",
+        "a_degree": 744,
+        "b_degree": 1168
+      },
+      {
+        "from_name": "桨叶方向",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "from_type": "KnowledgePoint",
+        "from_source_doc": "教材第3章",
+        "to_name": "第5章 无人机通信",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第5章",
+        "a_degree": 747,
+        "b_degree": 1164
+      },
+      {
+        "from_name": "桨叶方向",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "from_type": "KnowledgePoint",
+        "from_source_doc": "教材第3章",
+        "to_name": "第4章 无人机飞控操作系统",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第4章",
+        "a_degree": 747,
+        "b_degree": 1164
+      }
+    ],
+    "REGULATES": [
+      {
+        "from_name": "第1章 航空器与无人机",
+        "from_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "from_type": "Chapter",
+        "from_source_doc": "教材第1章",
+        "to_name": "伯努利定理",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "to_type": "KnowledgePoint",
+        "to_source_doc": "教材第2章",
+        "a_degree": 1172,
+        "b_degree": 759
+      },
+      {
+        "from_name": "第1章 航空器与无人机",
+        "from_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "from_type": "Chapter",
+        "from_source_doc": "教材第1章",
+        "to_name": "多旋翼无人机系统",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "to_type": "KnowledgePoint",
+        "to_source_doc": "教材第1章",
+        "a_degree": 1172,
+        "b_degree": 759
+      },
+      {
+        "from_name": "第2章 无人机的飞行原理及结构",
+        "from_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "from_type": "Chapter",
+        "from_source_doc": "教材第2章",
+        "to_name": "伯努利定理",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "to_type": "KnowledgePoint",
+        "to_source_doc": "教材第2章",
+        "a_degree": 1169,
+        "b_degree": 759
+      },
+      {
+        "from_name": "第2章 无人机的飞行原理及结构",
+        "from_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "from_type": "Chapter",
+        "from_source_doc": "教材第2章",
+        "to_name": "多旋翼无人机系统",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "to_type": "KnowledgePoint",
+        "to_source_doc": "教材第1章",
+        "a_degree": 1169,
+        "b_degree": 759
+      },
+      {
+        "from_name": "第3章 无人机的动力",
+        "from_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "from_type": "Chapter",
+        "from_source_doc": "教材第3章",
+        "to_name": "伯努利定理",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "to_type": "KnowledgePoint",
+        "to_source_doc": "教材第2章",
+        "a_degree": 1168,
+        "b_degree": 759
+      },
+      {
+        "from_name": "第3章 无人机的动力",
+        "from_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "from_type": "Chapter",
+        "from_source_doc": "教材第3章",
+        "to_name": "多旋翼无人机系统",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "to_type": "KnowledgePoint",
+        "to_source_doc": "教材第1章",
+        "a_degree": 1168,
+        "b_degree": 759
+      },
+      {
+        "from_name": "第4章 无人机飞控操作系统",
+        "from_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "from_type": "Chapter",
+        "from_source_doc": "教材第4章",
+        "to_name": "多旋翼无人机系统",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "to_type": "KnowledgePoint",
+        "to_source_doc": "教材第1章",
+        "a_degree": 1164,
+        "b_degree": 759
+      },
+      {
+        "from_name": "第4章 无人机飞控操作系统",
+        "from_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "from_type": "Chapter",
+        "from_source_doc": "教材第4章",
+        "to_name": "伯努利定理",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "to_type": "KnowledgePoint",
+        "to_source_doc": "教材第2章",
+        "a_degree": 1164,
+        "b_degree": 759
+      },
+      {
+        "from_name": "第5章 无人机通信",
+        "from_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "from_type": "Chapter",
+        "from_source_doc": "教材第5章",
+        "to_name": "多旋翼无人机系统",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "to_type": "KnowledgePoint",
+        "to_source_doc": "教材第1章",
+        "a_degree": 1164,
+        "b_degree": 759
+      },
+      {
+        "from_name": "第5章 无人机通信",
+        "from_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "from_type": "Chapter",
+        "from_source_doc": "教材第5章",
+        "to_name": "伯努利定理",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "to_type": "KnowledgePoint",
+        "to_source_doc": "教材第2章",
+        "a_degree": 1164,
+        "b_degree": 759
+      },
+      {
+        "from_name": "第6章 无人机材料",
+        "from_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "from_type": "Chapter",
+        "from_source_doc": "教材第6章",
+        "to_name": "伯努利定理",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "to_type": "KnowledgePoint",
+        "to_source_doc": "教材第2章",
+        "a_degree": 1161,
+        "b_degree": 759
+      },
+      {
+        "from_name": "第6章 无人机材料",
+        "from_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "from_type": "Chapter",
+        "from_source_doc": "教材第6章",
+        "to_name": "多旋翼无人机系统",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "to_type": "KnowledgePoint",
+        "to_source_doc": "教材第1章",
+        "a_degree": 1161,
+        "b_degree": 759
+      },
+      {
+        "from_name": "第1章 航空器与无人机",
+        "from_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "from_type": "Chapter",
+        "from_source_doc": "教材第1章",
+        "to_name": "桨叶方向",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "to_type": "KnowledgePoint",
+        "to_source_doc": "教材第3章",
+        "a_degree": 1172,
+        "b_degree": 747
+      },
+      {
+        "from_name": "第1章 航空器与无人机",
+        "from_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "from_type": "Chapter",
+        "from_source_doc": "教材第1章",
+        "to_name": "微调杆",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "to_type": "KnowledgePoint",
+        "to_source_doc": "教材第5章",
+        "a_degree": 1172,
+        "b_degree": 744
+      },
+      {
+        "from_name": "第1章 航空器与无人机",
+        "from_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "from_type": "Chapter",
+        "from_source_doc": "教材第1章",
+        "to_name": "光流传感器",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "to_type": "KnowledgePoint",
+        "to_source_doc": "教材第4章",
+        "a_degree": 1172,
+        "b_degree": 744
+      },
+      {
+        "from_name": "第2章 无人机的飞行原理及结构",
+        "from_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "from_type": "Chapter",
+        "from_source_doc": "教材第2章",
+        "to_name": "桨叶方向",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "to_type": "KnowledgePoint",
+        "to_source_doc": "教材第3章",
+        "a_degree": 1169,
+        "b_degree": 747
+      },
+      {
+        "from_name": "第8章 无人机与体育竞技",
+        "from_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "from_type": "Chapter",
+        "from_source_doc": "教材第8章",
+        "to_name": "伯努利定理",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "to_type": "KnowledgePoint",
+        "to_source_doc": "教材第2章",
+        "a_degree": 1156,
+        "b_degree": 759
+      },
+      {
+        "from_name": "第8章 无人机与体育竞技",
+        "from_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "from_type": "Chapter",
+        "from_source_doc": "教材第8章",
+        "to_name": "多旋翼无人机系统",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "to_type": "KnowledgePoint",
+        "to_source_doc": "教材第1章",
+        "a_degree": 1156,
+        "b_degree": 759
+      },
+      {
+        "from_name": "第3章 无人机的动力",
+        "from_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "from_type": "Chapter",
+        "from_source_doc": "教材第3章",
+        "to_name": "桨叶方向",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "to_type": "KnowledgePoint",
+        "to_source_doc": "教材第3章",
+        "a_degree": 1168,
+        "b_degree": 747
+      },
+      {
+        "from_name": "第2章 无人机的飞行原理及结构",
+        "from_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "from_type": "Chapter",
+        "from_source_doc": "教材第2章",
+        "to_name": "微调杆",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "to_type": "KnowledgePoint",
+        "to_source_doc": "教材第5章",
+        "a_degree": 1169,
+        "b_degree": 744
+      },
+      {
+        "from_name": "第2章 无人机的飞行原理及结构",
+        "from_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "from_type": "Chapter",
+        "from_source_doc": "教材第2章",
+        "to_name": "光流传感器",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "to_type": "KnowledgePoint",
+        "to_source_doc": "教材第4章",
+        "a_degree": 1169,
+        "b_degree": 744
+      },
+      {
+        "from_name": "第3章 无人机的动力",
+        "from_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "from_type": "Chapter",
+        "from_source_doc": "教材第3章",
+        "to_name": "光流传感器",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "to_type": "KnowledgePoint",
+        "to_source_doc": "教材第4章",
+        "a_degree": 1168,
+        "b_degree": 744
+      },
+      {
+        "from_name": "第3章 无人机的动力",
+        "from_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "from_type": "Chapter",
+        "from_source_doc": "教材第3章",
+        "to_name": "微调杆",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "to_type": "KnowledgePoint",
+        "to_source_doc": "教材第5章",
+        "a_degree": 1168,
+        "b_degree": 744
+      },
+      {
+        "from_name": "第5章 无人机通信",
+        "from_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "from_type": "Chapter",
+        "from_source_doc": "教材第5章",
+        "to_name": "桨叶方向",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "to_type": "KnowledgePoint",
+        "to_source_doc": "教材第3章",
+        "a_degree": 1164,
+        "b_degree": 747
+      },
+      {
+        "from_name": "第4章 无人机飞控操作系统",
+        "from_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "from_type": "Chapter",
+        "from_source_doc": "教材第4章",
+        "to_name": "桨叶方向",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "to_type": "KnowledgePoint",
+        "to_source_doc": "教材第3章",
+        "a_degree": 1164,
+        "b_degree": 747
+      }
+    ],
+    "REFERS_TO": [
+      {
+        "from_name": "CCAR-92部_B章_申请条件与颁发",
+        "from_labels": [
+          "Entity",
+          "Regulation"
+        ],
+        "from_type": "Regulation",
+        "from_source_doc": "CCAR-92部_B章_申请条件与颁发",
+        "to_name": "CCAR-92部B章《申请条件与颁发》",
+        "to_labels": [
+          "Entity",
+          "Regulation"
+        ],
+        "to_type": "Regulation",
+        "to_source_doc": "CCAR-92部_B章_申请条件与颁发",
+        "a_degree": 730,
+        "b_degree": 736
+      },
+      {
+        "from_name": "无人机与航模的区别",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "from_type": "KnowledgePoint",
+        "from_source_doc": "教材第1章",
+        "to_name": "第1章 航空器与无人机",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第1章",
+        "a_degree": 262,
+        "b_degree": 1172
+      },
+      {
+        "from_name": "无人机与有人机的比较",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "from_type": "KnowledgePoint",
+        "from_source_doc": "教材第1章",
+        "to_name": "第1章 航空器与无人机",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第1章",
+        "a_degree": 260,
+        "b_degree": 1172
+      },
+      {
+        "from_name": "飞行管制工作",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "from_type": "KnowledgePoint",
+        "from_source_doc": "空中交通管制",
+        "to_name": "空中交通管制（知识点）",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "to_type": "KnowledgePoint",
+        "to_source_doc": "空中交通管制",
+        "a_degree": 461,
+        "b_degree": 961
+      },
+      {
+        "from_name": "无人机控制站",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "from_type": "KnowledgePoint",
+        "from_source_doc": "无人机任务规划",
+        "to_name": "无人机任务规划（知识点）",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "to_type": "KnowledgePoint",
+        "to_source_doc": "无人机任务规划",
+        "a_degree": 457,
+        "b_degree": 961
+      },
+      {
+        "from_name": "六轴飞行器螺旋桨配置",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "from_type": "KnowledgePoint",
+        "from_source_doc": "旋翼无人机",
+        "to_name": "旋翼无人机（知识点）",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "to_type": "KnowledgePoint",
+        "to_source_doc": "旋翼无人机",
+        "a_degree": 460,
+        "b_degree": 952
+      },
+      {
+        "from_name": "无人机驾驶员操作手册",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "from_type": "KnowledgePoint",
+        "from_source_doc": "无人机飞行手册",
+        "to_name": "无人机飞行手册（知识点）",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "to_type": "KnowledgePoint",
+        "to_source_doc": "无人机飞行手册",
+        "a_degree": 450,
+        "b_degree": 929
+      },
+      {
+        "from_name": "飞艇",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint",
+          "AircraftType",
+          "LicenseLevel"
+        ],
+        "from_type": "AircraftType",
+        "from_source_doc": "教材第1章",
+        "to_name": "无人机结构",
+        "to_labels": [
+          "Entity",
+          "Section"
+        ],
+        "to_type": "Section",
+        "to_source_doc": "教材第2章",
+        "a_degree": 643,
+        "b_degree": 628
+      },
+      {
+        "from_name": "飞艇",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint",
+          "AircraftType",
+          "LicenseLevel"
+        ],
+        "from_type": "AircraftType",
+        "from_source_doc": "教材第1章",
+        "to_name": "1.2 无人机",
+        "to_labels": [
+          "Entity",
+          "Section"
+        ],
+        "to_type": "Section",
+        "to_source_doc": "教材第1章",
+        "a_degree": 643,
+        "b_degree": 628
+      },
+      {
+        "from_name": "飞艇",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint",
+          "AircraftType",
+          "LicenseLevel"
+        ],
+        "from_type": "AircraftType",
+        "from_source_doc": "教材第1章",
+        "to_name": "9.2 反无人机主要方法",
+        "to_labels": [
+          "Entity",
+          "Section"
+        ],
+        "to_type": "Section",
+        "to_source_doc": "教材第9章",
+        "a_degree": 643,
+        "b_degree": 623
+      },
+      {
+        "from_name": "飞艇",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint",
+          "AircraftType",
+          "LicenseLevel"
+        ],
+        "from_type": "AircraftType",
+        "from_source_doc": "教材第1章",
+        "to_name": "遥控器",
+        "to_labels": [
+          "Entity",
+          "KnowledgePoint",
+          "Section"
+        ],
+        "to_type": "Section",
+        "to_source_doc": "教材第5章",
+        "a_degree": 643,
+        "b_degree": 622
+      },
+      {
+        "from_name": "飞艇",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint",
+          "AircraftType",
+          "LicenseLevel"
+        ],
+        "from_type": "AircraftType",
+        "from_source_doc": "教材第1章",
+        "to_name": "6.2 金属",
+        "to_labels": [
+          "Entity",
+          "Section"
+        ],
+        "to_type": "Section",
+        "to_source_doc": "教材第6章",
+        "a_degree": 643,
+        "b_degree": 622
+      },
+      {
+        "from_name": "飞艇",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint",
+          "AircraftType",
+          "LicenseLevel"
+        ],
+        "from_type": "AircraftType",
+        "from_source_doc": "教材第1章",
+        "to_name": "7.2 应用场景",
+        "to_labels": [
+          "Entity",
+          "Section"
+        ],
+        "to_type": "Section",
+        "to_source_doc": "教材第7章",
+        "a_degree": 643,
+        "b_degree": 622
+      },
+      {
+        "from_name": "飞艇",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint",
+          "AircraftType",
+          "LicenseLevel"
+        ],
+        "from_type": "AircraftType",
+        "from_source_doc": "教材第1章",
+        "to_name": "软件",
+        "to_labels": [
+          "Entity",
+          "Section"
+        ],
+        "to_type": "Section",
+        "to_source_doc": "教材第4章",
+        "a_degree": 643,
+        "b_degree": 622
+      },
+      {
+        "from_name": "飞艇",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint",
+          "AircraftType",
+          "LicenseLevel"
+        ],
+        "from_type": "AircraftType",
+        "from_source_doc": "教材第1章",
+        "to_name": "8.2 穿越机",
+        "to_labels": [
+          "Entity",
+          "Section"
+        ],
+        "to_type": "Section",
+        "to_source_doc": "教材第8章",
+        "a_degree": 643,
+        "b_degree": 622
+      },
+      {
+        "from_name": "飞艇",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint",
+          "AircraftType",
+          "LicenseLevel"
+        ],
+        "from_type": "AircraftType",
+        "from_source_doc": "教材第1章",
+        "to_name": "3.2 涡轮航空发动机",
+        "to_labels": [
+          "Entity",
+          "Section"
+        ],
+        "to_type": "Section",
+        "to_source_doc": "教材第3章",
+        "a_degree": 643,
+        "b_degree": 622
+      },
+      {
+        "from_name": "民用无人驾驶航空器运营合格证",
+        "from_labels": [
+          "Entity",
+          "Certification",
+          "KnowledgePoint"
+        ],
+        "from_type": "Certification",
+        "from_source_doc": "教材第9章",
+        "to_name": "无人机结构",
+        "to_labels": [
+          "Entity",
+          "Section"
+        ],
+        "to_type": "Section",
+        "to_source_doc": "教材第2章",
+        "a_degree": 614,
+        "b_degree": 628
+      },
+      {
+        "from_name": "无人机结构",
+        "from_labels": [
+          "Entity",
+          "Section"
+        ],
+        "from_type": "Section",
+        "from_source_doc": "教材第2章",
+        "to_name": "民用无人驾驶航空器运营合格证",
+        "to_labels": [
+          "Entity",
+          "Certification",
+          "KnowledgePoint"
+        ],
+        "to_type": "Certification",
+        "to_source_doc": "教材第9章",
+        "a_degree": 628,
+        "b_degree": 614
+      },
+      {
+        "from_name": "1.2 无人机",
+        "from_labels": [
+          "Entity",
+          "Section"
+        ],
+        "from_type": "Section",
+        "from_source_doc": "教材第1章",
+        "to_name": "民用无人驾驶航空器运营合格证",
+        "to_labels": [
+          "Entity",
+          "Certification",
+          "KnowledgePoint"
+        ],
+        "to_type": "Certification",
+        "to_source_doc": "教材第9章",
+        "a_degree": 628,
+        "b_degree": 614
+      },
+      {
+        "from_name": "民用无人驾驶航空器运营合格证",
+        "from_labels": [
+          "Entity",
+          "Certification",
+          "KnowledgePoint"
+        ],
+        "from_type": "Certification",
+        "from_source_doc": "教材第9章",
+        "to_name": "1.2 无人机",
+        "to_labels": [
+          "Entity",
+          "Section"
+        ],
+        "to_type": "Section",
+        "to_source_doc": "教材第1章",
+        "a_degree": 614,
+        "b_degree": 628
+      },
+      {
+        "from_name": "9.2 反无人机主要方法",
+        "from_labels": [
+          "Entity",
+          "Section"
+        ],
+        "from_type": "Section",
+        "from_source_doc": "教材第9章",
+        "to_name": "民用无人驾驶航空器运营合格证",
+        "to_labels": [
+          "Entity",
+          "Certification",
+          "KnowledgePoint"
+        ],
+        "to_type": "Certification",
+        "to_source_doc": "教材第9章",
+        "a_degree": 623,
+        "b_degree": 614
+      },
+      {
+        "from_name": "民用无人驾驶航空器运营合格证",
+        "from_labels": [
+          "Entity",
+          "Certification",
+          "KnowledgePoint"
+        ],
+        "from_type": "Certification",
+        "from_source_doc": "教材第9章",
+        "to_name": "9.2 反无人机主要方法",
+        "to_labels": [
+          "Entity",
+          "Section"
+        ],
+        "to_type": "Section",
+        "to_source_doc": "教材第9章",
+        "a_degree": 614,
+        "b_degree": 623
+      },
+      {
+        "from_name": "软件",
+        "from_labels": [
+          "Entity",
+          "Section"
+        ],
+        "from_type": "Section",
+        "from_source_doc": "教材第4章",
+        "to_name": "民用无人驾驶航空器运营合格证",
+        "to_labels": [
+          "Entity",
+          "Certification",
+          "KnowledgePoint"
+        ],
+        "to_type": "Certification",
+        "to_source_doc": "教材第9章",
+        "a_degree": 622,
+        "b_degree": 614
+      },
+      {
+        "from_name": "遥控器",
+        "from_labels": [
+          "Entity",
+          "KnowledgePoint",
+          "Section"
+        ],
+        "from_type": "Section",
+        "from_source_doc": "教材第5章",
+        "to_name": "民用无人驾驶航空器运营合格证",
+        "to_labels": [
+          "Entity",
+          "Certification",
+          "KnowledgePoint"
+        ],
+        "to_type": "Certification",
+        "to_source_doc": "教材第9章",
+        "a_degree": 622,
+        "b_degree": 614
+      },
+      {
+        "from_name": "3.2 涡轮航空发动机",
+        "from_labels": [
+          "Entity",
+          "Section"
+        ],
+        "from_type": "Section",
+        "from_source_doc": "教材第3章",
+        "to_name": "民用无人驾驶航空器运营合格证",
+        "to_labels": [
+          "Entity",
+          "Certification",
+          "KnowledgePoint"
+        ],
+        "to_type": "Certification",
+        "to_source_doc": "教材第9章",
+        "a_degree": 622,
+        "b_degree": 614
+      }
+    ],
+    "SUBCLASS_OF": [],
+    "DEFINED_BY": [
+      {
+        "from_name": "9.1 无人机的威胁",
+        "from_labels": [
+          "Entity",
+          "Section"
+        ],
+        "from_type": "Section",
+        "from_source_doc": "教材第9章",
+        "to_name": "第1章 航空器与无人机",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第1章",
+        "a_degree": 671,
+        "b_degree": 1172
+      },
+      {
+        "from_name": "3.1 活塞航空发动机",
+        "from_labels": [
+          "Entity",
+          "Section"
+        ],
+        "from_type": "Section",
+        "from_source_doc": "教材第3章",
+        "to_name": "第1章 航空器与无人机",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第1章",
+        "a_degree": 670,
+        "b_degree": 1172
+      },
+      {
+        "from_name": "2.1 无人机飞行原理",
+        "from_labels": [
+          "Entity",
+          "Section"
+        ],
+        "from_type": "Section",
+        "from_source_doc": "教材第2章",
+        "to_name": "第1章 航空器与无人机",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第1章",
+        "a_degree": 670,
+        "b_degree": 1172
+      },
+      {
+        "from_name": "硬件",
+        "from_labels": [
+          "Entity",
+          "Section"
+        ],
+        "from_type": "Section",
+        "from_source_doc": "教材第4章",
+        "to_name": "第1章 航空器与无人机",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第1章",
+        "a_degree": 670,
+        "b_degree": 1172
+      },
+      {
+        "from_name": "无线信号",
+        "from_labels": [
+          "Entity",
+          "Section"
+        ],
+        "from_type": "Section",
+        "from_source_doc": "教材第5章",
+        "to_name": "第1章 航空器与无人机",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第1章",
+        "a_degree": 670,
+        "b_degree": 1172
+      },
+      {
+        "from_name": "7.1 任务载荷",
+        "from_labels": [
+          "Entity",
+          "Section"
+        ],
+        "from_type": "Section",
+        "from_source_doc": "教材第7章",
+        "to_name": "第1章 航空器与无人机",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第1章",
+        "a_degree": 670,
+        "b_degree": 1172
+      },
+      {
+        "from_name": "1.1 航空器",
+        "from_labels": [
+          "Entity",
+          "Section"
+        ],
+        "from_type": "Section",
+        "from_source_doc": "教材第1章",
+        "to_name": "第1章 航空器与无人机",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第1章",
+        "a_degree": 670,
+        "b_degree": 1172
+      },
+      {
+        "from_name": "8.1 体育竞技",
+        "from_labels": [
+          "Entity",
+          "Section"
+        ],
+        "from_type": "Section",
+        "from_source_doc": "教材第8章",
+        "to_name": "第1章 航空器与无人机",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第1章",
+        "a_degree": 670,
+        "b_degree": 1172
+      },
+      {
+        "from_name": "6.1 木材",
+        "from_labels": [
+          "Entity",
+          "Section"
+        ],
+        "from_type": "Section",
+        "from_source_doc": "教材第6章",
+        "to_name": "第1章 航空器与无人机",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第1章",
+        "a_degree": 670,
+        "b_degree": 1172
+      },
+      {
+        "from_name": "9.1 无人机的威胁",
+        "from_labels": [
+          "Entity",
+          "Section"
+        ],
+        "from_type": "Section",
+        "from_source_doc": "教材第9章",
+        "to_name": "第2章 无人机的飞行原理及结构",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第2章",
+        "a_degree": 671,
+        "b_degree": 1169
+      },
+      {
+        "from_name": "2.1 无人机飞行原理",
+        "from_labels": [
+          "Entity",
+          "Section"
+        ],
+        "from_type": "Section",
+        "from_source_doc": "教材第2章",
+        "to_name": "第2章 无人机的飞行原理及结构",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第2章",
+        "a_degree": 670,
+        "b_degree": 1169
+      },
+      {
+        "from_name": "1.1 航空器",
+        "from_labels": [
+          "Entity",
+          "Section"
+        ],
+        "from_type": "Section",
+        "from_source_doc": "教材第1章",
+        "to_name": "第2章 无人机的飞行原理及结构",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第2章",
+        "a_degree": 670,
+        "b_degree": 1169
+      },
+      {
+        "from_name": "3.1 活塞航空发动机",
+        "from_labels": [
+          "Entity",
+          "Section"
+        ],
+        "from_type": "Section",
+        "from_source_doc": "教材第3章",
+        "to_name": "第2章 无人机的飞行原理及结构",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第2章",
+        "a_degree": 670,
+        "b_degree": 1169
+      },
+      {
+        "from_name": "9.1 无人机的威胁",
+        "from_labels": [
+          "Entity",
+          "Section"
+        ],
+        "from_type": "Section",
+        "from_source_doc": "教材第9章",
+        "to_name": "第3章 无人机的动力",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第3章",
+        "a_degree": 671,
+        "b_degree": 1168
+      },
+      {
+        "from_name": "无线信号",
+        "from_labels": [
+          "Entity",
+          "Section"
+        ],
+        "from_type": "Section",
+        "from_source_doc": "教材第5章",
+        "to_name": "第2章 无人机的飞行原理及结构",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第2章",
+        "a_degree": 670,
+        "b_degree": 1169
+      },
+      {
+        "from_name": "7.1 任务载荷",
+        "from_labels": [
+          "Entity",
+          "Section"
+        ],
+        "from_type": "Section",
+        "from_source_doc": "教材第7章",
+        "to_name": "第2章 无人机的飞行原理及结构",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第2章",
+        "a_degree": 670,
+        "b_degree": 1169
+      },
+      {
+        "from_name": "硬件",
+        "from_labels": [
+          "Entity",
+          "Section"
+        ],
+        "from_type": "Section",
+        "from_source_doc": "教材第4章",
+        "to_name": "第2章 无人机的飞行原理及结构",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第2章",
+        "a_degree": 670,
+        "b_degree": 1169
+      },
+      {
+        "from_name": "8.1 体育竞技",
+        "from_labels": [
+          "Entity",
+          "Section"
+        ],
+        "from_type": "Section",
+        "from_source_doc": "教材第8章",
+        "to_name": "第2章 无人机的飞行原理及结构",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第2章",
+        "a_degree": 670,
+        "b_degree": 1169
+      },
+      {
+        "from_name": "6.1 木材",
+        "from_labels": [
+          "Entity",
+          "Section"
+        ],
+        "from_type": "Section",
+        "from_source_doc": "教材第6章",
+        "to_name": "第2章 无人机的飞行原理及结构",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第2章",
+        "a_degree": 670,
+        "b_degree": 1169
+      },
+      {
+        "from_name": "8.1 体育竞技",
+        "from_labels": [
+          "Entity",
+          "Section"
+        ],
+        "from_type": "Section",
+        "from_source_doc": "教材第8章",
+        "to_name": "第3章 无人机的动力",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第3章",
+        "a_degree": 670,
+        "b_degree": 1168
+      },
+      {
+        "from_name": "3.1 活塞航空发动机",
+        "from_labels": [
+          "Entity",
+          "Section"
+        ],
+        "from_type": "Section",
+        "from_source_doc": "教材第3章",
+        "to_name": "第3章 无人机的动力",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第3章",
+        "a_degree": 670,
+        "b_degree": 1168
+      },
+      {
+        "from_name": "无线信号",
+        "from_labels": [
+          "Entity",
+          "Section"
+        ],
+        "from_type": "Section",
+        "from_source_doc": "教材第5章",
+        "to_name": "第3章 无人机的动力",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第3章",
+        "a_degree": 670,
+        "b_degree": 1168
+      },
+      {
+        "from_name": "6.1 木材",
+        "from_labels": [
+          "Entity",
+          "Section"
+        ],
+        "from_type": "Section",
+        "from_source_doc": "教材第6章",
+        "to_name": "第3章 无人机的动力",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第3章",
+        "a_degree": 670,
+        "b_degree": 1168
+      },
+      {
+        "from_name": "1.1 航空器",
+        "from_labels": [
+          "Entity",
+          "Section"
+        ],
+        "from_type": "Section",
+        "from_source_doc": "教材第1章",
+        "to_name": "第3章 无人机的动力",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第3章",
+        "a_degree": 670,
+        "b_degree": 1168
+      },
+      {
+        "from_name": "硬件",
+        "from_labels": [
+          "Entity",
+          "Section"
+        ],
+        "from_type": "Section",
+        "from_source_doc": "教材第4章",
+        "to_name": "第3章 无人机的动力",
+        "to_labels": [
+          "Entity",
+          "Chapter"
+        ],
+        "to_type": "Chapter",
+        "to_source_doc": "教材第3章",
+        "a_degree": 670,
+        "b_degree": 1168
+      }
+    ]
+  },
+  "recommendations": [
+    "存在重复同类型边；可做去重脚本，但先确认关系属性是否有业务差异。",
+    "先把本报告纳入评测观察，不建议直接删边；下一步优先在 KG recall 层做 relation cap/weight。"
+  ]
+}

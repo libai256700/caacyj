@@ -1,0 +1,26 @@
+{
+  "white_list": [
+    {
+      "token": "X9pZftImzlgO1HdIo7Xct1CXn5b",
+      "type": "folder",
+      "url": "https://zcn5jf36q4fv.feishu.cn/drive/folder/X9pZftImzlgO1HdIo7Xct1CXn5b",
+      "note": "云技资料库（公司根目录，所有文件/子文件夹）"
+    }
+  ],
+  "black_list": [
+    {
+      "token": "JQ4RflRkllaYDqduGfmckXnBnud",
+      "type": "folder",
+      "note": "公众号内容 - 不导入知识图谱"
+    },
+    {
+      "token": "Cj3DfS3bSlb063dT7ytcOruJnEg",
+      "type": "folder",
+      "note": "公众号内容（云技资料库内子文件夹） - 不导入知识图谱"
+    }
+  ],
+  "rules": {
+    "import_from_whitelist_only": true,
+    "description": "只从云技资料库导入，不处理白名单外的任何内容。如有更改，老文主动告知。"
+  }
+}

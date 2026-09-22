@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>知识库问答</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#1a1a2e;color:#e0e0e0;min-height:100vh}
+header{display:flex;align-items:center;justify-content:center;padding:30px 20px 10px;gap:12px}
+header img{width:40px;height:40px;border-radius:50%}
+header h1{font-size:1.4em;font-weight:600;color:#fff}
+main{max-width:760px;margin:0 auto;padding:20px}
+.search-wrap{position:relative;margin:24px 0}
+.search-wrap input{width:100%;padding:16px 50px 16px 20px;border-radius:16px;border:1.5px solid #2d2d4a;background:#16213e;color:#e0e0e0;font-size:15px;outline:none}
+.search-wrap input:focus{border-color:#5b8def}
+.search-wrap button{position:absolute;right:6px;top:6px;height:38px;width:38px;border-radius:50%;border:none;background:linear-gradient(135deg,#5b8def,#7c5cfc);color:#fff;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.tag{padding:7px 16px;border-radius:20px;background:#16213e;border:1px solid #2d2d4a;color:#8b9dc3;font-size:13px;cursor:pointer;transition:all .2s}
+.tag:hover{background:#1e2d50;border-color:#5b8def;color:#a0c4ff}
+.qa-pair{margin-bottom:24px}
+.question{display:flex;gap:12px;align-items:flex-start;margin-bottom:12px}
+.question img{width:32px;height:32px;border-radius:50%;flex-shrink:0}
+.question p{background:#1e2d50;padding:14px 18px;border-radius:14px 14px 14px 4px;font-size:.95em;line-height:1.5;color:#e0e0e0}
+.answer{display:flex;gap:12px;align-items:flex-start}
+.answer .ai-icon{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#5b8def,#7c5cfc);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;color:#fff}
+.answer .content{flex:1}
+.answer .answer-text{background:#16213e;padding:16px 18px;border-radius:4px 14px 14px 14px;font-size:.93em;line-height:1.7;color:#cbd5e1;border:1px solid #2d2d4a;margin-bottom:10px;white-space:pre-wrap}
+.sources{font-size:.8em;color:#64748b;margin-top:6px}
+.sources .src-tag{display:inline-block;padding:2px 8px;margin:2px 4px;border-radius:6px;background:rgba(91,141,239,.1);color:#8b9dc3;cursor:pointer;font-size:.8em}
+.loading{text-align:center;padding:30px;color:#5b8def;display:none}
+.loading.show{display:block}
+.loading .dot{display:inline-block;width:8px;height:8px;background:#5b8def;border-radius:50%;margin:0 4px;animation:bounce 1.4s infinite}
+.loading .dot:nth-child(2){animation-delay:.2s}
+.loading .dot:nth-child(3){animation-delay:.4s}
+@keyframes bounce{0%,80%,100%{transform:scale(0)}40%{transform:scale(1)}}
+.footer{text-align:center;color:#475569;font-size:.8em;padding:20px;margin-top:40px}
+.typed{animation:typing .02s}
+@keyframes typing{from{opacity:0}to{opacity:1}}
+</style></head>
+<body>
+<header>
+  <img src="/static/avatar.png" alt="小技" onerror="this.style.display='none'">
+  <h1>知识库问答</h1>
+</header>
+<main>
+<div class="search-wrap">
+  <input id="q" placeholder="输入你的问题..." autofocus onkeydown="if(event.key==='Enter')ask()">
+  <button onclick="ask()">&#x2B06;</button>
+</div>
+<div class="tags">
+  <span class="tag" onclick="q('无人机分类有哪些？')">无人机分类</span>
+  <span class="tag" onclick="q('大风天飞行要注意什么？')">大风天飞行</span>
+  <span class="tag" onclick="q('CAAC考证条件是什么？')">CAAC考证</span>
+  <span class="tag" onclick="q('锂电池使用有哪些安全规范？')">锂电池安全</span>
+  <span class="tag" onclick="q('固定翼和多旋翼有什么区别？')">固定翼vs多旋翼</span>
+  <span class="tag" onclick="q('反无人机有哪些方法？')">反无人机</span>
+</div>
+<div class="loading" id="loading"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+<div id="qa"></div>
+<div class="footer">CAAC无人机知识库 · 三书一库 · 870+ 知识点</div>
+</main>
+<script>
+function q(t){document.getElementById('q').value=t;ask()}
+async function ask(){
+  const q=document.getElementById('q').value.trim();
+  if(!q)return;
+  const qa=document.getElementById('qa');
+  qa.innerHTML+=`<div class="qa-pair"><div class="question"><img src="/static/avatar.png" onerror="this.style.display='none'"><p>${q}</p></div><div class="answer"><div class="ai-icon">技</div><div class="content"><div class="answer-text" id="a-${Date.now()}">思考中...</div></div></div></div>`;
+  const ansBox=qa.lastElementChild.querySelector('.answer-text');
+  document.getElementById('q').value='';
+  document.getElementById('loading').classList.add('show');
+  try{
+    const res=await fetch('/api/ask?q='+encodeURIComponent(q));
+    const data=await res.json();
+    if(data.error){ansBox.textContent='出错: '+data.error;document.getElementById('loading').classList.remove('show');return}
+    ansBox.textContent=data.answer;
+    if(data.sources&&data.sources.length){
+      ansBox.innerHTML+=`<div class="sources">参考: ${data.sources.map(s=>`<span class="src-tag">${s.name}(${(s.score*100).toFixed(0)}%)</span>`).join('')}</div>`;
+    }
+  }catch(e){ansBox.textContent='网络错误: '+e.message}
+  document.getElementById('loading').classList.remove('show');
+  window.scrollTo(0,document.body.scrollHeight);
+}
+</script>
+</body>
+</html>

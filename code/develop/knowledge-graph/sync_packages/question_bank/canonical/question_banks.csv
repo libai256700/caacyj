@@ -1,0 +1,11 @@
+question_bank_id,document_id,bank_title,doc_name,chunk_count,source_table
+qbank_1168b362fed9,doc_8ee36f893ed2,无人机教员题库,理论题库_无人机教员题库.txt,157,rag_chunks.db.chunks
+qbank_2712ceec3d03,doc_9594f3efdafb,综合问答,理论题库_综合问答.txt,199,rag_chunks.db.chunks
+qbank_6a19fb963d1f,doc_59e255f9f925,空中交通管制,理论题库_空中交通管制.txt,37,rag_chunks.db.chunks
+qbank_6a1bc48ec463,doc_6059438b1f3d,系统组成及介绍,理论题库_系统组成及介绍.txt,148,rag_chunks.db.chunks
+qbank_923a72f1115c,doc_487fc33b7bff,概述,理论题库_概述.txt,56,rag_chunks.db.chunks
+qbank_99db8cce12b3,doc_f0e848f64804,无人机任务规划,理论题库_无人机任务规划.txt,73,rag_chunks.db.chunks
+qbank_a8584c01f348,doc_dcfe7e80158b,飞行原理与飞行性能,理论题库_飞行原理与飞行性能.txt,300,rag_chunks.db.chunks
+qbank_b615dda54cb8,doc_b05fc00e1a94,旋翼无人机,理论题库_旋翼无人机.txt,77,rag_chunks.db.chunks
+qbank_e12581eb7814,doc_9fe52a2ecb90,无人机操作注意事项,理论题库_无人机操作注意事项.txt,76,rag_chunks.db.chunks
+qbank_e27c00e885fa,doc_30696ebd9e75,气象,理论题库_气象.txt,256,rag_chunks.db.chunks

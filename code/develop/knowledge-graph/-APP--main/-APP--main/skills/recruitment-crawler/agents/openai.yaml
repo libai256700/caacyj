@@ -1,0 +1,4 @@
+interface:
+  display_name: "无人机岗位爬取"
+  short_description: "采集无人机与CAAC岗位，完成去重质检、飞书日报和缺跑监控"
+  default_prompt: "使用 $recruitment-crawler 配置并运行无人机岗位爬取，验证数据质量和发布收据。"

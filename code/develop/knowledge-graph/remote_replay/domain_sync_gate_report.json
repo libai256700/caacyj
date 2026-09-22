@@ -1,0 +1,2302 @@
+{
+  "schema_version": "domain-sync-gate-report-v1",
+  "run_id": "20260606T042718Z",
+  "started_at": "2026-06-06T04:27:18+00:00",
+  "base_dir": "/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph",
+  "domains": [
+    "regulation",
+    "question_bank",
+    "textbook"
+  ],
+  "log_dir": "/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/remote_replay/gate_logs/20260606T042718Z",
+  "ready": true,
+  "steps": {
+    "manifest": {
+      "step": "build_ingest_manifest",
+      "command": "/opt/homebrew/opt/python@3.14/bin/python3.14 scripts/build_ingest_manifest.py",
+      "started_at": "2026-06-06T04:27:18+00:00",
+      "finished_at": "2026-06-06T04:27:19+00:00",
+      "returncode": 0,
+      "stdout_log": "/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/remote_replay/gate_logs/20260606T042718Z/build_ingest_manifest.stdout.log",
+      "stderr_log": "/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/remote_replay/gate_logs/20260606T042718Z/build_ingest_manifest.stderr.log",
+      "json": {
+        "output": "/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/ingest_manifest.json",
+        "coverage_summary": {
+          "csv_files": 17,
+          "csv_rows": 8012,
+          "document_files": 51,
+          "document_files_with_chunks": 24,
+          "sqlite_documents": 24,
+          "sqlite_chunks": 2363,
+          "graph_available": true,
+          "graph_nodes": 5749,
+          "graph_relationships": 393127,
+          "bm25_fresh": true,
+          "dense_fresh": true
+        }
+      }
+    },
+    "readiness": {
+      "step": "check_sync_readiness",
+      "command": "/opt/homebrew/opt/python@3.14/bin/python3.14 scripts/check_sync_readiness.py --manifest /Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/ingest_manifest.json --min-chunk-coverage 0.7 --domain regulation --domain question_bank --domain textbook",
+      "started_at": "2026-06-06T04:27:19+00:00",
+      "finished_at": "2026-06-06T04:27:19+00:00",
+      "returncode": 0,
+      "stdout_log": "/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/remote_replay/gate_logs/20260606T042718Z/check_sync_readiness.stdout.log",
+      "stderr_log": "/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/remote_replay/gate_logs/20260606T042718Z/check_sync_readiness.stderr.log",
+      "json": {
+        "manifest": "/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/ingest_manifest.json",
+        "min_chunk_coverage": 0.7,
+        "ready": true,
+        "domains": [
+          {
+            "domain": "regulation",
+            "ready": true,
+            "failed_checks": [],
+            "checks": {
+              "manifest_schema": true,
+              "sqlite_fingerprint": true,
+              "domain_sync_eligible": true,
+              "domain_has_chunks": true,
+              "source_doc_resolved": true,
+              "source_doc_coverage": true,
+              "source_chunk_evidence": true,
+              "schema_version": true,
+              "bm25_fresh": true,
+              "dense_fresh": true,
+              "canonical_tables": true
+            },
+            "metrics": {
+              "sqlite_chunks": 753,
+              "sqlite_documents": 4,
+              "neo4j_entities": 1131,
+              "neo4j_relationships": 2474,
+              "source_chunk_id_coverage_rate": 0.9134
+            }
+          },
+          {
+            "domain": "question_bank",
+            "ready": true,
+            "failed_checks": [],
+            "checks": {
+              "manifest_schema": true,
+              "sqlite_fingerprint": true,
+              "domain_sync_eligible": true,
+              "domain_has_chunks": true,
+              "source_doc_resolved": true,
+              "source_doc_coverage": true,
+              "source_chunk_evidence": true,
+              "schema_version": true,
+              "bm25_fresh": true,
+              "dense_fresh": true,
+              "canonical_tables": true
+            },
+            "metrics": {
+              "sqlite_chunks": 1379,
+              "sqlite_documents": 10,
+              "neo4j_entities": 1906,
+              "neo4j_relationships": 49875,
+              "source_chunk_id_coverage_rate": 1.0
+            }
+          },
+          {
+            "domain": "textbook",
+            "ready": true,
+            "failed_checks": [],
+            "checks": {
+              "manifest_schema": true,
+              "sqlite_fingerprint": true,
+              "domain_sync_eligible": true,
+              "domain_has_chunks": true,
+              "source_doc_resolved": true,
+              "source_doc_coverage": true,
+              "source_chunk_evidence": true,
+              "schema_version": true,
+              "bm25_fresh": true,
+              "dense_fresh": true,
+              "canonical_tables": true
+            },
+            "metrics": {
+              "sqlite_chunks": 202,
+              "sqlite_documents": 2,
+              "neo4j_entities": 499,
+              "neo4j_relationships": 230177,
+              "source_chunk_id_coverage_rate": 0.7255
+            }
+          }
+        ]
+      }
+    },
+    "package": {
+      "step": "build_domain_sync_package",
+      "command": "/opt/homebrew/opt/python@3.14/bin/python3.14 scripts/build_domain_sync_package.py --manifest /Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/ingest_manifest.json --output-dir /Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/sync_packages --domain regulation --domain question_bank --domain textbook",
+      "started_at": "2026-06-06T04:27:19+00:00",
+      "finished_at": "2026-06-06T04:27:26+00:00",
+      "returncode": 0,
+      "stdout_log": "/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/remote_replay/gate_logs/20260606T042718Z/build_domain_sync_package.stdout.log",
+      "stderr_log": "/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/remote_replay/gate_logs/20260606T042718Z/build_domain_sync_package.stderr.log",
+      "json": {
+        "output_dir": "/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/sync_packages",
+        "packages": [
+          {
+            "domain": "regulation",
+            "package_dir": "/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/sync_packages/regulation",
+            "domain_fingerprint": {
+              "schema": "domain-chunks-v1",
+              "chunk_count": 753,
+              "doc_count": 4,
+              "text_bytes": 357269,
+              "fingerprint": "0f922ccfa153ffdaed695fdf2db6591263fde05dff9a1945433095d9b3b5f6b8"
+            },
+            "incremental": {
+              "base_fingerprint": {
+                "schema": "domain-chunks-v1",
+                "chunk_count": 753,
+                "doc_count": 4,
+                "text_bytes": 357269,
+                "fingerprint": "0f922ccfa153ffdaed695fdf2db6591263fde05dff9a1945433095d9b3b5f6b8"
+              },
+              "target_fingerprint": {
+                "schema": "domain-chunks-v1",
+                "chunk_count": 753,
+                "doc_count": 4,
+                "text_bytes": 357269,
+                "fingerprint": "0f922ccfa153ffdaed695fdf2db6591263fde05dff9a1945433095d9b3b5f6b8"
+              },
+              "counts": {
+                "previous_chunks": 753,
+                "current_chunks": 753,
+                "changed_chunks": 0,
+                "deleted_chunks": 0,
+                "tombstones": 0,
+                "changed_docs": 0
+              }
+            }
+          },
+          {
+            "domain": "question_bank",
+            "package_dir": "/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/sync_packages/question_bank",
+            "domain_fingerprint": {
+              "schema": "domain-chunks-v1",
+              "chunk_count": 1379,
+              "doc_count": 10,
+              "text_bytes": 882124,
+              "fingerprint": "1d8ca3cef75c509904048639b76137c3c9ccbb486955bb3e141803617a71ab21"
+            },
+            "incremental": {
+              "base_fingerprint": {
+                "schema": "domain-chunks-v1",
+                "chunk_count": 1379,
+                "doc_count": 10,
+                "text_bytes": 882124,
+                "fingerprint": "1d8ca3cef75c509904048639b76137c3c9ccbb486955bb3e141803617a71ab21"
+              },
+              "target_fingerprint": {
+                "schema": "domain-chunks-v1",
+                "chunk_count": 1379,
+                "doc_count": 10,
+                "text_bytes": 882124,
+                "fingerprint": "1d8ca3cef75c509904048639b76137c3c9ccbb486955bb3e141803617a71ab21"
+              },
+              "counts": {
+                "previous_chunks": 1379,
+                "current_chunks": 1379,
+                "changed_chunks": 0,
+                "deleted_chunks": 0,
+                "tombstones": 0,
+                "changed_docs": 0
+              }
+            }
+          },
+          {
+            "domain": "textbook",
+            "package_dir": "/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/sync_packages/textbook",
+            "domain_fingerprint": {
+              "schema": "domain-chunks-v1",
+              "chunk_count": 202,
+              "doc_count": 2,
+              "text_bytes": 520192,
+              "fingerprint": "a130d5d4d6d81b46f0e70c8a1f71c47520a0fc638bfdfc213c9a02a128c25a3d"
+            },
+            "incremental": {
+              "base_fingerprint": {
+                "schema": "domain-chunks-v1",
+                "chunk_count": 202,
+                "doc_count": 2,
+                "text_bytes": 520192,
+                "fingerprint": "a130d5d4d6d81b46f0e70c8a1f71c47520a0fc638bfdfc213c9a02a128c25a3d"
+              },
+              "target_fingerprint": {
+                "schema": "domain-chunks-v1",
+                "chunk_count": 202,
+                "doc_count": 2,
+                "text_bytes": 520192,
+                "fingerprint": "a130d5d4d6d81b46f0e70c8a1f71c47520a0fc638bfdfc213c9a02a128c25a3d"
+              },
+              "counts": {
+                "previous_chunks": 202,
+                "current_chunks": 202,
+                "changed_chunks": 0,
+                "deleted_chunks": 0,
+                "tombstones": 0,
+                "changed_docs": 0
+              }
+            }
+          }
+        ]
+      }
+    },
+    "replay": {
+      "step": "replay_domain_sync_package",
+      "command": "/opt/homebrew/opt/python@3.14/bin/python3.14 scripts/replay_domain_sync_package.py --package-dir /Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/sync_packages --output-dir /Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/remote_replay --dense-mode sample --dense-sample 12 --domain regulation --domain question_bank --domain textbook",
+      "started_at": "2026-06-06T04:27:26+00:00",
+      "finished_at": "2026-06-06T04:27:35+00:00",
+      "returncode": 0,
+      "stdout_log": "/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/remote_replay/gate_logs/20260606T042718Z/replay_domain_sync_package.stdout.log",
+      "stderr_log": "/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/remote_replay/gate_logs/20260606T042718Z/replay_domain_sync_package.stderr.log",
+      "stdout_preview": "play_mode\": \"incremental\",\n      \"incremental_applied\": true,\n      \"incremental_fallback_reason\": null,\n      \"checks\": {\n        \"domain_fingerprint_match\": true,\n        \"sqlite_chunk_count_match\": true,\n        \"bm25_fresh\": true,\n        \"bm25_indexed_docs_match\": true,\n        \"dense_fresh\": true,\n        \"neo4j_payload_available\": true,\n        \"probes_resolve\": true\n      },\n      \"replay_dir\": \"/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/remote_replay/regulation\",\n      \"bm25_indexed_docs\": 753,\n      \"dense_indexed\": 12,\n      \"neo4j_nodes\": 1156,\n      \"neo4j_relationships\": 1945\n    },\n    {\n      \"domain\": \"question_bank\",\n      \"ready\": true,\n      \"replay_mode\": \"incremental\",\n      \"incremental_applied\": true,\n      \"incremental_fallback_reason\": null,\n      \"checks\": {\n        \"domain_fingerprint_match\": true,\n        \"sqlite_chunk_count_match\": true,\n        \"bm25_fresh\": true,\n        \"bm25_indexed_docs_match\": true,\n        \"dense_fresh\": true,\n        \"neo4j_payload_available\": true,\n        \"probes_resolve\": true\n      },\n      \"replay_dir\": \"/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/remote_replay/question_bank\",\n      \"bm25_indexed_docs\": 1379,\n      \"dense_indexed\": 12,\n      \"neo4j_nodes\": 1924,\n      \"neo4j_relationships\": 5163\n    },\n    {\n      \"domain\": \"textbook\",\n      \"ready\": true,\n      \"replay_mode\": \"incremental\",\n      \"incremental_applied\": true,\n      \"incremental_fallback_reason\": null,\n      \"checks\": {\n        \"domain_fingerprint_match\": true,\n        \"sqlite_chunk_count_match\": true,\n        \"bm25_fresh\": true,\n        \"bm25_indexed_docs_match\": true,\n        \"dense_fresh\": true,\n        \"neo4j_payload_available\": true,\n        \"probes_resolve\": true\n      },\n      \"replay_dir\": \"/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/remote_replay/textbook\",\n      \"bm25_indexed_docs\": 202,\n      \"dense_indexed\": 12,\n      \"neo4j_nodes\": 516,\n      \"neo4j_relationships\": 73684\n    }\n  ]\n}\n"
+    },
+    "isolated_neo4j_import": {
+      "ready": true,
+      "neo4j_uri": "bolt://localhost:7688",
+      "domains": [
+        {
+          "domain": "regulation",
+          "mode": "batch_jsonl_import",
+          "cypher": "/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/remote_replay/regulation/neo4j_import.cypher",
+          "nodes_file": "/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/sync_packages/regulation/graph_nodes.jsonl",
+          "relationships_file": "/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/sync_packages/regulation/graph_relationships.jsonl",
+          "statements": 3102,
+          "nodes": 1156,
+          "relationships": 1945
+        },
+        {
+          "domain": "question_bank",
+          "mode": "batch_jsonl_import",
+          "cypher": "/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/remote_replay/question_bank/neo4j_import.cypher",
+          "nodes_file": "/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/sync_packages/question_bank/graph_nodes.jsonl",
+          "relationships_file": "/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/sync_packages/question_bank/graph_relationships.jsonl",
+          "statements": 7088,
+          "nodes": 1924,
+          "relationships": 5163
+        },
+        {
+          "domain": "textbook",
+          "mode": "batch_jsonl_import",
+          "cypher": "/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/remote_replay/textbook/neo4j_import.cypher",
+          "nodes_file": "/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/sync_packages/textbook/graph_nodes.jsonl",
+          "relationships_file": "/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/sync_packages/textbook/graph_relationships.jsonl",
+          "statements": 74201,
+          "nodes": 516,
+          "relationships": 73684
+        }
+      ],
+      "nodes": 3559,
+      "relationships": 80687,
+      "per_domain_nodes": [
+        {
+          "domain": "question_bank",
+          "nodes": 1927
+        },
+        {
+          "domain": "regulation",
+          "nodes": 1130
+        },
+        {
+          "domain": "textbook",
+          "nodes": 501
+        },
+        {
+          "domain": "政策法规",
+          "nodes": 1
+        }
+      ]
+    },
+    "acceptance_eval": {
+      "ready": true,
+      "expected_count": 60,
+      "actual_count": 60,
+      "by_domain": {
+        "regulation": {
+          "passed": 20,
+          "total": 20
+        },
+        "question_bank": {
+          "passed": 20,
+          "total": 20
+        },
+        "textbook": {
+          "passed": 20,
+          "total": 20
+        }
+      },
+      "records": [
+        {
+          "id": "regulation-001",
+          "domain": "regulation",
+          "query": "中华人民共和国民用航空法 第二百六十二条 2026年7月1日起施行",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "中华人民共和国民用航空法",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [
+              "regulation:cn_civil_aviation_law_2025:art_262"
+            ],
+            "expected_top_text_all": [
+              "第二百六十二条",
+              "2026年7月1日起施行"
+            ],
+            "expected_top_text_any": []
+          },
+          "source_count": 8,
+          "top_chunk_id": "regulation:cn_civil_aviation_law_2025:art_262",
+          "top_doc_name": "政策法规_中华人民共和国民用航空法_2025修订_2026-07-01施行.txt",
+          "top_retrievers": "bm25+kg",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "regulation-002",
+          "domain": "regulation",
+          "query": "中华人民共和国民用航空法 第五十六条 民用机场 净空保护",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "中华人民共和国民用航空法",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [
+              "regulation:cn_civil_aviation_law_2025:art_056"
+            ],
+            "expected_top_text_all": [
+              "第五十六条",
+              "民用机场"
+            ],
+            "expected_top_text_any": []
+          },
+          "source_count": 8,
+          "top_chunk_id": "regulation:cn_civil_aviation_law_2025:art_056",
+          "top_doc_name": "政策法规_中华人民共和国民用航空法_2025修订_2026-07-01施行.txt",
+          "top_retrievers": "bm25",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "regulation-003",
+          "domain": "regulation",
+          "query": "民航法 第九十三条 民用机场净空保护区域 无人驾驶航空器",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "中华人民共和国民用航空法",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [
+              "regulation:cn_civil_aviation_law_2025:art_093"
+            ],
+            "expected_top_text_all": [
+              "第九十三条",
+              "净空保护区域"
+            ],
+            "expected_top_text_any": []
+          },
+          "source_count": 8,
+          "top_chunk_id": "regulation:cn_civil_aviation_law_2025:art_093",
+          "top_doc_name": "政策法规_中华人民共和国民用航空法_2025修订_2026-07-01施行.txt",
+          "top_retrievers": "bm25",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "regulation-004",
+          "domain": "regulation",
+          "query": "CCAR-92 第92.207条 实名登记注销",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "CCAR-92部",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [
+              "regulation:ccar_92:art_092_207"
+            ],
+            "expected_top_text_all": [
+              "第92.207条",
+              "实名登记注销"
+            ],
+            "expected_top_text_any": []
+          },
+          "source_count": 8,
+          "top_chunk_id": "regulation:ccar_92:art_092_207",
+          "top_doc_name": "政策法规_CCAR-92部.txt",
+          "top_retrievers": "bm25",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "regulation-005",
+          "domain": "regulation",
+          "query": "CCAR-92 第92.211条 实名登记标志",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "CCAR-92部",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [
+              "regulation:ccar_92:art_092_211"
+            ],
+            "expected_top_text_all": [
+              "第92.211条",
+              "实名登记标志"
+            ],
+            "expected_top_text_any": []
+          },
+          "source_count": 8,
+          "top_chunk_id": "regulation:ccar_92:art_092_211",
+          "top_doc_name": "政策法规_CCAR-92部.txt",
+          "top_retrievers": "bm25",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "regulation-006",
+          "domain": "regulation",
+          "query": "CCAR-92 第92.57条 执照和等级的申请材料",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "CCAR-92部",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [
+              "regulation:ccar_92:art_092_057"
+            ],
+            "expected_top_text_all": [
+              "第92.57条",
+              "申请材料"
+            ],
+            "expected_top_text_any": []
+          },
+          "source_count": 8,
+          "top_chunk_id": "regulation:ccar_92:art_092_057",
+          "top_doc_name": "政策法规_CCAR-92部.txt",
+          "top_retrievers": "bm25+dense+kg",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "regulation-007",
+          "domain": "regulation",
+          "query": "CCAR-92 第92.53条 操控员执照和等级",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "CCAR-92部",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [
+              "regulation:ccar_92:art_092_053"
+            ],
+            "expected_top_text_all": [
+              "操控员执照",
+              "等级"
+            ],
+            "expected_top_text_any": []
+          },
+          "source_count": 8,
+          "top_chunk_id": "regulation:ccar_92:art_092_053",
+          "top_doc_name": "政策法规_CCAR-92部.txt",
+          "top_retrievers": "bm25+dense+kg_path",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "regulation-008",
+          "domain": "regulation",
+          "query": "CCAR-92 第92.51条 安全操控要求 微型 轻型",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "CCAR-92部",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [
+              "regulation:ccar_92:art_092_051"
+            ],
+            "expected_top_text_all": [
+              "第92.51条",
+              "安全操控要求"
+            ],
+            "expected_top_text_any": []
+          },
+          "source_count": 8,
+          "top_chunk_id": "regulation:ccar_92:art_092_051",
+          "top_doc_name": "政策法规_CCAR-92部.txt",
+          "top_retrievers": "bm25+dense+kg_path",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "regulation-009",
+          "domain": "regulation",
+          "query": "CCAR-92 第92.55条 执照和等级的申请条件",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "CCAR-92部",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [
+              "regulation:ccar_92:art_092_055"
+            ],
+            "expected_top_text_all": [
+              "第92.55条",
+              "申请条件"
+            ],
+            "expected_top_text_any": []
+          },
+          "source_count": 8,
+          "top_chunk_id": "regulation:ccar_92:art_092_055",
+          "top_doc_name": "政策法规_CCAR-92部.txt",
+          "top_retrievers": "bm25+dense+kg_path",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "regulation-010",
+          "domain": "regulation",
+          "query": "CCAR-92 第92.603条 运营许可适用范围",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "CCAR-92部",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [
+              "regulation:ccar_92:art_092_603"
+            ],
+            "expected_top_text_all": [
+              "第92.603条",
+              "运营许可适用范围"
+            ],
+            "expected_top_text_any": []
+          },
+          "source_count": 8,
+          "top_chunk_id": "regulation:ccar_92:art_092_603",
+          "top_doc_name": "政策法规_CCAR-92部.txt",
+          "top_retrievers": "bm25",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "regulation-011",
+          "domain": "regulation",
+          "query": "CCAR-92 第92.519条 空域保持能力",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "CCAR-92部",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [
+              "regulation:ccar_92:art_092_519"
+            ],
+            "expected_top_text_all": [
+              "第92.519条",
+              "空域保持能力"
+            ],
+            "expected_top_text_any": []
+          },
+          "source_count": 8,
+          "top_chunk_id": "regulation:ccar_92:art_092_519",
+          "top_doc_name": "政策法规_CCAR-92部.txt",
+          "top_retrievers": "bm25",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "regulation-012",
+          "domain": "regulation",
+          "query": "训练机构规范 5.7.2 训练大纲 训练管理手册 检查",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "训练机构规范",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [
+              "regulation:uas_training_org_spec:clause_005_007_002"
+            ],
+            "expected_top_text_all": [
+              "5.7.2",
+              "训练大纲",
+              "训练管理手册"
+            ],
+            "expected_top_text_any": []
+          },
+          "source_count": 8,
+          "top_chunk_id": "regulation:uas_training_org_spec:clause_005_007_002",
+          "top_doc_name": "政策法规_《民用中小型无人驾驶航空器操控员训练机构规范》.txt",
+          "top_retrievers": "bm25",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "regulation-013",
+          "domain": "regulation",
+          "query": "飞行教员 近 12 个日历月 不少于 100 小时 带飞云时间",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "训练机构规范",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [
+              "regulation:uas_training_org_spec:clause_006_002_001"
+            ],
+            "expected_top_text_all": [
+              "100 小时",
+              "带飞云时间"
+            ],
+            "expected_top_text_any": []
+          },
+          "source_count": 8,
+          "top_chunk_id": "regulation:uas_training_org_spec:clause_006_002_001",
+          "top_doc_name": "政策法规_《民用中小型无人驾驶航空器操控员训练机构规范》.txt",
+          "top_retrievers": "bm25",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "regulation-014",
+          "domain": "regulation",
+          "query": "训练机构 多旋翼级别等级课程 不少于 2 名飞行教员",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "训练机构规范",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [
+              "regulation:uas_training_org_spec:clause_006_003_002"
+            ],
+            "expected_top_text_all": [
+              "不少于 2 名",
+              "不少于 3 名",
+              "飞行教员"
+            ],
+            "expected_top_text_any": []
+          },
+          "source_count": 8,
+          "top_chunk_id": "regulation:uas_training_org_spec:clause_006_003_002",
+          "top_doc_name": "政策法规_《民用中小型无人驾驶航空器操控员训练机构规范》.txt",
+          "top_retrievers": "bm25",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "regulation-015",
+          "domain": "regulation",
+          "query": "训练机构 教员 不应以任何形式在其他训练机构兼职",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "训练机构规范",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [
+              "regulation:uas_training_org_spec:clause_006_004_001"
+            ],
+            "expected_top_text_all": [
+              "不应以任何形式",
+              "兼职"
+            ],
+            "expected_top_text_any": []
+          },
+          "source_count": 8,
+          "top_chunk_id": "regulation:uas_training_org_spec:clause_006_004_001",
+          "top_doc_name": "政策法规_《民用中小型无人驾驶航空器操控员训练机构规范》.txt",
+          "top_retrievers": "bm25",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "regulation-016",
+          "domain": "regulation",
+          "query": "训练机构 训练数据留存不少于 3 年 可追溯",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "训练机构规范",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [
+              "regulation:uas_training_org_spec:clause_007_005_003"
+            ],
+            "expected_top_text_all": [
+              "训练数据留存不少于 3 年",
+              "可追溯"
+            ],
+            "expected_top_text_any": []
+          },
+          "source_count": 8,
+          "top_chunk_id": "regulation:uas_training_org_spec:clause_007_005_003",
+          "top_doc_name": "政策法规_《民用中小型无人驾驶航空器操控员训练机构规范》.txt",
+          "top_retrievers": "bm25",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "regulation-017",
+          "domain": "regulation",
+          "query": "训练机构 教室 训练室 面积 容纳不少于20名学员",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "训练机构规范",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [
+              "regulation:uas_training_org_spec:clause_008_004_002"
+            ],
+            "expected_top_text_all": [
+              "8.4.2",
+              "容纳不少于20名学员"
+            ],
+            "expected_top_text_any": []
+          },
+          "source_count": 8,
+          "top_chunk_id": "regulation:uas_training_org_spec:clause_008_004_002",
+          "top_doc_name": "政策法规_《民用中小型无人驾驶航空器操控员训练机构规范》.txt",
+          "top_retrievers": "bm25",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "regulation-018",
+          "domain": "regulation",
+          "query": "训练机构 空域 不应以租借 转让 共用 挂靠",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "训练机构规范",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [
+              "regulation:uas_training_org_spec:clause_008_005_002"
+            ],
+            "expected_top_text_all": [
+              "租借",
+              "转让",
+              "挂靠"
+            ],
+            "expected_top_text_any": []
+          },
+          "source_count": 8,
+          "top_chunk_id": "regulation:uas_training_org_spec:clause_008_005_002",
+          "top_doc_name": "政策法规_《民用中小型无人驾驶航空器操控员训练机构规范》.txt",
+          "top_retrievers": "bm25",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "regulation-019",
+          "domain": "regulation",
+          "query": "训练机构 10.1.2 教员等级 教学技巧 学习过程",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "训练机构规范",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [
+              "regulation:uas_training_org_spec:clause_010_001_002"
+            ],
+            "expected_top_text_all": [
+              "10.1.2",
+              "教学技巧",
+              "学习过程"
+            ],
+            "expected_top_text_any": []
+          },
+          "source_count": 8,
+          "top_chunk_id": "regulation:uas_training_org_spec:clause_010_001_002",
+          "top_doc_name": "政策法规_《民用中小型无人驾驶航空器操控员训练机构规范》.txt",
+          "top_retrievers": "bm25",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "regulation-020",
+          "domain": "regulation",
+          "query": "训练机构 11.1 训练大纲内容 学员进入条件",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "训练机构规范",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [
+              "regulation:uas_training_org_spec:clause_011_001_001"
+            ],
+            "expected_top_text_all": [
+              "11.1.1",
+              "学员的进入条件"
+            ],
+            "expected_top_text_any": []
+          },
+          "source_count": 8,
+          "top_chunk_id": "regulation:uas_training_org_spec:clause_011_001_001",
+          "top_doc_name": "政策法规_《民用中小型无人驾驶航空器操控员训练机构规范》.txt",
+          "top_retrievers": "bm25",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "question-bank-001",
+          "domain": "question_bank",
+          "query": "GPS 可以提供哪些信息",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": null,
+            "expected_top_doc_any": [
+              "无人机任务规划",
+              "综合问答"
+            ],
+            "expected_top_chunk_ids": [],
+            "expected_top_text_all": [],
+            "expected_top_text_any": [
+              "GPS",
+              "位置",
+              "方向"
+            ]
+          },
+          "source_count": 8,
+          "top_chunk_id": "question_bank:理论题库_综合问答:q_0039:idx_0038",
+          "top_doc_name": "理论题库_综合问答.txt",
+          "top_retrievers": "bm25",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "question-bank-002",
+          "domain": "question_bank",
+          "query": "无人机任务规划包括哪些内容",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "无人机任务规划",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [],
+            "expected_top_text_all": [],
+            "expected_top_text_any": [
+              "任务规划",
+              "航线规划",
+              "飞行高度速度"
+            ]
+          },
+          "source_count": 8,
+          "top_chunk_id": "question_bank:理论题库_无人机任务规划:q_0018:idx_0017",
+          "top_doc_name": "理论题库_无人机任务规划.txt",
+          "top_retrievers": "bm25+kg",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "question-bank-003",
+          "domain": "question_bank",
+          "query": "地面站的主要功能是什么",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "系统组成及介绍",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [],
+            "expected_top_text_all": [],
+            "expected_top_text_any": [
+              "地面站",
+              "任务规划",
+              "指挥控制"
+            ]
+          },
+          "source_count": 8,
+          "top_chunk_id": "question_bank:理论题库_系统组成及介绍:q_0095:idx_0092",
+          "top_doc_name": "理论题库_系统组成及介绍.txt",
+          "top_retrievers": "bm25",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "question-bank-004",
+          "domain": "question_bank",
+          "query": "航线规划时需要考虑哪些因素",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "无人机任务规划",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [],
+            "expected_top_text_all": [],
+            "expected_top_text_any": [
+              "航线规划",
+              "应急航线",
+              "异常应急措施"
+            ]
+          },
+          "source_count": 8,
+          "top_chunk_id": "question_bank:理论题库_无人机任务规划:q_0035:idx_0034",
+          "top_doc_name": "理论题库_无人机任务规划.txt",
+          "top_retrievers": "bm25",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "question-bank-005",
+          "domain": "question_bank",
+          "query": "无人机飞行前检查有哪些项目",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": null,
+            "expected_top_doc_any": [
+              "无人机任务规划",
+              "无人机操作注意事项"
+            ],
+            "expected_top_chunk_ids": [],
+            "expected_top_text_all": [],
+            "expected_top_text_any": [
+              "飞行预先准备",
+              "飞行直接准备",
+              "起飞前控制站检查",
+              "预规划航线"
+            ]
+          },
+          "source_count": 8,
+          "top_chunk_id": "question_bank:理论题库_无人机操作注意事项:q_0079:idx_0072",
+          "top_doc_name": "理论题库_无人机操作注意事项.txt",
+          "top_retrievers": "bm25",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "question-bank-006",
+          "domain": "question_bank",
+          "query": "低空风切变会造成什么影响",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "气象",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [],
+            "expected_top_text_all": [],
+            "expected_top_text_any": [
+              "低空风切变",
+              "起降",
+              "航空器"
+            ]
+          },
+          "source_count": 8,
+          "top_chunk_id": "question_bank:理论题库_气象:q_0130:idx_0129",
+          "top_doc_name": "理论题库_气象.txt",
+          "top_retrievers": "bm25",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "question-bank-007",
+          "domain": "question_bank",
+          "query": "逆风起降为什么更有利",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": null,
+            "expected_top_doc_any": [
+              "无人机操作注意事项",
+              "气象"
+            ],
+            "expected_top_chunk_ids": [],
+            "expected_top_text_all": [],
+            "expected_top_text_any": [
+              "逆风起降",
+              "升力",
+              "空气相对速度"
+            ]
+          },
+          "source_count": 8,
+          "top_chunk_id": "question_bank:理论题库_气象:q_0122:idx_0121",
+          "top_doc_name": "理论题库_气象.txt",
+          "top_retrievers": "bm25",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "question-bank-008",
+          "domain": "question_bank",
+          "query": "升力公式和哪些因素有关",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "飞行原理与飞行性能",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [],
+            "expected_top_text_all": [],
+            "expected_top_text_any": [
+              "升力",
+              "速度",
+              "迎角",
+              "转速"
+            ]
+          },
+          "source_count": 8,
+          "top_chunk_id": "question_bank:理论题库_飞行原理与飞行性能:q_0021:idx_0019",
+          "top_doc_name": "理论题库_飞行原理与飞行性能.txt",
+          "top_retrievers": "bm25",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 5,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "question-bank-009",
+          "domain": "question_bank",
+          "query": "失速的主要原因是什么",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "飞行原理与飞行性能",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [],
+            "expected_top_text_all": [],
+            "expected_top_text_any": [
+              "失速",
+              "临界迎角",
+              "大迎角"
+            ]
+          },
+          "source_count": 8,
+          "top_chunk_id": "question_bank:理论题库_飞行原理与飞行性能:q_0225:idx_0223",
+          "top_doc_name": "理论题库_飞行原理与飞行性能.txt",
+          "top_retrievers": "bm25",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "question-bank-010",
+          "domain": "question_bank",
+          "query": "翼型迎角变化对升力有什么影响",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "飞行原理与飞行性能",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [],
+            "expected_top_text_all": [],
+            "expected_top_text_any": [
+              "迎角",
+              "升力",
+              "翼型"
+            ]
+          },
+          "source_count": 8,
+          "top_chunk_id": "question_bank:理论题库_飞行原理与飞行性能:q_0175:idx_0173",
+          "top_doc_name": "理论题库_飞行原理与飞行性能.txt",
+          "top_retrievers": "bm25",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "question-bank-011",
+          "domain": "question_bank",
+          "query": "多旋翼无人机有哪些结构组成",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "旋翼无人机",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [],
+            "expected_top_text_all": [],
+            "expected_top_text_any": [
+              "多旋翼",
+              "旋翼",
+              "电机"
+            ]
+          },
+          "source_count": 8,
+          "top_chunk_id": "question_bank:理论题库_旋翼无人机:q_0004:idx_0003",
+          "top_doc_name": "理论题库_旋翼无人机.txt",
+          "top_retrievers": "bm25+dense+kg",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "question-bank-012",
+          "domain": "question_bank",
+          "query": "旋翼无人机悬停需要满足什么条件",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "旋翼无人机",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [],
+            "expected_top_text_all": [],
+            "expected_top_text_any": [
+              "悬停",
+              "诱导阻力",
+              "功率"
+            ]
+          },
+          "source_count": 8,
+          "top_chunk_id": "question_bank:理论题库_旋翼无人机:q_0058:idx_0057",
+          "top_doc_name": "理论题库_旋翼无人机.txt",
+          "top_retrievers": "bm25",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "question-bank-013",
+          "domain": "question_bank",
+          "query": "飞机积冰的主要类型有哪些",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "气象",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [],
+            "expected_top_text_all": [],
+            "expected_top_text_any": [
+              "积冰",
+              "雾凇",
+              "霜"
+            ]
+          },
+          "source_count": 8,
+          "top_chunk_id": "question_bank:理论题库_气象:q_0098:idx_0097",
+          "top_doc_name": "理论题库_气象.txt",
+          "top_retrievers": "bm25",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "question-bank-014",
+          "domain": "question_bank",
+          "query": "能见度骤降时为什么需要复飞",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "无人机操作注意事项",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [],
+            "expected_top_text_all": [],
+            "expected_top_text_any": [
+              "能见度骤降",
+              "复飞",
+              "着陆安全"
+            ]
+          },
+          "source_count": 8,
+          "top_chunk_id": "question_bank:理论题库_无人机操作注意事项:q_0050:idx_0045",
+          "top_doc_name": "理论题库_无人机操作注意事项.txt",
+          "top_retrievers": "bm25",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "question-bank-015",
+          "domain": "question_bank",
+          "query": "空中交通管制对无人机飞行有什么要求",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "空中交通管制",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [],
+            "expected_top_text_all": [],
+            "expected_top_text_any": [
+              "管制空域",
+              "飞越城市上空",
+              "航路"
+            ]
+          },
+          "source_count": 8,
+          "top_chunk_id": "question_bank:理论题库_空中交通管制:q_0016:idx_0013",
+          "top_doc_name": "理论题库_空中交通管制.txt",
+          "top_retrievers": "bm25+kg",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "question-bank-016",
+          "domain": "question_bank",
+          "query": "无人机操作注意事项有哪些",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "无人机操作注意事项",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [],
+            "expected_top_text_all": [],
+            "expected_top_text_any": [
+              "无人机操作注意事项",
+              "逆风起降"
+            ]
+          },
+          "source_count": 8,
+          "top_chunk_id": "question_bank:理论题库_无人机操作注意事项:q_0007:idx_0006",
+          "top_doc_name": "理论题库_无人机操作注意事项.txt",
+          "top_retrievers": "bm25+kg",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "question-bank-017",
+          "domain": "question_bank",
+          "query": "无人机系统由哪些部分组成",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "系统组成及介绍",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [],
+            "expected_top_text_all": [],
+            "expected_top_text_any": [
+              "飞行器平台",
+              "控制站",
+              "无人驾驶航空器系统"
+            ]
+          },
+          "source_count": 8,
+          "top_chunk_id": "question_bank:理论题库_系统组成及介绍:q_0110:idx_0107",
+          "top_doc_name": "理论题库_系统组成及介绍.txt",
+          "top_retrievers": "bm25",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "question-bank-018",
+          "domain": "question_bank",
+          "query": "遥控器 AIL RUD 通道分别控制什么运动",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "综合问答",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [],
+            "expected_top_text_all": [],
+            "expected_top_text_any": [
+              "AIL",
+              "RUD",
+              "左、右"
+            ]
+          },
+          "source_count": 8,
+          "top_chunk_id": "question_bank:理论题库_综合问答:q_0003:idx_0002",
+          "top_doc_name": "理论题库_综合问答.txt",
+          "top_retrievers": "bm25",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "question-bank-019",
+          "domain": "question_bank",
+          "query": "无人机教员是否应该关心过分自信的学员",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "无人机教员题库",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [],
+            "expected_top_text_all": [],
+            "expected_top_text_any": [
+              "过分自信",
+              "学员",
+              "教员"
+            ]
+          },
+          "source_count": 8,
+          "top_chunk_id": "question_bank:理论题库_无人机教员题库:q_0121:idx_0122",
+          "top_doc_name": "理论题库_无人机教员题库.txt",
+          "top_retrievers": "bm25",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "question-bank-020",
+          "domain": "question_bank",
+          "query": "多轴飞行器动力电池充电应选用什么充电器",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "旋翼无人机",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [],
+            "expected_top_text_all": [],
+            "expected_top_text_any": [
+              "动力电池",
+              "平衡充电器"
+            ]
+          },
+          "source_count": 8,
+          "top_chunk_id": "question_bank:理论题库_旋翼无人机:q_0015:idx_0014",
+          "top_doc_name": "理论题库_旋翼无人机.txt",
+          "top_retrievers": "bm25",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "textbook-001",
+          "domain": "textbook",
+          "query": "无人机发动机的作用是什么",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "无人机系统结构与设计",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [],
+            "expected_top_text_all": [],
+            "expected_top_text_any": [
+              "动力装置",
+              "发动机",
+              "机翼"
+            ]
+          },
+          "source_count": 8,
+          "top_chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0003:6c2cf1513b",
+          "top_doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+          "top_retrievers": "bm25+dense",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "textbook-002",
+          "domain": "textbook",
+          "query": "固定翼无人机升力如何产生",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "无人机技术概论",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [],
+            "expected_top_text_all": [],
+            "expected_top_text_any": [
+              "升力",
+              "压强",
+              "摩擦阻力"
+            ]
+          },
+          "source_count": 8,
+          "top_chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0009:200c37234f",
+          "top_doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+          "top_retrievers": "bm25",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "textbook-003",
+          "domain": "textbook",
+          "query": "多旋翼无人机的结构特点是什么",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "无人机系统结构与设计",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [],
+            "expected_top_text_all": [],
+            "expected_top_text_any": [
+              "多轴",
+              "四旋翼",
+              "旋翼"
+            ]
+          },
+          "source_count": 8,
+          "top_chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0024:0f32ef650e",
+          "top_doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+          "top_retrievers": "bm25",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 6,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "textbook-004",
+          "domain": "textbook",
+          "query": "无人机通信链路由哪些部分组成",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": null,
+            "expected_top_doc_any": [
+              "无人机技术概论",
+              "无人机系统结构与设计"
+            ],
+            "expected_top_chunk_ids": [],
+            "expected_top_text_all": [],
+            "expected_top_text_any": [
+              "数据链路",
+              "上行",
+              "下行",
+              "通信设备",
+              "地面站系统"
+            ]
+          },
+          "source_count": 8,
+          "top_chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0034:159d19dc03",
+          "top_doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+          "top_retrievers": "bm25",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "textbook-005",
+          "domain": "textbook",
+          "query": "无人机导航系统有哪些组成",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": null,
+            "expected_top_doc_any": [
+              "无人机系统结构与设计",
+              "无人机技术概论"
+            ],
+            "expected_top_chunk_ids": [],
+            "expected_top_text_all": [],
+            "expected_top_text_any": [
+              "IMU",
+              "GPS",
+              "飞控系统"
+            ]
+          },
+          "source_count": 8,
+          "top_chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0011:364e7d8ec1",
+          "top_doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+          "top_retrievers": "bm25+dense",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "textbook-006",
+          "domain": "textbook",
+          "query": "飞控系统硬件由哪些部分组成",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "无人机技术概论",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [],
+            "expected_top_text_all": [],
+            "expected_top_text_any": [
+              "飞控系统",
+              "中央处理器",
+              "姿态传感器"
+            ]
+          },
+          "source_count": 8,
+          "top_chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0025:57f41f53a5",
+          "top_doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+          "top_retrievers": "bm25",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "textbook-007",
+          "domain": "textbook",
+          "query": "IMU 惯性测量单元包含哪些传感器",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "无人机系统结构与设计",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [],
+            "expected_top_text_all": [],
+            "expected_top_text_any": [
+              "IMU",
+              "三轴加速度计",
+              "三轴陀螺仪"
+            ]
+          },
+          "source_count": 8,
+          "top_chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0011:364e7d8ec1",
+          "top_doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+          "top_retrievers": "bm25+dense",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "textbook-008",
+          "domain": "textbook",
+          "query": "无人机任务载荷有哪些类型",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "无人机系统结构与设计",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [],
+            "expected_top_text_all": [],
+            "expected_top_text_any": [
+              "任务载荷",
+              "载荷",
+              "功能"
+            ]
+          },
+          "source_count": 8,
+          "top_chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0017:b19d1e2ae3",
+          "top_doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+          "top_retrievers": "bm25",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "textbook-009",
+          "domain": "textbook",
+          "query": "固定翼无人机机翼有什么作用",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": null,
+            "expected_top_doc_any": [
+              "无人机系统结构与设计",
+              "无人机技术概论"
+            ],
+            "expected_top_chunk_ids": [],
+            "expected_top_text_all": [],
+            "expected_top_text_any": [
+              "机翼",
+              "固定翼",
+              "机身"
+            ]
+          },
+          "source_count": 8,
+          "top_chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0009:200c37234f",
+          "top_doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+          "top_retrievers": "bm25",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "textbook-010",
+          "domain": "textbook",
+          "query": "无人机动力系统包含哪些部件",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "无人机系统结构与设计",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [],
+            "expected_top_text_all": [],
+            "expected_top_text_any": [
+              "动力系统",
+              "旋翼系统",
+              "机身"
+            ]
+          },
+          "source_count": 8,
+          "top_chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0007:f37f19c5f7",
+          "top_doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+          "top_retrievers": "bm25+dense",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "textbook-011",
+          "domain": "textbook",
+          "query": "锂电池放电倍率是什么意思",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "无人机技术概论",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [],
+            "expected_top_text_all": [],
+            "expected_top_text_any": [
+              "放电倍率",
+              "电池容量",
+              "锂电池"
+            ]
+          },
+          "source_count": 8,
+          "top_chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0023:d7139a7202",
+          "top_doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+          "top_retrievers": "bm25",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "textbook-012",
+          "domain": "textbook",
+          "query": "遥控发射机在通信系统中有什么作用",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "无人机技术概论",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [],
+            "expected_top_text_all": [],
+            "expected_top_text_any": [
+              "发射机",
+              "通信",
+              "数据链路"
+            ]
+          },
+          "source_count": 8,
+          "top_chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0035:9a8b8fc34b",
+          "top_doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+          "top_retrievers": "bm25",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "textbook-013",
+          "domain": "textbook",
+          "query": "数据链路上行和下行分别是什么",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "无人机技术概论",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [],
+            "expected_top_text_all": [],
+            "expected_top_text_any": [
+              "上行",
+              "下行",
+              "数据链路"
+            ]
+          },
+          "source_count": 8,
+          "top_chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0034:159d19dc03",
+          "top_doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+          "top_retrievers": "bm25",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "textbook-014",
+          "domain": "textbook",
+          "query": "无人机地面站由哪些部分组成",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "无人机系统结构与设计",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [],
+            "expected_top_text_all": [],
+            "expected_top_text_any": [
+              "地面站",
+              "数据链路控制",
+              "飞行控制"
+            ]
+          },
+          "source_count": 8,
+          "top_chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0015:ace750fe29",
+          "top_doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+          "top_retrievers": "bm25",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "textbook-015",
+          "domain": "textbook",
+          "query": "无人机自动驾驶仪有什么作用",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "无人机系统结构与设计",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [],
+            "expected_top_text_all": [],
+            "expected_top_text_any": [
+              "自动驾驶仪",
+              "飞控",
+              "姿态"
+            ]
+          },
+          "source_count": 8,
+          "top_chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0010:3bfe3da39d",
+          "top_doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+          "top_retrievers": "bm25+dense",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "textbook-016",
+          "domain": "textbook",
+          "query": "姿态传感器在飞控系统中有什么作用",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "无人机系统结构与设计",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [],
+            "expected_top_text_all": [],
+            "expected_top_text_any": [
+              "姿态传感器",
+              "飞控系统",
+              "传感器"
+            ]
+          },
+          "source_count": 8,
+          "top_chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0011:364e7d8ec1",
+          "top_doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+          "top_retrievers": "bm25+dense",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "textbook-017",
+          "domain": "textbook",
+          "query": "GPS 指南针模块在飞控系统中有什么作用",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "无人机系统结构与设计",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [],
+            "expected_top_text_all": [],
+            "expected_top_text_any": [
+              "GPS 指南针",
+              "飞行控制系统",
+              "主控模块"
+            ]
+          },
+          "source_count": 8,
+          "top_chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0011:364e7d8ec1",
+          "top_doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+          "top_retrievers": "bm25+dense",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "textbook-018",
+          "domain": "textbook",
+          "query": "多旋翼机架结构包括哪些部分",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "无人机系统结构与设计",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [],
+            "expected_top_text_all": [],
+            "expected_top_text_any": [
+              "多轴",
+              "四旋翼",
+              "起落架"
+            ]
+          },
+          "source_count": 8,
+          "top_chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0024:0f32ef650e",
+          "top_doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+          "top_retrievers": "bm25",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 15,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "textbook-019",
+          "domain": "textbook",
+          "query": "固定翼无人机尾翼有什么作用",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "无人机系统结构与设计",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [],
+            "expected_top_text_all": [],
+            "expected_top_text_any": [
+              "尾翼",
+              "机身",
+              "起落装置"
+            ]
+          },
+          "source_count": 8,
+          "top_chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0003:6c2cf1513b",
+          "top_doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+          "top_retrievers": "bm25+dense",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        },
+        {
+          "id": "textbook-020",
+          "domain": "textbook",
+          "query": "无人机回收方式有哪些",
+          "passed": true,
+          "failure_reasons": [],
+          "expectation": {
+            "expected_top_doc_contains": "无人机系统结构与设计",
+            "expected_top_doc_any": [],
+            "expected_top_chunk_ids": [],
+            "expected_top_text_all": [],
+            "expected_top_text_any": [
+              "回收系统",
+              "垂直起降",
+              "起降场地"
+            ]
+          },
+          "source_count": 8,
+          "top_chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0030:650ed3b170",
+          "top_doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+          "top_retrievers": "bm25",
+          "top_text_source": "replay_sqlite",
+          "degraded": false,
+          "degraded_reasons": [],
+          "retriever_counts": {
+            "bm25": 20,
+            "dense": 12,
+            "kg": 20,
+            "fused": 8
+          },
+          "missing_sqlite_chunk_ids": []
+        }
+      ]
+    }
+  },
+  "finished_at": "2026-06-06T04:28:08+00:00"
+}

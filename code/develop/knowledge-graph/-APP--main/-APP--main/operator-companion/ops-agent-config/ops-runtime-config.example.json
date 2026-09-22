@@ -1,0 +1,81 @@
+{
+  "schema_version": "cloud-v2-ops-runtime-config-v1",
+  "mode": "unconfigured",
+  "active_root": "/REPLACE_WITH_READ_ONLY_ACTIVE_RELEASE_ROOT",
+  "identities": {
+    "suite_release_id": "REPLACE_WITH_SUITE_RELEASE_ID",
+    "data_release_id": "REPLACE_WITH_DATA_RELEASE_ID",
+    "runtime_code_file_set_sha256": "REPLACE_WITH_64_LOWERCASE_HEX_SHA256",
+    "local_vector_release_id": "REPLACE_WITH_PRODUCTION_VECTOR_RELEASE_ID",
+    "graph_release_id": "REPLACE_WITH_GRAPH_RELEASE_ID",
+    "operator_companion_sha256": "REPLACE_WITH_64_LOWERCASE_HEX_SHA256"
+  },
+  "files": {
+    "suite_manifest": {
+      "path": "REPLACE_WITH_SUITE_MANIFEST_RELATIVE_PATH",
+      "sha256": "REPLACE_WITH_64_LOWERCASE_HEX_SHA256"
+    },
+    "data_release_manifest": {
+      "path": "REPLACE_WITH_DATA_RELEASE_MANIFEST_RELATIVE_PATH",
+      "sha256": "REPLACE_WITH_64_LOWERCASE_HEX_SHA256"
+    },
+    "runtime_manifest": {
+      "path": "REPLACE_WITH_RUNTIME_MANIFEST_RELATIVE_PATH",
+      "sha256": "REPLACE_WITH_64_LOWERCASE_HEX_SHA256"
+    },
+    "authority_manifest": {
+      "path": "REPLACE_WITH_AUTHORITY_MANIFEST_RELATIVE_PATH",
+      "sha256": "REPLACE_WITH_64_LOWERCASE_HEX_SHA256"
+    },
+    "authority_database": {
+      "path": "REPLACE_WITH_AUTHORITY_DATABASE_RELATIVE_PATH",
+      "sha256": "REPLACE_WITH_64_LOWERCASE_HEX_SHA256"
+    },
+    "bm25_manifest": {
+      "path": "REPLACE_WITH_BM25_MANIFEST_RELATIVE_PATH",
+      "sha256": "REPLACE_WITH_64_LOWERCASE_HEX_SHA256"
+    },
+    "bm25_index": {
+      "path": "REPLACE_WITH_BM25_INDEX_RELATIVE_PATH",
+      "sha256": "REPLACE_WITH_64_LOWERCASE_HEX_SHA256"
+    },
+    "local_vector_manifest": {
+      "path": "REPLACE_WITH_PRODUCTION_VECTOR_MANIFEST_RELATIVE_PATH",
+      "sha256": "REPLACE_WITH_64_LOWERCASE_HEX_SHA256"
+    },
+    "local_vector_chunk_index": {
+      "path": "REPLACE_WITH_PRODUCTION_CHUNK_INDEX_RELATIVE_PATH",
+      "sha256": "REPLACE_WITH_64_LOWERCASE_HEX_SHA256"
+    },
+    "local_vector_entity_index": {
+      "path": "REPLACE_WITH_PRODUCTION_ENTITY_INDEX_RELATIVE_PATH",
+      "sha256": "REPLACE_WITH_64_LOWERCASE_HEX_SHA256"
+    },
+    "graph_manifest": {
+      "path": "REPLACE_WITH_GRAPH_MANIFEST_RELATIVE_PATH",
+      "sha256": "REPLACE_WITH_64_LOWERCASE_HEX_SHA256"
+    },
+    "graph_data": {
+      "path": "REPLACE_WITH_GRAPH_DATA_RELATIVE_PATH",
+      "sha256": "REPLACE_WITH_64_LOWERCASE_HEX_SHA256"
+    },
+    "quality_summary": {
+      "path": "REPLACE_WITH_SANITIZED_QUALITY_SUMMARY_RELATIVE_PATH",
+      "sha256": "REPLACE_WITH_64_LOWERCASE_HEX_SHA256"
+    }
+  },
+  "candidate_workspace": {
+    "path": "/REPLACE_WITH_PRIVATE_CANDIDATE_WORKSPACE",
+    "mode": "0700"
+  },
+  "confirmation_ledger": {
+    "path": "/REPLACE_WITH_PRIVATE_CONFIRMATION_LEDGER",
+    "mode": "0700"
+  },
+  "listen": {
+    "host": "127.0.0.1",
+    "port": 0,
+    "threads": 0,
+    "allowed_hosts": []
+  }
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>云技 · 知识图谱</title>
+<script src="three.min.js"></script>
+<script src="3d-force-graph.min.js"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:100%;height:100%;overflow:hidden;background:#1a1d28;color:#c0c8d8;font-family:-apple-system,BlinkMacSystemFont,'SF Mono','PingFang SC','Microsoft YaHei',monospace}
+.app{display:grid;grid-template-columns:280px 1fr;grid-template-rows:44px 1fr 28px;height:100vh}
+.topbar{grid-column:1/3;display:flex;align-items:center;gap:16px;padding:0 18px;background:#1f2330;border-bottom:1px solid #2a2f3d;z-index:10}
+.brand{font-size:13px;font-weight:700;color:#7b9eff;letter-spacing:.3px}
+.brand span{color:#7b8ba0;font-weight:400}
+.stats{display:flex;gap:18px;margin-left:auto;font-size:11px;color:#5a6578}
+.stats b{color:#a0b0c8}
+.sidebar{background:#1a1e2a;border-right:1px solid #2a2f3d;display:flex;flex-direction:column;overflow:hidden}
+.side-head{padding:14px 16px;border-bottom:1px solid #252a38}
+.side-head input{width:100%;height:32px;border:1px solid #2a2f3d;border-radius:6px;background:#141820;color:#c0c8d8;padding:0 12px;font-size:12px;outline:none;font-family:inherit}
+.side-head input:focus{border-color:#7b9eff;box-shadow:0 0 0 2px rgba(123,158,255,.12)}
+.side-tabs{display:flex;border-bottom:1px solid #252a38}
+.side-tab{flex:1;text-align:center;padding:8px 0;font-size:11px;color:#5a6578;cursor:pointer;border-bottom:2px solid transparent;font-weight:600}
+.side-tab:hover{color:#8898b0}
+.side-tab.on{color:#7b9eff;border-bottom-color:#7b9eff}
+.node-list{flex:1;overflow-y:auto;padding:8px}
+.node-item{display:grid;grid-template-columns:auto 1fr auto auto;gap:8px;align-items:center;padding:9px 12px;margin:2px 0;border-radius:6px;cursor:pointer;transition:.12s;font-size:12px}
+.node-del{width:18px;height:18px;border-radius:50%;border:1px solid transparent;background:transparent;color:#4a5568;font-size:10px;cursor:pointer;display:none;align-items:center;justify-content:center;transition:.12s}
+.node-item:hover .node-del{display:flex}
+.node-del:hover{color:#ff6b6b;border-color:rgba(255,107,107,.3);background:rgba(255,107,107,.08)}
+.node-item:hover{background:rgba(88,166,255,.04);border:1px solid rgba(88,166,255,.08)}
+.node-item.on{background:rgba(88,166,255,.12);border:1px solid rgba(88,166,255,.25)}
+.node-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.node-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#c0c8d8}
+.node-badge{font-size:10px;padding:2px 7px;border-radius:4px;background:rgba(42,47,61,.6);color:#5a6578;white-space:nowrap}
+.side-foot{padding:10px 16px;border-top:1px solid #252a38;font-size:10px;color:#4a5568;display:flex;justify-content:space-between}
+.rel-mgr{display:none;max-height:180px;overflow-y:auto;border-top:1px solid #252a38;padding:10px 16px;font-size:11px}
+.rel-mgr.on{display:block}
+.rel-mgr-title{font-size:10px;text-transform:uppercase;color:#5a6578;margin-bottom:8px;font-weight:700}
+.rel-row{display:grid;grid-template-columns:1fr auto auto auto;gap:6px;align-items:center;padding:4px 0;color:#8898b0;font-size:11px}
+.rel-row .rel-type{color:#58a6ff;font-size:10px;font-weight:700;text-align:center}
+.rel-del{width:16px;height:16px;border-radius:50%;border:1px solid transparent;background:transparent;color:#4a5568;font-size:8px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.rel-del:hover{color:#ff6b6b;border-color:rgba(255,107,107,.3)}
+.main{position:relative;overflow:hidden}
+#graph3d{position:absolute;inset:0}
+.graph-hint{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);z-index:10;font-size:10px;color:#3a4558;pointer-events:none}
+.bottombar{grid-column:1/3;display:flex;align-items:center;justify-content:center;gap:20px;padding:0 18px;background:#1f2330;border-top:1px solid #2a2f3d;font-size:10px;color:#4a5568}
+.legend-dot{width:6px;height:6px;border-radius:50%;display:inline-block;margin-right:4px}
+.loading{position:fixed;inset:0;z-index:50;display:flex;align-items:center;justify-content:center;background:rgba(26,29,40,.7)}
+.loading.hide{display:none}
+.lds{border:2px solid rgba(88,166,255,.15);border-top-color:#58a6ff;border-radius:50%;width:22px;height:22px;animation:spin .7s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.loader-msg{margin-left:12px;font-size:12px;color:#5a6578}
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="topbar">
+    <div class="brand">⚡ 云技<span> · 知识图谱</span></div>
+    <div class="stats"><span>节点 <b id="statNodes">—</b></span><span>关系 <b id="statEdges">—</b></span></div>
+  </div>
+  <div class="sidebar">
+    <div class="side-head"><input id="search" placeholder="搜索节点…"></div>
+    <div class="side-tabs">
+      <div class="side-tab on" data-tab="all">全部</div>
+      <div class="side-tab" data-tab="Category">分类</div>
+      <div class="side-tab" data-tab="KnowledgePoint">知识点</div>
+    </div>
+    <div class="node-list" id="nodeList"></div>
+    <div class="side-foot" id="sideFoot">—</div>
+    <div class="rel-mgr" id="relMgr"><div class="rel-mgr-title">🔗 关系管理</div><div id="relMgrList"></div></div>
+  </div>
+  <div class="main">
+    <div id="graph3d"></div>
+    <div class="graph-hint">拖拽旋转 · 滚轮缩放 · 点击节点高亮</div>
+  </div>
+  <div class="bottombar" id="legend"></div>
+</div>
+<div class="loading" id="loading"><div class="lds"></div><div class="loader-msg">加载中…</div></div>
+<script>
+const $=id=>document.getElementById(id);
+const C={cat:'#3a5fad',kp:'#3d7ecf',cmp:'#4a9e44',sk:'#a05cd4',reg:'#d94040',cert:'#2ea8b5',doc:'#2a3450',pos:'#cc5a32',com:'#3d7eb8',loc:'#7a645a',sal:'#5e9648',evt:'#6a7a8e'};
+const TC={Category:C.cat,KnowledgePoint:C.kp,Component:C.cmp,Skill:C.sk,Regulation:C.reg,Certification:C.cert};
+let G,allN=[],allE=[],nm,nf='all',sq='',hi=null,he=null;
+
+async function api(u){const r=await fetch(u);if(!r.ok)throw Error(r.status);return r.json()}
+function esc(s){const d=document.createElement('div');d.textContent=s;return d.innerHTML}
+function ld(v){v?$('loading').classList.remove('hide'):$('loading').classList.add('hide')}
+
+function nn(n){return{id:String(n.id??''),label:n.label??n.name??'',type:n.type??'?',title:n.title??n.description??'',cat:n.category??''}}
+function ne(e){return{id:e.id??`${e.from}|${e.to}|${e.label}`,from:String(e.from??''),to:String(e.to??''),label:e.label??'RELATED_TO'}}
+
+function col(n){if(n._dim)return'rgba(30,35,45,.08)';return (TC[n.type]||'#5a6578')}
+function sz(n){if(n.type==='Category')return 14;if(n.type==='Document')return 0;return n.type==='KnowledgePoint'?5:4}
+function nr(n){return n._rels||0}
+
+function renderList(){const ns=allN.filter(n=>{if(n.type==='Document')return false;if(nf!=='all'&&n.type!==nf)return false;if(sq&&!n.label.toLowerCase().includes(sq.toLowerCase()))return false;return true});ns.sort((a,b)=>nr(b)-nr(a));const maxR=Math.max(1,...ns.map(nr));$('nodeList').innerHTML=ns.slice(0,200).map(n=>`<div class="node-item${selId===n.id?' on':''}" data-id="${esc(n.id)}"><span class="node-dot" style="background:${col(n)}"></span><span class="node-name" title="${esc(n.label)}">${esc(n.label)}</span><span class="node-badge">${nr(n)}</span><button class="node-del" data-id="${esc(n.id)}" title="删除">✕</button></div>`).join('')||'<div style="padding:16px;color:#5a6578;font-size:12px">无匹配节点</div>';$('nodeList').querySelectorAll('.node-item').forEach(el=>el.addEventListener('click',function(e){if(e.target.classList.contains('node-del'))return;selectNode(el.dataset.id)}));
+  $('nodeList').querySelectorAll('.node-del').forEach(btn=>btn.addEventListener('click',async function(e){e.stopPropagation();const id=btn.dataset.id;const n=allN.find(x=>x.id===id);if(!n||!confirm(`删除节点「${n.label}」？`))return;
+    try{await fetch(`/api/entity/${encodeURIComponent(id)}`,{method:'DELETE'});await ld2();toast(`已删除: ${n.label}`)}catch(ex){toast('删除失败')}
+  }));$('sideFoot').textContent=`${ns.length} 个节点`}
+
+function selectNode(id){selId=id;renderList();setTimeout(()=>{const el=document.querySelector(`.node-item[data-id="${id}"]`);if(el)el.scrollIntoView({block:'nearest',behavior:'smooth'})},100);const n=allN.find(x=>x.id===id);if(!n)return;foc(id,true);renderRelPanel(n)}function renderRelPanel(n){const el=$('relMgr');const list=$('relMgrList');const rels=allE.filter(e=>e.from===n.id||e.to===n.id);el.classList.add('on');let h='';rels.slice(0,30).forEach(e=>{const oId=e.from===n.id?e.to:e.from;const o=allN.find(x=>x.id===oId);const oname=o?o.label:oId;h+=`<div class="rel-row"><span>${esc(oname).substring(0,18)}</span><span class="rel-type">${e.from===n.id?'→':'←'} ${e.label}</span><button class="rel-del" data-eid="${esc(e.id)}" title="删除关系">✕</button></div>`});list.innerHTML=h||'<div style="color:#5a6578;font-size:11px">无关系</div>';list.querySelectorAll('.rel-del').forEach(btn=>btn.addEventListener('click',async e=>{e.stopPropagation();const eid=btn.dataset.eid;const edge=allE.find(x=>x.id===eid);if(!edge)return;const oId=edge.from===n.id?edge.to:edge.from;const o=allN.find(x=>x.id===oId);const oname=o?o.label:oId;if(!confirm(`删除 ${n.label} → ${oname} (${edge.label})？`))return;try{await fetch('/api/edge',{method:'DELETE',headers:{'Content-Type':'application/json'},body:JSON.stringify({from_id:edge.from,to_id:edge.to,type:edge.label})});await ld2();toast(`已删除关系: ${oname}`)}catch(ex){toast('删除失败')}}));const addDiv=document.createElement('div');addDiv.style.cssText='margin-top:8px;display:flex;gap:6px';addDiv.innerHTML=`<select id="edgeTypes" style="flex:1;height:26px;border:1px solid #2a2f3d;border-radius:4px;background:#141820;color:#c0c8d8;font-size:11px;font-family:inherit"><option>BELONGS_TO</option><option>CONTAINS</option><option>REFERENCES</option><option>PROVIDES</option><option>RELATED_TO</option><option>MANAGES</option><option>REGULATES</option></select><button id="addEdgeBtn" style="height:26px;padding:0 10px;border:1px solid #58a6ff;border-radius:4px;background:#141820;color:#58a6ff;font-size:11px;cursor:pointer;font-family:inherit">+关系</button>`;if(!list.querySelector('#edgeTypes'))list.appendChild(addDiv);$('addEdgeBtn').addEventListener('click',async()=>{const tgt=prompt('输入目标节点名称:');if(!tgt)return;const tgtNode=allN.find(x=>x.label===tgt||x.label.toLowerCase().includes(tgt.toLowerCase()));if(!tgtNode)return toast('未找到节点');const tp=$('edgeTypes').value;try{await fetch('/api/edge',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({from_id:n.id,to_id:tgtNode.id,type:tp})});await ld2();toast(`已添加: ${n.label} → ${tgtNode.label}`)}catch(ex){toast('添加失败')}})}
+let selId=null;
+
+function foc(id,cm){const s=new Set([String(id)]),eids=new Set();allE.forEach(e=>{if(e.from===id||e.to===id){s.add(e.from);s.add(e.to);eids.add(e.id)}});hi=s;he=eids;ug();if(cm)setTimeout(()=>{const n=G.graphData().nodes.find(x=>x.id===id);if(n&&n.x!==undefined){const d=180,r=1+d/Math.max(1,Math.hypot(n.x,n.y,n.z));G.cameraPosition({x:n.x*r,y:n.y*r,z:n.z*r},n,2000)}},80)}
+
+function ug(){if(!G)return;const ns=allN.map(n=>({...n})),ls=allE.map(e=>({...e,source:e.from,target:e.to}));G.graphData({nodes:ns,links:ls})}
+
+function toast(msg){const t=document.createElement('div');t.textContent=msg;t.style.cssText='position:fixed;bottom:60px;left:50%;transform:translateX(-50%);z-index:50;padding:8px 18px;border-radius:12px;background:rgba(31,35,48,.95);border:1px solid #2a2f3d;color:#c0c8d8;font-size:12px;opacity:0;transition:opacity .3s;pointer-events:none';document.body.appendChild(t);setTimeout(()=>{t.style.opacity='1'},10);setTimeout(()=>{t.style.opacity='0';setTimeout(()=>t.remove(),400)},2200)}
+function ig(){if(typeof ForceGraph3D!=='function'){ld(false);return}
+  G=ForceGraph3D()($('graph3d')).backgroundColor('#1a1d28').showNavInfo(false).enableNodeDrag(true).onNodeDragEnd(function(n){n.fx=n.x;n.fy=n.y;n.fz=n.z}).nodeId('id').nodeVal(sz).nodeColor(function(n){if(hi&&hi.has(n.id))return TC[n.type]||'#58a6ff';return n._dim?'rgba(25,32,42,.06)':col(n)}).nodeOpacity(function(n){if(n.type==='Document')return 0;return n._dim?.04:.82}).nodeLabel(function(n){return n.type==='Document'?'':n.label}).nodeThreeObject(function(n){const g=new THREE.Group();const s=sz(n);const c=col(n);const tex=glossTex(c);if(!n._dim){const g2=new THREE.SphereGeometry(s*1.5,16,16);const m2=new THREE.MeshBasicMaterial({map:glossTex(c),transparent:true,opacity:.15,depthWrite:false});g.add(new THREE.Mesh(g2,m2))}const geo=new THREE.SphereGeometry(s,16,16);const mat=new THREE.MeshLambertMaterial({map:tex,transparent:true,opacity:n._dim?.04:.9});g.add(new THREE.Mesh(geo,mat));if(n.type==='Category'&&!n._dim){const rg=new THREE.TorusGeometry(s+3,.5,8,28);const rm=new THREE.MeshBasicMaterial({color:'#3a5fad',transparent:true,opacity:.3});const ri=new THREE.Mesh(rg,rm);ri.rotation.x=Math.PI/2;g.add(ri)}return g}).linkColor(function(l){return l._dim?'rgba(20,28,38,.015)':'rgba(90,120,160,.12)'}).linkOpacity(function(l){return l._dim?.02:.5}).linkWidth(.22).linkDirectionalArrowLength(1).linkDirectionalArrowRelPos(1).linkCurvature(.15).onNodeClick(function(n){selectNode(n.id)});
+  G.d3Force('charge').strength(function(n){return n.type==='Category'?-4000:n.type==='Document'?-1:n._dim?-1:-30}).distanceMax(300);
+  G.d3Force('link').distance(45).strength(.4);
+  G.d3Force('center').strength(.15);
+  G.d3Force('center').strength(.25);
+  G.warmupTicks(90)
+}
+
+function rs(){if(G){G.width(window.innerWidth-280);G.height(window.innerHeight-72)}}
+
+async function ld2(){ld(true);try{const d=await api('/api/graph');allN=(d.nodes||[]).map(nn);allE=(d.edges||[]).map(ne).filter(e=>e.from&&e.to);allE.forEach(e=>{const a=allN.find(n=>n.id===e.from);if(a)a._rels=(a._rels||0)+1;const b=allN.find(n=>n.id===e.to);if(b)b._rels=(b._rels||0)+1});nm=new Map(allN.map(n=>[n.id,n]));ig();rs();ug();setTimeout(()=>{if(G)G.zoomToFit(400,20)},200);$('statNodes').textContent=allN.length;$('statEdges').textContent=allE.length;renderList();renderLegend()}catch(e){$('statNodes').textContent='⚠'}finally{ld(false)}}
+
+function renderLegend(){const items=[{t:'Category',l:'分类',c:TC.Category},{t:'KnowledgePoint',l:'知识点',c:TC.KnowledgePoint},{t:'Component',l:'组件',c:TC.Component},{t:'Skill',l:'技能',c:TC.Skill},{t:'Regulation',l:'法规',c:TC.Regulation}];$('legend').innerHTML=items.map(i=>`<span><span class="legend-dot" style="background:${i.c}"></span>${i.l}</span>`).join('')}
+
+const texCache={};
+function glossTex(hex){
+  if(texCache[hex])return texCache[hex];
+  const cv=document.createElement('canvas');cv.width=64;cv.height=64;
+  const ctx=cv.getContext('2d');
+  const g=ctx.createRadialGradient(18,18,2,32,32,32);
+  g.addColorStop(0,'rgba(255,255,255,.9)');g.addColorStop(.15,hex);g.addColorStop(.6,hex+'88');g.addColorStop(1,hex+'22');
+  ctx.fillStyle=g;ctx.fillRect(0,0,64,64);
+  const t=new THREE.CanvasTexture(cv);texCache[hex]=t;return t
+}
+
+$('search').addEventListener('input',function(){sq=this.value;renderList()});
+document.querySelectorAll('.side-tab').forEach(t=>t.addEventListener('click',function(){nf=this.dataset.tab;document.querySelectorAll('.side-tab').forEach(t2=>t2.classList.remove('on'));this.classList.add('on');renderList()}));
+window.addEventListener('resize',rs);
+ld2();
+</script>
+</body>
+</html>

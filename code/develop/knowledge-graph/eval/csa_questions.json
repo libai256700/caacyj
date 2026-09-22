@@ -1,0 +1,56 @@
+[
+  {
+    "id": "csa_teacher_students_shahao",
+    "category": "csa",
+    "question": "沙浩有几个学员？",
+    "expected_route": "csa",
+    "expected_topic": "students",
+    "expected_source": "students.csv",
+    "must_contain": ["沙浩的学员", "24人"]
+  },
+  {
+    "id": "csa_teacher_progress_wanzhifeng",
+    "category": "csa",
+    "question": "万志峰培训记录多少条？",
+    "expected_route": "csa",
+    "expected_topic": "training_progress",
+    "expected_source": "学员培训进度.csv",
+    "must_contain": ["万志峰的培训记录", "2226条"]
+  },
+  {
+    "id": "csa_customer_a_count",
+    "category": "csa",
+    "question": "A类客户多少人？",
+    "expected_route": "csa",
+    "expected_topic": "customers",
+    "expected_source": "customers.csv",
+    "must_contain": ["A: 25人"]
+  },
+  {
+    "id": "csa_jobs_summary",
+    "category": "csa",
+    "question": "岗位信息有哪些？",
+    "expected_route": "csa",
+    "expected_topic": "jobs",
+    "expected_source": "jobs.csv",
+    "must_contain": ["岗位实体", "470条"]
+  },
+  {
+    "id": "csa_prices_summary",
+    "category": "csa",
+    "question": "课程价格是多少？",
+    "expected_route": "csa",
+    "expected_topic": "prices",
+    "expected_source": "courses.csv",
+    "must_contain": ["课程价格表"]
+  },
+  {
+    "id": "csa_known_course_price",
+    "category": "csa",
+    "question": "教员就业班多少钱？",
+    "expected_route": "csa",
+    "expected_topic": "prices",
+    "expected_source": "courses.csv",
+    "must_contain": ["精英教员就业班", "31800元"]
+  }
+]

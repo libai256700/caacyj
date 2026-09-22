@@ -1,0 +1,162 @@
+[
+  {
+    "id": "csv_course_prices_broad",
+    "category": "csv_only",
+    "question": "课程价格是多少？",
+    "expected_route": "csa",
+    "expected_topic": "prices",
+    "expected_external_candidate": false
+  },
+  {
+    "id": "csv_known_course_price",
+    "category": "csv_only",
+    "question": "教员就业班多少钱？",
+    "expected_route": "csa",
+    "expected_topic": "prices",
+    "expected_external_candidate": false
+  },
+  {
+    "id": "external_fpv_price",
+    "category": "external_completion",
+    "question": "FPV穿越机培训多少钱？",
+    "expected_route": "rag_external_candidate",
+    "expected_topic": null,
+    "expected_external_candidate": true
+  },
+  {
+    "id": "external_custom_onsite_price",
+    "category": "external_completion",
+    "question": "企业上门定制无人机培训怎么收费？",
+    "expected_route": "rag_external_candidate",
+    "expected_topic": null,
+    "expected_external_candidate": true
+  },
+  {
+    "id": "csv_jobs_summary",
+    "category": "csv_only",
+    "question": "岗位信息有哪些？",
+    "expected_route": "csa",
+    "expected_topic": "jobs",
+    "expected_external_candidate": false
+  },
+  {
+    "id": "internal_role_responsibility",
+    "category": "internal_kb",
+    "question": "助教岗位职责是什么？",
+    "expected_route": "rag",
+    "expected_topic": null,
+    "expected_external_candidate": false
+  },
+  {
+    "id": "internal_hr_policy",
+    "category": "internal_kb",
+    "question": "员工手册有哪些考勤要求？",
+    "expected_route": "rag",
+    "expected_topic": null,
+    "expected_external_candidate": false
+  },
+  {
+    "id": "internal_company_intro",
+    "category": "internal_kb",
+    "question": "云技科技公司介绍一下",
+    "expected_route": "rag",
+    "expected_topic": null,
+    "expected_external_candidate": false
+  },
+  {
+    "id": "csv_training_progress_count",
+    "category": "csv_only",
+    "question": "学员培训记录有多少？",
+    "expected_route": "csa",
+    "expected_topic": "training_progress",
+    "expected_external_candidate": false
+  },
+  {
+    "id": "hybrid_training_progress_advice",
+    "category": "csv_plus_rag",
+    "question": "学员培训记录有多少，并且怎么安排后续训练？",
+    "expected_route": "hybrid",
+    "expected_topic": "training_progress",
+    "expected_external_candidate": false
+  },
+  {
+    "id": "hybrid_price_low_altitude_script",
+    "category": "csv_plus_rag",
+    "question": "请结合课程价格和CAAC低空空域规定给我销售话术",
+    "expected_route": "hybrid",
+    "expected_topic": "prices",
+    "expected_external_candidate": false
+  },
+  {
+    "id": "internal_customer_followup_policy",
+    "category": "internal_kb",
+    "question": "客户管理与跟进制度怎么要求？",
+    "expected_route": "rag",
+    "expected_topic": null,
+    "expected_external_candidate": false
+  },
+  {
+    "id": "non_graph_course_intro",
+    "category": "graph_first_guard",
+    "question": "课程产品有哪些，给我简单介绍一下",
+    "expected_route": "rag",
+    "expected_topic": null,
+    "expected_external_candidate": false
+  },
+  {
+    "id": "non_graph_customer_policy",
+    "category": "graph_first_guard",
+    "question": "客户跟进制度有什么要求？",
+    "expected_route": "rag",
+    "expected_topic": null,
+    "expected_external_candidate": false
+  },
+  {
+    "id": "non_graph_sales_script_hybrid",
+    "category": "graph_first_guard",
+    "question": "请结合课程价格和CAAC低空空域规定给我销售话术",
+    "expected_route": "hybrid",
+    "expected_topic": "prices",
+    "expected_external_candidate": false
+  },
+  {
+    "id": "graph_first_customer_course_fit",
+    "category": "graph_first",
+    "question": "某课程适合哪些客户？依据是什么？",
+    "expected_route": "graph_first",
+    "expected_topic": "customers",
+    "expected_external_candidate": false
+  },
+  {
+    "id": "graph_first_student_course_recommendation",
+    "category": "graph_first",
+    "question": "某学员下一步应该推荐什么课程？",
+    "expected_route": "graph_first",
+    "expected_topic": null,
+    "expected_external_candidate": false
+  },
+  {
+    "id": "graph_first_job_interview_skills",
+    "category": "graph_first",
+    "question": "某岗位面试应该考察哪些能力？",
+    "expected_route": "graph_first",
+    "expected_topic": "jobs",
+    "expected_external_candidate": false
+  },
+  {
+    "id": "graph_first_course_regulation_question_bank",
+    "category": "graph_first",
+    "question": "某课程涉及哪些法规要求和题库知识点？",
+    "expected_route": "graph_first",
+    "expected_topic": null,
+    "expected_external_candidate": false
+  },
+  {
+    "id": "graph_first_customer_low_altitude_path",
+    "category": "graph_first",
+    "question": "某客户如果想做低空业务，应该走什么培训路径？",
+    "expected_route": "graph_first",
+    "expected_topic": "customers",
+    "expected_external_candidate": false
+  }
+]

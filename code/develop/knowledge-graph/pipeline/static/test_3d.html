@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>3D Test</title></head>
+<body style="margin:0;background:#000">
+<div id="status" style="color:white;font:14px monospace;padding:10px">Testing...</div>
+<script src="/three.min.js"></script>
+<script src="/3d-force-graph.min.js"></script>
+<script>
+var s = document.getElementById('status');
+s.innerHTML += '<br>✅ three.js loaded (THREE r' + (THREE.REVISION||'?') + ')';
+s.innerHTML += '<br>✅ ForceGraph3D=' + (typeof ForceGraph3D);
+try {
+  var g = ForceGraph3D()(document.body)
+    .graphData({nodes:[{id:'a'},{id:'b'}],links:[{source:'a',target:'b'}]})
+    .backgroundColor('#000011');
+  s.innerHTML += '<br>✅ 3D graph initialized';
+} catch(e) {
+  s.innerHTML += '<br>❌ ERROR: ' + e.message;
+}
+</script>
+</body></html>

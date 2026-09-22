@@ -1,0 +1,72 @@
+{
+  "generated_at": "2026-06-06T04:27:35+00:00",
+  "package_root": "/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/sync_packages",
+  "replay_root": "/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/remote_replay",
+  "dense_mode": "sample",
+  "ready": true,
+  "domains": [
+    {
+      "domain": "regulation",
+      "ready": true,
+      "replay_mode": "incremental",
+      "incremental_applied": true,
+      "incremental_fallback_reason": null,
+      "checks": {
+        "domain_fingerprint_match": true,
+        "sqlite_chunk_count_match": true,
+        "bm25_fresh": true,
+        "bm25_indexed_docs_match": true,
+        "dense_fresh": true,
+        "neo4j_payload_available": true,
+        "probes_resolve": true
+      },
+      "replay_dir": "/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/remote_replay/regulation",
+      "bm25_indexed_docs": 753,
+      "dense_indexed": 12,
+      "neo4j_nodes": 1156,
+      "neo4j_relationships": 1945
+    },
+    {
+      "domain": "question_bank",
+      "ready": true,
+      "replay_mode": "incremental",
+      "incremental_applied": true,
+      "incremental_fallback_reason": null,
+      "checks": {
+        "domain_fingerprint_match": true,
+        "sqlite_chunk_count_match": true,
+        "bm25_fresh": true,
+        "bm25_indexed_docs_match": true,
+        "dense_fresh": true,
+        "neo4j_payload_available": true,
+        "probes_resolve": true
+      },
+      "replay_dir": "/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/remote_replay/question_bank",
+      "bm25_indexed_docs": 1379,
+      "dense_indexed": 12,
+      "neo4j_nodes": 1924,
+      "neo4j_relationships": 5163
+    },
+    {
+      "domain": "textbook",
+      "ready": true,
+      "replay_mode": "incremental",
+      "incremental_applied": true,
+      "incremental_fallback_reason": null,
+      "checks": {
+        "domain_fingerprint_match": true,
+        "sqlite_chunk_count_match": true,
+        "bm25_fresh": true,
+        "bm25_indexed_docs_match": true,
+        "dense_fresh": true,
+        "neo4j_payload_available": true,
+        "probes_resolve": true
+      },
+      "replay_dir": "/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/remote_replay/textbook",
+      "bm25_indexed_docs": 202,
+      "dense_indexed": 12,
+      "neo4j_nodes": 516,
+      "neo4j_relationships": 73684
+    }
+  ]
+}

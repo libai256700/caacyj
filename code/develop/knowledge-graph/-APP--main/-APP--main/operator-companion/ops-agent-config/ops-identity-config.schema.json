@@ -1,0 +1,205 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:knowledge-qa:ops-identity-gateway-config-v1",
+  "title": "Hash-bound private ops gateway identity configuration",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "identity_verifier", "confirmation_verifier"],
+  "properties": {
+    "schema_version": {
+      "const": "kg-ops-identity-gateway-config-v1"
+    },
+    "identity_verifier": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "algorithm",
+        "issuer",
+        "audience",
+        "secret_ref",
+        "token_source",
+        "time_policy",
+        "claim_mapping",
+        "identity_contract"
+      ],
+      "properties": {
+        "kind": {"const": "hs256-jwt-gateway-v1"},
+        "algorithm": {"const": "HS256"},
+        "issuer": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512,
+          "pattern": "^[^\\r\\n\\u0000]+$"
+        },
+        "audience": {"const": "ops-admin-agent"},
+        "secret_ref": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["value", "encoding"],
+          "properties": {
+            "value": {"const": "secretref:KG_OPS_IDENTITY_HS256_SECRET"},
+            "encoding": {"const": "base64url"}
+          }
+        },
+        "token_source": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["wsgi_environ_key", "scheme"],
+          "properties": {
+            "wsgi_environ_key": {"const": "HTTP_AUTHORIZATION"},
+            "scheme": {"const": "Bearer"}
+          }
+        },
+        "time_policy": {"$ref": "#/$defs/timePolicy"},
+        "claim_mapping": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["subject", "roles", "authn_methods"],
+          "properties": {
+            "subject": {"$ref": "#/$defs/claimName"},
+            "roles": {"$ref": "#/$defs/claimName"},
+            "authn_methods": {"$ref": "#/$defs/claimName"}
+          }
+        },
+        "identity_contract": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "service_account",
+            "token_kind",
+            "network_zone",
+            "required_authn_methods",
+            "allowed_roles"
+          ],
+          "properties": {
+            "service_account": {"const": "ops-admin-agent"},
+            "token_kind": {"const": "ops-admin-access"},
+            "network_zone": {"const": "private-admin"},
+            "required_authn_methods": {
+              "type": "array",
+              "prefixItems": [
+                {"const": "mfa"},
+                {"const": "mtls"},
+                {"const": "oidc"}
+              ],
+              "minItems": 3,
+              "maxItems": 3
+            },
+            "allowed_roles": {
+              "type": "array",
+              "prefixItems": [
+                {"const": "ops-observer"},
+                {"const": "ops-maintainer"}
+              ],
+              "minItems": 2,
+              "maxItems": 2
+            }
+          }
+        }
+      }
+    },
+    "confirmation_verifier": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "algorithm",
+        "issuer",
+        "audience",
+        "secret_ref",
+        "token_source",
+        "time_policy",
+        "claim_mapping",
+        "confirmation_contract"
+      ],
+      "properties": {
+        "kind": {"const": "hs256-jwt-gateway-v1"},
+        "algorithm": {"const": "HS256"},
+        "issuer": {"const": "private-admin-confirmation-gateway"},
+        "audience": {"const": "maintenance-controller-cloud"},
+        "secret_ref": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["value", "encoding"],
+          "properties": {
+            "value": {"const": "secretref:KG_OPS_CONFIRMATION_HS256_SECRET"},
+            "encoding": {"const": "base64url"}
+          }
+        },
+        "token_source": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["wsgi_environ_key", "scheme"],
+          "properties": {
+            "wsgi_environ_key": {
+              "const": "HTTP_X_KG_MAINTENANCE_CONFIRMATION"
+            },
+            "scheme": {"const": "Bearer"}
+          }
+        },
+        "time_policy": {"$ref": "#/$defs/timePolicy"},
+        "claim_mapping": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "plan_id",
+            "confirmation_id",
+            "confirmed_by",
+            "authn_methods",
+            "decision"
+          ],
+          "properties": {
+            "plan_id": {"$ref": "#/$defs/claimName"},
+            "confirmation_id": {"$ref": "#/$defs/claimName"},
+            "confirmed_by": {"$ref": "#/$defs/claimName"},
+            "authn_methods": {"$ref": "#/$defs/claimName"},
+            "decision": {"$ref": "#/$defs/claimName"}
+          }
+        },
+        "confirmation_contract": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "schema_version",
+            "required_authn_methods",
+            "decision"
+          ],
+          "properties": {
+            "schema_version": {"const": "maintenance-confirmation-v2"},
+            "required_authn_methods": {
+              "type": "array",
+              "prefixItems": [{"const": "mfa"}],
+              "minItems": 1,
+              "maxItems": 1
+            },
+            "decision": {"const": "approved"}
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "claimName": {
+      "type": "string",
+      "pattern": "^[A-Za-z][A-Za-z0-9_.:-]{0,63}$"
+    },
+    "timePolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["leeway_seconds", "max_lifetime_seconds"],
+      "properties": {
+        "leeway_seconds": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 60
+        },
+        "max_lifetime_seconds": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 3600
+        }
+      }
+    }
+  }
+}

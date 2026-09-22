@@ -1,0 +1,101 @@
+{
+  "run_id": "type_conflict_governance_20260612_224325",
+  "dry_run": false,
+  "before_conflict_groups": 14,
+  "planned_actions": {
+    "quarantine_company": 3,
+    "merge": 8,
+    "rename_positions": 2,
+    "rename_knowledge_point": 1
+  },
+  "results": [
+    {
+      "name": "【高分成·公司派单】无人机驾驶员（零基础实操培训）",
+      "action": "quarantine_company",
+      "changed": 1
+    },
+    {
+      "name": "地面站任务规划",
+      "action": "merge",
+      "keeper": "4:2176830f-23cb-440d-9ae9-3eba57ba92be:5374",
+      "deleted": 1,
+      "relationships_moved": 12
+    },
+    {
+      "name": "垂直起降固定翼操控",
+      "action": "merge",
+      "keeper": "4:2176830f-23cb-440d-9ae9-3eba57ba92be:5382",
+      "deleted": 1,
+      "relationships_moved": 8
+    },
+    {
+      "name": "多旋翼操控",
+      "action": "merge",
+      "keeper": "4:2176830f-23cb-440d-9ae9-3eba57ba92be:2973",
+      "deleted": 2,
+      "relationships_moved": 63
+    },
+    {
+      "name": "技术支持工程师10-15万/年武汉·东湖新技术产业开发区 在",
+      "action": "quarantine_company",
+      "changed": 1
+    },
+    {
+      "name": "无人机",
+      "action": "rename_positions",
+      "changed": 3
+    },
+    {
+      "name": "无人机教员",
+      "action": "rename_positions",
+      "changed": 4
+    },
+    {
+      "name": "法律法规合规",
+      "action": "merge",
+      "keeper": "4:2176830f-23cb-440d-9ae9-3eba57ba92be:5366",
+      "deleted": 1,
+      "relationships_moved": 28
+    },
+    {
+      "name": "空中交通管制",
+      "action": "rename_knowledge_point",
+      "changed": 1
+    },
+    {
+      "name": "维修装配",
+      "action": "merge",
+      "keeper": "4:2176830f-23cb-440d-9ae9-3eba57ba92be:5396",
+      "deleted": 1,
+      "relationships_moved": 26
+    },
+    {
+      "name": "芸瀚无人机科技(上海)有限公司",
+      "action": "quarantine_company",
+      "changed": 1
+    },
+    {
+      "name": "视距内运行",
+      "action": "merge",
+      "keeper": "4:2176830f-23cb-440d-9ae9-3eba57ba92be:2030",
+      "deleted": 2,
+      "relationships_moved": 44
+    },
+    {
+      "name": "超视距运行",
+      "action": "merge",
+      "keeper": "4:2176830f-23cb-440d-9ae9-3eba57ba92be:259",
+      "deleted": 2,
+      "relationships_moved": 106
+    },
+    {
+      "name": "飞行原理",
+      "action": "merge",
+      "keeper": "4:2176830f-23cb-440d-9ae9-3eba57ba92be:5370",
+      "deleted": 1,
+      "relationships_moved": 8
+    }
+  ],
+  "after_conflict_groups": 0,
+  "report_dir": "/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/review_reports/type_conflict_governance_20260612_224325"
+}

@@ -1,0 +1,14 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<script src="vis-data.min.js"></script>
+<script src="vis-network.min.js"></script>
+<style>body{background:#121212;margin:0}#mynetwork{width:100vw;height:100vh}</style>
+</head><body>
+<div id="mynetwork"></div>
+<script>
+var nodes = new vis.DataSet([
+  {id:1,label:'测试节点',color:{background:'#4A90D9',border:'#2E6DB4'}}
+]);
+var edges = new vis.DataSet([]);
+var data = {nodes:nodes,edges:edges};
+var network = new vis.Network(document.getElementById('mynetwork'), data, {});
+</script></body></html>

@@ -1,0 +1,72 @@
+{
+  "schema_version": "ops-tool-allowlist-v1",
+  "audience": "ops-admin-agent",
+  "network_zone": "private-admin",
+  "tools": [
+    {
+      "tool_id": "hybrid-audit-cloud.authority-identity",
+      "operation": "audit.authority_identity",
+      "mode": "read_only"
+    },
+    {
+      "tool_id": "hybrid-audit-cloud.retrieval-identity",
+      "operation": "audit.retrieval_identity",
+      "mode": "read_only"
+    },
+    {
+      "tool_id": "hybrid-audit-cloud.graph-identity",
+      "operation": "audit.graph_identity",
+      "mode": "read_only"
+    },
+    {
+      "tool_id": "hybrid-audit-cloud.route-summary",
+      "operation": "audit.route_summary",
+      "mode": "read_only"
+    },
+    {
+      "tool_id": "hybrid-audit-cloud.release-identity",
+      "operation": "audit.release_identity",
+      "mode": "read_only"
+    },
+    {
+      "tool_id": "quality-dashboard-cloud.quality",
+      "operation": "dashboard.quality",
+      "mode": "read_only"
+    },
+    {
+      "tool_id": "quality-dashboard-cloud.latency",
+      "operation": "dashboard.latency",
+      "mode": "read_only"
+    },
+    {
+      "tool_id": "quality-dashboard-cloud.errors",
+      "operation": "dashboard.errors",
+      "mode": "read_only"
+    },
+    {
+      "tool_id": "quality-dashboard-cloud.capacity",
+      "operation": "dashboard.capacity",
+      "mode": "read_only"
+    },
+    {
+      "tool_id": "quality-dashboard-cloud.provider-budget",
+      "operation": "dashboard.provider_budget",
+      "mode": "read_only"
+    },
+    {
+      "tool_id": "quality-dashboard-cloud.job-status",
+      "operation": "dashboard.job_status",
+      "mode": "read_only"
+    },
+    {
+      "tool_id": "maintenance-controller-cloud.prepare-job",
+      "operation": "maintenance.prepare_job",
+      "mode": "local_plan_only"
+    },
+    {
+      "tool_id": "maintenance-controller-cloud.submit-job",
+      "operation": "maintenance.submit_job",
+      "mode": "confirmed_allowlisted_job_only"
+    }
+  ]
+}

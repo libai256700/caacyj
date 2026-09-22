@@ -1,0 +1,10 @@
+# cloud-v2-ops-server-dependencies-v1
+# Python 3.14; private WSGI entrypoint only.
+blinker==1.9.0
+click==8.4.1
+Flask==3.1.3
+itsdangerous==2.2.0
+Jinja2==3.1.6
+MarkupSafe==3.0.3
+waitress==3.0.2
+Werkzeug==3.1.8

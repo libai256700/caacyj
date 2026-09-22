@@ -1,0 +1,1414 @@
+{
+  "run_id": "kg_relationship_dedupe_20260612_224352",
+  "created_at": "2026-06-12T22:43:52",
+  "before": {
+    "nodes": 5892,
+    "relationships": 152966,
+    "duplicate_groups": 587,
+    "duplicate_relationships": 587,
+    "has_salary": 0
+  },
+  "sample_duplicate_groups": [
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "云技科技员工手册",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "CAAC",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "云技科技员工手册",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "CAAC教员",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "云技科技员工手册",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "CAXA斯沃",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "云技科技员工手册",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*CAAC/运载销售经理/销售工程师\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "云技科技员工手册",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*CAAC中型多旋翼教员【中山】5-10k经验不限学历不限乐飞智能培训服务1-49人何先生·销售总经理/销售副总裁\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "云技科技员工手册",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*CAAC教练员\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "云技科技员工手册",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*CAAC无人机教员\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "云技科技员工手册",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*CAAC无人机教员（浏阳校区）\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "云技科技员工手册",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*多旋翼无人机教员\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "云技科技员工手册",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*安全性设计专家 (MJ017300)【广州-天河区】30-50k·15薪经验不限学历不限小鹏汽车整车制造美股上市1000\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "云技科技员工手册",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*市场营销策划主任【深圳-龙岗区】25-35k·17薪5-10年统招本科一汽旗翼(深圳)科技有限公司整车制造陈先生·招聘经\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "云技科技员工手册",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*技术支持（行业无人机）\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "云技科技员工手册",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*无人机CAAC培训教员\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "云技科技员工手册",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*无人机培训部门负责人（CAAC 执照 & 人社资格证书方向）\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "云技科技员工手册",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*无人机技术飞手\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "云技科技员工手册",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*无人机教员/助教（宜宾翠屏区西郊基地）\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "云技科技员工手册",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*无人机教员（CAAC）\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "云技科技员工手册",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*无人机教员（行业无人机）\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "云技科技员工手册",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*无人机教员（郫都基地）\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "云技科技员工手册",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*无人机渠道经理\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "云技科技员工手册",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*无人机装配维修技师\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "云技科技员工手册",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*无人机起降场管理员\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "云技科技员工手册",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*无人机飞手+CAAC执照\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "云技科技员工手册",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*无人机飞手\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "云技科技员工手册",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*无人系统运营工程师（需持CAAC执照）\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "云技科技员工手册",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*机械结构工程师【深圳】20-35k3-5年本科某深圳IT服务公司智能硬件/消费电子A轮50-99人刘先生·猎头顾问30分\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "云技科技员工手册",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*航空审计【深圳】80-100k·13薪5-7年统招本科某大型货运/物流/仓储公司货运/物流/仓储融资未公开10000人以\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "云技科技员工手册",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*航空审计经理【深圳】80-100k5-10年本科某深圳大型货运/物流/仓储公司货运/物流/仓储融资未公开10000人以上\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "云技科技员工手册",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*试飞总体专家(A164812)【广州-黄埔区】20-40k·15薪7年以上本科高域科技整车制造融资未公开100-499人\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "云技科技员工手册",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*软件/硬件适航工程师【深圳-南山区】25-50k·14薪3-5年本科边界智控科技航空/航天设备B轮100-499人李诗颖\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "云技科技员工手册",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*运载无人机交付工程师\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "云技科技员工手册",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*适航体系专员【深圳-南山区】20-35k·15薪3-5年统招本科道通智能航空智能硬件/消费电子不需要融资1000-200\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "云技科技员工手册",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*风电运维无人机检修人员\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "云技科技员工手册",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*飞手（国企）\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "云技科技员工手册",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*高级测试工程师【深圳】25-40k·14薪3-5年统招本科某深圳大型电子/半导体/集成电路公司电子/半导体/集成电路A轮\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "云技科技员工手册",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "无人机工程师",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "云技科技员工手册",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "无人机技术",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "云技科技员工手册",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "无人机操作",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "云技科技员工手册",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "无人机飞手·全国",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "云技科技员工手册",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "无人机飞手（可无经验）",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "云技科技员工手册",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "无人机（岗位:海南艾锐奥科技有限公司）",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "云技科技员工手册",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "航拍飞手",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "湖北云技科技有限公司薪酬体系",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "CAAC教员",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "湖北云技科技有限公司薪酬体系",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "CAXA斯沃",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "湖北云技科技有限公司薪酬体系",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*CAAC中型多旋翼教员【中山】5-10k经验不限学历不限乐飞智能培训服务1-49人何先生·销售总经理/销售副总裁\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "湖北云技科技有限公司薪酬体系",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*CAAC教练员\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "湖北云技科技有限公司薪酬体系",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*CAAC无人机教员\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "湖北云技科技有限公司薪酬体系",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*多旋翼无人机教员\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "湖北云技科技有限公司薪酬体系",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*安全性设计专家 (MJ017300)【广州-天河区】30-50k·15薪经验不限学历不限小鹏汽车整车制造美股上市1000\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "湖北云技科技有限公司薪酬体系",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*市场营销策划主任【深圳-龙岗区】25-35k·17薪5-10年统招本科一汽旗翼(深圳)科技有限公司整车制造陈先生·招聘经\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "湖北云技科技有限公司薪酬体系",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*无人机CAAC培训教员\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "湖北云技科技有限公司薪酬体系",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*无人机培训部门负责人（CAAC 执照 & 人社资格证书方向）\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "湖北云技科技有限公司薪酬体系",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*无人机技术飞手\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "湖北云技科技有限公司薪酬体系",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*无人机教员（CAAC）\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "湖北云技科技有限公司薪酬体系",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*无人机教员（郫都基地）\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "湖北云技科技有限公司薪酬体系",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*无人机渠道经理\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "湖北云技科技有限公司薪酬体系",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*无人机起降场管理员\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "湖北云技科技有限公司薪酬体系",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*无人系统运营工程师（需持CAAC执照）\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "湖北云技科技有限公司薪酬体系",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*机械结构工程师【深圳】20-35k3-5年本科某深圳IT服务公司智能硬件/消费电子A轮50-99人刘先生·猎头顾问30分\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "湖北云技科技有限公司薪酬体系",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*航空审计【深圳】80-100k·13薪5-7年统招本科某大型货运/物流/仓储公司货运/物流/仓储融资未公开10000人以\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "湖北云技科技有限公司薪酬体系",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*航空审计经理【深圳】80-100k5-10年本科某深圳大型货运/物流/仓储公司货运/物流/仓储融资未公开10000人以上\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "湖北云技科技有限公司薪酬体系",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*试飞总体专家(A164812)【广州-黄埔区】20-40k·15薪7年以上本科高域科技整车制造融资未公开100-499人\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "湖北云技科技有限公司薪酬体系",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*软件/硬件适航工程师【深圳-南山区】25-50k·14薪3-5年本科边界智控科技航空/航天设备B轮100-499人李诗颖\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "湖北云技科技有限公司薪酬体系",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*运载无人机交付工程师\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "湖北云技科技有限公司薪酬体系",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "\\*\\*适航体系专员【深圳-南山区】20-35k·15薪3-5年统招本科道通智能航空智能硬件/消费电子不需要融资1000-200\\*\\*",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "湖北云技科技有限公司薪酬体系",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "无人机技术",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "湖北云技科技有限公司薪酬体系",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "无人机操作",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "湖北云技科技有限公司薪酬体系",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "无人机飞手·全国",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "湖北云技科技有限公司薪酬体系",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "无人机（岗位:海南艾锐奥科技有限公司）",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "AFFECTS",
+      "start_name": "湖北云技科技有限公司薪酬体系",
+      "start_labels": [
+        "Entity",
+        "Policy"
+      ],
+      "end_name": "航拍飞手",
+      "end_labels": [
+        "Entity",
+        "Position"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "BELONGS_TO",
+      "start_name": "8000-12000元",
+      "start_labels": [
+        "Entity",
+        "Position"
+      ],
+      "end_name": "河南牛人设计网络科技有限公司",
+      "end_labels": [
+        "Company",
+        "Entity"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "BELONGS_TO",
+      "start_name": "CAAC",
+      "start_labels": [
+        "Entity",
+        "Position"
+      ],
+      "end_name": "海南星飞帆科技有限公司",
+      "end_labels": [
+        "Company",
+        "Entity"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "BELONGS_TO",
+      "start_name": "CAAC·全国",
+      "start_labels": [
+        "Entity",
+        "Position"
+      ],
+      "end_name": "未标注招聘公司",
+      "end_labels": [
+        "Company",
+        "Entity"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "BELONGS_TO",
+      "start_name": "CAAC中型多旋翼教员",
+      "start_labels": [
+        "Entity",
+        "Position"
+      ],
+      "end_name": "未标注招聘公司",
+      "end_labels": [
+        "Company",
+        "Entity"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "BELONGS_TO",
+      "start_name": "CAAC四类多旋翼教员",
+      "start_labels": [
+        "Entity",
+        "Position"
+      ],
+      "end_name": "四川视航安全技术有限公司",
+      "end_labels": [
+        "Company",
+        "Entity"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "BELONGS_TO",
+      "start_name": "CAAC招生主播",
+      "start_labels": [
+        "Entity",
+        "Position"
+      ],
+      "end_name": "郑州市上街区育空飞行家科技培训有限责任公司",
+      "end_labels": [
+        "Company",
+        "Entity"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "BELONGS_TO",
+      "start_name": "CAAC教员",
+      "start_labels": [
+        "Entity",
+        "Position"
+      ],
+      "end_name": "东营今领飞航空科技有限公司",
+      "end_labels": [
+        "Company",
+        "Entity"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "BELONGS_TO",
+      "start_name": "CAAC无人机教员（多旋翼）",
+      "start_labels": [
+        "Entity",
+        "Position"
+      ],
+      "end_name": "山西翔霄科技有限公司",
+      "end_labels": [
+        "Company",
+        "Entity"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "BELONGS_TO",
+      "start_name": "CAAC无人机教练员/技术员",
+      "start_labels": [
+        "Entity",
+        "Position"
+      ],
+      "end_name": "中科安飞(合肥)科技有限公司",
+      "end_labels": [
+        "Company",
+        "Entity"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "BELONGS_TO",
+      "start_name": "CAAC超视距多旋翼教员",
+      "start_labels": [
+        "Entity",
+        "Position"
+      ],
+      "end_name": "山东文粮航空科技有限公司",
+      "end_labels": [
+        "Company",
+        "Entity"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "BELONGS_TO",
+      "start_name": "CAXA斯沃",
+      "start_labels": [
+        "Entity",
+        "Position"
+      ],
+      "end_name": "万动力(河南)网络科技有限公司",
+      "end_labels": [
+        "Company",
+        "Entity"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "BELONGS_TO",
+      "start_name": "CFO【甲方A股IPO│无人机/硬科技/高端制造│深圳】【深圳】100-130k·14薪8年以上统招本科某深圳智能硬件/消费电子公司智能硬件/消费电子A轮100",
+      "start_labels": [
+        "Entity",
+        "Position"
+      ],
+      "end_name": "CFO【甲方A股IPO│无人机/硬科技/高端制造│深圳】【深圳】100-130k",
+      "end_labels": [
+        "Company",
+        "Entity"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "BELONGS_TO",
+      "start_name": "FPV特种无人机飞手",
+      "start_labels": [
+        "Entity",
+        "Position"
+      ],
+      "end_name": "中国电子科技南湖研究院",
+      "end_labels": [
+        "Company",
+        "Entity"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "BELONGS_TO",
+      "start_name": "GTM (产品上市经理) (无人机行业,深圳)【深圳】80-100k3-5年本科某上海人力资源服务公司人力资源服务1-49人张先生·猎头顾问3小时前在线",
+      "start_labels": [
+        "Entity",
+        "Position"
+      ],
+      "end_name": "GTM (产品上市经理) (无人机行业,深圳)【深圳】80-100k3-5年本科",
+      "end_labels": [
+        "Company",
+        "Entity"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "BELONGS_TO",
+      "start_name": "HRD【广州】300-500k10年以上硕士某知名公司专业服务100-499人和先生·猎头顾问12小时前在线",
+      "start_labels": [
+        "Entity",
+        "Position"
+      ],
+      "end_name": "HRD【广州】300-500k10年以上硕士某知名公司专业服务100-499人和",
+      "end_labels": [
+        "Company",
+        "Entity"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "BELONGS_TO",
+      "start_name": "HRD【广州】300-500k10年以上硕士某知名公司专业服务100-499人和先生·猎头顾问14小时前在线",
+      "start_labels": [
+        "Entity",
+        "Position"
+      ],
+      "end_name": "HRD【广州】300-500k10年以上硕士某知名公司专业服务100-499人和",
+      "end_labels": [
+        "Company",
+        "Entity"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "BELONGS_TO",
+      "start_name": "HRD【广州】300-500k10年以上硕士某知名公司专业服务100-499人和先生·猎头顾问1天前在线",
+      "start_labels": [
+        "Entity",
+        "Position"
+      ],
+      "end_name": "HRD【广州】300-500k10年以上硕士某知名公司专业服务100-499人和",
+      "end_labels": [
+        "Company",
+        "Entity"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "BELONGS_TO",
+      "start_name": "HRD【广州】300-500k10年以上硕士某知名公司专业服务100-499人和先生·猎头顾问1小时前在线",
+      "start_labels": [
+        "Entity",
+        "Position"
+      ],
+      "end_name": "HRD【广州】300-500k10年以上硕士某知名公司专业服务100-499人和",
+      "end_labels": [
+        "Company",
+        "Entity"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "BELONGS_TO",
+      "start_name": "Order Management Specialist",
+      "start_labels": [
+        "Entity",
+        "Position"
+      ],
+      "end_name": "卡尔蔡司光学（中国）有限公司",
+      "end_labels": [
+        "Company",
+        "Entity"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "BELONGS_TO",
+      "start_name": "Strategic Purchaser",
+      "start_labels": [
+        "Entity",
+        "Position"
+      ],
+      "end_name": "丹佛斯在华子公司",
+      "end_labels": [
+        "Company",
+        "Entity"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "BELONGS_TO",
+      "start_name": "\\*\\*012某国有企业 国有企业 室内设计师 5k-10k元/月武汉本科 更多职位\\*\\*",
+      "start_labels": [
+        "Entity",
+        "Position"
+      ],
+      "end_name": "012某国有企业 国有企业 室内设计师 5k-10k元/月武",
+      "end_labels": [
+        "Company",
+        "Entity"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "BELONGS_TO",
+      "start_name": "\\*\\*013某国有企业 国有企业 项目经理 7k-10k元/月大专5年-10年工作经验 更多职位\\*\\*",
+      "start_labels": [
+        "Entity",
+        "Position"
+      ],
+      "end_name": "013某国有企业 国有企业 项目经理 7k-10k元/月大专",
+      "end_labels": [
+        "Company",
+        "Entity"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "BELONGS_TO",
+      "start_name": "\\*\\*CAAC/运载销售经理/销售工程师\\*\\*",
+      "start_labels": [
+        "Entity",
+        "Position"
+      ],
+      "end_name": "江苏苏欣农机连锁有限公司",
+      "end_labels": [
+        "Company",
+        "Entity"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "BELONGS_TO",
+      "start_name": "\\*\\*CAAC中型多旋翼教员【中山】5-10k经验不限学历不限乐飞智能培训服务1-49人何先生·销售总经理/销售副总裁\\*\\*",
+      "start_labels": [
+        "Entity",
+        "Position"
+      ],
+      "end_name": "未标注招聘公司",
+      "end_labels": [
+        "Company",
+        "Entity"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "BELONGS_TO",
+      "start_name": "\\*\\*CAAC教练员\\*\\*",
+      "start_labels": [
+        "Entity",
+        "Position"
+      ],
+      "end_name": "佳木斯力佳集团有限公司",
+      "end_labels": [
+        "Company",
+        "Entity"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "BELONGS_TO",
+      "start_name": "\\*\\*CAAC无人机教员\\*\\*",
+      "start_labels": [
+        "Entity",
+        "Position"
+      ],
+      "end_name": "内蒙古天蓝蓝航空科技有限公司",
+      "end_labels": [
+        "Company",
+        "Entity"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "BELONGS_TO",
+      "start_name": "\\*\\*CAAC无人机教员（浏阳校区）\\*\\*",
+      "start_labels": [
+        "Entity",
+        "Position"
+      ],
+      "end_name": "5000-6000元",
+      "end_labels": [
+        "Company",
+        "Entity"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "BELONGS_TO",
+      "start_name": "\\*\\*CAAC理论课讲师\\*\\*",
+      "start_labels": [
+        "Entity",
+        "Position"
+      ],
+      "end_name": "吉林省迅航智能科技有限公司",
+      "end_labels": [
+        "Company",
+        "Entity"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "BELONGS_TO",
+      "start_name": "\\*\\*FPV无人机市场专员【深圳-宝安区】12-30k经验不限学历不限东莞市银燕电气科技有限公司机械/设备融资未公开100-4\\*\\*",
+      "start_labels": [
+        "Entity",
+        "Position"
+      ],
+      "end_name": "FPV无人机市场专员【深圳-宝安区】12-30k经验不限学历",
+      "end_labels": [
+        "Company",
+        "Entity"
+      ],
+      "c": 2
+    },
+    {
+      "rel_type": "BELONGS_TO",
+      "start_name": "\\*\\*HRD【广州】300-500k10年以上硕士某知名公司专业服务100-499人和先生·猎头顾问18小时前在线\\*\\*",
+      "start_labels": [
+        "Entity",
+        "Position"
+      ],
+      "end_name": "HRD【广州】300-500k10年以上硕士某知名公司专业服",
+      "end_labels": [
+        "Company",
+        "Entity"
+      ],
+      "c": 2
+    }
+  ],
+  "has_salary_edges": []
+}

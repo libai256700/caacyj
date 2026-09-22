@@ -1,0 +1,4 @@
+interface:
+  display_name: "无人机入行评测"
+  short_description: "复用无人机入行评测规则、画像方向匹配、报告校验与跨应用接入能力"
+  default_prompt: "使用 $evaluation-report 根据 V3 问卷数据生成并校验无人机入行评测报告。"

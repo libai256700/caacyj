@@ -1,0 +1,9 @@
+{
+  "run_id": "type_conflict_governance_20260612_224408",
+  "dry_run": true,
+  "before_conflict_groups": 0,
+  "planned_actions": {},
+  "results": [],
+  "after_conflict_groups": 0,
+  "report_dir": "/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/review_reports/type_conflict_governance_20260612_224408"
+}

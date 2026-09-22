@@ -1,0 +1,110 @@
+{
+  "schema_version": "ops-job-allowlist-v1",
+  "audience": "maintenance-controller-cloud",
+  "requires_second_confirmation": true,
+  "jobs": [
+    {
+      "job_type": "collect_identity_snapshot",
+      "executor": "read-only-snapshotter",
+      "write_scope": "none",
+      "required_parameters": ["suite_release_id"]
+    },
+    {
+      "job_type": "run_sealed_regression",
+      "executor": "candidate-gate-runner",
+      "write_scope": "candidate_receipt_only",
+      "required_parameters": [
+        "candidate_release_id",
+        "fixture_id",
+        "fixture_sha256",
+        "serial",
+        "retry_count"
+      ]
+    },
+    {
+      "job_type": "rebuild_candidate_bm25",
+      "executor": "builder",
+      "write_scope": "candidate_only",
+      "required_parameters": [
+        "candidate_release_id",
+        "source_release_id",
+        "authority_sha256"
+      ]
+    },
+    {
+      "job_type": "rebuild_candidate_chunk_vector",
+      "executor": "builder",
+      "write_scope": "candidate_only",
+      "required_parameters": [
+        "candidate_release_id",
+        "source_release_id",
+        "authority_sha256",
+        "embedding_manifest_sha256"
+      ]
+    },
+    {
+      "job_type": "rebuild_candidate_entity_vector",
+      "executor": "builder",
+      "write_scope": "candidate_only",
+      "required_parameters": [
+        "candidate_release_id",
+        "source_release_id",
+        "authority_sha256",
+        "embedding_manifest_sha256"
+      ]
+    },
+    {
+      "job_type": "rebuild_candidate_graph",
+      "executor": "builder",
+      "write_scope": "candidate_only",
+      "required_parameters": [
+        "candidate_release_id",
+        "source_release_id",
+        "authority_sha256"
+      ]
+    },
+    {
+      "job_type": "compare_active_candidate_manifest",
+      "executor": "read-only-comparator",
+      "write_scope": "none",
+      "required_parameters": ["active_release_id", "candidate_release_id"]
+    },
+    {
+      "job_type": "generate_rollback_plan",
+      "executor": "plan-generator",
+      "write_scope": "candidate_receipt_only",
+      "required_parameters": ["active_release_id", "rollback_release_id"]
+    },
+    {
+      "job_type": "generate_switch_plan",
+      "executor": "plan-generator",
+      "write_scope": "candidate_receipt_only",
+      "required_parameters": ["active_release_id", "candidate_release_id"]
+    },
+    {
+      "job_type": "generate_cleanup_plan",
+      "executor": "plan-generator",
+      "write_scope": "candidate_receipt_only",
+      "required_parameters": ["active_release_id", "retired_release_id"]
+    },
+    {
+      "job_type": "verify_exact_delete_target",
+      "executor": "read-only-target-verifier",
+      "write_scope": "none",
+      "required_parameters": [
+        "active_release_id",
+        "target_kind",
+        "target_id",
+        "expected_manifest_sha256"
+      ]
+    }
+  ],
+  "forbidden_effects": [
+    "active_write",
+    "release_switch",
+    "service_restart",
+    "rollback_execution",
+    "delete_execution",
+    "arbitrary_command"
+  ]
+}

@@ -1,0 +1,485 @@
+{
+  "generated_at": "2026-06-12T14:44:09+00:00",
+  "ontology": "/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/docs/business_ontology.yaml",
+  "project_root": "/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph",
+  "neo4j_uri": "bolt://localhost:7687",
+  "sqlite_evidence_store": {
+    "path": "/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/rag_chunks.db",
+    "chunk_count": 2419,
+    "doc_count": 25
+  },
+  "node_coverage": {
+    "summary": {
+      "graph_nodes": 5892,
+      "entity_nodes_excluding_documents": 5814,
+      "with_source_doc_or_csv": 5814,
+      "with_doc_source": 5814,
+      "with_csv_source": 4012,
+      "source_doc_resolves_to_sqlite": 3377,
+      "with_chunk_id": 5347,
+      "with_valid_chunk_id": 5229,
+      "isolated_entities": 0,
+      "with_source_doc_or_csv_rate": 1.0,
+      "source_doc_resolves_to_sqlite_rate": 0.5808,
+      "with_valid_chunk_id_rate": 0.8994,
+      "isolated_entities_rate": 0.0
+    },
+    "domains": {
+      "company": {
+        "entities": 200,
+        "with_source_doc_or_csv": 200,
+        "with_doc_source": 200,
+        "with_csv_source": 21,
+        "source_doc_resolves_to_sqlite": 199,
+        "with_chunk_id": 140,
+        "with_valid_chunk_id": 140,
+        "isolated_entities": 0,
+        "entity_types": {
+          "Policy": 49,
+          "KnowledgePoint": 45,
+          "Position": 17,
+          "ChunkRef": 15,
+          "Course": 15,
+          "Organization": 14,
+          "Regulation": 12,
+          "Event": 10,
+          "Category": 9,
+          "Skill": 8,
+          "Certification": 2,
+          "Company": 2,
+          "Location": 2
+        },
+        "isolated_examples": [],
+        "with_source_doc_or_csv_rate": 1.0,
+        "source_doc_resolves_to_sqlite_rate": 0.995,
+        "with_valid_chunk_id_rate": 0.7,
+        "isolated_entities_rate": 0.0
+      },
+      "course": {
+        "entities": 281,
+        "with_source_doc_or_csv": 281,
+        "with_doc_source": 281,
+        "with_csv_source": 129,
+        "source_doc_resolves_to_sqlite": 180,
+        "with_chunk_id": 194,
+        "with_valid_chunk_id": 194,
+        "isolated_entities": 0,
+        "entity_types": {
+          "Value": 86,
+          "Course": 46,
+          "KnowledgePoint": 37,
+          "Skill": 34,
+          "Certification": 18,
+          "ChunkRef": 14,
+          "SalaryRange": 8,
+          "Category": 6,
+          "WeightClass": 6,
+          "TrainingTrack": 5,
+          "AircraftType": 4,
+          "LicenseLevel": 4,
+          "Organization": 4,
+          "Event": 3,
+          "Location": 3,
+          "Regulation": 2,
+          "Policy": 1
+        },
+        "isolated_examples": [],
+        "with_source_doc_or_csv_rate": 1.0,
+        "source_doc_resolves_to_sqlite_rate": 0.6406,
+        "with_valid_chunk_id_rate": 0.6904,
+        "isolated_entities_rate": 0.0
+      },
+      "customer": {
+        "entities": 585,
+        "with_source_doc_or_csv": 585,
+        "with_doc_source": 585,
+        "with_csv_source": 585,
+        "source_doc_resolves_to_sqlite": 0,
+        "with_chunk_id": 585,
+        "with_valid_chunk_id": 585,
+        "isolated_entities": 0,
+        "entity_types": {
+          "Customer": 585
+        },
+        "isolated_examples": [],
+        "with_source_doc_or_csv_rate": 1.0,
+        "source_doc_resolves_to_sqlite_rate": 0.0,
+        "with_valid_chunk_id_rate": 1.0,
+        "isolated_entities_rate": 0.0
+      },
+      "instructor": {
+        "entities": 5,
+        "with_source_doc_or_csv": 5,
+        "with_doc_source": 5,
+        "with_csv_source": 3,
+        "source_doc_resolves_to_sqlite": 2,
+        "with_chunk_id": 5,
+        "with_valid_chunk_id": 5,
+        "isolated_entities": 0,
+        "entity_types": {
+          "Instructor": 3,
+          "Person": 2
+        },
+        "isolated_examples": [],
+        "with_source_doc_or_csv_rate": 1.0,
+        "source_doc_resolves_to_sqlite_rate": 0.4,
+        "with_valid_chunk_id_rate": 1.0,
+        "isolated_entities_rate": 0.0
+      },
+      "job_market": {
+        "entities": 778,
+        "with_source_doc_or_csv": 778,
+        "with_doc_source": 778,
+        "with_csv_source": 778,
+        "source_doc_resolves_to_sqlite": 0,
+        "with_chunk_id": 778,
+        "with_valid_chunk_id": 778,
+        "isolated_entities": 0,
+        "entity_types": {
+          "Position": 470,
+          "Company": 293,
+          "RejectedCompany": 15
+        },
+        "isolated_examples": [],
+        "with_source_doc_or_csv_rate": 1.0,
+        "source_doc_resolves_to_sqlite_rate": 0.0,
+        "with_valid_chunk_id_rate": 1.0,
+        "isolated_entities_rate": 0.0
+      },
+      "question_bank": {
+        "entities": 2664,
+        "with_source_doc_or_csv": 2664,
+        "with_doc_source": 2664,
+        "with_csv_source": 1745,
+        "source_doc_resolves_to_sqlite": 2226,
+        "with_chunk_id": 2427,
+        "with_valid_chunk_id": 2309,
+        "isolated_entities": 0,
+        "entity_types": {
+          "ChunkRef": 1704,
+          "KnowledgePoint": 750,
+          "Skill": 108,
+          "Section": 40,
+          "Scenario": 31,
+          "Chapter": 12,
+          "QuestionBank": 11,
+          "Regulation": 4,
+          "AircraftType": 2,
+          "Certification": 2
+        },
+        "isolated_examples": [],
+        "with_source_doc_or_csv_rate": 1.0,
+        "source_doc_resolves_to_sqlite_rate": 0.8356,
+        "with_valid_chunk_id_rate": 0.8667,
+        "isolated_entities_rate": 0.0
+      },
+      "regulation": {
+        "entities": 1217,
+        "with_source_doc_or_csv": 1217,
+        "with_doc_source": 1217,
+        "with_csv_source": 690,
+        "source_doc_resolves_to_sqlite": 747,
+        "with_chunk_id": 1135,
+        "with_valid_chunk_id": 1135,
+        "isolated_entities": 0,
+        "entity_types": {
+          "ChunkRef": 686,
+          "KnowledgePoint": 230,
+          "Regulation": 121,
+          "Certification": 62,
+          "Policy": 46,
+          "Organization": 27,
+          "Skill": 14,
+          "LicenseLevel": 11,
+          "Chapter": 7,
+          "AircraftType": 6,
+          "Category": 3,
+          "Exam": 2,
+          "Event": 1,
+          "Location": 1
+        },
+        "isolated_examples": [],
+        "with_source_doc_or_csv_rate": 1.0,
+        "source_doc_resolves_to_sqlite_rate": 0.6138,
+        "with_valid_chunk_id_rate": 0.9326,
+        "isolated_entities_rate": 0.0
+      },
+      "student": {
+        "entities": 61,
+        "with_source_doc_or_csv": 61,
+        "with_doc_source": 61,
+        "with_csv_source": 61,
+        "source_doc_resolves_to_sqlite": 0,
+        "with_chunk_id": 61,
+        "with_valid_chunk_id": 61,
+        "isolated_entities": 0,
+        "entity_types": {
+          "Student": 61
+        },
+        "isolated_examples": [],
+        "with_source_doc_or_csv_rate": 1.0,
+        "source_doc_resolves_to_sqlite_rate": 0.0,
+        "with_valid_chunk_id_rate": 1.0,
+        "isolated_entities_rate": 0.0
+      },
+      "unmapped": {
+        "entities": 23,
+        "with_source_doc_or_csv": 23,
+        "with_doc_source": 23,
+        "with_csv_source": 0,
+        "source_doc_resolves_to_sqlite": 23,
+        "with_chunk_id": 22,
+        "with_valid_chunk_id": 22,
+        "isolated_entities": 0,
+        "entity_types": {
+          "Certification": 10,
+          "Location": 9,
+          "AircraftType": 2,
+          "Category": 1,
+          "LicenseLevel": 1
+        },
+        "isolated_examples": [],
+        "with_source_doc_or_csv_rate": 1.0,
+        "source_doc_resolves_to_sqlite_rate": 1.0,
+        "with_valid_chunk_id_rate": 0.9565,
+        "isolated_entities_rate": 0.0
+      }
+    }
+  },
+  "relation_coverage": {
+    "total_edges": 152379,
+    "relation_type_counts": [
+      {
+        "type": "PART_OF",
+        "edges": 54307
+      },
+      {
+        "type": "DEFINED_BY",
+        "edges": 27296
+      },
+      {
+        "type": "REQUIRES",
+        "edges": 13978
+      },
+      {
+        "type": "MENTIONS",
+        "edges": 8904
+      },
+      {
+        "type": "REGULATES",
+        "edges": 8226
+      },
+      {
+        "type": "REFERS_TO",
+        "edges": 7065
+      },
+      {
+        "type": "DESCRIBES",
+        "edges": 5246
+      },
+      {
+        "type": "OFFERS",
+        "edges": 4974
+      },
+      {
+        "type": "REQUIRES_SKILL",
+        "edges": 4562
+      },
+      {
+        "type": "CONTAINS",
+        "edges": 4162
+      },
+      {
+        "type": "HAS_PROPERTY",
+        "edges": 3625
+      },
+      {
+        "type": "AFFECTS",
+        "edges": 3004
+      },
+      {
+        "type": "ISSUED_BY",
+        "edges": 2416
+      },
+      {
+        "type": "HAS_CLASS",
+        "edges": 2328
+      },
+      {
+        "type": "BELONGS_TO",
+        "edges": 2275
+      },
+      {
+        "type": "LOCATED_AT",
+        "edges": 11
+      }
+    ],
+    "missing_evidence_edges": 0,
+    "missing_evidence_edge_rate": 0.0,
+    "missing_evidence_by_type": []
+  },
+  "core_business_path_coverage": {
+    "total_questions": 7,
+    "passed_questions": 7,
+    "failed_questions": 0,
+    "failed_question_ids": [],
+    "results": [
+      {
+        "id": "gf-001",
+        "question": "某课程适合哪些客户？依据是什么？",
+        "expected_domains": [
+          "course",
+          "customer",
+          "regulation"
+        ],
+        "ok": true,
+        "paths": [
+          {
+            "expected_path": "Customer -> REFERS_TO -> Course -> REGULATES -> Regulation -> CONTAINS -> ChunkRef",
+            "ok": true,
+            "matched_hops": 3,
+            "matched_path": "Customer -> REFERS_TO -> Course -> REGULATES -> Regulation -> CONTAINS -> ChunkRef"
+          }
+        ]
+      },
+      {
+        "id": "gf-002",
+        "question": "某学员下一步应该推荐什么课程？",
+        "expected_domains": [
+          "student",
+          "course",
+          "instructor"
+        ],
+        "ok": true,
+        "paths": [
+          {
+            "expected_path": "Student -> REQUIRES -> Skill -> REQUIRES -> Course",
+            "ok": true,
+            "matched_hops": 2,
+            "matched_path": "Student -> REQUIRES -> Skill -> REQUIRES -> Course"
+          }
+        ]
+      },
+      {
+        "id": "gf-003",
+        "question": "某岗位面试应该考察哪些能力？",
+        "expected_domains": [
+          "job_market",
+          "company",
+          "course"
+        ],
+        "ok": true,
+        "paths": [
+          {
+            "expected_path": "Position -> REQUIRES_SKILL -> Skill -> DEFINED_BY -> Document -> CONTAINS -> ChunkRef",
+            "ok": true,
+            "matched_hops": 3,
+            "matched_path": "Position -> REQUIRES_SKILL -> Skill -> DEFINED_BY -> Document -> CONTAINS -> ChunkRef"
+          }
+        ]
+      },
+      {
+        "id": "gf-004",
+        "question": "某课程涉及哪些法规要求和题库知识点？",
+        "expected_domains": [
+          "course",
+          "regulation",
+          "question_bank"
+        ],
+        "ok": true,
+        "paths": [
+          {
+            "expected_path": "Course -> REGULATES -> Regulation -> MENTIONS -> KnowledgePoint",
+            "ok": true,
+            "matched_hops": 2,
+            "matched_path": "Course -> REGULATES -> Regulation -> MENTIONS -> KnowledgePoint"
+          },
+          {
+            "expected_path": "QuestionBank -> MENTIONS -> KnowledgePoint",
+            "ok": true,
+            "matched_hops": 1,
+            "matched_path": "QuestionBank -> MENTIONS -> KnowledgePoint"
+          }
+        ]
+      },
+      {
+        "id": "gf-005",
+        "question": "某客户如果想做低空业务，应该走什么培训路径？",
+        "expected_domains": [
+          "customer",
+          "course",
+          "regulation"
+        ],
+        "ok": true,
+        "paths": [
+          {
+            "expected_path": "Customer -> REFERS_TO -> Course -> HAS_CLASS -> TrainingTrack",
+            "ok": true,
+            "matched_hops": 2,
+            "matched_path": "Customer -> REFERS_TO -> Course -> HAS_CLASS -> TrainingTrack"
+          },
+          {
+            "expected_path": "Course -> REGULATES -> Regulation",
+            "ok": true,
+            "matched_hops": 1,
+            "matched_path": "Course -> REGULATES -> Regulation"
+          }
+        ]
+      },
+      {
+        "id": "gf-006",
+        "question": "某价格是否和课程内容、客户类型匹配？",
+        "expected_domains": [
+          "course",
+          "customer",
+          "company"
+        ],
+        "ok": true,
+        "paths": [
+          {
+            "expected_path": "Customer -> REFERS_TO -> Course -> HAS_PROPERTY -> Value -> CONTAINS -> ChunkRef",
+            "ok": true,
+            "matched_hops": 3,
+            "matched_path": "Customer -> REFERS_TO -> Course -> HAS_PROPERTY -> Value -> CONTAINS -> ChunkRef"
+          },
+          {
+            "expected_path": "Course -> HAS_PROPERTY -> Value -> DEFINED_BY -> Document -> CONTAINS -> ChunkRef",
+            "ok": true,
+            "matched_hops": 3,
+            "matched_path": "Course -> HAS_PROPERTY -> Value -> DEFINED_BY -> Document -> CONTAINS -> ChunkRef"
+          }
+        ]
+      },
+      {
+        "id": "gf-007",
+        "question": "某教员能否承担某类培训？",
+        "expected_domains": [
+          "instructor",
+          "course",
+          "student"
+        ],
+        "ok": true,
+        "paths": [
+          {
+            "expected_path": "Instructor -> REQUIRES_SKILL -> Skill -> REQUIRES -> Course -> CONTAINS -> ChunkRef",
+            "ok": true,
+            "matched_hops": 3,
+            "matched_path": "Instructor -> REQUIRES_SKILL -> Skill -> REQUIRES -> Course -> CONTAINS -> ChunkRef"
+          },
+          {
+            "expected_path": "Instructor -> REFERS_TO -> Course -> HAS_CLASS -> TrainingTrack",
+            "ok": true,
+            "matched_hops": 2,
+            "matched_path": "Instructor -> REFERS_TO -> Course -> HAS_CLASS -> TrainingTrack"
+          }
+        ]
+      }
+    ]
+  },
+  "notes": [
+    "Domain counts exclude Document nodes and classify legacy hr_policy as company, price as course, textbook as question_bank.",
+    "with_valid_chunk_id requires a node chunk property to resolve to an existing SQLite chunk_id.",
+    "source_doc_resolves_to_sqlite checks graph source_doc-like fields against SQLite doc_name values.",
+    "Core path checks use the expected paths in business_ontology.yaml; ChunkRef is treated as a valid chunk reference on the terminal graph node."
+  ]
+}

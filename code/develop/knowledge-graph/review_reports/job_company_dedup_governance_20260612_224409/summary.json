@@ -1,0 +1,11 @@
+{
+  "run_id": "job_company_dedup_governance_20260612_224409",
+  "dry_run": true,
+  "planned_duplicates": 0,
+  "results": {
+    "companies_merged": 0,
+    "relationships_moved": 0
+  },
+  "sample": [],
+  "report_dir": "/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/review_reports/job_company_dedup_governance_20260612_224409"
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "id": "semantic_company_role_interview",
+    "category": "semantic_graph",
+    "question": "请结合公司结构、业务发展和助教岗位职责，生成5道助教岗位面试题",
+    "expected_route": "rag",
+    "expected_domains": ["company", "job_market"],
+    "must_have_graph": true
+  },
+  {
+    "id": "semantic_course_price_regulation",
+    "category": "semantic_graph",
+    "question": "课程价格是多少，并结合低空空域法规给客户一段销售说明",
+    "expected_route": "hybrid",
+    "expected_domains": ["price", "regulation"],
+    "must_have_graph": true
+  },
+  {
+    "id": "semantic_civil_aviation_law",
+    "category": "semantic_graph",
+    "question": "民用航空法关于无人驾驶航空器适航许可有什么要求？",
+    "expected_route": "rag",
+    "expected_domains": ["regulation"],
+    "must_have_graph": true
+  },
+  {
+    "id": "semantic_question_bank_trace",
+    "category": "semantic_graph",
+    "question": "无人机气象题库里风切变相关知识点应该怎么给学员解释？",
+    "expected_route": "rag",
+    "expected_domains": ["question_bank"],
+    "must_have_graph": true
+  },
+  {
+    "id": "semantic_textbook_concept",
+    "category": "semantic_graph",
+    "question": "教材里无人机系统结构的核心概念有哪些？",
+    "expected_route": "rag",
+    "expected_domains": ["textbook"],
+    "must_have_graph": true
+  },
+  {
+    "id": "semantic_customer_policy",
+    "category": "semantic_graph",
+    "question": "客户跟进制度对意向客户回访有什么要求？",
+    "expected_route": "rag",
+    "expected_domains": ["customer"],
+    "must_have_graph": true
+  }
+]

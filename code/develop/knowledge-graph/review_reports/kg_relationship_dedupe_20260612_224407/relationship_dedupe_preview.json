@@ -1,0 +1,13 @@
+{
+  "run_id": "kg_relationship_dedupe_20260612_224407",
+  "created_at": "2026-06-12T22:44:07",
+  "before": {
+    "nodes": 5892,
+    "relationships": 152379,
+    "duplicate_groups": 0,
+    "duplicate_relationships": 0,
+    "has_salary": 0
+  },
+  "sample_duplicate_groups": [],
+  "has_salary_edges": []
+}

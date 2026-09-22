@@ -1,0 +1,632 @@
+[
+  {
+    "name": "【高分成·公司派单】无人机驾驶员（零基础实操培训）",
+    "types": [
+      "Position",
+      "Company"
+    ],
+    "action": "quarantine_company",
+    "reason": "jobs_csv_pseudo_company",
+    "nodes": [
+      {
+        "id": "4:2176830f-23cb-440d-9ae9-3eba57ba92be:2591",
+        "labels": [
+          "Entity",
+          "Position"
+        ],
+        "primary_type": "Position",
+        "degree": 17,
+        "source_doc": "jobs.csv",
+        "source_table": "jobs.csv",
+        "entity_id": "job_32ece526d386",
+        "company": "【高分成·公司派单】无人机驾驶员（零基础实操培训）"
+      },
+      {
+        "id": "4:2176830f-23cb-440d-9ae9-3eba57ba92be:5861",
+        "labels": [
+          "Company",
+          "Entity"
+        ],
+        "primary_type": "Company",
+        "degree": 1,
+        "source_doc": "jobs.csv",
+        "source_table": "jobs.csv",
+        "entity_id": "company_eec8301e06b3",
+        "company": null
+      }
+    ]
+  },
+  {
+    "name": "地面站任务规划",
+    "types": [
+      "KnowledgePoint",
+      "Skill"
+    ],
+    "action": "merge",
+    "reason": "mergeable_type_set",
+    "nodes": [
+      {
+        "id": "4:2176830f-23cb-440d-9ae9-3eba57ba92be:5374",
+        "labels": [
+          "Entity",
+          "KnowledgePoint",
+          "Skill"
+        ],
+        "primary_type": "KnowledgePoint",
+        "degree": 51,
+        "source_doc": "理论题库_无人机任务规划.txt",
+        "source_table": "derived_from_canonical_csv",
+        "entity_id": "kp_f84acad16989",
+        "company": null
+      },
+      {
+        "id": "4:2176830f-23cb-440d-9ae9-3eba57ba92be:5740",
+        "labels": [
+          "Entity",
+          "Skill"
+        ],
+        "primary_type": "Skill",
+        "degree": 13,
+        "source_doc": "question_banks.csv",
+        "source_table": "derived_from_canonical_csv",
+        "entity_id": "skill_f84acad16989",
+        "company": null
+      }
+    ]
+  },
+  {
+    "name": "垂直起降固定翼操控",
+    "types": [
+      "KnowledgePoint",
+      "Skill"
+    ],
+    "action": "merge",
+    "reason": "mergeable_type_set",
+    "nodes": [
+      {
+        "id": "4:2176830f-23cb-440d-9ae9-3eba57ba92be:5382",
+        "labels": [
+          "Entity",
+          "KnowledgePoint",
+          "Skill"
+        ],
+        "primary_type": "KnowledgePoint",
+        "degree": 47,
+        "source_doc": "question_banks.csv",
+        "source_table": "derived_from_canonical_csv",
+        "entity_id": "kp_75ea1b18958c",
+        "company": null
+      },
+      {
+        "id": "4:2176830f-23cb-440d-9ae9-3eba57ba92be:5736",
+        "labels": [
+          "Entity",
+          "Skill"
+        ],
+        "primary_type": "Skill",
+        "degree": 9,
+        "source_doc": "question_banks.csv",
+        "source_table": "derived_from_canonical_csv",
+        "entity_id": "skill_75ea1b18958c",
+        "company": null
+      }
+    ]
+  },
+  {
+    "name": "多旋翼操控",
+    "types": [
+      "KnowledgePoint",
+      "Skill"
+    ],
+    "action": "merge",
+    "reason": "mergeable_type_set",
+    "nodes": [
+      {
+        "id": "4:2176830f-23cb-440d-9ae9-3eba57ba92be:2973",
+        "labels": [
+          "Entity",
+          "KnowledgePoint",
+          "Skill"
+        ],
+        "primary_type": "KnowledgePoint",
+        "degree": 134,
+        "source_doc": "企业信息_云技科技新员工培训资料.txt",
+        "source_table": "structured_core_relation_rules",
+        "entity_id": "course:Skill:7cdde339c94f",
+        "company": null
+      },
+      {
+        "id": "4:2176830f-23cb-440d-9ae9-3eba57ba92be:5731",
+        "labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "primary_type": "KnowledgePoint",
+        "degree": 38,
+        "source_doc": "理论题库_旋翼无人机.txt",
+        "source_table": "derived_from_canonical_csv",
+        "entity_id": "kp_5ff44b556c54",
+        "company": null
+      },
+      {
+        "id": "4:2176830f-23cb-440d-9ae9-3eba57ba92be:5735",
+        "labels": [
+          "Entity",
+          "Skill"
+        ],
+        "primary_type": "Skill",
+        "degree": 27,
+        "source_doc": "question_banks.csv",
+        "source_table": "derived_from_canonical_csv",
+        "entity_id": "skill_5ff44b556c54",
+        "company": null
+      }
+    ]
+  },
+  {
+    "name": "技术支持工程师10-15万/年武汉·东湖新技术产业开发区 在",
+    "types": [
+      "Position",
+      "Company"
+    ],
+    "action": "quarantine_company",
+    "reason": "jobs_csv_pseudo_company",
+    "nodes": [
+      {
+        "id": "4:2176830f-23cb-440d-9ae9-3eba57ba92be:2829",
+        "labels": [
+          "Entity",
+          "Position"
+        ],
+        "primary_type": "Position",
+        "degree": 9,
+        "source_doc": "jobs.csv",
+        "source_table": "jobs.csv",
+        "entity_id": "job_a62ca019157d",
+        "company": "技术支持工程师10-15万/年武汉·东湖"
+      },
+      {
+        "id": "4:2176830f-23cb-440d-9ae9-3eba57ba92be:5862",
+        "labels": [
+          "Company",
+          "Entity"
+        ],
+        "primary_type": "Company",
+        "degree": 1,
+        "source_doc": "jobs.csv",
+        "source_table": "jobs.csv",
+        "entity_id": "company_860afef1f96b",
+        "company": null
+      }
+    ]
+  },
+  {
+    "name": "无人机",
+    "types": [
+      "KnowledgePoint",
+      "Position"
+    ],
+    "action": "rename_positions",
+    "reason": "position_name_collision",
+    "nodes": [
+      {
+        "id": "4:2176830f-23cb-440d-9ae9-3eba57ba92be:1658",
+        "labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "primary_type": "KnowledgePoint",
+        "degree": 937,
+        "source_doc": "概述",
+        "source_table": null,
+        "entity_id": "general:KnowledgePoint:53b1096c00b4",
+        "company": null
+      },
+      {
+        "id": "4:2176830f-23cb-440d-9ae9-3eba57ba92be:2771",
+        "labels": [
+          "Entity",
+          "Position"
+        ],
+        "primary_type": "Position",
+        "degree": 9,
+        "source_doc": "jobs.csv",
+        "source_table": "jobs.csv",
+        "entity_id": "job_8f8357c2de94",
+        "company": ""
+      },
+      {
+        "id": "4:2176830f-23cb-440d-9ae9-3eba57ba92be:2864",
+        "labels": [
+          "Entity",
+          "Position"
+        ],
+        "primary_type": "Position",
+        "degree": 13,
+        "source_doc": "jobs.csv",
+        "source_table": "jobs.csv",
+        "entity_id": "job_bfc18f51ee61",
+        "company": "海南艾锐奥科技有限公司"
+      },
+      {
+        "id": "4:2176830f-23cb-440d-9ae9-3eba57ba92be:5814",
+        "labels": [
+          "Entity",
+          "Position"
+        ],
+        "primary_type": "Position",
+        "degree": 8,
+        "source_doc": "jobs.csv",
+        "source_table": "jobs.csv",
+        "entity_id": "job_ee1cb3b0d79b",
+        "company": "海南艾锐奥科技有限公司"
+      }
+    ]
+  },
+  {
+    "name": "无人机教员",
+    "types": [
+      "Person",
+      "Position"
+    ],
+    "action": "rename_positions",
+    "reason": "position_name_collision",
+    "nodes": [
+      {
+        "id": "4:2176830f-23cb-440d-9ae9-3eba57ba92be:816",
+        "labels": [
+          "Entity",
+          "Person"
+        ],
+        "primary_type": "Person",
+        "degree": 5,
+        "source_doc": "《民用中小型无人驾驶航空器操控员训练机构规范》",
+        "source_table": null,
+        "entity_id": "general:Person:63a230aecdc7",
+        "company": null
+      },
+      {
+        "id": "4:2176830f-23cb-440d-9ae9-3eba57ba92be:2749",
+        "labels": [
+          "Entity",
+          "Position"
+        ],
+        "primary_type": "Position",
+        "degree": 11,
+        "source_doc": "jobs.csv",
+        "source_table": "jobs.csv",
+        "entity_id": "job_841f768d9ee2",
+        "company": "河南翼动科技有限公司"
+      },
+      {
+        "id": "4:2176830f-23cb-440d-9ae9-3eba57ba92be:2814",
+        "labels": [
+          "Entity",
+          "Position"
+        ],
+        "primary_type": "Position",
+        "degree": 11,
+        "source_doc": "jobs.csv",
+        "source_table": "jobs.csv",
+        "entity_id": "job_a0c5f386a3f1",
+        "company": "中国能源建设集团科技发展有限公司"
+      },
+      {
+        "id": "4:2176830f-23cb-440d-9ae9-3eba57ba92be:2815",
+        "labels": [
+          "Entity",
+          "Position"
+        ],
+        "primary_type": "Position",
+        "degree": 11,
+        "source_doc": "jobs.csv",
+        "source_table": "jobs.csv",
+        "entity_id": "job_a0e702c2b5e3",
+        "company": "某杭州培训服务公司"
+      },
+      {
+        "id": "4:2176830f-23cb-440d-9ae9-3eba57ba92be:2924",
+        "labels": [
+          "Entity",
+          "Position"
+        ],
+        "primary_type": "Position",
+        "degree": 11,
+        "source_doc": "jobs.csv",
+        "source_table": "jobs.csv",
+        "entity_id": "job_e2a1d20eef88",
+        "company": "某广州在线教育公司"
+      }
+    ]
+  },
+  {
+    "name": "法律法规合规",
+    "types": [
+      "Skill",
+      "KnowledgePoint"
+    ],
+    "action": "merge",
+    "reason": "mergeable_type_set",
+    "nodes": [
+      {
+        "id": "4:2176830f-23cb-440d-9ae9-3eba57ba92be:2849",
+        "labels": [
+          "Entity",
+          "Skill"
+        ],
+        "primary_type": "Skill",
+        "degree": 29,
+        "source_doc": "政策法规_民用无人驾驶航空器操控员执照考试管理办法_MD-92-FS-02_2024-05-11.txt",
+        "source_table": "derived_from_canonical_csv",
+        "entity_id": "skill_6630ca8c06b4",
+        "company": null
+      },
+      {
+        "id": "4:2176830f-23cb-440d-9ae9-3eba57ba92be:5366",
+        "labels": [
+          "Entity",
+          "KnowledgePoint",
+          "Skill"
+        ],
+        "primary_type": "KnowledgePoint",
+        "degree": 81,
+        "source_doc": "政策法规_民用无人驾驶航空器操控员执照考试管理办法_MD-92-FS-02_2024-05-11.txt",
+        "source_table": "derived_from_canonical_csv",
+        "entity_id": "kp_6630ca8c06b4",
+        "company": null
+      }
+    ]
+  },
+  {
+    "name": "空中交通管制",
+    "types": [
+      "QuestionBank",
+      "KnowledgePoint"
+    ],
+    "action": "rename_knowledge_point",
+    "reason": "question_bank_title_collision",
+    "nodes": [
+      {
+        "id": "4:2176830f-23cb-440d-9ae9-3eba57ba92be:1920",
+        "labels": [
+          "Entity",
+          "QuestionBank"
+        ],
+        "primary_type": "QuestionBank",
+        "degree": 79,
+        "source_doc": "理论题库_空中交通管制.txt",
+        "source_table": "question_banks.csv",
+        "entity_id": "qbank_6a19fb963d1f",
+        "company": null
+      },
+      {
+        "id": "4:2176830f-23cb-440d-9ae9-3eba57ba92be:5373",
+        "labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "primary_type": "KnowledgePoint",
+        "degree": 37,
+        "source_doc": "理论题库_空中交通管制.txt",
+        "source_table": "derived_from_canonical_csv",
+        "entity_id": "kp_696b9cdf87ab",
+        "company": null
+      }
+    ]
+  },
+  {
+    "name": "维修装配",
+    "types": [
+      "KnowledgePoint",
+      "Skill"
+    ],
+    "action": "merge",
+    "reason": "mergeable_type_set",
+    "nodes": [
+      {
+        "id": "4:2176830f-23cb-440d-9ae9-3eba57ba92be:5396",
+        "labels": [
+          "Entity",
+          "KnowledgePoint",
+          "Skill"
+        ],
+        "primary_type": "KnowledgePoint",
+        "degree": 64,
+        "source_doc": "question_banks.csv",
+        "source_table": "derived_from_canonical_csv",
+        "entity_id": "kp_63c5b07606ac",
+        "company": null
+      },
+      {
+        "id": "4:2176830f-23cb-440d-9ae9-3eba57ba92be:5739",
+        "labels": [
+          "Entity",
+          "Skill"
+        ],
+        "primary_type": "Skill",
+        "degree": 27,
+        "source_doc": "question_banks.csv",
+        "source_table": "derived_from_canonical_csv",
+        "entity_id": "skill_63c5b07606ac",
+        "company": null
+      }
+    ]
+  },
+  {
+    "name": "芸瀚无人机科技(上海)有限公司",
+    "types": [
+      "Position",
+      "Company"
+    ],
+    "action": "quarantine_company",
+    "reason": "jobs_csv_pseudo_company",
+    "nodes": [
+      {
+        "id": "4:2176830f-23cb-440d-9ae9-3eba57ba92be:2740",
+        "labels": [
+          "Entity",
+          "Position"
+        ],
+        "primary_type": "Position",
+        "degree": 9,
+        "source_doc": "jobs.csv",
+        "source_table": "jobs.csv",
+        "entity_id": "job_7f75983c6a84",
+        "company": "潍坊翼心慧飞航空技术有限公司"
+      },
+      {
+        "id": "4:2176830f-23cb-440d-9ae9-3eba57ba92be:5863",
+        "labels": [
+          "Company",
+          "Entity"
+        ],
+        "primary_type": "Company",
+        "degree": 1,
+        "source_doc": "jobs.csv",
+        "source_table": "jobs.csv",
+        "entity_id": "company_d9ffa0ebad7b",
+        "company": null
+      }
+    ]
+  },
+  {
+    "name": "视距内运行",
+    "types": [
+      "KnowledgePoint",
+      "Skill"
+    ],
+    "action": "merge",
+    "reason": "mergeable_type_set",
+    "nodes": [
+      {
+        "id": "4:2176830f-23cb-440d-9ae9-3eba57ba92be:2030",
+        "labels": [
+          "Entity",
+          "KnowledgePoint",
+          "Skill"
+        ],
+        "primary_type": "KnowledgePoint",
+        "degree": 323,
+        "source_doc": "无人机飞行手册",
+        "source_table": null,
+        "entity_id": "general:KnowledgePoint:7f39ebf92b41",
+        "company": null
+      },
+      {
+        "id": "4:2176830f-23cb-440d-9ae9-3eba57ba92be:5737",
+        "labels": [
+          "Entity",
+          "Skill"
+        ],
+        "primary_type": "Skill",
+        "degree": 9,
+        "source_doc": "question_banks.csv",
+        "source_table": "derived_from_canonical_csv",
+        "entity_id": "skill_a285450ce813",
+        "company": null
+      },
+      {
+        "id": "4:2176830f-23cb-440d-9ae9-3eba57ba92be:5738",
+        "labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "primary_type": "KnowledgePoint",
+        "degree": 37,
+        "source_doc": "question_banks.csv",
+        "source_table": "derived_from_canonical_csv",
+        "entity_id": "kp_a285450ce813",
+        "company": null
+      }
+    ]
+  },
+  {
+    "name": "超视距运行",
+    "types": [
+      "KnowledgePoint",
+      "Skill"
+    ],
+    "action": "merge",
+    "reason": "mergeable_type_set",
+    "nodes": [
+      {
+        "id": "4:2176830f-23cb-440d-9ae9-3eba57ba92be:259",
+        "labels": [
+          "Entity",
+          "KnowledgePoint",
+          "Skill"
+        ],
+        "primary_type": "KnowledgePoint",
+        "degree": 169,
+        "source_doc": "CCAR-92部_B章_安全操控与执照",
+        "source_table": null,
+        "entity_id": "regulation:KnowledgePoint:8586ea7341dc",
+        "company": null
+      },
+      {
+        "id": "4:2176830f-23cb-440d-9ae9-3eba57ba92be:2851",
+        "labels": [
+          "Entity",
+          "Skill"
+        ],
+        "primary_type": "Skill",
+        "degree": 63,
+        "source_doc": "政策法规_民用无人驾驶航空器操控员执照考试管理办法_MD-92-FS-02_2024-05-11.txt",
+        "source_table": "derived_from_canonical_csv",
+        "entity_id": "skill_c3c57fbfeb6d",
+        "company": null
+      },
+      {
+        "id": "4:2176830f-23cb-440d-9ae9-3eba57ba92be:5368",
+        "labels": [
+          "Entity",
+          "KnowledgePoint"
+        ],
+        "primary_type": "KnowledgePoint",
+        "degree": 45,
+        "source_doc": "政策法规_民用无人驾驶航空器操控员执照考试管理办法_MD-92-FS-02_2024-05-11.txt",
+        "source_table": "derived_from_canonical_csv",
+        "entity_id": "kp_c3c57fbfeb6d",
+        "company": null
+      }
+    ]
+  },
+  {
+    "name": "飞行原理",
+    "types": [
+      "Skill",
+      "KnowledgePoint"
+    ],
+    "action": "merge",
+    "reason": "mergeable_type_set",
+    "nodes": [
+      {
+        "id": "4:2176830f-23cb-440d-9ae9-3eba57ba92be:5369",
+        "labels": [
+          "Entity",
+          "Skill"
+        ],
+        "primary_type": "Skill",
+        "degree": 9,
+        "source_doc": "政策法规_民用无人驾驶航空器操控员执照考试管理办法_MD-92-FS-02_2024-05-11.txt",
+        "source_table": "derived_from_canonical_csv",
+        "entity_id": "skill_131634fb0334",
+        "company": null
+      },
+      {
+        "id": "4:2176830f-23cb-440d-9ae9-3eba57ba92be:5370",
+        "labels": [
+          "Entity",
+          "KnowledgePoint",
+          "Skill"
+        ],
+        "primary_type": "KnowledgePoint",
+        "degree": 61,
+        "source_doc": "政策法规_民用无人驾驶航空器操控员执照考试管理办法_MD-92-FS-02_2024-05-11.txt",
+        "source_table": "derived_from_canonical_csv",
+        "entity_id": "kp_131634fb0334",
+        "company": null
+      }
+    ]
+  }
+]

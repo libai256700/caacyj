@@ -1,0 +1,730 @@
+{
+  "schema_version": "domain-sync-acceptance-v2",
+  "description": "Sixty offline retrieval checks for domain sync replay packages. Each record validates source count, top evidence reasonableness, and replay SQLite provenance.",
+  "records": [
+    {
+      "id": "regulation-001",
+      "domain": "regulation",
+      "query": "中华人民共和国民用航空法 第二百六十二条 2026年7月1日起施行",
+      "expected_top_doc_contains": "中华人民共和国民用航空法",
+      "expected_top_chunk_ids": [
+        "regulation:cn_civil_aviation_law_2025:art_262"
+      ],
+      "expected_top_text_all": [
+        "第二百六十二条",
+        "2026年7月1日起施行"
+      ]
+    },
+    {
+      "id": "regulation-002",
+      "domain": "regulation",
+      "query": "中华人民共和国民用航空法 第五十六条 民用机场 净空保护",
+      "expected_top_doc_contains": "中华人民共和国民用航空法",
+      "expected_top_chunk_ids": [
+        "regulation:cn_civil_aviation_law_2025:art_056"
+      ],
+      "expected_top_text_all": [
+        "第五十六条",
+        "民用机场"
+      ]
+    },
+    {
+      "id": "regulation-003",
+      "domain": "regulation",
+      "query": "民航法 第九十三条 民用机场净空保护区域 无人驾驶航空器",
+      "expected_top_doc_contains": "中华人民共和国民用航空法",
+      "expected_top_chunk_ids": [
+        "regulation:cn_civil_aviation_law_2025:art_093"
+      ],
+      "expected_top_text_all": [
+        "第九十三条",
+        "净空保护区域"
+      ]
+    },
+    {
+      "id": "regulation-004",
+      "domain": "regulation",
+      "query": "CCAR-92 第92.207条 实名登记注销",
+      "expected_top_doc_contains": "CCAR-92部",
+      "expected_top_chunk_ids": [
+        "regulation:ccar_92:art_092_207"
+      ],
+      "expected_top_text_all": [
+        "第92.207条",
+        "实名登记注销"
+      ]
+    },
+    {
+      "id": "regulation-005",
+      "domain": "regulation",
+      "query": "CCAR-92 第92.211条 实名登记标志",
+      "expected_top_doc_contains": "CCAR-92部",
+      "expected_top_chunk_ids": [
+        "regulation:ccar_92:art_092_211"
+      ],
+      "expected_top_text_all": [
+        "第92.211条",
+        "实名登记标志"
+      ]
+    },
+    {
+      "id": "regulation-006",
+      "domain": "regulation",
+      "query": "CCAR-92 第92.57条 执照和等级的申请材料",
+      "expected_top_doc_contains": "CCAR-92部",
+      "expected_top_chunk_ids": [
+        "regulation:ccar_92:art_092_057"
+      ],
+      "expected_top_text_all": [
+        "第92.57条",
+        "申请材料"
+      ]
+    },
+    {
+      "id": "regulation-007",
+      "domain": "regulation",
+      "query": "CCAR-92 第92.53条 操控员执照和等级",
+      "expected_top_doc_contains": "CCAR-92部",
+      "expected_top_chunk_ids": [
+        "regulation:ccar_92:art_092_053"
+      ],
+      "expected_top_text_all": [
+        "操控员执照",
+        "等级"
+      ]
+    },
+    {
+      "id": "regulation-008",
+      "domain": "regulation",
+      "query": "CCAR-92 第92.51条 安全操控要求 微型 轻型",
+      "expected_top_doc_contains": "CCAR-92部",
+      "expected_top_chunk_ids": [
+        "regulation:ccar_92:art_092_051"
+      ],
+      "expected_top_text_all": [
+        "第92.51条",
+        "安全操控要求"
+      ]
+    },
+    {
+      "id": "regulation-009",
+      "domain": "regulation",
+      "query": "CCAR-92 第92.55条 执照和等级的申请条件",
+      "expected_top_doc_contains": "CCAR-92部",
+      "expected_top_chunk_ids": [
+        "regulation:ccar_92:art_092_055"
+      ],
+      "expected_top_text_all": [
+        "第92.55条",
+        "申请条件"
+      ]
+    },
+    {
+      "id": "regulation-010",
+      "domain": "regulation",
+      "query": "CCAR-92 第92.603条 运营许可适用范围",
+      "expected_top_doc_contains": "CCAR-92部",
+      "expected_top_chunk_ids": [
+        "regulation:ccar_92:art_092_603"
+      ],
+      "expected_top_text_all": [
+        "第92.603条",
+        "运营许可适用范围"
+      ]
+    },
+    {
+      "id": "regulation-011",
+      "domain": "regulation",
+      "query": "CCAR-92 第92.519条 空域保持能力",
+      "expected_top_doc_contains": "CCAR-92部",
+      "expected_top_chunk_ids": [
+        "regulation:ccar_92:art_092_519"
+      ],
+      "expected_top_text_all": [
+        "第92.519条",
+        "空域保持能力"
+      ]
+    },
+    {
+      "id": "regulation-012",
+      "domain": "regulation",
+      "query": "训练机构规范 5.7.2 训练大纲 训练管理手册 检查",
+      "expected_top_doc_contains": "训练机构规范",
+      "expected_top_chunk_ids": [
+        "regulation:uas_training_org_spec:clause_005_007_002"
+      ],
+      "expected_top_text_all": [
+        "5.7.2",
+        "训练大纲",
+        "训练管理手册"
+      ]
+    },
+    {
+      "id": "regulation-013",
+      "domain": "regulation",
+      "query": "飞行教员 近 12 个日历月 不少于 100 小时 带飞云时间",
+      "expected_top_doc_contains": "训练机构规范",
+      "expected_top_chunk_ids": [
+        "regulation:uas_training_org_spec:clause_006_002_001"
+      ],
+      "expected_top_text_all": [
+        "100 小时",
+        "带飞云时间"
+      ]
+    },
+    {
+      "id": "regulation-014",
+      "domain": "regulation",
+      "query": "训练机构 多旋翼级别等级课程 不少于 2 名飞行教员",
+      "expected_top_doc_contains": "训练机构规范",
+      "expected_top_chunk_ids": [
+        "regulation:uas_training_org_spec:clause_006_003_002"
+      ],
+      "expected_top_text_all": [
+        "不少于 2 名",
+        "不少于 3 名",
+        "飞行教员"
+      ]
+    },
+    {
+      "id": "regulation-015",
+      "domain": "regulation",
+      "query": "训练机构 教员 不应以任何形式在其他训练机构兼职",
+      "expected_top_doc_contains": "训练机构规范",
+      "expected_top_chunk_ids": [
+        "regulation:uas_training_org_spec:clause_006_004_001"
+      ],
+      "expected_top_text_all": [
+        "不应以任何形式",
+        "兼职"
+      ]
+    },
+    {
+      "id": "regulation-016",
+      "domain": "regulation",
+      "query": "训练机构 训练数据留存不少于 3 年 可追溯",
+      "expected_top_doc_contains": "训练机构规范",
+      "expected_top_chunk_ids": [
+        "regulation:uas_training_org_spec:clause_007_005_003"
+      ],
+      "expected_top_text_all": [
+        "训练数据留存不少于 3 年",
+        "可追溯"
+      ]
+    },
+    {
+      "id": "regulation-017",
+      "domain": "regulation",
+      "query": "训练机构 教室 训练室 面积 容纳不少于20名学员",
+      "expected_top_doc_contains": "训练机构规范",
+      "expected_top_chunk_ids": [
+        "regulation:uas_training_org_spec:clause_008_004_002"
+      ],
+      "expected_top_text_all": [
+        "8.4.2",
+        "容纳不少于20名学员"
+      ]
+    },
+    {
+      "id": "regulation-018",
+      "domain": "regulation",
+      "query": "训练机构 空域 不应以租借 转让 共用 挂靠",
+      "expected_top_doc_contains": "训练机构规范",
+      "expected_top_chunk_ids": [
+        "regulation:uas_training_org_spec:clause_008_005_002"
+      ],
+      "expected_top_text_all": [
+        "租借",
+        "转让",
+        "挂靠"
+      ]
+    },
+    {
+      "id": "regulation-019",
+      "domain": "regulation",
+      "query": "训练机构 10.1.2 教员等级 教学技巧 学习过程",
+      "expected_top_doc_contains": "训练机构规范",
+      "expected_top_chunk_ids": [
+        "regulation:uas_training_org_spec:clause_010_001_002"
+      ],
+      "expected_top_text_all": [
+        "10.1.2",
+        "教学技巧",
+        "学习过程"
+      ]
+    },
+    {
+      "id": "regulation-020",
+      "domain": "regulation",
+      "query": "训练机构 11.1 训练大纲内容 学员进入条件",
+      "expected_top_doc_contains": "训练机构规范",
+      "expected_top_chunk_ids": [
+        "regulation:uas_training_org_spec:clause_011_001_001"
+      ],
+      "expected_top_text_all": [
+        "11.1.1",
+        "学员的进入条件"
+      ]
+    },
+    {
+      "id": "question-bank-001",
+      "domain": "question_bank",
+      "query": "GPS 可以提供哪些信息",
+      "expected_top_text_any": [
+        "GPS",
+        "位置",
+        "方向"
+      ],
+      "expected_top_doc_any": [
+        "无人机任务规划",
+        "综合问答"
+      ]
+    },
+    {
+      "id": "question-bank-002",
+      "domain": "question_bank",
+      "query": "无人机任务规划包括哪些内容",
+      "expected_top_doc_contains": "无人机任务规划",
+      "expected_top_text_any": [
+        "任务规划",
+        "航线规划",
+        "飞行高度速度"
+      ]
+    },
+    {
+      "id": "question-bank-003",
+      "domain": "question_bank",
+      "query": "地面站的主要功能是什么",
+      "expected_top_doc_contains": "系统组成及介绍",
+      "expected_top_text_any": [
+        "地面站",
+        "任务规划",
+        "指挥控制"
+      ]
+    },
+    {
+      "id": "question-bank-004",
+      "domain": "question_bank",
+      "query": "航线规划时需要考虑哪些因素",
+      "expected_top_doc_contains": "无人机任务规划",
+      "expected_top_text_any": [
+        "航线规划",
+        "应急航线",
+        "异常应急措施"
+      ]
+    },
+    {
+      "id": "question-bank-005",
+      "domain": "question_bank",
+      "query": "无人机飞行前检查有哪些项目",
+      "expected_top_text_any": [
+        "飞行预先准备",
+        "飞行直接准备",
+        "起飞前控制站检查",
+        "预规划航线"
+      ],
+      "expected_top_doc_any": [
+        "无人机任务规划",
+        "无人机操作注意事项"
+      ]
+    },
+    {
+      "id": "question-bank-006",
+      "domain": "question_bank",
+      "query": "低空风切变会造成什么影响",
+      "expected_top_doc_contains": "气象",
+      "expected_top_text_any": [
+        "低空风切变",
+        "起降",
+        "航空器"
+      ]
+    },
+    {
+      "id": "question-bank-007",
+      "domain": "question_bank",
+      "query": "逆风起降为什么更有利",
+      "expected_top_text_any": [
+        "逆风起降",
+        "升力",
+        "空气相对速度"
+      ],
+      "expected_top_doc_any": [
+        "无人机操作注意事项",
+        "气象"
+      ]
+    },
+    {
+      "id": "question-bank-008",
+      "domain": "question_bank",
+      "query": "升力公式和哪些因素有关",
+      "expected_top_doc_contains": "飞行原理与飞行性能",
+      "expected_top_text_any": [
+        "升力",
+        "速度",
+        "迎角",
+        "转速"
+      ]
+    },
+    {
+      "id": "question-bank-009",
+      "domain": "question_bank",
+      "query": "失速的主要原因是什么",
+      "expected_top_doc_contains": "飞行原理与飞行性能",
+      "expected_top_text_any": [
+        "失速",
+        "临界迎角",
+        "大迎角"
+      ]
+    },
+    {
+      "id": "question-bank-010",
+      "domain": "question_bank",
+      "query": "翼型迎角变化对升力有什么影响",
+      "expected_top_doc_contains": "飞行原理与飞行性能",
+      "expected_top_text_any": [
+        "迎角",
+        "升力",
+        "翼型"
+      ]
+    },
+    {
+      "id": "question-bank-011",
+      "domain": "question_bank",
+      "query": "多旋翼无人机有哪些结构组成",
+      "expected_top_doc_contains": "旋翼无人机",
+      "expected_top_text_any": [
+        "多旋翼",
+        "旋翼",
+        "电机"
+      ]
+    },
+    {
+      "id": "question-bank-012",
+      "domain": "question_bank",
+      "query": "旋翼无人机悬停需要满足什么条件",
+      "expected_top_doc_contains": "旋翼无人机",
+      "expected_top_text_any": [
+        "悬停",
+        "诱导阻力",
+        "功率"
+      ]
+    },
+    {
+      "id": "question-bank-013",
+      "domain": "question_bank",
+      "query": "飞机积冰的主要类型有哪些",
+      "expected_top_doc_contains": "气象",
+      "expected_top_text_any": [
+        "积冰",
+        "雾凇",
+        "霜"
+      ]
+    },
+    {
+      "id": "question-bank-014",
+      "domain": "question_bank",
+      "query": "能见度骤降时为什么需要复飞",
+      "expected_top_doc_contains": "无人机操作注意事项",
+      "expected_top_text_any": [
+        "能见度骤降",
+        "复飞",
+        "着陆安全"
+      ]
+    },
+    {
+      "id": "question-bank-015",
+      "domain": "question_bank",
+      "query": "空中交通管制对无人机飞行有什么要求",
+      "expected_top_doc_contains": "空中交通管制",
+      "expected_top_text_any": [
+        "管制空域",
+        "飞越城市上空",
+        "航路"
+      ]
+    },
+    {
+      "id": "question-bank-016",
+      "domain": "question_bank",
+      "query": "无人机操作注意事项有哪些",
+      "expected_top_doc_contains": "无人机操作注意事项",
+      "expected_top_text_any": [
+        "无人机操作注意事项",
+        "逆风起降"
+      ]
+    },
+    {
+      "id": "question-bank-017",
+      "domain": "question_bank",
+      "query": "无人机系统由哪些部分组成",
+      "expected_top_doc_contains": "系统组成及介绍",
+      "expected_top_text_any": [
+        "飞行器平台",
+        "控制站",
+        "无人驾驶航空器系统"
+      ]
+    },
+    {
+      "id": "question-bank-018",
+      "domain": "question_bank",
+      "query": "遥控器 AIL RUD 通道分别控制什么运动",
+      "expected_top_doc_contains": "综合问答",
+      "expected_top_text_any": [
+        "AIL",
+        "RUD",
+        "左、右"
+      ]
+    },
+    {
+      "id": "question-bank-019",
+      "domain": "question_bank",
+      "query": "无人机教员是否应该关心过分自信的学员",
+      "expected_top_doc_contains": "无人机教员题库",
+      "expected_top_text_any": [
+        "过分自信",
+        "学员",
+        "教员"
+      ]
+    },
+    {
+      "id": "question-bank-020",
+      "domain": "question_bank",
+      "query": "多轴飞行器动力电池充电应选用什么充电器",
+      "expected_top_doc_contains": "旋翼无人机",
+      "expected_top_text_any": [
+        "动力电池",
+        "平衡充电器"
+      ]
+    },
+    {
+      "id": "textbook-001",
+      "domain": "textbook",
+      "query": "无人机发动机的作用是什么",
+      "expected_top_doc_contains": "无人机系统结构与设计",
+      "expected_top_text_any": [
+        "动力装置",
+        "发动机",
+        "机翼"
+      ]
+    },
+    {
+      "id": "textbook-002",
+      "domain": "textbook",
+      "query": "固定翼无人机升力如何产生",
+      "expected_top_doc_contains": "无人机技术概论",
+      "expected_top_text_any": [
+        "升力",
+        "压强",
+        "摩擦阻力"
+      ]
+    },
+    {
+      "id": "textbook-003",
+      "domain": "textbook",
+      "query": "多旋翼无人机的结构特点是什么",
+      "expected_top_doc_contains": "无人机系统结构与设计",
+      "expected_top_text_any": [
+        "多轴",
+        "四旋翼",
+        "旋翼"
+      ]
+    },
+    {
+      "id": "textbook-004",
+      "domain": "textbook",
+      "query": "无人机通信链路由哪些部分组成",
+      "expected_top_text_any": [
+        "数据链路",
+        "上行",
+        "下行",
+        "通信设备",
+        "地面站系统"
+      ],
+      "expected_top_doc_any": [
+        "无人机技术概论",
+        "无人机系统结构与设计"
+      ]
+    },
+    {
+      "id": "textbook-005",
+      "domain": "textbook",
+      "query": "无人机导航系统有哪些组成",
+      "expected_top_doc_any": [
+        "无人机系统结构与设计",
+        "无人机技术概论"
+      ],
+      "expected_top_text_any": [
+        "IMU",
+        "GPS",
+        "飞控系统"
+      ]
+    },
+    {
+      "id": "textbook-006",
+      "domain": "textbook",
+      "query": "飞控系统硬件由哪些部分组成",
+      "expected_top_doc_contains": "无人机技术概论",
+      "expected_top_text_any": [
+        "飞控系统",
+        "中央处理器",
+        "姿态传感器"
+      ]
+    },
+    {
+      "id": "textbook-007",
+      "domain": "textbook",
+      "query": "IMU 惯性测量单元包含哪些传感器",
+      "expected_top_doc_contains": "无人机系统结构与设计",
+      "expected_top_text_any": [
+        "IMU",
+        "三轴加速度计",
+        "三轴陀螺仪"
+      ]
+    },
+    {
+      "id": "textbook-008",
+      "domain": "textbook",
+      "query": "无人机任务载荷有哪些类型",
+      "expected_top_doc_contains": "无人机系统结构与设计",
+      "expected_top_text_any": [
+        "任务载荷",
+        "载荷",
+        "功能"
+      ]
+    },
+    {
+      "id": "textbook-009",
+      "domain": "textbook",
+      "query": "固定翼无人机机翼有什么作用",
+      "expected_top_text_any": [
+        "机翼",
+        "固定翼",
+        "机身"
+      ],
+      "expected_top_doc_any": [
+        "无人机系统结构与设计",
+        "无人机技术概论"
+      ]
+    },
+    {
+      "id": "textbook-010",
+      "domain": "textbook",
+      "query": "无人机动力系统包含哪些部件",
+      "expected_top_doc_contains": "无人机系统结构与设计",
+      "expected_top_text_any": [
+        "动力系统",
+        "旋翼系统",
+        "机身"
+      ]
+    },
+    {
+      "id": "textbook-011",
+      "domain": "textbook",
+      "query": "锂电池放电倍率是什么意思",
+      "expected_top_doc_contains": "无人机技术概论",
+      "expected_top_text_any": [
+        "放电倍率",
+        "电池容量",
+        "锂电池"
+      ]
+    },
+    {
+      "id": "textbook-012",
+      "domain": "textbook",
+      "query": "遥控发射机在通信系统中有什么作用",
+      "expected_top_doc_contains": "无人机技术概论",
+      "expected_top_text_any": [
+        "发射机",
+        "通信",
+        "数据链路"
+      ]
+    },
+    {
+      "id": "textbook-013",
+      "domain": "textbook",
+      "query": "数据链路上行和下行分别是什么",
+      "expected_top_doc_contains": "无人机技术概论",
+      "expected_top_text_any": [
+        "上行",
+        "下行",
+        "数据链路"
+      ]
+    },
+    {
+      "id": "textbook-014",
+      "domain": "textbook",
+      "query": "无人机地面站由哪些部分组成",
+      "expected_top_doc_contains": "无人机系统结构与设计",
+      "expected_top_text_any": [
+        "地面站",
+        "数据链路控制",
+        "飞行控制"
+      ]
+    },
+    {
+      "id": "textbook-015",
+      "domain": "textbook",
+      "query": "无人机自动驾驶仪有什么作用",
+      "expected_top_doc_contains": "无人机系统结构与设计",
+      "expected_top_text_any": [
+        "自动驾驶仪",
+        "飞控",
+        "姿态"
+      ]
+    },
+    {
+      "id": "textbook-016",
+      "domain": "textbook",
+      "query": "姿态传感器在飞控系统中有什么作用",
+      "expected_top_doc_contains": "无人机系统结构与设计",
+      "expected_top_text_any": [
+        "姿态传感器",
+        "飞控系统",
+        "传感器"
+      ]
+    },
+    {
+      "id": "textbook-017",
+      "domain": "textbook",
+      "query": "GPS 指南针模块在飞控系统中有什么作用",
+      "expected_top_doc_contains": "无人机系统结构与设计",
+      "expected_top_text_any": [
+        "GPS 指南针",
+        "飞行控制系统",
+        "主控模块"
+      ]
+    },
+    {
+      "id": "textbook-018",
+      "domain": "textbook",
+      "query": "多旋翼机架结构包括哪些部分",
+      "expected_top_doc_contains": "无人机系统结构与设计",
+      "expected_top_text_any": [
+        "多轴",
+        "四旋翼",
+        "起落架"
+      ]
+    },
+    {
+      "id": "textbook-019",
+      "domain": "textbook",
+      "query": "固定翼无人机尾翼有什么作用",
+      "expected_top_doc_contains": "无人机系统结构与设计",
+      "expected_top_text_any": [
+        "尾翼",
+        "机身",
+        "起落装置"
+      ]
+    },
+    {
+      "id": "textbook-020",
+      "domain": "textbook",
+      "query": "无人机回收方式有哪些",
+      "expected_top_doc_contains": "无人机系统结构与设计",
+      "expected_top_text_any": [
+        "回收系统",
+        "垂直起降",
+        "起降场地"
+      ]
+    }
+  ]
+}

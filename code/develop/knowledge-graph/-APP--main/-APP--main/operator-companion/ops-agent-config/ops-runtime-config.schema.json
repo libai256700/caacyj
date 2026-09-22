@@ -1,0 +1,218 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/cloud-v2-ops-runtime-config-v1.json",
+  "title": "Hash-bound production ops runtime configuration",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "mode",
+    "active_root",
+    "identities",
+    "files",
+    "candidate_workspace",
+    "confirmation_ledger",
+    "listen"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "cloud-v2-ops-runtime-config-v1"
+    },
+    "mode": {
+      "const": "production"
+    },
+    "active_root": {
+      "$ref": "#/$defs/absolutePath"
+    },
+    "identities": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "suite_release_id",
+        "data_release_id",
+        "runtime_code_file_set_sha256",
+        "local_vector_release_id",
+        "graph_release_id",
+        "operator_companion_sha256"
+      ],
+      "properties": {
+        "suite_release_id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "data_release_id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "runtime_code_file_set_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "local_vector_release_id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "graph_release_id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "operator_companion_sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      }
+    },
+    "files": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "suite_manifest",
+        "data_release_manifest",
+        "runtime_manifest",
+        "authority_manifest",
+        "authority_database",
+        "bm25_manifest",
+        "bm25_index",
+        "local_vector_manifest",
+        "local_vector_chunk_index",
+        "local_vector_entity_index",
+        "graph_manifest",
+        "graph_data",
+        "quality_summary"
+      ],
+      "properties": {
+        "suite_manifest": {
+          "$ref": "#/$defs/fileBinding"
+        },
+        "data_release_manifest": {
+          "$ref": "#/$defs/fileBinding"
+        },
+        "runtime_manifest": {
+          "$ref": "#/$defs/fileBinding"
+        },
+        "authority_manifest": {
+          "$ref": "#/$defs/fileBinding"
+        },
+        "authority_database": {
+          "$ref": "#/$defs/fileBinding"
+        },
+        "bm25_manifest": {
+          "$ref": "#/$defs/fileBinding"
+        },
+        "bm25_index": {
+          "$ref": "#/$defs/fileBinding"
+        },
+        "local_vector_manifest": {
+          "$ref": "#/$defs/fileBinding"
+        },
+        "local_vector_chunk_index": {
+          "$ref": "#/$defs/fileBinding"
+        },
+        "local_vector_entity_index": {
+          "$ref": "#/$defs/fileBinding"
+        },
+        "graph_manifest": {
+          "$ref": "#/$defs/fileBinding"
+        },
+        "graph_data": {
+          "$ref": "#/$defs/fileBinding"
+        },
+        "quality_summary": {
+          "$ref": "#/$defs/fileBinding"
+        }
+      }
+    },
+    "candidate_workspace": {
+      "$ref": "#/$defs/privateDirectory"
+    },
+    "confirmation_ledger": {
+      "$ref": "#/$defs/privateDirectory"
+    },
+    "listen": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "host",
+        "port",
+        "threads",
+        "allowed_hosts"
+      ],
+      "properties": {
+        "host": {
+          "enum": [
+            "127.0.0.1",
+            "::1",
+            "localhost"
+          ]
+        },
+        "port": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 65535
+        },
+        "threads": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 64
+        },
+        "allowed_hosts": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 6,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 255
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "absolutePath": {
+      "type": "string",
+      "pattern": "^/",
+      "maxLength": 4096
+    },
+    "identifier": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "relativePath": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9._-]+(?:/[A-Za-z0-9._-]+)*$",
+      "maxLength": 4096
+    },
+    "fileBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "properties": {
+        "path": {
+          "$ref": "#/$defs/relativePath"
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      }
+    },
+    "privateDirectory": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "mode"
+      ],
+      "properties": {
+        "path": {
+          "$ref": "#/$defs/absolutePath"
+        },
+        "mode": {
+          "const": "0700"
+        }
+      }
+    }
+  }
+}

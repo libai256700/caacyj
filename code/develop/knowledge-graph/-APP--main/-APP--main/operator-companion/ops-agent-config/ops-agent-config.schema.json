@@ -1,0 +1,207 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:knowledge-qa:ops-agent-config-v1",
+  "title": "Private ops-admin-agent configuration",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "agent_id",
+    "identity",
+    "network",
+    "tool_registry",
+    "allowlist_files",
+    "data_policy",
+    "capabilities"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "ops-agent-config-v1"
+    },
+    "agent_id": {
+      "const": "ops-admin-agent"
+    },
+    "identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "accepted_audience",
+        "rejected_public_audience",
+        "service_account",
+        "token_kind",
+        "required_authn_methods",
+        "required_roles",
+        "credential_source"
+      ],
+      "properties": {
+        "accepted_audience": {
+          "const": "ops-admin-agent"
+        },
+        "rejected_public_audience": {
+          "const": "public-app-agent"
+        },
+        "service_account": {
+          "const": "ops-admin-agent"
+        },
+        "token_kind": {
+          "const": "ops-admin-access"
+        },
+        "required_authn_methods": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "uniqueItems": true,
+          "items": {
+            "enum": ["mfa", "mtls", "oidc"]
+          }
+        },
+        "required_roles": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "uniqueItems": true,
+          "items": {
+            "enum": ["ops-observer", "ops-maintainer"]
+          }
+        },
+        "credential_source": {
+          "const": "verified-private-gateway-claims"
+        }
+      }
+    },
+    "network": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "zone",
+        "route_prefix",
+        "public_ingress",
+        "public_token_rejected"
+      ],
+      "properties": {
+        "zone": {
+          "const": "private-admin"
+        },
+        "route_prefix": {
+          "const": "/ops/"
+        },
+        "public_ingress": {
+          "const": false
+        },
+        "public_token_rejected": {
+          "const": true
+        }
+      }
+    },
+    "tool_registry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "hybrid-audit-cloud",
+        "quality-dashboard-cloud",
+        "maintenance-controller-cloud"
+      ],
+      "properties": {
+        "hybrid-audit-cloud": {
+          "const": true
+        },
+        "quality-dashboard-cloud": {
+          "const": true
+        },
+        "maintenance-controller-cloud": {
+          "const": true
+        }
+      }
+    },
+    "allowlist_files": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tools", "jobs"],
+      "properties": {
+        "tools": {
+          "const": "tool-allowlist.json"
+        },
+        "jobs": {
+          "const": "job-allowlist.json"
+        }
+      }
+    },
+    "data_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["allowed_classes", "forbidden_classes"],
+      "properties": {
+        "allowed_classes": {
+          "type": "array",
+          "minItems": 5,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "sanitized_aggregate_metrics",
+              "release_identities",
+              "error_codes",
+              "diagnostic_codes",
+              "job_status"
+            ]
+          }
+        },
+        "forbidden_classes": {
+          "type": "array",
+          "minItems": 7,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "raw_user_questions",
+              "full_conversations",
+              "knowledge_body_text",
+              "raw_traces",
+              "provider_payloads",
+              "provider_credentials",
+              "command_output"
+            ]
+          }
+        }
+      }
+    },
+    "capabilities": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "root_shell",
+        "arbitrary_shell",
+        "arbitrary_sql",
+        "arbitrary_cypher",
+        "active_write",
+        "arbitrary_delete",
+        "provider_credentials_read",
+        "release_activation"
+      ],
+      "properties": {
+        "root_shell": {
+          "const": false
+        },
+        "arbitrary_shell": {
+          "const": false
+        },
+        "arbitrary_sql": {
+          "const": false
+        },
+        "arbitrary_cypher": {
+          "const": false
+        },
+        "active_write": {
+          "const": false
+        },
+        "arbitrary_delete": {
+          "const": false
+        },
+        "provider_credentials_read": {
+          "const": false
+        },
+        "release_activation": {
+          "const": false
+        }
+      }
+    }
+  }
+}

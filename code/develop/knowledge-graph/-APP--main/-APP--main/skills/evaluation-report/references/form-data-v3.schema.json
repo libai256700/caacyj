@@ -1,0 +1,313 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://caacyj.com/schemas/evaluation-report-v3-portable-3.1.json",
+  "title": "CAACYJ 无人机入行评测 V3 便携契约 3.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "evalVersion",
+    "identity",
+    "backgroundFields",
+    "droneExposure",
+    "caacAwareness",
+    "equipmentAccess",
+    "likert",
+    "concerns",
+    "reportGoals",
+    "truthConfirm",
+    "consent",
+    "processingConsent"
+  ],
+  "properties": {
+    "evalVersion": { "const": 3 },
+    "identity": { "$ref": "#/$defs/identityValue" },
+    "backgroundFields": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 2,
+      "uniqueItems": true,
+      "items": { "$ref": "#/$defs/backgroundValue" }
+    },
+    "backgroundFieldsOther": { "type": "string", "maxLength": 200 },
+    "droneExposure": { "$ref": "#/$defs/droneExposureValue" },
+    "caacAwareness": { "$ref": "#/$defs/caacAwarenessValue" },
+    "equipmentAccess": { "$ref": "#/$defs/equipmentAccessValue" },
+    "likert": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["a1", "a2", "b1", "b2", "c1", "c2", "d1", "d2", "e1", "e2"],
+      "properties": {
+        "a1": { "$ref": "#/$defs/likertValue" },
+        "a2": { "$ref": "#/$defs/likertValue" },
+        "b1": { "$ref": "#/$defs/likertValue" },
+        "b2": { "$ref": "#/$defs/likertValue" },
+        "c1": { "$ref": "#/$defs/likertValue" },
+        "c2": { "$ref": "#/$defs/likertValue" },
+        "d1": { "$ref": "#/$defs/likertValue" },
+        "d2": { "$ref": "#/$defs/likertValue" },
+        "e1": { "$ref": "#/$defs/likertValue" },
+        "e2": { "$ref": "#/$defs/likertValue" }
+      }
+    },
+    "concerns": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 3,
+      "uniqueItems": true,
+      "items": { "$ref": "#/$defs/concernValue" }
+    },
+    "concernsOther": { "type": "string", "maxLength": 500 },
+    "reportGoals": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 3,
+      "uniqueItems": true,
+      "items": { "enum": ["A", "B", "C", "D", "E", "F", "G", "H"] }
+    },
+    "reportGoalsOther": { "type": "string", "maxLength": 500 },
+    "moduleA": { "$ref": "#/$defs/moduleA" },
+    "moduleB": { "$ref": "#/$defs/moduleB" },
+    "moduleC": { "$ref": "#/$defs/moduleC" },
+    "moduleD": { "$ref": "#/$defs/moduleD" },
+    "moduleE": { "$ref": "#/$defs/moduleE" },
+    "extraNote": { "type": "string", "maxLength": 2000 },
+    "nickname": { "type": "string", "maxLength": 80 },
+    "contact": { "type": "string", "maxLength": 200 },
+    "truthConfirm": { "const": "是" },
+    "consent": { "enum": ["同意", "不同意"] },
+    "processingConsent": { "const": "同意" }
+  },
+  "allOf": [
+    {
+      "if": { "required": ["backgroundFields"], "properties": { "backgroundFields": { "contains": { "const": "其他专业或行业" } } } },
+      "then": { "required": ["backgroundFieldsOther"], "properties": { "backgroundFieldsOther": { "minLength": 1 } } }
+    },
+    {
+      "if": { "required": ["backgroundFields"], "properties": { "backgroundFields": { "contains": { "const": "暂无明确相关背景" } } } },
+      "then": { "properties": { "backgroundFields": { "maxItems": 1 } } }
+    },
+    {
+      "if": { "required": ["concerns"], "properties": { "concerns": { "contains": { "const": "其他" } } } },
+      "then": { "required": ["concernsOther"], "properties": { "concernsOther": { "minLength": 1 } } }
+    },
+    {
+      "if": { "required": ["concerns"], "properties": { "concerns": { "contains": { "const": "暂无明显顾虑" } } } },
+      "then": { "properties": { "concerns": { "maxItems": 1 } } }
+    },
+    {
+      "if": { "required": ["reportGoals"], "properties": { "reportGoals": { "contains": { "const": "A" } } } },
+      "then": {
+        "required": ["moduleA"],
+        "properties": {
+          "moduleA": {
+            "required": ["directions", "capabilities", "workFeatures"],
+            "properties": {
+              "directions": { "minItems": 1 },
+              "capabilities": { "minItems": 1 },
+              "workFeatures": { "required": ["长时间户外作业", "经常出差或跨区域项目", "项目制工作，地点和时间存在变化", "前期收入可能不稳定", "需要持续学习、训练或考证", "需要承担较强的飞行与安全责任", "需要维护设备或处理简单故障", "需要较多客户沟通和团队协作"] }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": { "required": ["reportGoals"], "properties": { "reportGoals": { "contains": { "const": "B" } } } },
+      "then": {
+        "required": ["moduleB"],
+        "properties": {
+          "moduleB": {
+            "required": ["purpose", "mode", "weeklyTime", "period", "budget"],
+            "properties": {
+              "purpose": { "$ref": "#/$defs/bPurposeValue" },
+              "mode": { "$ref": "#/$defs/bModeValue" },
+              "weeklyTime": { "$ref": "#/$defs/bWeeklyValue" },
+              "period": { "$ref": "#/$defs/bPeriodValue" },
+              "budget": { "$ref": "#/$defs/bBudgetValue" }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": { "required": ["reportGoals"], "properties": { "reportGoals": { "contains": { "const": "C" } } } },
+      "then": {
+        "required": ["moduleC"],
+        "properties": {
+          "moduleC": {
+            "required": ["careerMode", "priorities", "gaps", "mobility"],
+            "properties": {
+              "careerMode": { "$ref": "#/$defs/cModeValue" },
+              "priorities": { "minItems": 1 },
+              "gaps": { "minItems": 1 },
+              "mobility": { "$ref": "#/$defs/cMobilityValue" }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": { "required": ["reportGoals"], "properties": { "reportGoals": { "contains": { "const": "D" } } } },
+      "then": {
+        "required": ["moduleD"],
+        "properties": {
+          "moduleD": {
+            "required": ["forms", "portfolio", "investment", "barriers"],
+            "properties": {
+              "forms": { "minItems": 1 },
+              "portfolio": { "$ref": "#/$defs/dPortfolioValue" },
+              "investment": { "$ref": "#/$defs/dInvestmentValue" },
+              "barriers": { "minItems": 1 }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": { "required": ["reportGoals"], "properties": { "reportGoals": { "contains": { "const": "E" } } } },
+      "then": {
+        "required": ["moduleE"],
+        "properties": {
+          "moduleE": {
+            "required": ["city", "resourceTypes", "geoScope"],
+            "properties": {
+              "city": { "minLength": 1 },
+              "resourceTypes": { "minItems": 1 },
+              "geoScope": { "$ref": "#/$defs/eGeoScopeValue" }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": { "required": ["reportGoals"], "properties": { "reportGoals": { "contains": { "const": "H" } } } },
+      "then": { "required": ["reportGoalsOther"], "properties": { "reportGoalsOther": { "minLength": 1 } } }
+    }
+  ],
+  "$defs": {
+    "likertValue": { "type": "integer", "minimum": 1, "maximum": 5 },
+    "identityValue": { "enum": ["学生", "职场人士", "自由职业者", "待业/求职中", "创业者", "其他"] },
+    "backgroundValue": { "enum": ["理工/工程/测绘/建筑", "电子/机械/维修/自动化", "农业/植保/农村相关", "摄影摄像/传媒/设计/自媒体", "教育/培训/语言表达", "计算机/软件/数据/AI", "销售/商务/运营/管理", "其他专业或行业", "暂无明确相关背景"] },
+    "droneExposureValue": { "enum": ["完全没有接触，只想先了解", "操作过消费级无人机或参加过体验活动", "有过自学或少量实操，但未参加系统培训", "参加过系统培训或已持有相关证照，但尚未正式从业", "已有稳定项目或相关从业经验"] },
+    "caacAwarenessValue": { "enum": ["完全不了解", "听说过但不清楚", "比较了解", "非常了解"] },
+    "equipmentAccessValue": { "enum": ["没有", "可以借用或偶尔接触", "有可稳定使用的设备"] },
+    "concernValue": { "enum": ["不了解行业真实情况", "不知道自己适合哪个方向", "时间不足", "预算有限", "没有设备或实操机会", "不了解证照与合规要求", "缺少行业资源", "所在城市机会不清晰", "家庭或工作安排受限", "担心收入或就业不稳定", "暂无明显顾虑", "其他"] },
+    "directionValue": { "enum": ["航拍传媒", "工程测绘", "行业巡检", "农业植保", "无人机清洗", "无人机配送", "应急救援", "无人机培训", "装调维修", "无人机表演", "低空运营管理", "暂不清楚，希望系统评估", "其他"] },
+    "capabilityValue": { "enum": ["摄影、剪辑、内容创作或自媒体运营能力", "工程、测绘、施工、CAD或GIS相关基础", "农业、植保、农村场景或相关资源", "电子、机械、维修或自动化基础", "教学培训、课程设计或表达能力", "软件、数据、人工智能或建模工具能力", "销售、商务、运营或客户沟通能力", "行业人脉或项目引荐机会", "无人机设备接触或借用机会", "资金、场地、学校、公司或项目资源", "已有作品、案例或实践经历", "暂无明显资源"] },
+    "acceptValue": { "enum": ["可以接受", "视具体情况决定", "较难接受"] },
+    "bPurposeValue": { "enum": ["先了解行业，判断自己是否适合", "体验飞行，培养兴趣", "学习一项实用技能", "为全职就业或转行做准备", "为副业、接单或项目合作做准备", "为教学培训或科普活动做准备", "满足现有单位或岗位的工作需求", "暂不确定"] },
+    "bModeValue": { "enum": ["线上了解和自学", "线上理论 + 周末线下实操", "短期集中线下培训", "系统考证 + 岗位技能训练", "先体验一次再决定", "暂不确定"] },
+    "bWeeklyValue": { "enum": ["暂时无法稳定安排", "1–3 小时", "4–7 小时", "8 小时以上", "可阶段性集中投入"] },
+    "bPeriodValue": { "enum": ["1 个月以内", "1–2 个月", "2–3 个月", "3–6 个月", "可灵活安排", "暂不确定"] },
+    "bBudgetValue": { "enum": ["5000 元以下", "5000–10000 元", "10000–20000 元", "20000 元以上", "可根据目标决定", "暂不确定"] },
+    "cModeValue": { "enum": ["全职进入相关岗位", "在现有岗位中增加无人机能力", "先实习/兼职积累经验", "先考证再决定", "暂不确定"] },
+    "cPriorityValue": { "enum": ["收入稳定", "收入增长空间", "技术成长", "岗位数量和就业机会", "工作地点与出差频率", "职业发展空间", "兴趣与成就感"] },
+    "cGapValue": { "enum": ["缺少证照", "缺少实操技能", "缺少项目经验", "缺少作品或案例", "不了解岗位要求", "所在城市机会不清晰", "当前工作或学业难以兼顾", "暂不确定"] },
+    "cMobilityValue": { "enum": ["可以接受", "视时间和成本决定", "暂时不能接受", "不确定"] },
+    "dFormValue": { "enum": ["周末或业余时间接单", "航拍/内容创作", "与团队合作参与项目", "无人机培训或科普服务", "基于现有行业资源开展应用项目", "成立团队或创业", "暂不确定"] },
+    "dPortfolioValue": { "enum": ["完全没有", "有少量作品或经历", "已有较完整作品/项目经历", "已有客户或合作资源"] },
+    "dInvestmentValue": { "enum": ["仅接受低成本学习和小范围尝试", "可以投入必要的培训费用，但暂不购买设备", "可以在不影响基本生活的情况下投入培训和基础设备", "可以接受前3—6个月以学习、积累作品和项目经验为主", "希望先加入成熟团队，降低个人投入和试错风险", "暂不确定"] },
+    "dBarrierValue": { "enum": ["技能不足", "缺少证照与合规能力", "缺少设备", "缺少作品或案例", "缺少客户与渠道", "不了解定价与交付流程", "时间不足", "暂不确定"] },
+    "eResourceValue": { "enum": ["培训或考证机构", "无人机体验或实操场地", "设备租借或接触机会", "实习或就业岗位", "项目合作或接单机会", "行业交流社群", "政策与产业园区信息", "其他"] },
+    "eGeoScopeValue": { "enum": ["仅常驻城市", "常驻城市及周边", "省内均可", "可跨省学习或就业", "线上资源也可以"] },
+    "moduleA": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "directions": { "type": "array", "maxItems": 3, "uniqueItems": true, "items": { "$ref": "#/$defs/directionValue" } },
+        "directionsOther": { "type": "string", "maxLength": 200 },
+        "capabilities": { "type": "array", "maxItems": 5, "uniqueItems": true, "items": { "$ref": "#/$defs/capabilityValue" } },
+        "workFeatures": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "长时间户外作业": { "$ref": "#/$defs/acceptValue" },
+            "经常出差或跨区域项目": { "$ref": "#/$defs/acceptValue" },
+            "项目制工作，地点和时间存在变化": { "$ref": "#/$defs/acceptValue" },
+            "前期收入可能不稳定": { "$ref": "#/$defs/acceptValue" },
+            "需要持续学习、训练或考证": { "$ref": "#/$defs/acceptValue" },
+            "需要承担较强的飞行与安全责任": { "$ref": "#/$defs/acceptValue" },
+            "需要维护设备或处理简单故障": { "$ref": "#/$defs/acceptValue" },
+            "需要较多客户沟通和团队协作": { "$ref": "#/$defs/acceptValue" }
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": { "required": ["directions"], "properties": { "directions": { "contains": { "const": "其他" } } } },
+          "then": { "required": ["directionsOther"], "properties": { "directionsOther": { "minLength": 1 } } }
+        },
+        {
+          "if": { "required": ["directions"], "properties": { "directions": { "contains": { "const": "暂不清楚，希望系统评估" } } } },
+          "then": { "properties": { "directions": { "maxItems": 1 } } }
+        },
+        {
+          "if": { "required": ["capabilities"], "properties": { "capabilities": { "contains": { "const": "暂无明显资源" } } } },
+          "then": { "properties": { "capabilities": { "maxItems": 1 } } }
+        }
+      ]
+    },
+    "moduleB": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "purpose": { "anyOf": [{ "$ref": "#/$defs/bPurposeValue" }, { "const": "" }] },
+        "mode": { "anyOf": [{ "$ref": "#/$defs/bModeValue" }, { "const": "" }] },
+        "weeklyTime": { "anyOf": [{ "$ref": "#/$defs/bWeeklyValue" }, { "const": "" }] },
+        "period": { "anyOf": [{ "$ref": "#/$defs/bPeriodValue" }, { "const": "" }] },
+        "budget": { "anyOf": [{ "$ref": "#/$defs/bBudgetValue" }, { "const": "" }] }
+      }
+    },
+    "moduleC": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "careerMode": { "anyOf": [{ "$ref": "#/$defs/cModeValue" }, { "const": "" }] },
+        "priorities": { "type": "array", "maxItems": 2, "uniqueItems": true, "items": { "$ref": "#/$defs/cPriorityValue" } },
+        "gaps": { "type": "array", "maxItems": 3, "uniqueItems": true, "items": { "$ref": "#/$defs/cGapValue" } },
+        "mobility": { "anyOf": [{ "$ref": "#/$defs/cMobilityValue" }, { "const": "" }] }
+      },
+      "allOf": [
+        {
+          "if": { "required": ["gaps"], "properties": { "gaps": { "contains": { "const": "暂不确定" } } } },
+          "then": { "properties": { "gaps": { "maxItems": 1 } } }
+        }
+      ]
+    },
+    "moduleD": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "forms": { "type": "array", "maxItems": 2, "uniqueItems": true, "items": { "$ref": "#/$defs/dFormValue" } },
+        "portfolio": { "anyOf": [{ "$ref": "#/$defs/dPortfolioValue" }, { "const": "" }] },
+        "investment": { "anyOf": [{ "$ref": "#/$defs/dInvestmentValue" }, { "const": "" }] },
+        "barriers": { "type": "array", "maxItems": 3, "uniqueItems": true, "items": { "$ref": "#/$defs/dBarrierValue" } }
+      },
+      "allOf": [
+        {
+          "if": { "required": ["forms"], "properties": { "forms": { "contains": { "const": "暂不确定" } } } },
+          "then": { "properties": { "forms": { "maxItems": 1 } } }
+        },
+        {
+          "if": { "required": ["barriers"], "properties": { "barriers": { "contains": { "const": "暂不确定" } } } },
+          "then": { "properties": { "barriers": { "maxItems": 1 } } }
+        }
+      ]
+    },
+    "moduleE": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "city": { "type": "string", "maxLength": 100 },
+        "resourceTypes": { "type": "array", "maxItems": 3, "uniqueItems": true, "items": { "$ref": "#/$defs/eResourceValue" } },
+        "resourceTypesOther": { "type": "string", "maxLength": 200 },
+        "geoScope": { "anyOf": [{ "$ref": "#/$defs/eGeoScopeValue" }, { "const": "" }] }
+      },
+      "allOf": [
+        {
+          "if": { "required": ["resourceTypes"], "properties": { "resourceTypes": { "contains": { "const": "其他" } } } },
+          "then": { "required": ["resourceTypesOther"], "properties": { "resourceTypesOther": { "minLength": 1 } } }
+        }
+      ]
+    }
+  }
+}

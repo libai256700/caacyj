@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>ai.openclaw.job-crawler-watchdog</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>$PYTHON</string>
+        <string>$WATCHDOG</string>
+    </array>
+    <key>WorkingDirectory</key>
+    <string>$WORKSPACE</string>
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>$HOUR</integer>
+        <key>Minute</key>
+        <integer>$MINUTE</integer>
+    </dict>
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>HOME</key>
+        <string>$HOME</string>
+        <key>OPENCLAW_HOME</key>
+        <string>$OPENCLAW_HOME</string>
+        <key>OPENCLAW_WORKSPACE</key>
+        <string>$WORKSPACE</string>
+        <key>RECRUITMENT_CRAWLER_CONFIG</key>
+        <string>$CONFIG</string>
+        <key>PATH</key>
+        <string>$PATH</string>
+        <key>PYTHONUNBUFFERED</key>
+        <string>1</string>
+        <key>TZ</key>
+        <string>$TIMEZONE</string>
+    </dict>
+    <key>Umask</key>
+    <integer>63</integer>
+    <key>StandardOutPath</key>
+    <string>$STDOUT</string>
+    <key>StandardErrorPath</key>
+    <string>$STDERR</string>
+</dict>
+</plist>

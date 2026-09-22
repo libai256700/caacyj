@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3D 知识图谱</title>
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.157.0/build/three.module.js",
+    "three/addons/": "https://unpkg.com/three@0.157.0/examples/jsm/"
+  }
+}
+</script>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; background:#0a0a1a; color:#e0e0e0; overflow:hidden; height:100vh; }
+canvas { display:block; }
+#info { position:fixed; top:20px; left:20px; background:rgba(20,20,40,0.9); border:1px solid rgba(100,120,255,0.3); border-radius:10px; padding:14px; z-index:100; min-width:220px; backdrop-filter:blur(10px); }
+#info h2 { font-size:15px; color:#8ab4ff; margin-bottom:10px; }
+#info .stat { font-size:12px; color:#999; margin:3px 0; }
+#info .stat strong { color:#8ab4ff; }
+#search { width:100%; padding:7px 10px; border:1px solid rgba(100,120,255,0.3); background:rgba(0,0,0,0.3); border-radius:5px; color:#e0e0e0; font-size:12px; outline:none; margin-bottom:8px; }
+#search:focus { border-color:#5b7cfa; }
+#legend { list-style:none; max-height:300px; overflow-y:auto; }
+#legend li { display:flex; align-items:center; padding:2px 0; cursor:pointer; font-size:11px; border-radius:3px; }
+#legend li:hover { background:rgba(100,120,255,0.1); }
+.ldot { width:8px; height:8px; border-radius:50%; margin-right:6px; flex-shrink:0; border:1px solid rgba(255,255,255,0.2); }
+#bottom { position:fixed; bottom:0; left:0; right:0; height:40px; background:rgba(20,20,40,0.9); border-top:1px solid rgba(100,120,255,0.3); display:flex; align-items:center; padding:0 20px; font-size:12px; z-index:100; color:#888; }
+#bottom .val { color:#8ab4ff; margin-right:20px; }
+#tooltip { position:absolute; display:none; background:rgba(10,10,30,0.95); border:1px solid rgba(100,120,255,0.5); border-radius:6px; padding:6px 10px; font-size:12px; color:#e0e0e0; pointer-events:none; z-index:200; }
+</style>
+</head>
+<body>
+<div id="info">
+  <h2>🔬 3D 知识图谱</h2>
+  <input id="search" type="text" placeholder="搜索节点..." autocomplete="off">
+  <div id="searchResults" style="display:none"></div>
+  <div class="stat">节点: <strong id="nodeCount">-</strong></div>
+  <div class="stat">关系: <strong id="edgeCount">-</strong></div>
+  <ul id="legend"></ul>
+</div>
+<div id="bottom">
+  <span class="val" id="hoverLabel"></span>
+</div>
+<div id="tooltip"></div>
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { CSS2DRenderer, CSS2DObject } from 'three/addons/renderers/CSS2DRenderer.js';
+
+// ── 颜色方案 ──
+const COLORS = {
+  Company:0x4363d8, Course:0xe6194b, Certification:0x3cb44b, KnowledgePoint:0xf032e6,
+  Skill:0xf58231, AircraftType:0x911eb4, LicenseLevel:0x42d4f4, WeightClass:0xbfef45,
+  Category:0x469990, Organization:0xdcbeff, Regulation:0x9A6324, Policy:0x800000,
+  Location:0xaaffc3, Event:0x808000, Person:0xffd8b1, Document:0xa9a9a9
+};
+
+// ── Three.js 初始化 ──
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x0a0a1a);
+const camera = new THREE.PerspectiveCamera(50, window.innerWidth/window.innerHeight, 1, 5000);
+camera.position.set(200, 200, 400);
+const renderer = new THREE.WebGLRenderer({antialias:true});
+renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+document.body.appendChild(renderer.domElement);
+
+const labelRenderer = new CSS2DRenderer();
+labelRenderer.setSize(window.innerWidth, window.innerHeight);
+labelRenderer.domElement.style.position = 'absolute';
+labelRenderer.domElement.style.top = '0';
+labelRenderer.domElement.style.pointerEvents = 'none';
+document.body.appendChild(labelRenderer.domElement);
+
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+controls.dampingFactor = 0.1;
+controls.zoomSpeed = 1.5;
+
+// 光照
+scene.add(new THREE.AmbientLight(0x404060, 2));
+const dirLight = new THREE.DirectionalLight(0xffffff, 1.5);
+dirLight.position.set(1,1,1);
+scene.add(dirLight);
+
+// ── 数据加载 ──
+const nodes = [], nodeMap = {};
+const spheres = new THREE.Group();
+const labels = new THREE.Group();
+scene.add(spheres);
+scene.add(labels);
+
+// 力导向布局的简单实现
+function forceLayout(data, iterations=80) {
+  const ns = data.nodes.map((n,i) => ({...n, x:(Math.random()-0.5)*200, y:(Math.random()-0.5)*200, z:(Math.random()-0.5)*200, vx:0, vy:0, vz:0}));
+  const es = data.edges.map(e => ({...e}));
+  const nm = {};
+  ns.forEach(n => nm[n.id] = n);
+  
+  for(let iter=0; iter<iterations; iter++) {
+    const alpha = 1 - iter/iterations;
+    // 斥力
+    for(let i=0; i<ns.length; i++) {
+      for(let j=i+1; j<ns.length; j++) {
+        const dx = ns[j].x - ns[i].x, dy = ns[j].y - ns[i].y, dz = ns[j].z - ns[i].z;
+        const dist = Math.sqrt(dx*dx+dy*dy+dz*dz) || 1;
+        const f = 80 * alpha / (dist*dist);
+        const fx = f * dx/dist, fy = f * dy/dist, fz = f * dz/dist;
+        ns[i].vx -= fx; ns[i].vy -= fy; ns[i].vz -= fz;
+        ns[j].vx += fx; ns[j].vy += fy; ns[j].vz += fz;
+      }
+    }
+    // 引力 (边)
+    for(const e of es) {
+      const a = nm[e.from], b = nm[e.to];
+      if(!a||!b) continue;
+      const dx = b.x - a.x, dy = b.y - a.y, dz = b.z - a.z;
+      const dist = Math.sqrt(dx*dx+dy*dy+dz*dz) || 1;
+      const f = (dist - 40) * 0.01 * alpha;
+      const fx = f * dx/dist, fy = f * dy/dist, fz = f * dz/dist;
+      a.vx += fx; a.vy += fy; a.vz += fz;
+      b.vx -= fx; b.vy -= fy; b.vz -= fz;
+    }
+    // 中心引力
+    for(const n of ns) {
+      n.vx -= n.x * 0.001 * alpha;
+      n.vy -= n.y * 0.001 * alpha;
+      n.vz -= n.z * 0.001 * alpha;
+    }
+    // 更新位置
+    for(const n of ns) {
+      n.vx *= 0.9; n.vy *= 0.9; n.vz *= 0.9;
+      n.x += n.vx; n.y += n.vy; n.z += n.vz;
+    }
+  }
+  return ns;
+}
+
+function getColor(type) { return COLORS[type] || 0x888888; }
+
+// 加载并渲染
+async function init() {
+  const resp = await fetch('/api/graph-3d');
+  const data = await resp.json();
+  
+  document.getElementById('nodeCount').textContent = data.nodes.length;
+  document.getElementById('edgeCount').textContent = data.edges.length;
+  
+  // 统计类型
+  const typeCount = {};
+  data.nodes.forEach(n => { typeCount[n.type] = (typeCount[n.type]||0)+1; });
+  const legend = document.getElementById('legend');
+  Object.entries(typeCount).sort((a,b)=>b[1]-a[1]).forEach(([t,c]) => {
+    const li = document.createElement('li');
+    li.innerHTML = `<span class="ldot" style="background:#${getColor(t).toString(16).padStart(6,'0')}"></span>${t} <span style="color:#666;margin-left:4px">${c}</span>`;
+    legend.appendChild(li);
+  });
+  
+  // 力导向布局
+  const positions = forceLayout(data);
+  
+  // 创建球体节点
+  const sphereGeo = new THREE.SphereGeometry(4, 16, 16);
+  positions.forEach((n,i) => {
+    const color = getColor(n.type);
+    const mat = new THREE.MeshStandardMaterial({color, roughness:0.4, metalness:0.3, emissive:color, emissiveIntensity:0.1});
+    const sphere = new THREE.Mesh(sphereGeo, mat);
+    sphere.position.set(n.x, n.y, n.z);
+    sphere.userData = n;
+    spheres.add(sphere);
+    
+    // 标签
+    const div = document.createElement('div');
+    div.textContent = n.label || n.id;
+    div.style.cssText = `color:#${color.toString(16).padStart(6,'0')}88;font-size:10px;font-weight:600;white-space:nowrap;pointer-events:none;`;
+    const label = new CSS2DObject(div);
+    label.position.set(n.x, n.y+7, n.z);
+    labels.add(label);
+    
+    nodeMap[n.id] = {sphere, label, data:n};
+  });
+  
+  // 创建边
+  const edgeMat = new THREE.LineBasicMaterial({color:0x334466, transparent:true, opacity:0.4});
+  data.edges.forEach(e => {
+    const from = nodeMap[e.from], to = nodeMap[e.to];
+    if(!from||!to) return;
+    const pts = [from.sphere.position.clone(), to.sphere.position.clone()];
+    const geo = new THREE.BufferGeometry().setFromPoints(pts);
+    const line = new THREE.Line(geo, edgeMat);
+    scene.add(line);
+  });
+  
+  // 粒子背景
+  const starGeo = new THREE.BufferGeometry();
+  const starVerts = [];
+  for(let i=0; i<500; i++) {
+    starVerts.push((Math.random()-0.5)*1000, (Math.random()-0.5)*1000, (Math.random()-0.5)*1000);
+  }
+  starGeo.setAttribute('position', new THREE.Float32BufferAttribute(starVerts, 3));
+  const starMat = new THREE.PointsMaterial({color:0x4466aa, size:0.5});
+  const stars = new THREE.Points(starGeo, starMat);
+  scene.add(stars);
+}
+
+// ── 射线检测 ──
+const raycaster = new THREE.Raycaster();
+const mouse = new THREE.Vector2();
+let hovered = null;
+
+renderer.domElement.addEventListener('mousemove', e => {
+  mouse.x = (e.clientX/window.innerWidth)*2-1;
+  mouse.y = -(e.clientY/window.innerHeight)*2+1;
+  raycaster.setFromCamera(mouse, camera);
+  const hits = raycaster.intersectObjects(spheres.children);
+  if(hits.length > 0) {
+    const obj = hits[0].object;
+    if(hovered !== obj) {
+      if(hovered) hovered.material.emissiveIntensity = 0.1;
+      hovered = obj;
+      hovered.material.emissiveIntensity = 0.5;
+      document.getElementById('hoverLabel').textContent = `${obj.userData.label||obj.userData.id} [${obj.userData.type}]`;
+    }
+  } else {
+    if(hovered) hovered.material.emissiveIntensity = 0.1;
+    hovered = null;
+    document.getElementById('hoverLabel').textContent = '';
+  }
+});
+
+renderer.domElement.addEventListener('click', e => {
+  mouse.x = (e.clientX/window.innerWidth)*2-1;
+  mouse.y = -(e.clientY/window.innerHeight)*2+1;
+  raycaster.setFromCamera(mouse, camera);
+  const hits = raycaster.intersectObjects(spheres.children);
+  if(hits.length > 0) {
+    const n = hits[0].object.userData;
+    alert(`[${n.type}] ${n.label||n.id}\n${JSON.stringify(n.properties||{},null,2)}`);
+  }
+});
+
+// ── 搜索 ──
+document.getElementById('search').addEventListener('input', function() {
+  const q = this.value.trim().toLowerCase();
+  if(!q) return;
+  for(const [id, obj] of Object.entries(nodeMap)) {
+    const match = (obj.data.label||'').toLowerCase().includes(q) || (obj.data.type||'').toLowerCase().includes(q);
+    if(match) {
+      obj.sphere.material.emissiveIntensity = 0.8;
+      obj.sphere.material.emissive = new THREE.Color(0xffffff);
+    } else {
+      obj.sphere.material.emissiveIntensity = 0.1;
+      obj.sphere.material.emissive = new THREE.Color(getColor(obj.data.type));
+    }
+  }
+});
+
+// ── 渲染循环 ──
+function animate() {
+  requestAnimationFrame(animate);
+  controls.update();
+  renderer.render(scene, camera);
+  labelRenderer.render(scene, camera);
+  stars.rotation.y += 0.0001;
+}
+
+await init();
+animate();
+
+window.addEventListener('resize', () => {
+  camera.aspect = window.innerWidth/window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  labelRenderer.setSize(window.innerWidth, window.innerHeight);
+});
+
+document.getElementById('bottom').textContent = '✅ 3D 图谱已加载 | 悬停查看节点 | 点击查看详情 | 拖拽旋转 | 滚轮缩放';
+</script>
+</body>
+</html>

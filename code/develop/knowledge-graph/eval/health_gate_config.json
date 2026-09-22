@@ -1,0 +1,47 @@
+{
+  "url": "http://127.0.0.1:5001/api/ask",
+  "timeout_s": 120,
+  "suites": {
+    "smoke": {
+      "questions": "eval/smoke_questions.json",
+      "type": "retrieval",
+      "thresholds": {
+        "min_source_backed_rate": 0.95,
+        "min_expected_doc_hit_at_5_rate": 0.8,
+        "max_degraded_rate": 0.1,
+        "max_avg_latency_s": 20
+      }
+    },
+    "quality": {
+      "questions": "eval/quality_questions.json",
+      "type": "retrieval",
+      "thresholds": {
+        "min_source_backed_rate": 0.9,
+        "min_expected_doc_hit_at_5_rate": 0.6,
+        "max_degraded_rate": 0.15,
+        "max_avg_latency_s": 25
+      }
+    },
+    "csa": {
+      "questions": "eval/csa_questions.json",
+      "type": "csa",
+      "thresholds": {
+        "min_route_hit_rate": 1.0,
+        "min_topic_hit_rate": 1.0,
+        "max_degraded_rate": 0.0,
+        "max_avg_latency_s": 1.0
+      }
+    },
+    "semantic": {
+      "questions": "eval/semantic_graph_questions.json",
+      "type": "semantic",
+      "thresholds": {
+        "min_domain_hit_rate": 0.8,
+        "min_route_hit_rate": 0.8,
+        "min_graph_hit_rate": 0.8,
+        "max_degraded_rate": 0.2,
+        "max_avg_latency_s": 30
+      }
+    }
+  }
+}

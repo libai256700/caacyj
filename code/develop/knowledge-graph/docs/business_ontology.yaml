@@ -1,0 +1,296 @@
+version: business-ontology-v1
+updated_at: 2026-06-05
+purpose: >
+  Define the business ontology for graph-first Hybrid RAG. SQLite rag_chunks.db
+  remains the canonical text owner; Neo4j stores business entities, relations,
+  paths, source_doc, and source_chunk_ids for graph reasoning and retrieval.
+
+evidence_contract:
+  canonical_text_owner: sqlite:rag_chunks.db
+  graph_join_key: chunk_id
+  required_graph_fields:
+    - entity_id
+    - domain
+    - canonical_name
+    - source_doc
+    - source_chunk_ids
+    - schema_version
+  answer_rule: >
+    Graph paths can support reasoning, but final answer evidence must resolve
+    back to canonical SQLite chunks unless the answer is explicitly degraded.
+
+domains:
+  company:
+    description: Company profile, organization, business direction, policies.
+    entity_types:
+      - Company
+      - Position
+      - Policy
+      - Document
+      - ChunkRef
+    source_tables:
+      - documents
+      - document_chunks
+    core_questions:
+      - 公司结构如何影响岗位职责？
+      - 某业务方向对应哪些课程和岗位能力？
+
+  course:
+    description: Training products, classes, duration, price, capability goals.
+    entity_types:
+      - Course
+      - Skill
+      - Regulation
+      - Instructor
+      - Document
+      - ChunkRef
+    source_tables:
+      - courses
+      - training_tracks
+      - documents
+      - document_chunks
+    core_questions:
+      - 某课程适合什么客户和学员？
+      - 某课程涉及哪些法规要求和题库知识点？
+
+  student:
+    description: Student profile, training progress, exam state, recommendation context.
+    entity_types:
+      - Student
+      - Course
+      - Instructor
+      - Skill
+    source_tables:
+      - students
+      - training_tracks
+    core_questions:
+      - 某学员下一步应该推荐什么课程或训练？
+      - 某学员的训练风险或短板是什么？
+
+  customer:
+    description: Leads, contacts, needs, follow-up state, course matching.
+    entity_types:
+      - Customer
+      - Course
+      - Policy
+      - Document
+      - ChunkRef
+    source_tables:
+      - customers
+      - customer_source_rows
+      - courses
+      - documents
+      - document_chunks
+    core_questions:
+      - 某客户需求应该匹配哪个课程产品？
+      - 客户跟进需要引用哪些制度或产品说明？
+
+  instructor:
+    description: Instructor identity, teachable courses, capability and class matching.
+    entity_types:
+      - Instructor
+      - Course
+      - Skill
+      - Student
+    source_tables:
+      - instructors
+      - students
+      - courses
+    core_questions:
+      - 某教员能否承担某类培训？
+      - 某班型应该匹配哪些教员能力？
+
+  job_market:
+    description: Recruitment positions, responsibilities, salary, location, market demand.
+    entity_types:
+      - Position
+      - Skill
+      - Course
+      - Company
+      - Document
+      - ChunkRef
+    source_tables:
+      - jobs
+      - job_occurrences
+      - documents
+      - document_chunks
+    core_questions:
+      - 某岗位面试应该考察哪些能力？
+      - 市场岗位需求如何反向影响课程设计？
+
+  regulation:
+    description: Laws, CCAR rules, training institution requirements, compliance constraints.
+    entity_types:
+      - Regulation
+      - Policy
+      - KnowledgePoint
+      - Course
+      - Document
+      - ChunkRef
+    source_tables:
+      - regulations
+      - documents
+      - document_chunks
+    core_questions:
+      - 某课程涉及哪些法规条款？
+      - 某业务动作是否有合规要求或风险？
+
+  question_bank:
+    description: Exam banks, knowledge points, skills, answer evidence.
+    entity_types:
+      - QuestionBank
+      - KnowledgePoint
+      - Skill
+      - Course
+      - Regulation
+      - Document
+      - ChunkRef
+    source_tables:
+      - question_banks
+      - documents
+      - document_chunks
+    core_questions:
+      - 某知识点在哪些题库中反复出现？
+      - 某课程应覆盖哪些考试知识点？
+
+relations:
+  - type: OFFERS
+    from: Company
+    to: Course
+    use_for: 公司提供哪些课程或产品
+
+  - type: HAS_PROPERTY
+    from: Course
+    to: Value
+    use_for: 课程价格、周期、容量、等级等属性
+
+  - type: REQUIRES
+    from: Course
+    to: Skill
+    use_for: 课程需要或培养哪些能力
+
+  - type: REQUIRES_SKILL
+    from: Position
+    to: Skill
+    use_for: 岗位职责和面试能力要求
+
+  - type: REGULATES
+    from: Regulation
+    to: Course
+    use_for: 法规约束课程、训练、运营行为
+
+  - type: DEFINED_BY
+    from: Skill
+    to: Regulation
+    use_for: 能力或知识点由哪些法规/教材定义
+
+  - type: MENTIONS
+    from: Document
+    to: KnowledgePoint
+    use_for: 文档提到哪些知识点
+
+  - type: REFERS_TO
+    from: Customer
+    to: Course
+    use_for: 客户需求或咨询关联课程
+
+  - type: HAS_CLASS
+    from: Course
+    to: TrainingTrack
+    use_for: 课程与班型、训练轨道关联
+
+  - type: BELONGS_TO
+    from: Position
+    to: Company
+    use_for: 岗位属于哪个公司或组织
+
+  - type: AFFECTS
+    from: Policy
+    to: Position
+    use_for: 制度影响岗位、员工、客户跟进流程
+
+  - type: CONTAINS
+    from: Document
+    to: ChunkRef
+    use_for: 文档包含哪些权威 chunk 证据
+
+graph_first_candidate_questions:
+  - id: gf-001
+    question: 某课程适合哪些客户？依据是什么？
+    expected_domains: [course, customer, regulation]
+    expected_paths:
+      - Customer -> REFERS_TO -> Course -> REGULATES -> Regulation -> CONTAINS -> ChunkRef
+
+  - id: gf-002
+    question: 某学员下一步应该推荐什么课程？
+    expected_domains: [student, course, instructor]
+    expected_paths:
+      - Student -> REQUIRES -> Skill -> REQUIRES -> Course
+
+  - id: gf-003
+    question: 某岗位面试应该考察哪些能力？
+    expected_domains: [job_market, company, course]
+    expected_paths:
+      - Position -> REQUIRES_SKILL -> Skill -> DEFINED_BY -> Document -> CONTAINS -> ChunkRef
+
+  - id: gf-004
+    question: 某课程涉及哪些法规要求和题库知识点？
+    expected_domains: [course, regulation, question_bank]
+    expected_paths:
+      - Course -> REGULATES -> Regulation -> MENTIONS -> KnowledgePoint
+      - QuestionBank -> MENTIONS -> KnowledgePoint
+
+  - id: gf-005
+    question: 某客户如果想做低空业务，应该走什么培训路径？
+    expected_domains: [customer, course, regulation]
+    expected_paths:
+      - Customer -> REFERS_TO -> Course -> HAS_CLASS -> TrainingTrack
+      - Course -> REGULATES -> Regulation
+
+  - id: gf-006
+    question: 某价格是否和课程内容、客户类型匹配？
+    expected_domains: [course, customer, company]
+    expected_paths:
+      - Customer -> REFERS_TO -> Course -> HAS_PROPERTY -> Value -> CONTAINS -> ChunkRef
+      - Course -> HAS_PROPERTY -> Value -> DEFINED_BY -> Document -> CONTAINS -> ChunkRef
+
+  - id: gf-007
+    question: 某教员能否承担某类培训？
+    expected_domains: [instructor, course, student]
+    expected_paths:
+      - Instructor -> REQUIRES_SKILL -> Skill -> REQUIRES -> Course -> CONTAINS -> ChunkRef
+      - Instructor -> REFERS_TO -> Course -> HAS_CLASS -> TrainingTrack
+
+graph_completion_priority:
+  - phase: 1
+    name: eval 断点最多的第一轮补图
+    targets: [Customer, Student, TrainingTrack, Value]
+    unlock_questions:
+      - 某课程适合哪些客户？依据是什么？
+      - 某学员下一步应该推荐什么课程？
+      - 某客户如果想做低空业务，应该走什么培训路径？
+      - 某价格是否和课程内容、客户类型匹配？
+    done_when:
+      - Customer -> REFERS_TO -> Course 能返回路径和 SQLite chunk 证据
+      - Student -> REQUIRES/REFERS_TO -> Skill/Course 能返回路径和 SQLite chunk 证据
+      - Course -> HAS_CLASS -> TrainingTrack 能返回路径和 SQLite chunk 证据
+      - Course -> HAS_PROPERTY -> Value 能返回价格、周期、容量等可解释属性
+
+  - phase: 2
+    name: eval 断点收敛后的第二轮补图
+    targets: [Instructor, QuestionBank, Position -> Skill, Course -> Regulation, Course -> KnowledgePoint]
+    unlock_questions:
+      - 某岗位面试应该考察哪些能力？
+      - 某课程涉及哪些法规要求和题库知识点？
+      - 某教员能否承担某类培训？
+    done_when:
+      - Position -> REQUIRES_SKILL -> Skill 能覆盖岗位能力与面试检查点
+      - Course -> REGULATES -> Regulation 能返回法规依据
+      - Course -> REQUIRES -> Skill -> MENTIONS -> KnowledgePoint 能返回题库/教材知识点
+      - Instructor -> REQUIRES_SKILL/REFERS_TO -> Skill/Course 能返回教员可承担课程依据
+
+next_stage_checks:
+  - 每个 domain 的实体数量、关系数量、孤岛节点数量
+  - 每条核心关系是否有 source_doc 和 source_chunk_ids
+  - 每个核心业务问题是否能返回图谱路径和 SQLite chunk 证据
+  - graph_first 问题是否比普通 RAG 有更好的 top source 命中
