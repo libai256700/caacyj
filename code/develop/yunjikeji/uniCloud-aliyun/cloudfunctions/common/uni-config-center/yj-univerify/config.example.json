@@ -1,0 +1,7 @@
+{
+  "univerify": {
+    "appId": "__UNI__F4DBB06",
+    "backendBaseUrl": "https://xiaojiapp.caacyj.com/yunjikeji-admin-api",
+    "hmacSecret": "replace-with-a-secret-stored-outside-git"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "yj-univerify-login",
+  "version": "1.0.0",
+  "description": "UniVerify phone exchange and trusted business login bridge",
+  "main": "index.js",
+  "dependencies": {
+    "uni-config-center": "file:../common/uni-config-center"
+  },
+  "extensions": {
+    "uni-cloud-verify": {}
+  }
+}

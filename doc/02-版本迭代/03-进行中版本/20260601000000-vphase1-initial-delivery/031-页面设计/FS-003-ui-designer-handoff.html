@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小技移动端 UI 设计交接</title>
+  <link rel="stylesheet" href="https://unpkg.com/antd@5.24.8/dist/reset.css">
+  <style>
+    body { margin: 0; background: #f5f7fa; color: #172033; font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif; }
+    .page { width: min(1500px, calc(100% - 48px)); margin: 0 auto; padding: 30px 0 56px; }
+    .heading { margin-bottom: 18px; }
+    .heading h1 { margin: 0 0 8px; font-size: 26px; line-height: 1.35; }
+    .heading p { margin: 0; color: #64748b; font-size: 14px; line-height: 1.6; }
+    .side-tag { min-width: 42px; text-align: center; }
+    .page-name { color: #172033; font-weight: 700; line-height: 1.5; }
+    .plan { color: #44546a; font-size: 13px; line-height: 1.7; white-space: pre-line; }
+    .screen-thumb { display: block; width: 54px; height: 96px; padding: 0; overflow: hidden; border: 1px solid #d9e2ec; border-radius: 4px; background: #eef2f6; cursor: zoom-in; }
+    .screen-thumb img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; }
+    .screen-label { max-width: 92px; margin-top: 5px; color: #7b8798; font-size: 10px; line-height: 1.35; }
+    .table-card .ant-table { font-size: 13px; }
+    .table-card .ant-table-cell { vertical-align: top; }
+    .table-card .ant-table-thead > tr > th { color: #334155; font-weight: 700; background: #f1f5f9; }
+    .preview-image { display: block; max-width: 100%; max-height: calc(100vh - 280px); margin: 0 auto; object-fit: contain; }
+    @media (max-width: 760px) { .page { width: calc(100% - 24px); padding-top: 20px; } .heading h1 { font-size: 22px; } }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/dayjs@1.11.13/dayjs.min.js"></script>
+  <script src="https://unpkg.com/antd@5.24.8/dist/antd.min.js"></script>
+  <script>
+    const h = React.createElement
+    const { useState } = React
+    const { Card, ConfigProvider, Modal, Table, Tabs, Tag } = antd
+
+    const rows = [
+  {
+    "key": "login",
+    "name": "登录页",
+    "group": "公共页面",
+    "plan": "小技统一登录入口。支持学员与企业身份切换、手机号短信验证码登录、微信和 Apple 入口；微信未绑定手机号时进入绑定页。"
+  },
+  {
+    "key": "phone-bind",
+    "name": "微信登录后绑定手机号",
+    "group": "学员端",
+    "plan": "微信授权后绑定手机号。真实发送短信验证码并服务端校验；未完成绑定可返回登录页，绑定成功后进入后续学员流程。"
+  },
+  {
+    "key": "organization-bind",
+    "name": "组织绑定页",
+    "group": "学员端",
+    "plan": "搜索已审核通过的企业组织，提交加入申请并查看审核状态；暂不绑定或继续使用时进入 AI 助手（中间导航）。"
+  },
+  {
+    "key": "agreements",
+    "name": "用户协议与隐私协议页",
+    "group": "学员端",
+    "plan": "展示用户协议或隐私政策正文，支持长内容阅读与返回。"
+  },
+  {
+    "key": "home",
+    "name": "首页",
+    "group": "学员端",
+    "plan": "三项底部导航的首页入口。承载学员业务入口，并通过页面内跳转进入练习、招聘、客服等功能。"
+  },
+  {
+    "key": "practice",
+    "name": "练习分类展示页",
+    "group": "学员端",
+    "plan": "展示练习题分类和题量，支持查看完成情况、进入题库及错题复练。"
+  },
+  {
+    "key": "practice-start",
+    "name": "练习开始页",
+    "group": "学员端",
+    "plan": "展示题库名称、分类、题量、练习说明，并提供开始练习入口。"
+  },
+  {
+    "key": "practice-answer",
+    "name": "练习答题页",
+    "group": "学员端",
+    "plan": "完成单题答题、查看进度、提交答案；提交后展示对错、正确答案、解析，并可继续下一题或进入 AI 深度解答。"
+  },
+  {
+    "key": "ai-answer",
+    "name": "AI 深度解答页",
+    "group": "学员端",
+    "plan": "回显错题，提供知识点、答案和易错原因解析；支持引用知识库与继续追问。"
+  },
+  {
+    "key": "center",
+    "name": "智能中心页 / AI 助手",
+    "group": "学员端",
+    "plan": "中间导航的 AI 助手页。提供基础资料、自测问答、自测报告、简历和 AI 问答，并随资料与自测状态变化。"
+  },
+  {
+    "key": "jobs",
+    "name": "招聘岗位列表页",
+    "group": "学员端",
+    "plan": "展示无人机相关岗位，包含企业、地点、薪资和标签；支持查看详情与加载更多。"
+  },
+  {
+    "key": "profile",
+    "name": "个人中心页",
+    "group": "学员端",
+    "plan": "三项底部导航的“我的”页。展示账号、组织和练习概览，提供资料、重新绑定组织、记录、设置等入口。"
+  },
+  {
+    "key": "practice-record",
+    "name": "练习记录页",
+    "group": "学员端",
+    "plan": "按分类和时间查看历史练习，展示题目数量、得分、正确数、错误数和练习时间。"
+  },
+  {
+    "key": "self-test-record",
+    "name": "自测记录页",
+    "group": "学员端",
+    "plan": "回看单次自测的时间、问答摘要、方向倾向、建议岗位或报告入口。"
+  },
+  {
+    "key": "self-test-report",
+    "name": "自测报告页",
+    "group": "学员端",
+    "plan": "展示单次自测的 AI 报告内容，包括评测结果、能力概览和下一步学习建议；支持返回智能中心继续对话。"
+  },
+  {
+    "key": "settings",
+    "name": "设置页",
+    "group": "学员端",
+    "plan": "提供账号安全、注销账号、联系客服、隐私协议、关于我们和退出登录等入口。"
+  },
+  {
+    "key": "student-service-list",
+    "name": "客服中心消息列表页",
+    "group": "学员端",
+    "plan": "展示客服会话列表，包含客服身份、最后消息、时间和未读标识；点击进入对话。"
+  },
+  {
+    "key": "student-service-chat",
+    "name": "客服对话页",
+    "group": "学员端",
+    "plan": "学员与客服进行文字、图片和视频消息沟通；支持附件和发送，不包含语音或视频通话。"
+  },
+  {
+    "key": "enterprise-register",
+    "name": "企业注册页",
+    "group": "企业端",
+    "plan": "填写企业名称、统一社会信用代码、法人和联系人信息，上传营业执照并提交企业审核。"
+  },
+  {
+    "key": "enterprise-review",
+    "name": "审核进度页",
+    "group": "企业端",
+    "plan": "展示企业审核进度、审核结果或驳回原因，并提供重新编辑或提交入口。"
+  },
+  {
+    "key": "enterprise-student-list",
+    "name": "学员列表与查询页",
+    "group": "企业端",
+    "plan": "查看已加入企业的学员，支持手机号、昵称、账号状态筛选，进入学员详情。"
+  },
+  {
+    "key": "enterprise-student-audit",
+    "name": "学员加入审核页",
+    "group": "企业端",
+    "plan": "处理学员加入企业的申请，展示申请人信息和申请时间，支持同意或拒绝。"
+  },
+  {
+    "key": "enterprise-service-list",
+    "name": "客服中心消息列表页",
+    "group": "企业端",
+    "plan": "企业端查看客服会话列表，展示会话名称、最后消息、时间和未读标识，并进入对话。"
+  },
+  {
+    "key": "enterprise-service-chat",
+    "name": "客服对话页",
+    "group": "企业端",
+    "plan": "企业端与客服进行文字、图片和视频消息沟通，支持附件面板和发送操作。"
+  }
+]
+    const screenshots = {
+      login: [{ image: 'current-app-学员-登录页.png', label: '登录入口' }],
+      'phone-bind': [{ image: 'current-app-学员-登录页-绑定手机号.png', label: '绑定手机号' }],
+      'organization-bind': [{ image: 'current-app-学员-组织绑定页.png', label: '组织绑定' }],
+      agreements: [{ image: 'current-app-学员-用户协议与隐私协议页.png', label: '协议正文' }],
+      home: [{ image: 'current-app-学员-首页.png', label: '首页' }],
+      practice: [{ image: 'current-app-学员-练习分类展示页.png', label: '题型分类' }],
+      'practice-start': [{ image: 'current-app-学员-练习开始页.png', label: '练习开始' }],
+      'practice-answer': [{ image: 'current-app-学员-练习答题页-状态01.png', label: '答题进行中' }],
+      'ai-answer': [{ image: 'current-app-学员-AI深度解答页.png', label: '错题深度解答' }],
+      center: [
+        { image: 'current-app-学员-中心页-自测引导.png', label: '自测引导' },
+        { image: 'current-app-学员-中心页-资料填写.png', label: '填写基础资料' },
+        { image: 'current-app-学员-中心页-自测答题.png', label: '自测答题' },
+        { image: 'current-app-学员-中心页-自测报告.png', label: '查看自测报告' },
+        { image: 'current-app-学员-中心页-AI问答.png', label: 'AI 问答' }
+      ],
+      jobs: [{ image: 'current-app-学员-招聘岗位列表页.png', label: '岗位列表' }],
+      profile: [{ image: 'current-app-学员-个人中心页.png', label: '个人中心' }],
+      'practice-record': [{ image: 'current-app-学员-练习记录页.png', label: '练习记录' }],
+      'self-test-record': [{ image: 'current-app-学员-自测记录页.png', label: '自测记录' }],
+      'self-test-report': [{ image: 'current-app-学员-自测报告页.png', label: '自测报告' }],
+      settings: [{ image: 'current-app-学员-设置页.png', label: '设置' }],
+      'student-service-list': [{ image: 'current-app-学员-客服中心消息列表页.png', label: '客服会话' }],
+      'student-service-chat': [{ image: 'current-app-学员-客服对话页.png', label: '客服对话' }],
+      'enterprise-register': [{ image: 'current-app-企业-企业注册页.png', label: '企业注册' }],
+      'enterprise-review': [
+        { image: 'current-app-企业-审核进度页-审核中.png', label: '审核中' },
+        { image: 'current-app-企业-审核进度页-已通过.png', label: '已通过' },
+        { image: 'current-app-企业-审核进度页-已驳回.png', label: '已驳回' }
+      ],
+      'enterprise-student-list': [{ image: 'current-app-企业-学员列表与查询页.png', label: '学员查询与审核' }],
+      'enterprise-student-audit': [{ image: 'current-app-企业-学员加入审核页.png', label: '学员加入审核' }],
+      'enterprise-service-list': [{ image: 'current-app-企业-客服中心消息列表页.png', label: '企业客服会话' }],
+      'enterprise-service-chat': [{ image: 'current-app-企业-客服对话页.png', label: '企业客服对话' }]
+    }
+    const publicKeys = new Set(['agreements', 'student-service-chat', 'enterprise-service-chat'])
+    const resolveSide = (row) => publicKeys.has(row.key) ? '公共' : row.group === '企业端' ? '企业' : '学员'
+    const sideColor = { 公共: 'blue', 学员: 'green', 企业: 'purple' }
+
+    function App() {
+      const [preview, setPreview] = useState(null)
+      const tableRows = rows.map((row) => ({ ...row, side: resolveSide(row), screens: screenshots[row.key] || [] }))
+      const columns = [
+        { title: '所属端', dataIndex: 'side', width: 88, render: (value) => h(Tag, { color: sideColor[value], className: 'side-tag' }, value) },
+        { title: '页面名称', dataIndex: 'name', width: 180, render: (value) => h('div', { className: 'page-name' }, value) },
+        { title: '功能说明', dataIndex: 'plan', width: 510, render: (value) => h('div', { className: 'plan' }, value) },
+        { title: '当前移动端截图', key: 'screens', width: 128, render: (_, row) => {
+          const screen = row.screens[0]
+          if (!screen) return null
+          return h('div', null, [
+            h('button', { key: 'image', type: 'button', className: 'screen-thumb', title: `查看${row.name}`, onClick: () => setPreview({ name: row.name, screens: row.screens, active: 0 }) }, h('img', { src: './' + screen.image, alt: row.name })),
+            h('div', { key: 'label', className: 'screen-label' }, `${screen.label}${row.screens.length > 1 ? ` · 共 ${row.screens.length} 个状态` : ''}`)
+          ])
+        } }
+      ]
+      const activeScreen = preview && preview.screens[preview.active]
+      return h(ConfigProvider, { theme: { token: { colorPrimary: '#1677ff', borderRadius: 6, fontFamily: 'Microsoft YaHei, PingFang SC, Arial, sans-serif' } } },
+        h('main', { className: 'page' }, [
+          h('header', { className: 'heading', key: 'heading' }, [
+            h('h1', { key: 'title' }, '小技移动端 UI 设计交接'),
+            h('p', { key: 'summary' }, `当前页面清单 · ${tableRows.length} 个页面`)
+          ]),
+          h(Card, { key: 'table', className: 'table-card', bodyStyle: { padding: 16 } }, h(Table, { columns, dataSource: tableRows, rowKey: 'key', pagination: false, scroll: { x: 960 } })),
+          h(Modal, { key: 'preview', title: preview ? `${preview.name} - 当前移动端截图` : '截图预览', open: Boolean(preview), footer: null, onCancel: () => setPreview(null), width: 900 }, preview && h('div', null, [
+            h('img', { key: 'image', className: 'preview-image', src: './' + activeScreen.image, alt: `${preview.name}-${activeScreen.label}` }),
+            preview.screens.length > 1 && h(Tabs, { key: 'tabs', activeKey: String(preview.active), onChange: (key) => setPreview({ ...preview, active: Number(key) }), items: preview.screens.map((screen, index) => ({ key: String(index), label: screen.label })) })
+          ]))
+        ])
+      )
+    }
+    ReactDOM.createRoot(document.getElementById('root')).render(h(App))
+  </script>
+</body>
+</html>

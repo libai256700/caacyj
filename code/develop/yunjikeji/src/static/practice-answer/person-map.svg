@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="260" viewBox="0 0 520 260" fill="none">
+  <g opacity=".86">
+    <path d="M43 83c14-21 42-21 55 0 21-10 43 3 43 24 0 18-15 31-34 31H53c-21 0-37-12-37-29 0-16 12-27 27-26Z" fill="#fff"/>
+    <path d="M407 45c10-15 31-15 41 0 16-7 32 2 32 18 0 14-11 23-25 23h-40c-16 0-27-9-27-21 0-12 8-20 19-20Z" fill="#fff"/>
+  </g>
+  <path d="M390 94c40 6 66 31 66 67 0 15-5 29-14 40" stroke="#71CDB1" stroke-width="3" stroke-linecap="round" stroke-dasharray="4 9"/>
+  <path d="m433 193 9 8 3-13" stroke="#71CDB1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="m187 50-13-18m29 16 3-22m10 28 15-13" stroke="#263B48" stroke-width="3" stroke-linecap="round"/>
+  <path d="M211 90c5-31 21-48 49-48s44 17 49 48v45h-98V90Z" fill="#2EA6D8"/>
+  <path d="M242 67c2 13 9 20 18 20s16-7 18-20l-3-22h-30l-3 22Z" fill="#F29A83"/>
+  <path d="M240 47c1-17 11-28 26-28 13 0 22 8 24 23-5-1-9-4-11-10-8 9-20 14-39 15Z" fill="#273847"/>
+  <circle cx="251" cy="57" r="2.4" fill="#273847"/>
+  <circle cx="272" cy="57" r="2.4" fill="#273847"/>
+  <path d="M254 69c5 4 10 4 15 0" stroke="#B85251" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M209 106c-32 10-58 29-76 56l31 17c19-20 38-31 59-34l-14-39Zm102 0c32 10 58 29 76 56l-31 17c-19-20-38-31-59-34l14-39Z" fill="#F29A83"/>
+  <path d="M117 156c-11-1-18 6-16 17l7 36c2 11 11 18 21 14l19-7-13-60h-18Zm286 0c11-1 18 6 16 17l-7 36c-2 11-11 18-21 14l-19-7 13-60h18Z" fill="#F29A83"/>
+  <path d="M114 172c8-4 16-4 24 0m-22 13c8-4 17-4 25 0m264-13c-8-4-16-4-24 0m22 13c-8-4-17-4-25 0" stroke="#D67868" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="m137 118 118 23 128-23 13 128-137-22-135 22 13-128Z" fill="#F7FBFA" stroke="#31464D" stroke-width="4" stroke-linejoin="round"/>
+  <path d="m255 141 4 83m-72-96 4 107m127-107 3 107" stroke="#9ED7DD" stroke-width="3"/>
+  <path d="m147 144 39 8m82 13 43-8m17 46 48-10m-176-6 43 8" stroke="#D6EDEF" stroke-width="3" stroke-linecap="round"/>
+  <path d="M116 209c9 5 18 4 27-2m261 2c-9 5-18 4-27-2" stroke="#D67868" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

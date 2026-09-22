@@ -1,0 +1,19 @@
+<svg width="152" height="152" viewBox="0 0 152 152" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="76" cy="76" r="76" fill="url(#avatarBg)"/>
+  <circle cx="76" cy="61" r="29" fill="url(#avatarHead)"/>
+  <path d="M28 139c5.9-31.3 24.7-50 48-50s42.1 18.7 48 50c-13 8.2-29.5 13-48 13s-35-4.8-48-13Z" fill="url(#avatarBody)"/>
+  <defs>
+    <linearGradient id="avatarBg" x1="76" y1="0" x2="76" y2="152" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EEF7FF"/>
+      <stop offset="1" stop-color="#DCEEFF"/>
+    </linearGradient>
+    <linearGradient id="avatarHead" x1="76" y1="32" x2="76" y2="90" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B8DCFF"/>
+      <stop offset="1" stop-color="#73B7FA"/>
+    </linearGradient>
+    <linearGradient id="avatarBody" x1="76" y1="89" x2="76" y2="152" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8CC8FF"/>
+      <stop offset="1" stop-color="#409AF4"/>
+    </linearGradient>
+  </defs>
+</svg>

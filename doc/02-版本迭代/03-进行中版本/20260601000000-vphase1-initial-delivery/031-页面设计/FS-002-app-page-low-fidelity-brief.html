@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小技页面低保真评审清单</title>
+  <link rel="stylesheet" href="https://unpkg.com/antd@5.24.8/dist/reset.css">
+  <style>
+    body { margin: 0; background: #f5f7fa; color: #1f2937; font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif; }
+    .app-shell { width: min(1600px, calc(100% - 40px)); margin: 0 auto; padding: 30px 0 56px; }
+    .page-heading { margin-bottom: 22px; }
+    .page-heading h1 { margin: 0 0 8px; font-size: 28px; line-height: 1.3; }
+    .page-heading p { margin: 0; color: #64748b; font-size: 14px; }
+    .toolbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
+    .toolbar-left, .toolbar-right { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
+    .page-name { display: flex; flex-direction: column; gap: 5px; }
+    .page-name__title { color: #172033; font-size: 14px; font-weight: 700; }
+    .page-name__route { color: #1677ff; font-size: 12px; text-decoration: none; word-break: break-all; }
+    .page-name__route:hover { color: #0958d9; text-decoration: underline; }
+    .plan-copy { color: #44546a; font-size: 13px; line-height: 1.7; white-space: pre-line; }
+    .screen-thumb { display: block; width: 58px; height: 102px; overflow: hidden; border: 1px solid #d9e2ec; border-radius: 4px; background: #eef2f6; cursor: zoom-in; }
+    .screen-thumb img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; }
+    .screen-empty { display: flex; align-items: center; justify-content: center; width: 68px; height: 76px; padding: 6px; border: 1px dashed #cbd5e1; border-radius: 4px; color: #8592a3; font-size: 11px; line-height: 1.4; text-align: center; }
+    .screen-meta { max-width: 86px; margin-top: 5px; color: #8a94a6; font-size: 10px; line-height: 1.4; word-break: break-all; }
+    .annotation-cell { display: flex; flex-direction: column; gap: 8px; min-width: 190px; }
+    .annotation-copy { color: #4b5563; font-size: 13px; line-height: 1.55; white-space: pre-line; }
+    .annotation-empty { color: #94a3b8; font-size: 13px; }
+    .table-card .ant-table { font-size: 13px; }
+    .table-card .ant-table-cell { vertical-align: top; }
+    .table-card .ant-table-thead > tr > th { color: #334155; font-weight: 700; background: #f1f5f9; }
+    .image-modal img { display: block; max-width: 100%; max-height: calc(100vh - 210px); margin: 0 auto; object-fit: contain; }
+    .summary { color: #64748b; font-size: 13px; }
+    .file-input { display: none; }
+    .design-tabs { margin-bottom: 16px; }
+    .visual-generated { padding: 28px; background: #fffaf6; }
+    .visual-generated__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, max-content)); gap: 28px; align-items: start; justify-content: start; }
+    .visual-generated__screen { min-width: 0; }
+    .visual-generated__screen h3 { margin: 0 0 10px; color: #173f4b; font-size: 15px; }
+    .visual-generated__screen p { margin: 0 0 12px; color: #5a6d75; font-size: 12px; line-height: 1.6; }
+    .visual-generated__screen img { display: block; width: auto; height: auto; max-width: 100%; margin: 0; border: 1px solid #efd5c2; border-radius: 8px; box-shadow: 0 18px 36px rgba(122, 77, 47, .16); }
+    .visual-prompt { margin-top: 26px; border: 1px solid #efd5c2; border-radius: 8px; background: #fff; color: #314f5b; }
+    .visual-prompt summary { padding: 13px 15px; cursor: pointer; color: #173f4b; font-size: 13px; font-weight: 700; }
+    .visual-prompt pre { margin: 0; padding: 0 15px 15px; overflow-x: auto; white-space: pre-wrap; color: #5a6d75; font: 12px/1.65 "Microsoft YaHei", "PingFang SC", Arial, sans-serif; }
+    .visual-generated__screen { padding: 0; }
+    .visual-generated__head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 4px; }
+    .visual-generated__number { color: #e96c31; font-size: 12px; font-weight: 800; }
+    .visual-generated__image-button { display: block; width: fit-content; max-width: 100%; margin: 12px 0 0; padding: 0; overflow: hidden; border: 0; border-radius: 8px; background: transparent; cursor: zoom-in; }
+    .visual-generated__image-button:focus-visible { outline: 3px solid #f49b6d; outline-offset: 3px; }
+    .visual-generated__image-button img { max-width: 100%; margin: 0; }
+    .guide-panel { display: grid; gap: 16px; }
+    .guide-panel .ant-card { border-color: #e7edf4; }
+    .guide-panel h2 { margin: 0; color: #172033; font-size: 20px; line-height: 1.4; }
+    .guide-panel h3 { margin: 0 0 8px; color: #334155; font-size: 15px; line-height: 1.4; }
+    .guide-panel p { margin: 0; color: #52647a; font-size: 13px; line-height: 1.75; }
+    .guide-list { display: grid; gap: 8px; margin: 0; padding-left: 20px; color: #44546a; font-size: 13px; line-height: 1.75; }
+    .guide-list li::marker { color: #e96c31; font-weight: 700; }
+    .guide-flow { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; }
+    .guide-flow__step { min-height: 102px; padding: 14px; border: 1px solid #f0ded2; border-radius: 6px; background: #fffaf6; }
+    .guide-flow__number { color: #e96c31; font-size: 12px; font-weight: 800; }
+    .guide-flow__title { display: block; margin-top: 6px; color: #173f4b; font-size: 14px; font-weight: 700; }
+    .guide-flow__copy { display: block; margin-top: 6px; color: #607082; font-size: 12px; line-height: 1.55; }
+    .guide-callout { padding: 14px 16px; border-left: 3px solid #f28b4b; border-radius: 4px; background: #fff7f1; color: #7a4a2a; font-size: 13px; line-height: 1.7; }
+    .guide-code { display: block; margin-top: 8px; padding: 10px 12px; overflow-x: auto; border-radius: 4px; background: #f7f9fc; color: #314f5b; font: 12px/1.65 Consolas, "Courier New", monospace; white-space: pre-wrap; }
+    @media (max-width: 900px) { .guide-flow { grid-template-columns: 1fr; } }
+    @media (max-width: 760px) { .app-shell { width: calc(100% - 24px); padding-top: 20px; } .toolbar { align-items: flex-start; flex-direction: column; } .page-heading h1 { font-size: 23px; } .visual-generated { padding: 20px; } .visual-generated__grid { grid-template-columns: minmax(0, 1fr); gap: 20px; } }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/dayjs@1.11.13/dayjs.min.js"></script>
+  <script src="https://unpkg.com/antd@5.24.8/dist/antd.min.js"></script>
+  <script src="./FS-002-app-page-review-default-data.js"></script>
+  <script>
+    const { useMemo, useRef, useState } = React
+    const h = React.createElement
+    const { Alert, Button, Card, ConfigProvider, Dropdown, Input, Modal, Popconfirm, Select, Space, Table, Tabs, Tag, Typography, message } = antd
+    const { TextArea } = Input
+
+    const storageKey = 'xiaoji-low-fidelity-review-v9-final-export'
+    const statusMeta = {
+      current: { label: '已核对', color: 'success' },
+      recapture: { label: '需重截', color: 'warning' },
+      review: { label: '待复核', color: 'processing' },
+      missing: { label: '缺少配图', color: 'error' }
+    }
+    const highFidelityStatusMeta = {
+      pending: { label: '待审核', color: 'warning' },
+      approved: { label: '已通过', color: 'success' }
+    }
+    const testBaseUrl = 'https://yunjikeji.lai-do.com/yunjikeji/#'
+    const sideOptions = ['公共', '学员', '企业']
+    // 2026-08-13 最终导出评审数据：启动分流页不需高保真，登录页待审核，其余已确认页面为已通过。
+    const finalDefaultKeys = new Set([
+      'index', 'login', 'phone-bind', 'organization-bind', 'agreements', 'home',
+      'exam-topics', 'exam-assessment', 'practice-start', 'practice-answer',
+      'self-test-answer', 'ai-answer', 'center', 'jobs', 'practice-record',
+      'self-test-record', 'self-test-report', 'settings', 'student-service-chat',
+      'enterprise-register', 'enterprise-review', 'enterprise-students'
+    ])
+    const finalApprovedKeys = new Set([...finalDefaultKeys].filter((key) => key !== 'index' && key !== 'login'))
+    const finalExportedRows = Array.isArray(globalThis.FS002_FINAL_REVIEW_ROWS) ? globalThis.FS002_FINAL_REVIEW_ROWS : []
+    const currentScreensByKey = {
+      login: [{ image: 'current-app-学员-登录页.png', label: '登录入口' }],
+      'phone-bind': [{ image: 'current-app-学员-登录页-绑定手机号.png', label: '绑定手机号' }],
+      'organization-bind': [{ image: 'current-app-学员-组织绑定页.png', label: '组织绑定' }],
+      agreements: [{ image: 'current-app-学员-用户协议与隐私协议页.png', label: '协议正文' }],
+      home: [{ image: 'current-app-学员-首页.png', label: '首页' }],
+      'practice-start': [{ image: 'current-app-学员-练习开始页.png', label: '练习开始' }],
+      'practice-answer': [{ image: 'current-app-学员-练习答题页-状态01.png', label: '答题进行中' }],
+      'ai-answer': [{ image: 'current-app-学员-AI深度解答页.png', label: '错题深度解答' }],
+      center: [{ image: 'current-app-学员-中心页-AI问答.png', label: 'AI 问答' }],
+      jobs: [{ image: 'current-app-学员-招聘岗位列表页.png', label: '岗位列表' }],
+      profile: [{ image: 'current-app-学员-个人中心页.png', label: '个人中心' }],
+      'practice-record': [{ image: 'current-app-学员-练习记录页.png', label: '练习记录' }],
+      'self-test-record': [{ image: 'current-app-学员-自测记录页.png', label: '自测记录' }],
+      'self-test-report': [{ image: 'current-app-学员-自测报告页.png', label: '自测报告' }],
+      settings: [{ image: 'current-app-学员-设置页.png', label: '设置' }],
+      'student-service-list': [{ image: 'current-app-学员-客服中心消息列表页.png', label: '客服会话' }],
+      'student-service-chat': [{ image: 'current-app-学员-客服对话页.png', label: '客服对话' }],
+      'enterprise-register': [{ image: 'current-app-企业-企业注册页.png', label: '企业注册' }],
+      'enterprise-review': [
+        { image: 'current-app-企业-审核进度页-审核中.png', label: '审核中' },
+        { image: 'current-app-企业-审核进度页-已通过.png', label: '已通过' },
+        { image: 'current-app-企业-审核进度页-已驳回.png', label: '已驳回' }
+      ],
+      'enterprise-students': [{ image: 'current-app-企业-学员列表与查询页.png', label: '企业学员查询与审核' }]
+    }
+    const highFidelityByKey = {
+      login: { number: 'V001', title: '登录页', image: 'visual-v55-login-native-app-ratio-review.png', status: 'pending' },
+      home: { number: 'V002', title: '首页', image: 'visual-v49-home-selected-reference.png', status: 'approved' },
+      'phone-bind': { number: 'V005', title: '微信登录后绑定手机号', image: 'visual-v60-phone-bind-aligned-compact-native-review.png', status: 'approved' },
+      'organization-bind': { number: 'V006', title: '组织绑定页', image: 'visual-v62-organization-bind-selected.png', status: 'approved' },
+      agreements: { number: 'V007', title: '用户协议与隐私协议页', image: 'visual-v63-agreements-reader-approved.png', status: 'approved' },
+      'exam-topics': { number: 'V008', title: '题目主题选择页', image: 'visual-v64-exam-topics-training-board-approved.png', status: 'approved' },
+      'exam-assessment': { number: 'V009', title: '分类训练确认页', image: 'visual-v65-exam-assessment-code-aligned-review.png', status: 'pending' },
+      'practice-start': { number: 'V010', title: '通用练习确认页', image: 'visual-v66-practice-start-overview-real-data-review.png', status: 'pending' },
+      'practice-answer': { number: 'V011', title: '训练答题页', image: 'visual-v67-practice-answer-wrong-result-real-question-review.png', status: 'pending' },
+      'self-test-answer': { number: 'V012', title: '自我测评答题页', image: 'visual-v68-self-test-profile-dialog-real-fields-review.png', status: 'pending' },
+      'ai-answer': { number: 'V013', title: 'AI 深度解答页', image: 'visual-v69-ai-answer-real-question-review.png', status: 'pending' },
+      'practice-record': { number: 'V014', title: '练习记录页', image: 'visual-v70-practice-record-real-data-code-layout-review.png', status: 'pending' },
+      'self-test-record': { number: 'V015', title: '自测记录页', image: 'visual-v71-self-test-record-real-details-review.png', status: 'pending' },
+      'self-test-report': { number: 'V016', title: '自测报告页', image: 'visual-v72-self-test-report-empty-content-review.png', status: 'pending' },
+      jobs: { number: 'V017', title: '招聘岗位列表页', image: 'visual-v73-jobs-real-api-data-review.png', status: 'pending' },
+      center: { number: 'V018', title: 'AI 助手页', image: 'visual-v74-ai-assistant-code-content-review.png', status: 'pending' },
+      settings: { number: 'V019', title: '设置页', image: 'visual-v75-settings-code-content-review.png', status: 'pending' },
+      profile: { number: 'V020', title: '个人中心页', image: 'visual-v76-profile-code-content-review.png', status: 'pending' },
+      'student-service-chat': { number: 'V021', title: '客服对话页', image: 'visual-v77-customer-service-chat-empty-review.png', status: 'pending' },
+      'customer-service': { number: 'V022', title: '客服中心页', image: 'visual-v78-customer-service-list-code-content-review.png', status: 'pending' },
+      'enterprise-register': { number: 'V023', title: '企业注册页', image: 'visual-v79-enterprise-register-code-form-review.png', status: 'pending' },
+      'enterprise-review': { number: 'V024', title: '企业审核进度页', image: 'visual-v80-enterprise-review-reviewing-state-review.png', status: 'pending' },
+      'enterprise-students': { number: 'V025', title: '企业学员查询与审核页', image: 'visual-v81-enterprise-students-test-state-review.png', status: 'pending' }
+    }
+    const routeOverrides = {
+      'ai-answer': '/pages/practice/ai-answer',
+    }
+    const sideOverrides = {
+      agreements: '公共',
+      'student-service-chat': '公共'
+    }
+    const reviewAnnotations = {
+      'phone-bind': '已确认：授权卡与绑定表单共用左右边界，底部写实训练场景内收并留白；以登录页视觉效果为主参考，画布为 853 x 1844。',
+      'organization-bind': '已确认：当前已绑定组织时，底部操作应为“继续使用小技”；“暂不绑定组织”仅在尚未绑定、未审核时出现，两种状态不能同时展示。页面按原始图比例展示，不做裁切或拉伸。',
+      agreements: '已确认：协议页仅用于阅读协议正文，保留单一顶部导航标题；不重复正文标题，不展示安全提示或业务场景。',
+      'exam-topics': '已确认：使用无人机考试训练任务板表达 12 项真实题目主题；点击单项直接进入训练确认页，不显示选中状态、题量、确认按钮或满屏背景。',
+      'practice-start': '待审核：以当前代码的训练摘要字段为准，使用测试库“概述”分类的真实数据（58题、58分、45分钟、系统阅卷、UAV-THEORY-LIVE）。顶部写实遥控器、训练试卷和橙色笔为与训练功能相关的内收内容带，与主内容列共用左右边界且不压住文案；画布为原生 853 x 1844。',
+      'practice-answer': '待审核：按当前答题与判题链路展示真实题库单选题“无人机的英文缩写是”，采用错误选择 A（UVS）与正确答案 C（UAV）的提交后状态；解析来源于题库 correct_memo。信息密度较高的答题页面不使用写实满屏背景，仅保留低对比抽象留白纹理；画布为原生 853 x 1844。',
+      'self-test-answer': '待审核：按照当前代码 onLoad 后的强制流程展示“填写基本资料”弹窗，底层首题为真实自测题“您的年龄区间是”，共 18 题；弹窗字段与代码保持一致，不展示真实个人信息。表单和弹窗使用安静的抽象留白，不叠加写实场景；画布为原生 853 x 1844。',
+      'ai-answer': '待审核：延续训练答题页的同一真实错题上下文，展示题干、用户选择 A（UVS）、正确答案 C（UAV）、题库解析、知识点要点、引用知识库入口和继续追问输入。高密度解释页仅保留边缘低对比飞行轨迹纹理，不使用写实场景或虚构引用来源；画布为原生 853 x 1844。',
+      'practice-record': '待审核：按当前 PracticeRecordCard 的真实两行结构展示记录，首行依次为满分/实际得分/正确数，第二行为错误数/练习时间；使用已核验的概述和系统组成及介绍训练记录。筛选与记录列表均为信息型内容，不添加写实背景；画布为原生 853 x 1844。',
+      'self-test-record': '待审核：使用真实自测记录 312（2026-08-11 15:40:39）及其明细，回答快照前三项为年龄区间 16-25岁、职业状态 学生（待入行）、CAAC 执照 基本了解。结果摘要严格按当前转换逻辑为 0 分/建议从基础开始、18 题答对 18 题；画布为原生 853 x 1844。',
+      'self-test-report': '待审核：当前记录的服务端 selfReportContent/reportHtml 为空，页面按实际代码展示“AI 报告内容为空，请重新完成一次自测。”及返回中心继续对话，未虚构报告结论或建议；画布为原生 853 x 1844。',
+      jobs: '待审核：岗位列表使用测试库 2026-08-13 的真实接口数据，依次为销售（苏州盛德伟业信息科技有限公司）、急聘叉车工（北京晨飞雁通讯技术有限公司）和 cqe客诉质量工程师（北京斯普乐电线电缆有限公司），包含实际薪资、地区、日期和查看详情操作；画布为原生 853 x 1844。',
+      'exam-assessment': '待审核：展示当前选中主题的真实训练字段和操作。测试夹具确认的“概述”示例为 UAV-THEORY-LIVE、10题、20分、45分钟、系统阅卷；仅保留开始练习和错题复练。',
+      center: '当前页面只承载无人机知识 AI 问答；自测答题和报告已拆分至独立页面。',
+      'self-test-report': '已补齐自测记录进入后的报告详情页，展示 AI 报告内容与返回中心入口。',
+      jobs: '已按当前岗位列表接口契约重截，展示正常岗位数据。',
+      profile: '已按统一后的“首页 / AI 助手 / 我的”底部导航重截。',
+      agreements: '已归类为公共页面，学员和企业均可访问。',
+      'student-service-chat': '学员和企业复用同一路由，按登录身份与会话对象呈现内容。',
+      'ai-answer': '已使用正常答题链路生成的错题上下文重截，不再展示参数缺失态。',
+      'enterprise-students': '待审核：页面合并承载企业学员查询与加入审核。本视觉稿按当前筛选字段和卡片操作生成，并使用“测试学员 01/02/03”覆盖待审核、已审核、已拒绝三种状态，不使用真实个人信息；固定底部沿用首页 / AI 助手 / 我的公共组件，画布为原生 853 x 1844。',
+      center: '待审核：AI 助手页严格保留当前代码的“小技”、无人机教学定位、学习记录入口、欢迎语和输入发送区；使用 AI 助手激活的三项公共底部导航，画布为原生 853 x 1844。',
+      settings: '待审核：设置页保留当前账号摘要与账号安全、注销账号、联系客服、隐私协议、关于我们、退出登录六个入口，使用脱敏示例账号；画布为原生 853 x 1844。',
+      profile: '待审核：个人中心按当前代码保留资料、组织绑定、五项练习数据、练习记录、自测记录、设置与我的激活态底部导航；仅使用测试学员和占位数据，画布为原生 853 x 1844。',
+      'customer-service': '待审核：客服中心按当前学员空会话回退内容展示“小技客服”和“您好，欢迎咨询小技”，保留返回、会话入口和固定三项公共底部导航；不虚构时间或未读数，画布为原生 853 x 1844。',
+      'student-service-chat': '待审核：客服对话页按当前无历史消息的回退状态，仅展示“您好，欢迎咨询小技！”与图片、视频附件入口对应的加号输入区；不虚构会话记录，画布为原生 853 x 1844。',
+      'enterprise-register': '待审核：企业注册页严格按当前表单展示企业名称、统一社会信用代码、法人姓名、法人身份证号、联系人姓名、联系人手机号及营业执照上传的拍照/相册入口；不填入虚构企业或个人数据，画布为原生 853 x 1844。',
+      'enterprise-review': '待审核：企业审核进度页使用当前路由支持的“审核中”状态，展示提交资料、审核中、审核结果三步骤和代码中的审核说明；不虚构企业资料，画布为原生 853 x 1844。'
+    }
+
+    const initialRows = [
+      { key: 'index', group: '公共页面', name: '启动分流页', route: '/pages/index', image: '', imageNote: '无独立视觉页面', status: 'current', plan: '应用启动时根据登录态分流：未登录进入登录页，已登录进入首页；不承载业务内容或独立交互。', annotation: '代码启动入口，保留但不需要高保真视觉稿。' },
+      { key: 'login', group: '公共页面', name: '登录页', route: '/pages/auth/login', image: 'app-学员-登录页.png', imageNote: '2026-08-09 更新', status: 'current', plan: '小技统一登录入口。支持学员与企业身份切换、手机号短信验证码登录、微信和 Apple 入口；微信未绑定手机号时进入绑定页。', annotation: '' },
+      { key: 'phone-bind', group: '学员端', name: '微信登录后绑定手机号', route: '/pages/profile/phone-bind', image: 'app-学员-登录页-绑定手机号.png', imageNote: '需重截', status: 'recapture', plan: '微信授权后展示已授权身份，输入手机号并发送 6 位短信验证码，完成服务端校验与账号绑定；返回操作回到登录页，成功后进入后续学员流程。', annotation: '已接入真实短信验证码与确认绑定，待按当前移动端页面重截。' },
+      { key: 'organization-bind', group: '学员端', name: '组织绑定页', route: '/pages/enterprise/organization-bind', image: 'app-学员-组织绑定页.png', imageNote: '需重截', status: 'recapture', plan: '搜索并展示已认证企业组织，包含组织名称、认证信息与申请状态；可发起加入或重新绑定申请并查看待审核、通过、驳回结果，也可暂不绑定直接进入 AI 助手。', annotation: '需呈现至少 5 个企业组织，继续使用入口进入 /pages/center。' },
+      { key: 'agreements', group: '公共页面', name: '用户协议与隐私协议页', route: '/pages/auth/agreement', image: 'app-学员-用户协议与隐私协议页.png', imageNote: '需重截', status: 'recapture', plan: '按类型展示用户服务协议或隐私协议的完整章节正文，覆盖账号、学习训练、安全、个人信息与联系我们等内容，支持长文阅读和返回。', annotation: '学员与企业均可访问，待按当前内容重截。' },
+      { key: 'home', group: '学员端', name: '首页', route: '/pages/home', image: 'app-学员-首页.png', imageNote: '内容已更新，高保真 V002 已选定', status: 'recapture', plan: '学员学习首页。显示“Hi，我是小技”和“欢迎使用无人机教育平台”；提供自我测评及结果入口；题库训练展示累计练习次数、累计答题数、整体正确率、连续练习天数、错题总数五项数据并开始训练；错题练习显示待巩固题数、复练提示和开始练习；常用功能为岗位招聘、联系客服。底部为首页激活态的首页、AI 助手、我的三项导航。', annotation: '已选定 V002 首页视觉稿；页面说明已按当前功能和已确认文案更新。' },
+      { key: 'exam-topics', group: '学员端', name: '题目主题选择页', route: '/pages/practice/exam-topics', image: '', imageNote: '新增页面，需采集', status: 'recapture', plan: '展示练习题库的一级分类和可选题目主题，帮助学员选择本次训练范围；选择主题后进入训练确认页，支持返回首页。', annotation: '当前客户端独立路由，原交接清单未列出。' },
+      { key: 'exam-assessment', group: '学员端', name: '分类训练确认页', route: '/pages/practice/exam-assessment', image: '', imageNote: '新增页面，需采集', status: 'recapture', plan: '根据所选分类或主题展示训练范围与规则摘要，明确题量、分值、时长、计分方式等信息；可开始常规训练或直接进入错题复练。', annotation: '复用训练摘要组件，原交接清单未列出。' },
+      { key: 'practice-start', group: '学员端', name: '通用练习确认页', route: '/pages/practice/start', image: 'app-学员-练习开始页.png', imageNote: '需重截', status: 'recapture', plan: '在进入答题前确认题库名称、题型分类、试卷或题目数量、总分、答题时长和计分规则，提供开始常规练习与错题复练操作。', annotation: '与分类训练确认页共用训练摘要能力，但保留独立路由。' },
+      { key: 'practice-answer', group: '学员端', name: '训练答题页', route: '/pages/practice/answer', image: 'app-学员-练习答题页-状态01.png', imageNote: '需重截，包含答题与判题状态', status: 'recapture', plan: '完成常规训练或错题复练的单题作答。显示答题进度、题干与选项或文本输入；提交后展示对错、正确答案和解析，可前后切题，并可打开 AI 深度解答。', annotation: '需同时覆盖答题中与提交判题后的核心状态。' },
+      { key: 'self-test-answer', group: '学员端', name: '自我测评答题页', route: '/pages/practice/self-test-answer', image: '', imageNote: '新增页面，需采集', status: 'recapture', plan: '通过多步骤问题采集学员的自我测评信息；必要时先补充基础资料，逐题选择或填写答案，提交全部答案后生成并跳转至 AI 自测报告。', annotation: '当前客户端独立路由，原交接清单未列出。' },
+      { key: 'ai-answer', group: '学员端', name: 'AI 深度解答页', route: '/pages/practice/ai-answer', image: 'app-学员-AI深度解答页.png', imageNote: '需重截', status: 'recapture', plan: '围绕一道错题展示题干、所选答案与正确答案，提供 AI 知识点解析、关联知识参考和继续追问输入；用于帮助理解错误原因和巩固相关知识。', annotation: '实际路由为 /pages/practice/ai-answer，待按真实错题上下文重截。' },
+      { key: 'center', group: '学员端', name: 'AI 助手页', route: '/pages/center', image: 'app-学员-中心页-001.png', imageNote: '需重截', status: 'recapture', plan: '中间导航的 AI 助手页。展示小技身份与无人机教学、培训、考证、操控训练定位；提供学习记录入口、无人机知识问答输入与发送，呈现 AI 回答、知识库检索状态和引用来源；底部为 AI 助手激活态三项导航。', annotation: '当前页面为自由问答，不再承担自测表单与报告内容。' },
+      { key: 'jobs', group: '学员端', name: '招聘岗位列表页', route: '/pages/jobs', image: 'app-学员-招聘岗位列表页.png', imageNote: '需重截', status: 'recapture', plan: '展示无人机相关招聘岗位，包含岗位名称、企业、薪资、地点、标签和招聘平台信息；可打开岗位详情链接、复制链接、下拉刷新和加载更多，并显示本周岗位总结。', annotation: '需用可用岗位数据重新采集，避免出现岗位信息不可用报错。' },
+      { key: 'profile', group: '学员端', name: '个人中心页', route: '/pages/profile', image: 'app-学员-个人中心页.png', imageNote: '需重截', status: 'recapture', plan: '“我的”页面展示头像、昵称、脱敏手机号、所属组织及申请进度；支持编辑昵称和头像、重新绑定组织；展示五项练习数据，并进入练习记录、自测记录、设置和客服；底部为我的激活态三项导航。', annotation: '“错题本”入口已删除，需按当前组织状态与统一三项导航重截。' },
+      { key: 'practice-record', group: '学员端', name: '练习记录页', route: '/pages/practice/record', image: 'app-学员-练习记录页.png', imageNote: '需重截', status: 'recapture', plan: '按练习分类和时间筛选历史训练记录，展示每次训练的题目数量、得分、正确数、错误数和练习时间，支持从个人中心返回。', annotation: '待按当前筛选与记录数据重截。' },
+      { key: 'self-test-record', group: '学员端', name: '自测记录页', route: '/pages/practice/self-test-record', image: 'app-学员-自测记录页.png', imageNote: '需重截', status: 'recapture', plan: '回看最近一次自我测评：显示自测时间、回答快照、综合评分、答题情况和结论摘要；提供查看对应 AI 自测报告的入口。', annotation: '当前页面已包含报告入口，需按真实数据重截。' },
+      { key: 'self-test-report', group: '学员端', name: '自测报告页', route: '/pages/center/self-test-report', image: 'app-学员-自测报告页.png', imageNote: '需重截', status: 'recapture', plan: '加载并展示指定自测记录的 AI 报告正文，涵盖评测结论、能力概览与后续学习建议；支持加载、空数据、异常状态以及返回 AI 助手继续对话。', annotation: '报告内容由服务端返回，待按当前报告正文重截。' },
+      { key: 'settings', group: '学员端', name: '设置页', route: '/pages/profile/settings', image: 'app-学员-设置页.png', imageNote: '需重截', status: 'recapture', plan: '展示账号摘要和设置入口：账号安全、注销账号、联系客服、隐私协议、关于我们、退出登录；退出前进行确认并返回登录页。', annotation: '待按当前账号状态重截。' },
+      { key: 'customer-service', group: '公共页面', name: '客服中心页', route: '/pages/service/customer-service', image: '', imageNote: '需重截', status: 'recapture', plan: '按登录身份展示客服会话入口：学员查看“小技客服”的最后消息、时间与未读数；企业查看已绑定学员会话。支持加载、空列表、失败重试和进入对话。', annotation: '同一路由按学员或企业身份呈现不同会话列表。' },
+      { key: 'student-service-chat', group: '公共页面', name: '客服对话页', route: '/pages/service/customer-service-chat', image: 'app-学员-客服对话页.png', imageNote: '需重截', status: 'recapture', plan: '学员或企业与客服进行消息沟通：加载历史消息、发送文字、图片或视频附件，展示消息身份、发送中和失败状态。', annotation: '学员和企业复用同一路由，按会话对象呈现内容。' },
+      { key: 'enterprise-register', group: '企业端', name: '企业注册页', route: '/pages/enterprise/register', image: 'app-企业-企业注册页.png', imageNote: '需重截', status: 'recapture', plan: '填写企业名称、统一社会信用代码、法人姓名和身份证号、联系人姓名和手机号；拍照或相册上传营业执照，校验资料后提交企业资质审核。', annotation: '待按当前表单和营业执照上传状态重截。' },
+      { key: 'enterprise-review', group: '企业端', name: '企业审核进度页', route: '/pages/enterprise/review', image: 'app-企业-审核进度页.png', imageNote: '需重截', status: 'recapture', plan: '以步骤和状态说明展示企业资料提交、审核中、通过或驳回结果；驳回时说明处理结果并提供重新填写或重新提交入口。', annotation: '需覆盖审核中、已通过、已驳回三个状态。' },
+      { key: 'enterprise-students', group: '企业端', name: '企业学员查询与审核页', route: '/pages/enterprise/students', image: 'app-企业-学员列表与查询页.png', imageNote: '需重截', status: 'recapture', plan: '企业端统一处理学员申请：按昵称或手机号、申请时间筛选申请列表，展示学员姓名、手机号、申请时间和审核状态；对待审核申请执行同意或拒绝，并处理加载、空结果和错误重试。', annotation: '当前客户端已将学员查询与加入审核合并为同一页面。' }
+    ]
+
+    function getRoute(row) {
+      return routeOverrides[row.key] || row.route
+    }
+
+    function getTestUrl(row) {
+      return testBaseUrl + getRoute(row)
+    }
+
+    function getScreens(row) {
+      const configured = currentScreensByKey[row.key]
+      if (configured) return configured
+      return row.image ? [{ image: row.image, label: '当前页面' }] : []
+    }
+
+    function applyCurrentReviewState(row) {
+      const screens = getScreens(row)
+      return {
+        ...row,
+        route: getRoute(row),
+        side: sideOverrides[row.key] || getSide(row),
+        image: screens[0] ? screens[0].image : '',
+        imageNote: screens.length ? `2026-08-09 当前版本 · ${screens.length} 个状态` : '当前未提供独立页面',
+        status: screens.length ? 'current' : 'missing',
+        highFidelityStatus: finalApprovedKeys.has(row.key) ? 'approved' : row.key === 'login' ? 'pending' : '',
+        annotation: reviewAnnotations[row.key] || row.annotation || ''
+      }
+    }
+
+    function getDefaultRows() {
+      if (finalExportedRows.length) {
+        return JSON.parse(JSON.stringify(finalExportedRows))
+      }
+      return initialRows.filter((row) => finalDefaultKeys.has(row.key)).map(applyCurrentReviewState)
+    }
+
+    function loadRows() {
+      try {
+        const saved = localStorage.getItem(storageKey)
+        if (saved) return JSON.parse(saved)
+      } catch (_) {}
+      return getDefaultRows()
+    }
+
+    function getSide(row) {
+      if (row.side) return row.side
+      return row.group === '公共页面' ? '公共' : row.group === '企业端' ? '企业' : '学员'
+    }
+
+    function VisualDesign({ onPreview }) {
+      const visuals = [
+        {
+          number: 'V001',
+          title: '登录页',
+          image: 'visual-v55-login-native-app-ratio-review.png'
+        },
+        {
+          number: 'V002',
+          title: '首页',
+          image: 'visual-v49-home-selected-reference.png'
+        },
+        {
+          number: 'V003',
+          title: '底部导航组件 / 三态（已确认）',
+          image: 'visual-v21-bottom-navigation-official-logo-states.png'
+        },
+      ]
+
+      return h('section', { className: 'visual-board' }, [
+        h('div', { className: 'visual-board__intro', key: 'intro' }, [
+          h('h2', { key: 'title' }, '小技 - 视觉效果')
+        ]),
+        h('div', { className: 'visual-generated', key: 'generated' }, [
+          h('div', { className: 'visual-generated__grid', key: 'grid' }, visuals.map((visual) => h('article', { className: `visual-generated__screen${visual.hideMeta ? ' visual-generated__screen--image-only' : ''}`, key: visual.number }, [
+            h('div', { className: 'visual-generated__head', key: 'head' }, [h('h3', { key: 'title' }, visual.title)]),
+            h('button', { className: 'visual-generated__image-button', type: 'button', key: 'image', onClick: () => onPreview(visual) }, h('img', { src: './' + visual.image, alt: `${visual.number} ${visual.title}高保真视觉稿` }))
+          ])))
+        ])
+      ])
+    }
+
+    function ImageGenerationGuide() {
+      const flow = [
+        ['01', '确认内容基线', '先阅读当前代码、路由、接口和评审批注，列出页面必须呈现的真实内容与状态。'],
+        ['02', '编写并校对提示词', '提示词只描述页面内容、产品定位、视觉规范和尺寸；不自行补造功能、数据或文案。'],
+        ['03', '生成与逐图验收', '检查原生像素、文字、色调、背景、导航和内容一致性；不合格即调整提示词后重生。'],
+        ['04', '归档并回填页面', '将选定图片复制到本 HTML 同级目录，在对应页面的“高保真视觉图”中替换图片文件名和编号。'],
+        ['05', '置为待审核并导出', '只要重新生成或替换图片，即将该页“高保真状态”改为待审核，补充批注并导出 JSON。']
+      ]
+      return h('section', { className: 'guide-panel' }, [
+        h(Card, { key: 'purpose' }, [
+          h('h2', { key: 'title' }, '生图规范与交接流程'),
+          h('p', { key: 'copy' }, '本页用于后续同事继续维护视觉稿。低保真页签是内容与交互依据；视觉设计页签只保留已确认的登录页、首页和底部导航组件参考。所有新增或替换的高保真图，都必须回填到对应页面行并重新进入审核。')
+        ]),
+        h(Card, { key: 'baseline', title: '一、固定输入与视觉标准' }, [
+          h('ul', { className: 'guide-list', key: 'list' }, [
+            h('li', { key: 'content' }, '内容以当前客户端代码、可验证接口数据、表格中的“当前页面规划 / 功能说明”和批注为唯一依据。接口无数据时，使用代码中的空态；测试数据必须明确标注，不展示真实个人隐私。'),
+            h('li', { key: 'size' }, '新图必须原生生成 853 x 1844 像素，不用 CSS 裁切、拉伸或压缩伪造比例。历史已确认的 V006 为 850 x 1851，保持原样。'),
+            h('li', { key: 'tone' }, '统一为明亮、克制的橘子海暖橙，象牙白纸纹、珠光白信息卡、深海蓝文字和柔和阴影。避免黑色沉重底色、玫瑰金、金闪、霓虹、Q 版卡通和后台管理台式平铺。'),
+            h('li', { key: 'background' }, '低对比、无文字的抽象航线或纸纹可满宽且可位于文字后方，但不得影响阅读；写实人物、设备或训练场景必须收在主内容同一左右边界内，不能满屏铺开或遮挡文案。信息密集的表单、记录、列表页优先不使用写实背景。'),
+            h('li', { key: 'navbar' }, '凡代码使用 HomeProfileTabBar 的页面，必须使用公共三项底部导航：首页 / AI 助手 / 我的，中间为品牌 Logo 岛台；只有当前导航页可使用暖橙激活态。'),
+            h('li', { key: 'clean' }, '禁止生成系统状态栏、时间、信号、电池、Wi-Fi、水印、虚构功能、虚构业务数据、重叠文字或难以阅读的背景文字。')
+          ])
+        ]),
+        h(Card, { key: 'flow', title: '二、每次生图后的必经操作' }, [
+          h('div', { className: 'guide-flow', key: 'steps' }, flow.map((item) => h('div', { className: 'guide-flow__step', key: item[0] }, [
+            h('span', { className: 'guide-flow__number', key: 'number' }, item[0]),
+            h('span', { className: 'guide-flow__title', key: 'title' }, item[1]),
+            h('span', { className: 'guide-flow__copy', key: 'copy' }, item[2])
+          ]))),
+          h('div', { className: 'guide-callout', key: 'callout' }, '关键规则：无论原页面此前是“已通过”还是“待审核”，只要替换了高保真图片，必须立即把该页面的高保真状态改回“待审核”，由评审人重新确认后才能改为“已通过”。')
+        ]),
+        h(Card, { key: 'archive', title: '三、归档和回填要求' }, [
+          h('ul', { className: 'guide-list', key: 'list' }, [
+            h('li', { key: 'file' }, '图片文件放在本 HTML 所在目录，使用连续且可读的文件名，例如 visual-v026-page-name-review.png；不引用临时目录或个人目录。'),
+            h('li', { key: 'map' }, '在 highFidelityByKey 中更新对应页面的 number、title、image 和默认 status；图片编号不可重复。'),
+            h('li', { key: 'status' }, '导出评审数据前，在表格中确认该页状态为“待审核”，并在批注中记录本次修改点、采用的数据状态和需要评审的重点。'),
+            h('li', { key: 'verify' }, '交付前检查图片文件存在、像素正确、页面表格缩略图可打开、点击大图可预览；最后通过“导出评审数据”输出 JSON，与 HTML 和全部图片一并打包。')
+          ]),
+          h('code', { className: 'guide-code', key: 'code' }, "highFidelityByKey['page-key'] = {\n  number: 'V026',\n  title: '页面名称',\n  image: 'visual-v026-page-name-review.png',\n  status: 'pending'\n}")
+        ]),
+        h(Card, { key: 'handover', title: '四、交接包内容' }, [
+          h('p', { key: 'copy' }, '交接时保持目录结构不变，至少包含：本 HTML、全部 current-app 当前页面截图、全部 visual-v 高保真图、最终导出的 FS-002-app-page-review-data.json，以及本页已写明的规范。接手人可直接打开 HTML 继续批注、替换图片、调整状态并导出下一版 JSON。')
+        ])
+      ])
+    }
+
+    function App() {
+      const [rows, setRows] = useState(loadRows)
+      const [activeView, setActiveView] = useState('guide')
+      const [keyword, setKeyword] = useState('')
+      const [group, setGroup] = useState('all')
+      const [editing, setEditing] = useState(null)
+      const [draft, setDraft] = useState('')
+      const [preview, setPreview] = useState(null)
+      const [previewIndex, setPreviewIndex] = useState(0)
+      const [visualPreview, setVisualPreview] = useState(null)
+      const fileInput = useRef(null)
+
+      const saveRows = (nextRows) => {
+        setRows(nextRows)
+        localStorage.setItem(storageKey, JSON.stringify(nextRows))
+      }
+      const filteredRows = useMemo(() => rows.filter((row) => {
+        const hit = !keyword.trim() || `${row.name} ${getRoute(row)} ${row.plan} ${row.annotation}`.toLowerCase().includes(keyword.trim().toLowerCase())
+        return hit && (group === 'all' || getSide(row) === group)
+      }), [rows, keyword, group])
+      const editAnnotation = (row) => { setEditing(row); setDraft(row.annotation || '') }
+      const saveAnnotation = () => { saveRows(rows.map((row) => row.key === editing.key ? { ...row, annotation: draft.trim() } : row)); setEditing(null); message.success('批注已保存') }
+      const removeRow = (key) => { saveRows(rows.filter((row) => row.key !== key)); message.success('页面条目已删除') }
+      const updateSide = (key, value) => saveRows(rows.map((row) => row.key === key ? { ...row, side: value } : row))
+      const updateHighFidelityStatus = (key, value) => saveRows(rows.map((row) => row.key === key ? { ...row, highFidelityStatus: value } : row))
+      const openPreview = (row) => { setPreview({ name: row.name, screens: getScreens(row) }); setPreviewIndex(0) }
+      const exportRows = () => {
+        const blob = new Blob([JSON.stringify({ exportedAt: new Date().toISOString(), rows }, null, 2)], { type: 'application/json' })
+        const link = document.createElement('a')
+        link.href = URL.createObjectURL(blob)
+        link.download = 'FS-002-app-page-review-data.json'
+        link.click()
+        URL.revokeObjectURL(link.href)
+      }
+      const importRows = (event) => {
+        const file = event.target.files && event.target.files[0]
+        if (!file) return
+        const reader = new FileReader()
+        reader.onload = () => {
+          try {
+            const data = JSON.parse(reader.result)
+            if (!Array.isArray(data.rows)) throw new Error('invalid')
+            saveRows(data.rows)
+            message.success('评审数据已导入')
+          } catch (_) { message.error('导入失败：请选择导出的评审 JSON 文件') }
+        }
+        reader.readAsText(file, 'utf-8')
+        event.target.value = ''
+      }
+      const resetRows = () => Modal.confirm({ title: '恢复最终导出清单？', content: '将恢复 2026-08-13 最终导出的默认数据；已填写的批注和删除操作会被清除。', okText: '恢复', cancelText: '取消', onOk: () => saveRows(getDefaultRows()) })
+
+      const columns = [
+        { title: '页面名称与测试访问', key: 'name', width: 245, render: (_, row) => h('div', { className: 'page-name' }, [h('span', { className: 'page-name__title', key: 'name' }, row.name), h('a', { className: 'page-name__route', key: 'route', href: getTestUrl(row), target: '_blank', rel: 'noreferrer' }, getTestUrl(row))]) },
+        { title: '所属端', key: 'side', width: 92, render: (_, row) => h(Select, { value: getSide(row), style: { width: 72 }, onChange: (value) => updateSide(row.key, value), options: sideOptions.map((value) => ({ value, label: value })) }) },
+        { title: '当前页面规划 / 功能说明', dataIndex: 'plan', key: 'plan', width: 360, render: (value) => h('div', { className: 'plan-copy' }, value) },
+        { title: '现有低保真图', key: 'image', width: 112, render: (_, row) => {
+          const screens = getScreens(row)
+          return screens.length ? h('div', null, [h('button', { className: 'screen-thumb', type: 'button', onClick: () => openPreview(row), key: 'image' }, h('img', { src: './' + screens[0].image, alt: row.name })), h('div', { className: 'screen-meta', key: 'note' }, `${screens[0].label}${screens.length > 1 ? ` · 共 ${screens.length} 个状态` : ''}`)]) : h('div', null, [h('div', { className: 'screen-empty', key: 'empty' }, '当前未提供页面'), h('div', { className: 'screen-meta', key: 'note' }, row.imageNote)])
+        } },
+        { title: '高保真视觉图', key: 'high-fidelity', width: 112, render: (_, row) => {
+          const visual = highFidelityByKey[row.key]
+          return visual ? h('div', null, [
+            h('button', { className: 'screen-thumb', type: 'button', onClick: () => setVisualPreview(visual), key: 'image' }, h('img', { src: './' + visual.image, alt: `${visual.title}高保真视觉图` })),
+            h('div', { className: 'screen-meta', key: 'note' }, `${visual.number} 已生成`)
+          ]) : h('div', null, [h('div', { className: 'screen-empty', key: 'empty' }, '待生成'), h('div', { className: 'screen-meta', key: 'note' }, '按低保真交互逐页补齐')])
+        } },
+        { title: '高保真状态', key: 'high-fidelity-status', width: 120, render: (_, row) => {
+          const visual = highFidelityByKey[row.key]
+          return visual ? h(Select, { value: row.highFidelityStatus || visual.status || 'pending', style: { width: 96 }, onChange: (value) => updateHighFidelityStatus(row.key, value), options: Object.entries(highFidelityStatusMeta).map(([value, meta]) => ({ value, label: meta.label })) }) : h('span', { className: 'screen-meta' }, '未生成')
+        } },
+        { title: '批注', key: 'annotation', width: 245, render: (_, row) => h('div', { className: 'annotation-cell' }, [row.annotation ? h('div', { className: 'annotation-copy', key: 'copy' }, row.annotation) : h('div', { className: 'annotation-empty', key: 'empty' }, '暂无批注'), h(Button, { size: 'small', key: 'edit', onClick: () => editAnnotation(row) }, row.annotation ? '编辑批注' : '添加批注')]) },
+        { title: '操作', key: 'actions', fixed: 'right', width: 92, render: (_, row) => h(Popconfirm, { title: '删除该页面条目？', description: '删除后可通过恢复初始清单撤销。', okText: '删除', cancelText: '取消', onConfirm: () => removeRow(row.key) }, h(Button, { danger: true, size: 'small' }, '删除')) }
+      ]
+
+      return h(ConfigProvider, { theme: { token: { colorPrimary: '#1677ff', borderRadius: 6, fontFamily: 'Microsoft YaHei, PingFang SC, Arial, sans-serif' } } },
+        h('main', { className: 'app-shell' }, [
+          h('header', { className: 'page-heading', key: 'header' }, [h('h1', { key: 'title' }, '小技客户端页面低保真评审清单'), h('p', { key: 'subtitle' }, '页面名称、测试访问链接和当前规划优先展示；高保真视觉稿单独进入审核。')]),
+          h(Tabs, { className: 'design-tabs', key: 'tabs', activeKey: activeView, onChange: setActiveView, items: [
+            { key: 'guide', label: '生图规范与交接' },
+            { key: 'low-fidelity', label: '低保真设计' },
+            { key: 'visual', label: '视觉设计 V1' }
+          ] }),
+          activeView === 'guide' ? h(ImageGenerationGuide, { key: 'guide' }) : null,
+          h('section', { key: 'low-fidelity', style: { display: activeView === 'low-fidelity' ? 'block' : 'none' } }, [
+          h(Alert, { key: 'alert', type: 'info', showIcon: true, message: '评审数据可编辑', description: '批注、高保真状态和删除操作会保存在当前浏览器。请通过“导出评审数据”生成 JSON 文件提供给开发，后续可据此统一修改页面和说明。', style: { marginBottom: 16 } }),
+          h(Card, { className: 'table-card', key: 'card', bodyStyle: { padding: 16 } }, [
+            h('div', { className: 'toolbar', key: 'toolbar' }, [
+              h('div', { className: 'toolbar-left', key: 'left' }, [
+                h(Input, { key: 'search', value: keyword, onChange: (event) => setKeyword(event.target.value), placeholder: '搜索页面、路由、规划或批注', allowClear: true, style: { width: 270 } }),
+                h(Select, { key: 'group', value: group, onChange: setGroup, style: { width: 110 }, options: [{ value: 'all', label: '全部端' }].concat(sideOptions.map((value) => ({ value, label: value }))) })
+              ]),
+              h('div', { className: 'toolbar-right', key: 'right' }, [
+                h('span', { className: 'summary', key: 'summary' }, `共 ${rows.length} 页，点击测试访问链接可打开对应页面`),
+                h(Button, { key: 'export', onClick: exportRows }, '导出评审数据'),
+                h(Button, { key: 'import', onClick: () => fileInput.current.click() }, '导入评审数据'),
+                h(Button, { key: 'reset', onClick: resetRows }, '恢复初始清单'),
+                h('input', { key: 'file', className: 'file-input', ref: fileInput, type: 'file', accept: 'application/json', onChange: importRows })
+              ])
+            ]),
+            h(Table, { key: 'table', columns, dataSource: filteredRows, rowKey: 'key', scroll: { x: 1500 }, pagination: { pageSize: 12, showSizeChanger: true, showTotal: (total) => `共 ${total} 条` } })
+          ]),
+          h(Modal, { key: 'annotation', title: editing ? `批注：${editing.name}` : '批注', open: Boolean(editing), okText: '保存批注', cancelText: '取消', onOk: saveAnnotation, onCancel: () => setEditing(null) }, h(TextArea, { value: draft, rows: 7, maxLength: 1000, showCount: true, placeholder: '记录页面、交互、文案、截图或设计修改意见', onChange: (event) => setDraft(event.target.value) })),
+          h(Modal, { key: 'preview', className: 'image-modal', title: preview ? `${preview.name} - 当前移动端截图` : '图片预览', open: Boolean(preview), footer: null, onCancel: () => setPreview(null), width: 900 }, preview && h('div', null, [
+            h('img', { key: 'image', src: './' + preview.screens[previewIndex].image, alt: `${preview.name}-${preview.screens[previewIndex].label}` }),
+            preview.screens.length > 1 && h(Space, { key: 'screens', wrap: true, style: { marginTop: 14 } }, preview.screens.map((screen, index) => h(Button, { key: screen.image, type: index === previewIndex ? 'primary' : 'default', onClick: () => setPreviewIndex(index) }, screen.label)))
+          ]))
+          ]),
+          h(Modal, {
+            key: 'visual-preview',
+            className: 'image-modal',
+            title: visualPreview ? `${visualPreview.number} ${visualPreview.title} - 高保真视觉稿` : '高保真视觉稿预览',
+            open: Boolean(visualPreview),
+            footer: null,
+            onCancel: () => setVisualPreview(null),
+            width: 900
+          }, visualPreview && h('img', {
+            src: './' + visualPreview.image,
+            alt: `${visualPreview.number} ${visualPreview.title}高保真视觉稿`
+          })),
+          activeView === 'visual' ? h(VisualDesign, { key: 'visual', onPreview: setVisualPreview }) : null
+        ])
+      )
+    }
+    ReactDOM.createRoot(document.getElementById('root')).render(h(App))
+  </script>
+</body>
+</html>
