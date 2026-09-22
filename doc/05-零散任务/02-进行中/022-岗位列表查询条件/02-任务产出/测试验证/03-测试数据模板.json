@@ -1,0 +1,85 @@
+{
+  "api_cases": [
+    {
+      "case_id": "TC-API-001",
+      "request": {
+        "pageNo": 1,
+        "pageSize": 10,
+        "status": true,
+        "keyword": null,
+        "name": "飞手",
+        "workArea": "湖北省",
+        "salaryRange": "5000-10000"
+      },
+      "expected_response": {
+        "supports_page_contract": true,
+        "supports_filters": true
+      }
+    }
+  ],
+  "data_cases": [
+    {
+      "case_id": "TC-DATA-001",
+      "posts": [
+        {
+          "name": "飞手学员",
+          "workArea": "武汉市洪山区",
+          "salaryRange": "8-12K"
+        },
+        {
+          "name": "飞手讲师",
+          "workArea": "武汉",
+          "salaryRange": "7000-14000"
+        },
+        {
+          "name": "飞手讲师",
+          "workArea": "西安",
+          "salaryRange": "7000-14000"
+        },
+        {
+          "name": "教练",
+          "workArea": "武汉",
+          "salaryRange": "5000-7000"
+        },
+        {
+          "name": "飞手讲师",
+          "workArea": "武汉",
+          "salaryRange": "面议"
+        }
+      ],
+      "selected_filters": {
+        "name": "飞手",
+        "workArea": "湖北省",
+        "salaryRange": "5000-10000"
+      },
+      "expected_rows": [
+        9
+      ],
+      "expected_state": {
+        "total": 2,
+        "pageNo": 2,
+        "pageSize": 1
+      }
+    }
+  ],
+  "interaction_cases": [
+    {
+      "case_id": "TC-UI-001",
+      "required_dependencies": [
+        "test account",
+        "token",
+        "岗位测试数据"
+      ],
+      "input": {
+        "keyword": "飞手",
+        "workArea": "湖北省",
+        "salaryRange": "5000-10000"
+      },
+      "expected_page_state": {
+        "from_first_page": true,
+        "keeps_pagination_mode": true,
+        "mobile_layout_no_obvious_overflow": true
+      }
+    }
+  ]
+}

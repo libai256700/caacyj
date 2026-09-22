@@ -1,0 +1,30 @@
+{
+  "api_cases": [
+    {
+      "case_id": "TC-API-T0015-001",
+      "entry": "FrontPracticeServiceImpl.startComprehensiveExam",
+      "expected_delegate": "FrontPracticeBatchService.startComprehensiveExam",
+      "expected_contract_tests": 22
+    }
+  ],
+  "data_cases": [
+    {
+      "case_id": "TC-DATA-T0015-001",
+      "column": "field_type",
+      "column_definition": "varchar(10)",
+      "invalid_value": "comprehensive-exam",
+      "invalid_value_length": 18,
+      "expected_value": "comprehens",
+      "expected_value_length": 10
+    }
+  ],
+  "interaction_cases": [
+    {
+      "case_id": "TC-UI-T0015-001",
+      "environment": "测试环境（待提供）",
+      "account": "测试账号（待提供）",
+      "action": "点击综合考试",
+      "expected_page_state": "创建成功并进入现有综合考试后续流程"
+    }
+  ]
+}

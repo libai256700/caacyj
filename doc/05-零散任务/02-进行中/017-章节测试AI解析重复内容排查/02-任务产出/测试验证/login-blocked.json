@@ -1,0 +1,19 @@
+{
+  "url": "https://yunjikeji.lai-do.com/yunjikeji/#/pages/auth/login",
+  "title": "登录",
+  "body": "小技无人机教学与飞行成长\n学员登录\n企业登录\n一键登录\n短信验证码\n账号\n验证码\n请输入验证码\n获取验证码\n登录 / 注册\n第三方登录\n我已阅读并同意\n用户服务协议\n和\n隐私协议\nICP/SP 备案信息",
+  "inputs": [
+    {
+      "type": "number",
+      "value": "18171171929",
+      "placeholder": ""
+    },
+    {
+      "type": "number",
+      "value": "",
+      "placeholder": ""
+    }
+  ],
+  "getCodeCount": 1,
+  "responses": []
+}

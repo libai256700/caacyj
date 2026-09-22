@@ -1,0 +1,76 @@
+{
+  "api_cases": [
+    {
+      "case_id": "TC-API-001",
+      "request": {
+        "mode_label": "理论考试",
+        "frontend_mode": "theory-exam",
+        "http_method": "POST",
+        "path": "/app-api/yj/practices/{practiceId}/start/theory-exam"
+      },
+      "expected_response": {
+        "backend_mode": "THEORY_EXAM",
+        "batch_type": 3
+      }
+    },
+    {
+      "case_id": "TC-API-002",
+      "request": {
+        "mode_label": "综合考试",
+        "frontend_mode": "comprehensive-exam",
+        "http_method": "POST",
+        "path": "/app-api/yj/practices/{practiceId}/start/comprehensive-exam"
+      },
+      "expected_response": {
+        "backend_mode": "COMPREHENSIVE_EXAM",
+        "batch_type": 4
+      }
+    },
+    {
+      "case_id": "TC-API-003",
+      "request": {
+        "mode_label": "教员考试",
+        "frontend_mode": "instructor-exam",
+        "http_method": "POST",
+        "path": "/app-api/yj/practices/{practiceId}/start/instructor-exam"
+      },
+      "expected_response": {
+        "backend_mode": "INSTRUCTOR_EXAM",
+        "batch_type": 5
+      }
+    }
+  ],
+  "data_cases": [
+    {
+      "case_id": "TC-DATA-001",
+      "expected_rule": "模式3理论考试应从1至9章按比例抽100题",
+      "actual_code_rule": "当前代码从分类10随机抽10题"
+    },
+    {
+      "case_id": "TC-DATA-002",
+      "expected_rule": "模式4综合考试应从分类10随机抽10题",
+      "actual_code_rule": "当前代码从1至9分类按5/13/3/11/7/22/7/6/26配额抽100题"
+    },
+    {
+      "case_id": "TC-DATA-003",
+      "expected_rule": "模式5教员考试应从分类11随机抽100题",
+      "actual_code_rule": "当前代码从分类11随机抽100题"
+    }
+  ],
+  "interaction_cases": [
+    {
+      "case_id": "TC-UI-001",
+      "account": {
+        "required": true,
+        "provided": false
+      },
+      "input": {
+        "url": "http://localhost:5173/yunjikeji/#/pages/practice/exam-modes"
+      },
+      "expected_page_state": {
+        "if_logged_in": "可见综合考试、理论考试、教员考试三个按钮并可拦截对应POST请求",
+        "actual_without_login": "被重定向到/pages/auth/login，未进入考试模式页"
+      }
+    }
+  ]
+}

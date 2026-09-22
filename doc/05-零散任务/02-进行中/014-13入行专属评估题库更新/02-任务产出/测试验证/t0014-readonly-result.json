@@ -1,0 +1,141 @@
+{
+  "taskId": "T0014",
+  "executedAt": "2026-08-18T14:16:22+08:00",
+  "mode": "read-only",
+  "overallPass": false,
+  "endpoint": {
+    "host": "114.111.30.111",
+    "port": 13306,
+    "database": "yunjikeji"
+  },
+  "checks": {
+    "databaseIdentity": true,
+    "categoryUnique": true,
+    "mappingMetadata": true,
+    "stepsExact": true,
+    "stepQuestionCounts": true,
+    "questionsMatchMapping": true,
+    "answersMatchMapping": true,
+    "a3SplitExact": true,
+    "questionSortContinuous": true,
+    "answerSortContinuous": true,
+    "questionStateAndScore": true,
+    "standardAnswersEmpty": true,
+    "noActiveChildAnswers": true,
+    "noOrphans": true,
+    "nonTargetBaselineUnchanged": true,
+    "executionLogMatchesCurrentTarget": true,
+    "executionLogMatchesCurrentNonTarget": true,
+    "executionWorkflowEvidence": true,
+    "sqlStaticReview": false
+  },
+  "statistics": {
+    "steps": 6,
+    "questions": 48,
+    "answers": 243,
+    "activeChildAnswers": 0,
+    "stepQuestionCounts": [
+      5,
+      10,
+      1,
+      1,
+      26,
+      5
+    ],
+    "questionTypes": {
+      "multiple_choice": 10,
+      "single_choice": 34,
+      "text": 4
+    },
+    "stepOrphans": 0,
+    "answerOrphans": 0,
+    "childAnswerOrphans": 0
+  },
+  "targetHashes": {
+    "yj_practice_setp": "d2434c9ba82834cd61cf63172bdeed8d65ea85712288c7b862d9a0db45692bb1",
+    "yj_practice_exercises": "f6ab711102ab9d6ec129119893112b02fef82504afa9c9806699e057a63b301d",
+    "yj_practice_exercises_answer": "713c99b83a8d93ee8cc83b6ac1e0b19e3bd9b797ddeda3e72c9f05eb7590b14b"
+  },
+  "nonTarget": {
+    "yj_practice_setp": {
+      "rowCount": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "yj_practice_exercises": {
+      "rowCount": 1535,
+      "sha256": "02fa3673246d9bf22c0616c39500cbed0439da79a863bbf9f945ff9c1c7d984b"
+    },
+    "yj_practice_exercises_answer": {
+      "rowCount": 4630,
+      "sha256": "d1d6f71a0ea3dd8e553735facc0ffda97c62bca28644158a8f18ddeae4f190b8"
+    },
+    "yj_practice_exercises_answer_child": {
+      "rowCount": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    }
+  },
+  "expectedNonTarget": {
+    "yj_practice_setp": {
+      "rowCount": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "yj_practice_exercises": {
+      "rowCount": 1535,
+      "sha256": "02fa3673246d9bf22c0616c39500cbed0439da79a863bbf9f945ff9c1c7d984b"
+    },
+    "yj_practice_exercises_answer": {
+      "rowCount": 4630,
+      "sha256": "d1d6f71a0ea3dd8e553735facc0ffda97c62bca28644158a8f18ddeae4f190b8"
+    },
+    "yj_practice_exercises_answer_child": {
+      "rowCount": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    }
+  },
+  "sqlReview": {
+    "updateFile": "20260818140012-dml-update_category_13_assessment.sql",
+    "rollbackFile": "20260818140013-dml-rollback_category_13_assessment.sql",
+    "verifyFile": "verify-category-13.sql",
+    "updateWriteStatementCount": 6,
+    "rollbackWriteStatementCount": 6,
+    "allUpdateWritesBounded": true,
+    "allRollbackWritesBounded": true,
+    "updateOnlySoftDeletesHistoricalRows": true,
+    "updateHasNoDelete": true,
+    "stepReverseReferenceAssertion": true,
+    "idempotencyProtection": true,
+    "backupMatchesRollbackScope": true,
+    "verifyIsReadOnly": false,
+    "noFuzzyNameWrite": true,
+    "credentialFiles": [],
+    "hardcodedPythonPasswordLines": [],
+    "pass": false
+  },
+  "executionLogReview": {
+    "targetHashes": {
+      "yj_practice_exercises": "f6ab711102ab9d6ec129119893112b02fef82504afa9c9806699e057a63b301d",
+      "yj_practice_exercises_answer": "713c99b83a8d93ee8cc83b6ac1e0b19e3bd9b797ddeda3e72c9f05eb7590b14b",
+      "yj_practice_setp": "d2434c9ba82834cd61cf63172bdeed8d65ea85712288c7b862d9a0db45692bb1"
+    },
+    "nonTarget": {
+      "yj_practice_exercises": {
+        "rowCount": 1535,
+        "sha256": "02fa3673246d9bf22c0616c39500cbed0439da79a863bbf9f945ff9c1c7d984b"
+      },
+      "yj_practice_exercises_answer": {
+        "rowCount": 4630,
+        "sha256": "d1d6f71a0ea3dd8e553735facc0ffda97c62bca28644158a8f18ddeae4f190b8"
+      },
+      "yj_practice_exercises_answer_child": {
+        "rowCount": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "yj_practice_setp": {
+        "rowCount": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      }
+    },
+    "workflowEvidencePresent": true,
+    "failedAttemptRecorded": true
+  }
+}

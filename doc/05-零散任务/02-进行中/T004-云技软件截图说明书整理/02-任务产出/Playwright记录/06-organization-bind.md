@@ -1,0 +1,33 @@
+- generic [ref=e339]:
+  - generic [ref=e341]:
+    - generic [ref=e342]: 云技科技
+    - generic [ref=e343]: APP 端客户端项目
+  - generic [ref=e348]:
+    - generic [ref=e349]:
+      - generic [ref=e350] [cursor=pointer]: 学员登录
+      - generic [ref=e351] [cursor=pointer]: 企业登录
+    - generic [ref=e353]:
+      - generic [ref=e354]:
+        - generic [ref=e355]: 账号
+        - generic [ref=e358]:
+          - generic: 请输入手机号
+          - spinbutton [ref=e359]
+      - generic [ref=e360]:
+        - generic [ref=e361]: 验证码
+        - generic [ref=e362]:
+          - generic [ref=e364]:
+            - generic: 请输入验证码
+            - spinbutton [ref=e365]
+          - generic [ref=e366]: 获取验证码
+      - generic [ref=e367] [cursor=pointer]: 登录
+    - generic [ref=e368]:
+      - generic [ref=e369]: 第三方登录
+      - generic [ref=e370]:
+        - generic "微信登录" [ref=e371] [cursor=pointer]
+        - generic "Apple 登录" [ref=e375]
+    - generic [ref=e379]:
+      - generic [ref=e381]: 我已阅读并同意
+      - generic [ref=e382]: 《用户协议》
+      - generic [ref=e383]: 和
+      - generic [ref=e384]: 《隐私协议》
+    - generic [ref=e385]: ICP/SP 备案信息

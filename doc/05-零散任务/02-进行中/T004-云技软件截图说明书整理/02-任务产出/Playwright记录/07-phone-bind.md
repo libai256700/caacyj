@@ -1,0 +1,20 @@
+- generic [ref=e394]:
+  - generic [ref=e395]:
+    - generic "返回" [ref=e396] [cursor=pointer]
+    - generic [ref=e398]: 绑定手机号
+  - generic [ref=e405]:
+    - generic [ref=e406]: 微信用户
+    - generic [ref=e407]: 已完成微信授权
+  - generic [ref=e412]:
+    - generic [ref=e413]: 绑定手机号
+    - generic [ref=e416]:
+      - generic [ref=e423]:
+        - generic: 请输入手机号
+        - spinbutton [ref=e424]
+      - generic [ref=e425]:
+        - generic [ref=e431]:
+          - generic: 请输入验证码
+          - spinbutton [ref=e432]
+        - generic [ref=e433] [cursor=pointer]: 获取验证码
+      - generic [ref=e434] [cursor=pointer]: 确认绑定
+  - generic [ref=e435]: 绑定成功后将使用该手机号作为登录账号和身份校验依据。

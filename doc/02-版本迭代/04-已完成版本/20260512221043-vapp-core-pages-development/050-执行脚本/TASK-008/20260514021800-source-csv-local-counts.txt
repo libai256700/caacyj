@@ -1,0 +1,12 @@
+﻿question_rows=1475
+option_rows=3431
+duplicate_question_codes=0
+duplicate_option_key_groups=5
+needs_manual_review_without_option=362
+importable_question_rows=1113
+duplicate_option_key_list:
+Q-FMR-0093, A=38
+Q-FMR-0093, B=33
+Q-FMR-0093, C=34
+Q-OVERVIEW-0050, C=2
+Q-ROTARY-0060, A=2

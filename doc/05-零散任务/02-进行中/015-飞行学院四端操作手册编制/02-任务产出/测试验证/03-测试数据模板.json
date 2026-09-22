@@ -1,0 +1,60 @@
+{
+  "task_id": "T0015",
+  "task_name": "飞行学院四端操作手册编制",
+  "business_target_date": "2026-08-31",
+  "acceptance_entry": "../01-验收标准.md",
+  "manuals": [
+    {
+      "role": "student",
+      "markdown": "E:/huiyitechworkspace/feixingxueyuan/code/develop/操作手册/学员端操作手册.md",
+      "docx": "E:/huiyitechworkspace/feixingxueyuan/code/develop/操作手册/学员端操作手册.docx",
+      "rendered_pages": 20
+    },
+    {
+      "role": "enterprise",
+      "markdown": "E:/huiyitechworkspace/feixingxueyuan/code/develop/操作手册/企业端操作手册.md",
+      "docx": "E:/huiyitechworkspace/feixingxueyuan/code/develop/操作手册/企业端操作手册.docx",
+      "rendered_pages": 15
+    },
+    {
+      "role": "instructor",
+      "markdown": "E:/huiyitechworkspace/feixingxueyuan/code/develop/操作手册/教员端操作手册.md",
+      "docx": "E:/huiyitechworkspace/feixingxueyuan/code/develop/操作手册/教员端操作手册.docx",
+      "rendered_pages": 14
+    },
+    {
+      "role": "admin",
+      "markdown": "E:/huiyitechworkspace/feixingxueyuan/code/develop/操作手册/管理平台操作手册.md",
+      "docx": "E:/huiyitechworkspace/feixingxueyuan/code/develop/操作手册/管理平台操作手册.docx",
+      "rendered_pages": 19
+    }
+  ],
+  "images": {
+    "directory": "E:/huiyitechworkspace/feixingxueyuan/code/develop/操作手册/images",
+    "count": 19,
+    "supported_suffixes": [".png", ".jpg"]
+  },
+  "rendered": {
+    "student": 20,
+    "enterprise": 15,
+    "instructor": 14,
+    "admin": 19,
+    "total": 68,
+    "size": {
+      "width": 1275,
+      "height": 1650
+    }
+  },
+  "build_script": {
+    "path": "E:/huiyitechworkspace/feixingxueyuan/code/develop/操作手册/tools/build_manuals.py",
+    "runtime": "C:/Users/renquan/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+    "status": "passed"
+  },
+  "verification_flags": {
+    "placeholder_scan": false,
+    "sensitive_text_scan": false,
+    "markdown_docx_consistency": true,
+    "page_png_continuity": true,
+    "page_png_nonblank": true
+  }
+}

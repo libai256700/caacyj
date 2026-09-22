@@ -1,0 +1,9 @@
+{
+  "checkedAt": "2026-08-19",
+  "targetUrl": "http://localhost:5173/yunjikeji/#/pages/practice/exam-modes",
+  "finalUrl": "http://localhost:5173/yunjikeji/#/pages/auth/login",
+  "blocker": "页面未停留在考试模式页，访问被前端路由重定向。",
+  "interceptedRequests": [],
+  "visibleButtons": [],
+  "bodyTextPreview": "小技无人机职教与飞行成长\n学员登录\n企业登录\n其他手机号码登录\n短信验证码登录\n本机号码一键登录\n本机号码待授权\n中国移动认证服务\n本机号码一键登录\n其他登录方式\n我已阅读并同意\n用户服务协议\n和\n隐私政策\nICP/SP 备案信息"
+}

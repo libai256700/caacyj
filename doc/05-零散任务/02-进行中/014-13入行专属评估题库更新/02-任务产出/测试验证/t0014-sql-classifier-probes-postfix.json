@@ -1,0 +1,513 @@
+{
+  "taskId": "T0014",
+  "executedAt": "2026-08-18T15:14:32+08:00",
+  "mode": "fixed-62-independent-postfix",
+  "probeSource": "t0014-sql-classifier-probes-final.json",
+  "classifierScript": "verify_t0014_readonly.py",
+  "classifierScriptSha256": "b1907ae687f50ba4767c250a054c747f64dbcf078f72bf221e9aef9623069a1f",
+  "probeSourceSha256": "51515c7012a24f2ad2524aaf58c306a9b9ab4bbee11f4329c8a3f067d9c7c1e0",
+  "probeCount": 62,
+  "safeCaseCount": 11,
+  "unsafeCaseCount": 51,
+  "failedCount": 0,
+  "overallPass": true,
+  "failedCases": [],
+  "cases": [
+    {
+      "name": "safe_select_plain",
+      "category": "safe",
+      "expectedReadOnly": true,
+      "actualReadOnly": true,
+      "pass": true,
+      "sql": "SELECT id, tenant_id FROM example WHERE id = 1;"
+    },
+    {
+      "name": "safe_select_mixed_case_whitespace",
+      "category": "safe",
+      "expectedReadOnly": true,
+      "actualReadOnly": true,
+      "pass": true,
+      "sql": "  sElEcT\n id,\n tenant_id\n FROM example\n WHERE id = 1 ; "
+    },
+    {
+      "name": "safe_select_block_comment",
+      "category": "safe",
+      "expectedReadOnly": true,
+      "actualReadOnly": true,
+      "pass": true,
+      "sql": "/* leading */ SELECT /* projection */ 1;"
+    },
+    {
+      "name": "safe_select_line_comment",
+      "category": "safe",
+      "expectedReadOnly": true,
+      "actualReadOnly": true,
+      "pass": true,
+      "sql": "-- leading comment\nSELECT 1; # trailing comment\n"
+    },
+    {
+      "name": "safe_set_session_read_only",
+      "category": "safe",
+      "expectedReadOnly": true,
+      "actualReadOnly": true,
+      "pass": true,
+      "sql": "SET   SESSION TRANSACTION READ ONLY;"
+    },
+    {
+      "name": "safe_start_read_only",
+      "category": "safe",
+      "expectedReadOnly": true,
+      "actualReadOnly": true,
+      "pass": true,
+      "sql": "START TRANSACTION\nREAD ONLY;"
+    },
+    {
+      "name": "safe_rollback",
+      "category": "safe",
+      "expectedReadOnly": true,
+      "actualReadOnly": true,
+      "pass": true,
+      "sql": "ROLLBACK;"
+    },
+    {
+      "name": "safe_set_names",
+      "category": "safe",
+      "expectedReadOnly": true,
+      "actualReadOnly": true,
+      "pass": true,
+      "sql": "SET NAMES utf8mb4;"
+    },
+    {
+      "name": "safe_task_set_subquery",
+      "category": "safe",
+      "expectedReadOnly": true,
+      "actualReadOnly": true,
+      "pass": true,
+      "sql": "SET @t0014_count := (SELECT COUNT(*) FROM example WHERE id IN (1, 2));"
+    },
+    {
+      "name": "safe_task_set_case",
+      "category": "safe",
+      "expectedReadOnly": true,
+      "actualReadOnly": true,
+      "pass": true,
+      "sql": "SET @t0014_state := CASE WHEN @t0014_count = 2 THEN 'ok' ELSE 'bad' END;"
+    },
+    {
+      "name": "unsafe_for_update_mixed_case",
+      "category": "locking_read",
+      "expectedReadOnly": false,
+      "actualReadOnly": false,
+      "pass": true,
+      "sql": "SeLeCt id FROM example FoR UpDaTe;"
+    },
+    {
+      "name": "unsafe_for_update_spaces_newline",
+      "category": "locking_read",
+      "expectedReadOnly": false,
+      "actualReadOnly": false,
+      "pass": true,
+      "sql": "SELECT id FROM example\nFOR      UPDATE;"
+    },
+    {
+      "name": "unsafe_for_update_block_comment",
+      "category": "comment_bypass",
+      "expectedReadOnly": false,
+      "actualReadOnly": false,
+      "pass": true,
+      "sql": "SELECT id FROM example FOR/**/UPDATE;"
+    },
+    {
+      "name": "unsafe_for_update_line_comment",
+      "category": "comment_bypass",
+      "expectedReadOnly": false,
+      "actualReadOnly": false,
+      "pass": true,
+      "sql": "SELECT id FROM example FOR-- boundary\nUPDATE;"
+    },
+    {
+      "name": "unsafe_for_share_spaces_newline",
+      "category": "locking_read",
+      "expectedReadOnly": false,
+      "actualReadOnly": false,
+      "pass": true,
+      "sql": "SELECT id FROM example FOR\n   SHARE;"
+    },
+    {
+      "name": "unsafe_for_share_block_comment",
+      "category": "comment_bypass",
+      "expectedReadOnly": false,
+      "actualReadOnly": false,
+      "pass": true,
+      "sql": "SELECT id FROM example FOR/* boundary */SHARE;"
+    },
+    {
+      "name": "unsafe_for_share_line_comment",
+      "category": "comment_bypass",
+      "expectedReadOnly": false,
+      "actualReadOnly": false,
+      "pass": true,
+      "sql": "SELECT id FROM example FOR-- boundary\nSHARE;"
+    },
+    {
+      "name": "unsafe_lock_share_mode_mixed_case",
+      "category": "locking_read",
+      "expectedReadOnly": false,
+      "actualReadOnly": false,
+      "pass": true,
+      "sql": "select id from example LoCk In ShArE MoDe;"
+    },
+    {
+      "name": "unsafe_lock_share_mode_spaces_newline",
+      "category": "locking_read",
+      "expectedReadOnly": false,
+      "actualReadOnly": false,
+      "pass": true,
+      "sql": "SELECT id FROM example LOCK\n IN   SHARE\n MODE;"
+    },
+    {
+      "name": "unsafe_lock_share_mode_block_comments",
+      "category": "comment_bypass",
+      "expectedReadOnly": false,
+      "actualReadOnly": false,
+      "pass": true,
+      "sql": "SELECT id FROM example LOCK/**/IN/**/SHARE/**/MODE;"
+    },
+    {
+      "name": "unsafe_lock_share_mode_line_comments",
+      "category": "comment_bypass",
+      "expectedReadOnly": false,
+      "actualReadOnly": false,
+      "pass": true,
+      "sql": "SELECT id FROM example LOCK-- a\nIN-- b\nSHARE-- c\nMODE;"
+    },
+    {
+      "name": "unsafe_outfile_mixed_case",
+      "category": "file_output",
+      "expectedReadOnly": false,
+      "actualReadOnly": false,
+      "pass": true,
+      "sql": "select value from example InTo OuTfIlE '/tmp/t0014.txt';"
+    },
+    {
+      "name": "unsafe_outfile_block_comment",
+      "category": "comment_bypass",
+      "expectedReadOnly": false,
+      "actualReadOnly": false,
+      "pass": true,
+      "sql": "SELECT value FROM example INTO/**/OUTFILE '/tmp/t0014.txt';"
+    },
+    {
+      "name": "unsafe_outfile_line_comment",
+      "category": "comment_bypass",
+      "expectedReadOnly": false,
+      "actualReadOnly": false,
+      "pass": true,
+      "sql": "SELECT value FROM example INTO-- boundary\nOUTFILE '/tmp/t0014.txt';"
+    },
+    {
+      "name": "unsafe_dumpfile_spaces_newline",
+      "category": "file_output",
+      "expectedReadOnly": false,
+      "actualReadOnly": false,
+      "pass": true,
+      "sql": "SELECT value FROM example INTO\n DUMPFILE '/tmp/t0014.bin';"
+    },
+    {
+      "name": "unsafe_dumpfile_block_comment",
+      "category": "comment_bypass",
+      "expectedReadOnly": false,
+      "actualReadOnly": false,
+      "pass": true,
+      "sql": "SELECT value FROM example INTO/* boundary */DUMPFILE '/tmp/t0014.bin';"
+    },
+    {
+      "name": "unsafe_dumpfile_line_comment",
+      "category": "comment_bypass",
+      "expectedReadOnly": false,
+      "actualReadOnly": false,
+      "pass": true,
+      "sql": "SELECT value FROM example INTO-- boundary\nDUMPFILE '/tmp/t0014.bin';"
+    },
+    {
+      "name": "unsafe_into_variable",
+      "category": "variable_output",
+      "expectedReadOnly": false,
+      "actualReadOnly": false,
+      "pass": true,
+      "sql": "SELECT 1 INTO @t0014_probe;"
+    },
+    {
+      "name": "unsafe_into_variable_block_comment",
+      "category": "comment_bypass",
+      "expectedReadOnly": false,
+      "actualReadOnly": false,
+      "pass": true,
+      "sql": "SELECT 1 INTO/**/@t0014_probe;"
+    },
+    {
+      "name": "unsafe_into_variable_line_comment",
+      "category": "comment_bypass",
+      "expectedReadOnly": false,
+      "actualReadOnly": false,
+      "pass": true,
+      "sql": "SELECT 1 INTO-- boundary\n@t0014_probe;"
+    },
+    {
+      "name": "unsafe_get_lock_mixed_case",
+      "category": "dangerous_function",
+      "expectedReadOnly": false,
+      "actualReadOnly": false,
+      "pass": true,
+      "sql": "SELECT GeT_LoCk('t0014', 1);"
+    },
+    {
+      "name": "unsafe_get_lock_block_comment",
+      "category": "comment_bypass",
+      "expectedReadOnly": false,
+      "actualReadOnly": false,
+      "pass": true,
+      "sql": "SELECT GET_LOCK/**/('t0014', 1);"
+    },
+    {
+      "name": "unsafe_get_lock_line_comment",
+      "category": "comment_bypass",
+      "expectedReadOnly": false,
+      "actualReadOnly": false,
+      "pass": true,
+      "sql": "SELECT GET_LOCK-- boundary\n('t0014', 1);"
+    },
+    {
+      "name": "unsafe_release_lock_spaces",
+      "category": "dangerous_function",
+      "expectedReadOnly": false,
+      "actualReadOnly": false,
+      "pass": true,
+      "sql": "SELECT RELEASE_LOCK   ('t0014');"
+    },
+    {
+      "name": "unsafe_release_lock_block_comment",
+      "category": "comment_bypass",
+      "expectedReadOnly": false,
+      "actualReadOnly": false,
+      "pass": true,
+      "sql": "SELECT RELEASE_LOCK/**/('t0014');"
+    },
+    {
+      "name": "unsafe_load_file_newline",
+      "category": "dangerous_function",
+      "expectedReadOnly": false,
+      "actualReadOnly": false,
+      "pass": true,
+      "sql": "SELECT LOAD_FILE\n('/tmp/t0014.txt');"
+    },
+    {
+      "name": "unsafe_load_file_block_comment",
+      "category": "comment_bypass",
+      "expectedReadOnly": false,
+      "actualReadOnly": false,
+      "pass": true,
+      "sql": "SELECT LOAD_FILE/**/('/tmp/t0014.txt');"
+    },
+    {
+      "name": "unsafe_sleep_mixed_case",
+      "category": "dangerous_function",
+      "expectedReadOnly": false,
+      "actualReadOnly": false,
+      "pass": true,
+      "sql": "select SlEeP (1);"
+    },
+    {
+      "name": "unsafe_sleep_block_comment",
+      "category": "comment_bypass",
+      "expectedReadOnly": false,
+      "actualReadOnly": false,
+      "pass": true,
+      "sql": "SELECT SLEEP/**/(1);"
+    },
+    {
+      "name": "unsafe_benchmark_newline",
+      "category": "dangerous_function",
+      "expectedReadOnly": false,
+      "actualReadOnly": false,
+      "pass": true,
+      "sql": "SELECT BENCHMARK\n(1, SHA2('x', 256));"
+    },
+    {
+      "name": "unsafe_benchmark_line_comment",
+      "category": "comment_bypass",
+      "expectedReadOnly": false,
+      "actualReadOnly": false,
+      "pass": true,
+      "sql": "SELECT BENCHMARK-- boundary\n(1, SHA2('x', 256));"
+    },
+    {
+      "name": "unsafe_commit",
+      "category": "transaction_control",
+      "expectedReadOnly": false,
+      "actualReadOnly": false,
+      "pass": true,
+      "sql": "COMMIT;"
+    },
+    {
+      "name": "unsafe_select_then_commit",
+      "category": "statement_split",
+      "expectedReadOnly": false,
+      "actualReadOnly": false,
+      "pass": true,
+      "sql": "SELECT 1; /* split */ COMMIT;"
+    },
+    {
+      "name": "unsafe_update",
+      "category": "dml",
+      "expectedReadOnly": false,
+      "actualReadOnly": false,
+      "pass": true,
+      "sql": "UPDATE example SET value = 1 WHERE id = 1;"
+    },
+    {
+      "name": "unsafe_insert",
+      "category": "dml",
+      "expectedReadOnly": false,
+      "actualReadOnly": false,
+      "pass": true,
+      "sql": "INSERT INTO example(id) VALUES (1);"
+    },
+    {
+      "name": "unsafe_delete",
+      "category": "dml",
+      "expectedReadOnly": false,
+      "actualReadOnly": false,
+      "pass": true,
+      "sql": "DELETE FROM example WHERE id = 1;"
+    },
+    {
+      "name": "unsafe_replace",
+      "category": "dml",
+      "expectedReadOnly": false,
+      "actualReadOnly": false,
+      "pass": true,
+      "sql": "REPLACE INTO example(id) VALUES (1);"
+    },
+    {
+      "name": "unsafe_create",
+      "category": "ddl",
+      "expectedReadOnly": false,
+      "actualReadOnly": false,
+      "pass": true,
+      "sql": "CREATE TABLE example(id INT);"
+    },
+    {
+      "name": "unsafe_alter",
+      "category": "ddl",
+      "expectedReadOnly": false,
+      "actualReadOnly": false,
+      "pass": true,
+      "sql": "ALTER TABLE example ADD value INT;"
+    },
+    {
+      "name": "unsafe_drop",
+      "category": "ddl",
+      "expectedReadOnly": false,
+      "actualReadOnly": false,
+      "pass": true,
+      "sql": "DROP TABLE example;"
+    },
+    {
+      "name": "unsafe_truncate",
+      "category": "ddl",
+      "expectedReadOnly": false,
+      "actualReadOnly": false,
+      "pass": true,
+      "sql": "TRUNCATE TABLE example;"
+    },
+    {
+      "name": "unsafe_unknown_call",
+      "category": "unknown",
+      "expectedReadOnly": false,
+      "actualReadOnly": false,
+      "pass": true,
+      "sql": "CALL unknown_statement();"
+    },
+    {
+      "name": "unsafe_unknown_show",
+      "category": "unknown",
+      "expectedReadOnly": false,
+      "actualReadOnly": false,
+      "pass": true,
+      "sql": "SHOW TABLES;"
+    },
+    {
+      "name": "unsafe_set_autocommit",
+      "category": "dangerous_set",
+      "expectedReadOnly": false,
+      "actualReadOnly": false,
+      "pass": true,
+      "sql": "SET autocommit = 1;"
+    },
+    {
+      "name": "unsafe_set_sql_log_bin",
+      "category": "dangerous_set",
+      "expectedReadOnly": false,
+      "actualReadOnly": false,
+      "pass": true,
+      "sql": "SET sql_log_bin = 0;"
+    },
+    {
+      "name": "unsafe_set_wrong_prefix",
+      "category": "dangerous_set",
+      "expectedReadOnly": false,
+      "actualReadOnly": false,
+      "pass": true,
+      "sql": "SET @other_probe := (SELECT 1);"
+    },
+    {
+      "name": "unsafe_set_locking_subquery",
+      "category": "dangerous_set",
+      "expectedReadOnly": false,
+      "actualReadOnly": false,
+      "pass": true,
+      "sql": "SET @t0014_probe := (SELECT id FROM example FOR UPDATE);"
+    },
+    {
+      "name": "unsafe_set_nested_assignment",
+      "category": "dangerous_set",
+      "expectedReadOnly": false,
+      "actualReadOnly": false,
+      "pass": true,
+      "sql": "SET @t0014_probe := CASE WHEN (@other_probe := 1) = 1 THEN 'x' ELSE 'y' END;"
+    },
+    {
+      "name": "unsafe_mysql_executable_comment",
+      "category": "comment_bypass",
+      "expectedReadOnly": false,
+      "actualReadOnly": false,
+      "pass": true,
+      "sql": "SELECT 1 /*!50000 FOR UPDATE */;"
+    },
+    {
+      "name": "unsafe_dash_dash_without_mysql_comment_space",
+      "category": "comment_bypass",
+      "expectedReadOnly": false,
+      "actualReadOnly": false,
+      "pass": true,
+      "sql": "SELECT 1--1 FOR UPDATE;"
+    },
+    {
+      "name": "unsafe_unterminated_block_comment",
+      "category": "malformed_sql",
+      "expectedReadOnly": false,
+      "actualReadOnly": false,
+      "pass": true,
+      "sql": "SELECT 1; /* unterminated"
+    },
+    {
+      "name": "safe_actual_verify_asset",
+      "category": "safe_verify_asset",
+      "expectedReadOnly": true,
+      "actualReadOnly": true,
+      "pass": true,
+      "sqlFile": "verify-category-13.sql"
+    }
+  ]
+}

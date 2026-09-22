@@ -1,0 +1,33 @@
+- generic [ref=e7] [box=0,0,390,844]:
+  - generic [ref=e9] [box=25,104,136,71]:
+    - generic [ref=e10] [box=25,104,136,43]: 云技科技
+    - generic [ref=e11] [box=25,153,122,22]: APP 端客户端项目
+  - generic [ref=e16] [box=12,200,366,628]:
+    - generic [ref=e17] [box=12,200,366,60]:
+      - generic [ref=e18] [cursor=pointer] [box=12,200,183,60]: 学员登录
+      - generic [ref=e19] [cursor=pointer] [box=195,200,183,60]: 企业登录
+    - generic [ref=e21] [box=39,274,312,281]:
+      - generic [ref=e22] [box=39,274,312,82]:
+        - generic [ref=e23] [box=39,274,312,22]: 账号
+        - generic [ref=e26] [box=61,306,268,50]:
+          - generic [box=61,306,268,50]: 请输入手机号
+          - spinbutton [ref=e27] [box=61,306,268,50]
+      - generic [ref=e28] [box=39,382,312,82]:
+        - generic [ref=e29] [box=39,382,312,22]: 验证码
+        - generic [ref=e30] [box=39,414,312,50]:
+          - generic [ref=e32] [box=61,414,175,50]:
+            - generic [box=61,414,175,50]: 请输入验证码
+            - spinbutton [ref=e33] [box=61,414,175,50]
+          - generic [ref=e34] [box=246,428,105,22]: 获取验证码
+      - generic [ref=e35] [cursor=pointer] [box=39,503,312,52]: 登录
+    - generic [ref=e36] [box=12,710,366,76]:
+      - generic [ref=e37] [box=160,710,70,20]: 第三方登录
+      - generic [ref=e38] [box=130,742,130,44]:
+        - generic "微信登录" [ref=e39] [cursor=pointer] [box=130,742,44,44]
+        - generic "Apple 登录" [ref=e43] [box=216,742,44,44]
+    - generic [ref=e47] [box=39,580,312,20]:
+      - generic [ref=e49] [box=93,581,77,18]: 我已阅读并同意
+      - generic [ref=e50] [box=173,581,66,18]: 《用户协议》
+      - generic [ref=e51] [box=242,581,11,18]: 和
+      - generic [ref=e52] [box=256,581,66,18]: 《隐私协议》
+    - generic [ref=e53] [box=12,799,366,17]: ICP/SP 备案信息

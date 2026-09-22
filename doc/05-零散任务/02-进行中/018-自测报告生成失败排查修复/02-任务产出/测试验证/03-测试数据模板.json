@@ -1,0 +1,43 @@
+{
+  "regenerateAssessmentReport": {
+    "recordId": 201,
+    "customerAccountId": 9001,
+    "tenantId": 77,
+    "assessmentResultId": 301,
+    "practiceId": "assessment-v3",
+    "mode": "ASSESSMENT",
+    "reportStatusBefore": "FAILED",
+    "expectedReportStatusAfter": "SUCCESS",
+    "correctCount": 8,
+    "answersCount": 10,
+    "logFields": [
+      "method=applyAssessmentEvaluation",
+      "input.response.totalQuestions",
+      "input.response.correctCount",
+      "input.session.agentTenantId",
+      "input.session.userId",
+      "input.session.practiceId",
+      "input.session.mode",
+      "input.session.recordId",
+      "input.recordId",
+      "input.assessmentResultId",
+      "input.answers.size"
+    ]
+  },
+  "pendingInsertContract": {
+    "recordId": 201,
+    "customerAccountId": 9001,
+    "expectedReportStatus": "PENDING",
+    "expectedFailureReason": null,
+    "schemaVariants": [
+      "complete_schema",
+      "missing_customer_account"
+    ]
+  },
+  "failedPageRegeneration": {
+    "recordId": 201,
+    "buttonLabel": "重新生成自测报告",
+    "pollIntervalSeconds": 3,
+    "expectedLoadingText": "重新生成中..."
+  }
+}

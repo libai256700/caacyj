@@ -1,0 +1,2715 @@
+{
+  "taskId": "T0014",
+  "sourceUrl": "https://caacyj.com/",
+  "sourceVersion": 3,
+  "sourceCapturedAt": "2026-08-18T12:34:35+08:00",
+  "generatedAt": "2026-08-18T14:00:12+08:00",
+  "categoryId": 13,
+  "tenantId": 1,
+  "taskMarker": "t0014_v3_20260818",
+  "questionCount": 48,
+  "optionCount": 243,
+  "activeChildAnswerCount": 0,
+  "stepCounts": {
+    "基础画像": 5,
+    "核心量表": 10,
+    "主要顾虑": 1,
+    "报告目标": 1,
+    "补充模块": 26,
+    "确认提交": 5
+  },
+  "steps": [
+    {
+      "stepId": 132026081800001,
+      "stepName": "基础画像",
+      "sortNo": 1
+    },
+    {
+      "stepId": 132026081800002,
+      "stepName": "核心量表",
+      "sortNo": 2
+    },
+    {
+      "stepId": 132026081800003,
+      "stepName": "主要顾虑",
+      "sortNo": 3
+    },
+    {
+      "stepId": 132026081800004,
+      "stepName": "报告目标",
+      "sortNo": 4
+    },
+    {
+      "stepId": 132026081800005,
+      "stepName": "补充模块",
+      "sortNo": 5
+    },
+    {
+      "stepId": 132026081800006,
+      "stepName": "确认提交",
+      "sortNo": 6
+    }
+  ],
+  "questions": [
+    {
+      "sourceId": "Q1",
+      "sourceParentId": "Q1",
+      "questionId": 132026081810001,
+      "stepId": 132026081800001,
+      "stepName": "基础画像",
+      "questionStem": "您当前的身份状态是？",
+      "questionType": "single_choice",
+      "questionStatus": 1,
+      "score": 0,
+      "sortNo": 1,
+      "correctMemo": null,
+      "options": [
+        {
+          "answerId": 132026081820001,
+          "answerCode": "A",
+          "answerContent": "学生",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 1
+        },
+        {
+          "answerId": 132026081820002,
+          "answerCode": "B",
+          "answerContent": "职场人士",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 2
+        },
+        {
+          "answerId": 132026081820003,
+          "answerCode": "C",
+          "answerContent": "自由职业者",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 3
+        },
+        {
+          "answerId": 132026081820004,
+          "answerCode": "D",
+          "answerContent": "待业/求职中",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 4
+        },
+        {
+          "answerId": 132026081820005,
+          "answerCode": "E",
+          "answerContent": "创业者",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 5
+        },
+        {
+          "answerId": 132026081820006,
+          "answerCode": "F",
+          "answerContent": "其他",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 6
+        }
+      ]
+    },
+    {
+      "sourceId": "Q2",
+      "sourceParentId": "Q2",
+      "questionId": 132026081810002,
+      "stepId": 132026081800001,
+      "stepName": "基础画像",
+      "questionStem": "您的学习或工作背景更接近哪些领域？",
+      "questionType": "multiple_choice",
+      "questionStatus": 1,
+      "score": 0,
+      "sortNo": 2,
+      "correctMemo": null,
+      "options": [
+        {
+          "answerId": 132026081820007,
+          "answerCode": "A",
+          "answerContent": "理工/工程/测绘/建筑",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 1
+        },
+        {
+          "answerId": 132026081820008,
+          "answerCode": "B",
+          "answerContent": "电子/机械/维修/自动化",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 2
+        },
+        {
+          "answerId": 132026081820009,
+          "answerCode": "C",
+          "answerContent": "农业/植保/农村相关",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 3
+        },
+        {
+          "answerId": 132026081820010,
+          "answerCode": "D",
+          "answerContent": "摄影摄像/传媒/设计/自媒体",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 4
+        },
+        {
+          "answerId": 132026081820011,
+          "answerCode": "E",
+          "answerContent": "教育/培训/语言表达",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 5
+        },
+        {
+          "answerId": 132026081820012,
+          "answerCode": "F",
+          "answerContent": "计算机/软件/数据/AI",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 6
+        },
+        {
+          "answerId": 132026081820013,
+          "answerCode": "G",
+          "answerContent": "销售/商务/运营/管理",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 7
+        },
+        {
+          "answerId": 132026081820014,
+          "answerCode": "H",
+          "answerContent": "其他专业或行业",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 8
+        },
+        {
+          "answerId": 132026081820015,
+          "answerCode": "I",
+          "answerContent": "暂无明确相关背景",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 9
+        }
+      ]
+    },
+    {
+      "sourceId": "Q3",
+      "sourceParentId": "Q3",
+      "questionId": 132026081810003,
+      "stepId": 132026081800001,
+      "stepName": "基础画像",
+      "questionStem": "您目前接触无人机的程度是？",
+      "questionType": "single_choice",
+      "questionStatus": 1,
+      "score": 0,
+      "sortNo": 3,
+      "correctMemo": null,
+      "options": [
+        {
+          "answerId": 132026081820016,
+          "answerCode": "A",
+          "answerContent": "完全没有接触，只想先了解",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 1
+        },
+        {
+          "answerId": 132026081820017,
+          "answerCode": "B",
+          "answerContent": "操作过消费级无人机或参加过体验活动",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 2
+        },
+        {
+          "answerId": 132026081820018,
+          "answerCode": "C",
+          "answerContent": "有过自学或少量实操，但未参加系统培训",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 3
+        },
+        {
+          "answerId": 132026081820019,
+          "answerCode": "D",
+          "answerContent": "参加过系统培训或已持有相关证照，但尚未正式从业",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 4
+        },
+        {
+          "answerId": 132026081820020,
+          "answerCode": "E",
+          "answerContent": "已有稳定项目或相关从业经验",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 5
+        }
+      ]
+    },
+    {
+      "sourceId": "Q4",
+      "sourceParentId": "Q4",
+      "questionId": 132026081810004,
+      "stepId": 132026081800001,
+      "stepName": "基础画像",
+      "questionStem": "您对CAAC无人机执照的了解程度是？",
+      "questionType": "single_choice",
+      "questionStatus": 1,
+      "score": 0,
+      "sortNo": 4,
+      "correctMemo": null,
+      "options": [
+        {
+          "answerId": 132026081820021,
+          "answerCode": "A",
+          "answerContent": "完全不了解",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 1
+        },
+        {
+          "answerId": 132026081820022,
+          "answerCode": "B",
+          "answerContent": "听说过但不清楚",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 2
+        },
+        {
+          "answerId": 132026081820023,
+          "answerCode": "C",
+          "answerContent": "比较了解",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 3
+        },
+        {
+          "answerId": 132026081820024,
+          "answerCode": "D",
+          "answerContent": "非常了解",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 4
+        }
+      ]
+    },
+    {
+      "sourceId": "Q5",
+      "sourceParentId": "Q5",
+      "questionId": 132026081810005,
+      "stepId": 132026081800001,
+      "stepName": "基础画像",
+      "questionStem": "您目前是否拥有或可稳定接触无人机设备？",
+      "questionType": "single_choice",
+      "questionStatus": 1,
+      "score": 0,
+      "sortNo": 5,
+      "correctMemo": null,
+      "options": [
+        {
+          "answerId": 132026081820025,
+          "answerCode": "A",
+          "answerContent": "没有",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 1
+        },
+        {
+          "answerId": 132026081820026,
+          "answerCode": "B",
+          "answerContent": "可以借用或偶尔接触",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 2
+        },
+        {
+          "answerId": 132026081820027,
+          "answerCode": "C",
+          "answerContent": "有可稳定使用的设备",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 3
+        }
+      ]
+    },
+    {
+      "sourceId": "Q6",
+      "sourceParentId": "Q6",
+      "questionId": 132026081810006,
+      "stepId": 132026081800002,
+      "stepName": "核心量表",
+      "questionStem": "我对无人机相关岗位类型有基本了解。",
+      "questionType": "single_choice",
+      "questionStatus": 1,
+      "score": 0,
+      "sortNo": 6,
+      "correctMemo": null,
+      "options": [
+        {
+          "answerId": 132026081820028,
+          "answerCode": "A",
+          "answerContent": "1 非常不同意",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 1
+        },
+        {
+          "answerId": 132026081820029,
+          "answerCode": "B",
+          "answerContent": "2 比较不同意",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 2
+        },
+        {
+          "answerId": 132026081820030,
+          "answerCode": "C",
+          "answerContent": "3 一般",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 3
+        },
+        {
+          "answerId": 132026081820031,
+          "answerCode": "D",
+          "answerContent": "4 比较同意",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 4
+        },
+        {
+          "answerId": 132026081820032,
+          "answerCode": "E",
+          "answerContent": "5 非常同意",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 5
+        }
+      ]
+    },
+    {
+      "sourceId": "Q7",
+      "sourceParentId": "Q7",
+      "questionId": 132026081810007,
+      "stepId": 132026081800002,
+      "stepName": "核心量表",
+      "questionStem": "我了解无人机相关岗位通常涉及的证照、合规安全飞行与实践要求。",
+      "questionType": "single_choice",
+      "questionStatus": 1,
+      "score": 0,
+      "sortNo": 7,
+      "correctMemo": null,
+      "options": [
+        {
+          "answerId": 132026081820033,
+          "answerCode": "A",
+          "answerContent": "1 非常不同意",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 1
+        },
+        {
+          "answerId": 132026081820034,
+          "answerCode": "B",
+          "answerContent": "2 比较不同意",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 2
+        },
+        {
+          "answerId": 132026081820035,
+          "answerCode": "C",
+          "answerContent": "3 一般",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 3
+        },
+        {
+          "answerId": 132026081820036,
+          "answerCode": "D",
+          "answerContent": "4 比较同意",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 4
+        },
+        {
+          "answerId": 132026081820037,
+          "answerCode": "E",
+          "answerContent": "5 非常同意",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 5
+        }
+      ]
+    },
+    {
+      "sourceId": "Q8",
+      "sourceParentId": "Q8",
+      "questionId": 132026081810008,
+      "stepId": 132026081800002,
+      "stepName": "核心量表",
+      "questionStem": "我关注这一方向，不只是短期好奇，而是与未来职业收入或能力提升有关。",
+      "questionType": "single_choice",
+      "questionStatus": 1,
+      "score": 0,
+      "sortNo": 8,
+      "correctMemo": null,
+      "options": [
+        {
+          "answerId": 132026081820038,
+          "answerCode": "A",
+          "answerContent": "1 非常不同意",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 1
+        },
+        {
+          "answerId": 132026081820039,
+          "answerCode": "B",
+          "answerContent": "2 比较不同意",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 2
+        },
+        {
+          "answerId": 132026081820040,
+          "answerCode": "C",
+          "answerContent": "3 一般",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 3
+        },
+        {
+          "answerId": 132026081820041,
+          "answerCode": "D",
+          "answerContent": "4 比较同意",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 4
+        },
+        {
+          "answerId": 132026081820042,
+          "answerCode": "E",
+          "answerContent": "5 非常同意",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 5
+        }
+      ]
+    },
+    {
+      "sourceId": "Q9",
+      "sourceParentId": "Q9",
+      "questionId": 132026081810009,
+      "stepId": 132026081800002,
+      "stepName": "核心量表",
+      "questionStem": "如果方向明确，我愿意在未来6–12个月持续推进学习。",
+      "questionType": "single_choice",
+      "questionStatus": 1,
+      "score": 0,
+      "sortNo": 9,
+      "correctMemo": null,
+      "options": [
+        {
+          "answerId": 132026081820043,
+          "answerCode": "A",
+          "answerContent": "1 非常不同意",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 1
+        },
+        {
+          "answerId": 132026081820044,
+          "answerCode": "B",
+          "answerContent": "2 比较不同意",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 2
+        },
+        {
+          "answerId": 132026081820045,
+          "answerCode": "C",
+          "answerContent": "3 一般",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 3
+        },
+        {
+          "answerId": 132026081820046,
+          "answerCode": "D",
+          "answerContent": "4 比较同意",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 4
+        },
+        {
+          "answerId": 132026081820047,
+          "answerCode": "E",
+          "answerContent": "5 非常同意",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 5
+        }
+      ]
+    },
+    {
+      "sourceId": "Q10",
+      "sourceParentId": "Q10",
+      "questionId": 132026081810010,
+      "stepId": 132026081800002,
+      "stepName": "核心量表",
+      "questionStem": "我的过往学习、工作等经验，可以迁移到至少一个无人机相关方向。",
+      "questionType": "single_choice",
+      "questionStatus": 1,
+      "score": 0,
+      "sortNo": 10,
+      "correctMemo": null,
+      "options": [
+        {
+          "answerId": 132026081820048,
+          "answerCode": "A",
+          "answerContent": "1 非常不同意",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 1
+        },
+        {
+          "answerId": 132026081820049,
+          "answerCode": "B",
+          "answerContent": "2 比较不同意",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 2
+        },
+        {
+          "answerId": 132026081820050,
+          "answerCode": "C",
+          "answerContent": "3 一般",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 3
+        },
+        {
+          "answerId": 132026081820051,
+          "answerCode": "D",
+          "answerContent": "4 比较同意",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 4
+        },
+        {
+          "answerId": 132026081820052,
+          "answerCode": "E",
+          "answerContent": "5 非常同意",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 5
+        }
+      ]
+    },
+    {
+      "sourceId": "Q11",
+      "sourceParentId": "Q11",
+      "questionId": 132026081810011,
+      "stepId": 132026081800002,
+      "stepName": "核心量表",
+      "questionStem": "我有信心掌握无人机操作或相关软件、设备和工作流程。",
+      "questionType": "single_choice",
+      "questionStatus": 1,
+      "score": 0,
+      "sortNo": 11,
+      "correctMemo": null,
+      "options": [
+        {
+          "answerId": 132026081820053,
+          "answerCode": "A",
+          "answerContent": "1 非常不同意",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 1
+        },
+        {
+          "answerId": 132026081820054,
+          "answerCode": "B",
+          "answerContent": "2 比较不同意",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 2
+        },
+        {
+          "answerId": 132026081820055,
+          "answerCode": "C",
+          "answerContent": "3 一般",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 3
+        },
+        {
+          "answerId": 132026081820056,
+          "answerCode": "D",
+          "answerContent": "4 比较同意",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 4
+        },
+        {
+          "answerId": 132026081820057,
+          "answerCode": "E",
+          "answerContent": "5 非常同意",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 5
+        }
+      ]
+    },
+    {
+      "sourceId": "Q12",
+      "sourceParentId": "Q12",
+      "questionId": 132026081810012,
+      "stepId": 132026081800002,
+      "stepName": "核心量表",
+      "questionStem": "我能够为相关学习、训练或实践安排相对稳定的时间。",
+      "questionType": "single_choice",
+      "questionStatus": 1,
+      "score": 0,
+      "sortNo": 12,
+      "correctMemo": null,
+      "options": [
+        {
+          "answerId": 132026081820058,
+          "answerCode": "A",
+          "answerContent": "1 非常不同意",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 1
+        },
+        {
+          "answerId": 132026081820059,
+          "answerCode": "B",
+          "answerContent": "2 比较不同意",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 2
+        },
+        {
+          "answerId": 132026081820060,
+          "answerCode": "C",
+          "answerContent": "3 一般",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 3
+        },
+        {
+          "answerId": 132026081820061,
+          "answerCode": "D",
+          "answerContent": "4 比较同意",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 4
+        },
+        {
+          "answerId": 132026081820062,
+          "answerCode": "E",
+          "answerContent": "5 非常同意",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 5
+        }
+      ]
+    },
+    {
+      "sourceId": "Q13",
+      "sourceParentId": "Q13",
+      "questionId": 132026081810013,
+      "stepId": 132026081800002,
+      "stepName": "核心量表",
+      "questionStem": "我能够接受证照、实操和项目经验积累需要一个阶段性周期。",
+      "questionType": "single_choice",
+      "questionStatus": 1,
+      "score": 0,
+      "sortNo": 13,
+      "correctMemo": null,
+      "options": [
+        {
+          "answerId": 132026081820063,
+          "answerCode": "A",
+          "answerContent": "1 非常不同意",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 1
+        },
+        {
+          "answerId": 132026081820064,
+          "answerCode": "B",
+          "answerContent": "2 比较不同意",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 2
+        },
+        {
+          "answerId": 132026081820065,
+          "answerCode": "C",
+          "answerContent": "3 一般",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 3
+        },
+        {
+          "answerId": 132026081820066,
+          "answerCode": "D",
+          "answerContent": "4 比较同意",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 4
+        },
+        {
+          "answerId": 132026081820067,
+          "answerCode": "E",
+          "answerContent": "5 非常同意",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 5
+        }
+      ]
+    },
+    {
+      "sourceId": "Q14",
+      "sourceParentId": "Q14",
+      "questionId": 132026081810014,
+      "stepId": 132026081800002,
+      "stepName": "核心量表",
+      "questionStem": "我的时间、预算和工作/家庭安排允许我在未来6个月开始学习无人机相关内容。",
+      "questionType": "single_choice",
+      "questionStatus": 1,
+      "score": 0,
+      "sortNo": 14,
+      "correctMemo": null,
+      "options": [
+        {
+          "answerId": 132026081820068,
+          "answerCode": "A",
+          "answerContent": "1 非常不同意",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 1
+        },
+        {
+          "answerId": 132026081820069,
+          "answerCode": "B",
+          "answerContent": "2 比较不同意",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 2
+        },
+        {
+          "answerId": 132026081820070,
+          "answerCode": "C",
+          "answerContent": "3 一般",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 3
+        },
+        {
+          "answerId": 132026081820071,
+          "answerCode": "D",
+          "answerContent": "4 比较同意",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 4
+        },
+        {
+          "answerId": 132026081820072,
+          "answerCode": "E",
+          "answerContent": "5 非常同意",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 5
+        }
+      ]
+    },
+    {
+      "sourceId": "Q15",
+      "sourceParentId": "Q15",
+      "questionId": 132026081810015,
+      "stepId": 132026081800002,
+      "stepName": "核心量表",
+      "questionStem": "即使存在不确定性，我也愿意先从低成本了解、体验或基础学习开始推进。",
+      "questionType": "single_choice",
+      "questionStatus": 1,
+      "score": 0,
+      "sortNo": 15,
+      "correctMemo": null,
+      "options": [
+        {
+          "answerId": 132026081820073,
+          "answerCode": "A",
+          "answerContent": "1 非常不同意",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 1
+        },
+        {
+          "answerId": 132026081820074,
+          "answerCode": "B",
+          "answerContent": "2 比较不同意",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 2
+        },
+        {
+          "answerId": 132026081820075,
+          "answerCode": "C",
+          "answerContent": "3 一般",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 3
+        },
+        {
+          "answerId": 132026081820076,
+          "answerCode": "D",
+          "answerContent": "4 比较同意",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 4
+        },
+        {
+          "answerId": 132026081820077,
+          "answerCode": "E",
+          "answerContent": "5 非常同意",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 5
+        }
+      ]
+    },
+    {
+      "sourceId": "Q16",
+      "sourceParentId": "Q16",
+      "questionId": 132026081810016,
+      "stepId": 132026081800003,
+      "stepName": "主要顾虑",
+      "questionStem": "您当前推进无人机方向时，主要顾虑或限制有哪些？",
+      "questionType": "multiple_choice",
+      "questionStatus": 1,
+      "score": 0,
+      "sortNo": 16,
+      "correctMemo": null,
+      "options": [
+        {
+          "answerId": 132026081820078,
+          "answerCode": "A",
+          "answerContent": "不了解行业真实情况",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 1
+        },
+        {
+          "answerId": 132026081820079,
+          "answerCode": "B",
+          "answerContent": "不知道自己适合哪个方向",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 2
+        },
+        {
+          "answerId": 132026081820080,
+          "answerCode": "C",
+          "answerContent": "时间不足",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 3
+        },
+        {
+          "answerId": 132026081820081,
+          "answerCode": "D",
+          "answerContent": "预算有限",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 4
+        },
+        {
+          "answerId": 132026081820082,
+          "answerCode": "E",
+          "answerContent": "没有设备或实操机会",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 5
+        },
+        {
+          "answerId": 132026081820083,
+          "answerCode": "F",
+          "answerContent": "不了解证照与合规要求",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 6
+        },
+        {
+          "answerId": 132026081820084,
+          "answerCode": "G",
+          "answerContent": "缺少行业资源",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 7
+        },
+        {
+          "answerId": 132026081820085,
+          "answerCode": "H",
+          "answerContent": "所在城市机会不清晰",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 8
+        },
+        {
+          "answerId": 132026081820086,
+          "answerCode": "I",
+          "answerContent": "家庭或工作安排受限",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 9
+        },
+        {
+          "answerId": 132026081820087,
+          "answerCode": "J",
+          "answerContent": "担心收入或就业不稳定",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 10
+        },
+        {
+          "answerId": 132026081820088,
+          "answerCode": "K",
+          "answerContent": "暂无明显顾虑",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 11
+        },
+        {
+          "answerId": 132026081820089,
+          "answerCode": "L",
+          "answerContent": "其他",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 12
+        }
+      ]
+    },
+    {
+      "sourceId": "Q17",
+      "sourceParentId": "Q17",
+      "questionId": 132026081810017,
+      "stepId": 132026081800004,
+      "stepName": "报告目标",
+      "questionStem": "您本次最想解决的主要问题是？",
+      "questionType": "multiple_choice",
+      "questionStatus": 1,
+      "score": 0,
+      "sortNo": 17,
+      "correctMemo": null,
+      "options": [
+        {
+          "answerId": 132026081820090,
+          "answerCode": "A",
+          "answerContent": "A. 我想知道自己更适合哪些无人机细分方向",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 1
+        },
+        {
+          "answerId": 132026081820091,
+          "answerCode": "B",
+          "answerContent": "B. 我想了解学习、实操、考证及培训选择",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 2
+        },
+        {
+          "answerId": 132026081820092,
+          "answerCode": "C",
+          "answerContent": "C. 我想了解就业或转行前需要做哪些准备",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 3
+        },
+        {
+          "answerId": 132026081820093,
+          "answerCode": "D",
+          "answerContent": "D. 我想评估副业、自由接单或创业的可行性",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 4
+        },
+        {
+          "answerId": 132026081820094,
+          "answerCode": "E",
+          "answerContent": "E. 我想了解本地学习、实操、就业或项目资源",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 5
+        },
+        {
+          "answerId": 132026081820095,
+          "answerCode": "F",
+          "answerContent": "F. 我想了解合规飞行与安全注意事项",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 6
+        },
+        {
+          "answerId": 132026081820096,
+          "answerCode": "G",
+          "answerContent": "G. 我想获得未来30—90天行动计划",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 7
+        },
+        {
+          "answerId": 132026081820097,
+          "answerCode": "H",
+          "answerContent": "H. 其他",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 8
+        }
+      ]
+    },
+    {
+      "sourceId": "A1",
+      "sourceParentId": "A1",
+      "questionId": 132026081810018,
+      "stepId": 132026081800005,
+      "stepName": "补充模块",
+      "questionStem": "您最想评估的细分方向是？",
+      "questionType": "multiple_choice",
+      "questionStatus": 1,
+      "score": 0,
+      "sortNo": 18,
+      "correctMemo": null,
+      "options": [
+        {
+          "answerId": 132026081820098,
+          "answerCode": "A",
+          "answerContent": "航拍传媒",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 1
+        },
+        {
+          "answerId": 132026081820099,
+          "answerCode": "B",
+          "answerContent": "工程测绘",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 2
+        },
+        {
+          "answerId": 132026081820100,
+          "answerCode": "C",
+          "answerContent": "行业巡检",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 3
+        },
+        {
+          "answerId": 132026081820101,
+          "answerCode": "D",
+          "answerContent": "农业植保",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 4
+        },
+        {
+          "answerId": 132026081820102,
+          "answerCode": "E",
+          "answerContent": "无人机清洗",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 5
+        },
+        {
+          "answerId": 132026081820103,
+          "answerCode": "F",
+          "answerContent": "无人机配送",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 6
+        },
+        {
+          "answerId": 132026081820104,
+          "answerCode": "G",
+          "answerContent": "应急救援",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 7
+        },
+        {
+          "answerId": 132026081820105,
+          "answerCode": "H",
+          "answerContent": "无人机培训",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 8
+        },
+        {
+          "answerId": 132026081820106,
+          "answerCode": "I",
+          "answerContent": "装调维修",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 9
+        },
+        {
+          "answerId": 132026081820107,
+          "answerCode": "J",
+          "answerContent": "无人机表演",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 10
+        },
+        {
+          "answerId": 132026081820108,
+          "answerCode": "K",
+          "answerContent": "低空运营管理",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 11
+        },
+        {
+          "answerId": 132026081820109,
+          "answerCode": "L",
+          "answerContent": "暂不清楚，希望系统评估",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 12
+        },
+        {
+          "answerId": 132026081820110,
+          "answerCode": "M",
+          "answerContent": "其他",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 13
+        }
+      ]
+    },
+    {
+      "sourceId": "A2",
+      "sourceParentId": "A2",
+      "questionId": 132026081810019,
+      "stepId": 132026081800005,
+      "stepName": "补充模块",
+      "questionStem": "您目前具备或可以争取的相关能力与资源有哪些？",
+      "questionType": "multiple_choice",
+      "questionStatus": 1,
+      "score": 0,
+      "sortNo": 19,
+      "correctMemo": null,
+      "options": [
+        {
+          "answerId": 132026081820111,
+          "answerCode": "A",
+          "answerContent": "摄影、剪辑、内容创作或自媒体运营能力",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 1
+        },
+        {
+          "answerId": 132026081820112,
+          "answerCode": "B",
+          "answerContent": "工程、测绘、施工、CAD或GIS相关基础",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 2
+        },
+        {
+          "answerId": 132026081820113,
+          "answerCode": "C",
+          "answerContent": "农业、植保、农村场景或相关资源",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 3
+        },
+        {
+          "answerId": 132026081820114,
+          "answerCode": "D",
+          "answerContent": "电子、机械、维修或自动化基础",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 4
+        },
+        {
+          "answerId": 132026081820115,
+          "answerCode": "E",
+          "answerContent": "教学培训、课程设计或表达能力",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 5
+        },
+        {
+          "answerId": 132026081820116,
+          "answerCode": "F",
+          "answerContent": "软件、数据、人工智能或建模工具能力",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 6
+        },
+        {
+          "answerId": 132026081820117,
+          "answerCode": "G",
+          "answerContent": "销售、商务、运营或客户沟通能力",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 7
+        },
+        {
+          "answerId": 132026081820118,
+          "answerCode": "H",
+          "answerContent": "行业人脉或项目引荐机会",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 8
+        },
+        {
+          "answerId": 132026081820119,
+          "answerCode": "I",
+          "answerContent": "无人机设备接触或借用机会",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 9
+        },
+        {
+          "answerId": 132026081820120,
+          "answerCode": "J",
+          "answerContent": "资金、场地、学校、公司或项目资源",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 10
+        },
+        {
+          "answerId": 132026081820121,
+          "answerCode": "K",
+          "answerContent": "已有作品、案例或实践经历",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 11
+        },
+        {
+          "answerId": 132026081820122,
+          "answerCode": "L",
+          "answerContent": "暂无明显资源",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 12
+        }
+      ]
+    },
+    {
+      "sourceId": "A3.1",
+      "sourceParentId": "A3",
+      "questionId": 132026081810020,
+      "stepId": 132026081800005,
+      "stepName": "补充模块",
+      "questionStem": "对以下工作特征，您的接受程度如何？【长时间户外作业】",
+      "questionType": "single_choice",
+      "questionStatus": 1,
+      "score": 0,
+      "sortNo": 20,
+      "correctMemo": null,
+      "options": [
+        {
+          "answerId": 132026081820123,
+          "answerCode": "A",
+          "answerContent": "可以接受",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 1
+        },
+        {
+          "answerId": 132026081820124,
+          "answerCode": "B",
+          "answerContent": "视具体情况决定",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 2
+        },
+        {
+          "answerId": 132026081820125,
+          "answerCode": "C",
+          "answerContent": "较难接受",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 3
+        }
+      ]
+    },
+    {
+      "sourceId": "A3.2",
+      "sourceParentId": "A3",
+      "questionId": 132026081810021,
+      "stepId": 132026081800005,
+      "stepName": "补充模块",
+      "questionStem": "对以下工作特征，您的接受程度如何？【经常出差或跨区域项目】",
+      "questionType": "single_choice",
+      "questionStatus": 1,
+      "score": 0,
+      "sortNo": 21,
+      "correctMemo": null,
+      "options": [
+        {
+          "answerId": 132026081820126,
+          "answerCode": "A",
+          "answerContent": "可以接受",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 1
+        },
+        {
+          "answerId": 132026081820127,
+          "answerCode": "B",
+          "answerContent": "视具体情况决定",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 2
+        },
+        {
+          "answerId": 132026081820128,
+          "answerCode": "C",
+          "answerContent": "较难接受",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 3
+        }
+      ]
+    },
+    {
+      "sourceId": "A3.3",
+      "sourceParentId": "A3",
+      "questionId": 132026081810022,
+      "stepId": 132026081800005,
+      "stepName": "补充模块",
+      "questionStem": "对以下工作特征，您的接受程度如何？【项目制工作，地点和时间存在变化】",
+      "questionType": "single_choice",
+      "questionStatus": 1,
+      "score": 0,
+      "sortNo": 22,
+      "correctMemo": null,
+      "options": [
+        {
+          "answerId": 132026081820129,
+          "answerCode": "A",
+          "answerContent": "可以接受",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 1
+        },
+        {
+          "answerId": 132026081820130,
+          "answerCode": "B",
+          "answerContent": "视具体情况决定",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 2
+        },
+        {
+          "answerId": 132026081820131,
+          "answerCode": "C",
+          "answerContent": "较难接受",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 3
+        }
+      ]
+    },
+    {
+      "sourceId": "A3.4",
+      "sourceParentId": "A3",
+      "questionId": 132026081810023,
+      "stepId": 132026081800005,
+      "stepName": "补充模块",
+      "questionStem": "对以下工作特征，您的接受程度如何？【前期收入可能不稳定】",
+      "questionType": "single_choice",
+      "questionStatus": 1,
+      "score": 0,
+      "sortNo": 23,
+      "correctMemo": null,
+      "options": [
+        {
+          "answerId": 132026081820132,
+          "answerCode": "A",
+          "answerContent": "可以接受",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 1
+        },
+        {
+          "answerId": 132026081820133,
+          "answerCode": "B",
+          "answerContent": "视具体情况决定",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 2
+        },
+        {
+          "answerId": 132026081820134,
+          "answerCode": "C",
+          "answerContent": "较难接受",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 3
+        }
+      ]
+    },
+    {
+      "sourceId": "A3.5",
+      "sourceParentId": "A3",
+      "questionId": 132026081810024,
+      "stepId": 132026081800005,
+      "stepName": "补充模块",
+      "questionStem": "对以下工作特征，您的接受程度如何？【需要持续学习、训练或考证】",
+      "questionType": "single_choice",
+      "questionStatus": 1,
+      "score": 0,
+      "sortNo": 24,
+      "correctMemo": null,
+      "options": [
+        {
+          "answerId": 132026081820135,
+          "answerCode": "A",
+          "answerContent": "可以接受",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 1
+        },
+        {
+          "answerId": 132026081820136,
+          "answerCode": "B",
+          "answerContent": "视具体情况决定",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 2
+        },
+        {
+          "answerId": 132026081820137,
+          "answerCode": "C",
+          "answerContent": "较难接受",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 3
+        }
+      ]
+    },
+    {
+      "sourceId": "A3.6",
+      "sourceParentId": "A3",
+      "questionId": 132026081810025,
+      "stepId": 132026081800005,
+      "stepName": "补充模块",
+      "questionStem": "对以下工作特征，您的接受程度如何？【需要承担较强的飞行与安全责任】",
+      "questionType": "single_choice",
+      "questionStatus": 1,
+      "score": 0,
+      "sortNo": 25,
+      "correctMemo": null,
+      "options": [
+        {
+          "answerId": 132026081820138,
+          "answerCode": "A",
+          "answerContent": "可以接受",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 1
+        },
+        {
+          "answerId": 132026081820139,
+          "answerCode": "B",
+          "answerContent": "视具体情况决定",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 2
+        },
+        {
+          "answerId": 132026081820140,
+          "answerCode": "C",
+          "answerContent": "较难接受",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 3
+        }
+      ]
+    },
+    {
+      "sourceId": "A3.7",
+      "sourceParentId": "A3",
+      "questionId": 132026081810026,
+      "stepId": 132026081800005,
+      "stepName": "补充模块",
+      "questionStem": "对以下工作特征，您的接受程度如何？【需要维护设备或处理简单故障】",
+      "questionType": "single_choice",
+      "questionStatus": 1,
+      "score": 0,
+      "sortNo": 26,
+      "correctMemo": null,
+      "options": [
+        {
+          "answerId": 132026081820141,
+          "answerCode": "A",
+          "answerContent": "可以接受",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 1
+        },
+        {
+          "answerId": 132026081820142,
+          "answerCode": "B",
+          "answerContent": "视具体情况决定",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 2
+        },
+        {
+          "answerId": 132026081820143,
+          "answerCode": "C",
+          "answerContent": "较难接受",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 3
+        }
+      ]
+    },
+    {
+      "sourceId": "A3.8",
+      "sourceParentId": "A3",
+      "questionId": 132026081810027,
+      "stepId": 132026081800005,
+      "stepName": "补充模块",
+      "questionStem": "对以下工作特征，您的接受程度如何？【需要较多客户沟通和团队协作】",
+      "questionType": "single_choice",
+      "questionStatus": 1,
+      "score": 0,
+      "sortNo": 27,
+      "correctMemo": null,
+      "options": [
+        {
+          "answerId": 132026081820144,
+          "answerCode": "A",
+          "answerContent": "可以接受",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 1
+        },
+        {
+          "answerId": 132026081820145,
+          "answerCode": "B",
+          "answerContent": "视具体情况决定",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 2
+        },
+        {
+          "answerId": 132026081820146,
+          "answerCode": "C",
+          "answerContent": "较难接受",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 3
+        }
+      ]
+    },
+    {
+      "sourceId": "B1",
+      "sourceParentId": "B1",
+      "questionId": 132026081810028,
+      "stepId": 132026081800005,
+      "stepName": "补充模块",
+      "questionStem": "您现阶段学习无人机的主要目的是什么？",
+      "questionType": "single_choice",
+      "questionStatus": 1,
+      "score": 0,
+      "sortNo": 28,
+      "correctMemo": null,
+      "options": [
+        {
+          "answerId": 132026081820147,
+          "answerCode": "A",
+          "answerContent": "先了解行业，判断自己是否适合",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 1
+        },
+        {
+          "answerId": 132026081820148,
+          "answerCode": "B",
+          "answerContent": "体验飞行，培养兴趣",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 2
+        },
+        {
+          "answerId": 132026081820149,
+          "answerCode": "C",
+          "answerContent": "学习一项实用技能",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 3
+        },
+        {
+          "answerId": 132026081820150,
+          "answerCode": "D",
+          "answerContent": "为全职就业或转行做准备",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 4
+        },
+        {
+          "answerId": 132026081820151,
+          "answerCode": "E",
+          "answerContent": "为副业、接单或项目合作做准备",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 5
+        },
+        {
+          "answerId": 132026081820152,
+          "answerCode": "F",
+          "answerContent": "为教学培训或科普活动做准备",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 6
+        },
+        {
+          "answerId": 132026081820153,
+          "answerCode": "G",
+          "answerContent": "满足现有单位或岗位的工作需求",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 7
+        },
+        {
+          "answerId": 132026081820154,
+          "answerCode": "H",
+          "answerContent": "暂不确定",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 8
+        }
+      ]
+    },
+    {
+      "sourceId": "B2",
+      "sourceParentId": "B2",
+      "questionId": 132026081810029,
+      "stepId": 132026081800005,
+      "stepName": "补充模块",
+      "questionStem": "您更倾向于哪种学习与实操方式？",
+      "questionType": "single_choice",
+      "questionStatus": 1,
+      "score": 0,
+      "sortNo": 29,
+      "correctMemo": null,
+      "options": [
+        {
+          "answerId": 132026081820155,
+          "answerCode": "A",
+          "answerContent": "线上了解和自学",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 1
+        },
+        {
+          "answerId": 132026081820156,
+          "answerCode": "B",
+          "answerContent": "线上理论 + 周末线下实操",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 2
+        },
+        {
+          "answerId": 132026081820157,
+          "answerCode": "C",
+          "answerContent": "短期集中线下培训",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 3
+        },
+        {
+          "answerId": 132026081820158,
+          "answerCode": "D",
+          "answerContent": "系统考证 + 岗位技能训练",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 4
+        },
+        {
+          "answerId": 132026081820159,
+          "answerCode": "E",
+          "answerContent": "先体验一次再决定",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 5
+        },
+        {
+          "answerId": 132026081820160,
+          "answerCode": "F",
+          "answerContent": "暂不确定",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 6
+        }
+      ]
+    },
+    {
+      "sourceId": "B3",
+      "sourceParentId": "B3",
+      "questionId": 132026081810030,
+      "stepId": 132026081800005,
+      "stepName": "补充模块",
+      "questionStem": "您目前每周可投入的有效学习时间大约是？",
+      "questionType": "single_choice",
+      "questionStatus": 1,
+      "score": 0,
+      "sortNo": 30,
+      "correctMemo": null,
+      "options": [
+        {
+          "answerId": 132026081820161,
+          "answerCode": "A",
+          "answerContent": "暂时无法稳定安排",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 1
+        },
+        {
+          "answerId": 132026081820162,
+          "answerCode": "B",
+          "answerContent": "1–3 小时",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 2
+        },
+        {
+          "answerId": 132026081820163,
+          "answerCode": "C",
+          "answerContent": "4–7 小时",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 3
+        },
+        {
+          "answerId": 132026081820164,
+          "answerCode": "D",
+          "answerContent": "8 小时以上",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 4
+        },
+        {
+          "answerId": 132026081820165,
+          "answerCode": "E",
+          "answerContent": "可阶段性集中投入",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 5
+        }
+      ]
+    },
+    {
+      "sourceId": "B4",
+      "sourceParentId": "B4",
+      "questionId": 132026081810031,
+      "stepId": 132026081800005,
+      "stepName": "补充模块",
+      "questionStem": "您可接受的学习准备周期是？",
+      "questionType": "single_choice",
+      "questionStatus": 1,
+      "score": 0,
+      "sortNo": 31,
+      "correctMemo": null,
+      "options": [
+        {
+          "answerId": 132026081820166,
+          "answerCode": "A",
+          "answerContent": "1 个月以内",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 1
+        },
+        {
+          "answerId": 132026081820167,
+          "answerCode": "B",
+          "answerContent": "1–2 个月",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 2
+        },
+        {
+          "answerId": 132026081820168,
+          "answerCode": "C",
+          "answerContent": "2–3 个月",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 3
+        },
+        {
+          "answerId": 132026081820169,
+          "answerCode": "D",
+          "answerContent": "3–6 个月",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 4
+        },
+        {
+          "answerId": 132026081820170,
+          "answerCode": "E",
+          "answerContent": "可灵活安排",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 5
+        },
+        {
+          "answerId": 132026081820171,
+          "answerCode": "F",
+          "answerContent": "暂不确定",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 6
+        }
+      ]
+    },
+    {
+      "sourceId": "B5",
+      "sourceParentId": "B5",
+      "questionId": 132026081810032,
+      "stepId": 132026081800005,
+      "stepName": "补充模块",
+      "questionStem": "您当前可接受的学习或训练预算范围是？",
+      "questionType": "single_choice",
+      "questionStatus": 1,
+      "score": 0,
+      "sortNo": 32,
+      "correctMemo": null,
+      "options": [
+        {
+          "answerId": 132026081820172,
+          "answerCode": "A",
+          "answerContent": "5000 元以下",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 1
+        },
+        {
+          "answerId": 132026081820173,
+          "answerCode": "B",
+          "answerContent": "5000–10000 元",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 2
+        },
+        {
+          "answerId": 132026081820174,
+          "answerCode": "C",
+          "answerContent": "10000–20000 元",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 3
+        },
+        {
+          "answerId": 132026081820175,
+          "answerCode": "D",
+          "answerContent": "20000 元以上",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 4
+        },
+        {
+          "answerId": 132026081820176,
+          "answerCode": "E",
+          "answerContent": "可根据目标决定",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 5
+        },
+        {
+          "answerId": 132026081820177,
+          "answerCode": "F",
+          "answerContent": "暂不确定",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 6
+        }
+      ]
+    },
+    {
+      "sourceId": "C1",
+      "sourceParentId": "C1",
+      "questionId": 132026081810033,
+      "stepId": 132026081800005,
+      "stepName": "补充模块",
+      "questionStem": "您更倾向的职业发展方式是？",
+      "questionType": "single_choice",
+      "questionStatus": 1,
+      "score": 0,
+      "sortNo": 33,
+      "correctMemo": null,
+      "options": [
+        {
+          "answerId": 132026081820178,
+          "answerCode": "A",
+          "answerContent": "全职进入相关岗位",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 1
+        },
+        {
+          "answerId": 132026081820179,
+          "answerCode": "B",
+          "answerContent": "在现有岗位中增加无人机能力",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 2
+        },
+        {
+          "answerId": 132026081820180,
+          "answerCode": "C",
+          "answerContent": "先实习/兼职积累经验",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 3
+        },
+        {
+          "answerId": 132026081820181,
+          "answerCode": "D",
+          "answerContent": "先考证再决定",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 4
+        },
+        {
+          "answerId": 132026081820182,
+          "answerCode": "E",
+          "answerContent": "暂不确定",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 5
+        }
+      ]
+    },
+    {
+      "sourceId": "C2",
+      "sourceParentId": "C2",
+      "questionId": 132026081810034,
+      "stepId": 132026081800005,
+      "stepName": "补充模块",
+      "questionStem": "您选择相关岗位时最看重什么？",
+      "questionType": "multiple_choice",
+      "questionStatus": 1,
+      "score": 0,
+      "sortNo": 34,
+      "correctMemo": null,
+      "options": [
+        {
+          "answerId": 132026081820183,
+          "answerCode": "A",
+          "answerContent": "收入稳定",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 1
+        },
+        {
+          "answerId": 132026081820184,
+          "answerCode": "B",
+          "answerContent": "收入增长空间",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 2
+        },
+        {
+          "answerId": 132026081820185,
+          "answerCode": "C",
+          "answerContent": "技术成长",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 3
+        },
+        {
+          "answerId": 132026081820186,
+          "answerCode": "D",
+          "answerContent": "岗位数量和就业机会",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 4
+        },
+        {
+          "answerId": 132026081820187,
+          "answerCode": "E",
+          "answerContent": "工作地点与出差频率",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 5
+        },
+        {
+          "answerId": 132026081820188,
+          "answerCode": "F",
+          "answerContent": "职业发展空间",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 6
+        },
+        {
+          "answerId": 132026081820189,
+          "answerCode": "G",
+          "answerContent": "兴趣与成就感",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 7
+        }
+      ]
+    },
+    {
+      "sourceId": "C3",
+      "sourceParentId": "C3",
+      "questionId": 132026081810035,
+      "stepId": 132026081800005,
+      "stepName": "补充模块",
+      "questionStem": "您目前最大的就业或转行障碍是？",
+      "questionType": "multiple_choice",
+      "questionStatus": 1,
+      "score": 0,
+      "sortNo": 35,
+      "correctMemo": null,
+      "options": [
+        {
+          "answerId": 132026081820190,
+          "answerCode": "A",
+          "answerContent": "缺少证照",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 1
+        },
+        {
+          "answerId": 132026081820191,
+          "answerCode": "B",
+          "answerContent": "缺少实操技能",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 2
+        },
+        {
+          "answerId": 132026081820192,
+          "answerCode": "C",
+          "answerContent": "缺少项目经验",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 3
+        },
+        {
+          "answerId": 132026081820193,
+          "answerCode": "D",
+          "answerContent": "缺少作品或案例",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 4
+        },
+        {
+          "answerId": 132026081820194,
+          "answerCode": "E",
+          "answerContent": "不了解岗位要求",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 5
+        },
+        {
+          "answerId": 132026081820195,
+          "answerCode": "F",
+          "answerContent": "所在城市机会不清晰",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 6
+        },
+        {
+          "answerId": 132026081820196,
+          "answerCode": "G",
+          "answerContent": "当前工作或学业难以兼顾",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 7
+        },
+        {
+          "answerId": 132026081820197,
+          "answerCode": "H",
+          "answerContent": "暂不确定",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 8
+        }
+      ]
+    },
+    {
+      "sourceId": "C4",
+      "sourceParentId": "C4",
+      "questionId": 132026081810036,
+      "stepId": 132026081800005,
+      "stepName": "补充模块",
+      "questionStem": "您能否接受为相关岗位进行短期实习、项目体验或跨区域学习？",
+      "questionType": "single_choice",
+      "questionStatus": 1,
+      "score": 0,
+      "sortNo": 36,
+      "correctMemo": null,
+      "options": [
+        {
+          "answerId": 132026081820198,
+          "answerCode": "A",
+          "answerContent": "可以接受",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 1
+        },
+        {
+          "answerId": 132026081820199,
+          "answerCode": "B",
+          "answerContent": "视时间和成本决定",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 2
+        },
+        {
+          "answerId": 132026081820200,
+          "answerCode": "C",
+          "answerContent": "暂时不能接受",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 3
+        },
+        {
+          "answerId": 132026081820201,
+          "answerCode": "D",
+          "answerContent": "不确定",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 4
+        }
+      ]
+    },
+    {
+      "sourceId": "D1",
+      "sourceParentId": "D1",
+      "questionId": 132026081810037,
+      "stepId": 132026081800005,
+      "stepName": "补充模块",
+      "questionStem": "您更希望尝试哪种发展形式？",
+      "questionType": "multiple_choice",
+      "questionStatus": 1,
+      "score": 0,
+      "sortNo": 37,
+      "correctMemo": null,
+      "options": [
+        {
+          "answerId": 132026081820202,
+          "answerCode": "A",
+          "answerContent": "周末或业余时间接单",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 1
+        },
+        {
+          "answerId": 132026081820203,
+          "answerCode": "B",
+          "answerContent": "航拍/内容创作",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 2
+        },
+        {
+          "answerId": 132026081820204,
+          "answerCode": "C",
+          "answerContent": "与团队合作参与项目",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 3
+        },
+        {
+          "answerId": 132026081820205,
+          "answerCode": "D",
+          "answerContent": "无人机培训或科普服务",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 4
+        },
+        {
+          "answerId": 132026081820206,
+          "answerCode": "E",
+          "answerContent": "基于现有行业资源开展应用项目",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 5
+        },
+        {
+          "answerId": 132026081820207,
+          "answerCode": "F",
+          "answerContent": "成立团队或创业",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 6
+        },
+        {
+          "answerId": 132026081820208,
+          "answerCode": "G",
+          "answerContent": "暂不确定",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 7
+        }
+      ]
+    },
+    {
+      "sourceId": "D2",
+      "sourceParentId": "D2",
+      "questionId": 132026081810038,
+      "stepId": 132026081800005,
+      "stepName": "补充模块",
+      "questionStem": "您目前是否已有可展示的作品、项目经历或潜在客户资源？",
+      "questionType": "single_choice",
+      "questionStatus": 1,
+      "score": 0,
+      "sortNo": 38,
+      "correctMemo": null,
+      "options": [
+        {
+          "answerId": 132026081820209,
+          "answerCode": "A",
+          "answerContent": "完全没有",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 1
+        },
+        {
+          "answerId": 132026081820210,
+          "answerCode": "B",
+          "answerContent": "有少量作品或经历",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 2
+        },
+        {
+          "answerId": 132026081820211,
+          "answerCode": "C",
+          "answerContent": "已有较完整作品/项目经历",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 3
+        },
+        {
+          "answerId": 132026081820212,
+          "answerCode": "D",
+          "answerContent": "已有客户或合作资源",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 4
+        }
+      ]
+    },
+    {
+      "sourceId": "D3",
+      "sourceParentId": "D3",
+      "questionId": 132026081810039,
+      "stepId": 132026081800005,
+      "stepName": "补充模块",
+      "questionStem": "您目前可接受哪种启动与投入方式？",
+      "questionType": "single_choice",
+      "questionStatus": 1,
+      "score": 0,
+      "sortNo": 39,
+      "correctMemo": null,
+      "options": [
+        {
+          "answerId": 132026081820213,
+          "answerCode": "A",
+          "answerContent": "仅接受低成本学习和小范围尝试",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 1
+        },
+        {
+          "answerId": 132026081820214,
+          "answerCode": "B",
+          "answerContent": "可以投入必要的培训费用，但暂不购买设备",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 2
+        },
+        {
+          "answerId": 132026081820215,
+          "answerCode": "C",
+          "answerContent": "可以在不影响基本生活的情况下投入培训和基础设备",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 3
+        },
+        {
+          "answerId": 132026081820216,
+          "answerCode": "D",
+          "answerContent": "可以接受前3—6个月以学习、积累作品和项目经验为主",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 4
+        },
+        {
+          "answerId": 132026081820217,
+          "answerCode": "E",
+          "answerContent": "希望先加入成熟团队，降低个人投入和试错风险",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 5
+        },
+        {
+          "answerId": 132026081820218,
+          "answerCode": "F",
+          "answerContent": "暂不确定",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 6
+        }
+      ]
+    },
+    {
+      "sourceId": "D4",
+      "sourceParentId": "D4",
+      "questionId": 132026081810040,
+      "stepId": 132026081800005,
+      "stepName": "补充模块",
+      "questionStem": "您认为自己当前最大的变现障碍是？",
+      "questionType": "multiple_choice",
+      "questionStatus": 1,
+      "score": 0,
+      "sortNo": 40,
+      "correctMemo": null,
+      "options": [
+        {
+          "answerId": 132026081820219,
+          "answerCode": "A",
+          "answerContent": "技能不足",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 1
+        },
+        {
+          "answerId": 132026081820220,
+          "answerCode": "B",
+          "answerContent": "缺少证照与合规能力",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 2
+        },
+        {
+          "answerId": 132026081820221,
+          "answerCode": "C",
+          "answerContent": "缺少设备",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 3
+        },
+        {
+          "answerId": 132026081820222,
+          "answerCode": "D",
+          "answerContent": "缺少作品或案例",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 4
+        },
+        {
+          "answerId": 132026081820223,
+          "answerCode": "E",
+          "answerContent": "缺少客户与渠道",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 5
+        },
+        {
+          "answerId": 132026081820224,
+          "answerCode": "F",
+          "answerContent": "不了解定价与交付流程",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 6
+        },
+        {
+          "answerId": 132026081820225,
+          "answerCode": "G",
+          "answerContent": "时间不足",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 7
+        },
+        {
+          "answerId": 132026081820226,
+          "answerCode": "H",
+          "answerContent": "暂不确定",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 8
+        }
+      ]
+    },
+    {
+      "sourceId": "E1",
+      "sourceParentId": "E1",
+      "questionId": 132026081810041,
+      "stepId": 132026081800005,
+      "stepName": "补充模块",
+      "questionStem": "您的常驻城市是？",
+      "questionType": "text",
+      "questionStatus": 1,
+      "score": 0,
+      "sortNo": 41,
+      "correctMemo": null,
+      "options": []
+    },
+    {
+      "sourceId": "E2",
+      "sourceParentId": "E2",
+      "questionId": 132026081810042,
+      "stepId": 132026081800005,
+      "stepName": "补充模块",
+      "questionStem": "您目前最希望查找哪类本地资源？",
+      "questionType": "multiple_choice",
+      "questionStatus": 1,
+      "score": 0,
+      "sortNo": 42,
+      "correctMemo": null,
+      "options": [
+        {
+          "answerId": 132026081820227,
+          "answerCode": "A",
+          "answerContent": "培训或考证机构",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 1
+        },
+        {
+          "answerId": 132026081820228,
+          "answerCode": "B",
+          "answerContent": "无人机体验或实操场地",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 2
+        },
+        {
+          "answerId": 132026081820229,
+          "answerCode": "C",
+          "answerContent": "设备租借或接触机会",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 3
+        },
+        {
+          "answerId": 132026081820230,
+          "answerCode": "D",
+          "answerContent": "实习或就业岗位",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 4
+        },
+        {
+          "answerId": 132026081820231,
+          "answerCode": "E",
+          "answerContent": "项目合作或接单机会",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 5
+        },
+        {
+          "answerId": 132026081820232,
+          "answerCode": "F",
+          "answerContent": "行业交流社群",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 6
+        },
+        {
+          "answerId": 132026081820233,
+          "answerCode": "G",
+          "answerContent": "政策与产业园区信息",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 7
+        },
+        {
+          "answerId": 132026081820234,
+          "answerCode": "H",
+          "answerContent": "其他",
+          "questionType": "multiple_choice",
+          "isCorrect": 0,
+          "sortNo": 8
+        }
+      ]
+    },
+    {
+      "sourceId": "E3",
+      "sourceParentId": "E3",
+      "questionId": 132026081810043,
+      "stepId": 132026081800005,
+      "stepName": "补充模块",
+      "questionStem": "您可接受的地域范围是？",
+      "questionType": "single_choice",
+      "questionStatus": 1,
+      "score": 0,
+      "sortNo": 43,
+      "correctMemo": null,
+      "options": [
+        {
+          "answerId": 132026081820235,
+          "answerCode": "A",
+          "answerContent": "仅常驻城市",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 1
+        },
+        {
+          "answerId": 132026081820236,
+          "answerCode": "B",
+          "answerContent": "常驻城市及周边",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 2
+        },
+        {
+          "answerId": 132026081820237,
+          "answerCode": "C",
+          "answerContent": "省内均可",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 3
+        },
+        {
+          "answerId": 132026081820238,
+          "answerCode": "D",
+          "answerContent": "可跨省学习或就业",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 4
+        },
+        {
+          "answerId": 132026081820239,
+          "answerCode": "E",
+          "answerContent": "线上资源也可以",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 5
+        }
+      ]
+    },
+    {
+      "sourceId": "S1",
+      "sourceParentId": "S1",
+      "questionId": 132026081810044,
+      "stepId": 132026081800006,
+      "stepName": "确认提交",
+      "questionStem": "您还有哪些特殊情况、补充需求或其他疑问？",
+      "questionType": "text",
+      "questionStatus": 1,
+      "score": 0,
+      "sortNo": 44,
+      "correctMemo": null,
+      "options": []
+    },
+    {
+      "sourceId": "S2",
+      "sourceParentId": "S2",
+      "questionId": 132026081810045,
+      "stepId": 132026081800006,
+      "stepName": "确认提交",
+      "questionStem": "您希望报告如何称呼您？",
+      "questionType": "text",
+      "questionStatus": 1,
+      "score": 0,
+      "sortNo": 45,
+      "correctMemo": null,
+      "options": []
+    },
+    {
+      "sourceId": "S3",
+      "sourceParentId": "S3",
+      "questionId": 132026081810046,
+      "stepId": 132026081800006,
+      "stepName": "确认提交",
+      "questionStem": "如需进一步沟通，您愿意留下联系方式吗？手机/微信",
+      "questionType": "text",
+      "questionStatus": 1,
+      "score": 0,
+      "sortNo": 46,
+      "correctMemo": null,
+      "options": []
+    },
+    {
+      "sourceId": "S4",
+      "sourceParentId": "S4",
+      "questionId": 132026081810047,
+      "stepId": 132026081800006,
+      "stepName": "确认提交",
+      "questionStem": "我确认以上回答基本符合本人真实情况。",
+      "questionType": "single_choice",
+      "questionStatus": 1,
+      "score": 0,
+      "sortNo": 47,
+      "correctMemo": null,
+      "options": [
+        {
+          "answerId": 132026081820240,
+          "answerCode": "A",
+          "answerContent": "是",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 1
+        },
+        {
+          "answerId": 132026081820241,
+          "answerCode": "B",
+          "answerContent": "否",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 2
+        }
+      ]
+    },
+    {
+      "sourceId": "S5",
+      "sourceParentId": "S5",
+      "questionId": 132026081810048,
+      "stepId": 132026081800006,
+      "stepName": "确认提交",
+      "questionStem": "我同意系统根据本次回答生成个性化评估建议。",
+      "questionType": "single_choice",
+      "questionStatus": 1,
+      "score": 0,
+      "sortNo": 48,
+      "correctMemo": null,
+      "options": [
+        {
+          "answerId": 132026081820242,
+          "answerCode": "A",
+          "answerContent": "同意",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 1
+        },
+        {
+          "answerId": 132026081820243,
+          "answerCode": "B",
+          "answerContent": "不同意",
+          "questionType": "single_choice",
+          "isCorrect": 0,
+          "sortNo": 2
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "api_cases": [
+    {
+      "case_id": "TC-T0014-API-001",
+      "request": {"runtime_port": 48080, "database": "yunjikeji", "category_id": 13, "tenant_id": 1},
+      "expected_response": {"runtime_profile": "local", "category_unique": true, "credentials_persisted": false}
+    }
+  ],
+  "data_cases": [
+    {
+      "case_id": "TC-T0014-DATA-001",
+      "query": "由 05-自动化测试脚本/verify_t0014_readonly.py 以显式字段和只读事务执行",
+      "expected_rows": {"steps": 6, "questions": 48, "answers": 243, "active_child_answers": 0, "step_question_counts": [5, 10, 1, 1, 26, 5]},
+      "expected_state": {"question_status": 1, "score": 0, "is_correct": 0, "orphans": 0, "non_target_unchanged": true}
+    }
+  ],
+  "interaction_cases": []
+}

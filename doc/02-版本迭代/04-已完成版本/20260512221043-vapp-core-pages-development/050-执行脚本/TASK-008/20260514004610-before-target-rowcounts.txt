@@ -1,0 +1,5 @@
+target_active_question_count_before	0
+target_active_option_count_before	0
+final_category_count_before	11
+final_active_question_count_before	1310
+final_active_option_count_before	3916

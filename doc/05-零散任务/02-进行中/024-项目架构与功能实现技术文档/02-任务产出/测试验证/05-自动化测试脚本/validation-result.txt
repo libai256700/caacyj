@@ -1,0 +1,20 @@
+[PASS] technical: deliverable exists
+[PASS] technical: required sections and terms are present
+[PASS] technical: excluded-project terms are absent
+[PASS] technical: fenced blocks are balanced
+[PASS] technical: no template placeholders detected
+[PASS] technical: no sensitive-value pattern detected
+[PASS] technical: all 245 path:line citations are valid
+[PASS] research: deliverable exists
+[PASS] research: required sections and terms are present
+[PASS] research: excluded-project terms are absent
+[PASS] research: fenced blocks are balanced
+[PASS] research: no template placeholders detected
+[PASS] research: no sensitive-value pattern detected
+[PASS] research: all 161 path:line citations are valid
+[PASS] deliverables: 4 Mermaid diagrams found
+[PASS] git: no changed uni_modules paths detected
+[PASS] git: no tracked product-source changes detected
+[PASS] git: 11 task-directory paths detected
+[WARN] git: 22818 unrelated dirty paths exist outside T0024
+[SUMMARY] passes=18 failures=0 warnings=1 citations=406 valid_citations=406 mermaid=4

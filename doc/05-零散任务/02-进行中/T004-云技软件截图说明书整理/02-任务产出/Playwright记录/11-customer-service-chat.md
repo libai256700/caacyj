@@ -1,0 +1,40 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e567]:
+    - generic [ref=e569]:
+      - generic [ref=e570]: 云技科技
+      - generic [ref=e571]: APP 端客户端项目
+    - generic [ref=e576]:
+      - generic [ref=e577]:
+        - generic [ref=e578] [cursor=pointer]: 学员登录
+        - generic [ref=e579] [cursor=pointer]: 企业登录
+      - generic [ref=e581]:
+        - generic [ref=e582]:
+          - generic [ref=e583]: 账号
+          - generic [ref=e586]:
+            - generic: 请输入手机号
+            - spinbutton [ref=e587]
+        - generic [ref=e588]:
+          - generic [ref=e589]: 验证码
+          - generic [ref=e590]:
+            - generic [ref=e592]:
+              - generic: 请输入验证码
+              - spinbutton [ref=e593]
+            - generic [ref=e594]: 获取验证码
+        - generic [ref=e595] [cursor=pointer]: 登录
+      - generic [ref=e596]:
+        - generic [ref=e597]: 第三方登录
+        - generic [ref=e598]:
+          - generic "微信登录" [ref=e599] [cursor=pointer]
+          - generic "Apple 登录" [ref=e603]
+      - generic [ref=e607]:
+        - generic [ref=e609]: 我已阅读并同意
+        - generic [ref=e610]: 《用户协议》
+        - generic [ref=e611]: 和
+        - generic [ref=e612]: 《隐私协议》
+      - generic [ref=e613]: ICP/SP 备案信息
+  - generic [ref=e503]:
+    - strong [ref=e505]: 退出登录
+    - generic [ref=e506]: 确认退出当前账号并返回登录页吗？
+    - generic [ref=e507]:
+      - generic [ref=e508] [cursor=pointer]: 取消
+      - generic [ref=e509] [cursor=pointer]: 退出

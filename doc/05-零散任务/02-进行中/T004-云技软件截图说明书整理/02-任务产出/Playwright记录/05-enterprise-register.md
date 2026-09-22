@@ -1,0 +1,46 @@
+- generic [ref=e267]:
+  - generic [ref=e268]: 企业注册
+  - generic [ref=e272]:
+    - generic [ref=e273]: 基础信息
+    - generic [ref=e279]:
+      - generic [ref=e280]: 企业名称
+      - generic [ref=e282]:
+        - generic: 请输入企业名称
+        - textbox [ref=e283]
+    - generic [ref=e284]:
+      - generic [ref=e285]: 统一社会信用代码
+      - generic [ref=e287]:
+        - generic: 请输入统一社会信用代码
+        - textbox [ref=e288]
+    - generic [ref=e289]:
+      - generic [ref=e290]: 法人姓名
+      - generic [ref=e292]:
+        - generic: 请输入法人姓名
+        - textbox [ref=e293]
+    - generic [ref=e294]:
+      - generic [ref=e295]: 法人身份证号
+      - generic [ref=e297]:
+        - generic: 请输入法人身份证号
+        - textbox [ref=e298]
+    - generic [ref=e299]:
+      - generic [ref=e300]: 联系人姓名
+      - generic [ref=e302]:
+        - generic: 请输入联系人姓名
+        - textbox [ref=e303]
+    - generic [ref=e304]:
+      - generic [ref=e305]: 联系人手机号
+      - generic [ref=e307]:
+        - generic: 请输入联系人手机号
+        - spinbutton [ref=e308]
+  - generic [ref=e309]:
+    - generic [ref=e310]: 营业执照上传
+    - generic [ref=e315]:
+      - generic [ref=e316]:
+        - generic [ref=e317]:
+          - generic [ref=e318]: 企
+          - generic [ref=e319]: 营业执照
+        - generic [ref=e324]: 营业执照.jpg
+      - generic [ref=e326]:
+        - generic [ref=e327] [cursor=pointer]: 拍照上传
+        - generic [ref=e330] [cursor=pointer]: 相册上传
+  - generic [ref=e333] [cursor=pointer]: 提交审核

@@ -1,0 +1,62 @@
+metric	metric_value
+loaded_question_csv_rows	1475
+metric	metric_value
+loaded_option_csv_rows	4517
+metric	metric_value
+duplicate_question_codes	0
+metric	metric_value
+duplicate_option_keys	5
+metric	metric_value
+excluded_questions_needs_manual_review_without_option	0
+metric	metric_value
+importable_questions	1473
+metric	metric_value
+excluded_questions_without_importable_option	1
+metric	metric_value
+importable_options_after_duplicate_key_exclusion	4405
+question_code	option_code	duplicate_row_count
+Q-FMR-0093	A	38
+Q-FMR-0093	B	33
+Q-FMR-0093	C	34
+Q-OVERVIEW-0050	C	2
+Q-ROTARY-0060	A	2
+check_name	question_code	category_code	question_type	parse_status	block_reason
+missing_category_or_invalid_question_rows	Q-ROTARY-0030	rotary_uav	single_choice	parsed	invalid_options_json
+batch_option_deleted_rows
+3916
+non_batch_option_deleted_rows
+0
+batch_non_importable_question_soft_deleted_rows
+0
+non_batch_question_soft_deleted_rows
+0
+question_upsert_affected_rows
+163
+option_upsert_affected_rows
+4405
+metric	metric_value
+final_category_count	11
+metric	metric_value
+final_import_batch_question_count	1473
+metric	metric_value
+final_total_question_count	1473
+metric	metric_value
+final_import_batch_option_count	4405
+metric	metric_value
+final_total_option_count	4405
+metric	metric_value
+final_excluded_question_count	0
+metric	metric_value
+final_duplicate_option_key_count	5
+category_code	category_name	final_question_count
+overview	概述	58
+system_components	系统组成及介绍	148
+air_traffic_control	空中交通管制	37
+flight_manual_and_regulations	无人机飞行手册、法律法规及其他	92
+operation_precautions	无人机操作注意事项	79
+meteorology	气象	255
+rotary_uav	旋翼无人机	76
+mission_planning	无人机任务规划	74
+flight_principles_and_performance	飞行原理与飞行性能	300
+comprehensive_qa	综合问答	199
+instructor_question_bank	无人机教员题库	155

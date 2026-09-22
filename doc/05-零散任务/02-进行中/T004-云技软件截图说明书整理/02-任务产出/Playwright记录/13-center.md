@@ -1,0 +1,8 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]: 连接服务器超时，点击屏幕重试
+  - generic [ref=e503]:
+    - strong [ref=e505]: 退出登录
+    - generic [ref=e506]: 确认退出当前账号并返回登录页吗？
+    - generic [ref=e507]:
+      - generic [ref=e508] [cursor=pointer]: 取消
+      - generic [ref=e509] [cursor=pointer]: 退出
