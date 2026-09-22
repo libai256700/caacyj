@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="720" viewBox="0 0 360 720" role="img" aria-labelledby="title">
+  <title id="title">小技学习首页效果图</title>
+  <rect width="360" height="720" rx="28" fill="#132936"/>
+  <rect x="18" y="18" width="324" height="684" rx="22" fill="#f2f8fb"/>
+  <text x="42" y="58" font-family="Microsoft YaHei, Arial" font-size="13" font-weight="700" fill="#314b58">9:41</text>
+  <text x="286" y="58" font-family="Microsoft YaHei, Arial" font-size="13" font-weight="700" fill="#314b58">5G</text>
+  <text x="42" y="100" font-family="Microsoft YaHei, Arial" font-size="28" font-weight="800" fill="#16232f">小技</text>
+  <text x="42" y="126" font-family="Microsoft YaHei, Arial" font-size="14" fill="#657483">今天从 18 分钟复盘开始</text>
+  <rect x="42" y="152" width="276" height="126" rx="14" fill="#168fc4"/>
+  <text x="62" y="190" font-family="Microsoft YaHei, Arial" font-size="14" font-weight="700" fill="#dff5ff">今日建议</text>
+  <text x="62" y="224" font-family="Microsoft YaHei, Arial" font-size="22" font-weight="800" fill="#ffffff">复盘 8 道错题</text>
+  <text x="62" y="252" font-family="Microsoft YaHei, Arial" font-size="14" fill="#dff5ff">再进入多旋翼专项练习</text>
+  <rect x="42" y="300" width="132" height="86" rx="12" fill="#ffffff" stroke="#d8e4ea"/>
+  <rect x="186" y="300" width="132" height="86" rx="12" fill="#ffffff" stroke="#d8e4ea"/>
+  <text x="64" y="336" font-family="Microsoft YaHei, Arial" font-size="18" font-weight="800" fill="#0f5774">72%</text>
+  <text x="64" y="364" font-family="Microsoft YaHei, Arial" font-size="13" fill="#657483">本周完成度</text>
+  <text x="208" y="336" font-family="Microsoft YaHei, Arial" font-size="18" font-weight="800" fill="#5c917a">32</text>
+  <text x="208" y="364" font-family="Microsoft YaHei, Arial" font-size="13" fill="#657483">待复盘题</text>
+  <text x="42" y="428" font-family="Microsoft YaHei, Arial" font-size="18" font-weight="800" fill="#16232f">快捷入口</text>
+  <g font-family="Microsoft YaHei, Arial" font-size="14" font-weight="700" fill="#0f5774">
+    <rect x="42" y="450" width="276" height="52" rx="10" fill="#ffffff" stroke="#d8e4ea"/>
+    <text x="66" y="482">AI 解析</text>
+    <rect x="42" y="514" width="276" height="52" rx="10" fill="#ffffff" stroke="#d8e4ea"/>
+    <text x="66" y="546">专项练习</text>
+    <rect x="42" y="578" width="276" height="52" rx="10" fill="#ffffff" stroke="#d8e4ea"/>
+    <text x="66" y="610">咨询教员</text>
+  </g>
+</svg>

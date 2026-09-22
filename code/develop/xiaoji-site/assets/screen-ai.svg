@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="720" viewBox="0 0 360 720" role="img" aria-labelledby="title">
+  <title id="title">小技 AI 解析效果图</title>
+  <rect width="360" height="720" rx="28" fill="#132936"/>
+  <rect x="18" y="18" width="324" height="684" rx="22" fill="#f2f8fb"/>
+  <text x="42" y="72" font-family="Microsoft YaHei, Arial" font-size="20" font-weight="800" fill="#16232f">AI 解析</text>
+  <rect x="42" y="100" width="276" height="82" rx="12" fill="#ffffff" stroke="#d8e4ea"/>
+  <text x="64" y="132" font-family="Microsoft YaHei, Arial" font-size="15" font-weight="800" fill="#16232f">正确答案：A</text>
+  <text x="64" y="160" font-family="Microsoft YaHei, Arial" font-size="13" fill="#657483">链路设备型号不是每次起飞前必须检查项。</text>
+  <rect x="42" y="204" width="276" height="124" rx="12" fill="#ffffff" stroke="#d8e4ea"/>
+  <text x="64" y="238" font-family="Microsoft YaHei, Arial" font-size="16" font-weight="800" fill="#0f5774">判断依据</text>
+  <text x="64" y="268" font-family="Microsoft YaHei, Arial" font-size="13" fill="#657483">起飞前检查关注设备功能是否正常，</text>
+  <text x="64" y="292" font-family="Microsoft YaHei, Arial" font-size="13" fill="#657483">如信号、舵面反馈、连接稳定性。</text>
+  <rect x="42" y="348" width="276" height="124" rx="12" fill="#ffffff" stroke="#d8e4ea"/>
+  <text x="64" y="382" font-family="Microsoft YaHei, Arial" font-size="16" font-weight="800" fill="#5c917a">记忆方式</text>
+  <text x="64" y="412" font-family="Microsoft YaHei, Arial" font-size="13" fill="#657483">检查“能不能安全控制”，不是检查</text>
+  <text x="64" y="436" font-family="Microsoft YaHei, Arial" font-size="13" fill="#657483">“设备叫什么型号”。</text>
+  <rect x="42" y="492" width="276" height="90" rx="12" fill="#fff7ec" stroke="#e79945"/>
+  <text x="64" y="526" font-family="Microsoft YaHei, Arial" font-size="16" font-weight="800" fill="#9b5a15">建议再练</text>
+  <text x="64" y="556" font-family="Microsoft YaHei, Arial" font-size="13" fill="#657483">操作注意事项 · 通信链路专题 6 题</text>
+  <rect x="42" y="610" width="132" height="48" rx="8" fill="#ffffff" stroke="#d8e4ea"/>
+  <text x="108" y="640" text-anchor="middle" font-family="Microsoft YaHei, Arial" font-size="14" font-weight="800" fill="#0f5774">加入错题</text>
+  <rect x="186" y="610" width="132" height="48" rx="8" fill="#168fc4"/>
+  <text x="252" y="640" text-anchor="middle" font-family="Microsoft YaHei, Arial" font-size="14" font-weight="800" fill="#ffffff">继续练习</text>
+</svg>

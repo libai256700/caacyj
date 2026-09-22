@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="720" viewBox="0 0 360 720" role="img" aria-labelledby="title">
+  <title id="title">小技咨询服务效果图</title>
+  <rect width="360" height="720" rx="28" fill="#132936"/>
+  <rect x="18" y="18" width="324" height="684" rx="22" fill="#f7fbfd"/>
+  <text x="42" y="72" font-family="Microsoft YaHei, Arial" font-size="20" font-weight="800" fill="#16232f">咨询小技</text>
+  <text x="42" y="98" font-family="Microsoft YaHei, Arial" font-size="13" fill="#657483">学习问题、报名问题、训练安排都可以问</text>
+  <rect x="42" y="132" width="236" height="74" rx="14" fill="#ffffff" stroke="#d8e4ea"/>
+  <text x="62" y="164" font-family="Microsoft YaHei, Arial" font-size="13" fill="#314b58">我应该先练法规还是气象？</text>
+  <text x="62" y="188" font-family="Microsoft YaHei, Arial" font-size="13" fill="#314b58">最近错题主要在气象。</text>
+  <rect x="82" y="232" width="236" height="118" rx="14" fill="#eaf6fb" stroke="#168fc4"/>
+  <text x="102" y="264" font-family="Microsoft YaHei, Arial" font-size="13" fill="#0f5774">建议先复盘气象错题，再做法规</text>
+  <text x="102" y="288" font-family="Microsoft YaHei, Arial" font-size="13" fill="#0f5774">混合练习。今天安排如下：</text>
+  <text x="102" y="318" font-family="Microsoft YaHei, Arial" font-size="13" font-weight="800" fill="#0f5774">1. 气象错题 12 分钟</text>
+  <text x="102" y="340" font-family="Microsoft YaHei, Arial" font-size="13" font-weight="800" fill="#0f5774">2. 法规专项 10 题</text>
+  <rect x="42" y="380" width="276" height="82" rx="12" fill="#ffffff" stroke="#d8e4ea"/>
+  <text x="64" y="414" font-family="Microsoft YaHei, Arial" font-size="15" font-weight="800" fill="#16232f">需要人工协助？</text>
+  <text x="64" y="440" font-family="Microsoft YaHei, Arial" font-size="13" fill="#657483">可以转接教员或平台客服继续处理。</text>
+  <rect x="42" y="488" width="132" height="46" rx="8" fill="#ffffff" stroke="#d8e4ea"/>
+  <text x="108" y="516" text-anchor="middle" font-family="Microsoft YaHei, Arial" font-size="14" font-weight="800" fill="#0f5774">联系教员</text>
+  <rect x="186" y="488" width="132" height="46" rx="8" fill="#168fc4"/>
+  <text x="252" y="516" text-anchor="middle" font-family="Microsoft YaHei, Arial" font-size="14" font-weight="800" fill="#ffffff">平台客服</text>
+  <rect x="42" y="626" width="276" height="46" rx="23" fill="#ffffff" stroke="#d8e4ea"/>
+  <text x="66" y="654" font-family="Microsoft YaHei, Arial" font-size="13" fill="#9aa9b3">输入你的问题</text>
+</svg>

@@ -1,0 +1,27 @@
+{
+  "mode": "agent_init",
+  "apply": false,
+  "targetDatabase": {
+    "host": "same-as-application-local",
+    "port": 13306,
+    "database": "yunjikeji"
+  },
+  "sourceFile": {
+    "path": "D:/.../career-core.mjs",
+    "bytes": 0,
+    "sha256": "UPPERCASE_SHA256"
+  },
+  "promptSummary": {
+    "characters": 0,
+    "bytes": 0,
+    "sha256": "UPPERCASE_SHA256"
+  },
+  "expected": {
+    "sourceSha256": "729A47DDFE55C51B98E1EE921C4B6B35BF0B8BCEF27900D3782E49076377D678",
+    "promptSha256": "038C28D2600946455E53F15F307ADCC0B739D56AFF31F0B404864DB363FB2F39"
+  },
+  "notes": [
+    "dry-run does not connect",
+    "apply requires explicit --apply --id 3"
+  ]
+}

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="520" viewBox="0 0 760 520" role="img" aria-labelledby="title desc">
+  <title id="title">学员学习闭环流程图</title>
+  <desc id="desc">展示从目标设定到学习计划、练习、AI 解析、错题复盘、进度报告的闭环流程。</desc>
+  <rect width="760" height="520" fill="#f7fbfd"/>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#168fc4"/>
+    </marker>
+  </defs>
+  <g fill="#fff" stroke="#cfe2ea" stroke-width="2">
+    <rect x="58" y="62" width="180" height="78" rx="8"/>
+    <rect x="290" y="62" width="180" height="78" rx="8"/>
+    <rect x="522" y="62" width="180" height="78" rx="8"/>
+    <rect x="522" y="224" width="180" height="78" rx="8"/>
+    <rect x="290" y="224" width="180" height="78" rx="8"/>
+    <rect x="58" y="224" width="180" height="78" rx="8"/>
+    <rect x="230" y="382" width="300" height="78" rx="8"/>
+  </g>
+  <g stroke="#168fc4" stroke-width="3" fill="none" marker-end="url(#arrow)">
+    <path d="M238 101 H284"/>
+    <path d="M470 101 H516"/>
+    <path d="M612 140 V216"/>
+    <path d="M522 263 H476"/>
+    <path d="M290 263 H244"/>
+    <path d="M148 302 C148 372 210 421 224 421"/>
+    <path d="M530 421 C626 421 652 326 652 306"/>
+  </g>
+  <g font-family="Microsoft YaHei, Arial, sans-serif" fill="#16232f">
+    <text x="148" y="94" text-anchor="middle" font-size="20" font-weight="700">设定目标</text>
+    <text x="148" y="122" text-anchor="middle" font-size="14" fill="#657483">考试 / 专项 / 时间</text>
+    <text x="380" y="94" text-anchor="middle" font-size="20" font-weight="700">生成计划</text>
+    <text x="380" y="122" text-anchor="middle" font-size="14" fill="#657483">每日任务与优先级</text>
+    <text x="612" y="94" text-anchor="middle" font-size="20" font-weight="700">课程学习</text>
+    <text x="612" y="122" text-anchor="middle" font-size="14" fill="#657483">知识点与案例</text>
+    <text x="612" y="256" text-anchor="middle" font-size="20" font-weight="700">专项练习</text>
+    <text x="612" y="284" text-anchor="middle" font-size="14" fill="#657483">题库与模拟考试</text>
+    <text x="380" y="256" text-anchor="middle" font-size="20" font-weight="700">AI 解析</text>
+    <text x="380" y="284" text-anchor="middle" font-size="14" fill="#657483">判断依据与记忆法</text>
+    <text x="148" y="256" text-anchor="middle" font-size="20" font-weight="700">错题复盘</text>
+    <text x="148" y="284" text-anchor="middle" font-size="14" fill="#657483">归因与再练</text>
+    <text x="380" y="414" text-anchor="middle" font-size="20" font-weight="700">进度报告</text>
+    <text x="380" y="442" text-anchor="middle" font-size="14" fill="#657483">调整计划并进入下一轮</text>
+  </g>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="720" viewBox="0 0 360 720" role="img" aria-labelledby="title">
+  <title id="title">小技专项练习效果图</title>
+  <rect width="360" height="720" rx="28" fill="#132936"/>
+  <rect x="18" y="18" width="324" height="684" rx="22" fill="#f7fbfd"/>
+  <text x="42" y="72" font-family="Microsoft YaHei, Arial" font-size="20" font-weight="800" fill="#16232f">多旋翼专项</text>
+  <rect x="42" y="94" width="276" height="8" rx="4" fill="#d8e4ea"/>
+  <rect x="42" y="94" width="118" height="8" rx="4" fill="#168fc4"/>
+  <text x="42" y="132" font-family="Microsoft YaHei, Arial" font-size="13" fill="#657483">第 12 / 40 题</text>
+  <rect x="42" y="154" width="276" height="172" rx="12" fill="#ffffff" stroke="#d8e4ea"/>
+  <text x="64" y="194" font-family="Microsoft YaHei, Arial" font-size="17" font-weight="800" fill="#16232f">无人机起飞前通信链路</text>
+  <text x="64" y="224" font-family="Microsoft YaHei, Arial" font-size="17" font-weight="800" fill="#16232f">检查不必包含哪一项？</text>
+  <text x="64" y="266" font-family="Microsoft YaHei, Arial" font-size="13" fill="#657483">单选题 · 操作注意事项</text>
+  <g font-family="Microsoft YaHei, Arial" font-size="14" fill="#314b58">
+    <rect x="42" y="350" width="276" height="56" rx="10" fill="#ffffff" stroke="#d8e4ea"/>
+    <text x="64" y="384">A. 链路设备型号</text>
+    <rect x="42" y="418" width="276" height="56" rx="10" fill="#eaf7ee" stroke="#5c917a"/>
+    <text x="64" y="452">B. 飞行摇杆反馈检查</text>
+    <rect x="42" y="486" width="276" height="56" rx="10" fill="#ffffff" stroke="#d8e4ea"/>
+    <text x="64" y="520">C. 外部控制盒反馈检查</text>
+  </g>
+  <rect x="42" y="580" width="276" height="48" rx="8" fill="#168fc4"/>
+  <text x="180" y="610" text-anchor="middle" font-family="Microsoft YaHei, Arial" font-size="15" font-weight="800" fill="#ffffff">提交并查看解析</text>
+</svg>

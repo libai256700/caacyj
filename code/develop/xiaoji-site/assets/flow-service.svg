@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="520" viewBox="0 0 760 520" role="img" aria-labelledby="title desc">
+  <title id="title">机构服务流程图</title>
+  <desc id="desc">展示学员问题进入小技后，分流为自动解答、人工客服、教员跟进和运营分析。</desc>
+  <rect width="760" height="520" fill="#f7fbfd"/>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#168fc4"/>
+    </marker>
+  </defs>
+  <g fill="#fff" stroke="#cfe2ea" stroke-width="2">
+    <rect x="70" y="214" width="170" height="86" rx="8"/>
+    <rect x="300" y="214" width="160" height="86" rx="8"/>
+    <rect x="532" y="72" width="170" height="86" rx="8"/>
+    <rect x="532" y="214" width="170" height="86" rx="8"/>
+    <rect x="532" y="356" width="170" height="86" rx="8"/>
+  </g>
+  <g stroke="#168fc4" stroke-width="3" fill="none" marker-end="url(#arrow)">
+    <path d="M240 257 H294"/>
+    <path d="M460 257 H526"/>
+    <path d="M430 214 C456 156 492 120 526 115"/>
+    <path d="M430 300 C456 350 494 392 526 399"/>
+  </g>
+  <g font-family="Microsoft YaHei, Arial, sans-serif" fill="#16232f">
+    <text x="155" y="247" text-anchor="middle" font-size="20" font-weight="700">学员问题</text>
+    <text x="155" y="276" text-anchor="middle" font-size="14" fill="#657483">学习、报名、考试咨询</text>
+    <text x="380" y="247" text-anchor="middle" font-size="20" font-weight="700">小技分流</text>
+    <text x="380" y="276" text-anchor="middle" font-size="14" fill="#657483">识别意图与紧急度</text>
+    <text x="617" y="105" text-anchor="middle" font-size="20" font-weight="700">自动解答</text>
+    <text x="617" y="134" text-anchor="middle" font-size="14" fill="#657483">常见问题与知识解释</text>
+    <text x="617" y="247" text-anchor="middle" font-size="20" font-weight="700">人工客服</text>
+    <text x="617" y="276" text-anchor="middle" font-size="14" fill="#657483">复杂问题转接</text>
+    <text x="617" y="389" text-anchor="middle" font-size="20" font-weight="700">教员跟进</text>
+    <text x="617" y="418" text-anchor="middle" font-size="14" fill="#657483">训练建议与服务线索</text>
+  </g>
+</svg>

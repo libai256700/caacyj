@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="520" viewBox="0 0 760 520" role="img" aria-labelledby="title desc">
+  <title id="title">AI 解析流程图</title>
+  <desc id="desc">展示题目输入、知识匹配、结构化解释、风险检查、输出解析和加入错题本流程。</desc>
+  <rect width="760" height="520" fill="#f7fbfd"/>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#5c917a"/>
+    </marker>
+  </defs>
+  <g fill="#fff" stroke="#cfe2ea" stroke-width="2">
+    <rect x="72" y="68" width="210" height="86" rx="8"/>
+    <rect x="478" y="68" width="210" height="86" rx="8"/>
+    <rect x="275" y="214" width="210" height="86" rx="8"/>
+    <rect x="72" y="364" width="210" height="86" rx="8"/>
+    <rect x="478" y="364" width="210" height="86" rx="8"/>
+  </g>
+  <circle cx="380" cy="111" r="48" fill="#eaf6fb" stroke="#168fc4" stroke-width="2"/>
+  <text x="380" y="105" text-anchor="middle" font-family="Microsoft YaHei, Arial" font-size="18" font-weight="700" fill="#0f5774">小技</text>
+  <text x="380" y="130" text-anchor="middle" font-family="Microsoft YaHei, Arial" font-size="13" fill="#657483">AI 引擎</text>
+  <g stroke="#5c917a" stroke-width="3" fill="none" marker-end="url(#arrow)">
+    <path d="M282 111 H326"/>
+    <path d="M434 111 H472"/>
+    <path d="M580 154 C580 206 515 245 490 252"/>
+    <path d="M380 300 C380 344 298 386 286 396"/>
+    <path d="M485 257 C565 276 586 334 586 358"/>
+  </g>
+  <g font-family="Microsoft YaHei, Arial, sans-serif" fill="#16232f">
+    <text x="177" y="101" text-anchor="middle" font-size="20" font-weight="700">题目输入</text>
+    <text x="177" y="130" text-anchor="middle" font-size="14" fill="#657483">题干 / 选项 / 用户答案</text>
+    <text x="583" y="101" text-anchor="middle" font-size="20" font-weight="700">知识匹配</text>
+    <text x="583" y="130" text-anchor="middle" font-size="14" fill="#657483">法规 / 气象 / 飞行原理</text>
+    <text x="380" y="247" text-anchor="middle" font-size="20" font-weight="700">结构化解释</text>
+    <text x="380" y="276" text-anchor="middle" font-size="14" fill="#657483">为什么对 / 为什么错</text>
+    <text x="177" y="397" text-anchor="middle" font-size="20" font-weight="700">输出解析</text>
+    <text x="177" y="426" text-anchor="middle" font-size="14" fill="#657483">步骤、口诀、相关题</text>
+    <text x="583" y="397" text-anchor="middle" font-size="20" font-weight="700">加入复盘</text>
+    <text x="583" y="426" text-anchor="middle" font-size="14" fill="#657483">错题归因与再练计划</text>
+  </g>
+</svg>
