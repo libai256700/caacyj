@@ -1,0 +1,223 @@
+﻿{
+  "pages": [
+    {
+      "path": "pages/home",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "首页",
+        "disableScroll": true
+      }
+    },
+    {
+      "path": "pages/index",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "小技"
+      }
+    },
+    {
+      "path": "pages/auth/login",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "登录"
+      }
+    },
+    {
+      "path": "pages/enterprise/register",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "企业注册"
+      }
+    },
+    {
+      "path": "pages/enterprise/review",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "审核进度"
+      }
+    },
+    {
+      "path": "pages/enterprise/students",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "学员"
+      }
+    },
+    {
+      "path": "pages/profile/phone-bind",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "绑定手机号"
+      }
+    },
+    {
+      "path": "pages/auth/agreement",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "用户服务协议"
+      }
+    },
+    {
+      "path": "pages/jobs",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "招聘",
+        "enablePullDownRefresh": true
+      }
+    },
+    {
+      "path": "pages/center",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "中心",
+        "disableScroll": true,
+        "app-plus": {
+          "softinputMode": "adjustResize"
+        }
+      }
+    },
+    {
+      "path": "pages/center/self-test-report",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "自测报告"
+      }
+    },
+    {
+      "path": "pages/center/career-assessment-report",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "职业规划评测报告"
+      }
+    },
+    {
+      "path": "pages/practice/record",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "练习记录"
+      }
+    },
+    {
+      "path": "pages/practice/self-test-record",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "自测记录"
+      }
+    },
+    {
+      "path": "pages/profile",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "我的",
+        "disableScroll": true
+      }
+    },
+    {
+      "path": "pages/profile/settings",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "设置"
+      }
+    },
+    {
+      "path": "pages/service/customer-service",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "客服中心"
+      }
+    },
+    {
+      "path": "pages/service/customer-service-chat",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "客服",
+        "disableScroll": true,
+        "app-plus": {
+          "softinputMode": "adjustResize"
+        }
+      }
+    },
+    {
+      "path": "pages/practice/start",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "练习开始"
+      }
+    },
+    {
+      "path": "pages/practice/exam-modes",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "考试"
+      }
+    },
+    {
+      "path": "pages/practice/exam-topics",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "题目主题"
+      }
+    },
+    {
+      "path": "pages/practice/exam-assessment",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "题库训练"
+      }
+    },
+    {
+      "path": "pages/practice/answer",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "答题"
+      }
+    },
+    {
+      "path": "pages/practice/record-detail",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "答题详情"
+      }
+    },
+    {
+      "path": "pages/practice/self-test-answer",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "自我测评"
+      }
+    },
+    {
+      "path": "pages/practice/career-assessment-answer",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "职业规划评测"
+      }
+    },
+    {
+      "path": "pages/practice/ai-answer",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "AI 深度解答"
+      }
+    },
+    {
+      "path": "pages/enterprise/organization-bind",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "组织绑定"
+      }
+    }
+  ],
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      "^uv-(.*)": "@climblee/uv-ui/components/uv-$1/uv-$1.vue"
+    }
+  },
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "小技",
+    "navigationBarBackgroundColor": "#F4F8FC",
+    "backgroundColor": "#F4F8FC"
+  }
+}
