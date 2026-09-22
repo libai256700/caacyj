@@ -1,0 +1,269 @@
+/* SidebarSessionList — compact session list embedded in simple-mode sidebar */
+
+.sessionList {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Sticky header: new chat + history title + search */
+.sessionListHeader {
+  flex-shrink: 0;
+  z-index: 1;
+  background: #f9f8f4;
+}
+
+/* Search bar area */
+.newChatBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: calc(100% - 16px);
+  margin: 6px 8px 4px;
+  padding: 7px 12px;
+  border: none;
+  border-radius: 8px;
+  background: #ff7f16;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s;
+
+  &:hover {
+    opacity: 0.85;
+  }
+}
+
+.searchContainer {
+  padding: 4px 8px 6px;
+}
+
+.searchInput {
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.createGroupBtn {
+  display: flex;
+  width: 100%;
+  height: 32px;
+  align-items: center;
+  gap: 7px;
+  margin-top: 5px;
+  justify-content: center;
+  padding: 0 10px;
+  border: 1px dashed var(--colorBorder, rgba(43, 18, 0, 0.14));
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.42);
+  color: var(--colorTextSecondary, rgba(26, 23, 22, 0.62));
+  font-size: 12px;
+  font-weight: 550;
+  cursor: pointer;
+
+  &:hover {
+    border-color: color-mix(in srgb, #ff7f16 46%, transparent);
+    background: color-mix(in srgb, #ff7f16 6%, transparent);
+    color: #ff7f16;
+  }
+
+  &:focus-visible {
+    outline: 2px solid color-mix(in srgb, #ff7f16 38%, transparent);
+    outline-offset: 1px;
+  }
+}
+
+.groupInput {
+  margin-top: 5px;
+  border-radius: 6px;
+  font-size: 11px;
+}
+
+/* Session items container */
+.scroll {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  padding: 0 4px 8px;
+  position: relative;
+}
+
+.stickyGroupHeader {
+  position: absolute;
+  z-index: 4;
+  top: 0;
+  right: 4px;
+  left: 4px;
+  padding-bottom: 2px;
+  border-bottom: 1px solid var(--colorBorderSecondary, rgba(43, 18, 0, 0.055));
+  background: color-mix(in srgb, #f9f8f4 96%, transparent);
+  backdrop-filter: blur(12px);
+}
+
+/* Date group container */
+.group {
+  margin-bottom: 4px;
+}
+
+/* Date group label (clickable to collapse/expand) */
+.groupLabel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 6px 10px 2px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--colorTextQuaternary, rgba(0, 0, 0, 0.25));
+  user-select: none;
+  transition: color 0.15s;
+
+  &:hover {
+    color: var(--colorTextTertiary, rgba(0, 0, 0, 0.45));
+  }
+}
+
+/* Loading / empty state */
+.loadingState,
+.emptyState {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 12px;
+  font-size: 12px;
+  color: var(--colorTextTertiary, rgba(0, 0, 0, 0.45));
+}
+
+/* Dark mode */
+:global(.dark-mode) {
+  .sessionListHeader {
+    background: #1a1a1a;
+  }
+
+  .groupLabel {
+    color: rgba(255, 255, 255, 0.42);
+  }
+
+  .groupHeader {
+    color: rgba(255, 255, 255, 0.42);
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.45);
+    }
+  }
+
+  .loadingState,
+  .emptyState {
+    color: rgba(255, 255, 255, 0.35);
+  }
+
+  .historyHeader {
+    color: var(--text-secondary, rgba(255, 255, 255, 0.45));
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.85);
+    }
+  }
+
+  .searchInput {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .groupInput {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .createGroupBtn {
+    border-color: rgba(255, 255, 255, 0.14);
+    background: rgba(255, 255, 255, 0.035);
+    color: rgba(255, 255, 255, 0.62);
+
+    &:hover {
+      border-color: rgba(255, 143, 50, 0.5);
+      background: rgba(255, 127, 22, 0.1);
+      color: #ff8f32;
+    }
+  }
+
+  .stickyGroupHeader {
+    border-bottom-color: rgba(255, 255, 255, 0.08);
+    background: color-mix(in srgb, #1a1a1a 96%, transparent);
+  }
+}
+
+/* ── Collapsible history header ─────────────────────────────────────────── */
+
+.historyHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 4px 12px 4px 10px;
+  margin: 2px 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: var(--colorTextTertiary, rgba(0, 0, 0, 0.45));
+  transition: color 0.15s;
+
+  &:hover {
+    color: var(--colorText, rgba(0, 0, 0, 0.88));
+  }
+}
+
+.historyLabel {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1px;
+  user-select: none;
+}
+
+.historyChevron {
+  display: inline-flex;
+  align-items: center;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+/* ── Time group header (Today / Last 7 days / Earlier) ─────────────────── */
+
+.groupHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 4px 10px 2px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  user-select: none;
+  color: var(--colorTextQuaternary, rgba(0, 0, 0, 0.25));
+  transition: color 0.15s;
+
+  &:hover {
+    color: var(--colorTextTertiary, rgba(0, 0, 0, 0.45));
+  }
+}
+
+.groupHeaderText {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.groupChevron {
+  display: inline-flex;
+  align-items: center;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
