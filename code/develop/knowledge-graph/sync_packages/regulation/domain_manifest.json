@@ -1,0 +1,349 @@
+{
+  "schema_version": "domain-sync-package-v2",
+  "built_at": "2026-06-06T04:27:19+00:00",
+  "domain": "regulation",
+  "semantic_schema_version": "semantic-graph-v2",
+  "source_manifest": {
+    "schema_version": "ingest-manifest-v2",
+    "generated_at": "2026-06-06T04:27:19+00:00",
+    "sqlite_fingerprint": {
+      "chunk_count": 2363,
+      "doc_count": 24,
+      "text_bytes": 660395,
+      "max_created_at": "2026-06-06 07:24:48",
+      "schema": "chunks-v1",
+      "fingerprint": "b30a4281bf0d7b9b490558c046eb34b11d2c6615e7d8cc03fefa330ce5f52f65"
+    }
+  },
+  "domain_fingerprint": {
+    "schema": "domain-chunks-v1",
+    "chunk_count": 753,
+    "doc_count": 4,
+    "text_bytes": 357269,
+    "fingerprint": "0f922ccfa153ffdaed695fdf2db6591263fde05dff9a1945433095d9b3b5f6b8"
+  },
+  "previous_domain_fingerprint": {
+    "schema": "domain-chunks-v1",
+    "chunk_count": 753,
+    "doc_count": 4,
+    "text_bytes": 357269,
+    "fingerprint": "0f922ccfa153ffdaed695fdf2db6591263fde05dff9a1945433095d9b3b5f6b8"
+  },
+  "documents": [
+    "政策法规_CCAR-92部.txt",
+    "政策法规_《民用中小型无人驾驶航空器操控员训练机构规范》.txt",
+    "政策法规_中华人民共和国民用航空法_2025修订_2026-07-01施行.txt",
+    "理论题库_无人机飞行手册、法律法规及其他.txt"
+  ],
+  "chunks_file": "chunks.jsonl",
+  "incremental": {
+    "schema": "domain-sync-delta-v1",
+    "base_fingerprint": {
+      "schema": "domain-chunks-v1",
+      "chunk_count": 753,
+      "doc_count": 4,
+      "text_bytes": 357269,
+      "fingerprint": "0f922ccfa153ffdaed695fdf2db6591263fde05dff9a1945433095d9b3b5f6b8"
+    },
+    "target_fingerprint": {
+      "schema": "domain-chunks-v1",
+      "chunk_count": 753,
+      "doc_count": 4,
+      "text_bytes": 357269,
+      "fingerprint": "0f922ccfa153ffdaed695fdf2db6591263fde05dff9a1945433095d9b3b5f6b8"
+    },
+    "can_apply_incrementally": true,
+    "changed_chunks_file": "changed_chunks.jsonl",
+    "deleted_chunks_file": "deleted_chunks.jsonl",
+    "tombstones_file": "tombstones.jsonl",
+    "chunk_fingerprints_file": "chunk_fingerprints.json",
+    "doc_fingerprints_file": "doc_fingerprints.json",
+    "doc_changes_file": "doc_changes.jsonl",
+    "counts": {
+      "previous_chunks": 753,
+      "current_chunks": 753,
+      "changed_chunks": 0,
+      "deleted_chunks": 0,
+      "tombstones": 0,
+      "changed_docs": 0
+    }
+  },
+  "canonical_tables": [
+    {
+      "table": "regulations",
+      "path": "/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/sync_packages/regulation/canonical/regulations.csv",
+      "row_count": 3,
+      "source_path": "/Users/xiaoji/Documents/知识库分析/data/canonical/regulations.csv"
+    },
+    {
+      "table": "documents",
+      "path": "/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/sync_packages/regulation/canonical/documents.csv",
+      "row_count": 4,
+      "source_path": "/Users/xiaoji/Documents/知识库分析/data/canonical/documents.csv"
+    },
+    {
+      "table": "document_chunks",
+      "path": "/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/sync_packages/regulation/canonical/document_chunks.csv",
+      "row_count": 753,
+      "source_path": "/Users/xiaoji/Documents/知识库分析/data/canonical/document_chunks.csv"
+    }
+  ],
+  "graph_export": {
+    "available": true,
+    "nodes_file": "graph_nodes.jsonl",
+    "relationships_file": "graph_relationships.jsonl",
+    "rejected_relationships_file": "graph_relationships_rejected.jsonl",
+    "node_count": 1156,
+    "relationship_count": 1945,
+    "rejected_relationship_count": 0
+  },
+  "graph_snapshot": {
+    "entity_count": 1131,
+    "relationship_count": 2474,
+    "relationship_types": [
+      {
+        "type": "AWARDS",
+        "count": 31
+      },
+      {
+        "type": "BELONGS_TO",
+        "count": 2
+      },
+      {
+        "type": "CONTAINS",
+        "count": 1207
+      },
+      {
+        "type": "DEFINED_BY",
+        "count": 116
+      },
+      {
+        "type": "DESCRIBES",
+        "count": 106
+      },
+      {
+        "type": "HAS_LEVEL",
+        "count": 8
+      },
+      {
+        "type": "HAS_PROPERTY",
+        "count": 16
+      },
+      {
+        "type": "ISSUED_BY",
+        "count": 66
+      },
+      {
+        "type": "MENTIONS",
+        "count": 125
+      },
+      {
+        "type": "PART_OF",
+        "count": 129
+      },
+      {
+        "type": "REFERS_TO",
+        "count": 77
+      },
+      {
+        "type": "REGULATES",
+        "count": 235
+      },
+      {
+        "type": "REQUIRES",
+        "count": 296
+      },
+      {
+        "type": "SUBCLASS_OF",
+        "count": 60
+      }
+    ],
+    "source_doc_coverage_rate": 1.0,
+    "source_chunk_id_coverage_rate": 0.9134,
+    "schema_version_coverage_rate": 1.0,
+    "unresolved_source_docs": [],
+    "source_docs": [
+      {
+        "source_doc": "政策法规_中华人民共和国民用航空法_2025修订_2026-07-01施行.txt",
+        "sqlite_doc_name": "政策法规_中华人民共和国民用航空法_2025修订_2026-07-01施行.txt",
+        "resolved": true,
+        "entity_count": 289,
+        "with_source_chunk_ids": 289,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "政策法规_CCAR-92部.txt",
+        "sqlite_doc_name": "政策法规_CCAR-92部.txt",
+        "resolved": true,
+        "entity_count": 193,
+        "with_source_chunk_ids": 193,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "政策法规_《民用中小型无人驾驶航空器操控员训练机构规范》.txt",
+        "sqlite_doc_name": "政策法规_《民用中小型无人驾驶航空器操控员训练机构规范》.txt",
+        "resolved": true,
+        "entity_count": 175,
+        "with_source_chunk_ids": 175,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "CCAR-92部_B章_考试与检查",
+        "sqlite_doc_name": "政策法规_CCAR-92部.txt",
+        "resolved": true,
+        "entity_count": 40,
+        "with_source_chunk_ids": 20,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "CCAR-92部_F章_一般运行要求(下)",
+        "sqlite_doc_name": "政策法规_CCAR-92部.txt",
+        "resolved": true,
+        "entity_count": 38,
+        "with_source_chunk_ids": 24,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "CCAR-92部_F章_审定类运行(下)",
+        "sqlite_doc_name": "政策法规_CCAR-92部.txt",
+        "resolved": true,
+        "entity_count": 35,
+        "with_source_chunk_ids": 23,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "CCAR-92部_B章_申请条件与颁发",
+        "sqlite_doc_name": "政策法规_CCAR-92部.txt",
+        "resolved": true,
+        "entity_count": 34,
+        "with_source_chunk_ids": 31,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "CCAR-92部_F章_一般运行要求(上)",
+        "sqlite_doc_name": "政策法规_CCAR-92部.txt",
+        "resolved": true,
+        "entity_count": 33,
+        "with_source_chunk_ids": 24,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "CCAR-92部_B章_安全操控与执照",
+        "sqlite_doc_name": "政策法规_CCAR-92部.txt",
+        "resolved": true,
+        "entity_count": 31,
+        "with_source_chunk_ids": 28,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "CCAR-92部_F章_审定类运行(上)",
+        "sqlite_doc_name": "政策法规_CCAR-92部.txt",
+        "resolved": true,
+        "entity_count": 31,
+        "with_source_chunk_ids": 19,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "CCAR-92部_E章_空中交通管理",
+        "sqlite_doc_name": "政策法规_CCAR-92部.txt",
+        "resolved": true,
+        "entity_count": 29,
+        "with_source_chunk_ids": 28,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "CCAR-92部_D章_设计批准(下)",
+        "sqlite_doc_name": "政策法规_CCAR-92部.txt",
+        "resolved": true,
+        "entity_count": 26,
+        "with_source_chunk_ids": 16,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "CCAR-92部_F章_运营许可",
+        "sqlite_doc_name": "政策法规_CCAR-92部.txt",
+        "resolved": true,
+        "entity_count": 25,
+        "with_source_chunk_ids": 23,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "CCAR-92部_D章_一般规定",
+        "sqlite_doc_name": "政策法规_CCAR-92部.txt",
+        "resolved": true,
+        "entity_count": 24,
+        "with_source_chunk_ids": 21,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "CCAR-92部_D章_设计批准(上)",
+        "sqlite_doc_name": "政策法规_CCAR-92部.txt",
+        "resolved": true,
+        "entity_count": 24,
+        "with_source_chunk_ids": 22,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "CCAR-92部_A章_总则",
+        "sqlite_doc_name": "政策法规_CCAR-92部.txt",
+        "resolved": true,
+        "entity_count": 23,
+        "with_source_chunk_ids": 22,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "CCAR-92部_G章_法律责任与附则",
+        "sqlite_doc_name": "政策法规_CCAR-92部.txt",
+        "resolved": true,
+        "entity_count": 20,
+        "with_source_chunk_ids": 19,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "CCAR-92部_C章_登记管理",
+        "sqlite_doc_name": "政策法规_CCAR-92部.txt",
+        "resolved": true,
+        "entity_count": 18,
+        "with_source_chunk_ids": 17,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "CCAR-92部_B章_等级与合规",
+        "sqlite_doc_name": "政策法规_CCAR-92部.txt",
+        "resolved": true,
+        "entity_count": 17,
+        "with_source_chunk_ids": 16,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "CCAR-92部_D章_生产与适航",
+        "sqlite_doc_name": "政策法规_CCAR-92部.txt",
+        "resolved": true,
+        "entity_count": 14,
+        "with_source_chunk_ids": 13,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "CCAR-92部_F章_一般规定",
+        "sqlite_doc_name": "政策法规_CCAR-92部.txt",
+        "resolved": true,
+        "entity_count": 12,
+        "with_source_chunk_ids": 10,
+        "source_type": "sqlite_document"
+      }
+    ]
+  },
+  "remote_rebuild": {
+    "authority": "Use chunks.jsonl, canonical subsets, and graph export files as package inputs; rebuild derived layers remotely.",
+    "layers": [
+      "bm25",
+      "dense_bge_m3",
+      "neo4j_subgraph"
+    ],
+    "do_not_sync_as_authority": [
+      "bm25 index files",
+      "dense sqlite index",
+      "neo4j database files"
+    ]
+  }
+}

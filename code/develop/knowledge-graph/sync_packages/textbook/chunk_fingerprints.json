@@ -1,0 +1,1820 @@
+{
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0000:5c70dd89e6": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0000:5c70dd89e6",
+    "chunk_index": 0,
+    "text_hash": "dd8b7250fe0a34339a4e56affc4568cd882c5b895d45b6a3b7efce6da2042e04",
+    "text_bytes": 2161,
+    "fingerprint": "89d734ea96d8f564a8b327ac0407146246af0f52e9bb1286c5b4da1c55863608"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0001:9fb7d30ebf": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0001:9fb7d30ebf",
+    "chunk_index": 1,
+    "text_hash": "9d04533388e63be755eda6e738a55d6cb86239b2894c006360f100649cc7b940",
+    "text_bytes": 2896,
+    "fingerprint": "ed01ef41c2a6cd2d2df8462687c99e84e98f764b14d15c8b6874b171ebd685d1"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0002:b5d945a6fb": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0002:b5d945a6fb",
+    "chunk_index": 2,
+    "text_hash": "48861bdc1e0fb5364d3e08d001182776837325b0d8345dea2f670f6f2a535e1d",
+    "text_bytes": 585,
+    "fingerprint": "3930c22812feb65d572b76a136b9181ca4b675639ceb757a3f1c37ebb84f5d37"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0003:6c2cf1513b": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0003:6c2cf1513b",
+    "chunk_index": 3,
+    "text_hash": "94c379fbd4f640ec4911748c2b93b285b23a5363efe1eb4b88ee8a62be38d27a",
+    "text_bytes": 3318,
+    "fingerprint": "6a55f2650545afd2a4023b74a79c821de1c54fd09f1f758003d1729d73ecd743"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0004:af54cb8f4b": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0004:af54cb8f4b",
+    "chunk_index": 4,
+    "text_hash": "cbea065c804409d7dbba6277a62f5680df46ea5c4d8e0594773357ddfd0db6e3",
+    "text_bytes": 3485,
+    "fingerprint": "c11cea30dab602e75c223da418d8dc25e9dbf1bceb1daec93d47513cbc5b4051"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0005:52f92a8dd2": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0005:52f92a8dd2",
+    "chunk_index": 5,
+    "text_hash": "416dd021b2d0a8568b4b7e291bd058988bae847c47fea8f83b4b399d73334c7b",
+    "text_bytes": 3494,
+    "fingerprint": "7545f7b445ffe984e08004e569e7533d9770517fba2db6675fc4fd633449f085"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0006:15cae95cf4": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0006:15cae95cf4",
+    "chunk_index": 6,
+    "text_hash": "4d47a66ab8b4970535e91a0fd4a34f16865f454edbf49b36ca5bc64c07f7111e",
+    "text_bytes": 3342,
+    "fingerprint": "01fcbc244cc4bd157e5581dcfd8f5d1a672390e2227a3abf62486e608361d30c"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0007:f37f19c5f7": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0007:f37f19c5f7",
+    "chunk_index": 7,
+    "text_hash": "f8d6c166dc8156c7f1f69dbe05c39437d93d82e04a4a3c638be7ce3c686de37c",
+    "text_bytes": 3404,
+    "fingerprint": "2c2271109566d678971c5a6e400ab1f58c13c2082ffbb38199ac9f4695d86b83"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0008:e6bd7a537f": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0008:e6bd7a537f",
+    "chunk_index": 8,
+    "text_hash": "4fb338fb030a6436cafb947bb6ddfbcdd185242b8acc73dda7eeabafc44ea6d8",
+    "text_bytes": 3447,
+    "fingerprint": "682522563a7aa6059d9208aa25e908d94e244415109a6431c9ac269cc1007266"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0009:c94a535ef0": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0009:c94a535ef0",
+    "chunk_index": 9,
+    "text_hash": "e89402b942fb0f1a762600bfbdaa7802994825d5103099d6c385888e490ebb49",
+    "text_bytes": 3354,
+    "fingerprint": "1eb45bef1f01019e7fcbdfa98e43988a62fd3f1d81eccd7c0e2f81619013f812"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0010:3bfe3da39d": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0010:3bfe3da39d",
+    "chunk_index": 10,
+    "text_hash": "d204feee38c7f1ca901a2cf1108f68185f19297693c63a8623af1e65d85a078f",
+    "text_bytes": 3256,
+    "fingerprint": "ea69889822973e0eb31e43e513c92bd20909d53f7796c85b8b3406b07ab201ba"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0011:364e7d8ec1": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0011:364e7d8ec1",
+    "chunk_index": 11,
+    "text_hash": "29cb22281299feb39d8a5ac1b9188cafd06b4a4c89eaf3169a87669f9c7970de",
+    "text_bytes": 3240,
+    "fingerprint": "5745003bb3eb2c36a06dea0550b78f03a5055836e1896147129e5b1c27437af9"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0012:354d58468d": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0012:354d58468d",
+    "chunk_index": 12,
+    "text_hash": "54468a896c9eb6c4efee2bad9e117010a364edc04186c0adc692723a04142d29",
+    "text_bytes": 3280,
+    "fingerprint": "0cccf22a81dfbd706747425370e1e6778f83b8addab3bf407f7403be7185f7fd"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0013:22169982de": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0013:22169982de",
+    "chunk_index": 13,
+    "text_hash": "ca433ebdd2e85c123a3f6ad32bed05a6aacfa95cc0334dc0a90c0ff37f501c38",
+    "text_bytes": 3452,
+    "fingerprint": "4269a3986e273d7d0c2033cf5ceb4475ab07527160331d0cfc1aa2e0039821a8"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0014:194baa1184": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0014:194baa1184",
+    "chunk_index": 14,
+    "text_hash": "88999913bf25aeae16727403a8e8fb4d59a9abdafb7a7cc02e4f5d5c0c011b55",
+    "text_bytes": 3492,
+    "fingerprint": "b7f90d736a947431b5945dba39f5be282be8d3637e2ab71d75b0422b8df34062"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0015:ace750fe29": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0015:ace750fe29",
+    "chunk_index": 15,
+    "text_hash": "6f971814bf57ebcecf1822064549e766c88172ac8c107f96d36c448072e5fdd1",
+    "text_bytes": 3297,
+    "fingerprint": "197da8ba12fcdd707d2c0509875cda033fbf5e9d4e451f10ad51b11a775dd27c"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0016:e9050fd636": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0016:e9050fd636",
+    "chunk_index": 16,
+    "text_hash": "56a382c163830768260ee7b4e74d65bdc8db32ae900e71e1d4a9a5fded7682db",
+    "text_bytes": 3486,
+    "fingerprint": "3d210544ce5b45974b1e49d4d8eab2f2d6be8682e2b010017d58a6d983b38054"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0017:b19d1e2ae3": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0017:b19d1e2ae3",
+    "chunk_index": 17,
+    "text_hash": "9efb4cad4576232bf1d4516a59aec94ec9d253b701debd04c41a7861b9fbbe1d",
+    "text_bytes": 3359,
+    "fingerprint": "88d0caf8a1eddd5ec84fd3ef46f22e3a91826892c3607c4e99198dca7193bf79"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0018:2a9873cea0": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0018:2a9873cea0",
+    "chunk_index": 18,
+    "text_hash": "50a0a7c8f864f394f4f0b8922894b90beae7112e09ddc5fc9d2be91c6330a399",
+    "text_bytes": 3407,
+    "fingerprint": "4d2d8491bc73920383901d28a41baab3d3b46ebb7d0a768942468fcbd3b4ccbd"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0019:47516e2788": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0019:47516e2788",
+    "chunk_index": 19,
+    "text_hash": "a1ca5b46318a39816671b2ff9000131ce2a08a724f3feea1d51bb489c6b48304",
+    "text_bytes": 744,
+    "fingerprint": "2f69b624697b14a3b9cd296f03168e1770c8c0d52e88dd1e028ba7d65d073687"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0020:f31ab42e52": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0020:f31ab42e52",
+    "chunk_index": 20,
+    "text_hash": "415089c9a32394165430672b593cab584aa732dedbbb3b27fc768c9350fbfe75",
+    "text_bytes": 3381,
+    "fingerprint": "6d5e479ab36ebb6e7477cc429981b5c6350505f1f0f7cf3e9f9702e7042b6d99"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0021:d4d45ad5eb": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0021:d4d45ad5eb",
+    "chunk_index": 21,
+    "text_hash": "9e1d8753080afb2a5fd1b1c9ff5fc90ae6adeb95ac617c32e5fb1974fdf44c65",
+    "text_bytes": 3389,
+    "fingerprint": "c3854314539edf5ec23f0994aab2c3a76aecfac02e032fc7327475780642c524"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0022:11ea2e48fc": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0022:11ea2e48fc",
+    "chunk_index": 22,
+    "text_hash": "9b3e366f7045c66692ab1f2ae0198e75340c05f9f4bfe1fd7fe8cc6919bad9f1",
+    "text_bytes": 3420,
+    "fingerprint": "c7f74be63129d60d13d066b51e4dfa862ece4a12214a149daf0d7894ceabfc51"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0023:7a29e1fdf4": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0023:7a29e1fdf4",
+    "chunk_index": 23,
+    "text_hash": "a56b7e79caded15fd662d6d0002a8f00d125fe58283ce652753a40ee4b8f27a6",
+    "text_bytes": 3342,
+    "fingerprint": "8fe488c13d61df3bc43592d4bbbe1ccec2a7d1720040c3f4f6b966d155bee0d5"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0024:0f32ef650e": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0024:0f32ef650e",
+    "chunk_index": 24,
+    "text_hash": "2969ef8111b047439e928ecffb6569e24cf5d6d000eb3744caac5a5b29662d97",
+    "text_bytes": 3362,
+    "fingerprint": "6ef1c4ad31297b986849f4a330a7184f011da27b992029864a3c07fc1eb67e7f"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0025:0ce3665ade": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0025:0ce3665ade",
+    "chunk_index": 25,
+    "text_hash": "0c0e7631441f958f552bdd28824426417b76b0dd2ae82f7033e1e6e6ebc4b88a",
+    "text_bytes": 3335,
+    "fingerprint": "70e7ee032b34c3d7543921455af180a51e700efd174ddadc533842a2a8b6c67d"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0026:cf309f429b": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0026:cf309f429b",
+    "chunk_index": 26,
+    "text_hash": "5a9d8d0c5c6313b88a6c9c7d928010a82bf7b96132c8336d2bafd965cd0551f3",
+    "text_bytes": 3171,
+    "fingerprint": "f06e42ff97671a685f2ae7e19c967b517c2b7ef0f4a8b5ce1e7b4d87b55014b0"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0027:82e744e9a0": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0027:82e744e9a0",
+    "chunk_index": 27,
+    "text_hash": "803f61a0c6f3708c0191049622f72d539101e696ffa9590526d271fbf8cce154",
+    "text_bytes": 3309,
+    "fingerprint": "042c83fcdb9c1a319103303765084282668f6a5c5d832317feb4e576e44bd317"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0028:a426eac79f": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0028:a426eac79f",
+    "chunk_index": 28,
+    "text_hash": "34007d81f097472506c93155de6cc2317b3a256ee82ad74abb3d95ac320603f7",
+    "text_bytes": 3353,
+    "fingerprint": "454d2b122baa061b5f6b116caa4caaaed9f56b049234ce9872a808909c28f020"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0029:b22eff51f7": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0029:b22eff51f7",
+    "chunk_index": 29,
+    "text_hash": "7391736d06b83cfd1ce2015b3f17856affb1fb18ead852d6c94c583ea21ef5da",
+    "text_bytes": 3370,
+    "fingerprint": "f736918db5236e6e43f509bda0dc6d5d694e6821dcc342d81106f4c92f065d7e"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0030:650ed3b170": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0030:650ed3b170",
+    "chunk_index": 30,
+    "text_hash": "28d406f8161c6d5da03c2f51eabc2146b5046404333573d772f42f5bc05f5d16",
+    "text_bytes": 3427,
+    "fingerprint": "ee8bdab433711904fbf1440903d48b9847a3206876445101171a633682daf87f"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0031:a97f775ad5": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0031:a97f775ad5",
+    "chunk_index": 31,
+    "text_hash": "eeefe26bdd14634ba1bc88b0c59f1ae6732303d316eae13698f5fbe9c7138e42",
+    "text_bytes": 1351,
+    "fingerprint": "a7ea2d88ca64c32f390058d9ac5f566a638a0b04606172024684e876695b33f3"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0032:d320c7f71e": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0032:d320c7f71e",
+    "chunk_index": 32,
+    "text_hash": "e4f662d39de76e7cba61e44f8d6ba3b3c7290b8bd168b289a26499f479981874",
+    "text_bytes": 3492,
+    "fingerprint": "eb40acf3890157cbfbc173b686722e22177dd49586f334a9cdb4579504479135"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0033:571834bcc5": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0033:571834bcc5",
+    "chunk_index": 33,
+    "text_hash": "622cb621f0bd89fec9f5195c57bda117a2e7e292e83e4de5db7d019387b1f13b",
+    "text_bytes": 3419,
+    "fingerprint": "8ad959f9eaf800b210925883b005efcaeb96d622e8669788727f967f6e96a825"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0034:bb47ca9861": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0034:bb47ca9861",
+    "chunk_index": 34,
+    "text_hash": "8d01d6320e6242393259902d381836a14c0f2392e53bb908d2a602cadd0afb3c",
+    "text_bytes": 3368,
+    "fingerprint": "6bcb46493e07164c954e83fa20b8a952ccf01b92d05e5e6b9803874cc8213fe2"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0035:d42c8f4cc0": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0035:d42c8f4cc0",
+    "chunk_index": 35,
+    "text_hash": "755e25289935c9ea1d5792e283e47fb2714da8ce7d593235530a8970aeaf55c3",
+    "text_bytes": 3417,
+    "fingerprint": "2935f197a160a575b189d61946b86f6f2187b4e8c0f0d4bd0a370d10a9608a0e"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0036:c217d2f7d5": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0036:c217d2f7d5",
+    "chunk_index": 36,
+    "text_hash": "89fb287fa8486567a77fda670a446b691667bc81f52ed7a3c034580eaaf293f0",
+    "text_bytes": 3366,
+    "fingerprint": "3fbc97b75c04cd140980eccf73d4e45c17a5f65d231fd0ebe2137d1435ff292b"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0037:4c3ed1237f": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0037:4c3ed1237f",
+    "chunk_index": 37,
+    "text_hash": "f8922f1d528cdfd7c238449fcd12e6e176af19b2e9092dec33c3286508f3237a",
+    "text_bytes": 3497,
+    "fingerprint": "1fd378987dcbeecb4c355a8162558969eb0382210f17b5a2230ecc03c0d466eb"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0038:916649cfe7": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0038:916649cfe7",
+    "chunk_index": 38,
+    "text_hash": "534b7f10c9e0c29eee1186e4574a493e6bd4a67e32e7bcf8b7c91d597af32f87",
+    "text_bytes": 3211,
+    "fingerprint": "f426e5f0836c8b7ceea46fb8f73f97c0ba38f129a0fbc0be2443a0ceeec82350"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0039:c630f18332": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0039:c630f18332",
+    "chunk_index": 39,
+    "text_hash": "4381ca25d753003d5df1dde0209844153fb960bf69b22ca290183ff8ead256ee",
+    "text_bytes": 3400,
+    "fingerprint": "16d5b63f4dd7deed1f1dcb73c644d2581911a4f8d73839994634929afabef708"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0040:65837f11d1": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0040:65837f11d1",
+    "chunk_index": 40,
+    "text_hash": "37de5e0d3b8d0843bb014da690ada9bc4a98a7ef03caa19c2840c69d6ac1c5e4",
+    "text_bytes": 3280,
+    "fingerprint": "57bf55d06e5073f1c6b5b59c7a6bb4e9e2a1c9c91b283a0c15929ff59943e694"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0041:8de22449d8": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0041:8de22449d8",
+    "chunk_index": 41,
+    "text_hash": "96b9980cf59e66ec517eaa5e90c21eb32010472282f9542bc7b0b7f535204d07",
+    "text_bytes": 3421,
+    "fingerprint": "84b326f572e1547e9a82c364e095165610534157630b39907ad686a608e7688c"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0042:fb6b7a1374": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0042:fb6b7a1374",
+    "chunk_index": 42,
+    "text_hash": "f17fc20941b9196a2be69478a7454abc520ccf357622f0b65b16d4fc3e4127c5",
+    "text_bytes": 3426,
+    "fingerprint": "7a30990facbd642677163c807b23ac77fe55a184f79e9abae1a5a4e6deeeeb06"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0043:62c983b04b": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0043:62c983b04b",
+    "chunk_index": 43,
+    "text_hash": "2569aac217f523eb39cf9afb126424f6eb580e5290de5f0cde233ce67b19094d",
+    "text_bytes": 3458,
+    "fingerprint": "84d6257021c44ad812092d447247848c3b9f6eaa16affce31d284dd5c7ffb0a3"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0044:fef8070d56": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0044:fef8070d56",
+    "chunk_index": 44,
+    "text_hash": "d5bb3e7a7311d15cef4ecfd28251ca591ec7ca5d84e309ad27bb9d7b0db29a1b",
+    "text_bytes": 3323,
+    "fingerprint": "feed9f41762bae13732184fc11dd195ccd2c2dbe84962ff9789286c341e79c7d"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0045:ae8f0366cd": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0045:ae8f0366cd",
+    "chunk_index": 45,
+    "text_hash": "aff7b0cb958733389eca3a4f18f6e378c696ce9ad4c3ec5338d01ca70aef65cb",
+    "text_bytes": 3219,
+    "fingerprint": "5aa107cbf3205c36942a4bddb8b6f92f6eacb000d37fdc1010eabd1fb2b395da"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0046:2db1f7ab5e": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0046:2db1f7ab5e",
+    "chunk_index": 46,
+    "text_hash": "408fe993a690af58bcb55ffbf7fa9f0b327ae9d2d193fcebf4b6822bc96fd3f4",
+    "text_bytes": 1154,
+    "fingerprint": "ac6c794ebbf35dad189dc383fbc59e6071c2eb47d20801d6abb21bcb756df3ec"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0047:76a21ef9fa": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0047:76a21ef9fa",
+    "chunk_index": 47,
+    "text_hash": "dd1391be6ecc220061a78ba53b4e4d56bf81b263aa60b81589ca639132d45684",
+    "text_bytes": 3333,
+    "fingerprint": "85d7ca587db9b06f0ddc41351abd01c86b37eed747ecff0176fa06203f289b27"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0048:16bd8327a0": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0048:16bd8327a0",
+    "chunk_index": 48,
+    "text_hash": "5032dde308b110d7c85fa8b846e705d683ea93857ae9c41daae71ea5d420240d",
+    "text_bytes": 701,
+    "fingerprint": "245907a4f4ae5a8d51570ea2fc81c22b1d576121cea0db6218b3285472ab1a8f"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0049:a604fdb44e": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0049:a604fdb44e",
+    "chunk_index": 49,
+    "text_hash": "3090034464315edf1514b82ed38c185d52d97574d9691baf2e49b96732bee316",
+    "text_bytes": 3101,
+    "fingerprint": "d386f378380c3fd1299b110de2c9bce6c29fc614bd3e96a74787cd7fc572c857"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0050:6da6de6166": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0050:6da6de6166",
+    "chunk_index": 50,
+    "text_hash": "24e60317d6ddfe3db6eb4159c2fefddd8cf77d1e61a2c9faf7c3276388f06b9a",
+    "text_bytes": 2215,
+    "fingerprint": "820bec5448cb98fe4524c003edfdcd29bae92967a0b06a11e7a888a00fc2c089"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0051:11e6819acd": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0051:11e6819acd",
+    "chunk_index": 51,
+    "text_hash": "4e42e3a9a8296e9dc17d8baefa5d044f5853a0ccc830e976a330389d32ec3e27",
+    "text_bytes": 3083,
+    "fingerprint": "708419d90ffcaa6e5af705e73c7796419a01dc4193cebf7386a3dee895e04511"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0052:4e2528f4ca": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0052:4e2528f4ca",
+    "chunk_index": 52,
+    "text_hash": "f43079b5c8acf4fba53f1c9e99790b29cbd1946e1178c04a3eaf44a766d70cd0",
+    "text_bytes": 3133,
+    "fingerprint": "c768ce0ae8a0faceef2fe5679667e6f14ea155fb5e1a6a9afec0f817a835f593"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0053:435c3a5409": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0053:435c3a5409",
+    "chunk_index": 53,
+    "text_hash": "d31c0a034ac65a9a8a5061ad842c3ecd949158c0f7919c060f63c9689291a8a3",
+    "text_bytes": 3361,
+    "fingerprint": "7dc50bdd1f1a2dfc97d07ba3509f98258e09ec86c8673170bf29159a0b314fc5"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0054:b5449a43dc": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0054:b5449a43dc",
+    "chunk_index": 54,
+    "text_hash": "57011981270775e22a752fe1fb82dfaaee09602152f77d9fed95fbaeb4befd37",
+    "text_bytes": 3290,
+    "fingerprint": "79f807a4cfa11719adbf489fb45b940989569ec1e5b990f35ec0daad59bc9f0c"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0055:fc15dd9a57": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0055:fc15dd9a57",
+    "chunk_index": 55,
+    "text_hash": "4740049c959a5b1ccc67fff2d95d0f7de7215a0fc0cb4f4a643b243842a4613f",
+    "text_bytes": 3253,
+    "fingerprint": "2c7a187b2ad532faed2ee7d343e91c4db546e0995c29ee6f71fc2d61b3653df9"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0056:06f5934597": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0056:06f5934597",
+    "chunk_index": 56,
+    "text_hash": "d195415adfe04bd31017c9fd0e7ee8dadc7b3be83436a4c61f28d8e395944701",
+    "text_bytes": 2950,
+    "fingerprint": "5e67d489400f367503e8b4ab92e1831a514f8dbbbbc6ca4d8de3702854e8ebcf"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0057:b30e925284": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0057:b30e925284",
+    "chunk_index": 57,
+    "text_hash": "d405380ca9ad392356cfab5713613f14add4755d5ccde43dcbb2c22caba9024f",
+    "text_bytes": 2963,
+    "fingerprint": "c666dda8a3303995229006432e9f8dc95482dc3b6c8474ed0ec2aadc0c65e40e"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0058:cb5209026d": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0058:cb5209026d",
+    "chunk_index": 58,
+    "text_hash": "a84af0dfc61e3aba001f6c209c432471dd64f56ff049cdcad44eec076352194b",
+    "text_bytes": 2830,
+    "fingerprint": "56570f7c768e58ad094fe5e51d373b4510e3aae403c4a4e704d291c73199c1c8"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0059:bb4f713225": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0059:bb4f713225",
+    "chunk_index": 59,
+    "text_hash": "c245c34fc2e47743751b7d67d106ff7d2439521106943bca52319ee5dcce27a2",
+    "text_bytes": 2822,
+    "fingerprint": "5368f5b6b0ee73294e946055b6e0ada19e34aadf1da1320e4939a0e2fe4da97b"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0060:a775869c6b": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0060:a775869c6b",
+    "chunk_index": 60,
+    "text_hash": "9efa794ae39a3f784ec87b578814f1532024a3d5544023f50c2ae709ba5e6725",
+    "text_bytes": 3053,
+    "fingerprint": "73e506371c41f61d85a1341534fa744121a0e928936395d5d56c0c9316959245"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0061:1a02afde95": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0061:1a02afde95",
+    "chunk_index": 61,
+    "text_hash": "972aaf65f95547dccaaa748e5d055066d05fc5a89207f140a68cfa5e9c9cbc4d",
+    "text_bytes": 3134,
+    "fingerprint": "eedc7a7ed5fad8895948419c395ee67806585512af24968fb0f6346a6b2f7367"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0062:7879cf917f": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0062:7879cf917f",
+    "chunk_index": 62,
+    "text_hash": "6c86cbb3b80a805921acb509022321be00d50ba73e9cb782a23fb401f0cc2b8d",
+    "text_bytes": 3265,
+    "fingerprint": "2b287898d469dd916149d6ae40f61e00262ab39b29821ec06a9487206498a754"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0063:d8f8205c6a": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0063:d8f8205c6a",
+    "chunk_index": 63,
+    "text_hash": "a70dcab0ca69666f6135d836e00eea177f7b5210d0c6f557a8dfd68a90811b82",
+    "text_bytes": 3284,
+    "fingerprint": "cea0eb4936f8c30baf7a53fe08bfda812fc1917b904d98115a606de0b79b44d7"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0064:c09691fa09": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0064:c09691fa09",
+    "chunk_index": 64,
+    "text_hash": "11cd0f7064bc653b5c0a46a30cd0629d01b44d5c17b1b96e2f3c69410c1da408",
+    "text_bytes": 3361,
+    "fingerprint": "c42c8d8dd6e902ec872cb00a1eaf3df59a7f7c4d3e0b00d8abac8f95036c2d62"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0065:ebedbc9893": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0065:ebedbc9893",
+    "chunk_index": 65,
+    "text_hash": "43e53318b336e7fc28e3afdea3f07073a777d6d37beb87b86c5091dd5fd45139",
+    "text_bytes": 3328,
+    "fingerprint": "7bdfdb072f53b0d63fea507854ace284b7dccefbb62039c376e839d824025e00"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0066:f64ebae30f": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0066:f64ebae30f",
+    "chunk_index": 66,
+    "text_hash": "baf4d93feb166e0c5e23e9932a6cb739178e43cbf19b3e79556fcc44c9e8870e",
+    "text_bytes": 3290,
+    "fingerprint": "37feb4313ab21261d1822db079228e5b7b32da6972049d2b364888f943632572"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0067:fe0fd643ba": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0067:fe0fd643ba",
+    "chunk_index": 67,
+    "text_hash": "2e6cfb65db22ef7bae30e667ae87144d38fd4cb6d66f35fb9be1c6ecd12848c2",
+    "text_bytes": 3225,
+    "fingerprint": "63630f9089a3cdd8979b1c81d625a196f41fdad0d8c6f7a90517f2cd62e3d69a"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0068:c764618a48": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0068:c764618a48",
+    "chunk_index": 68,
+    "text_hash": "91b4cbf60604ba29b74e5b76f7b60d1b631da2739a48233c0fef09341fc34b10",
+    "text_bytes": 3232,
+    "fingerprint": "bc9479b6fcce94706234da981020f0183ef814a7d6af84d2461b7e36283ba480"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0069:ab45548bd6": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0069:ab45548bd6",
+    "chunk_index": 69,
+    "text_hash": "192b3b25c3a1115fb35bd08a2f45ec0b7e70309d940fbf892d1bb2849d46cb4c",
+    "text_bytes": 3190,
+    "fingerprint": "4626de70e30e8c6de2b5bb74360bf1a9c5ae624b04d0aef46bbc424f07326141"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0070:bfe2e77408": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0070:bfe2e77408",
+    "chunk_index": 70,
+    "text_hash": "10bc9e4e1aef5d1c3414ff0b2ec61ad522fcb2d895c4afb6727bce9f97f1811e",
+    "text_bytes": 3293,
+    "fingerprint": "ba0d0a0d1e9ae35e097c8ff750190d4ec9bfa17731803188d07339034fef331c"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0071:ba596be47b": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0071:ba596be47b",
+    "chunk_index": 71,
+    "text_hash": "31dfc1e60d8bc20ea0946022b8c7469673a9408f35e3fa9ac61b5cd2debd16fd",
+    "text_bytes": 3339,
+    "fingerprint": "8208e40ea22617600171e31356dda5499356676c902f1ffe701b33c2143fdc21"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0072:d7f844b779": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0072:d7f844b779",
+    "chunk_index": 72,
+    "text_hash": "339e7014bf0bbffa51503e833a5e51930d80828ddf21c88aa41f81a1a7c938e6",
+    "text_bytes": 3224,
+    "fingerprint": "2146e877fc269d1fed9b16b68d1765c993a9e8f494745e7a27c9623fa832b8bf"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0073:b93a8d5ce1": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0073:b93a8d5ce1",
+    "chunk_index": 73,
+    "text_hash": "b20144ad6f4247cdd8f566f933fe1fa9ab1d976822ca0b4426026412e609b5fd",
+    "text_bytes": 3176,
+    "fingerprint": "ff708bf85069d0f1aaad61d58f9e98eb4d473839752a8125b68525987e03ff51"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0074:c18f63e8b0": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0074:c18f63e8b0",
+    "chunk_index": 74,
+    "text_hash": "c707224d7bf29d922db7cde5b701780c3987bb1017d366655cdfa92ad5f20049",
+    "text_bytes": 3111,
+    "fingerprint": "e6c7acfa3cc03076428475d6f2af16d074f93dd4da90793d1abe05c9e713619a"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0075:f01d34758e": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0075:f01d34758e",
+    "chunk_index": 75,
+    "text_hash": "db022c67d3f9a2378aef9bdedd7b04695c60c463c0f6eb77747cd842d4fac488",
+    "text_bytes": 3164,
+    "fingerprint": "86170de73cabab6d45b4b9c03fb2388437782aada3b72f623dfbbda159df079f"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0076:d6f4d759cd": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0076:d6f4d759cd",
+    "chunk_index": 76,
+    "text_hash": "e2941b8dfdb5a05da4674c4777862bb1eca210ec74ce6c1ee382b892eb735036",
+    "text_bytes": 3270,
+    "fingerprint": "b882b3ac7390b35199ff8c491ca824ef223d341f098026e84679a3d93933e18b"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0077:2d87307dbc": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0077:2d87307dbc",
+    "chunk_index": 77,
+    "text_hash": "120e5e273fee503f73dd860d37c12444fec66fe530b801837585ad3f3233ef69",
+    "text_bytes": 2322,
+    "fingerprint": "ea3f06954d3c847879fef3de90e384a055e1a54bccb19dcb789926d9f391ea99"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0078:263c24e21f": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0078:263c24e21f",
+    "chunk_index": 78,
+    "text_hash": "48d85c5e761072b103135d0d82af51d8670ea49c24f768dfd038742c7af0de8a",
+    "text_bytes": 3153,
+    "fingerprint": "cd938e169ccbc1fe789422b94f73752ec62d38a14fbd4963fcd3949ed3573fdd"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0079:cb3de4ed08": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0079:cb3de4ed08",
+    "chunk_index": 79,
+    "text_hash": "f199274380e33016590de195739c38de484861f6891ed6b938dedf77a04da18e",
+    "text_bytes": 3256,
+    "fingerprint": "b26f8870ffdd091e04cf828123872a07e82d8a50792b0c48ee8c0953f724a8c1"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0080:1a1f5210b8": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0080:1a1f5210b8",
+    "chunk_index": 80,
+    "text_hash": "ea88159dc18d61362cd82c5287fad4c4aaeef3a40fcb52e1e296e9c7f77cacf0",
+    "text_bytes": 3136,
+    "fingerprint": "bdbe58caa871762549f1e4f3d45b42689bca7db993190e255583efb68a19c5d5"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0081:5391f8f4ac": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0081:5391f8f4ac",
+    "chunk_index": 81,
+    "text_hash": "fcfdceb68fab2ea271274fb06bd18c555dc804110c97a67bb442ee7705f0d1f6",
+    "text_bytes": 3108,
+    "fingerprint": "cc97c9884ca9cc0433ea3e37b02a0aa573ab24a7e00de47c659522c51eb96000"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0082:9eb0f3882f": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0082:9eb0f3882f",
+    "chunk_index": 82,
+    "text_hash": "c0b2c62b6a49331395e1bd35b32d22f47d6406e57ae4c8dd53771d9624c17662",
+    "text_bytes": 664,
+    "fingerprint": "d9008da40873953e9a86e16127862d6a5e8500ef1eeb5d13651c8549550baf4e"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0083:2675f39f37": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0083:2675f39f37",
+    "chunk_index": 83,
+    "text_hash": "2a7dd220b93fd3f736a243e2ae11c94f67e92232d13e12a3b0ea79ffc06e92d3",
+    "text_bytes": 3409,
+    "fingerprint": "1a22c43462a83ce6741f6eb774265431d1935167693f8407c577ba676cd2edfc"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0084:4b8b1e12ef": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0084:4b8b1e12ef",
+    "chunk_index": 84,
+    "text_hash": "21f6dd87e1687dbab9f720a105ca8a0efcddbd53d94ef812543956a710bfdf40",
+    "text_bytes": 3301,
+    "fingerprint": "9f806fee965e225c7c8ed4dbdf19a89e327e401dddbdd5d376ba172b827f6404"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0085:b9b46fabe4": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0085:b9b46fabe4",
+    "chunk_index": 85,
+    "text_hash": "1c651d9621198a920bda4d41c3e47147dcdcc735d1dcd24900c5b9be91e24859",
+    "text_bytes": 3165,
+    "fingerprint": "3e2e7779dbbc1da148f2c6fe44494a9cdcb5808510fa5e1c78af0670b3b6cfda"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0086:e0d0d62f82": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0086:e0d0d62f82",
+    "chunk_index": 86,
+    "text_hash": "6d41a01cf6742dec87a19e53ceb9fa94485d1baa0ed504fe040b8a769bf1a548",
+    "text_bytes": 3200,
+    "fingerprint": "be03c0a27036cdc620014d24ab2c324ea5213b83a70b8a6b50a75503371741a9"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0087:be331a9934": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0087:be331a9934",
+    "chunk_index": 87,
+    "text_hash": "35e39fae0b07ba09e633c3faa8e3d28e54e928f3a35c8672c3ce91140356e34c",
+    "text_bytes": 3218,
+    "fingerprint": "a3d0e851224c1785b07b4d107801d103f3572c4d9301b63cdd6081ab2fed2f7c"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0088:f66f6d4556": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0088:f66f6d4556",
+    "chunk_index": 88,
+    "text_hash": "9191e121ee8e0efec0dcbcbf35dcf67dd7c85ee94ad553829eb35ca042123148",
+    "text_bytes": 3121,
+    "fingerprint": "372f749e00033207337779e59a8d36992eedf130f195ca1e2352c6e16ad55739"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0089:a7b92a48fb": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0089:a7b92a48fb",
+    "chunk_index": 89,
+    "text_hash": "be44f26fb5f759891e619ef019e51da21ba4a07cec0ff7a19f3f78e7948fd9d8",
+    "text_bytes": 2695,
+    "fingerprint": "f336d078aa452dd62b1a02a881f94f9a27ce485a4f20cc7c74870d9969944afa"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0090:aa8795a4ff": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0090:aa8795a4ff",
+    "chunk_index": 90,
+    "text_hash": "d7604c943c7cd6a2a19043d9ba84acce36cfe8bc6c6bf0196900cfdc4893afd7",
+    "text_bytes": 3209,
+    "fingerprint": "bfbb99d181073da0175a800a162df7efbd72a66628895df19849dfb8f69c4628"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0091:34c4a91179": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0091:34c4a91179",
+    "chunk_index": 91,
+    "text_hash": "dcf1fc5a7fdae2c0ed7f4d1b7cdb14fb141dff10d7d94dfab1b60f3d035d823c",
+    "text_bytes": 3192,
+    "fingerprint": "2554b8c6f2f18a3dfd9a48e9de9e82b722c0bbf15d48753250ce6ac199a814a7"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0092:172a8c9f1d": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0092:172a8c9f1d",
+    "chunk_index": 92,
+    "text_hash": "0733f5135d97c5d3e237920c17c47f35db30851d319eb0b2dcb4c477bc0c2a5f",
+    "text_bytes": 3405,
+    "fingerprint": "e4dcc8ab47a9f153dfa3ed87005a62bdd394ee6ef508b536535985391ce120a8"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0093:58d0e736f8": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0093:58d0e736f8",
+    "chunk_index": 93,
+    "text_hash": "e936ecf84d794845fd9ebf5ddc9684661c3522e5516b5daf6195b4f9fb2b09d9",
+    "text_bytes": 3195,
+    "fingerprint": "cc2dcaa4372b36d4035ceff938f743ef2e0b6ee19a475f02836aa35e4b948383"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0094:979525ac4c": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0094:979525ac4c",
+    "chunk_index": 94,
+    "text_hash": "e1b7f6916899f9342927643142af946000245346184caab14cb1c8de178827e2",
+    "text_bytes": 3301,
+    "fingerprint": "a7d3424b854ee76c1efbd6afd6110595b13d213903abdaed1443d8491e02cbe0"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0095:b31c4425b3": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0095:b31c4425b3",
+    "chunk_index": 95,
+    "text_hash": "8486389c24138be4196798e26ea152f2512c32cad4dde3da1072653d4d939a70",
+    "text_bytes": 3165,
+    "fingerprint": "2a1a03ad65ed78e0bb2f41278f262b757fbe47937d09aa2b91355cbeedf249b9"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0096:33a343a6c0": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0096:33a343a6c0",
+    "chunk_index": 96,
+    "text_hash": "006bf183ed0779c254bfc89d9b55996e220882c2d1f5923ebcc5e831630e76ab",
+    "text_bytes": 3205,
+    "fingerprint": "9fb56b17135d151277915f03dfb457ef40179c0b58c1688f8513b98b3563b5e8"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0097:52afda8b83": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0097:52afda8b83",
+    "chunk_index": 97,
+    "text_hash": "8b03855737fe830ca3c3943ed2670453f79aa812cc0581f36d181f474544a3ae",
+    "text_bytes": 3247,
+    "fingerprint": "32e730cef5d3dc40dc32e615f9ac33e6653bf2a193d0fa3b6d1398322910cba7"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0098:dbeb300c67": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0098:dbeb300c67",
+    "chunk_index": 98,
+    "text_hash": "5b28b7178c84b54e15ab276703c26395c716a354bc3c552687ae3147a85bf118",
+    "text_bytes": 3271,
+    "fingerprint": "3abeeea5e63d7fee2bcf3c6b9316c8213e648a9af874bcee25c8fd9f6a07c542"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0099:6f0e6939cd": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0099:6f0e6939cd",
+    "chunk_index": 99,
+    "text_hash": "3ad8233ea125c5c54db082077d14cf69111be2c89469f8a1a4463998f68db041",
+    "text_bytes": 3226,
+    "fingerprint": "ce184a6aa34a035222856c899bd37eedb6b9757a26135c71e972232eecd39bb3"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0100:3e0e7e59e7": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0100:3e0e7e59e7",
+    "chunk_index": 100,
+    "text_hash": "4f917bad86a509fd2af9614331d6d0b988e0d9c039b48961d6dbd51091cd652e",
+    "text_bytes": 3247,
+    "fingerprint": "81f23b26ceb3f963a7107640e6e6de75f7a695d9c08abb241cd2d7bbe496edd9"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0101:3acc7a18ea": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0101:3acc7a18ea",
+    "chunk_index": 101,
+    "text_hash": "51141ce8b36d15f1a231735fa21e53b9573b1ddf53214f361c68354823065bae",
+    "text_bytes": 1853,
+    "fingerprint": "2c370664607cb892c3cd94ab971d85ced556e4b883a69bd23ac716ecaae4a162"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0102:069b8bbf5e": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0102:069b8bbf5e",
+    "chunk_index": 102,
+    "text_hash": "d8862856853b7198cfb2646c3956a6416e6273693957f406b31497aa7316dfcd",
+    "text_bytes": 2849,
+    "fingerprint": "d81f7b4add7aca0f3b6f28e4cb2b0ef65d98ff01e6d8f3602510c0a364db0d53"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0103:4270c263a6": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0103:4270c263a6",
+    "chunk_index": 103,
+    "text_hash": "9269dd6ff75a8d8b518cdc8f648c140281a777b1a4080b88e7a1a02bb6bbcae8",
+    "text_bytes": 3148,
+    "fingerprint": "e11144bcaf4621b8c62a184b28026af187d0d8e1c6b2063faae4512b589d0591"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0104:e98c80daec": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0104:e98c80daec",
+    "chunk_index": 104,
+    "text_hash": "e99cf7da62bdc2b7cbcfaf62d4ea1eacfecb27e7db624f2bd79ceb22c2c19206",
+    "text_bytes": 3178,
+    "fingerprint": "1477d76f39c5e4a0db267ec6ad7687c0fabc36ebc3b490963ce3a5760e662707"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0105:524e899413": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0105:524e899413",
+    "chunk_index": 105,
+    "text_hash": "c39c4f36f77f4c81c20ea3a82ec640c1fdc79eb103837ae4ca273939994105f6",
+    "text_bytes": 3182,
+    "fingerprint": "4455de443b46263e6b4198661a576d2beb83277f443659571402ae479a0e736c"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0106:ddc3da3743": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0106:ddc3da3743",
+    "chunk_index": 106,
+    "text_hash": "6c33fd004f4af72680f9da4c747083364060cf0a05103a310db00925c2eec83b",
+    "text_bytes": 3219,
+    "fingerprint": "28fe40d419f6a43812336a135c858a5f7db44a5c4c3c4f5b7b7e4c79bdae033f"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0107:c200e5644b": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0107:c200e5644b",
+    "chunk_index": 107,
+    "text_hash": "200ef6d98dbe40bdf9254e9c8cde47885e05f49296a572ee5316738e855d64c6",
+    "text_bytes": 3077,
+    "fingerprint": "4af4ebbe7e20bd0f690e3d42dbd6aa11a10410f553ea01d6026119eed2ade61c"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0108:257995a158": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0108:257995a158",
+    "chunk_index": 108,
+    "text_hash": "b651f88d647996f2658e00988d71b98aab48733b68b195387446fac7d883b6e0",
+    "text_bytes": 3266,
+    "fingerprint": "783c649d6b64e470e5f5f43fcacd0eb717bef4f14ac8c5d56b666885523cddb6"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0109:1442a4072a": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0109:1442a4072a",
+    "chunk_index": 109,
+    "text_hash": "c50cc4c6a372bad36fa7830ee8bcce980b6d9097de6d8ab6ea577a74b0ac3c61",
+    "text_bytes": 3384,
+    "fingerprint": "bbb7dd285ca64ec1e24e39660870e2331aac5181224a4dfd1f73961c28dcdec5"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0110:99caf99550": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0110:99caf99550",
+    "chunk_index": 110,
+    "text_hash": "fd14e04ca91ca453b66aa3f259295c8075f8473c939fb2b5ed5aabb6b4e69399",
+    "text_bytes": 3060,
+    "fingerprint": "703c73a5aef6e6c5b0a9799624adba6644062400222c6fdca1b5873f96a4e477"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0111:fb21fbde32": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0111:fb21fbde32",
+    "chunk_index": 111,
+    "text_hash": "07be42761aa20c77379bf72e86037256d22fb60e152185fb7bec436fd273ce97",
+    "text_bytes": 3066,
+    "fingerprint": "798399884c5af9276cb8c8b78c58e85ab1194543ff0f64e80d0080db8d928d53"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0112:7700f5d948": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0112:7700f5d948",
+    "chunk_index": 112,
+    "text_hash": "c7bcd5742361685f7d9317c0086e7b8a46aaf3f9106de680715bdda6482e056b",
+    "text_bytes": 2969,
+    "fingerprint": "c13a92a3f3cc872607dfefe43799160f443ec8ad7bab71c80c9ddf6f2410f63a"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0113:0445dd89bc": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0113:0445dd89bc",
+    "chunk_index": 113,
+    "text_hash": "bb39ea2f1ca009012b8a6d09cc1bba05172ae167ced3576ec97f97c7486057c8",
+    "text_bytes": 2979,
+    "fingerprint": "ee488d73c130ad73e1282d2663a9a8f21c9723e694e95d44470c085b2538338b"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0114:a48992f90e": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0114:a48992f90e",
+    "chunk_index": 114,
+    "text_hash": "f353aa4a0f1b03af6933c781b77544c21ebf20f61903b0747b3a19fac778823e",
+    "text_bytes": 3077,
+    "fingerprint": "b5ae5a575cccdf009944255cff1de042702b88ee2a363dc87563e84a40c77e8d"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0115:b3c5ee28a9": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0115:b3c5ee28a9",
+    "chunk_index": 115,
+    "text_hash": "5d3469d3559de975cfcd8e311fdb5206bb5dfc2e92b888ddf8d8132f43fa9bb0",
+    "text_bytes": 2996,
+    "fingerprint": "6b23ac5c90fdbea87c42f5751c356ced4f3005f900f76108ea92611350b9bd57"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0116:90fd2ebacb": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0116:90fd2ebacb",
+    "chunk_index": 116,
+    "text_hash": "b66cb95d330a64a8d2a78e30c9043273ab2be2acc91ec85bfc18543b0f45851b",
+    "text_bytes": 2682,
+    "fingerprint": "7b35fe0fb4b07a647cd5f177a2a7c7eab0fd84b379d7e3b75af53a215da56421"
+  },
+  "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0117:7f13bdc682": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_id": "textbook:无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达:chunk_0117:7f13bdc682",
+    "chunk_index": 117,
+    "text_hash": "532ad85e38a1d742a84498c54ecb546b668b51159bebf16bdb8f69cc2bac8a93",
+    "text_bytes": 518,
+    "fingerprint": "f5658d8e93258e4958b8ec65a5bbde68d4652125a1949176b907b747041494a4"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0000:ae962170d8": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0000:ae962170d8",
+    "chunk_index": 0,
+    "text_hash": "adf10e90f842f3b4f233d0a909c6b780fdc61ede043f3e4e6756b87b92c0a24f",
+    "text_bytes": 2326,
+    "fingerprint": "011d720dd7993fa88bbd3cb248cf393d0eee0dd770f7d2e513fc7503fc491f0e"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0001:7c67c25731": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0001:7c67c25731",
+    "chunk_index": 1,
+    "text_hash": "5a95536a1213be92f03817cd6446215d25d3bd8e6852b3a310b9f00b2e8d0989",
+    "text_bytes": 3339,
+    "fingerprint": "2341b9f93a797703d4b8817d254cdd64da81b772d0cced944cf51069a13e4e67"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0002:8aba6f60b9": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0002:8aba6f60b9",
+    "chunk_index": 2,
+    "text_hash": "669d8dc343b776aa0e82b3009f5835e93669248659c4d0831e6a258ad467eaad",
+    "text_bytes": 2885,
+    "fingerprint": "1d0ca9b3fbec4e0317a18a8ec355c473489098054701ee3e66e5e03c72291090"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0003:ca1041dda2": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0003:ca1041dda2",
+    "chunk_index": 3,
+    "text_hash": "5560a18678687ff7f354d4a99b3d46dc200563915c5bf42988194af866ee294b",
+    "text_bytes": 1640,
+    "fingerprint": "8b2c162b675e3510100354783c90e1dffe15ea9de265a4cff051bca14f17ad6a"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0004:efbf58a6a3": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0004:efbf58a6a3",
+    "chunk_index": 4,
+    "text_hash": "f57010541c6508ba401eafae261d3c1d9c4d87f60370d5e355b02ba83e663122",
+    "text_bytes": 1834,
+    "fingerprint": "6daf728f6759ea23a446890fa9e029203e368ab4e3e000b6773c0c355d7529f9"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0005:914fd30cd2": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0005:914fd30cd2",
+    "chunk_index": 5,
+    "text_hash": "4892626f876bb163d6e399325eea33ad9bedf58fac49448a154e73403ba82921",
+    "text_bytes": 2240,
+    "fingerprint": "14283f3758e67bb6c54856fa0d226562a971096d02cf2d228a7d7e7d17c8dea3"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0006:760a4c8ac5": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0006:760a4c8ac5",
+    "chunk_index": 6,
+    "text_hash": "edb78c463c17a590387730018c7f8b2d3d7e8622884af1e48ba3f56d470c3eb4",
+    "text_bytes": 1915,
+    "fingerprint": "58816677f70fc7dcf76e73b0c0b5af8fc2e5448cf38f517acc89a794d81f647b"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0007:8e0b315254": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0007:8e0b315254",
+    "chunk_index": 7,
+    "text_hash": "2cdad3207504791c3dd3aa0248d8e198dc4cac52574762a810995f2e5afc3a84",
+    "text_bytes": 1729,
+    "fingerprint": "7ad06db0b66ba25d416d1e99b3074e0ad7edd44d9baa3c00c6679bcfe0ff28e7"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0008:7cda767fc3": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0008:7cda767fc3",
+    "chunk_index": 8,
+    "text_hash": "6613f5fb6fdc14609f4c0c6e3e79fe30da43bf55f15fa3141ebdf2663aa77e1d",
+    "text_bytes": 1428,
+    "fingerprint": "2574047640e29392c27c88ab282b6a2485d773d1978577196570a20801112daa"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0009:200c37234f": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0009:200c37234f",
+    "chunk_index": 9,
+    "text_hash": "1edc6d3eb9b5b206e6926a6a400a5e54066f0775fa36b1116e93c8e69d849915",
+    "text_bytes": 2242,
+    "fingerprint": "8b59309e8d5af6643d6adce71eada94bd83509fdaa5def6b5d49da718801376b"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0010:42005f1b97": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0010:42005f1b97",
+    "chunk_index": 10,
+    "text_hash": "023965e226c3a5e8dc49846cc5bb6866ae9f6969c70d0beebc18d28e3fb30d98",
+    "text_bytes": 1577,
+    "fingerprint": "86772ce9b7580cc10a5c13839ed347ba320a465956434f86f9cdb2f534295a0c"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0011:592347875e": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0011:592347875e",
+    "chunk_index": 11,
+    "text_hash": "78e36ba1351de2f4e6919d31b0ca3d36b6b80823ef1ca4d9aeede5786bf30891",
+    "text_bytes": 1834,
+    "fingerprint": "baa4fb55af7fd3a753c6219591760b13930c7bdf42191ffc8ca4303e8dd00f4d"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0012:0eb55ca0ef": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0012:0eb55ca0ef",
+    "chunk_index": 12,
+    "text_hash": "a94a099444ae1558cc10c1ba59f650e18f9d6d2bc46ee23efb5fd5301d88f322",
+    "text_bytes": 875,
+    "fingerprint": "1ed53d38685c94e3f1fac74630fbfca600185edebd182d92c80051ca2b0ec313"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0013:5664ed94d4": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0013:5664ed94d4",
+    "chunk_index": 13,
+    "text_hash": "56e375d9d6a461182f2820eb7917588a9b3f25916ad2dbdcba73515dde41e49f",
+    "text_bytes": 1986,
+    "fingerprint": "4c67ed91f60c52e60399416c610904c1f52d79dc4716e7fa108813deed661fc7"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0014:96cd49d07a": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0014:96cd49d07a",
+    "chunk_index": 14,
+    "text_hash": "7f1f3bb3e7cb22f11ee5bcdd2c7c8e5914cec7248fd546b94d6211c8e1cb722e",
+    "text_bytes": 1873,
+    "fingerprint": "5994a2398bf2f7376d997951cfbb4cec01e96e6d1da801caed2cfb227dc10743"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0015:800ec2e8e3": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0015:800ec2e8e3",
+    "chunk_index": 15,
+    "text_hash": "2ca3f924116cb5a56947fcc3f700c26bf9c452733718b630cb9e7d2ce90bd05e",
+    "text_bytes": 1714,
+    "fingerprint": "40646febea2c298d2dd0ad43d389c1592981780d63195780ea26cd4ee3a95679"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0016:cbdd7e3e7b": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0016:cbdd7e3e7b",
+    "chunk_index": 16,
+    "text_hash": "927f37eb0390db658949d52be177d25cc16fec37d42513509c57bdb69af6d13f",
+    "text_bytes": 1718,
+    "fingerprint": "42683c36336eb1368eed9c5a5c1575b4c3d6c53c8552e1c338c95372b27df400"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0017:07c91560e2": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0017:07c91560e2",
+    "chunk_index": 17,
+    "text_hash": "83b6ef75af1a60a8564e2fe9348bfefc7fd97ea8aa4e442efa3c53daf3a4bee0",
+    "text_bytes": 2090,
+    "fingerprint": "a3cc6442f74551b283d0951a74fa622d7d2d39b5a60bd1ab9f318a8c041b9670"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0018:c04112eb63": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0018:c04112eb63",
+    "chunk_index": 18,
+    "text_hash": "0a4c134b6048115afdb1ada1f3d6df861f85362b9912c56c369c9eee50bc6050",
+    "text_bytes": 997,
+    "fingerprint": "a71eb714b280592d576cc1bf664dbaa7b2be9584c23af830bda554e2e8f6fd44"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0019:63c694eca9": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0019:63c694eca9",
+    "chunk_index": 19,
+    "text_hash": "ce3765c2e203b333ae01fe83447d439b9c9792a23ad5274a69d99d3adc99e8ec",
+    "text_bytes": 2262,
+    "fingerprint": "891a332959e3a82d1059e28123908c7749d4a6a74cbad16e8b98bbd65ccf0fea"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0020:0a5614ef7c": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0020:0a5614ef7c",
+    "chunk_index": 20,
+    "text_hash": "b8e6e641ba86b69093f40df02cdae592b4b1054037567c2b6289f1f39399d45e",
+    "text_bytes": 1964,
+    "fingerprint": "eaf4c04520cb83fea1405d5f316d8274ac21c2dfcdbebfdc7db7cada21aa49aa"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0021:32d1e29d95": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0021:32d1e29d95",
+    "chunk_index": 21,
+    "text_hash": "210df622227395e5e6ac1ade791e5cbf50f5d4296c4ad15d5f71e8b2dfb7c6d1",
+    "text_bytes": 1700,
+    "fingerprint": "df5595630a3f60e53b94a505182ceebff304148f8c1115704dcae221c74a7eb7"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0022:9b6f2d57de": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0022:9b6f2d57de",
+    "chunk_index": 22,
+    "text_hash": "48f9bbc545018ca5b6fdfea0eb44adafc9931f6f804d9037fa3e56282d4b563e",
+    "text_bytes": 1745,
+    "fingerprint": "924d101539e42d1785e8e1da3ed3015a7a0b43b4d84b1d30f5a2dfb2b1aae73d"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0023:d7139a7202": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0023:d7139a7202",
+    "chunk_index": 23,
+    "text_hash": "0cf13c2009a2eaac7742683e03f52331a1948a91e0405e3c191e1a5ad0f7b443",
+    "text_bytes": 1763,
+    "fingerprint": "182621b69e5e6bd51b22fb7c1c3650a2e2aad591575e9682ae41a73165f9c399"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0024:377e8031fc": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0024:377e8031fc",
+    "chunk_index": 24,
+    "text_hash": "314a400d73e031dfc9db64d5bb1543baec67b03cf83130d60a68aec61885c2a9",
+    "text_bytes": 1917,
+    "fingerprint": "d0e2b4f749473e9492df5ac4c30036797faf714a0d1542e02bc3bc2bff23d5ae"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0025:57f41f53a5": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0025:57f41f53a5",
+    "chunk_index": 25,
+    "text_hash": "97e17eb9e5c6fdb36a36b831d0e01b76a8779a1c5a11afe7dc463b86db113251",
+    "text_bytes": 1951,
+    "fingerprint": "73caa679de89d9e70de49efe1bc124b9dcd878a0a9bc8970f243924d4b2a2a30"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0026:be0b014912": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0026:be0b014912",
+    "chunk_index": 26,
+    "text_hash": "c443b4b7fa49fcb763b6034e357c2a7b67e136f3b45a4551423c7806fc8c2fbf",
+    "text_bytes": 2177,
+    "fingerprint": "ea57542113b96e27c23e22199238f4910cd012aa470fdd374f7d8c16a65fc01f"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0027:a61cf9d7f5": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0027:a61cf9d7f5",
+    "chunk_index": 27,
+    "text_hash": "343ac27e9c09ec88873561e54265c097ee20cfac181341687ac6f233219f4eab",
+    "text_bytes": 1983,
+    "fingerprint": "1880a61a9820887fb8fe43fdc5b3e0583922fc628db32769a21b2ae8611226c7"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0028:90551f807b": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0028:90551f807b",
+    "chunk_index": 28,
+    "text_hash": "16d0d25c9c7eddc4e0a0a0a28117c4a1c867b9f7a378a57864d1195aa66cda85",
+    "text_bytes": 2242,
+    "fingerprint": "9d225ea7fe6f2df95df0015856f93dc12dcd88c99f6c705dc6f0719aa2bda65c"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0029:6980741b44": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0029:6980741b44",
+    "chunk_index": 29,
+    "text_hash": "237fea59cf7ab990bac8dc751963c5bb394f3e5c925ce1d3a4158c9d6a17ab09",
+    "text_bytes": 1582,
+    "fingerprint": "92b2030d6d46d8790cbf46b772b8602fa45a85c6b31ae26c7327bfc90ec6c4f1"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0030:52b6110397": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0030:52b6110397",
+    "chunk_index": 30,
+    "text_hash": "d54659a2382bf28549372e904f24e13519276bcd69f59d081ea86233ffc5887c",
+    "text_bytes": 716,
+    "fingerprint": "31c02f575c0bfed4146628533e62f7174525a72e9452f79b4be591c32461033b"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0031:c4ee4cc064": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0031:c4ee4cc064",
+    "chunk_index": 31,
+    "text_hash": "3a77119ddb4459659ec58dbf2bd023c06b99b140fedb5d871ef02402c39847cb",
+    "text_bytes": 2083,
+    "fingerprint": "51c02e962059b330a296bd1919102da39cfbc0e5fe266a962765c9e60fa26cb9"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0032:5d5af3dd67": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0032:5d5af3dd67",
+    "chunk_index": 32,
+    "text_hash": "bfd4f42748bb18ed4daa4f60b2f6b763153d52988fb42194810dd15bec78eac7",
+    "text_bytes": 1508,
+    "fingerprint": "02e91972ca0f02c9594ea68f4070fca7b72ed0fe1c20e1cd214380ba91a409a1"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0033:69d59fe05e": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0033:69d59fe05e",
+    "chunk_index": 33,
+    "text_hash": "60014ccc5d380e36b62130446ee599d21beffabb49cdc5aba3ebde1ce9a07cf9",
+    "text_bytes": 1583,
+    "fingerprint": "10cebe6d6c228866ba2fee60b8f19437252fc7ca4e2a3f90c89878a68e12a1c1"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0034:159d19dc03": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0034:159d19dc03",
+    "chunk_index": 34,
+    "text_hash": "f47cc965ffac15b1ec61f4db865122c55d3c25fc9bdfa8f4e8f0c63986bc1b24",
+    "text_bytes": 2148,
+    "fingerprint": "c13e06acc98afb8344b5ff0c1049878d3683f7cdddfea0b2e5790c3efdadcf29"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0035:9a8b8fc34b": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0035:9a8b8fc34b",
+    "chunk_index": 35,
+    "text_hash": "445df2ca5d3f77f658592627ceb9ae838a9a25654628e7514d733fcf848abc9a",
+    "text_bytes": 1947,
+    "fingerprint": "5851da9831a78deb6df52759a7a3822210f55a709bc175dd212bb6df57ac372c"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0036:76c14d6d5a": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0036:76c14d6d5a",
+    "chunk_index": 36,
+    "text_hash": "236b5fd48793afa34291f09f492abdb2d9a4f305b7a2213b42d84d445ee602b7",
+    "text_bytes": 783,
+    "fingerprint": "757b18fc254f35c984ea29575ee3f24baae6a77120641b84e263fc00a4c507ac"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0037:fc2dd8a00d": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0037:fc2dd8a00d",
+    "chunk_index": 37,
+    "text_hash": "62a54418c74ac318dd95456162328c082949d2044f304d96da9b3ca4284fb3f8",
+    "text_bytes": 1802,
+    "fingerprint": "15df43f7841231d9b69ef906fb14087acf3e8c34acf7c2087af8f25dba12e899"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0038:39e0dc6860": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0038:39e0dc6860",
+    "chunk_index": 38,
+    "text_hash": "df78bcbd89fcbff4029958336c6e55acf152c472c3e1eb63fc2cc3a8e365e870",
+    "text_bytes": 2068,
+    "fingerprint": "28af53305187a42340a06ea3bcb27acd824f2b6afdbc4758f028882b7171f24f"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0039:41f2e3da3d": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0039:41f2e3da3d",
+    "chunk_index": 39,
+    "text_hash": "bc0b6b88838349ae918f8869e56147752a3d61a0dae24199e6bf6b925b80e3ab",
+    "text_bytes": 2073,
+    "fingerprint": "3e362693c630b9969739a8e0aee8203e82deee468fedc5d8747f906ccabb7811"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0040:b96e604c32": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0040:b96e604c32",
+    "chunk_index": 40,
+    "text_hash": "bd8a179bc9ecccd568e1d84f6be1e69e62670b8bb30d332b6e9041a7c44a38fb",
+    "text_bytes": 1875,
+    "fingerprint": "deb68e34387ba54ed8d1403bc1494ad90ad4e45436d623a128d68c4088f0f98f"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0041:d3618cce27": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0041:d3618cce27",
+    "chunk_index": 41,
+    "text_hash": "4dc015009358f951beaeb7cf249550e28e7de78041b0386cb24ac4bd4fc6a9a1",
+    "text_bytes": 1992,
+    "fingerprint": "ae3f5edcf4e5e4f3d025e6f49b8ad3ea55be5d5dccb774e89b250ca6f137e7de"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0042:3bcb9e9c28": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0042:3bcb9e9c28",
+    "chunk_index": 42,
+    "text_hash": "e5c68cd344ca44e832527731e0ce9a11a46d3ea9b696b062a958302556393a65",
+    "text_bytes": 1986,
+    "fingerprint": "3d203e592f7d2cc61009444784fb9804bb6c7581c81642f7ea91961268db2193"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0043:423ead6559": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0043:423ead6559",
+    "chunk_index": 43,
+    "text_hash": "8dd856a70faba0da266fbe5f757267ba064cf3c8acd4bc8559d5977a890b0ee0",
+    "text_bytes": 2018,
+    "fingerprint": "7a7e9d545c4f21aaddff4d9527cb6dfd4984484ceaabc3b5b8a278d44766028b"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0044:48518d2ca8": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0044:48518d2ca8",
+    "chunk_index": 44,
+    "text_hash": "6daebe57fa45f63433534912c8542c1e53af1a3c1c7a73b27a40b1c881b75296",
+    "text_bytes": 1484,
+    "fingerprint": "9544b05210dc478e447f4cd6fb5f8a5f824cecbf700c51462b47153f1fc65dde"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0045:1b475e39ee": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0045:1b475e39ee",
+    "chunk_index": 45,
+    "text_hash": "502978095b8504f87b993b52327762e00aaf650da6771efeff0550891ff7e21d",
+    "text_bytes": 997,
+    "fingerprint": "cfad8475b91cb0877af9e8747c5cf704af435d20b1542faaf0949e26be010ec0"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0046:f59a86a614": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0046:f59a86a614",
+    "chunk_index": 46,
+    "text_hash": "09a9912be506f47ade494af9248d688a5c59faaede47414c22f48ac7f493c4b1",
+    "text_bytes": 1923,
+    "fingerprint": "68e211d401b88cdf9ad1905adc2bbc9f04606ff908b4daa5b9ff1977540a979b"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0047:45952f8725": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0047:45952f8725",
+    "chunk_index": 47,
+    "text_hash": "5e7c04784c9c401630782b1fcac71c9dd3a01901b95d5a778ec3252b1a821223",
+    "text_bytes": 1575,
+    "fingerprint": "da6561d16a0ccbd3aec1138d5d28f9a34d2b4c22b1eddf8852b2e7aea37f3955"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0048:3779bb1515": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0048:3779bb1515",
+    "chunk_index": 48,
+    "text_hash": "3760d8dba9337d5d8693f9582df8a7bbc7a5e12eecb8b189de5bf475a19c8e6f",
+    "text_bytes": 1846,
+    "fingerprint": "07fd3025e06b59d830e5c2841b1906464f405d1a3a2d07cc40ad57e1d0f4d739"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0049:f109cf7ffc": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0049:f109cf7ffc",
+    "chunk_index": 49,
+    "text_hash": "a28aa61a9b52ab7e4ed0b4a5b8dba7f5185c6e89a9134d79300d848a51cc80f2",
+    "text_bytes": 2167,
+    "fingerprint": "ca33465203d51aaed93e1b5af8d71caf30d9073f7f48a24f059a2233c06d2528"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0050:02870f1916": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0050:02870f1916",
+    "chunk_index": 50,
+    "text_hash": "2645067a8081f9db0b033a203b24fadc609e3978aa052211bafd3ef187e48d0d",
+    "text_bytes": 1307,
+    "fingerprint": "ebbae567527fa8b60a807b1abe5d15d20b551060213af467d4c60e26e7b3525d"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0051:ec73b13762": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0051:ec73b13762",
+    "chunk_index": 51,
+    "text_hash": "676e1adb7917d3b5f52cd37de8e0a444b98dfd3c6f1b347d3e04923b98e02b0e",
+    "text_bytes": 1558,
+    "fingerprint": "17fc99a8c80c3bafab6cbadb67c7fab03968a8b9ebcd41714fb664fc1b919100"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0052:7cb521f84d": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0052:7cb521f84d",
+    "chunk_index": 52,
+    "text_hash": "7bed012f591949df0209323320a23eadd3a987ad63894136b23a73670ac2e7ff",
+    "text_bytes": 1738,
+    "fingerprint": "c323a1a9862884eb58e34bad5be41708c8e34076bcb0fd2303abbdd5df21fafa"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0053:f278cb583e": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0053:f278cb583e",
+    "chunk_index": 53,
+    "text_hash": "7e67c5cee16b80febed7edf7e1eff2300cb9ee33f3e6a19b36eb2ac4f2ff1c84",
+    "text_bytes": 1905,
+    "fingerprint": "16c8e3d9ace09b68a7f84e96f9d9d223a2bb08f665f317d914305d7eff58125a"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0054:ac775cf657": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0054:ac775cf657",
+    "chunk_index": 54,
+    "text_hash": "25370270bfea902817a8f51bfefd4bbfdde0413b6842a3c665a649243f20c36d",
+    "text_bytes": 1221,
+    "fingerprint": "1edbaa017cce410c0d9b6caefd26b12cec9eb20c4e5643a9cdbb7e46b7386d58"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0055:c7eaac1285": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0055:c7eaac1285",
+    "chunk_index": 55,
+    "text_hash": "538d728d6674474b52327fcee3b1cf3e6a642326113360850ecbc1b5bd26dbae",
+    "text_bytes": 2164,
+    "fingerprint": "9e1dc1b8a07545abdbcd21c6f8a8d491da0706a5a8e72dab604d63ccc803ef5e"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0056:c9d471bd9c": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0056:c9d471bd9c",
+    "chunk_index": 56,
+    "text_hash": "ba020838f9ba29da68b9be9202093b54fff5d332fa02defa9eeabee9319c9b5b",
+    "text_bytes": 2030,
+    "fingerprint": "16300d590d47bbee0e6fd03401687c8b6139bd4a05d6f4dce4b1cebdb89b1912"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0057:62c6e3a3af": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0057:62c6e3a3af",
+    "chunk_index": 57,
+    "text_hash": "f7a5c224847876ea311b3d6e18b4727b6d048d20204c07d84d9fd78891052839",
+    "text_bytes": 1898,
+    "fingerprint": "80a940248a5a02ea1f35b3e98d8a6598260de371ed102da5b8c922b577e01fa7"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0058:bdf14e2759": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0058:bdf14e2759",
+    "chunk_index": 58,
+    "text_hash": "ffe653e0f3e652c4165dd61eee6edee970e2811e6374bbe20a3dcd41d756f607",
+    "text_bytes": 2105,
+    "fingerprint": "bd9419fa107dd0ce0f9f04e843b825202c3ea6c083e44c28f854c427a3439207"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0059:64f5a90dfd": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0059:64f5a90dfd",
+    "chunk_index": 59,
+    "text_hash": "80acb1498739d64453b0eaf90574447c4ed87286810743c0a665e5af7714d2d2",
+    "text_bytes": 1413,
+    "fingerprint": "98cd3778df0b62d642c6b90e4a9b5b7d4cd4029a36a899fef53cf47d41d75b83"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0060:16111baabc": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0060:16111baabc",
+    "chunk_index": 60,
+    "text_hash": "e616e6c69eabf3cc3cf3b1cf33ebfb353fe6b53f1ead406b35e44fc8b787d8b2",
+    "text_bytes": 2124,
+    "fingerprint": "f36a7d61c115ccbebd78795d489cafc83701d937c6be1fdb0d6643b98525751a"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0061:ddea004dd0": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0061:ddea004dd0",
+    "chunk_index": 61,
+    "text_hash": "4d76a7f3e3b4425da2c16e559db81d6283c34e19468bca14f55815b72f9403fa",
+    "text_bytes": 2415,
+    "fingerprint": "53d985c1629f277009aee72d4fc19d9906a68a23338d4aff0bd41df0e2c21bd6"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0062:2530c83900": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0062:2530c83900",
+    "chunk_index": 62,
+    "text_hash": "76b98bcee2442dd8e0118ccaf79d754b2699a4b9f92f71a2e8c617234b66e271",
+    "text_bytes": 820,
+    "fingerprint": "d6cc9a3d0db24fd716918cd7a405389db7219b9dea8f4550da7ab5f67c42e994"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0063:e87e9565b4": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0063:e87e9565b4",
+    "chunk_index": 63,
+    "text_hash": "367d4f6b40247ee2b41226642e0941cd476ef74869d9cbe0c955c9016bb2b820",
+    "text_bytes": 2465,
+    "fingerprint": "601e07f0490bc34d6befa4bf21f119920349aade89863e7cc8a24d60162d3bda"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0064:c262a50e97": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0064:c262a50e97",
+    "chunk_index": 64,
+    "text_hash": "4a24cd26adca788f070a630113821cf09f7e7435efe5a5d2d7b184bcfb69a25c",
+    "text_bytes": 2159,
+    "fingerprint": "4dd9755dd8cf2fc5320e897533d6e8a15482eacb95b498d725b6b7cfa7584a46"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0065:86bd9ca058": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0065:86bd9ca058",
+    "chunk_index": 65,
+    "text_hash": "845b6feef2a6586053e4d6ce1042c52e694a1845ee738aa7ae5250098fd99a90",
+    "text_bytes": 2385,
+    "fingerprint": "6322ff8dd5a71c9927ec7a7f41564cf0ac7ca80e60e03c5b2d4aa9e4c2854f4f"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0066:798f283fc3": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0066:798f283fc3",
+    "chunk_index": 66,
+    "text_hash": "901690a69f4670b98fcceba25765595cbf8b76be914a7e79aced9bc18b6f7795",
+    "text_bytes": 1679,
+    "fingerprint": "b19ac41f30555da82e1e435b11d71a08c01d8674d1e6086c96a68845ba04de03"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0067:8df2a4f51a": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0067:8df2a4f51a",
+    "chunk_index": 67,
+    "text_hash": "a06426e0581562b6b63a92f8f8d141df1753ac84e484ef6e48f6e3d789bb83f7",
+    "text_bytes": 2364,
+    "fingerprint": "ef53b88abb81cbcb87379abcb21e6cfe71543f0c85f7f29a8e50271d72efd5ec"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0068:3ff498882e": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0068:3ff498882e",
+    "chunk_index": 68,
+    "text_hash": "11e376ee8fcad7aa25df4bbf4c6b6c8b94f7bc2f7aadb4f3d8bc69044c251207",
+    "text_bytes": 2289,
+    "fingerprint": "b33e8f5d397d2c494dc6fb287a6d03daf324d0383aab7f643257432d2cae9e97"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0069:efc34bfc13": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0069:efc34bfc13",
+    "chunk_index": 69,
+    "text_hash": "652979b7839b3d82f5dddbc47f31e0973a08bb50d27a0961b2e31955aab0a382",
+    "text_bytes": 2104,
+    "fingerprint": "920b511d06f1df727506809263f7813f18bc8769c653919005b00b48a43b0442"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0070:711e4a454f": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0070:711e4a454f",
+    "chunk_index": 70,
+    "text_hash": "11301d87096bcc2fcad7894587e092c86b6001722ce6a4b28798a0a7fd8620de",
+    "text_bytes": 1728,
+    "fingerprint": "5df410e817c5b3012f67690d078cfeb90a2e6c7e2ed48546d91d9e2a1790895b"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0071:e1ab79963b": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0071:e1ab79963b",
+    "chunk_index": 71,
+    "text_hash": "de9e96e37011c4e109145046a674d25c0c1b9081f4a8c5c0210a89d6c26f17df",
+    "text_bytes": 2287,
+    "fingerprint": "eb4d0affdca395774f48d708d054a5d0505394443ddbfe396c6962fc59193e88"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0072:a95d32e5d7": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0072:a95d32e5d7",
+    "chunk_index": 72,
+    "text_hash": "5753ea11d00a06f0b59c5d406151121fc1c76c0c81319832b0bb67dd52c89753",
+    "text_bytes": 2410,
+    "fingerprint": "d83cb796b8eb6e2fab5eced75ae7a0916a57c639306f819250832541995fed97"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0073:8327a712ca": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0073:8327a712ca",
+    "chunk_index": 73,
+    "text_hash": "da8e73e4b419975beaeb632d398cb05ae947b434475b04f5d9824245421b0c12",
+    "text_bytes": 876,
+    "fingerprint": "2a9fd2f678aee7f233fd30ff15f65928903dbaa5c38c0e43d01fa208135918a0"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0074:4aa547cd29": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0074:4aa547cd29",
+    "chunk_index": 74,
+    "text_hash": "02d2d1c7398c1e21dc29cab33b8d58a191821b19033394b3efb8afb7587f649d",
+    "text_bytes": 2741,
+    "fingerprint": "530aa61354ee0bf7d8a6cc045c8827a16f089f17c53c9ecee053598034535b71"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0075:29ec0178ea": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0075:29ec0178ea",
+    "chunk_index": 75,
+    "text_hash": "40be90d4557503016464d00084b75e835707f018b6611db7215e65339a649739",
+    "text_bytes": 2122,
+    "fingerprint": "7048abd30d792502dba46c116e39ffb210d07ec689237ad83a5ed4684308cc4a"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0076:fcfc4fc67a": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0076:fcfc4fc67a",
+    "chunk_index": 76,
+    "text_hash": "8242995f3394cd122c83fc71cc9d53c2ddbfece5228057d4467898ab25065e7e",
+    "text_bytes": 2814,
+    "fingerprint": "1174d069f4abcc353653ecfeeb799e5ffe0f8fb19eb9a596f1cfa6b78dd7fb08"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0077:e734edb037": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0077:e734edb037",
+    "chunk_index": 77,
+    "text_hash": "9f4917996769046b5dcd6482f294e5158b14336060a97aa62697112fe8072973",
+    "text_bytes": 972,
+    "fingerprint": "8b9ceac5ca00166375d6bad6b6200f7d00fa6e59ea106a2e5118ddea51674804"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0078:9cbd215f19": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0078:9cbd215f19",
+    "chunk_index": 78,
+    "text_hash": "f43d04689082c0325ea549f3b8311092b9e737d456d3bd4c79bf188019c166cc",
+    "text_bytes": 3213,
+    "fingerprint": "36cd4c0a696823f7f1567e467a5cdeb7dcade2df8f2dfab52c7a71e18187542e"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0079:2dde9d8010": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0079:2dde9d8010",
+    "chunk_index": 79,
+    "text_hash": "3f23b98263fd365f639f9c3e7e5445d2c2352517c01c65fc99dc3296218fc844",
+    "text_bytes": 862,
+    "fingerprint": "5d9053ae552f3e12f68fe98a86eedcedc5dee8e6c152f1412f04ae3a0d617338"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0080:80f8ba512c": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0080:80f8ba512c",
+    "chunk_index": 80,
+    "text_hash": "db3cb38132488a07a4945a27759d0531fa1f1edba3d9324b6222c6847375f239",
+    "text_bytes": 2851,
+    "fingerprint": "113b4c2a2c0521dc0fd7339765684cff31af5f87c989b106d39bde079784b5f0"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0081:13b770c433": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0081:13b770c433",
+    "chunk_index": 81,
+    "text_hash": "b23fbfa03695536aa52636a27905c1774d17422951efef4a18c67d647888ea3e",
+    "text_bytes": 2890,
+    "fingerprint": "ce6e21c60419c9d68caa9053a7d39d813432f85e185ef9cb9857d68b67702d51"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0082:2f0f96ceda": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0082:2f0f96ceda",
+    "chunk_index": 82,
+    "text_hash": "76a8f6de562991f29a9364939860ac4ee5c373154f552ddd5149ed2fc01d19d2",
+    "text_bytes": 2738,
+    "fingerprint": "da99e3678fdcc8478af94463b0cc0ba43d596d89b8c21c37f83cf851c7bfadf1"
+  },
+  "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0083:9ec784e4b7": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_id": "textbook:无人机理论书籍_2024_无人机技术概论_第2版_机械工业出版社_贾恒旦:chunk_0083:9ec784e4b7",
+    "chunk_index": 83,
+    "text_hash": "b996eb2ff0cda6f49aa4df10a0ed67b794292400fc600aae21f29cc309ac6943",
+    "text_bytes": 395,
+    "fingerprint": "6d2827748c6a7701983c2fa3b5cea805753e02d52a4eafe913382c139f269747"
+  }
+}

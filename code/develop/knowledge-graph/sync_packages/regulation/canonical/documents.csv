@@ -1,0 +1,5 @@
+document_id,domain,doc_name,title,chunk_count,first_chunk_id,created_at_min,created_at_max
+doc_0fe871347112,regulation,政策法规_《民用中小型无人驾驶航空器操控员训练机构规范》.txt,《民用中小型无人驾驶航空器操控员训练机构规范》,174,regulation:uas_training_org_spec:preface_000:af0bd7dc20,2026-06-06 07:24:48,2026-06-06 07:24:48
+doc_116a1bf152e2,regulation,政策法规_CCAR-92部.txt,CCAR-92部,192,regulation:ccar_92:preface_000:c19b8213f9,2026-06-06 07:24:48,2026-06-06 07:24:48
+doc_212df9f0bf68,regulation,政策法规_中华人民共和国民用航空法_2025修订_2026-07-01施行.txt,中华人民共和国民用航空法_2025修订_2026-07-01施行,264,regulation:cn_civil_aviation_law_2025:preface_000:710503570a,2026-06-06 07:24:48,2026-06-06 07:24:48
+doc_df219d581440,question_bank,理论题库_无人机飞行手册、法律法规及其他.txt,无人机飞行手册、法律法规及其他,123,question_bank:理论题库_无人机飞行手册_法律法规及其他:q_0001:idx_0000,2026-06-06 07:24:48,2026-06-06 07:24:48

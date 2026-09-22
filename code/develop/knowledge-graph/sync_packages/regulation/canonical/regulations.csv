@@ -1,0 +1,4 @@
+regulation_id,document_id,title,doc_name,chunk_count,source_table
+reg_7951b42e0289,doc_212df9f0bf68,中华人民共和国民用航空法_2025修订_2026-07-01施行,政策法规_中华人民共和国民用航空法_2025修订_2026-07-01施行.txt,264,rag_chunks.db.chunks
+reg_d009f3c051a9,doc_0fe871347112,《民用中小型无人驾驶航空器操控员训练机构规范》,政策法规_《民用中小型无人驾驶航空器操控员训练机构规范》.txt,174,rag_chunks.db.chunks
+reg_f85656084344,doc_116a1bf152e2,CCAR-92部,政策法规_CCAR-92部.txt,192,rag_chunks.db.chunks

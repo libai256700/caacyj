@@ -1,0 +1,16 @@
+{
+  "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "chunk_count": 118,
+    "text_bytes": 361048,
+    "fingerprint": "bae6c6152c9b24b4bd87b5f056c26f9e8d1091f815b234ad23f57b3db430c616"
+  },
+  "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt": {
+    "domain": "textbook",
+    "doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+    "chunk_count": 84,
+    "text_bytes": 159144,
+    "fingerprint": "682ed5c3ff519bd64eb634ae58386dd7f7fb857ae216b36601b064f6326919f1"
+  }
+}

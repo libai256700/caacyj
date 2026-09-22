@@ -1,0 +1,325 @@
+{
+  "schema_version": "domain-sync-package-v2",
+  "built_at": "2026-06-06T04:27:26+00:00",
+  "domain": "textbook",
+  "semantic_schema_version": "semantic-graph-v2",
+  "source_manifest": {
+    "schema_version": "ingest-manifest-v2",
+    "generated_at": "2026-06-06T04:27:19+00:00",
+    "sqlite_fingerprint": {
+      "chunk_count": 2363,
+      "doc_count": 24,
+      "text_bytes": 660395,
+      "max_created_at": "2026-06-06 07:24:48",
+      "schema": "chunks-v1",
+      "fingerprint": "b30a4281bf0d7b9b490558c046eb34b11d2c6615e7d8cc03fefa330ce5f52f65"
+    }
+  },
+  "domain_fingerprint": {
+    "schema": "domain-chunks-v1",
+    "chunk_count": 202,
+    "doc_count": 2,
+    "text_bytes": 520192,
+    "fingerprint": "a130d5d4d6d81b46f0e70c8a1f71c47520a0fc638bfdfc213c9a02a128c25a3d"
+  },
+  "previous_domain_fingerprint": {
+    "schema": "domain-chunks-v1",
+    "chunk_count": 202,
+    "doc_count": 2,
+    "text_bytes": 520192,
+    "fingerprint": "a130d5d4d6d81b46f0e70c8a1f71c47520a0fc638bfdfc213c9a02a128c25a3d"
+  },
+  "documents": [
+    "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+    "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt"
+  ],
+  "chunks_file": "chunks.jsonl",
+  "incremental": {
+    "schema": "domain-sync-delta-v1",
+    "base_fingerprint": {
+      "schema": "domain-chunks-v1",
+      "chunk_count": 202,
+      "doc_count": 2,
+      "text_bytes": 520192,
+      "fingerprint": "a130d5d4d6d81b46f0e70c8a1f71c47520a0fc638bfdfc213c9a02a128c25a3d"
+    },
+    "target_fingerprint": {
+      "schema": "domain-chunks-v1",
+      "chunk_count": 202,
+      "doc_count": 2,
+      "text_bytes": 520192,
+      "fingerprint": "a130d5d4d6d81b46f0e70c8a1f71c47520a0fc638bfdfc213c9a02a128c25a3d"
+    },
+    "can_apply_incrementally": true,
+    "changed_chunks_file": "changed_chunks.jsonl",
+    "deleted_chunks_file": "deleted_chunks.jsonl",
+    "tombstones_file": "tombstones.jsonl",
+    "chunk_fingerprints_file": "chunk_fingerprints.json",
+    "doc_fingerprints_file": "doc_fingerprints.json",
+    "doc_changes_file": "doc_changes.jsonl",
+    "counts": {
+      "previous_chunks": 202,
+      "current_chunks": 202,
+      "changed_chunks": 0,
+      "deleted_chunks": 0,
+      "tombstones": 0,
+      "changed_docs": 0
+    }
+  },
+  "canonical_tables": [
+    {
+      "table": "documents",
+      "path": "/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/sync_packages/textbook/canonical/documents.csv",
+      "row_count": 2,
+      "source_path": "/Users/xiaoji/Documents/知识库分析/data/canonical/documents.csv"
+    },
+    {
+      "table": "document_chunks",
+      "path": "/Users/xiaoji/.openclaw/workspace/projects/knowledge-graph/sync_packages/textbook/canonical/document_chunks.csv",
+      "row_count": 202,
+      "source_path": "/Users/xiaoji/Documents/知识库分析/data/canonical/document_chunks.csv"
+    }
+  ],
+  "graph_export": {
+    "available": true,
+    "nodes_file": "graph_nodes.jsonl",
+    "relationships_file": "graph_relationships.jsonl",
+    "rejected_relationships_file": "graph_relationships_rejected.jsonl",
+    "node_count": 516,
+    "relationship_count": 73684,
+    "rejected_relationship_count": 38005
+  },
+  "graph_snapshot": {
+    "entity_count": 499,
+    "relationship_count": 230177,
+    "relationship_types": [
+      {
+        "type": "AFFECTS",
+        "count": 17
+      },
+      {
+        "type": "AWARDS",
+        "count": 5022
+      },
+      {
+        "type": "BELONGS_TO",
+        "count": 783
+      },
+      {
+        "type": "CONTAINS",
+        "count": 425
+      },
+      {
+        "type": "DEFINED_BY",
+        "count": 15910
+      },
+      {
+        "type": "DESCRIBES",
+        "count": 2772
+      },
+      {
+        "type": "HAS_CLASS",
+        "count": 9537
+      },
+      {
+        "type": "HAS_LEVEL",
+        "count": 2574
+      },
+      {
+        "type": "HAS_PROPERTY",
+        "count": 11590
+      },
+      {
+        "type": "ISSUED_BY",
+        "count": 1416
+      },
+      {
+        "type": "MENTIONS",
+        "count": 4790
+      },
+      {
+        "type": "OFFERS",
+        "count": 3198
+      },
+      {
+        "type": "PART_OF",
+        "count": 33095
+      },
+      {
+        "type": "REFERS_TO",
+        "count": 20165
+      },
+      {
+        "type": "REGULATES",
+        "count": 35493
+      },
+      {
+        "type": "REQUIRES",
+        "count": 59819
+      },
+      {
+        "type": "REQUIRES_SKILL",
+        "count": 8942
+      },
+      {
+        "type": "SUBCLASS_OF",
+        "count": 14629
+      }
+    ],
+    "source_doc_coverage_rate": 1.0,
+    "source_chunk_id_coverage_rate": 0.7255,
+    "schema_version_coverage_rate": 1.0,
+    "unresolved_source_docs": [],
+    "source_docs": [
+      {
+        "source_doc": "教材第7章",
+        "sqlite_doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+        "resolved": true,
+        "entity_count": 42,
+        "with_source_chunk_ids": 21,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "教材第9章",
+        "sqlite_doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+        "resolved": true,
+        "entity_count": 40,
+        "with_source_chunk_ids": 26,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "无人机操作注意事项",
+        "sqlite_doc_name": "理论题库_无人机操作注意事项.txt",
+        "resolved": true,
+        "entity_count": 40,
+        "with_source_chunk_ids": 40,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "教材第3章",
+        "sqlite_doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+        "resolved": true,
+        "entity_count": 39,
+        "with_source_chunk_ids": 22,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "教材第5章",
+        "sqlite_doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+        "resolved": true,
+        "entity_count": 37,
+        "with_source_chunk_ids": 34,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "飞行原理",
+        "sqlite_doc_name": "理论题库_飞行原理与飞行性能.txt",
+        "resolved": true,
+        "entity_count": 34,
+        "with_source_chunk_ids": 34,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "教材第1章",
+        "sqlite_doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+        "resolved": true,
+        "entity_count": 32,
+        "with_source_chunk_ids": 19,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "教材第4章",
+        "sqlite_doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+        "resolved": true,
+        "entity_count": 32,
+        "with_source_chunk_ids": 26,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "教材第2章",
+        "sqlite_doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+        "resolved": true,
+        "entity_count": 30,
+        "with_source_chunk_ids": 18,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "设计教材·P5T3_多旋翼制作",
+        "sqlite_doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+        "resolved": true,
+        "entity_count": 27,
+        "with_source_chunk_ids": 12,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "教材第6章",
+        "sqlite_doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+        "resolved": true,
+        "entity_count": 25,
+        "with_source_chunk_ids": 18,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "设计教材·P4T3_固定翼结构设计",
+        "sqlite_doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+        "resolved": true,
+        "entity_count": 25,
+        "with_source_chunk_ids": 20,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "设计教材·P5T2_固定翼制作",
+        "sqlite_doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+        "resolved": true,
+        "entity_count": 25,
+        "with_source_chunk_ids": 23,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "设计教材·P5T1_制作准备",
+        "sqlite_doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+        "resolved": true,
+        "entity_count": 23,
+        "with_source_chunk_ids": 20,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "教材第8章",
+        "sqlite_doc_name": "无人机理论书籍_2024_无人机技术概论(第2版)_机械工业出版社_贾恒旦.txt",
+        "resolved": true,
+        "entity_count": 21,
+        "with_source_chunk_ids": 11,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "设计教材·P4T2_设计准备",
+        "sqlite_doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+        "resolved": true,
+        "entity_count": 14,
+        "with_source_chunk_ids": 8,
+        "source_type": "sqlite_document"
+      },
+      {
+        "source_doc": "设计教材·P4T1_结构设计软件",
+        "sqlite_doc_name": "无人机理论书籍_2023_无人机系统结构与设计_机械工业出版社_李宏达.txt",
+        "resolved": true,
+        "entity_count": 13,
+        "with_source_chunk_ids": 10,
+        "source_type": "sqlite_document"
+      }
+    ]
+  },
+  "remote_rebuild": {
+    "authority": "Use chunks.jsonl, canonical subsets, and graph export files as package inputs; rebuild derived layers remotely.",
+    "layers": [
+      "bm25",
+      "dense_bge_m3",
+      "neo4j_subgraph"
+    ],
+    "do_not_sync_as_authority": [
+      "bm25 index files",
+      "dense sqlite index",
+      "neo4j database files"
+    ]
+  }
+}

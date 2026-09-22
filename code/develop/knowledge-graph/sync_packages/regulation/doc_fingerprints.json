@@ -1,0 +1,30 @@
+{
+  "政策法规_CCAR-92部.txt": {
+    "domain": "regulation",
+    "doc_name": "政策法规_CCAR-92部.txt",
+    "chunk_count": 192,
+    "text_bytes": 123437,
+    "fingerprint": "31c088175f3cdf9bb00b3f2b9cccc901302e2c1e764f517cd22eb1732692b1da"
+  },
+  "政策法规_《民用中小型无人驾驶航空器操控员训练机构规范》.txt": {
+    "domain": "regulation",
+    "doc_name": "政策法规_《民用中小型无人驾驶航空器操控员训练机构规范》.txt",
+    "chunk_count": 174,
+    "text_bytes": 37173,
+    "fingerprint": "4a91180183a021496eee1f190b97b0c7a297ada701677d2e8f97fa949ffd79b5"
+  },
+  "政策法规_中华人民共和国民用航空法_2025修订_2026-07-01施行.txt": {
+    "domain": "regulation",
+    "doc_name": "政策法规_中华人民共和国民用航空法_2025修订_2026-07-01施行.txt",
+    "chunk_count": 264,
+    "text_bytes": 98498,
+    "fingerprint": "75115563072a660a6f24862e462b0d9e4668496783c8de33582e5bb6ab70a327"
+  },
+  "理论题库_无人机飞行手册、法律法规及其他.txt": {
+    "domain": "regulation",
+    "doc_name": "理论题库_无人机飞行手册、法律法规及其他.txt",
+    "chunk_count": 123,
+    "text_bytes": 98161,
+    "fingerprint": "683e0e7d3f0c559551e30bb8ba00f7b4e4d9ff061665eddc43fd18b836413b54"
+  }
+}
